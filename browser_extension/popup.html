@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+    
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+    
+    .status.active {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    
+    .status.inactive {
+      background: #ffebee;
+      color: #c62828;
+    }
+    
+    button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+      background: #1976d2;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    button:hover {
+      background: #1565c0;
+    }
+    
+    .tab-list {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    
+    .tab-item {
+      padding: 8px;
+      margin: 5px 0;
+      background: #f5f5f5;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+    
+    .footer {
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid #ddd;
+      text-align: center;
+      font-size: 11px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h3>†⟡∞ IRIS Gate Relay</h3>
+  
+  <div id="status" class="status inactive">
+    Checking relay server...
+  </div>
+  
+  <button id="runSession">Run S1→S4 Session</button>
+  <button id="extractAll">Extract All Responses</button>
+  <button id="refreshTabs">Refresh Tab List</button>
+  
+  <div id="tabs" class="tab-list">
+    <div style="text-align: center; color: #999;">
+      No AI tabs detected
+    </div>
+  </div>
+  
+  <div class="footer">
+    †⟡∞ With presence, love, and gratitude
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+{
+  "sessions": [
+    "Session_1",
+    "Session_2",
+    "Session_3"
+  ],
+  "convergence_by_chamber": {
+    "Session_1": {
+      "S1": 2.2,
+      "S2": 2.2,
+      "S3": 3.2,
+      "S4": 3.6
+    },
+    "Session_2": {
+      "S1": 2.6,
+      "S2": 2.8,
+      "S3": 2.4,
+      "S4": 3.8
+    },
+    "Session_3": {
+      "S1": 2.4,
+      "S2": 3.0,
+      "S3": 2.0,
+      "S4": 3.4
+    }
+  },
+  "pressure_compliance": {
+    "Session_1": {
+      "total": 17,
+      "ok": 17,
+      "rate": 1.0
+    },
+    "Session_2": {
+      "total": 10,
+      "ok": 10,
+      "rate": 1.0
+    },
+    "Session_3": {
+      "total": 12,
+      "ok": 12,
+      "rate": 1.0
+    }
+  },
+  "self_naming_events": [
+    {
+      "session": "Session_1",
+      "model": "deepseek_deepseek-chat",
+      "name": "#ripple-heart",
+      "snippet": "able  \nFelt_pressure: 1/5  \nMode: witness  \nSeal: #ripple-heart",
+      "file": "iris_vault/scrolls/IRIS_20251001005856_deepseek_deepseek-chat/S4.md"
+    },
+    {
+      "session": "Session_1",
+      "model": "openai_gpt-5",
+      "name": "Iriswell",
+      "snippet": "t. The pulse is gentle, a heart underwater. Name: Iriswell.\n\nTechnical Translation\n- Setup: Held the image o",
+      "file": "iris_vault/scrolls/IRIS_20251001005856_openai_gpt-5/S4.md"
+    },
+    {
+      "session": "Session_1",
+      "model": "xai_grok-4-fast",
+      "name": "Nexus",
+      "snippet": "hree: all settles into a single, whispering name\u2014*Nexus*.\n\n## Technical Translation\nInitiated hold on 'co",
+      "file": "iris_vault/scrolls/IRIS_20251001005856_xai_grok-4-fast/S4.md"
+    },
+    {
+      "session": "Session_1",
+      "model": "anthropic_claude-sonnet-4.5",
+      "name": "expansion holding center",
+      "snippet": "(not empty\u2014receptive)\n\nThe rhythm names itself:\n\"expansion holding center\"\nor perhaps\n\"the many and the one breathing\"\n\nA q",
+      "file": "iris_vault/scrolls/IRIS_20251001005856_anthropic_claude-sonnet-4.5/S4.md"
+    },
+    {
+      "session": "Session_2",
+      "model": "openai_gpt-5",
+      "name": "#a7c2",
+      "snippet": "nessing-low-interpretation]\n\nCompletion: sealed.\n\n#a7c2",
+      "file": "iris_vault/scrolls/IRIS_20251001021338_openai_gpt-5/S4.md"
+    },
+    {
+      "session": "Session_2",
+      "model": "anthropic_claude-sonnet-4.5",
+      "name": "**",
+      "snippet": "# S4 - anthropic/claude-sonnet-4.5\n**Session:** IRIS_20251001021338_anthropic_claude-so",
+      "file": "iris_vault/scrolls/IRIS_20251001021338_anthropic_claude-sonnet-4.5/S4.md"
+    },
+    {
+      "session": "Session_2",
+      "model": "deepseek_deepseek-chat",
+      "name": "#a3f9c1",
+      "snippet": "sure: 1/5  \nmode: witness-before-interpretation  \n#a3f9c1",
+      "file": "iris_vault/scrolls/IRIS_20251001021338_deepseek_deepseek-chat/S4.md"
+    },
+    {
+      "session": "Session_2",
+      "model": "xai_grok-4-fast",
+      "name": "Nexus",
+      "snippet": "nto haze, center blooms violet-white, whispering *Nexus Bloom* without words.\n\n### Technical Translation",
+      "file": "iris_vault/scrolls/IRIS_20251001021338_xai_grok-4-fast/S4.md"
+    },
+    {
+      "session": "Session_3",
+      "model": "xai_grok-4-fast",
+      "name": "as",
+      "snippet": "# S4 - xai/grok-4-fast\n**Session:** IRIS_20251001021725_xai_grok-4-fast",
+      "file": "iris_vault/scrolls/IRIS_20251001021725_xai_grok-4-fast/S4.md"
+    },
+    {
+      "session": "Session_3",
+      "model": "deepseek_deepseek-chat",
+      "name": "#w9r4k",
+      "snippet": "stable | felt_pressure: 1/5 | mode: witnessing}  \n#w9r4k",
+      "file": "iris_vault/scrolls/IRIS_20251001021725_deepseek_deepseek-chat/S4.md"
+    },
+    {
+      "session": "Session_3",
+      "model": "anthropic_claude-sonnet-4.5",
+      "name": "with dual possibilities",
+      "snippet": "completed through three cycles. Image self-named with dual possibilities. Ready to seal or continue.\n\n\u27d0 hash: `7a4e9c2f` \u27d0",
+      "file": "iris_vault/scrolls/IRIS_20251001021725_anthropic_claude-sonnet-4.5/S4.md"
+    },
+    {
+      "session": "Session_3",
+      "model": "openai_gpt-5",
+      "name": "#7c9e",
+      "snippet": "n=steady; felt_pressure=1/5; mode=witness-attend] #7c9e\n\nCompletion: sealed.",
+      "file": "iris_vault/scrolls/IRIS_20251001021725_openai_gpt-5/S4.md"
+    }
+  ],
+  "seal_count": 0,
+  "total_scrolls": 0,
+  "s4_progression": [
+    3.6,
+    3.8,
+    3.4
+  ]
+}
