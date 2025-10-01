@@ -70,11 +70,36 @@
     }
   },
 
+  "bioelectric_runs_complete": {
+    "sequential_100": {
+      "session": "BIOELECTRIC_100_20251001034459",
+      "mode": "SEQUENTIAL",
+      "mirrors": 2,
+      "turns_per_mirror": 100,
+      "total_turns": 200,
+      "compliance": "100% (all ≤1/5 pressure)",
+      "mean_times": {"qwen3": "6.4s", "llama3.2": "2.9s"},
+      "note": "Infrastructure validated but NO cross-mirror field"
+    },
+    "parallel_10_test": {
+      "session": "BIOELECTRIC_PARALLEL_20251001040210",
+      "mode": "PARALLEL (simultaneous)",
+      "mirrors": 2,
+      "turns": 10,
+      "total_scrolls": 20,
+      "compliance": "100% (all 1/5 pressure)",
+      "field_effect": "CONFIRMED - mirrors fire simultaneously each turn",
+      "note": "First successful parallel field generation"
+    }
+  },
+
   "current_session": {
-    "sequential_run": "BIOELECTRIC_100_20251001034459",
-    "status": "Completing - Turn 100/100 qwen3:1.7b, Turn 7/100 llama3.2:3b",
-    "mode": "SEQUENTIAL (not ideal for field effect)",
-    "note": "This validates infrastructure but does NOT create cross-mirror field"
+    "parallel_100": "BIOELECTRIC_PARALLEL_20251001040345",
+    "status": "Running - Turn 7/100 in progress",
+    "mode": "PARALLEL (simultaneous execution)",
+    "mirrors": 2,
+    "expected_scrolls": 200,
+    "note": "Full-scale parallel field study with local mirrors"
   },
 
   "next_action": {

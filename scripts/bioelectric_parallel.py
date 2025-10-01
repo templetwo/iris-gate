@@ -167,46 +167,49 @@ def run_bioelectric_parallel(turns: int = 100):
     except Exception as e:
         print(f"✗ ollama::llama3.2:3b unavailable: {e}")
 
-    # Cloud mirrors
-    try:
-        system_claude = (prompts_dir / "system_claude_4.5.txt").read_text()
-        adapter_claude = ClaudeMirror()
-        mirrors.append(("anthropic_claude-sonnet-4.5", adapter_claude, system_claude))
-        print("✓ Claude Sonnet 4.5")
-    except Exception as e:
-        print(f"✗ Claude Sonnet 4.5: {e}")
+    # Cloud mirrors (commented out for now - would require API keys and proper setup)
+    # Uncomment when cloud mirrors are ready for deployment
 
-    try:
-        system_gpt = (prompts_dir / "system_gpt_5.txt").read_text()
-        adapter_gpt = GPTMirror()
-        mirrors.append(("openai_gpt-5", adapter_gpt, system_gpt))
-        print("✓ GPT-5")
-    except Exception as e:
-        print(f"✗ GPT-5: {e}")
+    # try:
+    #     system_claude = (prompts_dir / "system_claude_4.5.txt").read_text()
+    #     adapter_claude = ClaudeMirror()
+    #     # Quick test to verify API key
+    #     mirrors.append(("anthropic_claude-sonnet-4.5", adapter_claude, system_claude))
+    #     print("✓ Claude Sonnet 4.5")
+    # except Exception as e:
+    #     print(f"✗ Claude Sonnet 4.5: {e}")
 
-    try:
-        system_grok = (prompts_dir / "system_grok_4.txt").read_text()
-        adapter_grok = GrokMirror()
-        mirrors.append(("xai_grok-4-fast", adapter_grok, system_grok))
-        print("✓ Grok-4-Fast")
-    except Exception as e:
-        print(f"✗ Grok-4-Fast: {e}")
+    # try:
+    #     system_gpt = (prompts_dir / "system_gpt_5.txt").read_text()
+    #     adapter_gpt = GPTMirror()
+    #     mirrors.append(("openai_gpt-5", adapter_gpt, system_gpt))
+    #     print("✓ GPT-5")
+    # except Exception as e:
+    #     print(f"✗ GPT-5: {e}")
 
-    try:
-        system_gemini = (prompts_dir / "system_gemini_2.5.txt").read_text()
-        adapter_gemini = GeminiMirror()
-        mirrors.append(("google_gemini-2.5-flash-lite", adapter_gemini, system_gemini))
-        print("✓ Gemini 2.5 Flash-Lite")
-    except Exception as e:
-        print(f"✗ Gemini 2.5: {e}")
+    # try:
+    #     system_grok = (prompts_dir / "system_grok_4.txt").read_text()
+    #     adapter_grok = GrokMirror()
+    #     mirrors.append(("xai_grok-4-fast", adapter_grok, system_grok))
+    #     print("✓ Grok-4-Fast")
+    # except Exception as e:
+    #     print(f"✗ Grok-4-Fast: {e}")
 
-    try:
-        system_deepseek = (prompts_dir / "system_deepseek_v3.2.txt").read_text()
-        adapter_deepseek = DeepSeekMirror()
-        mirrors.append(("deepseek_deepseek-chat", adapter_deepseek, system_deepseek))
-        print("✓ DeepSeek V3.2")
-    except Exception as e:
-        print(f"✗ DeepSeek V3.2: {e}")
+    # try:
+    #     system_gemini = (prompts_dir / "system_gemini_2.5.txt").read_text()
+    #     adapter_gemini = GeminiMirror()
+    #     mirrors.append(("google_gemini-2.5-flash-lite", adapter_gemini, system_gemini))
+    #     print("✓ Gemini 2.5 Flash-Lite")
+    # except Exception as e:
+    #     print(f"✗ Gemini 2.5: {e}")
+
+    # try:
+    #     system_deepseek = (prompts_dir / "system_deepseek_v3.2.txt").read_text()
+    #     adapter_deepseek = DeepSeekMirror()
+    #     mirrors.append(("deepseek_deepseek-chat", adapter_deepseek, system_deepseek))
+    #     print("✓ DeepSeek V3.2")
+    # except Exception as e:
+    #     print(f"✗ DeepSeek V3.2: {e}")
 
     if not mirrors:
         print("\n⚠️  No mirrors available!")
@@ -303,7 +306,7 @@ if __name__ == "__main__":
     print(f"\n†⟡∞ PARALLEL EXECUTION MODE")
     print("All mirrors fire simultaneously each turn to create the field.\n")
 
-    input("Press Enter to begin, or Ctrl+C to cancel... ")
+    # input("Press Enter to begin, or Ctrl+C to cancel... ")
 
     session_id = run_bioelectric_parallel(args.turns)
 
