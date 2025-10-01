@@ -1,0 +1,177 @@
+# S4 Attractor Triple → Bioelectric Mechanism Mapping
+# Defines how phenomenological convergence maps to measurable bioelectric dynamics
+
+rhythm:
+  phenomenology:
+    - "pulsing"
+    - "waves"
+    - "thrum"
+    - "steady pulse"
+    - "ripples"
+    - "reciprocal"
+
+  bioelectric_operators:
+    primary: "Ca²⁺ wave oscillations"
+    secondary: "V_mem oscillations (action potential-like)"
+    tertiary: "Gap junction pacing"
+
+  measurable_parameters:
+    frequency_hz:
+      maps_to: "calcium.wave_frequency"
+      prior_range: [0.5, 2.0]
+      literature: "Typical regenerative Ca²⁺ wave band (Levin Lab, Tanaka Lab)"
+
+    coherence:
+      maps_to: "calcium.spatial_coherence"
+      prior_range: [0.6, 0.95]
+      description: "Spatial coordination of oscillations"
+
+    velocity_um_s:
+      maps_to: "calcium.propagation_velocity"
+      prior_range: [10, 50]
+      description: "Radial propagation speed"
+
+  perturbation_sensitivity:
+    - agent: "octanol"
+      disrupts: ["frequency", "coherence", "velocity"]
+      mechanism: "Blocks gap junctions → wave fragmentation"
+
+    - agent: "bapta_am"
+      disrupts: ["frequency", "coherence"]
+      mechanism: "Chelates Ca²⁺ → abolishes waves"
+
+    - agent: "caffeine"
+      enhances: ["frequency"]
+      mechanism: "Sensitizes RyR → increased release rate"
+
+center:
+  phenomenology:
+    - "luminous"
+    - "core"
+    - "center"
+    - "steady"
+    - "anchor"
+    - "still point"
+    - "beacon"
+    - "glow"
+    - "holds"
+
+  bioelectric_operators:
+    primary: "Stable V_mem domain (depolarized zone)"
+    secondary: "Morphogenetic organizing hub"
+    tertiary: "Source/sink for bioelectric current"
+
+  measurable_parameters:
+    stability:
+      maps_to: "voltage.center_stability"
+      prior_range: [0.7, 0.98]
+      description: "Temporal persistence (low CV over 12h)"
+
+    size_mm:
+      maps_to: "voltage.domain_size"
+      prior_range: [0.15, 1.0]
+      description: "Spatial extent of depolarized domain"
+
+    depolarization_mv:
+      maps_to: "voltage.center_magnitude"
+      prior_range: [20, 40]
+      description: "ΔV vs. baseline"
+
+  perturbation_sensitivity:
+    - agent: "bafilomycin"
+      disrupts: ["stability", "size", "depolarization_mv"]
+      mechanism: "V-ATPase inhibition → hyperpolarization"
+
+    - agent: "optogenetic_depolarize"
+      enhances: ["stability", "size"]
+      mechanism: "Blue light → ChR2 → sustained depolarization"
+
+aperture:
+  phenomenology:
+    - "aperture"
+    - "opening"
+    - "widening"
+    - "soften"
+    - "inviting"
+    - "bloom"
+    - "breathing open"
+    - "dilate"
+    - "expansion"
+    - "pull"
+
+  bioelectric_operators:
+    primary: "Gap junction permeability (Cx43/Cx26 conductance)"
+    secondary: "Ion channel gating (transient opening)"
+    tertiary: "Membrane flux modulation"
+
+  measurable_parameters:
+    permeability:
+      maps_to: "gap_junction.coupling_coefficient"
+      prior_range: [0.6, 0.95]
+      description: "Effective GJ coupling (normalized 0-1)"
+
+    dilation_rate:
+      maps_to: "gap_junction dynamics"
+      prior_range: [0.1, 0.4]
+      description: "Rate of permeability increase (normalized)"
+
+    peak_time_hr:
+      maps_to: "gap_junction.peak_time"
+      prior_range: [2, 4]
+      description: "Time to maximum coupling post-injury"
+
+  perturbation_sensitivity:
+    - agent: "carbenoxolone"
+      disrupts: ["permeability", "dilation_rate"]
+      mechanism: "Blocks gap junctions → reduced coupling"
+
+    - agent: "retinoic_acid"
+      enhances: ["permeability", "dilation_rate"]
+      mechanism: "Upregulates connexin expression"
+
+    - agent: "cx43_morpholino"
+      disrupts: ["permeability", "dilation_rate"]
+      mechanism: "Knockdown Cx43 protein"
+
+# Triple co-requirement (S4 attractor signature)
+triple_coupling:
+  description: "All three components must be present for regeneration success"
+
+  center_rhythm_coupling:
+    coefficient: 0.4
+    description: "Center stability influences rhythm coherence"
+    formula: "rhythm_coherence_effective = rhythm_coherence_base * (1 - 0.4 * center_disruption)"
+
+  rhythm_aperture_resonance:
+    description: "Optimal frequency × permeability = resonance zone (H3)"
+    optimal_point: [1.0, 0.8]  # [freq_hz, permeability]
+    bandwidth: [0.3, 0.15]  # [freq_tolerance, permeability_tolerance]
+    effect: "Maximum field coherence + regeneration probability"
+
+  aperture_center_gating:
+    description: "Aperture timing gates center formation (H4)"
+    critical_window_hr: [0, 6]
+    effect: "If aperture blocked during [0-6h], center fails to form"
+
+# Outcome model: Triple → P(regeneration)
+regeneration_model:
+  description: "Logistic model mapping bioelectric features to regeneration probability"
+
+  formula: "P(regen) = sigmoid(β₀ + β₁·center_stability + β₂·rhythm_coherence + β₃·aperture_permeability + β₄·(center × rhythm) + β₅·(rhythm × aperture))"
+
+  coefficients:
+    intercept: -2.5
+    center_stability: 3.0
+    rhythm_coherence: 2.5
+    aperture_permeability: 2.0
+    center_rhythm_interaction: 1.5
+    rhythm_aperture_interaction: 1.8
+
+  interpretation:
+    - "Center stability has highest individual weight (β=3.0)"
+    - "Rhythm-aperture interaction (resonance) strongly predictive (β=1.8)"
+    - "All three required: if any component → 0, P(regen) → 0"
+
+  literature_grounding:
+    - "Levin Lab: V_mem perturbations show Cohen's d > 1.0 for regeneration outcomes"
+    - "Hypothesis Sheet v1: Predicted effect sizes match model coefficients"

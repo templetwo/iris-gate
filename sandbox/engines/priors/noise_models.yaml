@@ -1,0 +1,127 @@
+# Noise Models for Sandbox Simulations
+# Defines uncertainty sources: biological variability + measurement noise
+
+biological_variability:
+  description: "Natural variation in bioelectric parameters across organisms"
+
+  voltage:
+    center_magnitude:
+      distribution: "normal"
+      cv: 0.15  # Coefficient of variation
+      units: "relative to mean"
+      source: "Levin Lab V_mem imaging studies (typical within-species CV)"
+
+    center_stability:
+      distribution: "beta"
+      alpha: 8
+      beta: 2
+      range: [0.5, 1.0]
+      source: "Expert prior (stability tends toward high values)"
+
+  calcium:
+    wave_frequency:
+      distribution: "lognormal"
+      mu: 0.0  # log(median)
+      sigma: 0.25
+      source: "Ca²⁺ imaging literature (frequencies multiplicative, not additive)"
+
+    spatial_coherence:
+      distribution: "beta"
+      alpha: 6
+      beta: 2
+      range: [0.3, 1.0]
+
+  gap_junction:
+    coupling_coefficient:
+      distribution: "lognormal"
+      mu: 0.0
+      sigma: 0.30
+      source: "Dye-coupling assays show log-normal distribution"
+
+measurement_noise:
+  description: "Technical noise from imaging/recording systems"
+
+  voltage:
+    dibac4_noise_mv:
+      distribution: "normal"
+      mean: 0
+      std: 3.0  # mV
+      source: "Typical DiBAC4(3) voltage dye noise floor"
+
+  calcium:
+    gcamp_snr:
+      typical_snr: 8.0  # Signal-to-noise ratio
+      noise_floor_df_f: 0.05  # ΔF/F
+      source: "GCaMP6f imaging benchmarks"
+
+  gap_junction:
+    lucifer_yellow_count_error:
+      distribution: "poisson"
+      description: "Counting error in coupled cells"
+      typical_lambda: 0.8  # Mean error in cell count
+
+perturbation_variability:
+  description: "Uncertainty in drug/perturbation effect sizes"
+
+  dose_response_variability:
+    cv: 0.20  # 20% CV in effect size across replicates
+    source: "Typical pharmacological variability in regeneration studies"
+
+  temporal_variability:
+    onset_jitter_hr:
+      distribution: "normal"
+      mean: 0
+      std: 0.5  # hr
+      description: "Variation in when perturbation takes effect"
+
+mirror_specific_noise:
+  description: "Each mirror's S4 state has confidence-weighted noise"
+
+  confidence_noise_scaling:
+    formula: "effective_noise = base_noise / sqrt(confidence)"
+    description: "Lower confidence → higher noise in sampled parameters"
+    rationale: "Mirrors with lower signals_confidence have more uncertain priors"
+
+  anthropic_claude_sonnet_4_5:
+    confidence: 0.66
+    noise_scaling: 1.23  # 1/sqrt(0.66)
+
+  openai_gpt_4o:
+    confidence: 0.80
+    noise_scaling: 1.12
+
+  xai_grok_4_fast_reasoning:
+    confidence: 0.80
+    noise_scaling: 1.12
+
+  google_gemini_2_5_flash_lite:
+    confidence: 0.80
+    noise_scaling: 1.12
+
+  deepseek_deepseek_chat:
+    confidence: 0.80
+    noise_scaling: 1.12
+
+  ollama_qwen3_1_7b:
+    confidence: 0.80
+    noise_scaling: 1.12
+
+  ollama_llama3_2_3b:
+    confidence: 0.80
+    noise_scaling: 1.12
+
+monte_carlo_settings:
+  default_n_runs: 500
+  convergence_check_interval: 100
+  convergence_tolerance: 0.02  # Stop if 95% CI width changes < 2% over last 100 runs
+
+uncertainty_decomposition:
+  description: "Break down total uncertainty into sources"
+
+  total_variance_formula: "Var(total) = Var(biological) + Var(measurement) + Var(perturbation) + Var(model)"
+
+  typical_contributions:
+    biological: 0.50  # 50% of total variance
+    measurement: 0.15
+    perturbation: 0.25
+    model: 0.10  # Model form uncertainty (choice of logistic vs other)

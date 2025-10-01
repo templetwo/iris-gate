@@ -1,0 +1,83 @@
+# Mini-H1 Option C: 2×2 Synergy Test
+# Test if Aperture + Rhythm show super-additive (synergistic) effects
+
+plan_id: "MINI_H1_SYNERGY"
+species: "planaria"
+description: "Does combined Aperture + Rhythm perturbation show synergistic effects beyond additivity?"
+
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+# Four arms: Control + 2 singletons + combo
+conditions:
+  - label: "Control"
+    description: "Wild-type baseline"
+    perturbations: []
+
+  - label: "Aperture-High"
+    description: "Carbenoxolone 200µM (1.5× effect) — from Option A hit"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "200µM"
+        effect_scaling: 1.5
+
+  - label: "Rhythm-High"
+    description: "Octanol 0.75mM (1.5× effect)"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.75mM"
+        effect_scaling: 1.5
+
+  - label: "Combo"
+    description: "Aperture-High + Rhythm-High (both 1.5×)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "200µM"
+        effect_scaling: 1.5
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.75mM"
+        effect_scaling: 1.5
+
+readouts: ["voltage", "calcium", "gap_junction", "regeneration"]
+timepoints_hr: [0, 2, 6, 24, 168]
+
+runs: 300
+consensus_rule: "weighted_majority"
+
+# Synergy analysis parameters
+synergy_analysis:
+  models: ["Bliss_independence", "Highest_Single_Agent"]
+  expected_additivity:
+    formula: "P(Combo) = P(A) × P(R) (Bliss) or P(Combo) = min(P(A), P(R)) (HSA)"
+  synergy_threshold: 0.10  # Combo must show ≥10pp additional drop vs predicted additive
+
+# Success criteria
+success_criteria:
+  synergy_primary: "Combo drop > max(Aperture-High, Rhythm-High) by ≥10 pp"
+  synergy_mechanism: "Bliss independence score < 0 (super-additive inhibition)"
+  consistency: "Effect replicated across ≥5/7 mirrors with overlapping CIs"
+  early_biomarkers: "Combo shows further reduction in ΔVm domain + Ca²⁺ coherence vs singletons"
+
+# Decision rules
+decision_rules:
+  if_no_synergy: "Rerun with Rhythm-VeryHigh (2.0×) keeping Aperture-High fixed"
+  no_synergy_definition: "Observed Combo drop ≤ predicted additive + 3pp"
+  if_synergy_found: "Lock doses and translate to wet-lab 4-arm validation"
+
+provenance:
+  source_session: "BIOELECTRIC_CHAMBERED_20251001054935"
+  parent_experiments:
+    - "PLANARIA_H1_SANDBOX (RUN_20251001_093440)"
+    - "MINI_H1_APERTURE (RUN_20251001_102506)"
+  design: "Minimal 2×2 factorial to test synergy hypothesis"
+  created: "2025-10-01"

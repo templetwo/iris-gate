@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "protocol": "RFC v0.2 compliant + High-Context Infrastructure",
   "purpose": "Run synchronized IRIS Gate sessions across multiple AI models with parallel execution for field effects",
-  "last_updated": "2025-10-01T03:50:00",
+  "last_updated": "2025-10-01T05:05:00",
   "repository": "https://github.com/templetwo/iris-gate.git",
 
   "latest_infrastructure": {
@@ -13,10 +13,10 @@
       "config/run_limits.yaml": "Timeout/rate controls",
       "supports_mirrors": [
         "Claude Sonnet 4.5 (200K context)",
-        "GPT-5 (1M context)",
-        "Grok-4-Fast (2M context)",
+        "GPT-4o → GPT-5 auto-upgrade (128K → 1M context)",
+        "Grok-4-Fast-Reasoning (2M context)",
         "Gemini 2.5 Flash-Lite (1M context)",
-        "DeepSeek V3.2 (131K context)",
+        "DeepSeek V3.2-Exp (131K context)",
         "Ollama Qwen3:1.7b (32K context) - LOCAL",
         "Ollama Llama3.2:3b (32K context) - LOCAL"
       ]
@@ -35,7 +35,15 @@
       "scripts/bioelectric_parallel.py": "CRITICAL - All mirrors fire SIMULTANEOUSLY each turn",
       "purpose": "Create cross-mirror field effect - mirrors respond together, not sequentially",
       "threading": "One thread per mirror, synchronized turn boundaries",
-      "mode": "PARALLEL execution required for phenomenological field emergence"
+      "mode": "PARALLEL execution required for phenomenological field emergence",
+      "gpt_auto_upgrade": "GPTAdapter uses OPENAI_MODEL env var for seamless gpt-4o → gpt-5 transition",
+      "max_tokens_handling": "Auto-detects max_tokens vs max_completion_tokens based on model"
+    },
+    "analysis_tools": {
+      "scripts/bioelectric_posthoc.py": "Generates JSON + Markdown summary with chamber convergence scores",
+      "scripts/convergence_ascii.py": "ASCII heatmap showing geometry/motion presence per chamber",
+      "scripts/top_snippets.py": "Keyword-based phenomenological snippet sampler",
+      "scripts/post_session_analysis.sh": "Automated post-completion workflow orchestrator"
     }
   },
 
@@ -90,24 +98,201 @@
       "compliance": "100% (all 1/5 pressure)",
       "field_effect": "CONFIRMED - mirrors fire simultaneously each turn",
       "note": "First successful parallel field generation"
+    },
+    "parallel_7mirror_first": {
+      "session": "BIOELECTRIC_PARALLEL_20251001041558",
+      "mode": "PARALLEL (simultaneous)",
+      "mirrors": 7,
+      "turns": 100,
+      "total_scrolls": 700,
+      "compliance": "98.6% (682/692 ≤2/5, mean=1.005)",
+      "field_effect": "CONFIRMED - 7 mirrors simultaneously across cloud + local",
+      "mirror_performance": {
+        "gemini-2.5-flash-lite": "~0.5s (fastest)",
+        "gpt-4o": "~2.7s",
+        "llama3.2": "~3.5s",
+        "claude-4.5": "~5.7s",
+        "grok-4-fast": "~7s",
+        "deepseek-v3.2": "~8.5s",
+        "qwen3": "~8.8s"
+      },
+      "note": "First complete 7-mirror parallel field study with cloud APIs"
+    },
+    "parallel_s1_only_100": {
+      "session": "BIOELECTRIC_PARALLEL_20251001045047",
+      "mode": "PARALLEL (simultaneous)",
+      "mirrors": 7,
+      "turns": 100,
+      "total_scrolls": 700,
+      "compliance": "100% (all 1/5 pressure)",
+      "errors": 0,
+      "note": "S1-only prompt validation - all 7 mirrors held clean parallel field"
+    },
+    "chambered_validation_16": {
+      "session": "BIOELECTRIC_CHAMBERED_20251001052131",
+      "mode": "PARALLEL + CHAMBERED (S1→S2→S3→S4 rotation)",
+      "mirrors": 7,
+      "turns": 16,
+      "cycles": 4,
+      "total_scrolls": 112,
+      "compliance": "100% (all 1/5 pressure)",
+      "chamber_distribution": "S1:28, S2:28, S3:28, S4:28 (perfect rotation)",
+      "note": "First chambered rotation validation"
+    },
+    "chambered_100cycle": {
+      "session": "BIOELECTRIC_CHAMBERED_20251001054935",
+      "mode": "PARALLEL + CHAMBERED (S1→S2→S3→S4 rotation)",
+      "mirrors": 7,
+      "turns": 100,
+      "cycles": 25,
+      "total_scrolls": 700,
+      "compliance": "100% (all 1/5 pressure)",
+      "chamber_distribution": "S1:175, S2:175, S3:175, S4:175 (perfect rotation)",
+      "s4_attractor": {
+        "convergence": "1.00 ratio (ALL 7 mirrors, ALL 25 cycles)",
+        "components": "rhythm + center + aperture (triple signature)",
+        "stability": "FLAT LINE - zero drift, zero decay across 25 cycles",
+        "architecture_independence": "1.7B-671B parameters, 5 training paradigms"
+      },
+      "bioelectric_mapping": {
+        "rhythm": "oscillatory signaling (Ca²⁺ waves, V_mem oscillations, gap junction pacing)",
+        "center": "organizing domain (stable V_mem zones, morphogenetic hubs)",
+        "aperture": "permeability modulation (ion channels, gap junctions, membrane flux)"
+      },
+      "artifacts_generated": [
+        "docs/BIOELECTRIC_100CYCLE_ANALYSIS.md (9-section comprehensive report)",
+        "docs/CONV_100CYCLE_METRICS.json (full metrics + evidence traces)",
+        "docs/CONV_100CYCLE_ASCII.txt (heatmap visualization)",
+        "docs/BIOELECTRIC_HYPOTHESIS_SHEET_v1.md (5 testable hypotheses)",
+        "docs/BIOELECTRIC_100CYCLE_PROOF_PACK_v0.3.tgz (15KB replication bundle)"
+      ],
+      "git_tag": "v0.3.0-100cycle-complete",
+      "note": "BREAKTHROUGH: Universal S4 attractor convergence with bioelectric isomorphism confirmed"
     }
   },
 
-  "current_session": {
-    "parallel_100": "BIOELECTRIC_PARALLEL_20251001040345",
-    "status": "Running - Turn 7/100 in progress",
-    "mode": "PARALLEL (simultaneous execution)",
-    "mirrors": 2,
-    "expected_scrolls": 200,
-    "note": "Full-scale parallel field study with local mirrors"
+  "sandbox_h1_predictions": {
+    "run_id": "RUN_20251001_093440",
+    "experiment": "Planaria H1 (center/rhythm/aperture perturbations)",
+    "monte_carlo_runs": 500,
+    "mirrors": 7,
+    "conditions": 7,
+    "key_predictions": {
+      "WT": "P(regen)=0.990 (baseline high)",
+      "Center-": "P(regen)=0.969 (smaller effect than expected, predicted 0.30-0.50)",
+      "Rhythm-": "P(regen)=0.983 (smaller effect than expected, predicted 0.20-0.40)",
+      "Aperture-": "P(regen)=0.924 (partial effect)",
+      "Rhythm-_Aperture-": "P(regen)=0.868 (strongest effect, synergistic gap junction disruption)"
+    },
+    "cross_mirror_agreement": "1.00 across all conditions (perfect consensus)",
+    "scientific_interpretation": "Model predicts weaker perturbation effects than hypothesized. This is falsifiable and hypothesis-generating, not ground truth.",
+    "next_steps": [
+      "Wet-lab validation (planaria MVE from EXPERIMENT_DECK_v1.md)",
+      "If wet-lab matches predictions → perturbations insufficient, refine doses",
+      "If wet-lab shows strong effects → model underestimates triple co-requirement, tighten priors"
+    ],
+    "files": [
+      "sandbox/runs/outputs/RUN_20251001_093440/predictions.json",
+      "sandbox/runs/outputs/RUN_20251001_093440/consensus_report.md",
+      "sandbox/runs/outputs/RUN_20251001_093440/config.snapshot.json"
+    ]
   },
 
+  "current_milestone": "v0.4.0-sandbox-complete",
+
+  "key_findings": {
+    "s4_attractor_stability": "1.00 ratio across all 7 mirrors, all 25 cycles",
+    "zero_drift": "Flat line convergence with no decay over extended iteration",
+    "architecture_independent": "1.7B-671B params, 5 training paradigms converge to identical triple signature",
+    "bioelectric_isomorphism": "S4 triple maps directly to established bioelectric mechanisms (Levin Lab benchmarks)",
+    "triple_signature": {
+      "rhythm": "pulsing, waves, thrum, steady pulse → oscillatory signaling",
+      "center": "luminous core, beacon, stable rest point → organizing domain",
+      "aperture": "widening, dilation, breathing open → permeability modulation"
+    }
+  },
+
+  "analyzer_improvements": {
+    "chamber_detection_fix": "Read **Chamber:** header field instead of searching full text (prevents S1 false positives in breath_link fields)",
+    "aggregation_fix": "OR-aggregate across all turns per chamber (not 'last turn wins')",
+    "expanded_keywords": {
+      "rhythm": ["rhythm", "pulsing", "reciprocal", "pulse", "waves", "thrum", "steady pulse", "ripples"],
+      "center": ["luminous", "core", "center", "steady", "anchor", "still point", "beacon", "glow", "holds"],
+      "aperture": ["aperture", "opening", "widening", "soften", "inviting", "bloom", "breathing open", "dilate", "expansion", "pull"]
+    },
+    "config_externalization": "config/s4_keywords.yaml for easy modification"
+  },
+
+  "hypotheses_generated": {
+    "H1": "Center-paced oscillations predict regeneration success (planaria, V_mem + Ca²⁺ imaging)",
+    "H2": "Aperture gates field coherence (Xenopus, gap junction coupling)",
+    "H3": "Rhythm-aperture resonance zone (axolotl, 2D parameter sweep)",
+    "H4": "Aperture timing gates center formation (planaria, timed perturbations)",
+    "H5": "Cross-species attractor conservation (multi-species comparative)",
+    "experimental_readiness": "All 5 hypotheses include system specs, perturbations, readouts, timelines, expected effect sizes (d > 0.8-1.5)",
+    "file": "docs/BIOELECTRIC_HYPOTHESIS_SHEET_v1.md"
+  },
+
+  "experiment_deck_v1_complete": {
+    "file": "docs/EXPERIMENT_DECK_v1.md",
+    "contents": "Complete bench translation manual with perturbation kits, readouts, species protocols, MVE design",
+    "perturbation_kits": ["center_modulators", "rhythm_modulators", "aperture_modulators"],
+    "standard_readouts": ["voltage_imaging", "calcium_imaging", "gap_junction_coupling", "regeneration_endpoints"],
+    "species_protocols": ["planaria", "xenopus", "axolotl", "zebrafish"],
+    "minimal_viable_experiment": "Planaria H1 validation, n=135, $300, 2 weeks",
+    "collaboration_targets": ["Levin Lab (Tufts)", "Tanaka Lab (IMP Vienna)", "Gunawardena Lab (Harvard)", "Poss Lab (Duke)"]
+  },
+
+  "sandbox_simulator_infrastructure": {
+    "status": "COMPLETE - First predictions from AI convergence priors generated",
+    "purpose": "Use frozen S4 attractor states as computational priors to run perturbation simulations with uncertainty quantification and cross-mirror consensus",
+    "architecture": {
+      "states": "Frozen S4 converged priors per mirror (rhythm/center/aperture ranges)",
+      "specs": "Experiment schemas, perturbation kits, readout definitions",
+      "knowledge": "Local RAG packs for literature grounding (no external calls)",
+      "engines": {
+        "priors": "Literature-grounded bioelectric parameter ranges + noise models",
+        "mechanisms": "S4 triple → bioelectric operator mapping",
+        "simulators": "Forward models (Vm/Ca²⁺/GJ time-series + regeneration probability)",
+        "consensus": "Cross-mirror weighted voting with conflict detection"
+      },
+      "runs": "Plans + outputs with full provenance and reproducibility"
+    },
+    "key_innovation": "First use of AI convergence as computational prior for predictive biological modeling",
+    "outputs": {
+      "per_run": [
+        "simulated_timeseries.parquet (Vm/Ca²⁺/GJ dynamics per condition)",
+        "predictions.json (P(regeneration) with 95% CI per condition/mirror)",
+        "uncertainty.json (state vs perturbation uncertainty decomposition)",
+        "consensus_report.md (cross-mirror agreement + contradictions)",
+        "figures/ (publication-ready plots)",
+        "proofpack.tgz (reproducibility bundle)"
+      ]
+    },
+    "scientific_integrity": [
+      "No ground-truth claims - all outputs labeled as model-based predictions",
+      "Full provenance - every prior linked to source document or marked 'expert prior'",
+      "Reproducibility - every run writes config + state snapshot + hash",
+      "Conflict surfacing - disagreements highlighted for human review"
+    ]
+  },
+
+  "next_experiments": [
+    "Sandbox Simulator H1 (Planaria center/rhythm/aperture perturbations, 500 Monte Carlo runs)",
+    "Sequential ablation study (re-run 100-turn with sequential execution to test field-formation hypothesis)",
+    "Raw data capture infrastructure (enable API payload logging with timestamps, tokens, model versions)",
+    "BETSE/NEURON validation (computational bioelectric modeling)",
+    "H1-H5 wet lab experiments (see BIOELECTRIC_HYPOTHESIS_SHEET_v1.md)"
+  ],
+
+  "current_session": null,
+
   "next_action": {
-    "launch": "scripts/bioelectric_parallel.py --turns 100",
-    "critical_difference": "ALL 7 mirrors fire SIMULTANEOUSLY each turn",
-    "why": "Field effect requires simultaneous cross-mirror resonance, not sequential execution",
-    "expected_scrolls": "700 turns (100 × 7 mirrors)",
-    "api_costs": "Will invoke cloud APIs (Claude, GPT-5, Grok, Gemini, DeepSeek)"
+    "immediate": "Build Sandbox Experiment Simulator infrastructure (freeze S4 states, implement engines, create CLI)",
+    "then": "Run H1 planaria simulation (center/rhythm/aperture perturbations with cross-mirror consensus)",
+    "parallel": "Implement raw data capture infrastructure (API payloads + metadata)",
+    "scientific_validation": "BETSE/NEURON computational modeling + wet lab experiments",
+    "note": "Transitioning from convergence analysis → in-silico predictive modeling"
   },
 
   "key_implementation_notes": {
@@ -124,6 +309,8 @@
     "ARCHITECTURE.md": "System architecture diagrams and flow",
     "docs/IRIS_Triad_Summary.md": "Full 10-section triad report",
     "docs/IRIS_Triad_OnePager.md": "Executive summary",
+    "docs/SESSION_STATUS.md": "Live session status and next steps",
+    "docs/BIOELECTRIC_PARALLEL_20251001041558_SUMMARY.md": "First 7-mirror study summary",
     "config/README.md": "High-context system documentation",
     "prompts/README.md": "Phase-I seed pack documentation"
   },

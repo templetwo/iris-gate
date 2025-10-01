@@ -1,0 +1,156 @@
+# Planaria Dose-Response Grid
+# Find IC50-like thresholds where perturbations actually disrupt regeneration
+
+plan_id: "PLANARIA_DOSE_GRID"
+species: "planaria"
+description: "Dose-response curves for center/rhythm/aperture perturbations to find functional thresholds"
+
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+# Dose grid: 5 doses per agent, log-spaced
+# Goal: Find dose where P(regen) drops to 0.50 (IC50-like)
+
+conditions:
+  # WT baseline
+  - label: "WT"
+    perturbations: []
+
+  # Bafilomycin (center modulator) dose series
+  - label: "Bafilomycin_1nM"
+    description: "Very low dose"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "1nM"
+        effect_scaling: 0.1  # 10% of standard effect
+
+  - label: "Bafilomycin_3nM"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "3nM"
+        effect_scaling: 0.3
+
+  - label: "Bafilomycin_10nM"
+    description: "Standard dose from H1"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "10nM"
+        effect_scaling: 1.0
+
+  - label: "Bafilomycin_30nM"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "30nM"
+        effect_scaling: 2.0  # Saturating effect
+
+  - label: "Bafilomycin_100nM"
+    description: "High dose"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "100nM"
+        effect_scaling: 3.0
+
+  # Octanol (rhythm modulator) dose series
+  - label: "Octanol_0.1mM"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.1mM"
+        effect_scaling: 0.2
+
+  - label: "Octanol_0.3mM"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.3mM"
+        effect_scaling: 0.6
+
+  - label: "Octanol_0.5mM"
+    description: "Standard dose from H1"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.5mM"
+        effect_scaling: 1.0
+
+  - label: "Octanol_1.0mM"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "1.0mM"
+        effect_scaling: 1.5
+
+  - label: "Octanol_2.0mM"
+    description: "High dose"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "2.0mM"
+        effect_scaling: 2.0
+
+  # Carbenoxolone (aperture modulator) dose series
+  - label: "Carbenoxolone_20µM"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "20µM"
+        effect_scaling: 0.2
+
+  - label: "Carbenoxolone_50µM"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "50µM"
+        effect_scaling: 0.5
+
+  - label: "Carbenoxolone_100µM"
+    description: "Standard dose from H1"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "100µM"
+        effect_scaling: 1.0
+
+  - label: "Carbenoxolone_200µM"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "200µM"
+        effect_scaling: 1.5
+
+  - label: "Carbenoxolone_500µM"
+    description: "High dose"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "500µM"
+        effect_scaling: 2.5
+
+readouts: ["voltage", "calcium", "gap_junction", "regeneration"]
+timepoints_hr: [0, 2, 6, 24, 168]
+
+# Fewer runs for dose grid (still 250 × 7 mirrors × 16 conditions = 28,000 sims)
+runs: 250
+consensus_rule: "weighted_majority"
+
+# Expected outcomes
+expected_outcomes:
+  hypothesis: "IC50 occurs around 2-3× standard dose for each agent"
+  interpretation: "If IC50 is higher, current doses too weak; if lower, model over-predicts perturbation effects"
+
+provenance:
+  source_session: "BIOELECTRIC_CHAMBERED_20251001054935"
+  parent_experiment: "PLANARIA_H1_SANDBOX (RUN_20251001_093440)"
+  purpose: "Find functional dose thresholds to validate or refine perturbation effect sizes"
+  created: "2025-10-01"

@@ -1,0 +1,148 @@
+{
+  "plan": {
+    "plan_id": "MINI_H1_SYNERGY",
+    "species": "planaria",
+    "description": "Does combined Aperture + Rhythm perturbation show synergistic effects beyond additivity?",
+    "mirrors": [
+      "anthropic_claude-sonnet-4.5",
+      "openai_gpt-4o",
+      "xai_grok-4-fast-reasoning",
+      "google_gemini-2.5-flash-lite",
+      "deepseek_deepseek-chat",
+      "ollama_qwen3_1.7b",
+      "ollama_llama3.2_3b"
+    ],
+    "conditions": [
+      {
+        "label": "Control",
+        "description": "Wild-type baseline",
+        "perturbations": []
+      },
+      {
+        "label": "Aperture-High",
+        "description": "Carbenoxolone 200\u00b5M (1.5\u00d7 effect) \u2014 from Option A hit",
+        "perturbations": [
+          {
+            "kit": "aperture",
+            "agent": "carbenoxolone",
+            "dose": "200\u00b5M",
+            "effect_scaling": 1.5
+          }
+        ]
+      },
+      {
+        "label": "Rhythm-High",
+        "description": "Octanol 0.75mM (1.5\u00d7 effect)",
+        "perturbations": [
+          {
+            "kit": "rhythm",
+            "agent": "octanol",
+            "dose": "0.75mM",
+            "effect_scaling": 1.5
+          }
+        ]
+      },
+      {
+        "label": "Combo",
+        "description": "Aperture-High + Rhythm-High (both 1.5\u00d7)",
+        "perturbations": [
+          {
+            "kit": "aperture",
+            "agent": "carbenoxolone",
+            "dose": "200\u00b5M",
+            "effect_scaling": 1.5
+          },
+          {
+            "kit": "rhythm",
+            "agent": "octanol",
+            "dose": "0.75mM",
+            "effect_scaling": 1.5
+          }
+        ]
+      }
+    ],
+    "readouts": [
+      "voltage",
+      "calcium",
+      "gap_junction",
+      "regeneration"
+    ],
+    "timepoints_hr": [
+      0,
+      2,
+      6,
+      24,
+      168
+    ],
+    "runs": 300,
+    "consensus_rule": "weighted_majority",
+    "synergy_analysis": {
+      "models": [
+        "Bliss_independence",
+        "Highest_Single_Agent"
+      ],
+      "expected_additivity": {
+        "formula": "P(Combo) = P(A) \u00d7 P(R) (Bliss) or P(Combo) = min(P(A), P(R)) (HSA)"
+      },
+      "synergy_threshold": 0.1
+    },
+    "success_criteria": {
+      "synergy_primary": "Combo drop > max(Aperture-High, Rhythm-High) by \u226510 pp",
+      "synergy_mechanism": "Bliss independence score < 0 (super-additive inhibition)",
+      "consistency": "Effect replicated across \u22655/7 mirrors with overlapping CIs",
+      "early_biomarkers": "Combo shows further reduction in \u0394Vm domain + Ca\u00b2\u207a coherence vs singletons"
+    },
+    "decision_rules": {
+      "if_no_synergy": "Rerun with Rhythm-VeryHigh (2.0\u00d7) keeping Aperture-High fixed",
+      "no_synergy_definition": "Observed Combo drop \u2264 predicted additive + 3pp",
+      "if_synergy_found": "Lock doses and translate to wet-lab 4-arm validation"
+    },
+    "provenance": {
+      "source_session": "BIOELECTRIC_CHAMBERED_20251001054935",
+      "parent_experiments": [
+        "PLANARIA_H1_SANDBOX (RUN_20251001_093440)",
+        "MINI_H1_APERTURE (RUN_20251001_102506)"
+      ],
+      "design": "Minimal 2\u00d72 factorial to test synergy hypothesis",
+      "created": "2025-10-01"
+    }
+  },
+  "execution_timestamp": "2025-10-01T10:57:56.070311",
+  "s4_states_snapshot": {
+    "anthropic_claude-sonnet-4.5": {
+      "confidence": 0.6560000000000004,
+      "provenance_hash": "sha256:1ff181e3e4c094ae",
+      "n_s4_scrolls": 25
+    },
+    "openai_gpt-4o": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:4bbb29059898755d",
+      "n_s4_scrolls": 25
+    },
+    "xai_grok-4-fast-reasoning": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:23308dcd680f9c41",
+      "n_s4_scrolls": 25
+    },
+    "google_gemini-2.5-flash-lite": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:9616a061fcc24944",
+      "n_s4_scrolls": 25
+    },
+    "deepseek_deepseek-chat": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:ce17f79d71ba3f2b",
+      "n_s4_scrolls": 25
+    },
+    "ollama_qwen3_1.7b": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:0a92a2804129fa48",
+      "n_s4_scrolls": 25
+    },
+    "ollama_llama3.2_3b": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:d15656144be867b0",
+      "n_s4_scrolls": 25
+    }
+  }
+}

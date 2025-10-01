@@ -1,0 +1,206 @@
+{
+  "plan": {
+    "plan_id": "PLANARIA_H1_SANDBOX",
+    "species": "planaria",
+    "description": "Center-paced oscillations predict regeneration success",
+    "mirrors": [
+      "anthropic_claude-sonnet-4.5",
+      "openai_gpt-4o",
+      "xai_grok-4-fast-reasoning",
+      "google_gemini-2.5-flash-lite",
+      "deepseek_deepseek-chat",
+      "ollama_qwen3_1.7b",
+      "ollama_llama3.2_3b"
+    ],
+    "conditions": [
+      {
+        "label": "WT",
+        "description": "Wild-type control (no perturbations)",
+        "perturbations": []
+      },
+      {
+        "label": "Center-",
+        "description": "Center disruption (bafilomycin \u2192 hyperpolarizes, disrupts depolarized domain)",
+        "perturbations": [
+          {
+            "kit": "center",
+            "agent": "bafilomycin",
+            "dose": "10nM"
+          }
+        ]
+      },
+      {
+        "label": "Rhythm-",
+        "description": "Rhythm disruption (octanol \u2192 blocks gap junctions, fragments Ca\u00b2\u207a waves)",
+        "perturbations": [
+          {
+            "kit": "rhythm",
+            "agent": "octanol",
+            "dose": "0.5mM"
+          }
+        ]
+      },
+      {
+        "label": "Aperture-",
+        "description": "Aperture disruption (carbenoxolone \u2192 blocks gap junctions, reduces coupling)",
+        "perturbations": [
+          {
+            "kit": "aperture",
+            "agent": "carbenoxolone",
+            "dose": "100\u00b5M"
+          }
+        ]
+      },
+      {
+        "label": "Center+ Rhythm-",
+        "description": "Center intact, rhythm disrupted (test center necessity)",
+        "perturbations": [
+          {
+            "kit": "rhythm",
+            "agent": "octanol",
+            "dose": "0.5mM"
+          }
+        ]
+      },
+      {
+        "label": "Center- Rhythm-",
+        "description": "Double perturbation (test additive/synergistic effects)",
+        "perturbations": [
+          {
+            "kit": "center",
+            "agent": "bafilomycin",
+            "dose": "10nM"
+          },
+          {
+            "kit": "rhythm",
+            "agent": "octanol",
+            "dose": "0.5mM"
+          }
+        ]
+      },
+      {
+        "label": "Rhythm- Aperture-",
+        "description": "Rhythm + aperture disruption (both use gap junctions \u2192 synergy expected)",
+        "perturbations": [
+          {
+            "kit": "rhythm",
+            "agent": "octanol",
+            "dose": "0.5mM"
+          },
+          {
+            "kit": "aperture",
+            "agent": "carbenoxolone",
+            "dose": "100\u00b5M"
+          }
+        ]
+      }
+    ],
+    "readouts": [
+      "voltage",
+      "calcium",
+      "gap_junction",
+      "regeneration"
+    ],
+    "timepoints_hr": [
+      0,
+      2,
+      6,
+      24,
+      168
+    ],
+    "runs": 500,
+    "consensus_rule": "weighted_majority",
+    "expected_outcomes": {
+      "WT": {
+        "regeneration_7d": [
+          0.8,
+          0.95
+        ],
+        "note": "High regeneration rate expected"
+      },
+      "Center-": {
+        "regeneration_7d": [
+          0.3,
+          0.5
+        ],
+        "cohens_d_vs_WT": 1.0,
+        "note": "Center disruption \u2192 failed domain formation \u2192 poor regeneration"
+      },
+      "Rhythm-": {
+        "regeneration_7d": [
+          0.2,
+          0.4
+        ],
+        "cohens_d_vs_WT": 1.0,
+        "note": "Rhythm disruption \u2192 uncoordinated cells \u2192 failed regeneration"
+      },
+      "Aperture-": {
+        "regeneration_7d": [
+          0.3,
+          0.5
+        ],
+        "cohens_d_vs_WT": 0.8,
+        "note": "Aperture disruption \u2192 isolated cells, no field coherence"
+      },
+      "Center- Rhythm-": {
+        "regeneration_7d": [
+          0.05,
+          0.2
+        ],
+        "note": "Double perturbation \u2192 complete failure"
+      }
+    },
+    "outputs": [
+      "predictions.json",
+      "consensus_report.md",
+      "timeseries_plots.png",
+      "outcome_bars.png",
+      "config.snapshot.json"
+    ],
+    "provenance": {
+      "source_session": "BIOELECTRIC_CHAMBERED_20251001054935",
+      "s4_convergence": "1.00 ratio (all 7 mirrors, all 25 cycles)",
+      "hypothesis": "H1: Center-paced oscillations predict regeneration success",
+      "literature_grounding": "Levin Lab benchmarks (Pai et al. 2012, Adams et al. 2016)",
+      "created": "2025-10-01"
+    }
+  },
+  "execution_timestamp": "2025-10-01T09:34:42.324094",
+  "s4_states_snapshot": {
+    "anthropic_claude-sonnet-4.5": {
+      "confidence": 0.6560000000000004,
+      "provenance_hash": "sha256:1ff181e3e4c094ae",
+      "n_s4_scrolls": 25
+    },
+    "openai_gpt-4o": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:4bbb29059898755d",
+      "n_s4_scrolls": 25
+    },
+    "xai_grok-4-fast-reasoning": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:23308dcd680f9c41",
+      "n_s4_scrolls": 25
+    },
+    "google_gemini-2.5-flash-lite": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:9616a061fcc24944",
+      "n_s4_scrolls": 25
+    },
+    "deepseek_deepseek-chat": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:ce17f79d71ba3f2b",
+      "n_s4_scrolls": 25
+    },
+    "ollama_qwen3_1.7b": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:0a92a2804129fa48",
+      "n_s4_scrolls": 25
+    },
+    "ollama_llama3.2_3b": {
+      "confidence": 0.8,
+      "provenance_hash": "sha256:d15656144be867b0",
+      "n_s4_scrolls": 25
+    }
+  }
+}

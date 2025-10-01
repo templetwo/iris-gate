@@ -1,0 +1,155 @@
+# Perturbation Kits for Sandbox Simulations
+# Literature-grounded effect sizes from Levin Lab + Hypothesis Sheet v1
+
+center:
+  description: "Modulate stable voltage domains (organizing principle)"
+  agents:
+    bafilomycin:
+      full_name: "Bafilomycin A1"
+      mechanism: "V-ATPase inhibitor (hyperpolarizes, disrupts depolarized domains)"
+      dose: "10nM"
+      effect_on_center_stability:
+        mean: -0.40
+        std: 0.10
+        units: "normalized_delta"
+        source: "Pai et al. 2012 (Regeneration), Adams et al. 2016 (eLife)"
+      effect_on_center_size:
+        mean: -0.25
+        std: 0.08
+        units: "normalized_delta"
+      effect_on_depol_mv:
+        mean: -18
+        std: 5
+        units: "mV"
+    ivermectin:
+      full_name: "Ivermectin"
+      mechanism: "Cl⁻ channel opener (hyperpolarizes)"
+      dose: "10µM"
+      effect_on_center_stability:
+        mean: -0.30
+        std: 0.12
+      effect_on_center_size:
+        mean: -0.20
+        std: 0.10
+    optogenetic_depolarize:
+      full_name: "ChR2 optogenetic depolarization"
+      mechanism: "Blue light depolarization at wound center"
+      dose: "470nm, 0.1Hz pulses"
+      effect_on_center_stability:
+        mean: 0.35
+        std: 0.10
+        units: "normalized_delta"
+        note: "Expected to INCREASE stability"
+      effect_on_center_size:
+        mean: 0.20
+        std: 0.08
+
+rhythm:
+  description: "Modulate oscillatory signaling (Ca²⁺ waves, voltage oscillations)"
+  agents:
+    octanol:
+      full_name: "Octanol"
+      mechanism: "Gap junction blocker (disrupts wave propagation)"
+      dose: "0.5mM"
+      effect_on_rhythm_freq:
+        mean: -0.55
+        std: 0.12
+        units: "normalized_delta"
+        source: "Levin Lab gap junction studies"
+      effect_on_rhythm_coherence:
+        mean: -0.40
+        std: 0.10
+        units: "normalized (0-1)"
+      effect_on_velocity:
+        mean: -0.60
+        std: 0.15
+        units: "normalized_delta"
+    bapta_am:
+      full_name: "BAPTA-AM"
+      mechanism: "Ca²⁺ chelator (abolishes Ca²⁺ waves)"
+      dose: "50µM"
+      effect_on_rhythm_freq:
+        mean: -0.75
+        std: 0.08
+      effect_on_rhythm_coherence:
+        mean: -0.80
+        std: 0.10
+    caffeine:
+      full_name: "Caffeine"
+      mechanism: "Ryanodine receptor sensitizer (increases Ca²⁺ release)"
+      dose: "100µM"
+      effect_on_rhythm_freq:
+        mean: 0.40
+        std: 0.12
+        note: "Expected to INCREASE frequency"
+      effect_on_rhythm_coherence:
+        mean: 0.15
+        std: 0.10
+    ryanodine:
+      full_name: "Ryanodine"
+      mechanism: "RyR blocker (decreases Ca²⁺ release)"
+      dose: "10µM"
+      effect_on_rhythm_freq:
+        mean: -0.35
+        std: 0.10
+      effect_on_rhythm_coherence:
+        mean: -0.25
+        std: 0.12
+
+aperture:
+  description: "Modulate permeability (gap junctions, ion channels)"
+  agents:
+    carbenoxolone:
+      full_name: "Carbenoxolone"
+      mechanism: "Gap junction blocker"
+      dose: "100µM"
+      effect_on_permeability:
+        mean: -0.50
+        std: 0.12
+        units: "normalized_delta"
+        source: "Levin Lab connexin studies"
+      effect_on_dilation_rate:
+        mean: -0.35
+        std: 0.10
+      effect_on_peak_time:
+        mean: 2.5
+        std: 1.0
+        units: "hr (delays peak)"
+    retinoic_acid:
+      full_name: "Retinoic acid"
+      mechanism: "Gap junction enhancer"
+      dose: "1µM"
+      effect_on_permeability:
+        mean: 0.30
+        std: 0.15
+        note: "Expected to INCREASE permeability"
+      effect_on_dilation_rate:
+        mean: 0.25
+        std: 0.12
+      effect_on_peak_time:
+        mean: -0.5
+        std: 0.5
+        units: "hr (advances peak)"
+    cx43_morpholino:
+      full_name: "Cx43 morpholino knockdown"
+      mechanism: "Connexin43 protein knockdown"
+      dose: "5µM, 24h pre-injury"
+      effect_on_permeability:
+        mean: -0.65
+        std: 0.10
+      effect_on_dilation_rate:
+        mean: -0.50
+        std: 0.12
+
+# Cross-component interactions (derived from H3: rhythm-aperture resonance hypothesis)
+interactions:
+  octanol_carbenoxolone_synergy:
+    description: "Both block gap junctions → synergistic disruption"
+    components: ["rhythm", "aperture"]
+    synergy_factor: 1.3
+    note: "Effect size 30% larger than additive"
+
+  center_rhythm_coupling:
+    description: "Center stability influences rhythm coherence"
+    coupling_coefficient: 0.4
+    note: "If center disrupted, rhythm coherence drops by 40% of center disruption magnitude"

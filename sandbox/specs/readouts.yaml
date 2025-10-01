@@ -1,0 +1,99 @@
+# Standard Readouts for Sandbox Simulations
+# Defines what measurements are taken at each timepoint
+
+voltage:
+  full_name: "Voltage imaging (V_mem domains)"
+  abbrev: "Vm"
+  units: "ΔV_mem (mV vs. baseline)"
+  dyes: ["DiBAC4(3)", "CC2-DMPE"]
+  measurements:
+    center_magnitude:
+      description: "Mean depolarization in 200µm radius wound center"
+      expected_wt_6h: [25, 35]  # mV
+      units: "mV"
+    center_stability:
+      description: "Coefficient of variation over 12h window"
+      expected_wt: [0.08, 0.15]
+      units: "CV (dimensionless)"
+    domain_size:
+      description: "Area with ΔV > +15mV"
+      expected_wt_6h: [0.15, 0.8]  # mm²
+      units: "mm²"
+
+calcium:
+  full_name: "Calcium imaging (oscillatory waves)"
+  abbrev: "Ca2"
+  units: "Hz (frequency), µm/s (velocity)"
+  indicators: ["GCaMP6f", "Cal-520", "Fluo-4"]
+  measurements:
+    wave_frequency:
+      description: "FFT peak frequency"
+      expected_wt_6h: [0.6, 1.2]  # Hz
+      units: "Hz"
+    spatial_coherence:
+      description: "Cross-correlation r between adjacent regions"
+      expected_wt_6h: [0.6, 0.9]
+      units: "r (0-1)"
+    propagation_velocity:
+      description: "Radial wave speed from kymograph"
+      expected_wt_6h: [15, 45]  # µm/s
+      units: "µm/s"
+
+gap_junction:
+  full_name: "Gap junction coupling"
+  abbrev: "GJ"
+  units: "coupling index (cells coupled / neighbors)"
+  assays: ["Lucifer Yellow microinjection", "Calcein-AM dye transfer", "FRAP Cx43-GFP"]
+  measurements:
+    coupling_coefficient:
+      description: "# coupled cells / # total neighbors"
+      expected_wt_2h: [4, 6]  # fold increase vs baseline
+      expected_wt_6h: [2.5, 4]
+      expected_wt_24h: [1.3, 2]
+      units: "fold vs. baseline"
+    peak_time:
+      description: "Time to maximum coupling post-injury"
+      expected_wt: [2, 4]  # hr
+      units: "hr"
+
+regeneration:
+  full_name: "Regeneration outcome"
+  abbrev: "regen"
+  units: "probability (0-1)"
+  timepoints_hr: [168]  # 7 days
+  measurements:
+    blastema_24h:
+      description: "Blastema presence at 24h (binary)"
+      expected_wt: [0.85, 0.95]
+      units: "probability"
+    regeneration_7d:
+      description: "Full regeneration success at 7d"
+      expected_wt: [0.80, 0.95]
+      units: "probability"
+    pattern_fidelity:
+      description: "Correct anterior/posterior markers"
+      expected_wt: [0.75, 0.95]
+      units: "probability"
+
+# Timepoint schedule
+timepoints:
+  t0:
+    time_hr: 0
+    description: "Injury (baseline)"
+    readouts: []
+  t2h:
+    time_hr: 2
+    description: "Aperture peak"
+    readouts: ["gap_junction"]
+  t6h:
+    time_hr: 6
+    description: "S4 attractor window (full triple signature)"
+    readouts: ["voltage", "calcium", "gap_junction"]
+  t24h:
+    time_hr: 24
+    description: "Blastema formation"
+    readouts: ["voltage", "calcium", "regeneration.blastema_24h"]
+  t7d:
+    time_hr: 168
+    description: "Regeneration endpoint"
+    readouts: ["regeneration.regeneration_7d", "regeneration.pattern_fidelity"]

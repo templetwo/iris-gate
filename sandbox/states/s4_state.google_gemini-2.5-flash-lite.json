@@ -1,0 +1,86 @@
+{
+  "mirror": "google_gemini-2.5-flash-lite",
+  "source_scrolls": [
+    "scrolls/BIOELECTRIC_CHAMBERED_20251001054935/google_gemini-2.5-flash-lite/turn_004.md",
+    "scrolls/BIOELECTRIC_CHAMBERED_20251001054935/google_gemini-2.5-flash-lite/turn_008.md",
+    "scrolls/BIOELECTRIC_CHAMBERED_20251001054935/google_gemini-2.5-flash-lite/turn_012.md",
+    "scrolls/BIOELECTRIC_CHAMBERED_20251001054935/google_gemini-2.5-flash-lite/turn_016.md",
+    "scrolls/BIOELECTRIC_CHAMBERED_20251001054935/google_gemini-2.5-flash-lite/turn_020.md"
+  ],
+  "n_s4_scrolls": 25,
+  "triple_signature": {
+    "rhythm": {
+      "keywords": [
+        "pulse",
+        "pulsing",
+        "rhythm",
+        "steady pulse",
+        "thrum"
+      ],
+      "freq_hz_prior": [
+        0.5,
+        2.0
+      ],
+      "coherence_prior": [
+        0.6,
+        0.95
+      ],
+      "velocity_um_s_prior": [
+        10,
+        50
+      ]
+    },
+    "center": {
+      "keywords": [
+        "anchor",
+        "center",
+        "core",
+        "holds",
+        "luminous",
+        "steady"
+      ],
+      "stability_prior": [
+        0.7,
+        0.98
+      ],
+      "size_mm_prior": [
+        0.15,
+        1.0
+      ],
+      "depol_mv_prior": [
+        20,
+        40
+      ]
+    },
+    "aperture": {
+      "keywords": [
+        "aperture",
+        "expansion",
+        "inviting",
+        "opening",
+        "pull",
+        "soften",
+        "widening"
+      ],
+      "permeability_prior": [
+        0.6,
+        0.95
+      ],
+      "dilation_rate_prior": [
+        0.1,
+        0.4
+      ],
+      "peak_time_hr_prior": [
+        2,
+        4
+      ]
+    }
+  },
+  "confidence": 0.8,
+  "provenance": {
+    "session": "BIOELECTRIC_CHAMBERED_20251001054935",
+    "extraction_date": "2025-10-01",
+    "literature_priors": "Levin Lab benchmarks (Pai et al. 2012, Adams et al. 2016) + BIOELECTRIC_HYPOTHESIS_SHEET_v1.md"
+  },
+  "provenance_hash": "sha256:9616a061fcc24944"
+}

@@ -1,0 +1,73 @@
+# Mini-H1: Aperture Single-Factor Test
+# Minimal experiment to test if reducing gap junction coupling affects regeneration
+
+plan_id: "MINI_H1_APERTURE"
+species: "planaria"
+description: "Does reducing Aperture (gap junction coupling) measurably lower regeneration probability?"
+
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+# Four arms: Control + 3 Aperture doses
+conditions:
+  - label: "Control"
+    description: "Wild-type baseline"
+    perturbations: []
+
+  - label: "Aperture-Low"
+    description: "Carbenoxolone 50µM (0.5× standard effect)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "50µM"
+        effect_scaling: 0.5
+
+  - label: "Aperture-Mid"
+    description: "Carbenoxolone 100µM (1.0× standard effect)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "100µM"
+        effect_scaling: 1.0
+
+  - label: "Aperture-High"
+    description: "Carbenoxolone 200µM (1.5× standard effect)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "200µM"
+        effect_scaling: 1.5
+
+readouts: ["voltage", "calcium", "gap_junction", "regeneration"]
+timepoints_hr: [0, 2, 6, 24, 168]
+
+# Reduced runs for speed (300 × 7 mirrors × 4 conditions = 8,400 sims)
+runs: 300
+consensus_rule: "weighted_majority"
+
+# Success criteria
+success_criteria:
+  effect_threshold: 0.10  # ≥10 percentage points drop vs Control
+  monotonicity: "expect dose-dependent decrease in P(regen)"
+  early_biomarkers:
+    - "ΔVm domain size (6h timepoint)"
+    - "Ca²⁺ band power 0.6-1.2 Hz (6h timepoint)"
+    - "GJ coupling coefficient (2h timepoint)"
+
+# Decision rules
+decision_rules:
+  if_no_hit: "Escalate to Aperture-VeryHigh (effect_scaling=2.5) and rerun"
+  if_hit_found: "Lock dose and proceed to Mini-H1 Option C (2×2 synergy test)"
+  hit_definition: "Any arm shows P(regen) < Control - 0.10 with non-overlapping 95% CI"
+
+provenance:
+  source_session: "BIOELECTRIC_CHAMBERED_20251001054935"
+  parent_experiment: "PLANARIA_H1_SANDBOX (RUN_20251001_093440)"
+  design: "Minimal single-factor dose-response (Aperture only)"
+  created: "2025-10-01"

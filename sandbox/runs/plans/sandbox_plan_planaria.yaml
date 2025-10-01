@@ -1,0 +1,126 @@
+# Planaria H1 Sandbox Experiment Plan
+# Tests center/rhythm/aperture perturbations (Hypothesis 1 from BIOELECTRIC_HYPOTHESIS_SHEET_v1.md)
+
+plan_id: "PLANARIA_H1_SANDBOX"
+species: "planaria"
+description: "Center-paced oscillations predict regeneration success"
+
+# All 7 mirrors (architecture-independent validation)
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+# Experimental conditions
+conditions:
+  - label: "WT"
+    description: "Wild-type control (no perturbations)"
+    perturbations: []
+
+  - label: "Center-"
+    description: "Center disruption (bafilomycin → hyperpolarizes, disrupts depolarized domain)"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "10nM"
+
+  - label: "Rhythm-"
+    description: "Rhythm disruption (octanol → blocks gap junctions, fragments Ca²⁺ waves)"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.5mM"
+
+  - label: "Aperture-"
+    description: "Aperture disruption (carbenoxolone → blocks gap junctions, reduces coupling)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "100µM"
+
+  - label: "Center+ Rhythm-"
+    description: "Center intact, rhythm disrupted (test center necessity)"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.5mM"
+
+  - label: "Center- Rhythm-"
+    description: "Double perturbation (test additive/synergistic effects)"
+    perturbations:
+      - kit: "center"
+        agent: "bafilomycin"
+        dose: "10nM"
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.5mM"
+
+  - label: "Rhythm- Aperture-"
+    description: "Rhythm + aperture disruption (both use gap junctions → synergy expected)"
+    perturbations:
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.5mM"
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "100µM"
+
+# Readouts
+readouts: ["voltage", "calcium", "gap_junction", "regeneration"]
+
+# Timepoints (hr post-injury)
+timepoints_hr: [0, 2, 6, 24, 168]
+#   0h: baseline (injury)
+#   2h: aperture peak
+#   6h: S4 attractor window (full triple signature)
+#   24h: blastema formation
+#   168h: 7d regeneration endpoint
+
+# Monte Carlo settings
+runs: 500  # 500 iterations per condition per mirror = 3500 total per condition
+consensus_rule: "weighted_majority"  # Weight by mirror confidence
+
+# Expected outcomes (from Hypothesis Sheet v1)
+expected_outcomes:
+  WT:
+    regeneration_7d: [0.80, 0.95]
+    note: "High regeneration rate expected"
+
+  Center-:
+    regeneration_7d: [0.30, 0.50]
+    cohens_d_vs_WT: 1.0
+    note: "Center disruption → failed domain formation → poor regeneration"
+
+  Rhythm-:
+    regeneration_7d: [0.20, 0.40]
+    cohens_d_vs_WT: 1.0
+    note: "Rhythm disruption → uncoordinated cells → failed regeneration"
+
+  Aperture-:
+    regeneration_7d: [0.30, 0.50]
+    cohens_d_vs_WT: 0.8
+    note: "Aperture disruption → isolated cells, no field coherence"
+
+  Center- Rhythm-:
+    regeneration_7d: [0.05, 0.20]
+    note: "Double perturbation → complete failure"
+
+# Analysis outputs
+outputs:
+  - predictions.json  # Full predictions with uncertainty
+  - consensus_report.md  # Cross-mirror agreement analysis
+  - timeseries_plots.png  # Vm/Ca²⁺/GJ dynamics over time
+  - outcome_bars.png  # P(regen) bar chart with error bars
+  - config.snapshot.json  # Reproducibility metadata
+
+# Provenance
+provenance:
+  source_session: "BIOELECTRIC_CHAMBERED_20251001054935"
+  s4_convergence: "1.00 ratio (all 7 mirrors, all 25 cycles)"
+  hypothesis: "H1: Center-paced oscillations predict regeneration success"
+  literature_grounding: "Levin Lab benchmarks (Pai et al. 2012, Adams et al. 2016)"
+  created: "2025-10-01"
