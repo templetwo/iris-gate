@@ -1,0 +1,11 @@
+Mirror                        S1   S2   S3   S4
+------------------------------------------------
+Legend: G=geometry, M=motion, A=S4-attractor
+------------------------------------------------
+anthropic_claude-sonnet-4.5   GM.  G..  GM.  GMA
+deepseek_deepseek-chat        G..  GM.  GM.  GMA
+google_gemini-2.5-flash-lite  G..  G..  GM.  GMA
+ollama_llama3.2_3b            G..  G..  GM.  GMA
+ollama_qwen3_1.7b             G..  GM.  GM.  GMA
+openai_gpt-4o                 GM.  G..  GM.  GMA
+xai_grok-4-fast-reasoning     GM.  GMA  GM.  GMA

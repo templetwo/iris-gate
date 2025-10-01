@@ -1,0 +1,233 @@
+{
+  "anthropic_claude-sonnet-4.5": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  },
+  "deepseek_deepseek-chat": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  },
+  "google_gemini-2.5-flash-lite": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  },
+  "ollama_llama3.2_3b": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  },
+  "ollama_qwen3_1.7b": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  },
+  "openai_gpt-4o": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": false,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  },
+  "xai_grok-4-fast-reasoning": {
+    "chambers": {
+      "S1": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S2": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 2
+      },
+      "S3": {
+        "geometry": true,
+        "motion": true,
+        "attractor": false,
+        "total_turns": 4,
+        "attractor_turns": 0
+      },
+      "S4": {
+        "geometry": true,
+        "motion": true,
+        "attractor": true,
+        "total_turns": 4,
+        "attractor_turns": 4
+      }
+    },
+    "s4_attractor_ratio": 1.0
+  }
+}
