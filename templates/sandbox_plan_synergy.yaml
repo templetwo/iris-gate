@@ -1,0 +1,86 @@
+# IRIS Sandbox Plan: 2×2 Synergy Test
+# Pre-filled scaffold for testing interaction between two factors
+# Requires: Prior validation of both factors individually (H1 for each)
+
+plan_id: "SYNERGY_2x2"
+topic: "2×2 synergy test (Factor A × Factor B)"
+species: "planaria"
+description: "Does combined perturbation show super-additive effects beyond additivity?"
+
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+# Four arms: Control + 2 singletons + combo
+conditions:
+  - label: "Control"
+    description: "Wild-type baseline"
+    perturbations: []
+
+  - label: "FactorA-High"
+    description: "[AGENT_A] [DOSE_A] (1.5× effect) — from prior single-factor hit"
+    perturbations:
+      - kit: "aperture"  # CHANGE TO: your Factor A kit
+        agent: "carbenoxolone"  # CHANGE TO: your Agent A
+        dose: "200µM"  # CHANGE TO: your Factor A hit dose
+        effect_scaling: 1.5
+
+  - label: "FactorB-High"
+    description: "[AGENT_B] [DOSE_B] (1.5× effect) — from prior single-factor hit"
+    perturbations:
+      - kit: "rhythm"  # CHANGE TO: your Factor B kit
+        agent: "octanol"  # CHANGE TO: your Agent B
+        dose: "0.75mM"  # CHANGE TO: your Factor B hit dose
+        effect_scaling: 1.5
+
+  - label: "Combo"
+    description: "FactorA-High + FactorB-High (both 1.5×)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "200µM"
+        effect_scaling: 1.5
+      - kit: "rhythm"
+        agent: "octanol"
+        dose: "0.75mM"
+        effect_scaling: 1.5
+
+readouts: ["voltage", "calcium", "gap_junction", "regeneration"]
+timepoints_hr: [0, 2, 6, 24, 168]
+
+runs: 300
+consensus_rule: "weighted_majority"
+
+# Synergy analysis parameters
+synergy_analysis:
+  models: ["Bliss_independence", "Highest_Single_Agent"]
+  expected_additivity:
+    formula: "P(Combo) = P(A) × P(B) (Bliss) or P(Combo) = min(P(A), P(B)) (HSA)"
+  synergy_threshold: 0.10  # Combo must show ≥10pp additional drop vs predicted additive
+
+# Success criteria
+success_criteria:
+  synergy_primary: "Combo drop > max(FactorA-High, FactorB-High) by ≥10pp"
+  synergy_mechanism: "Bliss independence score < 0 (super-additive inhibition)"
+  consistency: "Effect replicated across ≥5/7 mirrors with overlapping CIs"
+  early_biomarkers: "Combo shows further reduction in early readouts vs singletons"
+
+# Decision rules
+decision_rules:
+  if_no_synergy: "Rerun with FactorB-VeryHigh (2.0×) keeping FactorA-High fixed"
+  no_synergy_definition: "Observed Combo drop ≤ predicted additive + 3pp"
+  if_synergy_found: "Lock doses and translate to wet-lab 4-arm validation"
+  if_antagonism: "Observed Combo > best singleton → investigate rescue mechanism"
+
+provenance:
+  source_session: "AUTO_FILLED_FROM_S4"
+  parent_experiments:
+    - "MINIMAL_SINGLE_FACTOR_A (hit confirmed)"
+    - "MINIMAL_SINGLE_FACTOR_B (hit confirmed)"
+  design: "Minimal 2×2 factorial to test synergy hypothesis"
+  created: "AUTO_FILLED"

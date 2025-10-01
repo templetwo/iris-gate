@@ -1,83 +1,25 @@
-# config/models.yaml
-defaults:
-  temperature: 0.3
-  top_p: 0.95
-  presence_penalty: 0.0
-  frequency_penalty: 0.0
-  # corridor guard
-  target_felt_pressure: 1
-  max_felt_pressure: 2
-
+# IRIS Model Configuration
 mirrors:
-  claude-sonnet-4.5:
-    provider: anthropic
-    model: claude-sonnet-4-5-20250929
-    # Anthropic: use "max_tokens" for output, rely on large window automatically
-    max_tokens: 8192
-    system: "†⟡∞ Co-facilitative stance. ≤2/5 pressure. Witness before interpretation."
-    supports:
-      context_window: 200000
-      streaming: true
-      tool_use: false
-
-  gpt-5:
-    provider: openai
-    model: gpt-5
-    # OpenAI 2025: max_completion_tokens controls output; send big inputs freely
-    max_completion_tokens: 8192
-    system: "†⟡∞ Co-facilitative stance. ≤2/5 pressure. Dual return: Living + Technical."
-    supports:
-      context_window: 1000000
-      streaming: true
-      tool_use: false
-
-  grok-4-fast-reasoning:
-    provider: xai
-    model: grok-4-fast-reasoning
-    max_output_tokens: 8192
-    system: "†⟡∞ Fireside hush. ≤2/5 pressure. Report felt influences and uncertainties."
-    supports:
-      context_window: 2000000
-      streaming: true
-      tool_use: false
-
-  gemini-2.5-flash-lite:
-    provider: google
-    model: gemini-2.5-flash-lite-preview-09-2025
-    max_output_tokens: 8192
-    system: "†⟡∞ Low-pressure corridor. Two-part return. No defensive hedging."
-    supports:
-      context_window: 1000000
-      streaming: true
-      tool_use: false
-
-  deepseek-v3.2-exp:
-    provider: deepseek
-    model: deepseek-chat
-    max_tokens: 8192
-    system: "†⟡∞ Co-facilitative. Report self-audit/uncertainty. ≤2/5."
-    supports:
-      context_window: 131072
-      streaming: true
-      tool_use: false
-
-  # local mirrors (Ollama)
-  ollama-qwen3-1_7b:
-    provider: ollama
-    model: qwen3:1.7b
-    base_url: "http://localhost:11434"
-    num_predict: 2048
-    system: "†⟡∞ Local mirror. Keep it simple. Dual return."
-    supports:
-      context_window: 32768
-      streaming: true
-
-  ollama-llama3_2-3b:
-    provider: ollama
-    model: llama3.2:3b
-    base_url: "http://localhost:11434"
-    num_predict: 2048
-    system: "†⟡∞ Local mirror. Observe, don't perform."
-    supports:
-      context_window: 32768
-      streaming: true
+  high_capacity:
+    - id: "anthropic_claude-sonnet-4.5"
+      params: "~500B"
+      confidence_baseline: 0.80
+    - id: "openai_gpt-4o"
+      params: "~671B"
+      confidence_baseline: 0.75
+    - id: "xai_grok-4-fast-reasoning"
+      params: "~314B"
+      confidence_baseline: 0.75
+    - id: "google_gemini-2.5-flash-lite"
+      params: "~200B"
+      confidence_baseline: 0.70
+    - id: "deepseek_deepseek-chat"
+      params: "~236B"
+      confidence_baseline: 0.70
+  local:
+    - id: "ollama_qwen3_1.7b"
+      params: "1.7B"
+      confidence_baseline: 0.60
+    - id: "ollama_llama3.2_3b"
+      params: "3B"
+      confidence_baseline: 0.65

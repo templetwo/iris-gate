@@ -1,10 +1,14 @@
-# config/run_limits.yaml
-timeouts:
-  per_call_seconds: 120
-  per_turn_seconds: 300
-rate_limits:
-  cloud_parallel: 3       # cap concurrent clouds
-  local_parallel: 2
-fallbacks:
-  on_timeout: "retry_once_then_summarize"
-  on_429: "exponential_backoff_max_3"
+# IRIS Run Limits
+pressure:
+  max_allowed: 2
+  warning_threshold: 2
+  critical_threshold: 3
+consensus:
+  min_agreement_for_wet_lab: 0.90
+  max_outlier_fraction: 0.15
+s4_convergence:
+  min_ratio: 0.90
+  min_cycles_for_stability: 10
+monte_carlo:
+  recommended_runs: 300
+  recommended_mirrors: 7

@@ -6,6 +6,23 @@
 
 ## Quick Start
 
+### One-Command Experiment
+
+```bash
+# Create and run a complete experiment from topic → predictions
+make run TOPIC="Does gap junction coupling affect regeneration?" \
+    ID=APERTURE_REGEN FACTOR=aperture TURNS=100
+```
+
+This runs the complete pipeline:
+1. S1→S4 convergence (100 turns, all 7 mirrors)
+2. S4 prior extraction
+3. Monte Carlo simulation (300 runs × 7 mirrors)
+4. Report generation
+5. Pre-registration draft
+
+### Manual Setup
+
 ```bash
 # Install dependencies
 pip install -r requirements.txt
@@ -14,32 +31,75 @@ pip install -r requirements.txt
 cp .env.example .env
 # Edit .env with your keys
 
-# Run orchestrator
-python iris_orchestrator.py
+# Run S4 convergence
+python scripts/bioelectric_chambered.py --turns 100 --topic "Your question"
+
+# Extract S4 priors
+python sandbox/cli/extract_s4_states.py --session BIOELECTRIC_CHAMBERED_...
+
+# Run simulation
+python sandbox/cli/run_plan.py sandbox/runs/plans/your_plan.yaml
 ```
 
 ## What It Does
 
-The orchestrator:
+**IRIS Gate** is a complete system for turning research questions into wet-lab-ready predictions:
+
+### S1→S4 Convergence (Observation Layer)
 1. **Sends identical S1→S4 prompts** to multiple AI models simultaneously
-2. **Collects dual outputs** (Living Scroll + Technical Translation)
-3. **Saves sealed records** (markdown scrolls + JSON metadata)
-4. **Enables cross-mirror analysis** of signal convergence
+2. **Collects phenomenological convergence** across diverse architectures
+3. **Extracts computational priors** from stable S4 attractor states
+4. **Validates cross-mirror agreement** (must reach ≥0.90 consensus)
+
+### Sandbox Simulation (Operational Layer — S5→S8)
+5. **S5 — Hypothesis Crystallization:** Auto-drafts falsifiable hypotheses
+6. **S6 — Mapping & Dosing:** Converts S4 priors → simulator parameters
+7. **S7 — Simulation & Report:** Runs Monte Carlo, generates predictions
+8. **S8 — Wet-Lab Handoff:** Packages methods, doses, readouts, gates
+
+### Output
+- **Computational predictions** with 95% confidence intervals
+- **Early biomarker predictions** (2h, 6h timepoints)
+- **Quantitative go/no-go gates** for wet-lab validation
+- **Complete pre-registration template** ready for OSF
 
 ## Output Structure
 
 ```
-iris_vault/
-├── scrolls/
-│   └── IRIS_20250101123456_anthropic_claude-4.5/
-│       ├── S1.md
-│       ├── S2.md
-│       ├── S3.md
-│       └── S4.md
-├── meta/
-│   ├── IRIS_20250101123456_anthropic_claude-4.5_S1.json
-│   └── ...
-└── session_20250101_123456.json
+iris-gate/
+├── templates/              # Reusable experiment templates
+│   ├── EXPERIMENT_TEMPLATE.md
+│   ├── plan_template.yaml
+│   ├── sandbox_plan_minimal.yaml
+│   ├── sandbox_plan_synergy.yaml
+│   └── prereg_template.md
+├── pipelines/              # Automation scripts
+│   ├── new_experiment.py   # Create experiment scaffold
+│   └── run_full_pipeline.py  # S4 → simulation → reports
+├── sandbox/                # Computational prediction engine
+│   ├── states/             # Frozen S4 priors (7 mirrors)
+│   ├── engines/            # Simulators (V_mem, Ca²⁺, GJ)
+│   ├── runs/               # Experiment plans and outputs
+│   └── cli/                # Command-line tools
+├── iris_vault/             # S4 convergence outputs
+│   └── scrolls/            # Raw phenomenological data
+│       └── BIOELECTRIC_CHAMBERED_20251001.../
+│           ├── anthropic_claude-sonnet-4.5/
+│           │   ├── S1_cycle01.md
+│           │   ├── S4_cycle25.md
+│           │   └── ...
+│           └── ...
+├── experiments/            # Per-experiment workspaces
+│   └── APERTURE_REGEN/
+│       ├── README.md       # Experiment overview
+│       ├── plan.yaml       # Simulation plan
+│       ├── reports/        # Generated reports
+│       ├── prereg_draft.md # Pre-registration
+│       └── metadata.json
+└── docs/                   # Published reports
+    ├── MINI_H1_OPTIONC_REPORT.md  # Synergy discovery
+    ├── IRIS_MiniH1_Synergy_Summary.md
+    └── IRIS_Synergy_Proofpack.md
 ```
 
 ## Adding New Mirrors

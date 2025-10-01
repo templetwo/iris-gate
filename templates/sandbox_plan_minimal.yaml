@@ -1,0 +1,66 @@
+# IRIS Sandbox Plan: Minimal Single-Factor Test
+# Pre-filled scaffold for quick experiments
+# Copy and customize for your specific factor
+
+plan_id: "MINIMAL_SINGLE_FACTOR"
+topic: "Single-factor dose-response validation"
+species: "planaria"
+description: "Does perturbing [FACTOR] measurably affect regeneration?"
+
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+conditions:
+  - label: "Control"
+    description: "Wild-type baseline"
+    perturbations: []
+
+  - label: "Factor-Low"
+    description: "[AGENT] [DOSE_LOW] (0.5× effect)"
+    perturbations:
+      - kit: "aperture"  # CHANGE TO: aperture | rhythm | center
+        agent: "carbenoxolone"  # CHANGE TO: your agent
+        dose: "50µM"  # CHANGE TO: your low dose
+        effect_scaling: 0.5
+
+  - label: "Factor-Mid"
+    description: "[AGENT] [DOSE_MID] (1.0× effect)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "100µM"  # CHANGE TO: your mid dose
+        effect_scaling: 1.0
+
+  - label: "Factor-High"
+    description: "[AGENT] [DOSE_HIGH] (1.5× effect)"
+    perturbations:
+      - kit: "aperture"
+        agent: "carbenoxolone"
+        dose: "200µM"  # CHANGE TO: your high dose
+        effect_scaling: 1.5
+
+readouts: ["voltage", "calcium", "gap_junction", "regeneration"]
+timepoints_hr: [0, 2, 6, 24, 168]
+
+runs: 300
+consensus_rule: "weighted_majority"
+
+success_criteria:
+  effect_threshold: "Factor-High drop ≥ 10pp vs Control"
+  monotonicity: "Dose-dependent decrease confirmed"
+  consensus: "Cross-mirror agreement ≥ 0.90"
+
+decision_rules:
+  if_hit_found: "Lock dose and proceed to synergy test or wet-lab"
+  if_no_effect: "Test alternative factor or escalate dose to 2.0×"
+
+provenance:
+  source_session: "AUTO_FILLED_FROM_S4"
+  design: "Minimal single-factor, 4 arms"
+  created: "AUTO_FILLED"

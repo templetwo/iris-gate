@@ -1,0 +1,79 @@
+# IRIS Experiment Plan Template
+# Fill in the placeholders and run: python sandbox/cli/run_plan.py <this_file>
+
+plan_id: "{PLAN_ID}"
+topic: "{TOPIC}"
+species: "{ORGANISM}"
+description: "{PROBLEM_STATEMENT}"
+
+# Mirrors to use (all | high_capacity | local_only)
+mirrors:
+  - "anthropic_claude-sonnet-4.5"
+  - "openai_gpt-4o"
+  - "xai_grok-4-fast-reasoning"
+  - "google_gemini-2.5-flash-lite"
+  - "deepseek_deepseek-chat"
+  - "ollama_qwen3_1.7b"
+  - "ollama_llama3.2_3b"
+
+# Experimental conditions
+conditions:
+  - label: "Control"
+    description: "Wild-type baseline"
+    perturbations: []
+
+  - label: "{FACTOR}-Low"
+    description: "{AGENT} {DOSE_LOW} ({EFFECT_LOW}× effect)"
+    perturbations:
+      - kit: "{FACTOR_KIT}"  # aperture | rhythm | center
+        agent: "{AGENT}"
+        dose: "{DOSE_LOW}"
+        effect_scaling: {EFFECT_LOW}
+
+  - label: "{FACTOR}-Mid"
+    description: "{AGENT} {DOSE_MID} ({EFFECT_MID}× effect)"
+    perturbations:
+      - kit: "{FACTOR_KIT}"
+        agent: "{AGENT}"
+        dose: "{DOSE_MID}"
+        effect_scaling: {EFFECT_MID}
+
+  - label: "{FACTOR}-High"
+    description: "{AGENT} {DOSE_HIGH} ({EFFECT_HIGH}× effect)"
+    perturbations:
+      - kit: "{FACTOR_KIT}"
+        agent: "{AGENT}"
+        dose: "{DOSE_HIGH}"
+        effect_scaling: {EFFECT_HIGH}
+
+# Readouts (what to measure)
+readouts: ["{READOUT_1}", "{READOUT_2}", "{READOUT_3}", "regeneration"]
+
+# Timepoints in hours
+timepoints_hr: [0, {TIMEPOINT_1}, {TIMEPOINT_2}, 24, 168]
+
+# Monte Carlo runs per condition per mirror
+runs: 300
+
+# Consensus rule (weighted_majority | unanimous | simple_majority)
+consensus_rule: "weighted_majority"
+
+# Success criteria
+success_criteria:
+  effect_threshold: "{FACTOR}-High drop ≥ {THRESHOLD_PP}pp vs Control"
+  monotonicity: "Dose-dependent decrease confirmed"
+  consensus: "Cross-mirror agreement ≥ 0.90"
+  early_biomarkers: "{FACTOR}-High shows predicted change in {BIOMARKER_2} at {TIMEPOINT_2}h"
+
+# Decision rules
+decision_rules:
+  if_hit_found: "Lock dose and translate to wet-lab validation"
+  if_no_effect: "Test alternative factor or escalate dose to 2.0×"
+  if_weak_effect: "Rerun with higher effect_scaling (1.5× → 2.0×)"
+
+# Provenance
+provenance:
+  source_session: "{SESSION_ID}"
+  parent_experiments: []
+  design: "Single-factor dose-response (4 arms: Control + Low/Mid/High)"
+  created: "{DATE}"

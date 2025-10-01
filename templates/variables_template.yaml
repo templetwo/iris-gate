@@ -1,0 +1,134 @@
+# IRIS Variables Template
+# Maps conceptual handles → simulator parameters
+
+# S4 Triple Signature Components
+triple_signature:
+  rhythm:
+    description: "Bioelectric oscillations (Ca²⁺, V_mem waves)"
+    simulator_mapping:
+      - parameter: "oscillation.freq_hz"
+        s4_prior_range: [0.5, 2.0]
+        perturbation_effect: "scales frequency down/up"
+      - parameter: "oscillation.coherence"
+        s4_prior_range: [0.6, 0.95]
+        perturbation_effect: "reduces coherence (fragmenting waves)"
+      - parameter: "oscillation.velocity_um_s"
+        s4_prior_range: [10, 50]
+        perturbation_effect: "slows wave propagation"
+
+    perturbation_agents:
+      - name: "octanol"
+        mechanism: "Gap junction blocker → disrupts electrical coupling"
+        doses: ["0.5mM", "0.75mM", "1.0mM"]
+        effect_scaling: [1.0, 1.5, 2.0]
+      - name: "nifedipine"
+        mechanism: "L-type Ca²⁺ channel blocker"
+        doses: ["10µM", "20µM", "30µM"]
+        effect_scaling: [1.0, 1.5, 2.0]
+
+  center:
+    description: "Stable V_mem domains (depolarized organizing centers)"
+    simulator_mapping:
+      - parameter: "domain.stability"
+        s4_prior_range: [0.7, 0.98]
+        perturbation_effect: "reduces stability (domain collapse)"
+      - parameter: "domain.size_mm"
+        s4_prior_range: [0.15, 1.0]
+        perturbation_effect: "shrinks domain area"
+      - parameter: "domain.depol_mv"
+        s4_prior_range: [20, 40]
+        perturbation_effect: "reduces depolarization magnitude"
+
+    perturbation_agents:
+      - name: "bafilomycin"
+        mechanism: "V-ATPase inhibitor → hyperpolarizes"
+        doses: ["5nM", "10nM", "20nM"]
+        effect_scaling: [0.5, 1.0, 1.5]
+      - name: "ivermectin"
+        mechanism: "GlyR agonist → hyperpolarizes"
+        doses: ["1µM", "5µM", "10µM"]
+        effect_scaling: [0.5, 1.0, 1.5]
+
+  aperture:
+    description: "Gap junction permeability (cell-cell coupling)"
+    simulator_mapping:
+      - parameter: "gap_junction.permeability"
+        s4_prior_range: [0.6, 0.95]
+        perturbation_effect: "reduces permeability (blocks coupling)"
+      - parameter: "gap_junction.dilation_rate"
+        s4_prior_range: [0.1, 0.4]
+        perturbation_effect: "reduces opening dynamics"
+      - parameter: "gap_junction.peak_time_hr"
+        s4_prior_range: [2, 4]
+        perturbation_effect: "delays peak coupling response"
+
+    perturbation_agents:
+      - name: "carbenoxolone"
+        mechanism: "Pan-gap junction blocker"
+        doses: ["50µM", "100µM", "200µM"]
+        effect_scaling: [0.5, 1.0, 1.5]
+      - name: "meclofenamate"
+        mechanism: "Connexin43 blocker"
+        doses: ["25µM", "50µM", "100µM"]
+        effect_scaling: [0.5, 1.0, 1.5]
+
+# Outcome Mappings
+outcome_model:
+  primary_endpoint: "regeneration_success_7d"
+
+  features:
+    - name: "center_stability_6h"
+      weight: 3.0
+      threshold: 0.70  # Below this → high failure risk
+
+    - name: "rhythm_coherence_6h"
+      weight: 2.5
+      threshold: 0.60
+
+    - name: "aperture_permeability_6h"
+      weight: 2.0
+      threshold: 0.50
+
+  interaction_terms:
+    - name: "center_x_rhythm"
+      weight: 1.5
+      interpretation: "Coherent oscillations require stable domain"
+
+    - name: "rhythm_x_aperture"
+      weight: 1.8
+      interpretation: "Wave propagation requires GJ coupling"
+
+  logistic_intercept: -2.5
+
+# Readout Specifications
+readouts:
+  voltage:
+    instrument: "DiBAC4(3) fluorescence"
+    metric: "Domain size (mm²) at 30% max intensity threshold"
+    timepoints_hr: [2, 6, 24]
+    normal_range: [0.40, 0.55]
+
+  calcium:
+    instrument: "Cal-520 AM time-lapse"
+    metric: "FFT peak power in 0.6-1.2 Hz band"
+    timepoints_hr: [2, 6, 24]
+    normal_range: [0.65, 0.85]
+
+  gap_junction:
+    instrument: "Lucifer Yellow microinjection"
+    metric: "Number of coupled cells within 10 min"
+    timepoints_hr: [2]
+    normal_range: [4, 6]
+
+  regeneration:
+    instrument: "Visual scoring (blinded)"
+    metric: "Binary success/failure (eyes + photophobia + blastema >0.5mm)"
+    timepoints_hr: [168]
+    normal_range: [0.85, 0.95]
+
+# Quality Control
+qc_criteria:
+  control_success_threshold: 0.80  # Halt if Control < 80% regen
+  cross_mirror_agreement_min: 0.60  # Warn if agreement < 0.60
+  outlier_sigma_threshold: 2.0  # Flag mirrors >2σ from mean
+  pressure_max: 2  # Halt IRIS run if any mirror pressure >2/5

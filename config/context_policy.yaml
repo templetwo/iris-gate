@@ -1,18 +1,20 @@
-# config/context_policy.yaml
-strategy: sliding-hybrid
-limits:
-  hard_cap_chars: 900000      # global cap before any send
-  per_send_chars: 600000      # max payload per request
-summarization:
-  semantic_map: true          # cluster turns by topic (S1–S4, hypotheses, etc.)
-  corridor_summary: true      # keep a living "corridor card" (pressure, active motifs)
-  compression_ratio: 0.55     # target after semantic compaction
-  keep_sections:
-    - "Most recent 6 turns"
-    - "Pressure ledger (≤2/5 only)"
-    - "Active motifs: rings/pulse/center + current phase goals"
-drop_rules:
-  - if: "felt_pressure >= 3"  # don't forward high-pressure turns
-    action: "soft_gate"
-  - if: "meta-chatter > 20% tokens"
-    action: "summarize_meta_only"
+# IRIS Context Policy
+policies:
+  high:
+    execution_mode: "parallel"
+    turns: 100
+    cycles: 25
+    mirrors: "all"
+    max_pressure: 2
+  medium:
+    execution_mode: "parallel"
+    turns: 50
+    cycles: 12
+    mirrors: "high_capacity"
+    max_pressure: 2
+  low:
+    execution_mode: "parallel"
+    turns: 20
+    cycles: 5
+    mirrors: "local_only"
+    max_pressure: 3
