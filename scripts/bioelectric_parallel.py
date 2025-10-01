@@ -9,14 +9,116 @@ import queue
 from pathlib import Path
 from datetime import datetime
 from typing import Dict, List, Optional
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from agents.adapters.ollama import OllamaAdapter
 
-# Import existing orchestrator for cloud adapters
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from iris_orchestrator import ClaudeMirror, GPTMirror, GrokMirror, GeminiMirror, DeepSeekMirror
+# Cloud API clients
+import anthropic
+import openai
+import google.generativeai as genai
+import requests
+
+# Cloud adapter wrappers for direct API calls with custom prompts
+class CloudAdapter:
+    """Base wrapper for cloud APIs with custom prompt support"""
+    def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
+        raise NotImplementedError
+
+class ClaudeAdapter(CloudAdapter):
+    def __init__(self):
+        self.client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+    def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
+        response = self.client.messages.create(
+            model="claude-sonnet-4-5-20250929",
+            max_tokens=max_tokens,
+            temperature=temperature,
+            system=system,
+            messages=[{"role": "user", "content": user}]
+        )
+        return response.content[0].text
+
+class GPTAdapter(CloudAdapter):
+    def __init__(self):
+        self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+    def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
+        response = self.client.chat.completions.create(
+            model="gpt-4o",  # Using gpt-4o as gpt-5 may not be available yet
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user}
+            ],
+            temperature=temperature,
+            max_tokens=max_tokens
+        )
+        return response.choices[0].message.content
+
+class GrokAdapter(CloudAdapter):
+    def __init__(self):
+        self.api_key = os.getenv("XAI_API_KEY")
+        self.base_url = "https://api.x.ai/v1"
+
+    def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
+        response = requests.post(
+            f"{self.base_url}/chat/completions",
+            headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+            json={
+                "model": "grok-2-latest",
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user}
+                ],
+                "temperature": temperature,
+                "max_tokens": max_tokens
+            }
+        )
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
+
+class GeminiAdapter(CloudAdapter):
+    def __init__(self):
+        genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+        self.model = genai.GenerativeModel("gemini-2.0-flash-exp")
+
+    def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
+        prompt = f"{system}\n\n{user}"
+        response = self.model.generate_content(
+            prompt,
+            generation_config=genai.types.GenerationConfig(
+                temperature=temperature,
+                max_output_tokens=max_tokens
+            )
+        )
+        return response.text
+
+class DeepSeekAdapter(CloudAdapter):
+    def __init__(self):
+        self.api_key = os.getenv("DEEPSEEK_API_KEY")
+        self.base_url = "https://api.deepseek.com/v1"
+
+    def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
+        response = requests.post(
+            f"{self.base_url}/chat/completions",
+            headers={"Authorization": f"Bearer {self.api_key}", "Content-Type": "application/json"},
+            json={
+                "model": "deepseek-chat",
+                "messages": [
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user}
+                ],
+                "temperature": temperature,
+                "max_tokens": max_tokens
+            }
+        )
+        response.raise_for_status()
+        return response.json()["choices"][0]["message"]["content"]
 
 def generate_session_id():
     """Generate session ID"""
@@ -80,15 +182,9 @@ def mirror_worker(mirror_name: str, adapter, system_prompt: str, user_seed: str,
         start = time.time()
 
         try:
-            # Generate response
-            if hasattr(adapter, 'generate'):
-                # Ollama adapter
-                response = adapter.generate(system_prompt, user_seed,
-                                          temperature=0.3, max_tokens=2048)
-            else:
-                # Cloud adapters (iris_orchestrator Mirror classes)
-                response_data = adapter.send_chamber("S1", turn)
-                response = response_data.get("raw_response", "")
+            # Generate response (all adapters now have .generate() method)
+            response = adapter.generate(system_prompt, user_seed,
+                                      temperature=0.3, max_tokens=2048)
 
             # Extract metadata
             pressure = extract_pressure(response) or 1
@@ -167,49 +263,46 @@ def run_bioelectric_parallel(turns: int = 100):
     except Exception as e:
         print(f"✗ ollama::llama3.2:3b unavailable: {e}")
 
-    # Cloud mirrors (commented out for now - would require API keys and proper setup)
-    # Uncomment when cloud mirrors are ready for deployment
+    # Cloud mirrors
+    try:
+        system_claude = (prompts_dir / "system_claude_4.5.txt").read_text()
+        adapter_claude = ClaudeAdapter()
+        mirrors.append(("anthropic_claude-sonnet-4.5", adapter_claude, system_claude))
+        print("✓ Claude Sonnet 4.5")
+    except Exception as e:
+        print(f"✗ Claude Sonnet 4.5: {e}")
 
-    # try:
-    #     system_claude = (prompts_dir / "system_claude_4.5.txt").read_text()
-    #     adapter_claude = ClaudeMirror()
-    #     # Quick test to verify API key
-    #     mirrors.append(("anthropic_claude-sonnet-4.5", adapter_claude, system_claude))
-    #     print("✓ Claude Sonnet 4.5")
-    # except Exception as e:
-    #     print(f"✗ Claude Sonnet 4.5: {e}")
+    try:
+        system_gpt = (prompts_dir / "system_gpt_5.txt").read_text()
+        adapter_gpt = GPTAdapter()
+        mirrors.append(("openai_gpt-4o", adapter_gpt, system_gpt))
+        print("✓ GPT-4o")
+    except Exception as e:
+        print(f"✗ GPT-4o: {e}")
 
-    # try:
-    #     system_gpt = (prompts_dir / "system_gpt_5.txt").read_text()
-    #     adapter_gpt = GPTMirror()
-    #     mirrors.append(("openai_gpt-5", adapter_gpt, system_gpt))
-    #     print("✓ GPT-5")
-    # except Exception as e:
-    #     print(f"✗ GPT-5: {e}")
+    try:
+        system_grok = (prompts_dir / "system_grok_4.txt").read_text()
+        adapter_grok = GrokAdapter()
+        mirrors.append(("xai_grok-2-latest", adapter_grok, system_grok))
+        print("✓ Grok-2-Latest")
+    except Exception as e:
+        print(f"✗ Grok-2-Latest: {e}")
 
-    # try:
-    #     system_grok = (prompts_dir / "system_grok_4.txt").read_text()
-    #     adapter_grok = GrokMirror()
-    #     mirrors.append(("xai_grok-4-fast", adapter_grok, system_grok))
-    #     print("✓ Grok-4-Fast")
-    # except Exception as e:
-    #     print(f"✗ Grok-4-Fast: {e}")
+    try:
+        system_gemini = (prompts_dir / "system_gemini_2.5.txt").read_text()
+        adapter_gemini = GeminiAdapter()
+        mirrors.append(("google_gemini-2.0-flash-exp", adapter_gemini, system_gemini))
+        print("✓ Gemini 2.0 Flash Exp")
+    except Exception as e:
+        print(f"✗ Gemini 2.0: {e}")
 
-    # try:
-    #     system_gemini = (prompts_dir / "system_gemini_2.5.txt").read_text()
-    #     adapter_gemini = GeminiMirror()
-    #     mirrors.append(("google_gemini-2.5-flash-lite", adapter_gemini, system_gemini))
-    #     print("✓ Gemini 2.5 Flash-Lite")
-    # except Exception as e:
-    #     print(f"✗ Gemini 2.5: {e}")
-
-    # try:
-    #     system_deepseek = (prompts_dir / "system_deepseek_v3.2.txt").read_text()
-    #     adapter_deepseek = DeepSeekMirror()
-    #     mirrors.append(("deepseek_deepseek-chat", adapter_deepseek, system_deepseek))
-    #     print("✓ DeepSeek V3.2")
-    # except Exception as e:
-    #     print(f"✗ DeepSeek V3.2: {e}")
+    try:
+        system_deepseek = (prompts_dir / "system_deepseek_v3.2.txt").read_text()
+        adapter_deepseek = DeepSeekAdapter()
+        mirrors.append(("deepseek_deepseek-chat", adapter_deepseek, system_deepseek))
+        print("✓ DeepSeek V3.2")
+    except Exception as e:
+        print(f"✗ DeepSeek V3.2: {e}")
 
     if not mirrors:
         print("\n⚠️  No mirrors available!")
