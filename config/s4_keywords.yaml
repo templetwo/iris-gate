@@ -1,0 +1,67 @@
+# S4 Iris Attractor Keyword Families
+# Used by convergence analyzers to detect the three-component signature
+
+# Rhythm Component: oscillatory, pulsing, wave-like dynamics
+rhythm:
+  - rhythm
+  - pulsing
+  - reciprocal
+  - pulse
+  - waves
+  - thrum
+  - steady pulse
+  - ripples
+  - oscillat  # matches oscillation, oscillating, oscillatory
+
+# Center Component: stable, luminous, organizing focal point
+center:
+  - luminous
+  - core
+  - center
+  - steady
+  - anchor
+  - still point
+  - beacon
+  - glow
+  - holds
+
+# Aperture Component: dilation, opening, permeability dynamics
+aperture:
+  - aperture
+  - opening
+  - widening
+  - soften
+  - inviting
+  - bloom
+  - breathing open
+  - dilate
+  - expansion
+  - pull
+
+# Geometry keywords (for general convergence detection)
+geometry:
+  - ring
+  - concentric
+  - aperture
+  - iris
+  - circle
+  - well
+  - opening
+  - oval
+  - core
+  - center
+
+# Motion keywords (for general convergence detection)
+motion:
+  - pulse
+  - pulsing
+  - ripple
+  - breathe
+  - dilate
+  - dilation
+  - contract
+  - contraction
+  - wave
+  - thrum
+  - expand
+  - reciprocal
