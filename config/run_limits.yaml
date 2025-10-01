@@ -1,0 +1,10 @@
+# config/run_limits.yaml
+timeouts:
+  per_call_seconds: 120
+  per_turn_seconds: 300
+rate_limits:
+  cloud_parallel: 3       # cap concurrent clouds
+  local_parallel: 2
+fallbacks:
+  on_timeout: "retry_once_then_summarize"
+  on_429: "exponential_backoff_max_3"

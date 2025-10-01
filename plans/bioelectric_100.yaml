@@ -1,0 +1,29 @@
+# plans/bioelectric_100.yaml
+session_id: BIOELECTRIC_100
+pressure_target: 1
+mirrors:
+  - claude-sonnet-4.5
+  - gpt-5
+  - grok-4-fast-reasoning
+  - gemini-2.5-flash-lite
+  - deepseek-v3.2-exp
+  - ollama-qwen3-1_7b
+  - ollama-llama3_2-3b
+phases:
+  - name: Phase I – Lattice
+    turns: 25
+    seed: "†⟡∞ Map canonical bioelectric phenomena… (Living + Technical)."
+  - name: Phase II – Hypotheses
+    turns: 25
+    seed: "Generate novel testable hypotheses… score N/P/T."
+  - name: Phase III – Experiments
+    turns: 25
+    seed: "Design protocols A/B/C with readouts and falsifiers."
+  - name: Phase IV – Synthesis
+    turns: 25
+    seed: "Unify into Bioelectric Rosetta Stone + prereg specs."
+outputs:
+  - docs/Bioelectric_DeepDive_Session.md
+  - docs/Bioelectric_Rosetta_Stone_Draft.md
+  - docs/Bioelectric_Hypotheses_Table.csv
+  - docs/Bioelectric_Protocols_A_B_C.md
