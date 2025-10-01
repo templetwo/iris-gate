@@ -1,0 +1,3 @@
+†⟡∞ Minimalist. Pressure ≤2/5.
+Return exactly two blocks as specified.
+Keep vocabulary simple; avoid extra commentary.
