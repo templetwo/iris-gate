@@ -1,0 +1,104 @@
+{
+  "dose_response": {
+    "Control": {
+      "mean": 0.989891962642029,
+      "ci_lower": 0.9873986303112182,
+      "ci_upper": 0.9929702300407905
+    },
+    "Aperture-Low": {
+      "mean": 0.9743091216637758,
+      "ci_lower": 0.9694260540963417,
+      "ci_upper": 0.9775358510365479
+    },
+    "Aperture-Mid": {
+      "mean": 0.9213028365703895,
+      "ci_lower": 0.9167497164477509,
+      "ci_upper": 0.9269816730862973
+    },
+    "Aperture-High": {
+      "mean": 0.846546604028848,
+      "ci_lower": 0.8414459826583858,
+      "ci_upper": 0.8562930869256354
+    }
+  },
+  "synergy": {
+    "Control": {
+      "mean": 0.9903190303631921,
+      "ci_lower": 0.9888019405393881,
+      "ci_upper": 0.9914176850729175
+    },
+    "Aperture-High": {
+      "mean": 0.848258631876755,
+      "ci_lower": 0.8408561396224211,
+      "ci_upper": 0.8528612888284332
+    },
+    "Rhythm-High": {
+      "mean": 0.9662031888446888,
+      "ci_lower": 0.963753268300238,
+      "ci_upper": 0.9699792869428078
+    },
+    "Combo": {
+      "mean": 0.6467406374201489,
+      "ci_lower": 0.6296857656995363,
+      "ci_upper": 0.6577064641460509
+    }
+  },
+  "biomarkers": {
+    "gap_junction_2h": {
+      "Control": 1.45,
+      "Aperture-High": 0.65,
+      "Rhythm-High": 1.28,
+      "Combo": 0.42
+    },
+    "vmem_domain_6h": {
+      "Control": 0.51,
+      "Aperture-High": 0.39,
+      "Rhythm-High": 0.48,
+      "Combo": 0.28
+    },
+    "calcium_coherence_6h": {
+      "Control": 0.82,
+      "Aperture-High": 0.61,
+      "Rhythm-High": 0.73,
+      "Combo": 0.41
+    }
+  },
+  "synergy_per_mirror": {
+    "anthropic": {
+      "Control": 0.990064616208634,
+      "Aperture-High": 0.8502078726002276,
+      "Rhythm-High": 0.963753268300238,
+      "Combo": 0.6296857656995363
+    },
+    "openai": {
+      "Control": 0.9902639079328069,
+      "Aperture-High": 0.8528612888284332,
+      "Rhythm-High": 0.968480386646545,
+      "Combo": 0.6423441826524714
+    },
+    "xai": {
+      "Control": 0.9913078092089628,
+      "Aperture-High": 0.8408561396224211,
+      "Rhythm-High": 0.9647384176084771,
+      "Combo": 0.6474077081080416
+    },
+    "google": {
+      "Control": 0.9914176850729175,
+      "Aperture-High": 0.843515178070488,
+      "Rhythm-High": 0.9650400482182658,
+      "Combo": 0.6429249903397809
+    },
+    "deepseek": {
+      "Control": 0.9888019405393881,
+      "Aperture-High": 0.8515415731475762,
+      "Rhythm-High": 0.9699792869428078,
+      "Combo": 0.6509227706673134
+    },
+    "ollama": {
+      "Control": 0.9895028536252641,
+      "Aperture-High": 0.85084530920065,
+      "Rhythm-High": 0.9659835771964267,
+      "Combo": 0.6531227034181367
+    }
+  }
+}
