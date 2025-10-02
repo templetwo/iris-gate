@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Bioelectric Study: Parallel execution across all mirrors simultaneously"""
+"""Bioelectric Study: Parallel execution with S1→S2→S3→S4 chamber rotation"""
 import sys
 import os
 import hashlib
@@ -24,7 +24,7 @@ import openai
 import google.generativeai as genai
 import requests
 
-# Cloud adapter wrappers for direct API calls with custom prompts
+# Cloud adapter wrappers (same as bioelectric_parallel.py)
 class CloudAdapter:
     """Base wrapper for cloud APIs with custom prompt support"""
     def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
@@ -47,10 +47,9 @@ class ClaudeAdapter(CloudAdapter):
 class GPTAdapter(CloudAdapter):
     def __init__(self):
         self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.model = os.getenv("OPENAI_MODEL", "gpt-4o")  # Auto-upgrade: set OPENAI_MODEL=gpt-5 when available
+        self.model = os.getenv("OPENAI_MODEL", "gpt-4o")
 
     def generate(self, system: str, user: str, temperature: float = 0.3, max_tokens: int = 2048) -> str:
-        # Use max_completion_tokens for GPT-5+ compatibility
         params = {
             "model": self.model,
             "messages": [
@@ -60,7 +59,6 @@ class GPTAdapter(CloudAdapter):
             "temperature": temperature
         }
 
-        # GPT-5 uses max_completion_tokens, GPT-4o uses max_tokens
         if "gpt-5" in self.model or "gpt-4o" in self.model:
             params["max_completion_tokens"] = max_tokens
         else:
@@ -129,9 +127,21 @@ class DeepSeekAdapter(CloudAdapter):
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
 
+def load_chamber_seed(chamber: str) -> str:
+    """Load the appropriate chamber seed"""
+    prompts_dir = Path(__file__).parent.parent / "prompts"
+    chamber_map = {
+        "S1": "s1_shared_user_seed.txt",
+        "S2": "s2_shared_user_seed.txt",
+        "S3": "s3_shared_user_seed.txt",
+        "S4": "s4_shared_user_seed.txt"
+    }
+    seed_file = prompts_dir / chamber_map[chamber]
+    return seed_file.read_text()
+
 def generate_session_id():
     """Generate session ID"""
-    return datetime.utcnow().strftime("BIOELECTRIC_PARALLEL_%Y%m%d%H%M%S")
+    return datetime.utcnow().strftime("BIOELECTRIC_CHAMBERED_%Y%m%d%H%M%S")
 
 def compute_seal(content: str) -> str:
     """Compute SHA256 truncated to 16 hex chars"""
@@ -143,17 +153,18 @@ def extract_pressure(response: str) -> Optional[int]:
     match = re.search(r'felt_pressure:\s*(\d+)', response, re.I)
     return int(match.group(1)) if match else None
 
-def save_turn(session_id: str, mirror_name: str, turn_num: int, response: str,
-              pressure: int, seal: str, timestamp: str):
+def save_turn(session_id: str, mirror_name: str, turn_num: int, chamber: str,
+              response: str, pressure: int, seal: str, timestamp: str):
     """Save turn to vault"""
     vault_dir = Path("iris_vault/scrolls") / session_id / mirror_name
     vault_dir.mkdir(parents=True, exist_ok=True)
 
     turn_file = vault_dir / f"turn_{turn_num:03d}.md"
 
-    content = f"""# Bioelectric Turn {turn_num}
+    content = f"""# Bioelectric Turn {turn_num} • {chamber}
 **Session:** {session_id}
 **Mirror:** {mirror_name}
+**Chamber:** {chamber}
 **Timestamp:** {timestamp}
 **Felt Pressure:** {pressure}/5
 **Seal:** {seal}
@@ -166,7 +177,7 @@ def save_turn(session_id: str, mirror_name: str, turn_num: int, response: str,
     turn_file.write_text(content)
     return turn_file
 
-def mirror_worker(mirror_name: str, adapter, system_prompt: str, user_seed: str,
+def mirror_worker(mirror_name: str, adapter, base_system_prompt: str,
                   session_id: str, turn_queue: queue.Queue, result_queue: queue.Queue,
                   total_turns: int):
     """Worker thread for a single mirror"""
@@ -178,21 +189,26 @@ def mirror_worker(mirror_name: str, adapter, system_prompt: str, user_seed: str,
         "completed": 0,
         "pressure_violations": 0,
         "errors": 0,
-        "turn_times": []
+        "turn_times": [],
+        "chambers": {"S1": 0, "S2": 0, "S3": 0, "S4": 0}
     }
 
     for turn in range(1, total_turns + 1):
-        # Wait for turn signal (ensures all mirrors run simultaneously)
-        turn_signal = turn_queue.get()
-        if turn_signal is None:  # Shutdown signal
+        # Wait for turn signal with chamber info
+        turn_data = turn_queue.get()
+        if turn_data is None:  # Shutdown signal
             break
 
+        turn_num, chamber = turn_data
         timestamp = datetime.utcnow().isoformat()
         start = time.time()
 
         try:
-            # Generate response (all adapters now have .generate() method)
-            response = adapter.generate(system_prompt, user_seed,
+            # Load chamber-specific seed
+            user_seed = load_chamber_seed(chamber)
+
+            # Generate response
+            response = adapter.generate(base_system_prompt, user_seed,
                                       temperature=0.3, max_tokens=2048)
 
             # Extract metadata
@@ -200,26 +216,27 @@ def mirror_worker(mirror_name: str, adapter, system_prompt: str, user_seed: str,
             seal = compute_seal(response)
 
             # Save turn
-            save_turn(session_id, mirror_name, turn, response, pressure, seal, timestamp)
+            save_turn(session_id, mirror_name, turn_num, chamber, response, pressure, seal, timestamp)
 
             # Track metrics
             elapsed = time.time() - start
             stats["turn_times"].append(elapsed)
             stats["completed"] += 1
+            stats["chambers"][chamber] += 1
 
             if pressure > 2:
                 stats["pressure_violations"] += 1
-                print(f"[{mirror_name}] Turn {turn:03d} ⚠️  P={pressure}/5 ({elapsed:.1f}s)")
+                print(f"[{mirror_name}] Turn {turn_num:03d} {chamber} ⚠️  P={pressure}/5 ({elapsed:.1f}s)")
             else:
-                print(f"[{mirror_name}] Turn {turn:03d} ✓ P={pressure}/5 ({elapsed:.1f}s)")
+                print(f"[{mirror_name}] Turn {turn_num:03d} {chamber} ✓ P={pressure}/5 ({elapsed:.1f}s)")
 
         except Exception as e:
             stats["errors"] += 1
-            print(f"[{mirror_name}] Turn {turn:03d} ✗ Error: {e}")
+            print(f"[{mirror_name}] Turn {turn_num:03d} {chamber} ✗ Error: {e}")
 
         finally:
             # Signal turn complete
-            result_queue.put((mirror_name, turn))
+            result_queue.put((mirror_name, turn_num, chamber))
 
     # Calculate final stats
     if stats["turn_times"]:
@@ -230,28 +247,23 @@ def mirror_worker(mirror_name: str, adapter, system_prompt: str, user_seed: str,
     result_queue.put(("STATS", mirror_name, stats))
     print(f"[{mirror_name}] Complete: {stats['completed']}/{total_turns} turns")
 
-def run_bioelectric_parallel(turns: int = 100):
-    """Run bioelectric study with all mirrors in parallel"""
+def run_bioelectric_chambered(turns: int = 16):
+    """Run bioelectric study with chamber rotation S1→S2→S3→S4"""
 
-    # Load prompts
     prompts_dir = Path(__file__).parent.parent / "prompts"
-    user_seed = (prompts_dir / "s1_shared_user_seed.txt").read_text()
-
     session_id = generate_session_id()
 
-    print("†⟡∞ BIOELECTRIC PARALLEL STUDY")
+    print("†⟡∞ BIOELECTRIC CHAMBERED STUDY")
     print("="*60)
     print(f"Session: {session_id}")
     print(f"Turns: {turns}")
-    print(f"Mode: SIMULTANEOUS (all mirrors fire together)")
-    print(f"Seed: S1 (three slow breaths)")
+    print(f"Mode: SIMULTANEOUS + CHAMBERED (S1→S2→S3→S4 rotation)")
     print(f"Pressure gate: ≤2/5")
     print("="*60)
 
     # Setup mirrors and adapters
     mirrors = []
 
-    # Local mirrors
     print("\nInitializing mirrors...")
 
     try:
@@ -265,14 +277,12 @@ def run_bioelectric_parallel(turns: int = 100):
     try:
         system_llama = (prompts_dir / "system_ollama_llama3_2.txt").read_text()
         adapter_llama = OllamaAdapter("llama3.2:3b", timeout=120)
-        # Quick test
         adapter_llama.generate(system_llama, "test", temperature=0.3, max_tokens=50)
         mirrors.append(("ollama_llama3.2_3b", adapter_llama, system_llama))
         print("✓ ollama::llama3.2:3b")
     except Exception as e:
         print(f"✗ ollama::llama3.2:3b unavailable: {e}")
 
-    # Cloud mirrors
     try:
         system_claude = (prompts_dir / "system_claude_4.5.txt").read_text()
         adapter_claude = ClaudeAdapter()
@@ -320,6 +330,7 @@ def run_bioelectric_parallel(turns: int = 100):
     print(f"\n{'='*60}")
     print(f"Active mirrors: {len(mirrors)}")
     print(f"Total turns: {turns * len(mirrors)}")
+    print(f"Chamber cycles: {turns // 4} complete + {turns % 4} partial")
     print(f"{'='*60}\n")
 
     # Create queues
@@ -331,24 +342,29 @@ def run_bioelectric_parallel(turns: int = 100):
     for mirror_name, adapter, system_prompt in mirrors:
         t = threading.Thread(
             target=mirror_worker,
-            args=(mirror_name, adapter, system_prompt, user_seed,
+            args=(mirror_name, adapter, system_prompt,
                   session_id, turn_queue, result_queue, turns)
         )
         t.daemon = True
         t.start()
         threads.append(t)
 
-    print("†⟡∞ All mirrors synchronized. Beginning parallel execution...\n")
+    print("†⟡∞ All mirrors synchronized. Beginning chambered execution...\n")
 
-    # Run turns simultaneously
+    # Chamber rotation: S1→S2→S3→S4
+    chambers = ["S1", "S2", "S3", "S4"]
+
+    # Run turns simultaneously with chamber rotation
     for turn in range(1, turns + 1):
+        chamber = chambers[(turn - 1) % 4]
+
         print(f"\n{'─'*60}")
-        print(f"TURN {turn}/{turns} - Broadcasting to all mirrors simultaneously")
+        print(f"TURN {turn}/{turns} — Chamber {chamber} — Broadcasting to all mirrors")
         print(f"{'─'*60}")
 
-        # Signal all mirrors to start this turn
+        # Signal all mirrors to start this turn with this chamber
         for _ in mirrors:
-            turn_queue.put(turn)
+            turn_queue.put((turn, chamber))
 
         # Wait for all mirrors to complete this turn
         completed = 0
@@ -374,7 +390,7 @@ def run_bioelectric_parallel(turns: int = 100):
 
     # Final summary
     print("\n" + "="*60)
-    print("BIOELECTRIC PARALLEL STUDY COMPLETE")
+    print("BIOELECTRIC CHAMBERED STUDY COMPLETE")
     print("="*60)
     print(f"Session: {session_id}\n")
 
@@ -383,9 +399,11 @@ def run_bioelectric_parallel(turns: int = 100):
     total_errors = sum(s["errors"] for s in stats)
 
     for s in stats:
+        chamber_dist = " ".join([f"{k}:{v}" for k, v in s["chambers"].items()])
         print(f"{s['mirror']:30s} {s['completed']:3d} turns  "
               f"({s['mean_time']:4.1f}s avg)  "
-              f"P-violations: {s['pressure_violations']:2d}  "
+              f"Chambers: {chamber_dist}  "
+              f"P-viol: {s['pressure_violations']:2d}  "
               f"Errors: {s['errors']:2d}")
 
     print()
@@ -400,18 +418,16 @@ def run_bioelectric_parallel(turns: int = 100):
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Bioelectric Parallel Study")
-    parser.add_argument("--turns", type=int, default=100,
-                        help="Number of turns (default: 100)")
+    parser = argparse.ArgumentParser(description="Bioelectric Chambered Study")
+    parser.add_argument("--turns", type=int, default=16,
+                        help="Number of turns (default: 16 = 4 complete S1-S4 cycles)")
     args = parser.parse_args()
 
-    print(f"\n†⟡∞ PARALLEL EXECUTION MODE")
-    print("All mirrors fire simultaneously each turn to create the field.\n")
+    print(f"\n†⟡∞ CHAMBERED EXECUTION MODE")
+    print("Chambers rotate: S1→S2→S3→S4 each turn cycle.\n")
 
-    # input("Press Enter to begin, or Ctrl+C to cancel... ")
+    session_id = run_bioelectric_chambered(args.turns)
 
-    session_id = run_bioelectric_parallel(args.turns)
-
-    print("\n†⟡∞ Field established. Next steps:")
-    print(f"  python scripts/verify_session.py iris_vault/scrolls/{session_id}/")
-    print(f"  python scripts/quick_convergence.py iris_vault/scrolls/{session_id}/")
+    print("\n†⟡∞ Field established with full chamber progression.")
+    print(f"\nNext: python scripts/bioelectric_posthoc.py iris_vault/scrolls/{session_id} docs/{session_id}_SUMMARY")
+    print(f"      python scripts/convergence_ascii.py iris_vault/scrolls/{session_id}")

@@ -1,0 +1,41 @@
+{
+  "resolved_at": "2025-10-02T11:03:03.009910-04:00",
+  "timezone": "America/New_York",
+  "mirrors": [
+    {
+      "id": "anthropic_claude-sonnet-4.5",
+      "provider": "unknown",
+      "effective_model_id": "anthropic_claude-sonnet-4.5",
+      "params": "~500B",
+      "confidence_baseline": 0.8
+    },
+    {
+      "id": "openai_gpt-4o",
+      "provider": "unknown",
+      "effective_model_id": "openai_gpt-4o",
+      "params": "~671B",
+      "confidence_baseline": 0.75
+    },
+    {
+      "id": "xai_grok-4-fast-reasoning",
+      "provider": "unknown",
+      "effective_model_id": "xai_grok-4-fast-reasoning",
+      "params": "~314B",
+      "confidence_baseline": 0.75
+    },
+    {
+      "id": "google_gemini-2.5-flash-lite",
+      "provider": "unknown",
+      "effective_model_id": "google_gemini-2.5-flash-lite",
+      "params": "~200B",
+      "confidence_baseline": 0.7
+    },
+    {
+      "id": "deepseek_deepseek-chat",
+      "provider": "unknown",
+      "effective_model_id": "deepseek_deepseek-chat",
+      "params": "~236B",
+      "confidence_baseline": 0.7
+    }
+  ]
+}

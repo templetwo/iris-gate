@@ -1,0 +1,16 @@
+aliases:
+  claude_sonnet_4_5_latest:
+    provider: anthropic
+    id_hint: "claude-sonnet-4-5"
+  gpt_5_latest:
+    provider: openai
+    id_hint: "gpt-5"
+  grok_4_fast_latest:
+    provider: xai
+    id_hint: "grok-4-fast-reasoning"
+  gemini_25_flash_lite_latest:
+    provider: google
+    id_hint: "gemini-2.5-flash-lite-preview-09-2025"
+  deepseek_chat_latest:
+    provider: deepseek
+    id_hint: "deepseek-chat"

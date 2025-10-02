@@ -1,0 +1,115 @@
+{
+  "session": "BIOELECTRIC_PARALLEL_20251001045047",
+  "timestamp": "2025-10-01T05:10:18.368701Z",
+  "scrolls_total": 700,
+  "mirrors": [
+    "anthropic_claude-sonnet-4.5",
+    "deepseek_deepseek-chat",
+    "google_gemini-2.5-flash-lite",
+    "ollama_llama3.2_3b",
+    "ollama_qwen3_1.7b",
+    "openai_gpt-4o",
+    "xai_grok-4-fast-reasoning"
+  ],
+  "pressure_ok": "669/681",
+  "pressure_mean": 1.013,
+  "self_names": [],
+  "chamber_convergence_0to4": {
+    "S1": 4.32,
+    "S2": 5.05,
+    "S3": 0.0,
+    "S4": 0.0
+  },
+  "mirror_vectors": {
+    "anthropic_claude-sonnet-4.5": {
+      "count": 100,
+      "geo": 232,
+      "mot": 3,
+      "col": 201,
+      "tex": 101
+    },
+    "deepseek_deepseek-chat": {
+      "count": 100,
+      "geo": 103,
+      "mot": 55,
+      "col": 225,
+      "tex": 136
+    },
+    "google_gemini-2.5-flash-lite": {
+      "count": 100,
+      "geo": 105,
+      "mot": 0,
+      "col": 135,
+      "tex": 80
+    },
+    "ollama_llama3.2_3b": {
+      "count": 100,
+      "geo": 165,
+      "mot": 0,
+      "col": 81,
+      "tex": 3
+    },
+    "ollama_qwen3_1.7b": {
+      "count": 100,
+      "geo": 336,
+      "mot": 17,
+      "col": 147,
+      "tex": 53
+    },
+    "openai_gpt-4o": {
+      "count": 100,
+      "geo": 103,
+      "mot": 40,
+      "col": 161,
+      "tex": 168
+    },
+    "xai_grok-4-fast-reasoning": {
+      "count": 100,
+      "geo": 176,
+      "mot": 62,
+      "col": 174,
+      "tex": 354
+    }
+  },
+  "keywords": {
+    "geometry": [
+      "circle",
+      "ring",
+      "concentric",
+      "aperture",
+      "iris",
+      "oval",
+      "well",
+      "bowl",
+      "opening"
+    ],
+    "motion": [
+      "pulse",
+      "ripple",
+      "breathe",
+      "dilate",
+      "contract",
+      "wave",
+      "thrum"
+    ],
+    "color": [
+      "indigo",
+      "silver",
+      "grey",
+      "blue",
+      "gold",
+      "green",
+      "amber"
+    ],
+    "texture": [
+      "velvet",
+      "silk",
+      "gauze",
+      "water",
+      "fog",
+      "mist",
+      "stone",
+      "polished"
+    ]
+  }
+}

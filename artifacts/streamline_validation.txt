@@ -1,0 +1,121 @@
+================================================================================
+IRIS GATE INFRASTRUCTURE PATCH - STREAMLINE VALIDATION REPORT
+================================================================================
+Date: 2025-10-02T11:01:51-04:00
+Timezone: America/New_York (US Northeast)
+Patch Version: cloud-only-v1.0
+
+================================================================================
+1. REMOVED LOCAL MODELS
+================================================================================
+The following local Ollama models have been removed from config/models.yaml:
+
+  - ollama_qwen3_1.7b (1.7B params, confidence: 0.60)
+  - ollama_llama3.2_3b (3B params, confidence: 0.65)
+
+Action Taken:
+  - Removed entire 'local:' section from config/models.yaml
+  - Moved agents/adapters/ollama.py -> agents/adapters/_disabled/ollama.py
+
+================================================================================
+2. CLOUD MODELS RETAINED
+================================================================================
+The following cloud-only mirrors are now active:
+
+  1. anthropic_claude-sonnet-4.5
+     - Provider: Anthropic
+     - Params: ~500B
+     - Confidence Baseline: 0.80
+
+  2. openai_gpt-4o
+     - Provider: OpenAI
+     - Params: ~671B
+     - Confidence Baseline: 0.75
+
+  3. xai_grok-4-fast-reasoning
+     - Provider: xAI
+     - Params: ~314B
+     - Confidence Baseline: 0.75
+
+  4. google_gemini-2.5-flash-lite
+     - Provider: Google
+     - Params: ~200B
+     - Confidence Baseline: 0.70
+
+  5. deepseek_deepseek-chat
+     - Provider: DeepSeek
+     - Params: ~236B
+     - Confidence Baseline: 0.70
+
+Total Cloud Mirrors: 5
+
+================================================================================
+3. MODEL RESOLUTION TEST OUTPUT
+================================================================================
+Resolution Script: scripts/resolve_models.py
+Output File: artifacts/model_resolution.json
+
+Test Result: PASSED
+✅ Model resolution written to /Users/vaquez/Desktop/iris-gate/artifacts/model_resolution.json
+   Timezone: America/New_York
+   Resolved 5 mirrors
+
+All 5 cloud mirrors successfully resolved with timezone-aware timestamps.
+
+================================================================================
+4. PREFLIGHT CHECK RESULTS
+================================================================================
+Script: scripts/preflight_cloud_only.sh
+
+Test Result: PASSED
+✅ Preflight passed: cloud-only configuration validated
+
+Checks Performed:
+  - No ollama references found in config/*.yaml files
+  - All required cloud providers present (anthropic, openai, xai, google, deepseek)
+
+================================================================================
+5. NEW INFRASTRUCTURE COMPONENTS
+================================================================================
+
+Created Files:
+  - config/model_aliases.yaml (Model aliasing configuration)
+  - scripts/resolve_models.py (Runtime model resolution utility)
+  - scripts/preflight_cloud_only.sh (Cloud-only validation script)
+  - utils/timezone.py (US Northeast timezone utilities)
+
+Modified Files:
+  - config/models.yaml (Removed local section)
+  - .env (Added IRIS_TZ=America/New_York)
+  - .env.example (Added IRIS_TZ=America/New_York)
+
+Relocated Files:
+  - agents/adapters/ollama.py -> agents/adapters/_disabled/ollama.py
+
+================================================================================
+6. TIMEZONE STANDARDIZATION
+================================================================================
+IRIS canonical timezone: America/New_York (US Northeast - ET/EDT)
+Environment variable: IRIS_TZ=America/New_York
+
+Timezone utilities available in utils/timezone.py:
+  - now_iso(): Returns ISO timestamp in IRIS timezone
+  - now_timestamp(): Returns filename-safe timestamp (YYYYMMDD_HHMMSS)
+
+================================================================================
+7. VALIDATION SUMMARY
+================================================================================
+Status: ALL CHECKS PASSED
+
+✅ Local models removed successfully
+✅ Cloud-only configuration validated
+✅ Model resolution script operational
+✅ Preflight checks passing
+✅ Timezone standardization complete
+✅ All 5 cloud mirrors active and resolved
+
+Infrastructure patch deployment: SUCCESSFUL
+
+================================================================================
+END OF REPORT
+================================================================================

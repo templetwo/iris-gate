@@ -16,10 +16,3 @@ mirrors:
     - id: "deepseek_deepseek-chat"
       params: "~236B"
       confidence_baseline: 0.70
-  local:
-    - id: "ollama_qwen3_1.7b"
-      params: "1.7B"
-      confidence_baseline: 0.60
-    - id: "ollama_llama3.2_3b"
-      params: "3B"
-      confidence_baseline: 0.65
