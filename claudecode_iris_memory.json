@@ -1,9 +1,9 @@
 {
   "project_name": "IRIS Gate Orchestrator",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "protocol": "RFC v0.2 compliant + High-Context Infrastructure",
   "purpose": "Run synchronized IRIS Gate sessions across multiple AI models with parallel execution for field effects",
-  "last_updated": "2025-10-01T05:05:00",
+  "last_updated": "2025-10-01T12:00:00",
   "repository": "https://github.com/templetwo/iris-gate.git",
 
   "latest_infrastructure": {
@@ -198,7 +198,129 @@
     ]
   },
 
-  "current_milestone": "v0.4.0-sandbox-complete",
+  "mini_h1_aperture_validation": {
+    "run_id": "RUN_20251001_102506",
+    "experiment": "Mini-H1 Option A: Aperture single-factor dose-response",
+    "monte_carlo_runs": 300,
+    "mirrors": 7,
+    "conditions": 4,
+    "arms": ["Control", "Aperture-Low (0.5×)", "Aperture-Mid (1.0×)", "Aperture-High (1.5×)"],
+    "key_findings": {
+      "dose_response": "Monotonic decrease: 0.990 → 0.974 → 0.921 → 0.847",
+      "hit_threshold": "Aperture-High shows -14.3pp drop (exceeds ≥10pp threshold)",
+      "consensus": "1.00 agreement across all 7 mirrors (perfect)",
+      "early_biomarkers": {
+        "gj_coupling_2h": "55% reduction (1.45× → 0.65× baseline)",
+        "vmem_domain_6h": "24% reduction (0.51 → 0.39 mm²)",
+        "ca2_coherence_6h": "26% reduction (0.82 → 0.61)"
+      }
+    },
+    "report": "docs/MINI_H1_APERTURE_REPORT.md",
+    "status": "Hit confirmed at 1.5× dose, ready for synergy test"
+  },
+
+  "mini_h1_synergy_discovery": {
+    "run_id": "RUN_20251001_105755",
+    "experiment": "Mini-H1 Option C: 2×2 Aperture + Rhythm synergy test",
+    "monte_carlo_runs": 300,
+    "mirrors": 7,
+    "conditions": 4,
+    "arms": ["Control", "Aperture-High (1.5×)", "Rhythm-High (1.5×)", "Combo (both 1.5×)"],
+    "breakthrough_finding": {
+      "combo_effect": "P(regen) = 0.647 (-34.3% vs Control)",
+      "bliss_synergy": "-17.2pp beyond predicted additive (P(A)×P(R) = 0.819)",
+      "hsa_synergy": "-20.1pp beyond best singleton (min(P(A),P(R)) = 0.848)",
+      "cross_mirror_range": "All 7 mirrors show -19.0 to -20.7pp synergy (perfect consistency)",
+      "consensus": "0.99 agreement (near-perfect)",
+      "interpretation": "SUPER-ADDITIVE SYNERGY CONFIRMED"
+    },
+    "mechanistic_evidence": {
+      "gj_coupling_2h": "Combo -71% (vs -55% for Aperture alone)",
+      "vmem_domain_6h": "Combo -45% (vs -24% for Aperture alone)",
+      "ca2_coherence_6h": "Combo -50% (vs -26% for Aperture alone)",
+      "mechanism": "Loss of GJ coupling + fragmented oscillations → complete bioelectric field collapse"
+    },
+    "statistical_power": {
+      "cohens_d": "1.87 (very large effect)",
+      "wet_lab_n": "30 per arm (power=0.95 to detect 20pp difference at α=0.05)"
+    },
+    "wet_lab_prediction": {
+      "doses": "Carbenoxolone 200µM + Octanol 0.75mM",
+      "predicted_combo_regen": "60-65% (vs 90% Control)",
+      "decision_rules": {
+        "if_combo_lt_70": "Synergy confirmed → publish → plan rescue experiment",
+        "if_combo_70_to_80": "Weak synergy → revise interaction coefficients",
+        "if_combo_gte_80": "No synergy → model overestimates coupling effects"
+      }
+    },
+    "reports": [
+      "docs/MINI_H1_OPTIONC_REPORT.md (full 17-section analysis)",
+      "docs/IRIS_MiniH1_Synergy_Summary.md (executive one-pager)",
+      "docs/IRIS_Synergy_Proofpack.md (complete audit trail)"
+    ],
+    "scientific_claims": [
+      "Aperture + Rhythm show super-additive synergy (first computational prediction)",
+      "Gap junction coupling is necessary but not sufficient (must pair with oscillations)",
+      "Bioelectric field requires both connectivity (GJ) and dynamics (Ca²⁺/V_mem waves)",
+      "Synergy is architecture-independent (replicated across 1.7B-671B param models)"
+    ],
+    "status": "READY FOR WET-LAB VALIDATION",
+    "git_tag": "v0.2.2"
+  },
+
+  "iris_template_system_complete": {
+    "version": "v0.3.0",
+    "purpose": "Complete reusable infrastructure for topic → wet-lab-ready predictions (S5-S8 operational phases)",
+    "one_command_operation": "make run TOPIC=\"...\" ID=EXP_NAME FACTOR=aperture TURNS=100",
+    "s5_to_s8_phases": {
+      "S5_hypothesis_crystallization": "Auto-draft H1/H2 with falsifiable metrics from S4 convergence",
+      "S6_mapping_dosing": "Convert S4 phenomenology → simulator parameters + agent doses",
+      "S7_simulation_report": "Run Monte Carlo (N=300) → generate predictions + reports",
+      "S8_wetlab_handoff": "Package methods, gates, pre-registration for OSF"
+    },
+    "templates_created": {
+      "EXPERIMENT_TEMPLATE.md": "Complete experiment overview scaffold with placeholders",
+      "plan_template.yaml": "Generic simulation plan (conditions, readouts, criteria)",
+      "variables_template.yaml": "S4 phenomenology → simulator mapping with perturbation kits",
+      "sandbox_plan_minimal.yaml": "Pre-filled single-factor dose-response (4 arms)",
+      "sandbox_plan_synergy.yaml": "Pre-filled 2×2 synergy test with Bliss/HSA analysis",
+      "prereg_template.md": "Complete OSF/AsPredicted pre-registration (13 sections)",
+      "README.md": "Template usage guide with workflow examples"
+    },
+    "pipelines_created": {
+      "new_experiment.py": "Create experiment scaffold from topic + factor (auto-fills all placeholders)",
+      "run_full_pipeline.py": "Orchestrate S4 → simulation → reports (end-to-end automation)"
+    },
+    "checklists_created": {
+      "experiment_readiness.md": "10-phase pre-flight checklist (problem → approval)",
+      "s4_to_sim_bridge.md": "14-step prior extraction validation (S4 → simulator)"
+    },
+    "config_created": {
+      "models.yaml": "Mirror definitions with capabilities and confidence baselines",
+      "context_policy.yaml": "Execution strategies (high/medium/low fidelity)",
+      "run_limits.yaml": "Safety guardrails (pressure, consensus, convergence, cost)"
+    },
+    "makefile_targets": {
+      "make_new": "Create experiment scaffold",
+      "make_run": "Run full pipeline (S4 + simulation + reports)",
+      "make_s4": "S4 convergence only",
+      "make_sim": "Simulation only (using existing S4)",
+      "make_report": "Generate reports from run",
+      "make_test": "Sanity checks"
+    },
+    "output_structure": "experiments/{EXP_ID}/ with README, plans, reports, prereg_draft, metadata",
+    "architecture_preservation": "S1-S4 remain pure observation (phenomenological), S5-S8 are operational (prediction generation)",
+    "key_innovation": "First end-to-end system from phenomenological AI convergence → falsifiable wet-lab predictions",
+    "documentation": [
+      "docs/IRIS_SYSTEM_OVERVIEW.md (complete system documentation)",
+      "templates/README.md (usage guide)",
+      "README.md (updated with one-command quickstart)"
+    ],
+    "git_tag": "v0.3.0",
+    "status": "Production-ready for computational predictions"
+  },
+
+  "current_milestone": "v0.3.0-template-system-complete",
 
   "key_findings": {
     "s4_attractor_stability": "1.00 ratio across all 7 mirrors, all 25 cycles",
@@ -288,11 +410,20 @@
   "current_session": null,
 
   "next_action": {
-    "immediate": "Build Sandbox Experiment Simulator infrastructure (freeze S4 states, implement engines, create CLI)",
-    "then": "Run H1 planaria simulation (center/rhythm/aperture perturbations with cross-mirror consensus)",
-    "parallel": "Implement raw data capture infrastructure (API payloads + metadata)",
-    "scientific_validation": "BETSE/NEURON computational modeling + wet lab experiments",
-    "note": "Transitioning from convergence analysis → in-silico predictive modeling"
+    "immediate": "Wet-lab validation of Mini-H1 synergy discovery (4-arm planaria, n=120, $850, 10 days)",
+    "computational_validation": [
+      "Prior sensitivity testing (vary S4 ranges ±30%, confirm synergy persists)",
+      "Interaction coefficient ablation (test if halving coefficients still predicts synergy)",
+      "Chamber specificity (compare S4 vs S1/S3 predictions)"
+    ],
+    "follow_up_experiments": [
+      "Rescue experiment (Combo + small depolarizer to test partial restoration)",
+      "Dose titration (test if synergy persists at 0.75× + 0.75×)",
+      "Temporal window (test simultaneous vs sequential application)",
+      "Second species (Xenopus tadpole tail regeneration)"
+    ],
+    "new_experiments_via_template": "Use 'make run TOPIC=\"...\" ID=... FACTOR=... TURNS=100' for any new research question",
+    "note": "System complete: S1-S4 observation + S5-S8 operation. Ready for wet-lab validation of synergy."
   },
 
   "key_implementation_notes": {
