@@ -1,9 +1,9 @@
 {
   "project_name": "IRIS Gate Orchestrator",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "protocol": "RFC v0.2 compliant + High-Context Infrastructure",
   "purpose": "Run synchronized IRIS Gate sessions across multiple AI models with parallel execution for field effects",
-  "last_updated": "2025-10-01T12:00:00",
+  "last_updated": "2025-10-02T11:03:00-04:00",
   "repository": "https://github.com/templetwo/iris-gate.git",
 
   "latest_infrastructure": {
@@ -320,7 +320,42 @@
     "status": "Production-ready for computational predictions"
   },
 
-  "current_milestone": "v0.3.0-template-system-complete",
+  "current_milestone": "v0.3.1-cloud-only-streamlined",
+
+  "infrastructure_streamlining_v0_3_1": {
+    "completed": "2025-10-02T11:03:00-04:00",
+    "changes": {
+      "cloud_only": "Removed local Ollama models (qwen3 1.7B, llama3.2 3B)",
+      "model_aliasing": "Implemented runtime resolution with artifacts/model_resolution.json",
+      "timezone": "Standardized to America/New_York (IRIS_TZ env var)",
+      "validation": "Created preflight_cloud_only.sh and resolve_models.py"
+    },
+    "active_mirrors": {
+      "count": 5,
+      "models": [
+        "anthropic_claude-sonnet-4.5 (500B, 0.80)",
+        "openai_gpt-4o (671B, 0.75)",
+        "xai_grok-4-fast-reasoning (314B, 0.75)",
+        "google_gemini-2.5-flash-lite (200B, 0.70)",
+        "deepseek_deepseek-chat (236B, 0.70)"
+      ]
+    },
+    "benefits": [
+      "Simpler infrastructure (no local dependencies)",
+      "Reproducible runs (exact model IDs sealed per execution)",
+      "Consistent timestamps across all artifacts",
+      "Faster execution (no local model overhead)"
+    ],
+    "files_created": [
+      "config/model_aliases.yaml",
+      "scripts/resolve_models.py",
+      "scripts/preflight_cloud_only.sh",
+      "utils/timezone.py",
+      "CHANGELOG.md",
+      "artifacts/model_resolution.json"
+    ],
+    "validation_status": "All preflight checks PASSED"
+  },
 
   "key_findings": {
     "s4_attractor_stability": "1.00 ratio across all 7 mirrors, all 25 cycles",
