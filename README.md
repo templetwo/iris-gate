@@ -102,6 +102,54 @@ iris-gate/
     └── IRIS_Synergy_Proofpack.md
 ```
 
+## MCP Integration
+
+IRIS Gate includes **Model Context Protocol (MCP)** integration for persistent storage, semantic search, and automated version control.
+
+### Quick Start
+
+```bash
+# Initialize MCP environment
+make mcp-init
+
+# Test connectivity
+make mcp-test
+
+# Index scrolls for semantic search
+make mcp-index
+
+# Check status
+make mcp-status
+```
+
+### Core Capabilities
+
+- **ChromaDB:** Semantic search across all IRIS scroll archives
+  ```bash
+  # Search for similar S4 states
+  python scripts/index_scrolls.py --search "concentric rings convergence" \
+      --chamber S4 --top-k 10
+  ```
+
+- **Git Wrapper:** Auto-commit S4 states with conventional commits
+  ```bash
+  # Auto-commit extracted state
+  python scripts/git_mcp_wrapper.py --auto-commit \
+      --state-path sandbox/states/state.json \
+      --session-id BIOELECTRIC_20251001
+  ```
+
+- **Quick-Data:** Fast key-value storage for session metadata
+
+### Full Documentation
+
+See **[docs/MCP_INTEGRATION.md](docs/MCP_INTEGRATION.md)** for:
+- Complete installation guide
+- Usage examples for all servers
+- Integration with IRIS workflows
+- Troubleshooting and optimization
+- API reference
+
 ## Adding New Mirrors
 
 To add support for another AI provider:

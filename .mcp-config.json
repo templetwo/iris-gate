@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "description": "IRIS Gate MCP Server Configuration - Tier 1 (Local-First)",
+  "servers": {
+    "chromadb": {
+      "enabled": true,
+      "tier": 1,
+      "type": "chromadb",
+      "description": "Local vector database for context storage and retrieval",
+      "config": {
+        "persist_directory": "./iris_vault/chromadb",
+        "collection_name": "iris_context",
+        "embedding_function": "default",
+        "anonymized_telemetry": false
+      },
+      "capabilities": [
+        "vector_search",
+        "semantic_retrieval",
+        "context_storage"
+      ]
+    },
+    "git": {
+      "enabled": true,
+      "tier": 1,
+      "type": "git",
+      "description": "Local Git repository operations and history tracking",
+      "config": {
+        "repo_path": ".",
+        "auto_commit": false,
+        "track_changes": true
+      },
+      "capabilities": [
+        "version_control",
+        "change_tracking",
+        "diff_generation"
+      ]
+    },
+    "quickdata": {
+      "enabled": true,
+      "tier": 1,
+      "type": "quickdata",
+      "description": "Fast local file-based key-value storage for ephemeral data",
+      "config": {
+        "data_path": "./iris_vault/quickdata",
+        "format": "json",
+        "auto_backup": true,
+        "backup_interval_hours": 24
+      },
+      "capabilities": [
+        "key_value_storage",
+        "fast_retrieval",
+        "session_persistence"
+      ]
+    }
+  },
+  "global_settings": {
+    "log_level": "INFO",
+    "timeout_seconds": 30,
+    "retry_attempts": 3,
+    "local_only": true
+  }
+}

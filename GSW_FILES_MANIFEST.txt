@@ -1,0 +1,137 @@
+================================================================================
+IRIS GATE - GSW SYSTEM FILE MANIFEST
+Generated: $(date)
+================================================================================
+
+NEW FILES CREATED:
+-------------------
+
+PLANS & TEMPLATES:
+  /Users/vaquez/Desktop/iris-gate/plans/GSW_template.yaml
+  /Users/vaquez/Desktop/iris-gate/plans/GSW_test_bioelectric.yaml
+
+PROMPTS (Domain-Neutral Seeds):
+  /Users/vaquez/Desktop/iris-gate/prompts/gsw_s1_seed.txt
+  /Users/vaquez/Desktop/iris-gate/prompts/gsw_s2_seed_precise_present.txt
+  /Users/vaquez/Desktop/iris-gate/prompts/gsw_s3_seed_cupping_water.txt
+  /Users/vaquez/Desktop/iris-gate/prompts/gsw_s4_seed_concentric_rings.txt
+
+SCRIPTS (Core GSW Logic):
+  /Users/vaquez/Desktop/iris-gate/scripts/gsw_gate.py
+  /Users/vaquez/Desktop/iris-gate/scripts/summarize_tier.py
+  /Users/vaquez/Desktop/iris-gate/scripts/summarize_gsw.py
+  /Users/vaquez/Desktop/iris-gate/scripts/test_gsw_system.py
+
+DOCUMENTATION:
+  /Users/vaquez/Desktop/iris-gate/docs/GSW_README.md
+  /Users/vaquez/Desktop/iris-gate/docs/GSW_IMPLEMENTATION_SUMMARY.md
+
+================================================================================
+
+MODIFIED FILES:
+---------------
+
+ORCHESTRATOR (GSW Mode Added):
+  /Users/vaquez/Desktop/iris-gate/iris_orchestrator.py
+    - Added run_gsw_session() function (+180 lines)
+    - Modified main() to support --mode gsw
+    - Auto-detects GSW plans by kind field
+
+CONVERGENCE ANALYSIS (Library Export):
+  /Users/vaquez/Desktop/iris-gate/scripts/convergence_ascii.py
+    - Exposed detect_signals() as importable function
+    - Wrapped CLI code in main() guard
+    - Backwards compatible with existing usage
+
+CONFIGURATION (Streamlined Models):
+  /Users/vaquez/Desktop/iris-gate/config/models.yaml
+    - Removed local Ollama models
+    - Added always-latest aliases per vendor
+    - Added timezone metadata (America/New_York)
+
+BUILD AUTOMATION:
+  /Users/vaquez/Desktop/iris-gate/Makefile
+    - Added GSW targets: gsw, gsw-run, gsw-report
+    - Updated help menu with GSW workflows
+
+================================================================================
+
+VALIDATION:
+-----------
+
+Test suite: /Users/vaquez/Desktop/iris-gate/scripts/test_gsw_system.py
+Results: 7/7 tests PASSED
+
+Tests validated:
+  ✓ Directory structure
+  ✓ Module imports
+  ✓ Signal detection (geometry, motion, S4-attractor)
+  ✓ Convergence computation (TF-IDF + cosine)
+  ✓ Pressure extraction (structured + raw)
+  ✓ Plan loading (YAML parsing)
+  ✓ Prompt seeds (topic placeholder)
+
+================================================================================
+
+USAGE QUICK START:
+------------------
+
+1. Create GSW plan:
+   make gsw TOPIC="How do gap junctions regulate regeneration?"
+
+2. Run GSW session:
+   make gsw-run PLAN=plans/GSW_How_do_gap_junctions_regul.yaml
+
+3. Review results:
+   ls -l docs/GSW/GSW_*/
+   cat docs/GSW/GSW_*/GSW_REPORT.md
+
+4. Test system:
+   python3 scripts/test_gsw_system.py
+
+================================================================================
+
+OUTPUT LOCATIONS:
+-----------------
+
+Run metadata & summaries:
+  docs/GSW/<RUN_ID>/_meta.json
+  docs/GSW/<RUN_ID>/S1_SUMMARY.md
+  docs/GSW/<RUN_ID>/S2_SUMMARY.md
+  docs/GSW/<RUN_ID>/S3_SUMMARY.md
+  docs/GSW/<RUN_ID>/S4_SUMMARY.md
+  docs/GSW/<RUN_ID>/GSW_REPORT.md
+
+Vault (raw responses):
+  gsw_vault/<RUN_ID>/meta/<SESSION_ID>_S*.json
+  gsw_vault/<RUN_ID>/scrolls/<SESSION_ID>/S*.md
+
+================================================================================
+
+DEPENDENCIES:
+-------------
+
+Python packages (add to requirements.txt):
+  scikit-learn>=1.4.0   # TF-IDF + cosine similarity
+
+Environment variables (.env):
+  ANTHROPIC_API_KEY=sk-ant-...
+  OPENAI_API_KEY=sk-...
+  XAI_API_KEY=xai-...
+  GOOGLE_API_KEY=AIza...
+  DEEPSEEK_API_KEY=sk-...
+  IRIS_TZ=America/New_York  # Optional
+
+================================================================================
+
+IMPLEMENTATION STATS:
+---------------------
+
+Files created:     10
+Files modified:    4
+Total LOC added:   ~1200 (excluding tests/docs)
+Documentation:     2 comprehensive guides
+Test coverage:     7/7 passing
+Status:            Production-ready
+
+================================================================================

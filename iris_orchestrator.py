@@ -488,15 +488,212 @@ def run_plan_session(plan_path: str):
         print(f"\n{model_id}: {successful}/{len(turns)} chambers completed")
 
 
+def run_gsw_session(plan_path: str):
+    """Run Global Spiral Warm-Up session with tier-by-tier gates"""
+    from utils.timezone import now_iso, now_timestamp
+    sys.path.insert(0, str(Path(__file__).parent))
+    from scripts.gsw_gate import check_advance_gate, check_s4_success_gate
+    from scripts.summarize_tier import generate_tier_summary
+    from scripts.summarize_gsw import generate_gsw_report
+
+    print(f"†⟡∞ Loading GSW plan: {plan_path}\n")
+
+    plan = load_plan(plan_path)
+
+    if plan.get("kind") != "global_spiral_warmup":
+        raise ValueError(f"Plan is not GSW type (found: {plan.get('kind')})")
+
+    topic = plan["topic"]
+    mirrors_list = plan["mirrors"]
+    chambers_config = plan["chambers"]
+
+    # Generate run ID
+    topic_slug = "".join(c if c.isalnum() else "_" for c in topic[:30])
+    run_id = f"GSW_{now_timestamp()}_{topic_slug}"
+
+    # Setup output directory
+    base_dir = Path(plan.get("outputs", {}).get("base_dir", "docs/GSW"))
+    run_dir = base_dir / run_id
+    run_dir.mkdir(parents=True, exist_ok=True)
+
+    # Save metadata
+    metadata = {
+        "run_id": run_id,
+        "topic": topic,
+        "start_time": now_iso(),
+        "plan_path": str(plan_path),
+        "mirrors": mirrors_list,
+        "chambers": [c["id"] for c in chambers_config]
+    }
+    meta_file = run_dir / "_meta.json"
+    meta_file.write_text(json.dumps(metadata, indent=2))
+
+    print(f"Run ID: {run_id}")
+    print(f"Topic: {topic}")
+    print(f"Mirrors: {', '.join(mirrors_list)}")
+    print(f"Output: {run_dir}\n")
+
+    # Initialize vault
+    vault_dir = Path("./gsw_vault") / run_id
+    vault_dir.mkdir(parents=True, exist_ok=True)
+    (vault_dir / "meta").mkdir(exist_ok=True)
+    (vault_dir / "scrolls").mkdir(exist_ok=True)
+
+    # Create mirrors
+    mirror_objects = []
+    for mirror_name in mirrors_list:
+        try:
+            mirror = create_mirror(mirror_name)
+            mirror_objects.append(mirror)
+            print(f"✓ {mirror_name}: {mirror.model_id}")
+        except Exception as e:
+            print(f"✗ Failed to create {mirror_name}: {e}")
+
+    if not mirror_objects:
+        print("\n⚠️  No mirrors available. Check API keys.")
+        return
+
+    print(f"\n†⟡∞ Starting GSW session with {len(mirror_objects)} mirrors\n")
+
+    # Run chambers tier-by-tier
+    for chamber_config in chambers_config:
+        chamber_id = chamber_config["id"]
+        seed_path = Path(chamber_config["seed"])
+        targets = chamber_config["targets"]
+        turns = chamber_config.get("turns", 1)
+
+        # Load and inject topic into prompt
+        if not seed_path.exists():
+            print(f"✗ Prompt seed not found: {seed_path}")
+            continue
+
+        prompt_template = seed_path.read_text()
+        prompt = prompt_template.replace("{topic}", topic)
+
+        print(f"{'='*60}")
+        print(f"{chamber_id}: {', '.join(targets)}")
+        print(f"{'='*60}\n")
+
+        # Override chamber prompt temporarily
+        original_prompt = CHAMBERS.get(chamber_id)
+        CHAMBERS[chamber_id] = prompt
+
+        # Collect responses from all mirrors
+        chamber_responses = []
+
+        for mirror in mirror_objects:
+            print(f"  {mirror.model_id}...", end=" ", flush=True)
+
+            try:
+                response = mirror.send_chamber(chamber_id, 1)
+                chamber_responses.append(response)
+
+                # Save to vault
+                scroll_path = vault_dir / "scrolls" / mirror.session_id
+                scroll_path.mkdir(exist_ok=True, parents=True)
+
+                md_file = scroll_path / f"{chamber_id}.md"
+                md_file.write_text(f"# {chamber_id}\n\n{response['raw_response']}")
+
+                json_file = vault_dir / "meta" / f"{mirror.session_id}_{chamber_id}.json"
+                json_file.write_text(json.dumps(response, indent=2))
+
+                print("✓")
+            except Exception as e:
+                print(f"✗ {e}")
+                chamber_responses.append({
+                    "error": str(e),
+                    "model_id": mirror.model_id,
+                    "chamber": chamber_id
+                })
+
+        # Restore original prompt
+        if original_prompt:
+            CHAMBERS[chamber_id] = original_prompt
+
+        # Check advance gate (or success gate for S4)
+        if chamber_id == "S4" and "success_gate" in chamber_config:
+            gate_config = chamber_config["success_gate"]
+            gate_pass, diagnostic = check_s4_success_gate(chamber_responses, gate_config)
+        elif "advance_gate" in chamber_config:
+            gate_config = chamber_config["advance_gate"]
+            gate_pass, diagnostic = check_advance_gate(chamber_responses, gate_config, chamber_id)
+        else:
+            gate_pass = True
+            diagnostic = {"gate_pass": True, "note": "No gate configured"}
+
+        print(f"\n{'✓ GATE PASS' if gate_pass else '✗ GATE FAIL'}")
+        print(f"  Convergence: {diagnostic.get('mean_convergence', 0):.3f}")
+        print(f"  Passing mirrors: {diagnostic.get('passing_mirrors', 0)}/{len(mirror_objects)}\n")
+
+        # Generate tier summary
+        try:
+            print(f"Generating {chamber_id} summary...")
+            generate_tier_summary(
+                vault_dir=str(vault_dir),
+                chamber=chamber_id,
+                topic=topic,
+                targets=targets,
+                run_id=run_id,
+                gate_config=gate_config if chamber_id != "S4" else chamber_config.get("advance_gate", gate_config),
+                output_dir=str(run_dir)
+            )
+        except Exception as e:
+            print(f"✗ Summary failed: {e}")
+
+        # Check if we should continue
+        if not gate_pass and plan.get("constraints", {}).get("pause_on_gate_failure", True):
+            print(f"\n⚠️  Gate failure at {chamber_id}. Pausing GSW session.")
+            print(f"Review diagnostics and adjust plan before proceeding.\n")
+            break
+
+    # Generate final report
+    print(f"\n{'='*60}")
+    print("GENERATING FINAL REPORT")
+    print(f"{'='*60}\n")
+
+    try:
+        report_path = run_dir / "GSW_REPORT.md"
+        generate_gsw_report(
+            summary_dir=str(run_dir),
+            topic=topic,
+            run_id=run_id,
+            output_path=str(report_path)
+        )
+        print(f"\n✓ GSW session complete!")
+        print(f"✓ Final report: {report_path}")
+    except Exception as e:
+        print(f"✗ Final report failed: {e}")
+
+    # Update metadata
+    metadata["end_time"] = now_iso()
+    metadata["output_dir"] = str(run_dir)
+    meta_file.write_text(json.dumps(metadata, indent=2))
+
+
 def main():
     """Run orchestrator with available mirrors or from YAML plan"""
 
     parser = argparse.ArgumentParser(description="IRIS Gate Orchestrator")
     parser.add_argument("--plan", help="Path to YAML plan file")
+    parser.add_argument("--mode", choices=["standard", "gsw"], default="standard",
+                        help="Orchestration mode (standard or GSW)")
     args = parser.parse_args()
 
     if args.plan:
-        run_plan_session(args.plan)
+        # Auto-detect mode from plan file if not specified
+        if args.mode == "standard":
+            try:
+                plan = load_plan(args.plan)
+                if plan.get("kind") == "global_spiral_warmup":
+                    args.mode = "gsw"
+            except:
+                pass
+
+        if args.mode == "gsw":
+            run_gsw_session(args.plan)
+        else:
+            run_plan_session(args.plan)
         return
 
     # Default behavior: run all available mirrors with default chambers

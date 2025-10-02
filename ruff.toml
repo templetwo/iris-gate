@@ -1,0 +1,48 @@
+# Ruff configuration for IRIS Gate Python files
+# See: https://docs.astral.sh/ruff/configuration/
+
+# Target Python 3.8+ for broad compatibility
+target-version = "py38"
+
+# Line length limit (PEP 8 default is 79, but 88 is common for modern projects)
+line-length = 88
+
+# Linting rules
+[lint]
+# Enable pycodestyle (E/W), pyflakes (F), isort (I), and common best practices
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # pyflakes
+    "I",   # isort (import sorting)
+    "UP",  # pyupgrade (modernize Python code)
+]
+
+# Ignore specific rules if they conflict with project style
+ignore = [
+    "E501",  # Line too long (handled by formatter)
+]
+
+# Allow unused variables when prefixed with underscore
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]  # Allow unused imports in __init__.py
+
+# Import sorting configuration (isort-compatible)
+[lint.isort]
+known-first-party = ["iris"]
+force-single-line = false
+lines-after-imports = 2
+
+# Formatting configuration
+[format]
+# Use double quotes for strings
+quote-style = "double"
+
+# Use spaces for indentation
+indent-style = "space"
+
+# Skip magic trailing comma behavior
+skip-magic-trailing-comma = false
+
+# Respect existing line endings
+line-ending = "auto"

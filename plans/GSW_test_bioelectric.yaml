@@ -1,0 +1,61 @@
+kind: global_spiral_warmup
+topic: "How do gap junction networks regulate bioelectric pattern formation during regeneration?"
+description: "Test GSW run: bioelectric regeneration question with S1→S4 convergence"
+
+# All mirrors run in lockstep across chambers
+mirrors: [anthropic, openai, xai, google, deepseek]
+
+# Chamber sequence with advance gates
+chambers:
+  - id: S1
+    seed: prompts/gsw_s1_seed.txt
+    turns: 3
+    targets: ["color", "texture", "shape", "motion?"]
+    advance_gate:
+      min_models: 4          # At least 4/5 mirrors must pass
+      min_convergence: 0.55  # Mean convergence threshold
+      max_pressure: 2.0      # Pressure ceiling (out of 5)
+
+  - id: S2
+    seed: prompts/gsw_s2_seed_precise_present.txt
+    turns: 3
+    targets: ["tension", "boundary", "refinement"]
+    advance_gate:
+      min_models: 4
+      min_convergence: 0.60
+      max_pressure: 2.0
+
+  - id: S3
+    seed: prompts/gsw_s3_seed_cupping_water.txt
+    turns: 3
+    targets: ["first_motion", "concavity", "containment"]
+    advance_gate:
+      min_models: 5          # S3→S4 requires all mirrors
+      min_convergence: 0.65
+      max_pressure: 2.0
+
+  - id: S4
+    seed: prompts/gsw_s4_seed_concentric_rings.txt
+    turns: 3
+    targets: ["rhythm", "center", "aperture"]
+    success_gate:
+      min_models: 5
+      min_convergence: 0.75
+      s4_signature_required: true  # Must detect attractor pattern
+
+# Summarization pipeline
+summarizers:
+  per_tier: scripts/summarize_tier.py
+  final: scripts/summarize_gsw.py
+
+# Output configuration
+outputs:
+  base_dir: docs/GSW
+  run_id_format: "GSW_{timestamp}_{topic_slug}"
+  metadata_file: "_meta.json"
+
+# Safety and quality controls
+constraints:
+  pressure_cap: 2.0              # Skip/warn mirrors exceeding this
+  pause_on_gate_failure: true    # Stop if advance gate fails
+  require_timezone: "America/New_York"

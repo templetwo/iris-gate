@@ -1,18 +1,51 @@
 # IRIS Model Configuration
+# High-capacity mirrors with always-latest aliases
+
 mirrors:
   high_capacity:
+    # Anthropic Claude (always-latest via model alias)
     - id: "anthropic_claude-sonnet-4.5"
+      adapter: "anthropic"
+      model: "claude-sonnet-4-5-20250929"
+      alias: "claude-sonnet-4.5-latest"
       params: "~500B"
       confidence_baseline: 0.80
-    - id: "openai_gpt-4o"
+
+    # OpenAI GPT (always-latest via model alias)
+    - id: "openai_gpt-5"
+      adapter: "openai"
+      model: "gpt-5"
+      alias: "gpt-5-latest"
       params: "~671B"
       confidence_baseline: 0.75
+
+    # xAI Grok (always-latest)
     - id: "xai_grok-4-fast-reasoning"
+      adapter: "xai"
+      model: "grok-4-fast-reasoning"
+      alias: "grok-latest"
       params: "~314B"
       confidence_baseline: 0.75
+
+    # Google Gemini (always-latest)
     - id: "google_gemini-2.5-flash-lite"
+      adapter: "google"
+      model: "gemini-2.5-flash-lite-preview-09-2025"
+      alias: "gemini-2.5-latest"
       params: "~200B"
       confidence_baseline: 0.70
+
+    # DeepSeek (always-latest)
     - id: "deepseek_deepseek-chat"
+      adapter: "deepseek"
+      model: "deepseek-chat"
+      alias: "deepseek-latest"
       params: "~236B"
       confidence_baseline: 0.70
+
+# Configuration metadata
+metadata:
+  version: "0.2.0"
+  last_updated: "2025-10-02"
+  note: "Ollama models removed; using cloud-only high-capacity mirrors"
+  timezone: "America/New_York"

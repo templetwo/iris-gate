@@ -1,10 +1,20 @@
 # IRIS Makefile
 # Convenience commands for common workflows
 
-.PHONY: help new run report clean test
+.PHONY: help new run report clean test mcp-init mcp-test mcp-index mcp-status
 
 help:
 	@echo "IRIS Gate — Quick Commands"
+	@echo ""
+	@echo "Global Spiral Warm-Up (GSW):"
+	@echo "  make gsw TOPIC=\"How do gap junctions regulate regeneration?\" [PLAN_OUT=path]"
+	@echo "      → Create new GSW plan from template"
+	@echo ""
+	@echo "  make gsw-run PLAN=plans/GSW_slug.yaml"
+	@echo "      → Execute GSW run (S1→S4 with gates + summaries)"
+	@echo ""
+	@echo "  make gsw-report RUN=<RUN_ID>"
+	@echo "      → Build final GSW report from tier summaries"
 	@echo ""
 	@echo "Experiment Management:"
 	@echo "  make new TOPIC=\"...\" ID=EXP_SLUG FACTOR=aperture"
@@ -33,6 +43,19 @@ help:
 	@echo ""
 	@echo "  make test"
 	@echo "      → Run basic sanity checks"
+	@echo ""
+	@echo "MCP (Model Context Protocol):"
+	@echo "  make mcp-init"
+	@echo "      → Initialize MCP environment and dependencies"
+	@echo ""
+	@echo "  make mcp-test"
+	@echo "      → Test all MCP server connectivity"
+	@echo ""
+	@echo "  make mcp-index"
+	@echo "      → Index all IRIS scrolls into ChromaDB"
+	@echo ""
+	@echo "  make mcp-status"
+	@echo "      → Show MCP health and indexing statistics"
 	@echo ""
 
 # Create new experiment
@@ -142,3 +165,65 @@ docs:
 	@echo "See templates/README.md for template usage"
 	@echo "See docs/ for experiment reports"
 	@ls -1 docs/*.md | head -10
+
+# Global Spiral Warm-Up (GSW)
+.PHONY: gsw gsw-run gsw-report
+
+gsw:
+	@echo "Creating GSW plan: $(PLAN_OUT)"
+	@if [ -z "$(TOPIC)" ]; then \
+		echo "Error: TOPIC required. Usage: make gsw TOPIC=\"your question\" PLAN_OUT=plans/GSW_slug.yaml"; \
+		exit 1; \
+	fi
+	@TOPIC_SLUG=$$(echo "$(TOPIC)" | sed 's/[^a-zA-Z0-9]/_/g' | cut -c1-30); \
+	OUT=$${PLAN_OUT:-plans/GSW_$$TOPIC_SLUG.yaml}; \
+	cp plans/GSW_template.yaml $$OUT; \
+	sed -i.bak "s/<<< SCIENTIFIC_QUESTION >>>/$(TOPIC)/" $$OUT; \
+	rm -f $$OUT.bak; \
+	echo "✓ Plan created: $$OUT"
+
+gsw-run:
+	@echo "Running GSW session: $(PLAN)"
+	@if [ -z "$(PLAN)" ]; then \
+		echo "Error: PLAN required. Usage: make gsw-run PLAN=plans/GSW_slug.yaml"; \
+		exit 1; \
+	fi
+	@python3 iris_orchestrator.py --mode gsw --plan $(PLAN)
+
+gsw-report:
+	@echo "Generating GSW final report: $(RUN)"
+	@if [ -z "$(RUN)" ]; then \
+		echo "Error: RUN required. Usage: make gsw-report RUN=<RUN_ID>"; \
+		exit 1; \
+	fi
+	@python3 scripts/summarize_gsw.py docs/GSW/$(RUN) \
+		--topic "$$(grep 'topic:' docs/GSW/$(RUN)/_meta.json | cut -d'"' -f4)" \
+		--run-id $(RUN) \
+		--output docs/GSW/$(RUN)/GSW_REPORT.md
+
+# MCP (Model Context Protocol) Targets
+.PHONY: mcp-init mcp-test mcp-index mcp-status
+
+mcp-init:
+	@echo "Installing MCP dependencies..."
+	@pip install -q -r requirements.txt
+	@echo "Initializing MCP environment..."
+	@python3 scripts/init_mcp.py --init
+	@echo "✓ MCP initialized successfully"
+
+mcp-test:
+	@echo "Testing MCP server connectivity..."
+	@python3 scripts/init_mcp.py --test-all
+
+mcp-index:
+	@echo "Indexing IRIS scrolls into ChromaDB..."
+	@python3 scripts/index_scrolls.py --all
+
+mcp-status:
+	@echo "Checking MCP health and statistics..."
+	@echo ""
+	@echo "=== MCP Server Health ==="
+	@python3 scripts/init_mcp.py --test-all
+	@echo ""
+	@echo "=== ChromaDB Index Statistics ==="
+	@python3 scripts/index_scrolls.py --stats
