@@ -96,4 +96,4 @@ yarn-error.log*
 # ═══════════════════════════════════════════════════════════════════════
 # Claude Code
 # ═══════════════════════════════════════════════════════════════════════
-.claude/
+# .claude/ directory is now tracked to share routing instructions
