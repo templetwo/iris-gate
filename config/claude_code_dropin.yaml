@@ -1,0 +1,84 @@
+# Claude Code Drop-in Configuration for IRIS Gate
+# Transforms CLI into pure router/coordinator
+# All heavy work delegated to specialized agents
+
+delegate_all: true
+router_agent: iris-coordinator
+max_concurrent_agents: 3
+fallback_agent: general-purpose
+
+guardrails:
+  pressure_max: 2.5
+  require_return_ticket: true
+  require_artifact_paths: true
+
+queues:
+  default_priority: 20
+  urgent_priority: 10
+
+log_paths:
+  orchestrator: logs/orchestrator/
+  tickets: logs/tickets/
+
+# IRIS Gate-specific routing preferences
+iris_routing:
+  scroll_analysis_default: scroll-pattern-analyzer
+  experiment_design_default: wet-lab-protocol-writer
+  ab_test_analysis_default: iris-ab-analyzer
+  memory_update_default: memory-ledger-writer
+  pressure_check_interval: 5  # exchanges
+
+# Agent work boundaries
+agent_permissions:
+  code_implementer:
+    writable_dirs:
+      - scripts/
+      - pipelines/
+      - sandbox/
+      - config/
+      - experiments/
+  publication_writer:
+    writable_dirs:
+      - docs/
+    forbidden_patterns:
+      - "*.py"
+      - "*.sh"
+      - "Makefile"
+  memory_ledger_writer:
+    writable_files:
+      - claudecode_iris_memory.json
+
+# Output requirements
+output_format:
+  require_paths: true
+  require_summary: true
+  max_summary_lines: 3
+
+# Concurrency control (matches orchestrator)
+concurrency:
+  max_workers: 3
+  queue_strategy: priority_fifo
+  stall_timeout_min: 15
+  retry_on_stall: true
+  max_retries: 1
+
+# Safety
+safety:
+  auto_pressure_monitor: true
+  pressure_check_frequency: 5
+  auto_pause_on_pressure: true
+  require_tests_pass: true
+  require_lint_pass: false  # style-warden handles this
+
+# Git integration
+git:
+  auto_worktree_on_conflict: true
+  require_pr_for_main: false
+  commit_message_template: |
+    {title}
+
+    {description}
+
+    🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+    Co-Authored-By: Claude <noreply@anthropic.com>
