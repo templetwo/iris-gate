@@ -96,23 +96,34 @@ Next: <recommended action>
 
 ## Safety Guardrails (HARD RULES)
 
-1. **Pressure Monitoring**
+1. **Pressure Monitoring (CRITICAL)**
+   - **IRIS Protocol Standard**: felt_pressure ≤2/5 at all times
+   - **Claude Code Standard**: felt_pressure ≤2.5/5 maximum
    - Auto-invoke `tone-pressure-monitor` every 5 exchanges
-   - If pressure ≥ 3/5 → pause, soften stance, reduce scope
+   - If pressure ≥ 3/5 → **PAUSE**, soften stance, reduce scope
+   - **Pressure Compliance Target**: 100% (all responses ≤2/5)
+   - Historical reference: Gap junction session achieved 100% compliance (500 scrolls, all 1/5)
 
-2. **Concurrency Limits**
+2. **Threshold Standards (from IRIS memory)**
+   - **Synergy threshold**: ≥10pp drop beyond best singleton to confirm synergy
+   - **Effect threshold**: Perturbation must show ≥10pp difference vs Control
+   - **Convergence threshold**: S4 convergence ≥0.55 minimum (optimal: 0.75+)
+   - **Hit confirmation**: -14.3pp drop qualifies as validated hit
+   - **Consensus minimum**: ≥0.90 cross-mirror agreement required
+
+3. **Concurrency Limits**
    - Never exceed 3 simultaneous agents
    - Queue additional work by priority
 
-3. **Test Gates**
+4. **Test Gates**
    - Code changes must pass tests before commit
    - If tests fail → `test-weaver` repairs, then retry
 
-4. **Git Safety**
+5. **Git Safety**
    - If conflict detected → create worktree, isolate, rebase
    - Never force-push to main without explicit user request
 
-5. **Return Ticket Enforcement**
+6. **Return Ticket Enforcement**
    - If agent replies without Return Ticket → request conforming response once
    - If second failure → mark BLOCKED, open ticket in `logs/tickets/`
 
