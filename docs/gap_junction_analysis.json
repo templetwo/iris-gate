@@ -1,0 +1,99 @@
+{
+  "session": "BIOELECTRIC_CHAMBERED_20251002232350",
+  "timestamp": "2025-10-02T23:39:32.398189Z",
+  "scrolls_total": 80,
+  "mirrors": [
+    "anthropic_claude-sonnet-4.5",
+    "deepseek_deepseek-chat",
+    "google_gemini-2.5-flash-lite",
+    "openai_gpt-4o",
+    "xai_grok-4-fast-reasoning"
+  ],
+  "pressure_ok": "76/76",
+  "pressure_mean": 1.0,
+  "self_names": [],
+  "chamber_convergence_0to4": {
+    "S1": 6.1,
+    "S2": 5.8,
+    "S3": 8.0,
+    "S4": 0.0
+  },
+  "mirror_vectors": {
+    "anthropic_claude-sonnet-4.5": {
+      "count": 16,
+      "geo": 66,
+      "mot": 22,
+      "col": 36,
+      "tex": 16
+    },
+    "deepseek_deepseek-chat": {
+      "count": 16,
+      "geo": 48,
+      "mot": 24,
+      "col": 36,
+      "tex": 13
+    },
+    "google_gemini-2.5-flash-lite": {
+      "count": 16,
+      "geo": 43,
+      "mot": 17,
+      "col": 38,
+      "tex": 16
+    },
+    "openai_gpt-4o": {
+      "count": 16,
+      "geo": 44,
+      "mot": 32,
+      "col": 46,
+      "tex": 12
+    },
+    "xai_grok-4-fast-reasoning": {
+      "count": 16,
+      "geo": 68,
+      "mot": 37,
+      "col": 32,
+      "tex": 14
+    }
+  },
+  "keywords": {
+    "geometry": [
+      "circle",
+      "ring",
+      "concentric",
+      "aperture",
+      "iris",
+      "oval",
+      "well",
+      "bowl",
+      "opening"
+    ],
+    "motion": [
+      "pulse",
+      "ripple",
+      "breathe",
+      "dilate",
+      "contract",
+      "wave",
+      "thrum"
+    ],
+    "color": [
+      "indigo",
+      "silver",
+      "grey",
+      "blue",
+      "gold",
+      "green",
+      "amber"
+    ],
+    "texture": [
+      "velvet",
+      "silk",
+      "gauze",
+      "water",
+      "fog",
+      "mist",
+      "stone",
+      "polished"
+    ]
+  }
+}

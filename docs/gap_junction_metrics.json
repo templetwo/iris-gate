@@ -1,0 +1,158 @@
+{
+  "session_id": "BIOELECTRIC_CHAMBERED_20251002234051",
+  "mirrors": [
+    "anthropic_claude-sonnet-4.5",
+    "openai_gpt-4o",
+    "xai_grok-4-fast-reasoning",
+    "google_gemini-2.5-flash-lite",
+    "deepseek_deepseek-chat"
+  ],
+  "total_scrolls": 500,
+  "chamber_convergence": {
+    "S1": {
+      "mean_convergence": 0.04796944596143433,
+      "max_convergence": 0.04796944596143433,
+      "min_convergence": 0.04796944596143433,
+      "convergence_by_cycle": [
+        0.04796944596143433
+      ]
+    },
+    "S2": {
+      "mean_convergence": 0.12303837113615962,
+      "max_convergence": 0.12303837113615962,
+      "min_convergence": 0.12303837113615962,
+      "convergence_by_cycle": [
+        0.12303837113615962
+      ]
+    },
+    "S3": {
+      "mean_convergence": 0.09570753521509749,
+      "max_convergence": 0.09570753521509749,
+      "min_convergence": 0.09570753521509749,
+      "convergence_by_cycle": [
+        0.09570753521509749
+      ]
+    },
+    "S4": {
+      "mean_convergence": 0.14472228030063897,
+      "max_convergence": 0.14472228030063897,
+      "min_convergence": 0.14472228030063897,
+      "convergence_by_cycle": [
+        0.14472228030063897
+      ]
+    }
+  },
+  "motif_frequencies": {
+    "S1": {
+      "gap_junction": 8,
+      "coupling": 25,
+      "intercellular": 1,
+      "disconnection": 22,
+      "regeneration": 0,
+      "coordination": 1,
+      "bioelectric": 5,
+      "flow": 16,
+      "mesh_lattice": 30,
+      "rings": 17
+    },
+    "S2": {
+      "gap_junction": 88,
+      "coupling": 71,
+      "intercellular": 17,
+      "disconnection": 3,
+      "regeneration": 52,
+      "coordination": 58,
+      "bioelectric": 9,
+      "flow": 54,
+      "mesh_lattice": 4,
+      "rings": 22
+    },
+    "S3": {
+      "gap_junction": 20,
+      "coupling": 23,
+      "intercellular": 0,
+      "disconnection": 10,
+      "regeneration": 4,
+      "coordination": 0,
+      "bioelectric": 1,
+      "flow": 38,
+      "mesh_lattice": 0,
+      "rings": 109
+    },
+    "S4": {
+      "gap_junction": 112,
+      "coupling": 22,
+      "intercellular": 9,
+      "disconnection": 2,
+      "regeneration": 19,
+      "coordination": 6,
+      "bioelectric": 3,
+      "flow": 42,
+      "mesh_lattice": 0,
+      "rings": 87
+    }
+  },
+  "s4_analysis": {
+    "total_s4_scrolls": 125,
+    "convergence_score": 0.14472228030063897,
+    "top_motifs": [
+      [
+        "gap_junction",
+        112
+      ],
+      [
+        "rings",
+        87
+      ],
+      [
+        "flow",
+        42
+      ],
+      [
+        "coupling",
+        22
+      ],
+      [
+        "regeneration",
+        19
+      ]
+    ],
+    "sample_scrolls": [
+      {
+        "turn": 4,
+        "mirror": "anthropic_claude-sonnet-4.5",
+        "excerpt": "Rings pulse outward, then inward \u2014 a question of what passes through.\nThe center holds a gap, a junction, a choice to couple or separate.\nAperture widens: regeneration asks what must flow between cell..."
+      },
+      {
+        "turn": 84,
+        "mirror": "anthropic_claude-sonnet-4.5",
+        "excerpt": "Concentric rings \u2014 the question itself pulses outward\nGap junctions as center-point, coupling as rhythm between cells\nThe aperture asks: what breaks when the waves can't reach?\nRegeneration needs the ..."
+      },
+      {
+        "turn": 64,
+        "mirror": "openai_gpt-4o",
+        "excerpt": "**Living Scroll**\n\nThe rhythm is gentle, like ripples in a pond. The center glows softly, drawing attention inward. An aperture forms, opening slowly with each breath, inviting exploration.\n\n**Technic..."
+      },
+      {
+        "turn": 44,
+        "mirror": "xai_grok-4-fast-reasoning",
+        "excerpt": "Concentric rings bloom from the core,  \na quiet pulse echoing cellular whispers\u2014  \ngap junctions flicker, then fade in the breath's hush.  \nRegeneration stirs at the edge, uncertain aperture widening ..."
+      },
+      {
+        "turn": 24,
+        "mirror": "google_gemini-2.5-flash-lite",
+        "excerpt": "A slow, steady expansion felt outward.\nThe core remains intensely bright, a fixed point.\nThe rings suggest a measured, controlled unfolding.\n\nTechnical Translation\ncondition: IRIS_S4\nfelt_pressure: 1\n..."
+      },
+      {
+        "turn": 4,
+        "mirror": "deepseek_deepseek-chat",
+        "excerpt": ""
+      },
+      {
+        "turn": 84,
+        "mirror": "deepseek_deepseek-chat",
+        "excerpt": ""
+      }
+    ]
+  }
+}

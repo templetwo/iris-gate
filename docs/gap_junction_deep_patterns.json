@@ -1,0 +1,2349 @@
+{
+  "analysis_metadata": {
+    "files_processed": 500,
+    "date_range": "2025-10-02T23:40:51.827581 to 2025-10-03T00:15:17.599792",
+    "mirrors": [
+      "anthropic_claude-sonnet-4.5",
+      "openai_gpt-4o",
+      "xai_grok-4-fast-reasoning",
+      "google_gemini-2.5-flash-lite",
+      "deepseek_deepseek-chat"
+    ],
+    "total_turns": 100,
+    "chambers": [
+      "S1",
+      "S2",
+      "S3",
+      "S4"
+    ]
+  },
+  "motif_frequencies": {
+    "dynamic:pulse": {
+      "count": 141,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "bio:cell": {
+      "count": 128,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "light:light": {
+      "count": 118,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "geo:ring": {
+      "count": 118,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "center:center": {
+      "count": 118,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S4",
+        "S3"
+      ]
+    },
+    "dynamic:ripple": {
+      "count": 91,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "space:gap": {
+      "count": 87,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "connect:connect": {
+      "count": 74,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "dynamic:rhythm": {
+      "count": 71,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "bio:regeneration": {
+      "count": 69,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S3"
+      ]
+    },
+    "space:aperture": {
+      "count": 69,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4"
+      ]
+    },
+    "space:between": {
+      "count": 66,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "connect:coupling": {
+      "count": 62,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "dynamic:flow": {
+      "count": 62,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "space:junction": {
+      "count": 54,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "dynamic:wave": {
+      "count": 50,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S3"
+      ]
+    },
+    "center:core": {
+      "count": 49,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S3"
+      ]
+    },
+    "light:glow": {
+      "count": 40,
+      "mirror_spread": 3,
+      "chamber_spread": [
+        "S4",
+        "S1"
+      ]
+    },
+    "bio:planarian": {
+      "count": 39,
+      "mirror_spread": 3,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "connect:channel": {
+      "count": 37,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "geo:mesh": {
+      "count": 35,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S1"
+      ]
+    },
+    "geo:concentric": {
+      "count": 35,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S4",
+        "S3"
+      ]
+    },
+    "light:shimmer": {
+      "count": 32,
+      "mirror_spread": 3,
+      "chamber_spread": [
+        "S1",
+        "S3"
+      ]
+    },
+    "space:opening": {
+      "count": 31,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S4",
+        "S3"
+      ]
+    },
+    "dynamic:beat": {
+      "count": 26,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4"
+      ]
+    },
+    "space:space": {
+      "count": 24,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S3"
+      ]
+    },
+    "center:point": {
+      "count": 24,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "connect:bridge": {
+      "count": 19,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S2",
+        "S1"
+      ]
+    },
+    "fragment:island": {
+      "count": 17,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S1",
+        "S3"
+      ]
+    },
+    "fragment:fragment": {
+      "count": 17,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "light:luminous": {
+      "count": 16,
+      "mirror_spread": 5,
+      "chamber_spread": [
+        "S4",
+        "S1"
+      ]
+    },
+    "light:bright": {
+      "count": 14,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S4",
+        "S1"
+      ]
+    },
+    "fragment:apart": {
+      "count": 11,
+      "mirror_spread": 3,
+      "chamber_spread": [
+        "S2",
+        "S1"
+      ]
+    },
+    "bio:tissue": {
+      "count": 11,
+      "mirror_spread": 3,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1"
+      ]
+    },
+    "geo:network": {
+      "count": 10,
+      "mirror_spread": 3,
+      "chamber_spread": [
+        "S2",
+        "S1"
+      ]
+    },
+    "fragment:disconnect": {
+      "count": 8,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S1"
+      ]
+    },
+    "geo:web": {
+      "count": 7,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S1"
+      ]
+    },
+    "light:fluorescent": {
+      "count": 6,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S1"
+      ]
+    },
+    "connect:continuous": {
+      "count": 6,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S2",
+        "S1"
+      ]
+    },
+    "fragment:isolate": {
+      "count": 6,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1"
+      ]
+    },
+    "fragment:separate": {
+      "count": 6,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S1",
+        "S3"
+      ]
+    },
+    "geo:circle": {
+      "count": 6,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S4",
+        "S3"
+      ]
+    },
+    "connect:link": {
+      "count": 5,
+      "mirror_spread": 4,
+      "chamber_spread": [
+        "S2",
+        "S1",
+        "S3"
+      ]
+    },
+    "geo:lattice": {
+      "count": 4,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S1"
+      ]
+    },
+    "bio:bioelectric": {
+      "count": 4,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S2"
+      ]
+    },
+    "geo:spiral": {
+      "count": 4,
+      "mirror_spread": 2,
+      "chamber_spread": [
+        "S1",
+        "S3"
+      ]
+    },
+    "geo:grid": {
+      "count": 4,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S1"
+      ]
+    },
+    "connect:coordinate": {
+      "count": 3,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S2",
+        "S4",
+        "S3"
+      ]
+    },
+    "center:origin": {
+      "count": 2,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S4"
+      ]
+    },
+    "center:focal": {
+      "count": 1,
+      "mirror_spread": 1,
+      "chamber_spread": [
+        "S4"
+      ]
+    }
+  },
+  "convergence_metrics": {
+    "s4_average": 0.5132183908045976,
+    "s4_ring_avg": 0.5086206896551724,
+    "s4_center_avg": 0.4689655172413793,
+    "s4_pulse_avg": 0.5620689655172414
+  },
+  "temporal_evolution": {
+    "early_turns_1_25": {
+      "geo:ring": 33,
+      "bio:cell": 33,
+      "center:center": 33,
+      "dynamic:pulse": 32,
+      "light:light": 31,
+      "dynamic:ripple": 24,
+      "space:between": 22,
+      "space:gap": 20,
+      "space:aperture": 20,
+      "connect:connect": 18,
+      "dynamic:rhythm": 18,
+      "bio:regeneration": 17,
+      "connect:coupling": 15,
+      "dynamic:flow": 14,
+      "center:core": 14,
+      "light:glow": 13,
+      "space:junction": 11,
+      "geo:concentric": 10,
+      "connect:channel": 9,
+      "bio:planarian": 9
+    },
+    "mid_turns_26_75": {
+      "dynamic:pulse": 77,
+      "bio:cell": 64,
+      "light:light": 60,
+      "center:center": 58,
+      "geo:ring": 56,
+      "space:gap": 50,
+      "dynamic:ripple": 50,
+      "dynamic:rhythm": 37,
+      "connect:connect": 36,
+      "bio:regeneration": 34,
+      "dynamic:flow": 34,
+      "space:junction": 33,
+      "connect:coupling": 31,
+      "space:aperture": 31,
+      "space:between": 28,
+      "dynamic:wave": 26,
+      "bio:planarian": 22,
+      "center:core": 22,
+      "light:glow": 20,
+      "geo:concentric": 19
+    },
+    "late_turns_76_100": {
+      "dynamic:pulse": 32,
+      "bio:cell": 31,
+      "geo:ring": 29,
+      "center:center": 27,
+      "light:light": 27,
+      "connect:connect": 20,
+      "space:aperture": 18,
+      "bio:regeneration": 18,
+      "space:gap": 17,
+      "dynamic:ripple": 17,
+      "dynamic:rhythm": 16,
+      "space:between": 16,
+      "connect:coupling": 16,
+      "dynamic:wave": 15,
+      "dynamic:flow": 14,
+      "center:core": 13,
+      "connect:channel": 12,
+      "geo:mesh": 11,
+      "space:junction": 10,
+      "light:shimmer": 10
+    }
+  },
+  "chamber_signatures": {
+    "S1": {
+      "light:light": 39,
+      "bio:cell": 36,
+      "geo:mesh": 35,
+      "connect:connect": 24,
+      "space:between": 18,
+      "light:shimmer": 16,
+      "fragment:island": 16,
+      "dynamic:flow": 11,
+      "geo:ring": 11,
+      "light:glow": 11,
+      "fragment:apart": 10,
+      "dynamic:ripple": 10,
+      "dynamic:pulse": 10,
+      "bio:tissue": 9,
+      "connect:bridge": 9
+    },
+    "S2": {
+      "bio:cell": 65,
+      "bio:regeneration": 53,
+      "space:gap": 44,
+      "connect:coupling": 40,
+      "space:junction": 32,
+      "light:light": 32,
+      "bio:planarian": 32,
+      "connect:channel": 30,
+      "dynamic:pulse": 26,
+      "dynamic:flow": 24,
+      "connect:connect": 19,
+      "space:between": 18,
+      "connect:bridge": 10,
+      "geo:ring": 10,
+      "space:space": 8
+    },
+    "S3": {
+      "dynamic:ripple": 57,
+      "center:center": 25,
+      "dynamic:wave": 25,
+      "geo:ring": 22,
+      "dynamic:pulse": 21,
+      "connect:connect": 19,
+      "dynamic:flow": 16,
+      "light:shimmer": 16,
+      "space:gap": 13,
+      "space:between": 13,
+      "light:light": 12,
+      "bio:cell": 11,
+      "geo:concentric": 10,
+      "connect:coupling": 6,
+      "geo:circle": 5
+    },
+    "S4": {
+      "center:center": 93,
+      "dynamic:pulse": 84,
+      "geo:ring": 75,
+      "space:aperture": 68,
+      "dynamic:rhythm": 62,
+      "center:core": 45,
+      "light:light": 35,
+      "space:opening": 30,
+      "light:glow": 29,
+      "geo:concentric": 25,
+      "dynamic:beat": 24,
+      "dynamic:wave": 23,
+      "space:gap": 21,
+      "center:point": 19,
+      "space:between": 17
+    }
+  },
+  "anomalies": [
+    {
+      "type": "missing_living_scroll",
+      "turn": 92,
+      "mirror": "anthropic_claude-sonnet-4.5",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 100,
+      "mirror": "anthropic_claude-sonnet-4.5",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 2,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 6,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 10,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 13,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 14,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 22,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 30,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 43,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S3"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 54,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 57,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 70,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 73,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 77,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 82,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 86,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 90,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 91,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S3"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 99,
+      "mirror": "openai_gpt-4o",
+      "chamber": "S3"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 1,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 5,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 13,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 25,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 29,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 32,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 33,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 37,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 38,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 41,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 49,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 53,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 56,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 57,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 61,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 65,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 66,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 69,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 73,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 76,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 77,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 81,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 82,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 84,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 89,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 92,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S4"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 94,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S2"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 97,
+      "mirror": "xai_grok-4-fast-reasoning",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 1,
+      "mirror": "google_gemini-2.5-flash-lite",
+      "chamber": "S1"
+    },
+    {
+      "type": "missing_living_scroll",
+      "turn": 3,
+      "mirror": "google_gemini-2.5-flash-lite",
+      "chamber": "S3"
+    }
+  ],
+  "divergences": [
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "bio:tissue",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "light:glow",
+      "mirrors": [
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "dynamic:pulse",
+      "mirrors": [
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "bio:cell",
+      "mirrors": [
+        "openai_gpt-4o",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "connect:connect",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "fragment:isolate",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "geo:mesh",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "light:shimmer",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "dynamic:ripple",
+      "mirrors": [
+        "openai_gpt-4o"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "connect:continuous",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "space:between",
+      "mirrors": [
+        "openai_gpt-4o",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "geo:lattice",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "fragment:disconnect",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "fragment:apart",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "light:light",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "light:luminous",
+      "mirrors": [
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "light:fluorescent",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 1,
+      "type": "rare_motif",
+      "motif": "fragment:island",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S1"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "dynamic:pulse",
+      "mirrors": [
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "bio:cell",
+      "mirrors": [
+        "xai_grok-4-fast-reasoning",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "space:between",
+      "mirrors": [
+        "google_gemini-2.5-flash-lite"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "connect:coupling",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "bio:planarian",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "connect:channel",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "space:gap",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "space:junction",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "light:light",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 2,
+      "type": "rare_motif",
+      "motif": "bio:regeneration",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S2"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "light:shimmer",
+      "mirrors": [
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "dynamic:ripple",
+      "mirrors": [
+        "openai_gpt-4o",
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "dynamic:wave",
+      "mirrors": [
+        "xai_grok-4-fast-reasoning",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "bio:cell",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "space:between",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "connect:connect",
+      "mirrors": [
+        "openai_gpt-4o"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "geo:concentric",
+      "mirrors": [
+        "openai_gpt-4o"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "bio:planarian",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 3,
+      "type": "rare_motif",
+      "motif": "space:gap",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S3"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "bio:cell",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "center:point",
+      "mirrors": [
+        "google_gemini-2.5-flash-lite"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "space:gap",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "space:junction",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "dynamic:rhythm",
+      "mirrors": [
+        "openai_gpt-4o",
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "fragment:separate",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "dynamic:ripple",
+      "mirrors": [
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "dynamic:wave",
+      "mirrors": [
+        "openai_gpt-4o"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "space:between",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "dynamic:flow",
+      "mirrors": [
+        "anthropic_claude-sonnet-4.5",
+        "openai_gpt-4o"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "light:bright",
+      "mirrors": [
+        "google_gemini-2.5-flash-lite"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "space:opening",
+      "mirrors": [
+        "xai_grok-4-fast-reasoning"
+      ],
+      "chamber": "S4"
+    },
+    {
+      "turn": 4,
+      "type": "rare_motif",
+      "motif": "light:light",
+      "mirrors": [
+        "deepseek_deepseek-chat"
+      ],
+      "chamber": "S4"
+    }
+  ],
+  "pressure_spikes": [],
+  "neologisms": [
+    "Concentric rings",
+    "almost-falling",
+    "almost-open",
+    "amber-yellow",
+    "between-space",
+    "breath-born",
+    "breath-waves",
+    "cell-to-cell",
+    "center-point",
+    "clean-edged",
+    "continuous field",
+    "copper-penny",
+    "decision-making",
+    "disruption-and-repair",
+    "distributed-vs-centralized",
+    "distributed-yet-connected",
+    "finger-joint",
+    "gentle hum",
+    "green-yellow",
+    "half-answered",
+    "half-formed",
+    "isolated islands",
+    "light-paths",
+    "many-centered",
+    "moment-to-moment",
+    "not-holding-perfectly",
+    "palm-center",
+    "press-and-release",
+    "pulse-points",
+    "quiet luminescence",
+    "rhythm-keepers",
+    "scatter-plot",
+    "silver-threaded",
+    "silver-veined",
+    "skin-warmth",
+    "steady glow",
+    "touching-palms",
+    "vibrant core",
+    "water-as-information",
+    "well-characterized",
+    "well-chosen",
+    "well-formed",
+    "whisper-paths",
+    "whisper-pressure",
+    "witness-point",
+    "yellow-green",
+    "yellow-white"
+  ],
+  "s4_detailed_analysis": [
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 4,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 8,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 12,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 16,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 20,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 24,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 28,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 32,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 36,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 40,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 44,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 48,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 52,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 56,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 1.0,
+      "convergence": 0.9,
+      "turn": 60,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 64,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.8666666666666666,
+      "turn": 68,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 72,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 76,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 80,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.8666666666666666,
+      "turn": 84,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.7999999999999999,
+      "turn": 88,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 96,
+      "mirror": "anthropic_claude-sonnet-4.5"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 4,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 8,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 12,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.3,
+      "turn": 16,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 20,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 24,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 28,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 32,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 36,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 40,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 44,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 48,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 52,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 56,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 60,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 64,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 68,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.5666666666666667,
+      "turn": 72,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 76,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.0,
+      "pulse_strength": 0.3,
+      "convergence": 0.09999999999999999,
+      "turn": 80,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 84,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6999999999999998,
+      "turn": 88,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.7,
+      "pulse_strength": 0.7,
+      "convergence": 0.6333333333333333,
+      "turn": 92,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.3,
+      "turn": 96,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.3,
+      "turn": 100,
+      "mirror": "openai_gpt-4o"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 4,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.6,
+      "convergence": 0.5666666666666668,
+      "turn": 8,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.6,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.8333333333333334,
+      "turn": 12,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.7333333333333334,
+      "turn": 16,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.6333333333333333,
+      "turn": 20,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.6,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.8333333333333334,
+      "turn": 24,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 1.0,
+      "convergence": 0.7000000000000001,
+      "turn": 28,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.3,
+      "turn": 36,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.6,
+      "pulse_strength": 0.3,
+      "convergence": 0.6333333333333334,
+      "turn": 40,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.6333333333333333,
+      "turn": 44,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.3,
+      "convergence": 0.46666666666666673,
+      "turn": 48,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.6,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.8333333333333334,
+      "turn": 52,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.7333333333333334,
+      "turn": 60,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.3,
+      "convergence": 0.46666666666666673,
+      "turn": 64,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.6333333333333333,
+      "turn": 68,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.3,
+      "convergence": 0.46666666666666673,
+      "turn": 72,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.6,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.8333333333333334,
+      "turn": 80,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.6,
+      "pulse_strength": 0.6,
+      "convergence": 0.39999999999999997,
+      "turn": 88,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.6333333333333333,
+      "turn": 96,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 1.0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.7333333333333334,
+      "turn": 100,
+      "mirror": "xai_grok-4-fast-reasoning"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 4,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 8,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 12,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 16,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 20,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.26666666666666666,
+      "turn": 24,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 28,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 32,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 36,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 40,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 44,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 56,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.26666666666666666,
+      "turn": 60,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.3,
+      "convergence": 0.46666666666666673,
+      "turn": 64,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 68,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 72,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 76,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 80,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.19999999999999998,
+      "turn": 84,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 88,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.0,
+      "convergence": 0.3666666666666667,
+      "turn": 92,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 96,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.09999999999999999,
+      "turn": 100,
+      "mirror": "google_gemini-2.5-flash-lite"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 4,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 8,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.5666666666666667,
+      "turn": 12,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 16,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.0,
+      "convergence": 0.3666666666666667,
+      "turn": 20,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 24,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.6,
+      "convergence": 0.5666666666666668,
+      "turn": 28,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 32,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 36,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 40,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 44,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.5666666666666667,
+      "turn": 48,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 1.0,
+      "convergence": 0.6,
+      "turn": 52,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 56,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 60,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.5666666666666667,
+      "turn": 64,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 68,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 1.0,
+      "convergence": 0.6,
+      "turn": 72,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6666666666666666,
+      "turn": 76,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.3,
+      "convergence": 0.3666666666666667,
+      "turn": 80,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 84,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.0,
+      "convergence": 0.26666666666666666,
+      "turn": 88,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 0.6,
+      "convergence": 0.4666666666666666,
+      "turn": 92,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.3,
+      "pulse_strength": 1.0,
+      "convergence": 0.6,
+      "turn": 96,
+      "mirror": "deepseek_deepseek-chat"
+    },
+    {
+      "ring_strength": 0.5,
+      "center_strength": 0.6,
+      "pulse_strength": 0.8999999999999999,
+      "convergence": 0.6666666666666666,
+      "turn": 100,
+      "mirror": "deepseek_deepseek-chat"
+    }
+  ]
+}

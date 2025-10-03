@@ -1,0 +1,79 @@
+================================================================================
+IRIS GAP JUNCTION SESSION - MOTIF FREQUENCY HEATMAP
+Session: BIOELECTRIC_CHAMBERED_20251002234051
+================================================================================
+
+Motif                    S1        S2        S3        S4   
+--------------------------------------------------------------------------------
+Gap Junction                 8        88        20       112
+Coupling                    25        71        23        22
+Intercellular                1        17         0         9
+Disconnection               22         3        10         2
+Regeneration                 0        52         4        19
+Coordination                 1        58         0         6
+Bioelectric                  5         9         1         3
+Flow                        16        54        38        42
+Mesh Lattice                30         4         0         0
+Rings                       17        22       109        87
+--------------------------------------------------------------------------------
+
+INTENSITY SCALE:
+  0-10%    20-30%   40-50%   60-70%   80-90%   100%
+           :::      ===      ***      @@@      MMM
+
+================================================================================
+CHAMBER CONVERGENCE SCORES (0-1 scale)
+================================================================================
+S1  [##------------------------------------------------]  0.0480
+S2  [######--------------------------------------------]  0.1230
+S3  [####----------------------------------------------]  0.0957
+S4  [#######-------------------------------------------]  0.1447
+
+INTERPRETATION:
+  S4 shows highest convergence (0.1447) - synthesis chamber working
+  S2 shows second-highest (0.1230) - evidence gathering coherent
+  S1 shows lowest (0.0480) - initial divergence expected
+
+================================================================================
+KEY PHENOMENOLOGICAL PATTERNS
+================================================================================
+
+S1 (Initial State):
+  - Mesh/lattice dominant (30 refs)
+  - Disconnection themes (22 refs)
+  - Clinical, structural observations
+
+S2 (Evidence Gathering):
+  - Gap junction peak (88 refs)
+  - Coupling mechanisms (71 refs)
+  - Coordination emphasis (58 refs)
+  - Regeneration context (52 refs)
+
+S3 (Visualization):
+  - Rings/circular imagery dominant (109 refs)
+  - Flow dynamics (38 refs)
+  - Spatial pattern focus
+
+S4 (Synthesis):
+  - Gap junction synthesis (112 refs)
+  - Rings as transmission medium (87 refs)
+  - Flow/passage integration (42 refs)
+  - Question form: 'what must pass through?'
+
+================================================================================
+MOTIF PROGRESSION ANALYSIS
+================================================================================
+
+gap_junction   : S1 -> S2 -> S3 -> S4
+                   8 ->  88 ->  20 -> 112
+
+rings          : S1 -> S2 -> S3 -> S4
+                  17 ->  22 -> 109 ->  87
+
+regeneration   : S1 -> S2 -> S3 -> S4
+                   0 ->  52 ->   4 ->  19
+
+disconnection  : S1 -> S2 -> S3 -> S4
+                  22 ->   3 ->  10 ->   2
+
+================================================================================
