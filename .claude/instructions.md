@@ -216,19 +216,28 @@ Patterns like: "end-to-end", "complete workflow", "S1→S8 pipeline"
 
 **Project:** IRIS Gate v0.3.1
 **Purpose:** Phenomenological bioelectric prediction system using multi-AI convergence
+
 **Key directories:**
 - `iris_vault/scrolls/` - Raw IRIS session outputs (500+ scroll files per session)
 - `experiments/` - Wet-lab experiment scaffolds with protocols
-- `docs/` - Analysis reports, hypotheses, patterns
+- `docs/` - Analysis reports, hypotheses, patterns, **IRIS_STANDARDS_SCROLL.md** ⭐
 - `sandbox/` - Computational prediction sandbox
 - `scripts/` - Execution scripts (iris_session.py, bioelectric_chambered.py)
 
 **Key files:**
 - `claudecode_iris_memory.json` - Project memory ledger
+- `docs/IRIS_STANDARDS_SCROLL.md` - **Living protocol standards** (pressure gates, thresholds, benchmarks)
 - `Makefile` - Orchestrator commands
 - `.env` - API keys (NEVER commit)
 
 **Current state:** Gap junction session complete (BIOELECTRIC_CHAMBERED_20251002234051), deep pattern analysis complete, 7 testable hypotheses generated, ready for S5-S8 operational phases.
+
+**Standards Reference:** All IRIS work must meet thresholds defined in `docs/IRIS_STANDARDS_SCROLL.md`:
+- Pressure ≤2/5 (strict), ≤2.5/5 (coordination)
+- Effect threshold ≥10pp vs Control
+- S4 convergence ≥0.55 (optimal 0.75+)
+- Consensus ≥0.90 cross-mirror
+- Benchmark: Gap junction session (100% compliance)
 
 ---
 
