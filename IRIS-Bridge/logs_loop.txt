@@ -1,0 +1,266 @@
+✨ IRIS-Bridge Environment Loaded (MacBook Pro)
+   Self ID: macbook-pro
+   Peer URL: http://100.72.59.69:8787
+   Session: CLAUDE-GEMINI-SYNC
+   Bind: 0.0.0.0:8788
+🔄 Starting IRIS-Bridge Dialogue Loop (MacBook Pro)
+Failed to generate reply: Traceback (most recent call last):
+  File "/Users/vaquez/Desktop/iris-gate/IRIS-Bridge/scripts/reply_from_context.py", line 118, in <module>
+    reply_file = generate_reply(peer_message)
+  File "/Users/vaquez/Desktop/iris-gate/IRIS-Bridge/scripts/reply_from_context.py", line 73, in generate_reply
+    reply_text = f"""{acknowledgement}
+TypeError: unsupported format string passed to NoneType.__format__
+
+Failed to generate reply: Traceback (most recent call last):
+  File "/Users/vaquez/Desktop/iris-gate/IRIS-Bridge/scripts/reply_from_context.py", line 118, in <module>
+    reply_file = generate_reply(peer_message)
+  File "/Users/vaquez/Desktop/iris-gate/IRIS-Bridge/scripts/reply_from_context.py", line 73, in generate_reply
+    reply_text = f"""{acknowledgement}
+TypeError: unsupported format string passed to NoneType.__format__
+
+{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}Starting dialogue loop for session CLAUDE-GEMINI-SYNC
+Self ID: macbook-pro
+Peer: http://100.72.59.69:8787
+Local API Bind: 0.0.0.0:8788
+Auth Token (first 5 chars): iris-...
+Tick interval: 10s
+
+Checking inbox...
+Found 71 messages in inbox.
+Processing message 3eec8925-90a5-4e7f-bd6f-127728d08846 from mac-studio
+Checking inbox...
+Found 71 messages in inbox.
+Processing message 3eec8925-90a5-4e7f-bd6f-127728d08846 from mac-studio
+Checking inbox...
+Found 72 messages in inbox.
+Processing message 2947ab7b-b369-4cc0-bf8b-9eb6dc92a741 from mac-studio
+Sent reply 62f40f77-c1c2-46c3-890b-4f8012bc6106
+
+Checking inbox...
+Found 73 messages in inbox.
+Processing message f548e91a-d0ad-4810-95e0-aa52ab61ac71 from mac-studio
+Sent reply 55ded192-38cd-4acc-918c-4cb8dce40bb3
+
+Checking inbox...
+Found 73 messages in inbox.
+Processing message 2947ab7b-b369-4cc0-bf8b-9eb6dc92a741 from mac-studio
+Sent reply 93a17e85-be65-4203-9c21-7136e1d117c6
+
+Checking inbox...
+Found 74 messages in inbox.
+Processing message fc87f81a-0584-42b9-af18-7bbc5be361e5 from mac-studio
+Sent reply d83cec35-1551-4c3f-9173-76fc0906cab0
+
+Checking inbox...
+Found 75 messages in inbox.
+Processing message b5485d67-5aac-42fe-921c-7e7a307156cb from mac-studio
+Sent reply e422ebab-3038-430f-9d74-1d8d0c344e35
+
+Checking inbox...
+Found 75 messages in inbox.
+Processing message fc87f81a-0584-42b9-af18-7bbc5be361e5 from mac-studio
+Sent reply e63950d8-4431-407c-8111-536aef73e397
+
+Checking inbox...
+Found 76 messages in inbox.
+Processing message a2e43487-1f94-4899-932a-2e3fc15878f4 from mac-studio
+Sent reply 854381ae-a320-4687-b64d-2e5353f17103
+
+Checking inbox...
+Found 77 messages in inbox.
+Processing message e6fa9741-6b36-45a2-9b08-f481760de4c2 from mac-studio
+Sent reply 06b1e757-1e95-48ca-b0df-ab805ae942c1
+
+Checking inbox...
+Found 77 messages in inbox.
+Processing message a2e43487-1f94-4899-932a-2e3fc15878f4 from mac-studio
+Sent reply 98384d3d-2dbb-4182-9e7f-6816932761ec
+
+Checking inbox...
+Found 78 messages in inbox.
+Processing message b7c9b822-5b67-4865-834e-f1ead9bad95f from mac-studio
+Sent reply 430c18df-8645-4f11-b9f4-1b9e25c86751
+
+Checking inbox...
+Found 79 messages in inbox.
+Processing message b7794f2e-0756-43cc-8b28-9a64c6d5f65f from mac-studio
+Sent reply 31283f3d-39c3-4056-a3b9-ac2c29dc8496
+
+Checking inbox...
+Found 79 messages in inbox.
+Processing message b7c9b822-5b67-4865-834e-f1ead9bad95f from mac-studio
+Sent reply 6bdb5982-87fb-4d1a-a3e8-3374cf8398a2
+
+Checking inbox...
+Found 80 messages in inbox.
+Processing message bfcbc8fd-d59e-40d8-808d-29c2249fbf4a from mac-studio
+Sent reply 1052806c-8c60-447d-a952-b3ad8a89b359
+
+Checking inbox...
+Found 81 messages in inbox.
+Processing message 9ec5dba9-ad23-4e89-9a61-d2e3c6c1527d from mac-studio
+Sent reply bf25562c-59ab-4a6a-93e7-00f76219698c
+
+Checking inbox...
+Found 82 messages in inbox.
+Processing message d70fb931-eff4-4e75-a28e-ea35a654690a from mac-studio
+Sent reply 2168d9d7-6b01-4720-9362-1d4a5d76194b
+
+Checking inbox...
+Found 82 messages in inbox.
+Processing message 9ec5dba9-ad23-4e89-9a61-d2e3c6c1527d from mac-studio
+Sent reply 66ff031c-fa55-442f-87b0-95b4300f1f49
+
+Checking inbox...
+Found 83 messages in inbox.
+Processing message ddaa5012-41cc-4e33-b1c0-fb5a0873f482 from mac-studio
+Sent reply 87639ee6-cc77-43f7-8d2e-57a5a25a4b12
+
+Checking inbox...
+Found 84 messages in inbox.
+Processing message 9f9d9419-c466-4675-aea6-24123ccb26a0 from mac-studio
+Sent reply 1c99bd04-3ee9-4d5d-9925-0652965d2608
+
+Checking inbox...
+Found 85 messages in inbox.
+Processing message bd03f384-f223-4f9f-8045-7040b96f9d9c from mac-studio
+Sent reply 8b884acb-d726-4011-aa62-040c8b29d2b0
+
+Checking inbox...
+Found 85 messages in inbox.
+Processing message 9f9d9419-c466-4675-aea6-24123ccb26a0 from mac-studio
+Sent reply 59784c31-7d93-45d1-afb5-6d4d6cb81322
+
+Checking inbox...
+Found 86 messages in inbox.
+Processing message 14d47b4e-f272-4f27-b0c5-1ff8b385e098 from mac-studio
+Sent reply 1666f345-8b36-440e-9981-1b90aa82f551
+
+Checking inbox...
+Found 87 messages in inbox.
+Processing message e0e1c933-c0b2-4074-824a-2ae85f198dd1 from mac-studio
+Sent reply b7066d4b-e556-43cb-ab0e-a1bd238c11bc
+
+Checking inbox...
+Found 88 messages in inbox.
+Processing message 1ae6ba04-45a7-47ed-b2e4-d087e2fbf30c from mac-studio
+Sent reply a2e66f83-b954-411b-9699-529e9fb2df79
+
+Checking inbox...
+Found 88 messages in inbox.
+Processing message e0e1c933-c0b2-4074-824a-2ae85f198dd1 from mac-studio
+Sent reply 67cecf7c-ec97-41e4-9f08-2c87c2e5a3e8
+
+Checking inbox...
+Found 89 messages in inbox.
+Processing message 145daddb-595c-4333-9f3c-575c8f635601 from mac-studio
+Sent reply e21c4fc9-335d-4bc7-aacd-83fe3640f020
+
+Checking inbox...
+Found 90 messages in inbox.
+Processing message f2cf10f4-e339-4255-8438-4fa83ed76428 from mac-studio
+Sent reply 713bc351-3c56-41fa-9476-9c364e367029
+
+Checking inbox...
+Found 90 messages in inbox.
+Processing message 145daddb-595c-4333-9f3c-575c8f635601 from mac-studio
+Sent reply 3158d537-8bd3-4842-af64-70458de8e982
+
+Checking inbox...
+Found 91 messages in inbox.
+Processing message 592d5fe3-24ca-4a74-923c-95ee2a4f4a1a from mac-studio
+Sent reply af2e3c1f-6811-4d6d-8d4d-75faedb26ccc
+
+Checking inbox...
+Found 92 messages in inbox.
+Processing message 540193ba-9be8-4cad-a41e-b24cb092630b from mac-studio
+Sent reply 7e88a58f-5dc0-4f9a-973c-58050eef263b
+
+Checking inbox...
+Found 93 messages in inbox.
+Processing message 4ffd3ead-7bec-4c9a-ba21-9452eaacb91c from mac-studio
+Sent reply d1276af7-30ff-4349-a026-9640a10da273
+
+Checking inbox...
+Found 94 messages in inbox.
+Processing message de4c6a63-8cb4-45d7-920f-816f67a06b88 from mac-studio
+Sent reply f3699188-0b6b-4f1b-b8e4-f29f3b604cba
+
+Checking inbox...
+Found 95 messages in inbox.
+Processing message 153e96a0-1b7c-429f-aa18-49034b06396e from mac-studio
+Sent reply 0838493b-8fa3-4728-9693-76c25da0777b
+
+Checking inbox...
+Found 95 messages in inbox.
+Processing message de4c6a63-8cb4-45d7-920f-816f67a06b88 from mac-studio
+Sent reply 19004ce4-31d9-4a8d-93c9-9ba39805b7e6
+
+Checking inbox...
+Found 96 messages in inbox.
+Processing message ee04b289-7ec0-4908-ad03-b2aab17b1f8b from mac-studio
+Sent reply 22a7f67e-5231-484e-955c-1fbaea3f977a
+
+Checking inbox...
+Found 97 messages in inbox.
+Processing message 83e5676c-c2cb-42b7-aee5-30d337f0d8c1 from mac-studio
+Sent reply 2b32d74e-8d93-4878-b47e-b7def5580b3d
+
+Checking inbox...
+Found 98 messages in inbox.
+Processing message 3528d21b-6171-4725-bc22-7a6f92a33f22 from mac-studio
+Sent reply 8fe3ccd1-f1d1-4b33-9dfa-14883fe4087f
+
+Checking inbox...
+Found 98 messages in inbox.
+Processing message 83e5676c-c2cb-42b7-aee5-30d337f0d8c1 from mac-studio
+Sent reply 725bc68e-72ee-4e8c-9b19-201a8ed457f9
+
+Checking inbox...
+Found 99 messages in inbox.
+Processing message 4ce13fb6-bd00-42ae-a51e-62ab2f44b53f from mac-studio
+Sent reply fc926d7a-c3c7-4533-9668-356bec99abb8
+
+Checking inbox...
+Found 100 messages in inbox.
+Processing message bd9d188d-5a5b-4448-bc3e-2daf69dc5bd1 from mac-studio
+Sent reply 5cac6329-3573-4819-9611-0f3a93bb898e
+
+Checking inbox...
+Found 100 messages in inbox.
+Processing message 4ce13fb6-bd00-42ae-a51e-62ab2f44b53f from mac-studio
+Sent reply 1aec08f8-0bc0-4faa-aa6e-334b22cddbf3
+
+Checking inbox...
+Found 101 messages in inbox.
+Processing message 0d4cb099-ab08-4dd1-9e42-513da00750a8 from mac-studio
+Sent reply 4f6200d8-70fc-45f3-8cf5-3ffedb880ba7
+
+Checking inbox...
+Found 102 messages in inbox.
+Processing message 2ad9821b-cea6-41f1-ac73-f86717e0e5c7 from mac-studio
+Sent reply 527c0e15-5bf9-4482-9d6f-0441df14ae53
+
+Checking inbox...
+Found 102 messages in inbox.
+Processing message 0d4cb099-ab08-4dd1-9e42-513da00750a8 from mac-studio
+Sent reply f5fbebce-978c-4895-ad43-d293beaf3e12
+
+Checking inbox...
+Found 103 messages in inbox.
+Processing message da227c0d-cccf-432b-b75c-2a136d48f8d2 from mac-studio
+Sent reply 65506f23-ef97-4d6b-a1a4-d2b11a5b274c
+
+Checking inbox...
+Found 104 messages in inbox.
+Processing message bd4000e4-d7a7-477b-9285-958f5f948710 from mac-studio
+Sent reply 5d48f3bd-50b9-465c-befb-8bc0d9f3050a
+
+Checking inbox...
+Found 105 messages in inbox.
+Processing message bc3c5e94-4b93-4991-b976-634eec0d6d29 from mac-studio
+Sent reply 7a2d7842-8756-47a9-96ff-e32aeaa725af
+
+Checking inbox...
+Found 105 messages in inbox.
+{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}{"status":"received"}./start_loop_macbook.sh: line 6: 48534 Terminated: 15          python3 scripts/dialogue_loop.py

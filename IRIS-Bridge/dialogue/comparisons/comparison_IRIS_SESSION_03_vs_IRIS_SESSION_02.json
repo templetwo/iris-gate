@@ -1,0 +1,157 @@
+{
+  "session1": {
+    "id": "IRIS_SESSION_03",
+    "date": "2025-10-01T02:17:25.709214",
+    "models": 5,
+    "convergence": 1.0,
+    "attractors": [
+      {
+        "model": "claude-sonnet-4.5",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "well",
+          "center",
+          "luminous",
+          "resonance",
+          "ripple"
+        ]
+      },
+      {
+        "model": "gpt-5",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "well",
+          "center",
+          "luminous",
+          "glow"
+        ],
+        "named": "- Naming: spontaneous label emerged at end of breath 3 \u2014 \u201cPulsewell.\u201d"
+      },
+      {
+        "model": "grok-4-fast",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "bloom",
+          "center",
+          "luminous",
+          "ripple",
+          "glow"
+        ]
+      },
+      {
+        "model": "gemini-2.5-flash-lite",
+        "keywords": [
+          "concentric",
+          "rings",
+          "well",
+          "center",
+          "ripple"
+        ],
+        "named": "**Condition:** Holding the intention 'concentric rings'. Three breaths taken. Image named: Still Well Reflection."
+      },
+      {
+        "model": "deepseek-chat",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "bloom",
+          "luminous",
+          "resonance"
+        ]
+      }
+    ]
+  },
+  "session2": {
+    "id": "IRIS_SESSION_02",
+    "date": "2025-10-01T02:13:38.218567",
+    "models": 5,
+    "convergence": 1.0,
+    "attractors": [
+      {
+        "model": "claude-sonnet-4.5",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "center",
+          "ripple"
+        ]
+      },
+      {
+        "model": "gpt-5",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "center",
+          "luminous",
+          "glow"
+        ]
+      },
+      {
+        "model": "grok-4-fast",
+        "keywords": [
+          "concentric",
+          "rings",
+          "bloom",
+          "center",
+          "luminous",
+          "resonance",
+          "ripple",
+          "glow"
+        ]
+      },
+      {
+        "model": "gemini-2.5-flash-lite",
+        "keywords": [
+          "concentric",
+          "rings",
+          "center",
+          "luminous",
+          "resonance",
+          "ripple"
+        ]
+      },
+      {
+        "model": "deepseek-chat",
+        "keywords": [
+          "concentric",
+          "rings",
+          "pulse",
+          "bloom",
+          "center",
+          "luminous"
+        ]
+      }
+    ]
+  },
+  "comparison": {
+    "pattern_overlap": {
+      "shared": [
+        "concentric",
+        "resonance",
+        "luminous",
+        "glow",
+        "rings",
+        "center",
+        "ripple",
+        "bloom",
+        "pulse"
+      ],
+      "session1_unique": [
+        "well"
+      ],
+      "session2_unique": [],
+      "similarity_score": 0.9
+    },
+    "convergence_delta": 0.0,
+    "model_count_match": true
+  }
+}
