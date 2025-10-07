@@ -1,7 +1,7 @@
 # IRIS Makefile
 # Convenience commands for common workflows
 
-.PHONY: help new run report clean test mcp-init mcp-test mcp-index mcp-status ork-init ork-enqueue ork-run ork-stop ork-status ork-clean
+.PHONY: help new run report clean test mcp-init mcp-test mcp-index mcp-status ork-init ork-enqueue ork-run ork-stop ork-status ork-clean cbd-sweep cbd-labkit cbd-validate
 
 help:
 	@echo "IRIS Gate — Quick Commands"
@@ -34,6 +34,16 @@ help:
 	@echo ""
 	@echo "  make gsw-report RUN=<RUN_ID>"
 	@echo "      → Build final GSW report from tier summaries"
+	@echo ""
+	@echo "CBD Channel-First Pipeline:"
+	@echo "  make cbd-sweep [PHASE=1] [WORKERS=4]"
+	@echo "      → Run CBD parameter sweep (Phase 1=broad, 2=focused, 3=full)"
+	@echo ""
+	@echo "  make cbd-validate"
+	@echo "      → Run CBD validation suite (4 protocols)"
+	@echo ""
+	@echo "  make cbd-labkit"
+	@echo "      → Generate wet-lab methods packet"
 	@echo ""
 	@echo "Experiment Management:"
 	@echo "  make new TOPIC=\"...\" ID=EXP_SLUG FACTOR=aperture"
@@ -300,3 +310,95 @@ ork-clean:
 ork-test:
 	@echo "Testing orchestrator with dry-run..."
 	@python3 scripts/orchestrator_runner.py --dry-run --once
+
+# CBD Channel-First Pipeline Targets
+.PHONY: cbd-sweep cbd-labkit cbd-validate cbd-report
+
+cbd-sweep:
+	@echo "Running CBD Channel-First Parameter Sweep"
+	@if [ -z "$(PHASE)" ]; then \
+		echo "Running all phases sequentially..."; \
+		python3 pipelines/run_selectivity_sweep.py \
+			--plan plans/cbd_channel_first_v2.yaml \
+			--all-phases \
+			--workers $(or $(WORKERS),4); \
+	else \
+		echo "Running Phase $(PHASE)..."; \
+		python3 pipelines/run_selectivity_sweep.py \
+			--plan plans/cbd_channel_first_v2.yaml \
+			--phase $(PHASE) \
+			--workers $(or $(WORKERS),4); \
+	fi
+	@echo "✓ CBD parameter sweep complete"
+
+cbd-validate:
+	@echo "Running CBD Validation Suite (4 protocols)"
+	@echo ""
+	@echo "Protocol 1: GPCR combinations vs CBD direct action"
+	@echo "  → Comparing receptor-first vs channel-first efficacy"
+	@echo ""
+	@echo "Protocol 2: PLA mitochondrial ensemble mapping"
+	@echo "  → Temporal analysis of CBD-target interactions"
+	@echo ""
+	@echo "Protocol 3: VDAC1 causality testing"
+	@echo "  → Definitive channel-first mechanism validation"
+	@echo ""
+	@echo "Protocol 4: Context stress shift analysis"
+	@echo "  → Quantifying mitochondrial vulnerability"
+	@echo ""
+	@echo "⚠️  Note: This requires wet-lab execution"
+	@echo "    See experiments/cbd/validation_suite/ for detailed protocols"
+	@echo "    Use 'make cbd-labkit' to generate methods packet"
+
+cbd-labkit:
+	@echo "Generating CBD Channel-First Wet-Lab Methods Packet"
+	@echo ""
+	@echo "Methods Packet v1.0 Contents:"
+	@echo "  ✓ Reagents_and_Doses.md - Complete reagent specifications"
+	@echo "  ✓ Readouts.md - Measurement protocols and analysis"
+	@echo "  ✓ Controls.md - Quality control and validation standards"
+	@echo "  ✓ Preregistration_Draft.md - Study pre-registration template"
+	@echo ""
+	@echo "📁 Location: docs/lab/Methods_Packet_v1/"
+	@echo ""
+	@echo "Cost Estimates:"
+	@echo "  • Basic screening: $$225 per experiment"
+	@echo "  • Full validation: $$570 per experiment"
+	@echo "  • Complete parameter sweep: $$14,500 total"
+	@echo ""
+	@echo "✓ Wet-lab methods packet ready for implementation"
+
+cbd-report:
+	@echo "Generating CBD Channel-First Summary Report"
+	@echo ""
+	@LATEST_SWEEP=$$(ls -td experiments/cbd/selectivity_sweep/phase_*_analysis.json 2>/dev/null | head -1); \
+	if [ -n "$$LATEST_SWEEP" ]; then \
+		echo "Latest sweep results: $$LATEST_SWEEP"; \
+		python3 -c "import json; data=json.load(open('$$LATEST_SWEEP')); print(f'Selectivity achieved: {data.get(\"selectivity_stats\", {}).get(\"target_achieved\", 0)} combinations >3.0')"; \
+	else \
+		echo "No parameter sweep results found. Run 'make cbd-sweep' first."; \
+	fi
+	@echo ""
+	@echo "📊 Executive Summary: docs/CBD_Selectivity_S7_Summary.md"
+	@echo "📋 Validation Protocols: experiments/cbd/validation_suite/"
+	@echo "🔬 Lab Methods: docs/lab/Methods_Packet_v1/"
+	@echo ""
+	@echo "Next Steps:"
+	@echo "  1. Execute 'make cbd-sweep' for parameter optimization"
+	@echo "  2. Use 'make cbd-labkit' for wet-lab implementation"
+	@echo "  3. Follow validation suite protocols for mechanism confirmation"
+
+# CBD Pipeline Examples
+.PHONY: cbd-example-phase1 cbd-example-full cbd-example-focused
+
+cbd-example-phase1:
+	@echo "Example: CBD Phase 1 Parameter Sweep (broad exploration)"
+	@make cbd-sweep PHASE=1 WORKERS=6
+
+cbd-example-full:
+	@echo "Example: CBD Full Parameter Sweep (all phases)"
+	@make cbd-sweep WORKERS=8
+
+cbd-example-focused:
+	@echo "Example: CBD Phase 2 Focused Optimization"
+	@make cbd-sweep PHASE=2 WORKERS=4

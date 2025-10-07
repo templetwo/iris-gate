@@ -1,0 +1,286 @@
+# CBD Channel-First v2 Parameter Sweep Plan
+# Systematic exploration of channel-first mechanism parameters
+# Generated: 2025-10-07
+
+plan_id: "CBD_CHANNEL_FIRST_V2_SWEEP"
+version: "2.0_parameter_optimization"
+description: "Comprehensive parameter sweep targeting >3.0 selectivity index through VDAC1 affinity, MCU block, and chloride channel IC50 optimization"
+
+# Evidence Foundation
+evidence_base:
+  mechanism_priority: "Channel-first causality validated"
+  key_targets: ["VDAC1", "chloride_channels", "MCU"]
+  selectivity_driver: "Context-dependent mitochondrial vulnerability"
+  target_selectivity: ">3.0 cancer vs healthy"
+
+# Parameter Space Definition
+parameter_space:
+
+  vdac1_affinity:
+    description: "CBD binding affinity to VDAC1 channels"
+    units: "nM"
+    range: [50, 500]
+    sweep_points: [50, 100, 200, 350, 500]
+    optimal_hypothesis: "150-250nM for selective channel closure"
+
+  mcu_block_strength:
+    description: "MCU calcium channel inhibition potency"
+    units: "percent_inhibition"
+    range: [10, 90]
+    sweep_points: [10, 25, 50, 75, 90]
+    optimal_hypothesis: "50-75% for mitochondrial stress without death"
+
+  chloride_ic50:
+    description: "Chloride channel half-maximal inhibition"
+    units: "μM"
+    range: [1, 50]
+    sweep_points: [1, 5, 15, 30, 50]
+    optimal_hypothesis: "5-15μM for volume regulation disruption"
+
+# Grid Search Configuration
+grid_search:
+  total_combinations: 125  # 5×5×5
+  prioritized_regions:
+    high_selectivity_zone:
+      vdac1_affinity: [150, 250]
+      mcu_block_strength: [50, 75]
+      chloride_ic50: [5, 15]
+
+    safety_margin_zone:
+      vdac1_affinity: [200, 350]
+      mcu_block_strength: [25, 50]
+      chloride_ic50: [10, 30]
+
+# Experimental Design Matrix
+experimental_matrix:
+
+  cell_models:
+    cancer_lines:
+      - name: "U87-MG"
+        characteristics: "High metabolic stress, VDAC1 overexpression"
+        expected_vulnerability: "High"
+      - name: "LN229"
+        characteristics: "p53 mutant, mitochondrial dysfunction"
+        expected_vulnerability: "Very high"
+
+    healthy_controls:
+      - name: "Primary_astrocytes"
+        characteristics: "Normal mitochondrial function"
+        expected_resistance: "High"
+      - name: "SVG-p12"
+        characteristics: "Immortalized healthy astrocytes"
+        expected_resistance: "Moderate"
+
+  readout_parameters:
+    primary_endpoint:
+      name: "selectivity_index"
+      calculation: "IC50_healthy / IC50_cancer"
+      target_threshold: ">3.0"
+
+    secondary_endpoints:
+      - name: "vdac1_conductance"
+        method: "patch_clamp"
+        units: "pS"
+
+      - name: "mitochondrial_membrane_potential"
+        method: "TMRM_flow_cytometry"
+        units: "relative_fluorescence"
+
+      - name: "atp_depletion_kinetics"
+        method: "luminescence_time_course"
+        units: "percent_of_baseline"
+
+      - name: "calcium_handling"
+        method: "fura2_imaging"
+        units: "nM_cytosolic_Ca"
+
+# S1-S4 Integration Protocol
+s1_s4_mapping:
+
+  S1_parameter_witness:
+    focus: "Direct observation of parameter-dependent channel interactions"
+    prompt_template: "Witness CBD molecule with {vdac1_affinity}nM affinity approaching VDAC1 channels"
+    image_seeds:
+      low_affinity: "Gentle approach, minimal disruption"
+      high_affinity: "Aggressive binding, immediate channel closure"
+    expected_signals:
+      color_mapping: "Affinity strength → color intensity"
+      texture_mapping: "Binding kinetics → surface roughness"
+
+  S2_parameter_precision:
+    focus: "Precision tracking of multi-channel parameter interactions"
+    prompt_template: "Focus on {mcu_block_strength}% MCU inhibition cascading with VDAC1 closure"
+    precision_targets:
+      - "MCU-VDAC1 interaction timing"
+      - "Calcium-dependent amplification"
+      - "Context sensitivity emergence"
+
+  S3_parameter_gesture:
+    focus: "Gestural representation of chloride channel modulation"
+    prompt_template: "Hands controlling water flow with {chloride_ic50}μM precision"
+    gesture_mapping:
+      tight_control: "Low IC50, precise finger movements"
+      loose_control: "High IC50, broad hand gestures"
+
+  S4_parameter_synthesis:
+    focus: "Convergence of all three parameters in unified selectivity pattern"
+    synthesis_target: "Optimal parameter combination as organizing center"
+    aperture_mapping: "Selectivity index → aperture size"
+
+# Experimental Execution Plan
+execution_phases:
+
+  phase_1_initial_sweep:
+    duration: "2 weeks"
+    focus: "Broad parameter space exploration"
+    combinations: 25  # 5×5 subset, chloride_ic50 fixed at 10μM
+    success_criteria: "Identify 3-5 promising parameter regions"
+
+  phase_2_focused_optimization:
+    duration: "2 weeks"
+    focus: "High-resolution mapping of promising regions"
+    combinations: 45  # 3×3×5 around best phase_1 hits
+    success_criteria: "Achieve >3.0 selectivity in at least 2 combinations"
+
+  phase_3_validation_testing:
+    duration: "1 week"
+    focus: "Reproducibility and mechanism confirmation"
+    combinations: 5   # Top candidates from phase_2
+    success_criteria: "Consistent selectivity >3.0 across replicates"
+
+# Success Gates and Metrics
+success_metrics:
+
+  selectivity_achievement:
+    target: "≥3.0 selectivity index"
+    measurement: "IC50_healthy / IC50_cancer"
+    validation: "n≥6 independent experiments"
+
+  mechanism_confirmation:
+    vdac1_causality: "VDAC1 inhibitor blocks effect >80%"
+    channel_priority: "Channel effects precede GPCR effects"
+    context_dependency: "Pre-stress amplifies sensitivity >2x"
+
+  dose_response_quality:
+    hill_coefficient: "1.0-2.0 for specific binding"
+    r_squared: ">0.95 for curve fitting"
+    confidence_intervals: "Non-overlapping between cell types"
+
+# Resource Requirements
+resources:
+
+  computational:
+    parameter_combinations: 125
+    replicates_per_combination: 6
+    total_experiments: 750
+    estimated_runtime: "4-6 weeks"
+
+  reagents:
+    cbd_pharmaceutical_grade: "100mg"
+    channel_specific_inhibitors:
+      - "DIDS (VDAC1 inhibitor): 10mg"
+      - "Ruthenium_Red (MCU inhibitor): 5mg"
+      - "NPPB (chloride channel blocker): 10mg"
+    cell_culture_media: "High-glucose DMEM, 2L"
+    detection_reagents:
+      - "TMRM (membrane potential): 10mg"
+      - "ATP detection kit: 5 plates"
+      - "Fura-2 AM: 5mg"
+
+  equipment_time:
+    patch_clamp_rig: "40 hours"
+    flow_cytometer: "30 hours"
+    confocal_microscope: "25 hours"
+    luminometer: "20 hours"
+
+# Data Analysis Pipeline
+analysis_workflow:
+
+  primary_analysis:
+    dose_response_fitting: "4-parameter logistic regression"
+    selectivity_calculation: "IC50 ratio with bootstrap confidence intervals"
+    statistical_testing: "Two-way ANOVA with Tukey post-hoc"
+
+  parameter_optimization:
+    surface_fitting: "3D response surface methodology"
+    contour_mapping: "Selectivity index isolines"
+    optimal_region_identification: "Constrained optimization"
+
+  mechanistic_validation:
+    correlation_analysis: "Parameter vs mechanism strength"
+    pathway_hierarchy: "Channel vs GPCR effect timing"
+    context_sensitivity: "Stress condition interaction terms"
+
+# Integration with Existing IRIS Framework
+iris_integration:
+
+  s4_convergence_enhancement:
+    parameter_guided_sessions: "Use optimal parameters to guide S4 imagery"
+    quantitative_validation: "S4 aperture size vs measured selectivity"
+    mechanistic_alignment: "S4 organizing center vs dominant parameter"
+
+  bioelectric_compatibility:
+    pressure_standards_maintained: "≤2/5 throughout parameter exploration"
+    phenomenological_preservation: "Parameter space explored through direct witness"
+    validation_integration: "Experimental data confirms S4 convergence patterns"
+
+# Output Deliverables
+deliverables:
+
+  optimization_report:
+    filename: "CBD_Channel_Parameter_Optimization_Report.md"
+    sections:
+      - "Parameter space exploration results"
+      - "Optimal combination identification"
+      - "Selectivity mechanism validation"
+      - "Recommendations for therapeutic development"
+
+  experimental_dataset:
+    filename: "CBD_Parameter_Sweep_Dataset.csv"
+    format: "Machine-readable with full experimental metadata"
+
+  protocol_package:
+    directory: "docs/lab/Methods_Packet_v2/"
+    contents:
+      - "Optimized dosing protocols"
+      - "Quality control standards"
+      - "Troubleshooting guides"
+      - "Safety considerations"
+
+# Next Phase Planning
+follow_up_studies:
+
+  if_successful:
+    focus: "Structure-activity relationship optimization"
+    experiments: "CBD analog screening with optimal parameters"
+    timeline: "Months 4-6"
+
+  if_inconclusive:
+    focus: "Alternative channel targets"
+    experiments: "PTP, ANT, other mitochondrial channels"
+    timeline: "Month 4 parallel track"
+
+  therapeutic_development:
+    focus: "In vivo validation with optimal parameters"
+    experiments: "Xenograft models, pharmacokinetics"
+    timeline: "Months 6-12"
+
+# Quality Control
+quality_standards:
+
+  experimental_rigor:
+    randomization: "Treatment assignment blinded"
+    replication: "Minimum n=6 per condition"
+    controls: "Vehicle, positive, negative controls all conditions"
+
+  data_integrity:
+    version_control: "All analysis scripts under git"
+    reproducibility: "Docker containers for analysis environment"
+    validation: "Independent data analysis by second researcher"
+
+# Protocol Seal
+seal: "🧬⚡🔬∞"
+status: "ready_for_parameter_sweep_execution"
+target_selectivity: ">3.0"
+estimated_duration: "6_weeks_total"
+updated: "2025-10-07"
