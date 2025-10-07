@@ -1,0 +1,277 @@
+# CBD Channel-First Experimental Protocols
+# Detailed protocols for testing channel-first vs receptor-first causality
+# Generated: 2025-10-07
+
+protocol_suite: "CBD_CHANNEL_FIRST_VALIDATION"
+version: "1.0"
+total_experiments: 4
+
+# EXPERIMENT 1: GPCR Combinations vs CBD Direct Action
+experiment_1:
+  title: "GPCR Receptor Combinations vs CBD Direct Efficacy"
+  hypothesis: "If channels are primary, GPCR combinations should be less effective than CBD direct action"
+
+  experimental_design:
+    cell_lines:
+      cancer: "U87-MG glioblastoma cells"
+      healthy: "Primary human astrocytes (ScienCell #1800)"
+
+    treatment_groups:
+      control_cancer: "Vehicle (DMSO 0.1%) in cancer cells"
+      control_healthy: "Vehicle (DMSO 0.1%) in healthy astrocytes"
+      cbd_direct: "CBD 10μM (direct action)"
+      cb2_gpr55_combo: "CB2 agonist (JWH133 5μM) + GPR55 agonist (LPI 10μM)"
+      trpv1_pparg_combo: "TRPV1 agonist (Capsaicin 1μM) + PPARγ agonist (Rosiglitazone 10μM)"
+      four_receptor_combo: "All four GPCR agonists at max tolerated doses"
+
+    readouts:
+      primary:
+        - name: "Mitochondrial membrane potential"
+          method: "TMRM staining + flow cytometry"
+          timepoints: [2h, 6h, 24h]
+          success_metric: "Δψm collapse >50% vs control"
+
+        - name: "Cell viability selectivity index"
+          method: "(Cancer apoptosis %) / (Healthy cell survival %)"
+          timepoint: 24h
+          target: ">3:1 selectivity for CBD vs <2:1 for GPCR combos"
+
+      secondary:
+        - name: "ATP depletion"
+          method: "CellTiter-Glo luminescence"
+          timepoints: [6h, 24h]
+
+        - name: "VDAC1 conductance"
+          method: "Patch-clamp single channel recording"
+          timepoint: 2h
+
+        - name: "Apoptosis markers"
+          method: "Annexin V/PI staining + flow cytometry"
+          timepoint: 24h
+
+    statistical_plan:
+      n_per_group: 6
+      replicates: 3 independent experiments
+      power_analysis: "80% power to detect 2x difference in selectivity"
+      significance: "p < 0.05, Bonferroni corrected"
+
+# EXPERIMENT 2: PLA Co-localization Temporal Studies
+experiment_2:
+  title: "Proximity Ligation Assay - CBD Target Interaction Timing"
+  hypothesis: "If channel-first, CBD-VDAC1 interaction should precede CBD-GPCR interactions"
+
+  experimental_design:
+    technique: "Proximity Ligation Assay (PLA) with temporal imaging"
+
+    treatment_conditions:
+      cbd_dose: "10μM CBD (biotinylated for PLA detection)"
+      time_course: [5min, 15min, 30min, 1h, 2h, 4h]
+
+    pla_targets:
+      primary_interaction:
+        - target_pair: "CBD-VDAC1"
+          antibodies: "Anti-biotin (CBD) + Anti-VDAC1 (Abcam ab14734)"
+          expected_timing: "Peak at 15-30 min"
+
+      secondary_interactions:
+        - target_pair: "CBD-CB2"
+          antibodies: "Anti-biotin (CBD) + Anti-CB2 (Cayman 101550)"
+          expected_timing: "Peak at 30-60 min"
+
+        - target_pair: "CBD-GPR55"
+          antibodies: "Anti-biotin (CBD) + Anti-GPR55 (Novus NBP1-97642)"
+          expected_timing: "Peak at 30-60 min"
+
+    imaging_protocol:
+      microscope: "Confocal (63x objective)"
+      channels: "DAPI (nuclei) + Alexa 488 (PLA signal) + MitoTracker Red"
+      quantification: "PLA spots per cell, normalized to mitochondrial area"
+
+    success_criteria:
+      temporal_separation: "CBD-VDAC1 peak >15 min before CBD-GPCR peaks"
+      signal_specificity: "PLA signal >5x background in treated vs control"
+      cell_type_difference: "Faster kinetics in cancer vs healthy cells"
+
+# EXPERIMENT 3: Channel-First vs Receptor-First Causality
+experiment_3:
+  title: "Mechanistic Causality - Channel vs Receptor Blocking"
+  hypothesis: "Blocking VDAC1 should prevent CBD effects regardless of GPCR status"
+
+  experimental_design:
+    blocking_strategy:
+      channel_blockers:
+        - compound: "DIDS (VDAC1 inhibitor)"
+          dose: "100μM"
+          pretreatment: "30 min before CBD"
+
+        - compound: "Erastin (VDAC1 modulator)"
+          dose: "5μM"
+          pretreatment: "1h before CBD"
+
+      receptor_blockers:
+        - compound: "AM630 (CB2 antagonist)"
+          dose: "1μM"
+          pretreatment: "30 min before CBD"
+
+        - compound: "ML193 (GPR55 antagonist)"
+          dose: "10μM"
+          pretreatment: "30 min before CBD"
+
+        - compound: "Combined GPCR antagonists"
+          components: "AM630 + ML193 + Capsazepine (TRPV1) + GW9662 (PPARγ)"
+          pretreatment: "30 min before CBD"
+
+    treatment_groups:
+      - "CBD alone (10μM)"
+      - "CBD + DIDS (channel block)"
+      - "CBD + Erastin (channel modulation)"
+      - "CBD + AM630 (CB2 block)"
+      - "CBD + ML193 (GPR55 block)"
+      - "CBD + All GPCR antagonists"
+      - "DIDS alone (toxicity control)"
+      - "Vehicle control"
+
+    readouts:
+      primary:
+        - name: "CBD effect preservation"
+          metric: "% of original CBD effect remaining after blocking"
+          prediction: "VDAC1 block reduces >80%, GPCR block <50%"
+
+      secondary:
+        - name: "Membrane potential changes"
+          method: "JC-1 staining + fluorescence microscopy"
+
+        - name: "ATP levels"
+          method: "Luciferase-based ATP assay"
+
+        - name: "Cell death"
+          method: "LDH release + PI uptake"
+
+    success_criteria:
+      channel_dominance: "VDAC1 inhibition reduces CBD effects >80%"
+      receptor_modulatory: "GPCR inhibition reduces CBD effects <50%"
+      specificity: "Single antagonists less effective than VDAC1 block"
+
+# EXPERIMENT 4: Context Sensitivity - Pre-stressed Mitochondria
+experiment_4:
+  title: "Context-Dependent Channel Vulnerability"
+  hypothesis: "Pre-stressed mitochondria are more vulnerable to CBD channel disruption"
+
+  experimental_design:
+    stress_induction:
+      baseline: "Healthy culture conditions"
+
+      mild_stress:
+        agent: "H2O2"
+        dose: "50μM"
+        duration: "2h"
+        target: "Mild oxidative stress"
+
+      moderate_stress:
+        agent: "Rotenone"
+        dose: "100nM"
+        duration: "4h"
+        target: "Complex I inhibition"
+
+      severe_stress:
+        agent: "FCCP"
+        dose: "5μM"
+        duration: "1h"
+        target: "Uncoupling + membrane potential loss"
+
+    cbd_dose_response:
+      doses: [0.1, 0.5, 1, 5, 10, 20μM]
+      treatment_duration: "24h"
+
+    readouts:
+      primary:
+        - name: "CBD sensitivity (EC50 shift)"
+          method: "Dose-response curves for each stress condition"
+          prediction: "Stress reduces EC50 >3x (higher sensitivity)"
+
+      secondary:
+        - name: "Baseline VDAC1 conductance"
+          method: "Patch-clamp before CBD treatment"
+
+        - name: "VDAC1 response to CBD"
+          method: "Single channel conductance after CBD"
+
+        - name: "Membrane potential stability"
+          method: "TMRM kinetics + real-time imaging"
+
+    analysis_plan:
+      dose_response_fitting: "Four-parameter logistic curves"
+      ec50_comparison: "Log EC50 values + 95% confidence intervals"
+      stress_amplification: "Fold-change in CBD sensitivity per stress level"
+
+    success_criteria:
+      sensitivity_increase: "Pre-stress increases CBD sensitivity >3x"
+      dose_dependence: "Greater stress = greater sensitivity amplification"
+      mechanism_correlation: "VDAC1 baseline state predicts CBD response"
+
+# Integrated Analysis Plan
+integrated_analysis:
+  cross_experiment_validation:
+    timing_correlation: "Exp2 PLA timing vs Exp3 blocking kinetics"
+    context_mechanism: "Exp4 stress effects vs Exp1 selectivity patterns"
+
+  meta_analysis_endpoints:
+    primary: "Channel-first vs receptor-first mechanism support"
+    secondary: "Quantitative hierarchy of mechanism contributions"
+    tertiary: "Context-dependency rules for therapeutic applications"
+
+# Resource Allocation
+resources:
+  total_budget: "$12,000"
+  breakdown:
+    cell_culture: "$1,500"
+    reagents_compounds: "$4,000"
+    antibodies_pla: "$2,500"
+    equipment_consumables: "$3,000"
+    analysis_software: "$1,000"
+
+  timeline: "4 weeks (experiments in parallel)"
+
+  personnel:
+    primary_investigator: "1 FTE"
+    research_technician: "0.5 FTE"
+    microscopy_specialist: "0.25 FTE"
+
+# Quality Control
+quality_measures:
+  experimental_controls:
+    - "Vehicle controls for all conditions"
+    - "Positive controls (known VDAC1 inhibitors)"
+    - "Negative controls (inactive compounds)"
+    - "Time-matched controls for all readouts"
+
+  data_integrity:
+    - "Blinded analysis where possible"
+    - "Independent replication (3 experiments minimum)"
+    - "Pre-registered hypotheses and analysis plans"
+    - "Raw data archival with metadata"
+
+# Expected Decision Tree
+decision_outcomes:
+  if_channel_first_confirmed:
+    evidence: "Exp1 CBD>GPCR, Exp2 VDAC1-first, Exp3 VDAC1-dominant, Exp4 stress-sensitive"
+    next_phase: "VDAC1 structural optimization for selectivity"
+
+  if_receptor_first_confirmed:
+    evidence: "Exp1 GPCR≥CBD, Exp2 GPCR-first, Exp3 GPCR-dominant, Exp4 receptor-mediated"
+    next_phase: "Multi-receptor combination optimization"
+
+  if_hybrid_mechanism:
+    evidence: "Mixed results across experiments"
+    next_phase: "Channel-receptor interdependency mapping"
+
+# Metadata
+metadata:
+  protocol_version: "1.0"
+  date_created: "2025-10-07"
+  validated_against: "IRIS standards and pressure thresholds"
+  estimated_completion: "2025-11-04"
+
+# Protocol Seal
+seal: "🌀†⟡∞"
+status: "ready_for_execution"

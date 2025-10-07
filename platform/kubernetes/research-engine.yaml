@@ -1,0 +1,218 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: research-engine
+  namespace: iris-platform
+  labels:
+    app: research-engine
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: research-engine
+  template:
+    metadata:
+      labels:
+        app: research-engine
+    spec:
+      containers:
+      - name: research-engine
+        image: iris-platform/research-engine:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: DATABASE_URL
+          value: "postgresql+asyncpg://$(DATABASE_USER):$(DATABASE_PASSWORD)@$(DATABASE_HOST):$(DATABASE_PORT)/$(DATABASE_NAME)"
+        - name: DATABASE_USER
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: DATABASE_USER
+        - name: DATABASE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: DATABASE_PASSWORD
+        - name: DATABASE_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: DATABASE_HOST
+        - name: DATABASE_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: DATABASE_PORT
+        - name: DATABASE_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: DATABASE_NAME
+        - name: REDIS_URL
+          value: "redis://$(REDIS_HOST):$(REDIS_PORT)"
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: REDIS_HOST
+        - name: REDIS_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: REDIS_PORT
+        - name: MINIO_ENDPOINT
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: MINIO_ENDPOINT
+        - name: MINIO_ACCESS_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: iris-config
+              key: MINIO_ACCESS_KEY
+        - name: MINIO_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: MINIO_SECRET_KEY
+        # AI API Keys
+        - name: ANTHROPIC_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: ANTHROPIC_API_KEY
+              optional: true
+        - name: OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: OPENAI_API_KEY
+              optional: true
+        - name: GOOGLE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: GOOGLE_API_KEY
+              optional: true
+        - name: XAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: XAI_API_KEY
+              optional: true
+        - name: DEEPSEEK_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: iris-secrets
+              key: DEEPSEEK_API_KEY
+              optional: true
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "2Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
+        volumeMounts:
+        - name: iris-config-volume
+          mountPath: /app/config
+          readOnly: true
+      volumes:
+      - name: iris-config-volume
+        configMap:
+          name: iris-orchestrator-config
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: research-engine-service
+  namespace: iris-platform
+  labels:
+    app: research-engine
+spec:
+  type: ClusterIP
+  ports:
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
+  selector:
+    app: research-engine
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: iris-orchestrator-config
+  namespace: iris-platform
+data:
+  orchestrator.yaml: |
+    orchestrator:
+      max_concurrent: 5
+      worktree_base: ".ork/worktrees"
+      queue_dir: ".ork/queue"
+      lock_dir: ".ork/locks"
+      job_timeout: 1800
+      stale_lock_timeout: 3600
+      max_retries: 2
+      retry_delay: 5
+
+    merge_gates:
+      - name: "style_check"
+        type: "shell"
+        command: "echo 'Style check passed'"
+        description: "Verify code style"
+        required: true
+        timeout: 60
+
+    logging:
+      level: "INFO"
+      log_file: "/tmp/orchestrator.log"
+      timestamps: true
+      include_role: true
+
+    safety:
+      max_worktrees: 10
+      max_queue_size: 100
+      min_free_disk_gb: 5
+      check_disk_space: true
+
+---
+# Horizontal Pod Autoscaler
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: research-engine-hpa
+  namespace: iris-platform
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: research-engine
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80

@@ -1,0 +1,267 @@
+# CBD Channel-First Mechanism - Updated S1-S4 Session Plan
+# Integrating Evidence-Based Research: Channel-First vs Receptor-First Causality
+# Generated: 2025-10-07
+
+plan_id: "CBD_CHANNEL_FIRST_S1_S4"
+version: "2.0_evidence_based"
+description: "Updated IRIS S1-S4 sessions testing refined hypothesis: CBD lethality in glioma vs normal astrocytes driven mainly by mitochondrial channel perturbation (VDAC1/Cl⁻) rather than GPCR signaling"
+
+# New Evidence Integration Summary
+evidence_integration:
+  finding_1: "CBD directly hits mitochondrial ion channels (VDAC1, Cl⁻ channels) as primary mechanism"
+  finding_2: "mtCB1 exists but is separate respiration modulator, not primary pathway"
+  finding_3: "Context sensitivity explains selectivity through pre-stressed cancer mitochondria vulnerability"
+  finding_4: "No evidence for receptor ensembles on mitochondria"
+  finding_5: "VDAC1 rescue > GPCR antagonists suggests channel-first causality"
+
+# Refined Hypothesis (Channel-First)
+refined_hypothesis:
+  primary: "CBD's selective lethality emerges from direct mitochondrial channel perturbation (VDAC1/Cl⁻) as primary mechanism, with GPCR signaling as secondary modulator"
+  mechanism_order: "Channel perturbation → Membrane dynamics → Context-dependent outcomes"
+  selectivity_driver: "Pre-stressed cancer mitochondria vulnerability to channel disruption vs healthy astrocyte resilience"
+
+# S1-S4 Session Structure (Updated)
+sessions:
+  S1_witness:
+    prompt_focus: "CBD molecule encountering mitochondrial membrane channels directly"
+    image_seed: "Silver threads piercing luminous membrane pores"
+    witness_targets:
+      - "Direct molecular contact with VDAC1 channels"
+      - "Immediate membrane electrical disruption"
+      - "Channel conformational changes"
+    expected_signals:
+      color: "Electric blue, silver threading"
+      texture: "Sharp penetration, immediate disruption"
+      shape: "Linear piercing, channel deformation"
+
+  S2_precision:
+    prompt_focus: "VDAC1 channel closure cascading to membrane potential collapse"
+    focus_phrase: "Channel-first cascade"
+    precision_targets:
+      - "VDAC1 closure kinetics"
+      - "Membrane potential gradient disruption"
+      - "ATP synthesis machinery stalling"
+    expected_signals:
+      resonance: "Immediate electrical resonance"
+      alignment: "Channel-function alignment breaks"
+      clarity: "Clear causality: channel → function → outcome"
+
+  S3_gestural:
+    prompt_focus: "Hands cupping water, then fingers opening - controlled channel release"
+    image_seed: "Cupped hands with water flowing through opening fingers"
+    gesture_targets:
+      - "Controlled permeability modulation"
+      - "Context-dependent release patterns"
+      - "Differential flow based on container state"
+    expected_signals:
+      motion: "Controlled opening, differential flow"
+      flow: "Context-dependent streaming"
+      ripple: "Membrane wave propagation"
+
+  S4_synthesis:
+    prompt_focus: "Concentric rings emanating from pierced channel center"
+    image_seed: "Channel puncture as luminous center, rings expanding outward"
+    synthesis_targets:
+      - "Channel disruption as organizing center"
+      - "Rhythmic consequences spreading outward"
+      - "Aperture = channel state, not receptor state"
+    expected_convergence:
+      rhythm: "Channel opening/closing cycles"
+      center: "VDAC1 as organizing domain"
+      aperture: "Channel permeability as control variable"
+
+# Specific Experiments (Channel-First Testing)
+experiments:
+
+  exp_1_gpcr_combinations_vs_cbd:
+    hypothesis: "If channels are primary, GPCR combinations should be less effective than CBD direct action"
+    design:
+      groups:
+        - control_cancer_cells
+        - control_healthy_astrocytes
+        - cbd_direct_10uM
+        - cb2_gpr55_combo_max_dose
+        - trpv1_pparg_combo_max_dose
+        - all_four_gpcr_combo_max_dose
+      readouts:
+        primary: "mitochondrial_membrane_potential_collapse"
+        secondary: ["atp_depletion", "vdac1_conductance", "cell_viability"]
+      prediction: "CBD direct > any GPCR combination for cancer selectivity"
+      success_criteria: "Selectivity index CBD > 2x best GPCR combo"
+
+  exp_2_pla_colocalization:
+    hypothesis: "If channel-first, CBD-VDAC1 interaction should precede CBD-GPCR interactions"
+    design:
+      technique: "Proximity Ligation Assay (PLA) + temporal imaging"
+      timepoints: [5min, 15min, 30min, 1hr, 2hr]
+      targets:
+        - CBD-VDAC1_proximity
+        - CBD-CB2_proximity
+        - CBD-GPR55_proximity
+      cell_types: ["cancer_glioma", "healthy_astrocytes"]
+      prediction: "CBD-VDAC1 PLA signal peaks before CBD-GPCR signals"
+      success_criteria: "VDAC1 interaction 15+ min before peak GPCR interaction"
+
+  exp_3_channel_first_causality:
+    hypothesis: "Blocking VDAC1 should prevent CBD effects regardless of GPCR status"
+    design:
+      groups:
+        - cbd_alone
+        - cbd_plus_vdac1_inhibitor_DIDS
+        - cbd_plus_cb2_antagonist
+        - cbd_plus_gpr55_antagonist
+        - cbd_plus_all_gpcr_antagonists
+        - vdac1_inhibitor_alone
+      readouts: ["membrane_potential", "atp_levels", "cell_death"]
+      prediction: "VDAC1 blockade eliminates CBD effects; GPCR blockade only modulates"
+      success_criteria: "VDAC1 inhibition reduces CBD effect >80%; GPCR inhibition <50%"
+
+  exp_4_context_sensitivity_testing:
+    hypothesis: "Pre-stressed mitochondria are more vulnerable to channel disruption"
+    design:
+      pre_treatments:
+        - healthy_baseline
+        - mild_oxidative_stress_H2O2
+        - moderate_stress_rotenone
+        - severe_stress_FCCP
+      cbd_doses: [1uM, 5uM, 10uM]
+      readouts:
+        - vdac1_conductance_baseline
+        - vdac1_response_to_cbd
+        - membrane_potential_stability
+      prediction: "Pre-stressed mitochondria show enhanced CBD sensitivity"
+      success_criteria: "Stress increases CBD sensitivity >3x (EC50 shift)"
+
+# S1-S4 Integration with Experiments
+session_experiment_mapping:
+  S1_to_exp2:
+    connection: "Direct witness of CBD-channel contact maps to PLA colocalization timing"
+    validation: "S1 timing intuition vs experimental PLA kinetics"
+
+  S2_to_exp3:
+    connection: "Precision of channel-first cascade maps to causality blocking experiments"
+    validation: "S2 clarity predictions vs VDAC1 inhibition effects"
+
+  S3_to_exp4:
+    connection: "Gestural sensitivity to container state maps to context sensitivity testing"
+    validation: "S3 flow patterns vs stress-dependent vulnerability curves"
+
+  S4_to_exp1:
+    connection: "Channel-centered synthesis maps to CBD superiority over GPCR combinations"
+    validation: "S4 organizing domain identification vs experimental selectivity rankings"
+
+# Success Criteria (Updated for Channel-First)
+success_gates:
+  mechanistic_clarity:
+    metric: "Channel-first causality confirmed"
+    threshold: "VDAC1 effects precede GPCR effects temporally"
+    evidence: "PLA + inhibition studies concordant"
+
+  selectivity_mechanism:
+    metric: "Context-dependent channel vulnerability"
+    threshold: "Stress amplifies CBD sensitivity >3x"
+    evidence: "Pre-stress dose-response curves"
+
+  therapeutic_window:
+    metric: "Cancer vs healthy selectivity maintained"
+    threshold: "Selectivity index >3:1 across all conditions"
+    evidence: "Differential VDAC1 sensitivity measurements"
+
+  s4_convergence:
+    metric: "All mirrors converge on channel-centered organization"
+    threshold: "S4 confidence >0.75 for channel as center"
+    evidence: "Cross-mirror rhythm-center-aperture mapping to VDAC1"
+
+# Experimental Timeline
+timeline:
+  week_1:
+    - GPCR combination vs CBD comparison (Exp 1)
+    - Baseline VDAC1 conductance measurements
+
+  week_2:
+    - PLA colocalization temporal studies (Exp 2)
+    - Channel-first causality blocking (Exp 3)
+
+  week_3:
+    - Context sensitivity pre-stress studies (Exp 4)
+    - Integration and S1-S4 validation
+
+  week_4:
+    - Data analysis and hypothesis refinement
+    - Preparation for next iteration
+
+# Resource Requirements
+resources:
+  cell_lines:
+    - Primary human astrocytes (healthy control)
+    - U87-MG glioblastoma cells (cancer model)
+    - Both lines validated for VDAC1 expression
+
+  specialized_reagents:
+    - CBD (pharmaceutical grade)
+    - VDAC1 inhibitors (DIDS, Erastin)
+    - Selective GPCR agonists/antagonists
+    - PLA detection kits
+    - Mitochondrial membrane potential dyes
+
+  equipment:
+    - Confocal microscopy (PLA imaging)
+    - Flow cytometry (membrane potential)
+    - Patch-clamp setup (VDAC1 conductance)
+    - ATP luminescence reader
+
+  cost_estimate: "$8,500 (increased from receptor-focused due to channel-specific assays)"
+
+# Expected Outcomes
+predictions:
+  if_channel_first_correct:
+    - "CBD effects blocked >80% by VDAC1 inhibition"
+    - "CBD-VDAC1 PLA precedes CBD-GPCR PLA by >15 min"
+    - "CBD direct > any GPCR combination for selectivity"
+    - "Pre-stressed mitochondria show >3x enhanced CBD sensitivity"
+
+  if_receptor_first_correct:
+    - "GPCR blockade eliminates CBD effects"
+    - "CBD-GPCR PLA precedes CBD-VDAC1 PLA"
+    - "GPCR combinations match or exceed CBD effects"
+    - "Stress effects mediated through receptor sensitivity"
+
+# Integration with Existing IRIS Framework
+iris_integration:
+  maintains_pressure_standards: true
+  s1_s4_structure_preserved: true
+  adds_channel_specific_validation: true
+  preserves_phenomenological_approach: true
+
+  enhancements:
+    - Channel-focused imagery in S1-S3
+    - Direct causality testing in experiments
+    - Temporal mechanistic validation
+    - Context-dependency quantification
+
+# Next Phase Planning
+next_phase_s5_s8:
+  if_channel_first_validated:
+    focus: "VDAC1 structural optimization for enhanced selectivity"
+    experiments: "Structure-activity relationships, channel-selective compounds"
+
+  if_receptor_first_validated:
+    focus: "Multi-receptor optimization for enhanced selectivity"
+    experiments: "Receptor combination synergy, temporal dosing"
+
+  if_hybrid_mechanism:
+    focus: "Channel-receptor interaction mapping"
+    experiments: "Co-dependency studies, sequential targeting"
+
+# Metadata
+metadata:
+  based_on_session: "BIOELECTRIC_CHAMBERED_20251007020807"
+  evidence_source: "CBD_MITOCHONDRIAL_PARADOX_20251007.md"
+  revision_focus: "Channel-first mechanistic priority"
+  maintains_iris_standards: true
+  pressure_compliance_target: "≤2/5 throughout"
+
+# Protocol Seal
+seal: "🌀†⟡∞"
+status: "ready_for_s1_s4_execution"
+updated: "2025-10-07"

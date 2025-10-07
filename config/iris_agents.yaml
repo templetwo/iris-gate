@@ -1,0 +1,762 @@
+# IRIS Methodology Agent Specifications for Claude Code Integration
+#
+# This configuration defines specialized agents for integrating IRIS methodology
+# into Claude Code's global agent system. Each agent has specific capabilities,
+# trigger conditions, tool requirements, and integration points.
+#
+# Architecture:
+#   - S1→S8 pipeline coordination with multi-mirror execution
+#   - Cross-mirror consensus analysis and validation
+#   - Monte Carlo simulation for prediction uncertainty
+#   - Protocol translation for wet-lab handoff
+#   - Pressure monitoring and validation gates
+#
+# Integration Points:
+#   - Extends existing role-based execution model
+#   - Uses filesystem-based job queues with priority routing
+#   - Leverages git worktree isolation for concurrent execution
+#   - Integrates with orchestrator's merge gate validation
+
+iris_agents:
+
+  # ============================================================================
+  # CONVERGENCE VALIDATOR AGENT
+  # Multi-mirror agreement analysis and consensus validation
+  # ============================================================================
+  convergence-validator:
+    description: "Analyzes cross-mirror agreement and validates convergence in S1-S4 states"
+
+    capabilities:
+      - multi_mirror_consensus_analysis
+      - statistical_convergence_validation
+      - outlier_detection_and_flagging
+      - agreement_scoring_and_thresholds
+      - contradiction_identification
+      - confidence_weighted_aggregation
+
+    trigger_conditions:
+      # Automatic triggers
+      - pattern: "vault/scrolls/**/*.md"
+        min_files: 3  # At least 3 mirrors completed
+        condition: "cross_mirror_analysis_needed"
+        priority: 15
+
+      # Manual triggers
+      - command: "/validate-convergence"
+        args: ["chamber_id", "vault_path", "threshold"]
+        priority: 10
+
+      # Pipeline triggers
+      - stage: "post_chamber_completion"
+        condition: "all_mirrors_completed"
+        priority: 12
+
+    tool_requirements:
+      analysis_tools:
+        - numpy
+        - pandas
+        - scipy.stats
+        - matplotlib
+        - seaborn
+
+      file_access:
+        read_patterns:
+          - "vault/scrolls/**/*.md"
+          - "vault/meta/**/*.json"
+          - "config/convergence_thresholds.yaml"
+        write_patterns:
+          - "analysis/convergence/**/*.json"
+          - "analysis/convergence/**/*.md"
+          - "analysis/convergence/**/*.png"
+
+      iris_modules:
+        - "sandbox.engines.consensus.mirror_vote"
+        - "scripts.convergence_metrics"
+        - "utils.timezone"
+
+    configuration:
+      convergence_thresholds:
+        agreement_score_min: 0.70
+        std_deviation_max: 0.30
+        outlier_sigma_threshold: 2.0
+        contradiction_threshold: 0.25
+
+      output_formats:
+        - consensus_report_markdown
+        - statistical_summary_json
+        - visualization_plots
+        - outlier_flags_json
+
+      pressure_monitoring:
+        max_pressure: 2.0
+        pressure_check_frequency: 3  # Every 3 operations
+        auto_pause_on_exceed: true
+
+    integration_points:
+      orchestrator_role: "convergence-validator"
+      queue_priority: 15
+      depends_on: ["session-orchestrator"]
+      triggers: ["s4-extractor", "cross-mirror-analyzer"]
+
+      claude_code_hooks:
+        - "post_multi_file_analysis"
+        - "pre_consensus_validation"
+        - "on_convergence_failure"
+
+    example_usage: |
+      # Automatic trigger after S2 completion
+      /validate-convergence S2 ./vault 0.75
+
+      # Manual analysis of specific session
+      python scripts/convergence_validator.py --session IRIS_20251007_143022 --chamber S3
+
+      # Integration with orchestrator
+      echo '{"role": "convergence-validator", "chamber": "S4", "vault_path": "./vault"}' | \
+        python scripts/job_queue.py enqueue --priority 15
+
+  # ============================================================================
+  # S4 EXTRACTOR AGENT
+  # Prior extraction from converged S4 states for simulation input
+  # ============================================================================
+  s4-extractor:
+    description: "Extracts bioelectric priors from converged S4 states for Monte Carlo simulation"
+
+    capabilities:
+      - s4_state_parsing_and_validation
+      - bioelectric_parameter_extraction
+      - prior_distribution_modeling
+      - mechanism_mapping_application
+      - confidence_weighting_by_mirror
+      - simulation_input_generation
+
+    trigger_conditions:
+      # Convergence-based trigger
+      - prerequisite: "convergence-validator"
+        condition: "s4_convergence_validated"
+        min_agreement_score: 0.70
+        priority: 20
+
+      # Direct trigger
+      - command: "/extract-s4-priors"
+        args: ["vault_path", "output_format"]
+        priority: 15
+
+      # Simulation pipeline trigger
+      - stage: "pre_simulation"
+        condition: "s4_states_available"
+        priority: 18
+
+    tool_requirements:
+      extraction_tools:
+        - pyyaml
+        - jsonschema
+        - numpy
+        - scipy.stats
+
+      file_access:
+        read_patterns:
+          - "vault/scrolls/**/*S4*.md"
+          - "vault/meta/**/*S4*.json"
+          - "analysis/convergence/s4_consensus.json"
+          - "sandbox/engines/mechanisms/s4_to_bioelectric.yaml"
+        write_patterns:
+          - "sandbox/states/s4_state.*.json"
+          - "sandbox/priors/extracted_*.yaml"
+          - "analysis/extraction/**/*.json"
+
+      iris_modules:
+        - "sandbox.cli.extract_s4_states"
+        - "sandbox.engines.mechanisms"
+        - "scripts.convergence_metrics"
+
+    configuration:
+      extraction_settings:
+        confidence_weight_mode: "mirror_based"
+        parameter_mapping_strict: true
+        validation_schema: "sandbox/specs/s4_state_schema.json"
+        default_noise_model: "gaussian_conservative"
+
+      bioelectric_parameters:
+        required_fields:
+          - center_stability
+          - center_size_mm
+          - center_depol_mv
+          - rhythm_freq_hz
+          - rhythm_coherence
+          - aperture_permeability
+
+        optional_fields:
+          - rhythm_velocity_um_s
+          - aperture_dilation_rate
+          - membrane_resistance
+
+      output_formats:
+        - simulation_ready_json
+        - parameter_summary_yaml
+        - confidence_weighted_priors
+        - extraction_report_md
+
+    integration_points:
+      orchestrator_role: "s4-extractor"
+      queue_priority: 20
+      depends_on: ["convergence-validator"]
+      triggers: ["simulation-runner"]
+
+      claude_code_hooks:
+        - "post_convergence_validation"
+        - "pre_simulation_setup"
+        - "on_extraction_complete"
+
+  # ============================================================================
+  # SIMULATION RUNNER AGENT
+  # Monte Carlo validation with uncertainty quantification
+  # ============================================================================
+  simulation-runner:
+    description: "Executes Monte Carlo simulations for prediction validation with uncertainty"
+
+    capabilities:
+      - monte_carlo_execution_coordination
+      - bioelectric_state_simulation
+      - perturbation_effect_modeling
+      - outcome_prediction_with_uncertainty
+      - statistical_validation_and_ci
+      - cross_condition_comparison
+
+    trigger_conditions:
+      # S4 extraction trigger
+      - prerequisite: "s4-extractor"
+        condition: "priors_extracted"
+        min_mirrors: 3
+        priority: 25
+
+      # Direct simulation request
+      - command: "/run-simulation"
+        args: ["plan_path", "n_runs", "output_dir"]
+        priority: 20
+
+      # Experimental design trigger
+      - stage: "hypothesis_testing"
+        condition: "experiment_plan_ready"
+        priority: 22
+
+    tool_requirements:
+      simulation_engines:
+        - numpy
+        - scipy
+        - matplotlib
+        - pandas
+        - yaml
+
+      file_access:
+        read_patterns:
+          - "sandbox/states/s4_state.*.json"
+          - "sandbox/specs/perturbation_kits.yaml"
+          - "sandbox/specs/readouts.yaml"
+          - "sandbox/engines/mechanisms/**/*.yaml"
+          - "sandbox/runs/plans/**/*.yaml"
+        write_patterns:
+          - "sandbox/runs/outputs/**/*.json"
+          - "sandbox/runs/outputs/**/*.png"
+          - "sandbox/runs/outputs/**/*.md"
+
+      iris_modules:
+        - "sandbox.engines.simulators.monte_carlo"
+        - "sandbox.engines.simulators.vm_ca_gj_sim"
+        - "sandbox.engines.simulators.outcome_model"
+        - "sandbox.engines.consensus.mirror_vote"
+
+    configuration:
+      simulation_settings:
+        default_n_runs: 500
+        max_n_runs: 5000
+        timeout_per_run_sec: 30
+        parallel_execution: true
+        max_workers: 4
+
+      validation_gates:
+        convergence_check: true
+        statistical_significance: 0.05
+        min_effect_size: 0.1
+        prediction_ci_width_max: 0.4
+
+      output_requirements:
+        timeseries_stats: true
+        outcome_distributions: true
+        uncertainty_quantification: true
+        consensus_predictions: true
+        visualization_plots: true
+
+    integration_points:
+      orchestrator_role: "simulation-runner"
+      queue_priority: 25
+      depends_on: ["s4-extractor"]
+      triggers: ["protocol-translator", "cross-mirror-analyzer"]
+
+      resource_limits:
+        max_memory_gb: 8
+        max_cpu_cores: 4
+        max_runtime_minutes: 60
+
+  # ============================================================================
+  # PROTOCOL TRANSLATOR AGENT
+  # Converts simulation predictions to wet-lab specifications
+  # ============================================================================
+  protocol-translator:
+    description: "Translates simulation predictions into actionable wet-lab protocols"
+
+    capabilities:
+      - prediction_to_protocol_translation
+      - experimental_design_generation
+      - material_and_method_specification
+      - statistical_power_analysis
+      - control_condition_design
+      - timeline_and_resource_planning
+
+    trigger_conditions:
+      # Simulation completion trigger
+      - prerequisite: "simulation-runner"
+        condition: "predictions_validated"
+        min_confidence: 0.80
+        priority: 30
+
+      # Direct protocol request
+      - command: "/generate-protocol"
+        args: ["simulation_results", "experiment_type", "organism"]
+        priority: 25
+
+      # Wet-lab handoff trigger
+      - stage: "experiment_handoff"
+        condition: "predictions_ready"
+        priority: 28
+
+    tool_requirements:
+      protocol_tools:
+        - pandas
+        - numpy
+        - yaml
+        - jinja2  # Template rendering
+        - matplotlib
+
+      file_access:
+        read_patterns:
+          - "sandbox/runs/outputs/**/*.json"
+          - "analysis/convergence/**/*.json"
+          - "templates/protocols/**/*.md"
+          - "config/wet_lab_specs.yaml"
+        write_patterns:
+          - "protocols/generated/**/*.md"
+          - "protocols/generated/**/*.yaml"
+          - "protocols/generated/**/*.csv"
+
+      iris_modules:
+        - "sandbox.engines.consensus.mirror_vote"
+        - "scripts.protocol_generator"
+        - "utils.timezone"
+
+    configuration:
+      protocol_settings:
+        template_library: "templates/protocols/"
+        organism_defaults:
+          planaria: "planaria_regeneration_protocol.md"
+          zebrafish: "zebrafish_development_protocol.md"
+          xenopus: "xenopus_bioelectric_protocol.md"
+
+        experimental_parameters:
+          min_n_per_group: 10
+          recommended_n_per_group: 20
+          power_analysis_target: 0.80
+          alpha_level: 0.05
+
+      output_formats:
+        - detailed_protocol_markdown
+        - materials_list_csv
+        - timeline_yaml
+        - power_analysis_report
+        - statistical_plan_json
+
+    integration_points:
+      orchestrator_role: "protocol-translator"
+      queue_priority: 30
+      depends_on: ["simulation-runner"]
+      triggers: ["session-orchestrator"]  # For completion notification
+
+      handoff_validation:
+        require_statistical_power: true
+        require_material_availability: false  # Optional check
+        require_timeline_feasibility: true
+
+  # ============================================================================
+  # SESSION ORCHESTRATOR AGENT
+  # Manages full S1→S8 workflow with pressure monitoring
+  # ============================================================================
+  session-orchestrator:
+    description: "Coordinates complete S1→S8 IRIS workflow with pressure monitoring and validation"
+
+    capabilities:
+      - multi_stage_pipeline_coordination
+      - pressure_monitoring_and_gating
+      - cross_mirror_session_management
+      - validation_gate_enforcement
+      - progress_tracking_and_reporting
+      - error_recovery_and_retry_logic
+
+    trigger_conditions:
+      # New session trigger
+      - command: "/start-iris-session"
+        args: ["plan_path", "mirrors", "chambers"]
+        priority: 5  # Highest priority
+
+      # Scheduled session trigger
+      - schedule: "cron"
+        condition: "daily_session_check"
+        priority: 8
+
+      # Recovery trigger
+      - condition: "session_failure_recovery"
+        priority: 3
+
+    tool_requirements:
+      orchestration_tools:
+        - yaml
+        - json
+        - subprocess
+        - threading
+        - asyncio
+        - pathlib
+
+      file_access:
+        read_patterns:
+          - "plans/**/*.yaml"
+          - "config/**/*.yaml"
+          - "vault/**/*"
+        write_patterns:
+          - "vault/**/*"
+          - "logs/sessions/**/*.log"
+          - "analysis/sessions/**/*.json"
+
+      iris_modules:
+        - "iris_orchestrator"
+        - "scripts.orchestrator_runner"
+        - "scripts.job_queue"
+        - "scripts.gsw_gate"
+
+    configuration:
+      session_settings:
+        max_concurrent_mirrors: 5
+        pressure_gate_threshold: 2.0
+        validation_gate_timeout: 300  # 5 minutes
+        retry_attempts: 3
+        checkpoint_frequency: "per_chamber"
+
+      monitoring:
+        pressure_check_interval: 5  # exchanges
+        progress_reporting_interval: 30  # seconds
+        health_check_frequency: 60  # seconds
+        log_level: "INFO"
+
+      gates:
+        s1_advance_gate:
+          min_mirrors_pass: 2
+          max_pressure: 2.0
+        s4_success_gate:
+          min_convergence_score: 0.70
+          min_mirrors_agree: 3
+          max_contradiction_threshold: 0.25
+
+    integration_points:
+      orchestrator_role: "session-orchestrator"
+      queue_priority: 5
+      depends_on: []  # Top-level orchestrator
+      triggers: ["convergence-validator", "s4-extractor", "simulation-runner", "protocol-translator"]
+
+      claude_code_hooks:
+        - "session_start"
+        - "chamber_completion"
+        - "pressure_threshold_exceeded"
+        - "session_completion"
+        - "session_failure"
+
+  # ============================================================================
+  # CROSS MIRROR ANALYZER AGENT
+  # Advanced consensus validation and disagreement analysis
+  # ============================================================================
+  cross-mirror-analyzer:
+    description: "Performs deep analysis of cross-mirror consensus and handles disagreements"
+
+    capabilities:
+      - advanced_consensus_algorithms
+      - disagreement_pattern_analysis
+      - mirror_performance_profiling
+      - bias_detection_and_correction
+      - meta_analysis_across_sessions
+      - recommendation_generation
+
+    trigger_conditions:
+      # Convergence analysis trigger
+      - prerequisite: "convergence-validator"
+        condition: "consensus_analysis_needed"
+        priority: 18
+
+      # Disagreement detection trigger
+      - condition: "high_disagreement_detected"
+        threshold: 0.30
+        priority: 12
+
+      # Meta-analysis trigger
+      - command: "/analyze-mirror-performance"
+        args: ["time_period", "analysis_type"]
+        priority: 15
+
+    tool_requirements:
+      analysis_tools:
+        - numpy
+        - pandas
+        - scipy
+        - scikit_learn
+        - matplotlib
+        - seaborn
+        - networkx  # For consensus networks
+
+      file_access:
+        read_patterns:
+          - "vault/**/*.json"
+          - "analysis/convergence/**/*.json"
+          - "analysis/sessions/**/*.json"
+          - "config/mirror_profiles.yaml"
+        write_patterns:
+          - "analysis/consensus/**/*.json"
+          - "analysis/consensus/**/*.png"
+          - "analysis/consensus/**/*.md"
+          - "reports/mirror_analysis/**/*.html"
+
+      iris_modules:
+        - "sandbox.engines.consensus.mirror_vote"
+        - "scripts.convergence_metrics"
+        - "analysis_scripts.cross_mirror_analysis"
+
+    configuration:
+      analysis_settings:
+        consensus_algorithms:
+          - "weighted_voting"
+          - "bayesian_aggregation"
+          - "cluster_consensus"
+          - "outlier_robust_mean"
+
+        disagreement_thresholds:
+          low: 0.10
+          medium: 0.20
+          high: 0.30
+          critical: 0.50
+
+        bias_detection:
+          systematic_bias_threshold: 0.15
+          temporal_drift_window: 10  # sessions
+          cross_validation_folds: 5
+
+      output_formats:
+        - consensus_network_diagram
+        - disagreement_heatmap
+        - mirror_performance_dashboard
+        - bias_detection_report
+        - recommendations_json
+
+    integration_points:
+      orchestrator_role: "cross-mirror-analyzer"
+      queue_priority: 18
+      depends_on: ["convergence-validator", "simulation-runner"]
+      triggers: []  # Terminal analysis agent
+
+      reporting:
+        dashboard_update_frequency: "daily"
+        alert_on_critical_disagreement: true
+        performance_tracking: true
+
+# ============================================================================
+# GLOBAL INTEGRATION CONFIGURATION
+# ============================================================================
+global_integration:
+
+  # Claude Code Agent System Integration
+  claude_code_integration:
+    agent_registration_mode: "dynamic"  # Register agents at runtime
+    priority_mapping:
+      urgent: [1, 10]
+      high: [11, 20]
+      medium: [21, 30]
+      low: [31, 40]
+
+    communication_protocol:
+      inter_agent_messaging: "filesystem_queue"
+      status_broadcasting: "shared_state_json"
+      progress_tracking: "todo_integration"
+
+    resource_management:
+      shared_memory_pool: "8GB"
+      temp_directory: ".iris_agents_temp/"
+      log_aggregation: "logs/iris_agents/"
+
+    error_handling:
+      escalation_chain: ["retry", "fallback_agent", "human_intervention"]
+      timeout_recovery: "checkpoint_restore"
+      failure_isolation: "worktree_based"
+
+  # Workflow Integration Points
+  workflow_integration:
+    s1_to_s8_pipeline:
+      checkpoint_stages: ["S1", "S2", "S3", "S4", "simulation", "protocol", "completion"]
+      rollback_capability: true
+      parallel_execution: "chamber_level"
+
+    pressure_monitoring:
+      global_pressure_gate: 2.5
+      agent_specific_gates: true
+      auto_pause_mechanism: true
+      recovery_strategies: ["reduce_concurrency", "extend_timeouts", "human_review"]
+
+    validation_gates:
+      mandatory_gates: ["convergence_validation", "statistical_significance"]
+      optional_gates: ["protocol_feasibility", "resource_availability"]
+      gate_timeout_strategy: "fail_safe"
+
+    output_coordination:
+      shared_artifact_directory: "artifacts/iris_session/"
+      version_control: "git_based"
+      metadata_standardization: "json_schema"
+      cross_reference_linking: true
+
+  # Quality Assurance
+  quality_assurance:
+    testing_strategy:
+      unit_tests: "per_agent"
+      integration_tests: "workflow_level"
+      performance_tests: "stress_testing"
+      regression_tests: "cross_session"
+
+    monitoring:
+      agent_health_checks: "continuous"
+      performance_metrics: "real_time"
+      resource_utilization: "tracked"
+      error_rate_monitoring: "alerting"
+
+    compliance:
+      pressure_threshold_enforcement: "strict"
+      validation_gate_compliance: "required"
+      output_format_standardization: "enforced"
+      audit_trail_maintenance: "complete"
+
+# ============================================================================
+# DEPLOYMENT CONFIGURATION
+# ============================================================================
+deployment:
+
+  # Environment Setup
+  environment:
+    python_version: ">=3.9"
+    required_packages:
+      - "numpy>=1.21.0"
+      - "pandas>=1.3.0"
+      - "scipy>=1.7.0"
+      - "matplotlib>=3.4.0"
+      - "pyyaml>=5.4.0"
+      - "jsonschema>=3.2.0"
+
+    environment_variables:
+      IRIS_AGENTS_CONFIG: "config/iris_agents.yaml"
+      IRIS_VAULT_PATH: "vault/"
+      IRIS_LOG_LEVEL: "INFO"
+      IRIS_MAX_PRESSURE: "2.5"
+
+  # Installation
+  installation:
+    agent_registration: "config/claude_code_dropin.yaml"
+    role_definitions: "config/agent_roles.yaml"
+    orchestrator_config: "config/orchestrator.yaml"
+    startup_validation: true
+
+  # Runtime Configuration
+  runtime:
+    auto_start_orchestrator: true
+    background_monitoring: true
+    periodic_cleanup: "daily"
+    log_rotation: "weekly"
+    health_check_endpoint: true
+
+# ============================================================================
+# EXAMPLES AND DOCUMENTATION
+# ============================================================================
+usage_examples:
+
+  # Complete S1→S8 Session
+  complete_session: |
+    # Start a complete IRIS session with 4 mirrors
+    /start-iris-session plans/bioelectric_session.yaml --mirrors anthropic,openai,xai,google
+
+    # Monitor progress
+    /session-status --watch
+
+    # Manual intervention if needed
+    /validate-convergence S3 ./vault 0.75
+    /extract-s4-priors ./vault simulation_ready
+    /run-simulation sandbox/runs/plans/bioelectric_test.yaml 1000
+    /generate-protocol simulation_results.json planaria
+
+  # Convergence Analysis Only
+  convergence_analysis: |
+    # Analyze existing session data
+    /validate-convergence S4 ./vault/session_20251007 0.80
+
+    # Cross-mirror performance analysis
+    /analyze-mirror-performance last_30_days bias_detection
+
+    # Generate consensus report
+    python scripts/convergence_validator.py --report-only --session IRIS_20251007_143022
+
+  # Simulation Pipeline
+  simulation_pipeline: |
+    # Extract S4 states and run simulation
+    /extract-s4-priors ./vault bioelectric_parameters
+    /run-simulation sandbox/runs/plans/dose_response.yaml 2000 --parallel
+
+    # Translate to protocol
+    /generate-protocol simulation_results.json regeneration planaria
+
+  # Monitoring and Debugging
+  monitoring: |
+    # Check agent status
+    python scripts/orchestrator_runner.py --status
+
+    # View agent logs
+    tail -f logs/iris_agents/convergence-validator.log
+
+    # Force pressure check
+    /check-pressure --all-agents
+
+    # Emergency stop
+    /emergency-stop --preserve-state
+
+troubleshooting:
+  common_issues:
+    - issue: "Convergence validation fails"
+      solution: "Check mirror agreement thresholds, review S4 state quality"
+
+    - issue: "Simulation timeout"
+      solution: "Reduce n_runs, increase timeout, check resource limits"
+
+    - issue: "Protocol generation fails"
+      solution: "Validate simulation results format, check template availability"
+
+    - issue: "Agent communication failure"
+      solution: "Check filesystem queue permissions, restart orchestrator"
+
+  debugging_commands: |
+    # Agent health check
+    python scripts/iris_agent_health.py --verbose
+
+    # Queue inspection
+    python scripts/job_queue.py status --detailed
+
+    # Worktree cleanup
+    python scripts/orchestrator_runner.py --cleanup-worktrees
+
+    # Pressure analysis
+    python scripts/pressure_monitor.py --session-analysis

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: iris-platform
+  labels:
+    name: iris-platform
+    app.kubernetes.io/name: iris-platform
+    app.kubernetes.io/version: "1.0.0"

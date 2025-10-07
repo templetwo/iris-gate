@@ -140,6 +140,111 @@ roles:
       - "pytest"
       - "rm -rf"
 
+  # IRIS methodology agents
+  convergence-validator:
+    description: "Analyzes cross-mirror agreement and validates convergence in S1-S4 states"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  s4-extractor:
+    description: "Extracts bioelectric priors from converged S4 states for Monte Carlo simulation"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  simulation-runner:
+    description: "Executes Monte Carlo simulations for prediction validation with uncertainty"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  protocol-translator:
+    description: "Translates simulation predictions into actionable wet-lab protocols"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  session-orchestrator:
+    description: "Coordinates complete S1→S8 IRIS workflow with pressure monitoring and validation"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+      - "git diff"
+      - "git status"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  cross-mirror-analyzer:
+    description: "Performs deep analysis of cross-mirror consensus and handles disagreements"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
 # Global safety rules applied to all roles
 global_safety:
   # Never allow destructive operations without explicit user confirmation

@@ -28,6 +28,40 @@ iris_routing:
   memory_update_default: memory-ledger-writer
   pressure_check_interval: 5  # exchanges
 
+# IRIS Methodology Agent Integration
+iris_agents:
+  enabled: true
+  coordinator_script: "scripts/iris_agent_coordinator.py"
+  config_path: "config/iris_agents.yaml"
+  auto_register: true
+
+  # Agent routing patterns
+  routing_patterns:
+    - pattern: "/start-iris-session*"
+      agent: "session-orchestrator"
+      priority: 5
+    - pattern: "/validate-convergence*"
+      agent: "convergence-validator"
+      priority: 15
+    - pattern: "/extract-s4-priors*"
+      agent: "s4-extractor"
+      priority: 20
+    - pattern: "/run-simulation*"
+      agent: "simulation-runner"
+      priority: 25
+    - pattern: "/generate-protocol*"
+      agent: "protocol-translator"
+      priority: 30
+    - pattern: "/analyze-mirror-performance*"
+      agent: "cross-mirror-analyzer"
+      priority: 18
+
+  # Workflow integration
+  workflow_triggers:
+    s1_to_s8_complete: ["convergence-validator", "s4-extractor", "simulation-runner", "protocol-translator"]
+    convergence_analysis: ["convergence-validator", "cross-mirror-analyzer"]
+    simulation_pipeline: ["s4-extractor", "simulation-runner", "protocol-translator"]
+
 # Agent work boundaries
 agent_permissions:
   code_implementer:

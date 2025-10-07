@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: iris-config
+  namespace: iris-platform
+data:
+  # Database configuration
+  DATABASE_HOST: "postgres-service"
+  DATABASE_PORT: "5432"
+  DATABASE_NAME: "iris_platform"
+  DATABASE_USER: "iris_user"
+
+  # Redis configuration
+  REDIS_HOST: "redis-service"
+  REDIS_PORT: "6379"
+
+  # MinIO configuration
+  MINIO_ENDPOINT: "minio-service:9000"
+  MINIO_ACCESS_KEY: "iris_admin"
+
+  # OpenSearch configuration
+  OPENSEARCH_URL: "http://opensearch-service:9200"
+
+  # API Gateway configuration
+  KONG_DATABASE: "postgres"
+  KONG_PG_HOST: "postgres-service"
+  KONG_PG_DATABASE: "kong"
+  KONG_PG_USER: "kong"
+  KONG_ADMIN_LISTEN: "0.0.0.0:8001"
+  KONG_PROXY_LISTEN: "0.0.0.0:8000"
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: iris-secrets
+  namespace: iris-platform
+type: Opaque
+stringData:
+  # Database passwords
+  DATABASE_PASSWORD: "iris_password"
+  KONG_PG_PASSWORD: "kong_password"
+
+  # MinIO credentials
+  MINIO_SECRET_KEY: "iris_password"
+
+  # JWT secrets
+  JWT_SECRET: "your-super-secret-jwt-key-here"
+  JWT_REFRESH_SECRET: "your-super-secret-refresh-key-here"
+
+  # AI API Keys (set these during deployment)
+  ANTHROPIC_API_KEY: ""
+  OPENAI_API_KEY: ""
+  GOOGLE_API_KEY: ""
+  XAI_API_KEY: ""
+  DEEPSEEK_API_KEY: ""
