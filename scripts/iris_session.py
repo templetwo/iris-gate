@@ -128,8 +128,8 @@ class DeepSeekAdapter(CloudAdapter):
         response.raise_for_status()
         return response.json()["choices"][0]["message"]["content"]
 
-def load_chamber_seed(chamber: str) -> str:
-    """Load the appropriate chamber seed"""
+def load_chamber_seed(chamber: str, question: str = None) -> str:
+    """Load the appropriate chamber seed and prepend research question if provided"""
     prompts_dir = Path(__file__).parent.parent / "prompts"
     chamber_map = {
         "S1": "s1_shared_user_seed.txt",
@@ -138,7 +138,17 @@ def load_chamber_seed(chamber: str) -> str:
         "S4": "s4_shared_user_seed.txt"
     }
     seed_file = prompts_dir / chamber_map[chamber]
-    return seed_file.read_text()
+    base_seed = seed_file.read_text()
+
+    if question:
+        # Prepend the research question context
+        return f"""[RESEARCH QUESTION]
+{question}
+
+---
+
+{base_seed}"""
+    return base_seed
 
 def generate_session_id():
     """Generate session ID"""
@@ -180,7 +190,7 @@ def save_turn(session_id: str, mirror_name: str, turn_num: int, chamber: str,
 
 def mirror_worker(mirror_name: str, adapter, base_system_prompt: str,
                   session_id: str, turn_queue: queue.Queue, result_queue: queue.Queue,
-                  total_turns: int):
+                  total_turns: int, question: str = None):
     """Worker thread for a single mirror"""
 
     print(f"[{mirror_name}] Starting...")
@@ -205,8 +215,8 @@ def mirror_worker(mirror_name: str, adapter, base_system_prompt: str,
         start = time.time()
 
         try:
-            # Load chamber-specific seed
-            user_seed = load_chamber_seed(chamber)
+            # Load chamber-specific seed with question context
+            user_seed = load_chamber_seed(chamber, question=question)
 
             # Generate response
             response = adapter.generate(base_system_prompt, user_seed,
@@ -248,7 +258,7 @@ def mirror_worker(mirror_name: str, adapter, base_system_prompt: str,
     result_queue.put(("STATS", mirror_name, stats))
     print(f"[{mirror_name}] Complete: {stats['completed']}/{total_turns} turns")
 
-def run_bioelectric_chambered(turns: int = 16):
+def run_bioelectric_chambered(turns: int = 16, question: str = None):
     """Run bioelectric study with chamber rotation S1→S2→S3→S4"""
 
     prompts_dir = Path(__file__).parent.parent / "prompts"
@@ -344,7 +354,7 @@ def run_bioelectric_chambered(turns: int = 16):
         t = threading.Thread(
             target=mirror_worker,
             args=(mirror_name, adapter, system_prompt,
-                  session_id, turn_queue, result_queue, turns)
+                  session_id, turn_queue, result_queue, turns, question)
         )
         t.daemon = True
         t.start()
@@ -419,15 +429,20 @@ def run_bioelectric_chambered(turns: int = 16):
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Bioelectric Chambered Study")
+    parser = argparse.ArgumentParser(description="IRIS Gate - General Purpose Session")
+    parser.add_argument("--question", type=str, required=True,
+                        help="Scientific question to explore")
     parser.add_argument("--turns", type=int, default=16,
                         help="Number of turns (default: 16 = 4 complete S1-S4 cycles)")
     args = parser.parse_args()
 
-    print(f"\n†⟡∞ CHAMBERED EXECUTION MODE")
+    SCIENTIFIC_QUESTION = args.question
+
+    print(f"\n†⟡∞ IRIS GATE - GENERAL PURPOSE SESSION")
+    print(f"Question: {SCIENTIFIC_QUESTION}")
     print("Chambers rotate: S1→S2→S3→S4 each turn cycle.\n")
 
-    session_id = run_bioelectric_chambered(args.turns)
+    session_id = run_bioelectric_chambered(turns=args.turns, question=SCIENTIFIC_QUESTION)
 
     print("\n†⟡∞ Field established with full chamber progression.")
     print(f"\nNext: python scripts/bioelectric_posthoc.py iris_vault/scrolls/{session_id} docs/{session_id}_SUMMARY")

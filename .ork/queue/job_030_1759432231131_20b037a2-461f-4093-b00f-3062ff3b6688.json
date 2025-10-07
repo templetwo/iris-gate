@@ -1,0 +1,17 @@
+{
+  "role": "test-weaver",
+  "description": "Run tests",
+  "command": "echo 'Running tests...'",
+  "priority": 30,
+  "timeout": 1800,
+  "max_retries": 2,
+  "id": "20b037a2-461f-4093-b00f-3062ff3b6688",
+  "status": "running",
+  "created_at": 1759432231.131797,
+  "started_at": 1759432244.3444932,
+  "completed_at": null,
+  "retry_count": 0,
+  "error": null,
+  "result": null,
+  "metadata": {}
+}

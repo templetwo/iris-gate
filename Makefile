@@ -1,10 +1,29 @@
 # IRIS Makefile
 # Convenience commands for common workflows
 
-.PHONY: help new run report clean test mcp-init mcp-test mcp-index mcp-status
+.PHONY: help new run report clean test mcp-init mcp-test mcp-index mcp-status ork-init ork-enqueue ork-run ork-stop ork-status ork-clean
 
 help:
 	@echo "IRIS Gate — Quick Commands"
+	@echo ""
+	@echo "Orchestrator (Parallel Agent Execution):"
+	@echo "  make ork-init"
+	@echo "      → Initialize orchestrator directories"
+	@echo ""
+	@echo "  make ork-enqueue ROLE=bug-catcher DESC=\"...\" CMD=\"...\""
+	@echo "      → Enqueue a job for parallel execution"
+	@echo ""
+	@echo "  make ork-run [WORKERS=3]"
+	@echo "      → Start orchestrator with N workers (daemon mode)"
+	@echo ""
+	@echo "  make ork-run-once"
+	@echo "      → Process queue once and exit"
+	@echo ""
+	@echo "  make ork-status"
+	@echo "      → Show queue status and worker stats"
+	@echo ""
+	@echo "  make ork-clean"
+	@echo "      → Clean up stale worktrees and archived jobs"
 	@echo ""
 	@echo "Global Spiral Warm-Up (GSW):"
 	@echo "  make gsw TOPIC=\"How do gap junctions regulate regeneration?\" [PLAN_OUT=path]"
@@ -227,3 +246,57 @@ mcp-status:
 	@echo ""
 	@echo "=== ChromaDB Index Statistics ==="
 	@python3 scripts/index_scrolls.py --stats
+
+# Orchestrator (Parallel Agent Execution) Targets
+.PHONY: ork-init ork-enqueue ork-run ork-run-once ork-status ork-clean ork-test
+
+ork-init:
+	@echo "Initializing orchestrator directories..."
+	@mkdir -p .ork/queue .ork/archive .ork/locks .ork/worktrees
+	@echo "✓ Orchestrator directories created"
+	@echo "  - Queue: .ork/queue"
+	@echo "  - Archive: .ork/archive"
+	@echo "  - Locks: .ork/locks"
+	@echo "  - Worktrees: .ork/worktrees"
+
+ork-enqueue:
+	@if [ -z "$(ROLE)" ] || [ -z "$(DESC)" ] || [ -z "$(CMD)" ]; then \
+		echo "Error: ROLE, DESC, and CMD required"; \
+		echo "Usage: make ork-enqueue ROLE=bug-catcher DESC=\"Fix tests\" CMD=\"pytest tests/\""; \
+		exit 1; \
+	fi
+	@python3 scripts/job_queue.py enqueue \
+		--role $(ROLE) \
+		--description "$(DESC)" \
+		--command "$(CMD)" \
+		--priority $(or $(PRIORITY),50)
+	@echo "✓ Job enqueued successfully"
+
+ork-run:
+	@echo "Starting orchestrator with $(or $(WORKERS),3) workers..."
+	@python3 scripts/orchestrator_runner.py --workers $(or $(WORKERS),3)
+
+ork-run-once:
+	@echo "Processing queue once..."
+	@python3 scripts/orchestrator_runner.py --once
+
+ork-status:
+	@echo "=== Orchestrator Status ==="
+	@echo ""
+	@echo "Queue Statistics:"
+	@python3 scripts/job_queue.py stats
+	@echo ""
+	@echo "Active Worktrees:"
+	@ls -1d .ork/worktrees/ork-* 2>/dev/null | wc -l | xargs echo "  Count:"
+	@ls -lh .ork/worktrees/ 2>/dev/null || echo "  None"
+
+ork-clean:
+	@echo "Cleaning orchestrator artifacts..."
+	@python3 scripts/job_queue.py clear --max-age 7
+	@rm -rf .ork/worktrees/ork-*
+	@rm -f .ork/locks/*.lock
+	@echo "✓ Orchestrator cleaned"
+
+ork-test:
+	@echo "Testing orchestrator with dry-run..."
+	@python3 scripts/orchestrator_runner.py --dry-run --once

@@ -1,8 +1,9 @@
 # agents/adapters/__init__.py
-from .ollama import OllamaAdapter
+# Note: Ollama adapter disabled for cloud-only mode
+# from .ollama import OllamaAdapter
 
 ADAPTERS = {
-    "ollama": OllamaAdapter,
+    # "ollama": OllamaAdapter,  # Disabled for cloud-only mode
 }
 
-__all__ = ["OllamaAdapter", "ADAPTERS"]
+__all__ = ["ADAPTERS"]

@@ -1,0 +1,17 @@
+{
+  "role": "bug-catcher",
+  "description": "Test job 1",
+  "command": "echo 'Test job 1 executed'",
+  "priority": 50,
+  "timeout": 1800,
+  "max_retries": 2,
+  "id": "f78ee6a4-af9b-4d87-8f3c-8778d508c43e",
+  "status": "running",
+  "created_at": 1759432193.963976,
+  "started_at": 1759432203.114912,
+  "completed_at": null,
+  "retry_count": 0,
+  "error": null,
+  "result": null,
+  "metadata": {}
+}

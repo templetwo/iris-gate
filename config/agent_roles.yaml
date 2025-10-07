@@ -1,0 +1,180 @@
+# IRIS Gate Agent Role Definitions
+#
+# This configuration defines behavioral roles for the orchestrator system.
+# Each role has a specific responsibility and an allowed set of tools.
+#
+# Format:
+#   role_name:
+#     description: Human-readable description of the role's purpose
+#     allowed_tools: List of shell commands/tools this role can invoke
+#     forbidden_patterns: Optional patterns this role should never execute
+
+roles:
+  # Test and debugging role
+  bug-catcher:
+    description: "Reproduce, diagnose, and fix bugs with surgical precision"
+    allowed_tools:
+      - "pytest"
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "ruff"
+      - "grep"
+      - "cat"
+      - "ls"
+      - "find"
+      - "git diff"
+      - "git status"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  # Code quality and formatting role
+  style-warden:
+    description: "Enforce code style consistency without modifying logic"
+    allowed_tools:
+      - "ruff"
+      - "ruff check"
+      - "ruff format"
+      - "black"
+      - "isort"
+      - "bash"
+      - "sh"
+      - "python"
+      - "python3"
+      - "git diff"
+      - "git status"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "pytest"
+      - "rm -rf"
+
+  # Git operations and commit management role
+  patch-surgeon:
+    description: "Polish and prepare code changes for merge"
+    allowed_tools:
+      - "git"
+      - "git add"
+      - "git commit"
+      - "git diff"
+      - "git status"
+      - "git log"
+      - "git merge"
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "pytest"  # Allowed for pre-commit validation
+      - "ruff"    # Allowed for pre-commit validation
+    forbidden_patterns:
+      - "git push --force"
+      - "git reset --hard HEAD~"
+      - "rm -rf"
+
+  # Test creation role
+  test-weaver:
+    description: "Create and repair tests following TDD principles"
+    allowed_tools:
+      - "pytest"
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "git diff"
+      - "git status"
+      - "cat"
+      - "grep"
+      - "find"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "rm -rf"
+
+  # Code implementation role
+  code-implementer:
+    description: "Implement code based on specifications with atomic changes"
+    allowed_tools:
+      - "python"
+      - "python3"
+      - "bash"
+      - "sh"
+      - "git diff"
+      - "git status"
+      - "pytest"
+      - "ruff"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+    forbidden_patterns:
+      - "git push"
+      - "git commit --amend"
+      - "git merge"
+      - "rm -rf"
+
+  # Planning and architecture role
+  code-planner:
+    description: "Transform tasks into structured implementation plans"
+    allowed_tools:
+      - "bash"
+      - "sh"
+      - "cat"
+      - "grep"
+      - "find"
+      - "ls"
+      - "git diff"
+      - "git status"
+      - "git log"
+      - "python"
+      - "python3"
+    forbidden_patterns:
+      - "git push"
+      - "git commit"
+      - "git merge"
+      - "pytest"
+      - "rm -rf"
+
+# Global safety rules applied to all roles
+global_safety:
+  # Never allow destructive operations without explicit user confirmation
+  forbidden_always:
+    - "rm -rf /"
+    - "dd if=/dev/zero"
+    - "mkfs"
+    - "> /dev/sda"
+    - "git push --force origin main"
+    - "git push --force origin master"
+
+  # Require explicit confirmation for these operations
+  confirm_required:
+    - "git push origin"
+    - "git merge main"
+    - "git merge master"
+    - "git rebase"
+
+# Orchestrator behavior settings
+orchestrator:
+  # Maximum number of concurrent agent workers
+  max_concurrent: 3
+
+  # Timeout for individual jobs (seconds)
+  job_timeout: 1800  # 30 minutes
+
+  # Stale lock timeout (seconds)
+  stale_lock_timeout: 3600  # 1 hour
+
+  # Retry behavior
+  max_retries: 2
+  retry_delay: 5  # seconds
+
+  # Merge gate requirements
+  merge_gates:
+    require_tests_pass: true
+    require_style_check: true
+    require_clean_working_tree: true

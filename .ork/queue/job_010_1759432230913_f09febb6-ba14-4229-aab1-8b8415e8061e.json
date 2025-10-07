@@ -1,0 +1,17 @@
+{
+  "role": "bug-catcher",
+  "description": "Format code",
+  "command": "echo 'Formatting code...'",
+  "priority": 10,
+  "timeout": 1800,
+  "max_retries": 2,
+  "id": "f09febb6-ba14-4229-aab1-8b8415e8061e",
+  "status": "running",
+  "created_at": 1759432230.913546,
+  "started_at": 1759432240.333688,
+  "completed_at": null,
+  "retry_count": 0,
+  "error": null,
+  "result": null,
+  "metadata": {}
+}

@@ -1,0 +1,17 @@
+{
+  "role": "style-warden",
+  "description": "Run linter",
+  "command": "echo 'Running linter...'",
+  "priority": 20,
+  "timeout": 1800,
+  "max_retries": 2,
+  "id": "c677e1bf-3be6-44b2-bb6f-86245ab0696f",
+  "status": "running",
+  "created_at": 1759432231.022306,
+  "started_at": 1759432242.3386,
+  "completed_at": null,
+  "retry_count": 0,
+  "error": null,
+  "result": null,
+  "metadata": {}
+}

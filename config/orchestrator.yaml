@@ -1,0 +1,174 @@
+# IRIS Gate Orchestrator Runtime Configuration
+#
+# Controls parallel agent execution with git worktree isolation
+
+# Core orchestrator settings
+orchestrator:
+  # Maximum number of concurrent agent workers (1-10)
+  max_concurrent: 3
+
+  # Base directory for git worktrees (relative to project root)
+  worktree_base: ".ork/worktrees"
+
+  # Job queue directory (relative to project root)
+  queue_dir: ".ork/queue"
+
+  # Lock directory for concurrency control
+  lock_dir: ".ork/locks"
+
+  # Timeout for individual jobs (seconds)
+  job_timeout: 1800  # 30 minutes
+
+  # Timeout before considering a lock stale (seconds)
+  stale_lock_timeout: 3600  # 1 hour
+
+  # Retry behavior for failed jobs
+  max_retries: 2
+  retry_delay: 5  # seconds between retries
+
+# Merge gate configuration
+# Gates are executed in order; all must pass before merge
+merge_gates:
+  - name: "style_check"
+    type: "shell"
+    command: "ruff check scripts/ tests/"
+    description: "Verify code style with ruff"
+    required: true
+    timeout: 60
+
+  - name: "format_check"
+    type: "shell"
+    command: "ruff format --check scripts/ tests/"
+    description: "Verify code formatting"
+    required: true
+    timeout: 60
+
+  - name: "test_suite"
+    type: "shell"
+    command: "pytest tests/ -v --tb=short"
+    description: "Run test suite"
+    required: true
+    timeout: 300
+
+  - name: "clean_tree"
+    type: "shell"
+    command: "scripts/ci_gates.sh check_clean_tree"
+    description: "Verify working tree is clean"
+    required: true
+    timeout: 10
+
+# Agent-specific runtime overrides
+# These override defaults from agent_roles.yaml for runtime behavior
+agent_overrides:
+  bug-catcher:
+    job_timeout: 2400  # 40 minutes for complex debugging
+    max_retries: 3
+
+  test-weaver:
+    job_timeout: 1200  # 20 minutes for test creation
+
+  style-warden:
+    job_timeout: 300   # 5 minutes for formatting
+    max_retries: 1
+
+  patch-surgeon:
+    job_timeout: 600   # 10 minutes for merge prep
+    max_retries: 1
+
+# Worktree management
+worktree:
+  # Automatically clean up worktrees after successful merge
+  auto_cleanup: true
+
+  # Preserve worktrees on failure for debugging
+  preserve_on_failure: true
+
+  # Maximum age of abandoned worktrees before cleanup (hours)
+  max_age_hours: 24
+
+  # Naming pattern for worktrees
+  naming_pattern: "ork-{role}-{timestamp}"
+
+# Queue management
+queue:
+  # Job file naming pattern
+  job_file_pattern: "job_{priority}_{timestamp}_{id}.json"
+
+  # Priority levels (lower number = higher priority)
+  priorities:
+    critical: 0
+    high: 10
+    normal: 50
+    low: 100
+
+  # Automatically archive completed jobs
+  auto_archive: true
+
+  # Archive directory (relative to project root)
+  archive_dir: ".ork/archive"
+
+  # Maximum age of archived jobs before deletion (days)
+  archive_retention_days: 30
+
+# Logging configuration
+logging:
+  # Log level (DEBUG, INFO, WARNING, ERROR)
+  level: "INFO"
+
+  # Log file location (relative to project root)
+  log_file: ".ork/orchestrator.log"
+
+  # Rotate logs after size threshold (MB)
+  rotate_size_mb: 10
+
+  # Keep this many rotated log files
+  rotate_count: 5
+
+  # Include timestamps in log output
+  timestamps: true
+
+  # Include agent role in log output
+  include_role: true
+
+# Safety limits
+safety:
+  # Maximum total worktrees allowed
+  max_worktrees: 10
+
+  # Maximum queue size
+  max_queue_size: 100
+
+  # Minimum free disk space required (GB)
+  min_free_disk_gb: 5
+
+  # Enable filesystem health checks before job execution
+  check_disk_space: true
+
+# Notification settings (optional)
+notifications:
+  # Enable notifications
+  enabled: false
+
+  # Notification methods
+  methods:
+    - "log"  # Always log
+    # - "email"  # Uncomment to enable email
+    # - "slack"  # Uncomment to enable Slack
+
+  # Events to notify on
+  events:
+    - "job_failed"
+    - "merge_gate_failed"
+    - "stale_lock_detected"
+    - "disk_space_low"
+
+# Debug settings
+debug:
+  # Enable debug mode (verbose logging)
+  enabled: false
+
+  # Dry-run mode (show what would happen without executing)
+  dry_run: false
+
+  # Preserve all temporary files for inspection
+  preserve_temp_files: false

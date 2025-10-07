@@ -87,21 +87,29 @@ class ClaudeMirror(Mirror):
 
 
 class GPTMirror(Mirror):
-    """OpenAI GPT-5 adapter"""
+    """OpenAI GPT adapter (gpt-4o with auto-upgrade to gpt-5)"""
 
     def __init__(self):
-        super().__init__("openai/gpt-5")
+        self.model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        super().__init__(f"openai/{self.model}")
         self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
-        response = self.client.chat.completions.create(
-            model="gpt-5",
-            messages=[
+        params = {
+            "model": self.model,
+            "messages": [
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": CHAMBERS[chamber]}
-            ],
-            max_completion_tokens=2000
-        )
+            ]
+        }
+        
+        # Auto-detect parameter name based on model
+        if "gpt-5" in self.model or "gpt-4o" in self.model:
+            params["max_completion_tokens"] = 2000
+        else:
+            params["max_tokens"] = 2000
+        
+        response = self.client.chat.completions.create(**params)
         
         content = response.choices[0].message.content
         
