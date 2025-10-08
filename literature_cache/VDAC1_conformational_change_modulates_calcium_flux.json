@@ -1,0 +1,319 @@
+{
+  "timestamp": "2025-10-08T09:39:06.141854",
+  "prediction": "VDAC1 conformational change modulates calcium flux",
+  "validation": {
+    "prediction": "VDAC1 conformational change modulates calcium flux",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "The functional universe of membrane contact sites.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "31732717",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 489
+      },
+      {
+        "title": "Mitochondrial calcium exchange in physiology and disease.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Physiol Rev",
+        "pmid": "34698550",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 236
+      },
+      {
+        "title": "Mitochondrial autophagy: molecular mechanisms and implications for cardiovascular disease.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell Death Dis",
+        "pmid": "35534453",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 211
+      },
+      {
+        "title": "Intracellular cAMP Sensor EPAC: Physiology, Pathophysiology, and Therapeutics Development.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29537337",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 153
+      },
+      {
+        "title": "The multifaceted regulation of mitophagy by endogenous metabolites.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Autophagy",
+        "pmid": "34583624",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 113
+      },
+      {
+        "title": "mTORC2: The other mTOR in autophagy regulation.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Aging Cell",
+        "pmid": "34250734",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 105
+      },
+      {
+        "title": "Emerging molecular mechanisms in chemotherapy: Ca<sup>2+</sup> signaling at the mitochondria-associated endoplasmic reticulum membranes.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Dis",
+        "pmid": "29491433",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 99
+      },
+      {
+        "title": "Anti-Cancer Agents in Proliferation and Cell Death: The Calcium Connection.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Int J Mol Sci",
+        "pmid": "31226817",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 81
+      },
+      {
+        "title": "VDAC1 and the TSPO: Expression, Interactions, and Associated Functions in Health and Disease States.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Int J Mol Sci",
+        "pmid": "31288390",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 69
+      },
+      {
+        "title": "Mechanisms of PINK1, ubiquitin and Parkin interactions in mitochondrial quality control and beyond.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cell Mol Life Sci",
+        "pmid": "31254044",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 66
+      },
+      {
+        "title": "ER Stress-Sensor Proteins and ER-Mitochondrial Crosstalk-Signaling Beyond (ER) Stress Response.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Biomolecules",
+        "pmid": "33525374",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 63
+      },
+      {
+        "title": "Endoplasmic reticulum and mitochondria in diseases of motor and sensory neurons: a broken relationship?",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Dis",
+        "pmid": "29491369",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 62
+      },
+      {
+        "title": "STING, the Endoplasmic Reticulum, and Mitochondria: Is Three a Crowd or a Conversation?",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Front Immunol",
+        "pmid": "33552072",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 60
+      },
+      {
+        "title": "ER as master regulator of membrane trafficking and organelle function.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "J Cell Biol",
+        "pmid": "36108241",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 58
+      },
+      {
+        "title": "Protein S-nitrosylation and oxidation contribute to protein misfolding in neurodegeneration.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Free Radic Biol Med",
+        "pmid": "34224817",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 51
+      },
+      {
+        "title": "A Calcium Guard in the Outer Membrane: Is VDAC a Regulated Gatekeeper of Mitochondrial Calcium Uptake?",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Int J Mol Sci",
+        "pmid": "33477936",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 51
+      },
+      {
+        "title": "The Role of Voltage-Dependent Anion Channel in Mitochondrial Dysfunction and Human Disease.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Cells",
+        "pmid": "34359907",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 50
+      },
+      {
+        "title": "Mitostasis, Calcium and Free Radicals in Health, Aging and Neurodegeneration.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Biomolecules",
+        "pmid": "34356637",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 46
+      },
+      {
+        "title": "Mitochondrial VDAC1: A Potential Therapeutic Target of Inflammation-Related Diseases and Clinical Opportunities.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cells",
+        "pmid": "36231136",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 45
+      },
+      {
+        "title": "Alpha-Synuclein and Mitochondrial Dysfunction in Parkinson's Disease: The Emerging Role of VDAC.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Biomolecules",
+        "pmid": "34064816",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 42
+      },
+      {
+        "title": "Exercise-Induced Benefits for Alzheimer's Disease by Stimulating Mitophagy and Improving Mitochondrial Function.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Front Aging Neurosci",
+        "pmid": "34658846",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 40
+      },
+      {
+        "title": "VDAC Modulation of Cancer Metabolism: Advances and Therapeutic Challenges.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Front Physiol",
+        "pmid": "34658929",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 39
+      },
+      {
+        "title": "Cell death regulation by MAMs: from molecular mechanisms to therapeutic implications in cardiovascular diseases.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell Death Dis",
+        "pmid": "35624099",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 38
+      },
+      {
+        "title": "Mitochondria-Associated Endoplasmic Reticulum Membranes in the Pathogenesis of Type 2 Diabetes Mellitus.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Front Cell Dev Biol",
+        "pmid": "33195204",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 36
+      },
+      {
+        "title": "Dysregulation of host cell calcium signaling during viral infections: Emerging paradigm with high clinical relevance.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Mol Aspects Med",
+        "pmid": "34304899",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 34
+      },
+      {
+        "title": "Pharmacological modulation of mitochondrial ion channels.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Br J Pharmacol",
+        "pmid": "30440086",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 29
+      },
+      {
+        "title": "Perspectives on mitochondrial relevance in cardiac ischemia/reperfusion injury.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Front Cell Dev Biol",
+        "pmid": "36561366",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 25
+      },
+      {
+        "title": "Mechanisms of Mitochondrial Malfunction in Alzheimer's Disease: New Therapeutic Hope.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Oxid Med Cell Longev",
+        "pmid": "35607703",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 25
+      },
+      {
+        "title": "All Roads Lead to Rome: Different Molecular Players Converge to Common Toxic Pathways in Neurodegeneration.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Cells",
+        "pmid": "34572087",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 25
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 30 papers found providing strong experimental support. Includes 17 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 30,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 17
+  }
+}
