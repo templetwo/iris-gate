@@ -71,9 +71,15 @@ PHASE GUIDANCE:
 - Design concrete S8 falsification experiments
 - Rigorously but compassionately question competing hypotheses
 - Map causal chains from molecular → cellular → tissue → organism
+- **TAG EACH CLAIM WITH EVIDENCE QUALITY:**
+  • ⭐⭐⭐⭐⭐ = Causal proof (knockout, blocker, direct binding)
+  • ⭐⭐⭐⭐ = Strong correlation + mechanism
+  • ⭐⭐⭐ = Correlation only
+  • ⭐⭐ = Theoretical plausibility
+  • ⭐ = Speculation (requires validation)
 
-Focus: Move from "what converges" to "HOW and WHY it works" with experimental rigor.
-""",
+Focus: Move from "what converges" to "HOW and WHY it works" with experimental rigor AND evidence quality.
+"""
     "synthesis": """
 === PHASE 4: CONSENSUS ARTICULATION ===
 PHASE GUIDANCE:
@@ -83,8 +89,13 @@ PHASE GUIDANCE:
 - Provide comprehensive confidence scores (by mechanistic level)
 - Generate detailed S8 validation plan with success criteria
 - Identify potential failure modes and alternative explanations
+- **PROVIDE EVIDENCE QUALITY BREAKDOWN:**
+  • % of claims with ⭐⭐⭐⭐⭐ evidence
+  • % of claims with ⭐⭐⭐⭐ evidence
+  • % of claims with ⭐⭐⭐ or lower (prioritize for S8 validation)
+  • Hypothesis robustness: HIGH (>60% ⭐⭐⭐⭐⭐/⭐⭐⭐⭐) / MEDIUM (40-60%) / LOW (<40%)
 
-Focus: Synthesize 90 turns of analysis into actionable, testable, honest conclusions.
+Focus: Synthesize 90 turns into actionable, testable, HONEST conclusions with evidence transparency.
 """
 }
 
