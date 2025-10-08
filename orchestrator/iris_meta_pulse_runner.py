@@ -36,6 +36,103 @@ SESSION_ID = "IRIS_META_20251008022613"
 TURN_LIMIT = 100
 PRESSURE_CHECK_INTERVAL = 10
 
+# Phase-specific prompts for structured introspection
+PHASE_PROMPTS = {
+    "exploration": """
+=== PHASE 1: DIVERGENT EXPLORATION ===
+PHASE GUIDANCE:
+- Explore BROAD possibilities, even initially dismissed ideas
+- Explicitly state your underlying reasoning and data interpretation
+- Consider multiple competing hypotheses without forcing early convergence
+- Question assumptions and explore alternative frameworks
+- Generate creative connections across domains
+- Document "wild ideas" that might seem implausible but mechanistically possible
+
+Remember: This is the exploration phase. Divergence is valuable. Don't converge prematurely.
+""",
+    "refinement": """
+=== PHASE 2: CONVERGENT REFINEMENT ===
+PHASE GUIDANCE:
+- Identify commonalities across models' previous responses
+- Resolve minor discrepancies through deeper analysis
+- Propose shared conceptual frameworks that integrate diverse observations
+- Build on insights from Phase 1 exploration
+- Track emerging consensus patterns
+- Flag areas where convergence is premature or forced
+
+Focus: What patterns are ALL models seeing? Where is genuine convergence emerging?
+""",
+    "mechanistic": """
+=== PHASE 3: MECHANISTIC DEEP DIVE ===
+PHASE GUIDANCE:
+- Generate detailed mechanistic hypotheses with specific molecular pathways
+- Identify critical nodes using Triple Signature approach (Rhythm-Center-Aperture)
+- Specify intermediate steps and testable predictions
+- Design concrete S8 falsification experiments
+- Rigorously but compassionately question competing hypotheses
+- Map causal chains from molecular → cellular → tissue → organism
+
+Focus: Move from "what converges" to "HOW and WHY it works" with experimental rigor.
+""",
+    "synthesis": """
+=== PHASE 4: CONSENSUS ARTICULATION ===
+PHASE GUIDANCE:
+- Consolidate all findings into coherent common ground explanation
+- Articulate areas of high confidence vs remaining uncertainty
+- Flag assumptions that require validation
+- Provide comprehensive confidence scores (by mechanistic level)
+- Generate detailed S8 validation plan with success criteria
+- Identify potential failure modes and alternative explanations
+
+Focus: Synthesize 90 turns of analysis into actionable, testable, honest conclusions.
+"""
+}
+
+def get_phase_prompt(turn_number: int) -> str:
+    """Return phase-specific guidance based on turn number.
+    
+    Phase 1 (1-20): Divergent Exploration
+    Phase 2 (21-70): Convergent Refinement
+    Phase 3 (71-90): Mechanistic Deep Dive
+    Phase 4 (91-100): Consensus Articulation
+    """
+    if turn_number <= 20:
+        return PHASE_PROMPTS["exploration"]
+    elif turn_number <= 70:
+        return PHASE_PROMPTS["refinement"]
+    elif turn_number <= 90:
+        return PHASE_PROMPTS["mechanistic"]
+    else:
+        return PHASE_PROMPTS["synthesis"]
+
+def get_phase_transition_marker(turn_number: int) -> str:
+    """Return transition marker at phase boundaries."""
+    if turn_number == 21:
+        return """
+🌀 PHASE TRANSITION: DIVERGENT EXPLORATION → CONVERGENT REFINEMENT
+
+You have completed 20 turns of broad exploration.
+Now we shift focus to identifying patterns and building shared frameworks.
+Review the divergent ideas from Phase 1 and begin convergence.
+"""
+    elif turn_number == 71:
+        return """
+🌀 PHASE TRANSITION: CONVERGENT REFINEMENT → MECHANISTIC DEEP DIVE
+
+You have identified areas of convergence.
+Now we shift to detailed mechanistic analysis and experimental design.
+Specify molecular pathways, design falsification experiments, challenge hypotheses with care.
+"""
+    elif turn_number == 91:
+        return """
+🌀 PHASE TRANSITION: MECHANISTIC DEEP DIVE → CONSENSUS ARTICULATION
+
+You have analyzed mechanisms in detail.
+Now we shift to synthesis and validation planning.
+Consolidate findings, assign confidence scores, create actionable validation plans.
+"""
+    return ""
+
 # Base prompt (from s1_prompt.md)
 BASE_PROMPT = """IRIS Gate is a system for multi-architecture AI convergence on complex scientific questions. It has successfully decoded CBD's mitochondrial paradox through 4 AI models (Claude Sonnet 4.5, GPT-4o, Grok-4-Fast, Gemini 2.5 Flash) converging at 90% agreement over 100 turns of self-reflection.
 
@@ -314,18 +411,24 @@ class PulseOrchestrator:
         print(f"Turn Limit: {TURN_LIMIT}")
         print(f"{'='*80}\n")
         
-        # Turn 1: Initial prompt
+        # Turn 1: Initial prompt WITH Phase 1 guidance
         print("📢 Turn 1: Initial prompt to all mirrors")
-        responses = await self.send_pulse(BASE_PROMPT)
-        self.save_pulse(1, BASE_PROMPT, responses)
+        turn_1_prompt = BASE_PROMPT + "\n\n" + get_phase_prompt(1)
+        responses = await self.send_pulse(turn_1_prompt)
+        self.save_pulse(1, turn_1_prompt, responses)
         
-        # Turns 2-100: Iterative refinement
+        # Turns 2-100: Iterative refinement WITH phase-specific guidance
         for turn in range(2, TURN_LIMIT + 1):
-            # Build reflection prompt
+            # Check for phase transitions
+            transition_marker = get_phase_transition_marker(turn)
+            
+            # Build reflection prompt with phase guidance
             reflection_prompt = f"""This is turn {turn} of {TURN_LIMIT} in our IRIS meta-improvement convergence.
-
+{transition_marker}
 Previous turn summary:
 {self._summarize_previous_turn(responses)}
+
+{get_phase_prompt(turn)}
 
 Continue your analysis of how to improve the IRIS Gate methodology.
 Focus on: rigor, accessibility, and impact.
