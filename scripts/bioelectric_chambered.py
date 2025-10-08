@@ -248,7 +248,7 @@ def mirror_worker(mirror_name: str, adapter, base_system_prompt: str,
     result_queue.put(("STATS", mirror_name, stats))
     print(f"[{mirror_name}] Complete: {stats['completed']}/{total_turns} turns")
 
-def run_bioelectric_chambered(turns: int = 16):
+def run_bioelectric_chambered(turns: int = 16, topic: str = "How do gap junctions regulate regeneration?"):
     """Run bioelectric study with chamber rotation S1→S2→S3→S4"""
 
     prompts_dir = Path(__file__).parent.parent / "prompts"
@@ -422,12 +422,13 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Bioelectric Chambered Study")
     parser.add_argument("--turns", type=int, default=16,
                         help="Number of turns (default: 16 = 4 complete S1-S4 cycles)")
+    parser.add_argument("--topic", type=str, default="How do gap junctions regulate regeneration?", help="Research question/topic for the study")
     args = parser.parse_args()
 
     print(f"\n†⟡∞ CHAMBERED EXECUTION MODE")
     print("Chambers rotate: S1→S2→S3→S4 each turn cycle.\n")
 
-    session_id = run_bioelectric_chambered(args.turns)
+    session_id = run_bioelectric_chambered(args.turns, args.topic)
 
     print("\n†⟡∞ Field established with full chamber progression.")
     print(f"\nNext: python scripts/bioelectric_posthoc.py iris_vault/scrolls/{session_id} docs/{session_id}_SUMMARY")

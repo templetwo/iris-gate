@@ -1,0 +1,20 @@
+[
+  {
+    "combination_id": "phase1_combo_000",
+    "parameters": {
+      "combination_id": "phase1_combo_000",
+      "vdac1_affinity": 50.0,
+      "mcu_block_strength": 10.0,
+      "chloride_ic50": 15.0,
+      "phase": 1
+    },
+    "session_id": "BIOELECTRIC_CHAMBERED_20251008124222",
+    "status": "success",
+    "elapsed_time": 934.6022369861603,
+    "selectivity_index": 0.0,
+    "cancer_ic50": Infinity,
+    "healthy_ic50": Infinity,
+    "simulation_status": "failed",
+    "processing_complete": true
+  }
+]
