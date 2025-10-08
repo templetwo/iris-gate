@@ -1,0 +1,329 @@
+{
+  "timestamp": "2025-10-08T10:08:41.026771",
+  "prediction": "CBD affects mitochondrial membrane potential in cancer cells",
+  "validation": {
+    "prediction": "CBD affects mitochondrial membrane potential in cancer cells",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "35209003",
+        "title": null,
+        "abstract": "In recent years, interest in ",
+        "year": "2022",
+        "journal": "Molecules (Basel, Switzerland)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35209003/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "The endocannabinoid system as an emerging target of pharmacotherapy.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "Pharmacol Rev",
+        "pmid": "16968947",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1398
+      },
+      {
+        "title": "Comprehensive Review on Alzheimer's Disease: Causes and Treatment.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Molecules",
+        "pmid": "33302541",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1273
+      },
+      {
+        "title": "Neuronal Cell Death.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29488822",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 720
+      },
+      {
+        "title": "Advancing biomaterials of human origin for tissue engineering.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Prog Polym Sci",
+        "pmid": "27022202",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 498
+      },
+      {
+        "title": "Antioxidative and Anti-Inflammatory Properties of Cannabidiol.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Antioxidants (Basel)",
+        "pmid": "31881765",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 413
+      },
+      {
+        "title": "Role of pyroptosis in inflammation and cancer.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell Mol Immunol",
+        "pmid": "35970871",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 399
+      },
+      {
+        "title": "Definition of a standard lymphadenectomy in surgery for pancreatic ductal adenocarcinoma: a consensus statement by the International Study Group on Pancreatic Surgery (ISGPS).",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Surgery",
+        "pmid": "25061003",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 397
+      },
+      {
+        "title": "Targeting calcium signaling in cancer therapy.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Acta Pharm Sin B",
+        "pmid": "28119804",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 385
+      },
+      {
+        "title": "The CB<sub>2</sub> receptor and its role as a regulator of inflammation.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Cell Mol Life Sci",
+        "pmid": "27402121",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 375
+      },
+      {
+        "title": "Molecular Targets of Cannabidiol in Neurological Disorders.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neurotherapeutics",
+        "pmid": "26264914",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 367
+      },
+      {
+        "title": "Amyloid Oligomers: A Joint Experimental/Computational Perspective on Alzheimer's Disease, Parkinson's Disease, Type II Diabetes, and Amyotrophic Lateral Sclerosis.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Chem Rev",
+        "pmid": "33543942",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 360
+      },
+      {
+        "title": "Are cannabidiol and \u0394(9) -tetrahydrocannabivarin negative modulators of the endocannabinoid system? A systematic review.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Br J Pharmacol",
+        "pmid": "25257544",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 356
+      },
+      {
+        "title": "Interaction of membrane/lipid rafts with the cytoskeleton: impact on signaling and function: membrane/lipid rafts, mediators of cytoskeletal arrangement and cell signaling.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Biochim Biophys Acta",
+        "pmid": "23899502",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 351
+      },
+      {
+        "title": "Insulin regulation of gluconeogenesis.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Ann N Y Acad Sci",
+        "pmid": "28868790",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 322
+      },
+      {
+        "title": "Advances in TRP channel drug discovery: from target validation to clinical studies.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Nat Rev Drug Discov",
+        "pmid": "34526696",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 311
+      },
+      {
+        "title": "The different autophagy degradation pathways and neurodegeneration.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Neuron",
+        "pmid": "35134347",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 290
+      },
+      {
+        "title": "STING directly activates autophagy to tune the innate immune response.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cell Death Differ",
+        "pmid": "30568238",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 277
+      },
+      {
+        "title": "Brain-derived neurotrophic factor in Alzheimer's disease and its pharmaceutical potential.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Transl Neurodegener",
+        "pmid": "35090576",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 268
+      },
+      {
+        "title": "Exosomes\u2500Nature's Lipid Nanoparticles, a Rising Star in Drug Delivery and Diagnostics.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "ACS Nano",
+        "pmid": "36354238",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 267
+      },
+      {
+        "title": "PI3K/AKT Signal Pathway: A Target of Natural Products in the Prevention and Treatment of Alzheimer's Disease and Parkinson's Disease.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Front Pharmacol",
+        "pmid": "33935751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 259
+      },
+      {
+        "title": "Endocannabinoid signalling and the deteriorating brain.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Nat Rev Neurosci",
+        "pmid": "25524120",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 244
+      },
+      {
+        "title": "Parkinson's disease.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Subcell Biochem",
+        "pmid": "23225012",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 241
+      },
+      {
+        "title": "Filming biomolecular processes by high-speed atomic force microscopy.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Chem Rev",
+        "pmid": "24476364",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 208
+      },
+      {
+        "title": "The fat side of prostate cancer.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Biochim Biophys Acta",
+        "pmid": "23562839",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 206
+      },
+      {
+        "title": "Cannabidiol for neurodegenerative disorders: important new clinical applications for this phytocannabinoid?",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Br J Clin Pharmacol",
+        "pmid": "22625422",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 204
+      },
+      {
+        "title": "Monoaminergic neuropathology in Alzheimer's disease.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Prog Neurobiol",
+        "pmid": "27084356",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 195
+      },
+      {
+        "title": "The Endogenous Cannabinoid System: A Budding Source of Targets for Treating Inflammatory and Neuropathic Pain.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Neuropsychopharmacology",
+        "pmid": "28857069",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 191
+      },
+      {
+        "title": "Tau and neuroinflammation in Alzheimer's disease: interplay mechanisms and clinical translation.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "J Neuroinflammation",
+        "pmid": "37452321",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 187
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 31 papers found providing strong experimental support. Includes 30 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 31,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 30
+  }
+}

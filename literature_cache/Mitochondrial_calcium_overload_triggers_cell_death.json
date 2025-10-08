@@ -1,0 +1,590 @@
+{
+  "timestamp": "2025-10-08T10:08:56.247116",
+  "prediction": "Mitochondrial calcium overload triggers cell death",
+  "validation": {
+    "prediction": "Mitochondrial calcium overload triggers cell death",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "33308446",
+        "title": "Apaf-1 Pyroptosome Senses Mitochondrial Permeability Transition.",
+        "abstract": "Caspase-4 is an intracellular sensor for cytosolic bacterial lipopolysaccharide (LPS) and underlies infection-elicited pyroptosis. It is unclear whether and how caspase-4 detects host-derived factors to trigger pyroptosis. Here we show that mitochondrial permeability transition (MPT) activates caspase-4 by promoting the assembly of a protein complex, which we term the Apaf-1 pyroptosome, for the execution of facilitated pyroptosis. MPT, when induced by bile acids, calcium overload, or an adenine...",
+        "year": "2021",
+        "journal": "Cell metabolism",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33308446/"
+      },
+      {
+        "pmid": "33597260",
+        "title": "Exercise triggers CAPN1-mediated AIF truncation, inducing myocyte cell death in arrhythmogenic cardiomyopathy.",
+        "abstract": "Myocyte death occurs in many inherited and acquired cardiomyopathies, including arrhythmogenic cardiomyopathy (ACM), a genetic heart disease plagued by the prevalence of sudden cardiac death. Individuals with ACM and harboring pathogenic desmosomal variants, such as desmoglein-2 (",
+        "year": "2021",
+        "journal": "Science translational medicine",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33597260/"
+      },
+      {
+        "pmid": "31351428",
+        "title": "Cancer and ER stress: Mutual crosstalk between autophagy, oxidative stress and inflammatory response.",
+        "abstract": "The endoplasmic reticulum (ER) acts as a moving organelle with many important cellular functions. As the ER lacks sufficient nutrients under pathological conditions leading to uncontrolled protein synthesis, aggregation of unfolded/misfolded proteins in the ER lumen causes the unfolded protein response (UPR) to be activated. Chronic ER stress produces endogenous or exogenous damage to cells and activates UPR, which leads to impaired intracellular calcium and redox homeostasis. The UPR is capable...",
+        "year": "2019",
+        "journal": "Biomedicine & pharmacotherapy = Biomedecine & pharmacotherapie",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31351428/"
+      },
+      {
+        "pmid": "31474371",
+        "title": "TNF Induces Pathogenic Programmed Macrophage Necrosis in Tuberculosis through a Mitochondrial-Lysosomal-Endoplasmic Reticulum Circuit.",
+        "abstract": "Necrosis of infected macrophages constitutes a critical pathogenetic event in tuberculosis by releasing mycobacteria into the growth-permissive extracellular environment. In zebrafish infected with Mycobacterium marinum or Mycobacterium tuberculosis, excess tumor necrosis factor triggers programmed necrosis of infected macrophages through the production of mitochondrial reactive oxygen species (ROS) and the participation of cyclophilin D, a component of the mitochondrial permeability transition ...",
+        "year": "2019",
+        "journal": "Cell",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31474371/"
+      },
+      {
+        "pmid": "33596078",
+        "title": "Ultrasound-Augmented Mitochondrial Calcium Ion Overload by Calcium Nanomodulator to Induce Immunogenic Cell Death.",
+        "abstract": "Immunogenic cell death (ICD), a manner of tumor cell death that can trigger antitumor immune responses, has received extensive attention as a potential synergistic modality for cancer immunotherapy. Although many calcium ion (Ca",
+        "year": "2021",
+        "journal": "Nano letters",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33596078/"
+      },
+      {
+        "pmid": "31737163",
+        "title": "Overexpression of Mitochondrial Calcium Uniporter Causes Neuronal Death.",
+        "abstract": "Neurodegenerative diseases are a large and heterogeneous group of disorders characterized by selective and progressive death of specific neuronal subtypes. In most of the cases, the pathophysiology is still poorly understood, although a number of hypotheses have been proposed. Among these, dysregulation of Ca",
+        "year": "2019",
+        "journal": "Oxidative medicine and cellular longevity",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31737163/"
+      },
+      {
+        "pmid": "33811561",
+        "title": "Ca",
+        "abstract": "Melanoma is an aggressive tumor with still poor therapy outcomes. \u03b4-tocotrienol (\u03b4-TT) is a vitamin E derivative displaying potent anti-cancer properties. Previously, we demonstrated that \u03b4-TT triggers apoptosis in human melanoma cells. Here, we investigated whether it might also activate paraptosis, a non-canonical programmed cell death. In accordance with the main paraptotic features, \u03b4-TT was shown to promote cytoplasmic vacuolization, associated with endoplasmic reticulum/mitochondrial dilat...",
+        "year": "2021",
+        "journal": "Apoptosis : an international journal on programmed cell death",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33811561/"
+      },
+      {
+        "pmid": "23602992",
+        "title": "Calcium and mitochondrial metabolism in ceramide-induced cardiomyocyte death.",
+        "abstract": "Ceramides are important intermediates in the biosynthesis and degradation of sphingolipids that regulate numerous cellular processes, including cell cycle progression, cell growth, differentiation and death. In cardiomyocytes, ceramides induce apoptosis by decreasing mitochondrial membrane potential and promoting cytochrome-c release. Ca(2+) overload is a common feature of all types of cell death. The aim of this study was to determine the effect of ceramides on cytoplasmic Ca(2+) levels, mitoch...",
+        "year": "2013",
+        "journal": "Biochimica et biophysica acta",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23602992/"
+      },
+      {
+        "pmid": "32060978",
+        "title": "Mitochondrial division inhibitor 1 disrupts oligodendrocyte Ca",
+        "abstract": "Mitochondrial fission mediated by cytosolic dynamin related protein 1 (Drp1) is essential for mitochondrial quality control but may contribute to apoptosis as well. Blockade of Drp1 with mitochondrial division inhibitor 1 (mdivi-1) provides neuroprotection in several models of neurodegeneration and cerebral ischemia and has emerged as a promising therapeutic drug. In oligodendrocytes, overactivation of AMPA-type ionotropic glutamate receptors (AMPARs) induces intracellular Ca",
+        "year": "2020",
+        "journal": "Glia",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32060978/"
+      },
+      {
+        "pmid": "35203354",
+        "title": "Interaction of Mitochondrial Calcium and ROS in Neurodegeneration.",
+        "abstract": "Neurodegenerative disorders are currently incurable devastating diseases which are characterized by the slow and progressive loss of neurons in specific brain regions. Progress in the investigation of the mechanisms of these disorders helped to identify a number of genes associated with familial forms of these diseases and a number of toxins and risk factors which trigger sporadic and toxic forms of these diseases. Recently, some similarities in the mechanisms of neurodegenerative diseases were ...",
+        "year": "2022",
+        "journal": "Cells",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35203354/"
+      },
+      {
+        "pmid": "21108938",
+        "title": "Hyperglycemia magnifies Schwann cell dysfunction and cell death triggered by PA-induced lipotoxicity.",
+        "abstract": "Lipid overload resulting in lipotoxicity is prominent in a number of chronic diseases and has been associated with cellular dysfunction and cell death. This study characterizes palmitic acid-induced lipotoxicity (PA-LTx) in Schwann cell cultures grown in normal and high glucose concentrations. The study shows for the first time that Schwann cell (SC) cultures exposed to elevated levels of PA exhibit a dose- and time-dependent loss in cell viability. Hoescht and Annexin V/7AAD staining confirmed ...",
+        "year": "2011",
+        "journal": "Brain research",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21108938/"
+      },
+      {
+        "pmid": "33039869",
+        "title": "Hexavalent chromium-induced apoptosis in Hep3B cells is accompanied by calcium overload, mitochondrial damage, and AIF translocation.",
+        "abstract": "Hexavalent chromium [Cr(VI)] is a pervasive environmental pollutant that can enter the body through a variety of routes and cause organ toxicity, genetic damage, and cancer. Cr(VI)-induced apoptosis is a toxicant mechanism of Cr(VI). Studies have shown that Cr(VI) can induce p53-independent apoptosis, but the mechanisms are not fully understood. The intracellular calcium concentration affects cellular life. Apoptosis-inducing factor (AIF), a caspase-independent apoptotic effector, can induce DNA...",
+        "year": "2021",
+        "journal": "Ecotoxicology and environmental safety",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33039869/"
+      },
+      {
+        "pmid": "28364353",
+        "title": "Mitochondrial Cx43 hemichannels contribute to mitochondrial calcium entry and cell death in the heart.",
+        "abstract": "Mitochondrial connexin 43 (Cx43) plays a key role in cardiac cytoprotection caused by repeated exposure to short periods of non-lethal ischemia/reperfusion, a condition known as ischemic preconditioning. Cx43 also forms calcium (Ca",
+        "year": "2017",
+        "journal": "Basic research in cardiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28364353/"
+      },
+      {
+        "pmid": "36245299",
+        "title": "Synergistic Reinforcing of Immunogenic Cell Death and Transforming Tumor-Associated Macrophages Via a Multifunctional Cascade Bioreactor for Optimizing Cancer Immunotherapy.",
+        "abstract": "Immunogenic cell death (ICD) has aroused widespread attention because it can reconstruct a tumor microenvironment and activate antitumor immunity. This study proposes a two-way enhancement of ICD based on a CaO",
+        "year": "2022",
+        "journal": "Advanced materials (Deerfield Beach, Fla.)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36245299/"
+      },
+      {
+        "pmid": "35732639",
+        "title": "Chronic inhibition of the mitochondrial ATP synthase in skeletal muscle triggers sarcoplasmic reticulum distress and tubular aggregates.",
+        "abstract": "Tubular aggregates (TA) are honeycomb-like arrays of sarcoplasmic-reticulum (SR) tubules affecting aged glycolytic fibers of male individuals and inducing severe sarcomere disorganization and muscular pain. TA develop in skeletal muscle from Tubular Aggregate Myopathy (TAM) patients as well as in other disorders including endocrine syndromes, diabetes, and ageing, being their primary cause unknown. Nowadays, there is no cure for TA. Intriguingly, both hypoxia and calcium dyshomeostasis prompt TA...",
+        "year": "2022",
+        "journal": "Cell death & disease",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35732639/"
+      },
+      {
+        "pmid": "14961987",
+        "title": "Mitochondrial calcium uptake regulates cold preservation-induced Bax translocation and early reperfusion apoptosis.",
+        "abstract": "Mitochondrial calcium (mCa + 2) overload occurs during cold preservation and is an integral part of mitochondrial-dependent apoptotic pathways. We investigated the role of mCa + 2 overload in cell death following hypothermic storage using HepG2 cells stored in normoxic-hypothermic (4 degrees C) or hypoxic (< 0.1% O2)-hypothermic Belzer storage solution. Cells were stored for 6 h, with or without 10 microM ruthenium red (mCa + 2 uniporter inhibitor) followed by rewarming in oxygenated media at 37...",
+        "year": "2004",
+        "journal": "American journal of transplantation : official journal of the American Society of Transplantation and the American Society of Transplant Surgeons",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/14961987/"
+      },
+      {
+        "pmid": "33450506",
+        "title": "BIRD-2, a BH4-domain-targeting peptide of Bcl-2, provokes Bax/Bak-independent cell death in B-cell cancers through mitochondrial Ca",
+        "abstract": "Anti-apoptotic Bcl-2 critically controls cell death by neutralizing pro-apoptotic Bcl-2-family members at the mitochondria. Bcl-2 proteins also act at the endoplasmic reticulum, the main intracellular Ca",
+        "year": "2021",
+        "journal": "Cell calcium",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33450506/"
+      },
+      {
+        "pmid": "33562681",
+        "title": "Marine Antimicrobial Peptide TP4 Exerts Anticancer Effects on Human Synovial Sarcoma Cells via Calcium Overload, Reactive Oxygen Species Production and Mitochondrial Hyperpolarization.",
+        "abstract": "Synovial sarcoma is a rare but aggressive soft-tissue sarcoma associated with translocation t(X;18). Metastasis occurs in approximately 50% of all patients, and curative outcomes are difficult to achieve in this group. Since the efficacies of current therapeutic approaches for metastatic synovial sarcoma remain limited, new therapeutic agents are urgently needed. Tilapia piscidin 4 (TP4), a marine antimicrobial peptide, is known to exhibit multiple biological functions, including anti-bacterial,...",
+        "year": "2021",
+        "journal": "Marine drugs",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33562681/"
+      },
+      {
+        "pmid": "32389793",
+        "title": "Is MCU dispensable for normal heart function?",
+        "abstract": "The uptake of Ca",
+        "year": "2020",
+        "journal": "Journal of molecular and cellular cardiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32389793/"
+      },
+      {
+        "pmid": "28838811",
+        "title": "Mitochondrial calcium imbalance in Parkinson's disease.",
+        "abstract": "Multiple factors are involved in the mechanism(s) of neuronal loss in neurodegenerative disorders whilst mitochondria are thought to play a central role in neurodegeneration of Parkinson's disease. Mitochondria are vital to cellular functions by supplying energy in form of ATP and affect cell physiology via calcium, ROS and signalling proteins. Changes in mitochondrial calcium homeostasis and ROS overproduction can induce cell death by triggering mitochondrial permeability transition pore openin...",
+        "year": "2018",
+        "journal": "Neuroscience letters",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28838811/"
+      },
+      {
+        "pmid": "10672249",
+        "title": "Calcium overload triggers rod photoreceptor apoptotic cell death in chemical-induced and inherited retinal degenerations.",
+        "abstract": "No abstract available",
+        "year": "1999",
+        "journal": "Annals of the New York Academy of Sciences",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10672249/"
+      },
+      {
+        "pmid": "11080251",
+        "title": "Mitochondria and calcium: from cell signalling to cell death.",
+        "abstract": "While a pathway for Ca2+ accumulation into mitochondria has long been established, its functional significance is only now becoming clear in relation to cell physiology and pathophysiology. The observation that mitochondria take up Ca2+ during physiological Ca2+ signalling in a variety of cell types leads to four questions: (i) 'What is the impact of mitochondrial Ca2+ uptake on mitochondrial function?' (ii) 'What is the impact of mitochondrial Ca2+ uptake on Ca2+ signalling?' (iii) 'What are th...",
+        "year": "2000",
+        "journal": "The Journal of physiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11080251/"
+      },
+      {
+        "pmid": "30116173",
+        "title": "Excitatory Dendritic Mitochondrial Calcium Toxicity: Implications for Parkinson's and Other Neurodegenerative Diseases.",
+        "abstract": "Dysregulation of calcium homeostasis has been linked to multiple neurological diseases. In addition to excitotoxic neuronal cell death observed following stroke, a growing number of studies implicate excess excitatory neuronal activity in chronic neurodegenerative diseases. Mitochondria function to rapidly sequester large influxes of cytosolic calcium through the activity of the mitochondrial calcium uniporter (MCU) complex, followed by more gradual release via calcium antiporters, such as NCLX....",
+        "year": "2018",
+        "journal": "Frontiers in neuroscience",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30116173/"
+      },
+      {
+        "pmid": "36580536",
+        "title": "Calcium signaling induced by 15-deoxy-prostamide-J2 promotes cell death by activating PERK, IP3R, and the mitochondrial permeability transition pore.",
+        "abstract": "Melanoma is the deadliest form of skin cancer in the US. Although immunotherapeutic checkpoint inhibitors and small-molecule kinase inhibitors have dramatically increased the survival of patients with melanoma, new or optimized therapeutic approaches are still needed to improve outcomes. 15-deoxy-\u0394",
+        "year": "2022",
+        "journal": "Oncotarget",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36580536/"
+      },
+      {
+        "pmid": "28315370",
+        "title": "Control of mitochondrial physiology and cell death by the Bcl-2 family proteins Bax and Bok.",
+        "abstract": "Neuronal cell death is often triggered by events that involve intracellular increases in Ca",
+        "year": "2017",
+        "journal": "Neurochemistry international",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28315370/"
+      },
+      {
+        "pmid": "28337252",
+        "title": "Small Interfering RNA Targeting Mitochondrial Calcium Uniporter Improves Cardiomyocyte Cell Viability in Hypoxia/Reoxygenation Injury by Reducing Calcium Overload.",
+        "abstract": "Intracellular Ca",
+        "year": "2017",
+        "journal": "Oxidative medicine and cellular longevity",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28337252/"
+      },
+      {
+        "pmid": "16521126",
+        "title": "A BAD link to mitochondrial cell death in the cochlea of mice with noise-induced hearing loss.",
+        "abstract": "Acoustic overstimulation induces calcium overload and activation of mitochondria-mediated cell death pathways in outer hair cells (OHC) of the cochlea. However, it is not known whether these events are interrelated or independent. We have recently reported that the calcium-dependent phosphatase calcineurin is activated in OHC following noise exposure and now postulate that calcium overload triggers mitochondria-mediated death pathways through activation of Bcl-2-associated death promoter (BAD) b...",
+        "year": "2006",
+        "journal": "Journal of neuroscience research",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16521126/"
+      },
+      {
+        "pmid": "35777727",
+        "title": "Exogenous iron impairs the anti-cancer effect of ascorbic acid both in vitro and in vivo.",
+        "abstract": "The anti-cancer effect of high concentrations of ascorbic acid (AA) has been well established while its underlying mechanisms remain unclear. The association between iron and AA has attracted great attention but was still controversial due to the complicated roles of iron in tumors.",
+        "year": "2023",
+        "journal": "Journal of advanced research",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35777727/"
+      },
+      {
+        "pmid": "21414921",
+        "title": "Bax and calpain mediate excitotoxic oligodendrocyte death induced by activation of both AMPA and kainate receptors.",
+        "abstract": "Sustained activation of AMPA and kainate receptors in rat oligodendrocytes induces cytosolic calcium overload, mitochondrial depolarization, and an increase of reactive oxygen species, resulting in cell death. Here, we provide evidence that Bax, a proapoptotic member of the Bcl-2 protein family, is involved in excitotoxic apoptotic death of oligodendrocytes and that calpain mediates Bax activation. Cultured Bax(-/-) oligodendrocytes, obtained from the optic nerve of Bax knock-out mice, were resi...",
+        "year": "2011",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21414921/"
+      },
+      {
+        "pmid": "26922832",
+        "title": "How do reactive oxygen species and calcium trigger mitochondrial membrane permeabilisation?",
+        "abstract": "Mitochondrial membrane permeabilisation (MMP) is classically considered as a point of no return in several forms of cell death and is involved in numerous diseases such as cancer, neurodegenerative disorders or ischemia/reperfusion injuries. Many studies established that reactive oxygen species (ROS) and Ca(2+) were the prominent inducers of MMP. However, the mechanisms connecting ROS and Ca(2+) to the players of MMP are still a matter of debate.",
+        "year": "2016",
+        "journal": "Biochimica et biophysica acta",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26922832/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Nitric oxide and peroxynitrite in health and disease.",
+        "abstract": "No abstract",
+        "year": "2007",
+        "journal": "Physiol Rev",
+        "pmid": "17237348",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3813
+      },
+      {
+        "title": "Mitochondrial reactive oxygen species (ROS) and ROS-induced ROS release.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Physiol Rev",
+        "pmid": "24987008",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3146
+      },
+      {
+        "title": "Inactivation of the ferroptosis regulator Gpx4 triggers acute renal failure in mice.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Nat Cell Biol",
+        "pmid": "25402683",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2489
+      },
+      {
+        "title": "Ferroptosis: molecular mechanisms and health implications.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Cell Res",
+        "pmid": "33268902",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2385
+      },
+      {
+        "title": "Mechanism and Regulation of NLRP3 Inflammasome Activation.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Trends Biochem Sci",
+        "pmid": "27669650",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1877
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Oxidative stress and neurodegenerative diseases: a review of upstream and downstream antioxidant therapeutic options.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Curr Neuropharmacol",
+        "pmid": "19721819",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1797
+      },
+      {
+        "title": "The integrated stress response.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "EMBO Rep",
+        "pmid": "27629041",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1767
+      },
+      {
+        "title": "Ferroptosis turns 10: Emerging mechanisms, physiological functions, and therapeutic applications.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell",
+        "pmid": "35803244",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1676
+      },
+      {
+        "title": "The molecular machinery of regulated cell death.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cell Res",
+        "pmid": "30948788",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1670
+      },
+      {
+        "title": "The roles of PINK1, parkin, and mitochondrial fidelity in Parkinson's disease.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neuron",
+        "pmid": "25611507",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1530
+      },
+      {
+        "title": "Targeting oxidative stress in disease: promise and limitations of antioxidant therapy.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Nat Rev Drug Discov",
+        "pmid": "34194012",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1461
+      },
+      {
+        "title": "The science of stroke: mechanisms in search of treatments.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Neuron",
+        "pmid": "20670828",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1358
+      },
+      {
+        "title": "Targeting ferroptosis as a vulnerability in cancer.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Nat Rev Cancer",
+        "pmid": "35338310",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1354
+      },
+      {
+        "title": "Cell biology of ischemia/reperfusion injury.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Int Rev Cell Mol Biol",
+        "pmid": "22878108",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1329
+      },
+      {
+        "title": "Oxidative Stress: A Key Modulator in Neurodegenerative Diseases.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Molecules",
+        "pmid": "31013638",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1270
+      },
+      {
+        "title": "Ferroptosis: machinery and regulation.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "32804006",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1262
+      },
+      {
+        "title": "Ferroptosis, a new form of cell death: opportunities and challenges in cancer.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "J Hematol Oncol",
+        "pmid": "30925886",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1209
+      },
+      {
+        "title": "Phosphoinositides: tiny lipids with giant impact on cell regulation.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Physiol Rev",
+        "pmid": "23899561",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1144
+      },
+      {
+        "title": "Diabetic Cardiomyopathy: An Update of Mechanisms Contributing to This Clinical Entity.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Circ Res",
+        "pmid": "29449364",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1093
+      },
+      {
+        "title": "The role of oxidative stress in Parkinson's disease.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "J Parkinsons Dis",
+        "pmid": "24252804",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1065
+      },
+      {
+        "title": "Physiology of Astroglia.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29351512",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1055
+      },
+      {
+        "title": "Reactive oxygen species (ROS)-induced ROS release: a new phenomenon accompanying induction of the mitochondrial permeability transition in cardiac myocytes.",
+        "abstract": "No abstract",
+        "year": "2000",
+        "journal": "J Exp Med",
+        "pmid": "11015441",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1033
+      },
+      {
+        "title": "PGC-1 coactivators: inducible regulators of energy metabolism in health and disease.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "J Clin Invest",
+        "pmid": "16511594",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1032
+      },
+      {
+        "title": "Inflammation in obesity, diabetes, and related disorders.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Immunity",
+        "pmid": "35021057",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1012
+      },
+      {
+        "title": "Sarcopenia: Aging-Related Loss of Muscle Mass and Function.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Physiol Rev",
+        "pmid": "30427277",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 983
+      },
+      {
+        "title": "Autophagy in major human diseases.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "EMBO J",
+        "pmid": "34459017",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 977
+      },
+      {
+        "title": "Mitochondrial dynamics in the regulation of nutrient utilization and energy expenditure.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Cell Metab",
+        "pmid": "23562075",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 969
+      },
+      {
+        "title": "Calcium and ROS: A mutual interplay.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Redox Biol",
+        "pmid": "26296072",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 950
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 60 papers found providing strong experimental support. Includes 30 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 60,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 30
+  }
+}

@@ -70,5 +70,59 @@
     "healthy_ic50": Infinity,
     "simulation_status": "failed",
     "processing_complete": true
+  },
+  {
+    "combination_id": "phase1_combo_004",
+    "parameters": {
+      "combination_id": "phase1_combo_004",
+      "vdac1_affinity": 50.0,
+      "mcu_block_strength": 90.0,
+      "chloride_ic50": 15.0,
+      "phase": 1
+    },
+    "session_id": "BIOELECTRIC_CHAMBERED_20251008133456",
+    "status": "success",
+    "elapsed_time": 768.5308349132538,
+    "selectivity_index": 0.0,
+    "cancer_ic50": Infinity,
+    "healthy_ic50": Infinity,
+    "simulation_status": "failed",
+    "processing_complete": true
+  },
+  {
+    "combination_id": "phase1_combo_005",
+    "parameters": {
+      "combination_id": "phase1_combo_005",
+      "vdac1_affinity": 100.0,
+      "mcu_block_strength": 10.0,
+      "chloride_ic50": 15.0,
+      "phase": 1
+    },
+    "session_id": "BIOELECTRIC_CHAMBERED_20251008134745",
+    "status": "success",
+    "elapsed_time": 688.5344610214233,
+    "selectivity_index": 0.0,
+    "cancer_ic50": Infinity,
+    "healthy_ic50": Infinity,
+    "simulation_status": "failed",
+    "processing_complete": true
+  },
+  {
+    "combination_id": "phase1_combo_006",
+    "parameters": {
+      "combination_id": "phase1_combo_006",
+      "vdac1_affinity": 100.0,
+      "mcu_block_strength": 25.0,
+      "chloride_ic50": 15.0,
+      "phase": 1
+    },
+    "session_id": "BIOELECTRIC_CHAMBERED_20251008135914",
+    "status": "success",
+    "elapsed_time": 901.7300276756287,
+    "selectivity_index": 0.0,
+    "cancer_ic50": Infinity,
+    "healthy_ic50": Infinity,
+    "simulation_status": "failed",
+    "processing_complete": true
   }
 ]

@@ -1,0 +1,329 @@
+{
+  "timestamp": "2025-10-08T10:09:23.346840",
+  "prediction": "CBD shows biphasic dose-response in cellular systems",
+  "validation": {
+    "prediction": "CBD shows biphasic dose-response in cellular systems",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "17965195",
+        "title": "Inhibition of human neutrophil chemotaxis by endogenous cannabinoids and phytocannabinoids: evidence for a site distinct from CB1 and CB2.",
+        "abstract": "Here, we show a novel pharmacology for inhibition of human neutrophil migration by endocannabinoids, phytocannabinoids, and related compounds. The endocannabinoids virodhamine and N-arachidonoyl dopamine are potent inhibitors of N-formyl-l-methionyl-l-leucyl-l-phenylalanine-induced migration of human neutrophils, with IC(50) values of 0.2 and 8.80 nM, respectively. The endocannabinoid anandamide inhibits human neutrophil migration at nanomolar concentrations in a biphasic manner. The phytocannab...",
+        "year": "2008",
+        "journal": "Molecular pharmacology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17965195/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "The endocannabinoid system as an emerging target of pharmacotherapy.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "Pharmacol Rev",
+        "pmid": "16968947",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1398
+      },
+      {
+        "title": "Safety and recommendations for TMS use in healthy subjects and patient populations, with updates on training, ethical and regulatory issues: Expert Guidelines.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Clin Neurophysiol",
+        "pmid": "33243615",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 748
+      },
+      {
+        "title": "Past, present, and future of Parkinson's disease: A special essay on the 200th Anniversary of the Shaking Palsy.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Mov Disord",
+        "pmid": "28887905",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 488
+      },
+      {
+        "title": "Definition of a standard lymphadenectomy in surgery for pancreatic ductal adenocarcinoma: a consensus statement by the International Study Group on Pancreatic Surgery (ISGPS).",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Surgery",
+        "pmid": "25061003",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 397
+      },
+      {
+        "title": "Molecular Targets of Cannabidiol in Neurological Disorders.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neurotherapeutics",
+        "pmid": "26264914",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 367
+      },
+      {
+        "title": "The physiological roles of tau and A\u03b2: implications for Alzheimer's disease pathology and therapeutics.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Acta Neuropathol",
+        "pmid": "32728795",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 262
+      },
+      {
+        "title": "The Endogenous Cannabinoid System: A Budding Source of Targets for Treating Inflammatory and Neuropathic Pain.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Neuropsychopharmacology",
+        "pmid": "28857069",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 191
+      },
+      {
+        "title": "Recent trends in protein and peptide-based biomaterials for advanced drug delivery.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Adv Drug Deliv Rev",
+        "pmid": "32871201",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 157
+      },
+      {
+        "title": "Gone to Pot - A Review of the Association between Cannabis and Psychosis.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Front Psychiatry",
+        "pmid": "24904437",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 157
+      },
+      {
+        "title": "Intracellular cAMP Sensor EPAC: Physiology, Pathophysiology, and Therapeutics Development.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29537337",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 153
+      },
+      {
+        "title": "Role of the cannabinoid system in pain control and therapeutic implications for the management of acute and chronic pain episodes.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "Curr Neuropharmacol",
+        "pmid": "18615144",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 149
+      },
+      {
+        "title": "Integrating Endocannabinoid Signaling and Cannabinoids into the Biology and Treatment of Posttraumatic Stress Disorder.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Neuropsychopharmacology",
+        "pmid": "28745306",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 140
+      },
+      {
+        "title": "Cannabinoids and Epilepsy.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neurotherapeutics",
+        "pmid": "26282273",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 130
+      },
+      {
+        "title": "Essential Oils: Pharmaceutical Applications and Encapsulation Strategies into Lipid-Based Delivery Systems.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Pharmaceutics",
+        "pmid": "33802570",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 114
+      },
+      {
+        "title": "Endocannabinoids in the retina: from marijuana to neuroprotection.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "Prog Retin Eye Res",
+        "pmid": "18725316",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 114
+      },
+      {
+        "title": "Endocannabinoid Regulation of Reward and Reinforcement through Interaction with Dopamine and Endogenous Opioid Signaling.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Neuropsychopharmacology",
+        "pmid": "28653666",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 97
+      },
+      {
+        "title": "Cannabidiol and Other Non-Psychoactive Cannabinoids for Prevention and Treatment of Gastrointestinal Disorders: Useful Nutraceuticals?",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Int J Mol Sci",
+        "pmid": "32357565",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 88
+      },
+      {
+        "title": "The Endocannabinoid System as a Target in Cancer Diseases: Are We There Yet?",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Front Pharmacol",
+        "pmid": "31024307",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 87
+      },
+      {
+        "title": "Care and feeding of the endocannabinoid system: a systematic review of potential clinical interventions that upregulate the endocannabinoid system.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "PLoS One",
+        "pmid": "24622769",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 87
+      },
+      {
+        "title": "The Role of Glutamate Receptors in Epilepsy.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Biomedicines",
+        "pmid": "36979762",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 69
+      },
+      {
+        "title": "Recent Progress on Polysaccharide-Based Hydrogels for Controlled Delivery of Therapeutic Biomolecules.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "ACS Biomater Sci Eng",
+        "pmid": "34137581",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 66
+      },
+      {
+        "title": "Systematic Review of Pharmacological Properties of the Oligodendrocyte Lineage.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Front Cell Neurosci",
+        "pmid": "26903812",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 64
+      },
+      {
+        "title": "THC and CBD: Similarities and differences between siblings.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Neuron",
+        "pmid": "36638804",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 62
+      },
+      {
+        "title": "Targeting strategies for bone diseases: signaling pathways and clinical studies.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37198232",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 58
+      },
+      {
+        "title": "Polymeric Nanoparticles of Brazilian Red Propolis Extract: Preparation, Characterization, Antioxidant and Leishmanicidal Activity.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Nanoscale Res Lett",
+        "pmid": "27316742",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 55
+      },
+      {
+        "title": "Cannabidiol Modulates Fear Memory Formation Through Interactions with Serotonergic Transmission in the Mesolimbic System.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Neuropsychopharmacology",
+        "pmid": "27296152",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 54
+      },
+      {
+        "title": "Glycine receptors and glycine transporters: targets for novel analgesics?",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Mol Life Sci",
+        "pmid": "28791431",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 52
+      },
+      {
+        "title": "Major Phytocannabinoids and Their Related Compounds: Should We Only Search for Drugs That Act on Cannabinoid Receptors?",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Pharmaceutics",
+        "pmid": "34834237",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 47
+      },
+      {
+        "title": "Critical appraisal of the potential use of cannabinoids in cancer management.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Cancer Manag Res",
+        "pmid": "24039449",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 47
+      },
+      {
+        "title": "Potential of Cannabinoid Receptor Ligands as Treatment for Substance Use Disorders.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "CNS Drugs",
+        "pmid": "31549358",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 45
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 31 papers found providing strong experimental support. Includes 27 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 31,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 27
+  }
+}

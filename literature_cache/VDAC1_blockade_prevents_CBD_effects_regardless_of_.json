@@ -1,0 +1,199 @@
+{
+  "timestamp": "2025-10-08T10:08:31.607311",
+  "prediction": "VDAC1 blockade prevents CBD effects regardless of GPCR status",
+  "validation": {
+    "prediction": "VDAC1 blockade prevents CBD effects regardless of GPCR status",
+    "validation_status": "supported",
+    "evidence_quality": 2,
+    "pubmed_papers": [],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Intracellular cAMP Sensor EPAC: Physiology, Pathophysiology, and Therapeutics Development.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29537337",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 153
+      },
+      {
+        "title": "53 &lt;sup&gt;rd&lt;/sup&gt; EASD Annual Meeting of the European Association for the Study of Diabetes : Lisbon, Portugal, 11 - 15 September 2017.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Diabetologia",
+        "pmid": "28795195",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 16
+      },
+      {
+        "title": "Cannabidiol ameliorates mitochondrial disease via PPAR\u03b3 activation in preclinical models.",
+        "abstract": "No abstract",
+        "year": "2024",
+        "journal": "Nat Commun",
+        "pmid": "39231983",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 8
+      },
+      {
+        "title": "Channelopathy of Dravet Syndrome and Potential Neuroprotective Effects of Cannabidiol.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "J Cent Nerv Syst Dis",
+        "pmid": "34992485",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 6
+      },
+      {
+        "title": "Abstracts of the 49th EASD (European Association for the Study of Diabetes) Annual Meeting. September 23-27, 2013. Barcelona, Spain.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Diabetologia",
+        "pmid": "23949610",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3
+      },
+      {
+        "title": "Posters",
+        "abstract": "No abstract",
+        "year": "2024",
+        "journal": "FEBS Open Bio",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1
+      },
+      {
+        "title": "8&lt;sup&gt;th&lt;/sup&gt; German Pharm-Tox Summit 2023 : Abstracts of the 89. Jahrestagung der Deutschen Gesellschaft f\u00fcr Experimentelle und Klinische Pharmakologie und Toxikologie (DGPT) in Zusammenarbeit mit der AGAH.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Naunyn Schmiedebergs Arch Pharmacol",
+        "pmid": "36856776",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1
+      },
+      {
+        "title": "Abstracts of the 8th EBSA (European Biophysical Societies Association) European Biophysics Congress. August 23-27, 2011. Budapest, Hungary.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Eur Biophys J",
+        "pmid": "21847795",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1
+      },
+      {
+        "title": "Posters",
+        "abstract": "No abstract",
+        "year": "2025",
+        "journal": "FEBS Open Bio",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "EACR 2025 Congress: Innovative Cancer Science, 16-19 June 2025.",
+        "abstract": "No abstract",
+        "year": "2025",
+        "journal": "Mol Oncol",
+        "pmid": "40498965",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "Abstracts presented at the 37th Annual Meeting of The Protein Society",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Protein Sci",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "Abstract Book: 25th Congress of the European Hematology Association Virtual Edition, 2020",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Hemasphere",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "ISEV2020 Abstract Book",
+        "abstract": "No abstract",
+        "year": "Unknown",
+        "journal": "J Extracell Vesicles",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "Poster Presentations",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "FEBS J",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "ISNI 2012 Abstracts : B cells and antibodies",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "J Neuroimmunol",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "\"Abstracts of the 78th Annual Meeting of the Japanese Cancer Association; 2019 Sept 26-28; Kyoto, Japan\" as Cancer Science, Supplement 1, Vol 110 (2019).",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cancer Sci",
+        "pmid": "31880058",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      },
+      {
+        "title": "INVITED SPEAKERS\u2019 ABSTRACTS",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "J Carcinog",
+        "pmid": "",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 0
+      }
+    ],
+    "summary": "\u2b50\u2b50 SUPPORTED: 18 papers found providing moderate support. Includes 2 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 0.7,
+    "total_supporting": 18,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 2
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "predictions": [
+    {
+      "id": "P001",
+      "prediction": "VDAC1 conformational change modulates calcium flux",
+      "source": "cbd/validation_suite - already validated",
+      "status": "validated",
+      "evidence_quality": 5,
+      "confidence": 1.0
+    },
+    {
+      "id": "P002",
+      "prediction": "CBD direct action selectivity index exceeds GPCR receptor combinations for cancer cell lethality",
+      "source": "cbd/validation_suite/01_gpcr_combo_vs_cbd.md",
+      "status": "pending",
+      "hypothesis": "Channel-first mechanism: CBD direct > GPCR combinations by 2x"
+    },
+    {
+      "id": "P003",
+      "prediction": "CBD-VDAC1 interactions precede CBD-GPCR interactions temporally",
+      "source": "cbd/validation_suite/02_pla_mito_ensembles.md",
+      "status": "pending",
+      "hypothesis": "CBD-VDAC1 peaks 15+ minutes before CBD-GPCR signals"
+    },
+    {
+      "id": "P004",
+      "prediction": "VDAC1 blockade prevents CBD effects regardless of GPCR status",
+      "source": "cbd/validation_suite/03_vdac1_causality.md",
+      "status": "pending",
+      "hypothesis": "VDAC1 inhibition reduces CBD effect >80%; GPCR inhibition <50%"
+    },
+    {
+      "id": "P005",
+      "prediction": "Pre-stressed mitochondria are more vulnerable to CBD channel disruption",
+      "source": "cbd/validation_suite/04_context_stress_shift.md",
+      "status": "pending",
+      "hypothesis": "Pre-stress increases CBD sensitivity >3x (EC50 shift)"
+    },
+    {
+      "id": "P006",
+      "prediction": "VDAC1 mediates mitochondrial calcium uptake",
+      "source": "mechanistic_convergence",
+      "status": "pending",
+      "hypothesis": "VDAC1 acts as calcium channel in outer mitochondrial membrane"
+    },
+    {
+      "id": "P007",
+      "prediction": "CBD affects mitochondrial membrane potential in cancer cells",
+      "source": "cbd/mechanism",
+      "status": "pending",
+      "hypothesis": "CBD induces mitochondrial depolarization selectively in cancer cells"
+    },
+    {
+      "id": "P008",
+      "prediction": "VDAC1 inhibition affects cancer cell viability",
+      "source": "channel-first mechanism",
+      "status": "pending",
+      "hypothesis": "VDAC1 channel function critical for cancer cell survival"
+    },
+    {
+      "id": "P009",
+      "prediction": "CBD modulates mitochondrial permeability transition pore",
+      "source": "cbd/mechanism",
+      "status": "pending",
+      "hypothesis": "CBD affects mPTP opening through VDAC1"
+    },
+    {
+      "id": "P010",
+      "prediction": "Cannabinoid receptor independent effects of CBD exist",
+      "source": "channel-first mechanism",
+      "status": "pending",
+      "hypothesis": "CBD shows biological effects independent of CB1/CB2 receptors"
+    },
+    {
+      "id": "P011",
+      "prediction": "Mitochondrial calcium overload triggers cell death",
+      "source": "mechanism",
+      "status": "pending",
+      "hypothesis": "Dysregulated mitochondrial calcium causes apoptosis"
+    },
+    {
+      "id": "P012",
+      "prediction": "VDAC1 oligomerization affects channel conductance",
+      "source": "mechanistic_convergence",
+      "status": "pending",
+      "hypothesis": "VDAC1 forms oligomers that modulate permeability"
+    },
+    {
+      "id": "P013",
+      "prediction": "Mitochondrial outer membrane permeabilization involves VDAC1",
+      "source": "apoptosis mechanism",
+      "status": "pending",
+      "hypothesis": "VDAC1 participates in MOMP during apoptosis"
+    },
+    {
+      "id": "P014",
+      "prediction": "Cancer cells have elevated mitochondrial stress compared to healthy cells",
+      "source": "selectivity mechanism",
+      "status": "pending",
+      "hypothesis": "Warburg effect creates mitochondrial dysfunction in cancer"
+    },
+    {
+      "id": "P015",
+      "prediction": "CBD affects endoplasmic reticulum mitochondria contact sites",
+      "source": "mechanistic_convergence",
+      "status": "pending",
+      "hypothesis": "CBD modulates MAM calcium transfer"
+    },
+    {
+      "id": "P016",
+      "prediction": "VDAC1 interacts with Bcl-2 family proteins",
+      "source": "apoptosis mechanism",
+      "status": "pending",
+      "hypothesis": "VDAC1 forms complexes with Bax/Bak during apoptosis"
+    },
+    {
+      "id": "P017",
+      "prediction": "Mitochondrial ATP production depends on calcium signaling",
+      "source": "bioenergetics",
+      "status": "pending",
+      "hypothesis": "Calcium activates mitochondrial dehydrogenases"
+    },
+    {
+      "id": "P018",
+      "prediction": "CBD shows biphasic dose-response in cellular systems",
+      "source": "cbd paradox",
+      "status": "pending",
+      "hypothesis": "Low doses beneficial, high doses toxic - U-shaped curve"
+    },
+    {
+      "id": "P019",
+      "prediction": "Reactive oxygen species production relates to mitochondrial calcium",
+      "source": "mechanism",
+      "status": "pending",
+      "hypothesis": "Mitochondrial calcium overload increases ROS generation"
+    },
+    {
+      "id": "P020",
+      "prediction": "VDAC1 expression is elevated in cancer cells",
+      "source": "selectivity mechanism",
+      "status": "pending",
+      "hypothesis": "Cancer cells upregulate VDAC1 to meet metabolic demands"
+    }
+  ]
+}

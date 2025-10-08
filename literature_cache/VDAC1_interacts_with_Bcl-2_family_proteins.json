@@ -1,0 +1,930 @@
+{
+  "timestamp": "2025-10-08T10:09:16.289745",
+  "prediction": "VDAC1 interacts with Bcl-2 family proteins",
+  "validation": {
+    "prediction": "VDAC1 interacts with Bcl-2 family proteins",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "22204343",
+        "title": "Mitochondrial VDAC1: function in cell life and death and a target for cancer therapy.",
+        "abstract": "Found at the outer mitochondrial membrane, the voltage-dependent anion channel, VDAC, assumes a crucial position in the cell, serving as the main interface between mitochondrial and cellular metabolisms by mediating transport of ions and metabolites. VDAC thus functions as a gatekeeper, controlling cross-talk between mitochondria and the rest of the cell. Moreover, its location at the boundary between the mitochondria and the cytosol enables VDAC to interact with proteins that mediate and regula...",
+        "year": "2012",
+        "journal": "Current medicinal chemistry",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22204343/"
+      },
+      {
+        "pmid": "31501195",
+        "title": "Bcl-2-Protein Family as Modulators of IP",
+        "abstract": "The pro- and antiapoptotic proteins belonging to the B-cell lymphoma-2 (Bcl-2) family exert a critical control over cell-death processes by enabling or counteracting mitochondrial outer membrane permeabilization. Beyond this mitochondrial function, several Bcl-2 family members have emerged as critical modulators of intracellular Ca",
+        "year": "2020",
+        "journal": "Cold Spring Harbor perspectives in biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31501195/"
+      },
+      {
+        "pmid": "28712506",
+        "title": "VDAC1 functions in Ca",
+        "abstract": "In the outer mitochondrial membrane (OMM), the voltage-dependent anion channel 1 (VDAC1) serves as a mitochondrial gatekeeper, controlling the metabolic and energy cross-talk between mitochondria and the rest of the cell. VDAC1 also functions in cellular Ca",
+        "year": "2018",
+        "journal": "Cell calcium",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28712506/"
+      },
+      {
+        "pmid": "12767928",
+        "title": "Identification of the protein-protein contact site and interaction mode of human VDAC1 with Bcl-2 family proteins.",
+        "abstract": "Bcl-2 family of proteins plays differential roles in regulation of mitochondria-mediated apoptosis, by either promoting or inhibiting the release of apoptogenic molecules from mitochondria to cytosol. Bcl-2 family proteins modulate the mitochondrial permeability through interaction with adenine nucleotide translocator (ANT), voltage-dependent anion channel (VDAC), ADP/ATP exchange, or oxidative phosphorylation during apoptosis. Although the mitochondrial homeostasis is affected by the relative r...",
+        "year": "2003",
+        "journal": "Biochemical and biophysical research communications",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12767928/"
+      },
+      {
+        "pmid": "19261612",
+        "title": "Assembly of the mitochondrial apoptosis-induced channel, MAC.",
+        "abstract": "Although Bcl-2 family proteins control intrinsic apoptosis, the mechanisms underlying this regulation are incompletely understood. Patch clamp studies of mitochondria isolated from cells deficient in one or both of the pro-apoptotic proteins Bax and Bak show that at least one of the proteins must be present for formation of the cytochrome c-translocating channel, mitochondrial apoptosis-induced channel (MAC), and that the single channel behaviors of MACs containing exclusively Bax or Bak are sim...",
+        "year": "2009",
+        "journal": "The Journal of biological chemistry",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19261612/"
+      },
+      {
+        "pmid": "33125132",
+        "title": "VDAC upregulation and \u03b1TAT1\u2011mediated \u03b1\u2011tubulin acetylation contribute to tanespimycin\u2011induced apoptosis in Calu\u20111 cells.",
+        "abstract": "Voltage\u2011dependent anion channel 1 (VDAC1) functions as a porin in the mitochondrial outer membrane (MOM) and plays important roles in mitochondria\u2011mediated cell apoptosis. VDAC1 interacts with a variety of proteins, such as Bcl\u20112 family proteins, hexose kinase (HK), adenine nucleotide translocase (ANT) and \u03b1\u2011tubulin. However, the association between VDAC1 and \u03b1\u2011tubulin, particularly between VDAC1 and acetylated \u03b1\u2011tubulin (Ac\u2011\u03b1\u2011tubulin), in apoptosis remains unclear. The present study revealed th...",
+        "year": "2020",
+        "journal": "Oncology reports",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33125132/"
+      },
+      {
+        "pmid": "24052077",
+        "title": "VDAC1-based peptides: novel pro-apoptotic agents and potential therapeutics for B-cell chronic lymphocytic leukemia.",
+        "abstract": "The voltage-dependent anion channel 1 (VDAC1), localized in the outer mitochondrial membrane, mediates metabolic cross-talk between the mitochondrion and the cytoplasm and thus serves a fundamental role in cell energy metabolism. VDAC1 also plays a key role in mitochondria-mediated apoptosis, interacting with anti-apoptotic proteins. Resistance of cancer cells to apoptosis involves quenching the mitochondrial apoptotic pathway by over-expression of anti-apoptotic/pro-survival hexokinase (HK) and...",
+        "year": "2013",
+        "journal": "Cell death & disease",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24052077/"
+      },
+      {
+        "pmid": "25087640",
+        "title": "VDAC phosphorylation, a lipid sensor influencing the cell fate.",
+        "abstract": "The voltage-dependent anion channel (VDAC) or porin is a major membrane protein integrated into the mitochondrial outer membrane in eukaryotes. It is encoded as three isoforms (VDAC1 to 3), which play differential roles in metabolism and cell death. As a channel, VDAC mediates metabolites, ions and water movements through the outer membrane in physiological conditions, but it can also participate to mitochondrial membrane permeabilization, an apoptotic checkpoint in stress and pathological condi...",
+        "year": "2014",
+        "journal": "Mitochondrion",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25087640/"
+      },
+      {
+        "pmid": "28713289",
+        "title": "Mitochondrial VDAC1: A Key Gatekeeper as Potential Therapeutic Target.",
+        "abstract": "Mitochondria are the key source of ATP that fuels cellular functions, and they are also central in cellular signaling, cell division and apoptosis. Dysfunction of mitochondria has been implicated in a wide range of diseases, including neurodegenerative and cardiac diseases, and various types of cancer. One of the key proteins that regulate mitochondrial function is the voltage-dependent anion channel 1 (VDAC1), the most abundant protein on the outer membrane of mitochondria. VDAC1 is the gatekee...",
+        "year": "2017",
+        "journal": "Frontiers in physiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28713289/"
+      },
+      {
+        "pmid": "34929396",
+        "title": "Mitochondrial nicotinic acetylcholine receptors: Mechanisms of functioning and biological significance.",
+        "abstract": "Nicotinic acetylcholine receptors mediate fast synaptic transmission in neuro-muscular junctions and autonomic ganglia and modulate survival, proliferation and neurotransmitter or cytokine release in the brain and non-excitable cells. The neuronal-type nicotinic acetylcholine receptors are expressed in the outer mitochondria membrane to regulate the release of pro-apoptotic substances like cytochrome c or reactive oxygen species. In the intracellular environment, nicotinic acetylcholine receptor...",
+        "year": "2022",
+        "journal": "The international journal of biochemistry & cell biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34929396/"
+      },
+      {
+        "pmid": "10980606",
+        "title": "Bax and Bcl-xL independently regulate apoptotic changes of yeast mitochondria that require VDAC but not adenine nucleotide translocator.",
+        "abstract": "Mitochondria play an essential role in apoptosis by releasing apoptogenic molecules such as cytochrome c and AIF, and some caspases, which are all regulated by Bcl-2 family proteins. Pro-apoptotic Bax and Bak have been shown to induce cytochrome c release and loss of membrane potential (Deltapsi) leading to AIF release in the isolated mitochondria. We have previously shown that Bax and Bak open the voltage-dependent anion channel (VDAC) allowing cytochrome c to pass through the channel, and Bcl-...",
+        "year": "2000",
+        "journal": "Oncogene",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10980606/"
+      },
+      {
+        "pmid": "21530686",
+        "title": "VDAC, a multi-functional mitochondrial protein as a pharmacological target.",
+        "abstract": "Regulation of mitochondrial physiology requires an efficient exchange of molecules between mitochondria and the cytoplasm via the outer mitochondrial membrane (OMM). The voltage-dependent anion channel (VDAC) lies in the OMM and forms a common pathway for the exchange of metabolites between the mitochondria and the cytosol, thus playing a crucial role in the regulation of metabolic and energetic functions of mitochondria. VDAC is also recognized to function in mitochondria-mediated apoptosis and...",
+        "year": "2012",
+        "journal": "Mitochondrion",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21530686/"
+      },
+      {
+        "pmid": "31102594",
+        "title": "The human Bcl-2 family member Bcl-rambo and voltage-dependent anion channels manifest a genetic interaction in Drosophila and cooperatively promote the activation of effector caspases in human cultured cells.",
+        "abstract": "We previously reported that the Bcl-2 family member human Bcl-rambo, also known as BCL2L13, induces apoptosis in human embryonic kidney 293T cells. Mouse Bcl-rambo has recently been reported to mediate mitochondrial fragmentation and mitophagy. In the present study, we showed that the transfection of human Bcl-rambo and its microtubule-associated protein light chain 3-interacting region motif mutant (W276A/I279A) caused mitochondrial fragmentation and the perinuclear accumulation of fragmented m...",
+        "year": "2019",
+        "journal": "Experimental cell research",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31102594/"
+      },
+      {
+        "pmid": "19820692",
+        "title": "VDAC2 is required for truncated BID-induced mitochondrial apoptosis by recruiting BAK to the mitochondria.",
+        "abstract": "Truncated BID (tBID), a proapoptotic BCL2 family protein, induces BAK/BAX-dependent release of cytochrome c and other mitochondrial intermembrane proteins to the cytosol to induce apoptosis. The voltage-dependent anion channels (VDACs) are the primary gates for solutes across the outer mitochondrial membrane (OMM); however, their role in apoptotic OMM permeabilization remains controversial. Here, we report that VDAC2(-/-) (V2(-/-)) mouse embryonic fibroblasts (MEFs) are virtually insensitive to ...",
+        "year": "2009",
+        "journal": "EMBO reports",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19820692/"
+      },
+      {
+        "pmid": "15947792",
+        "title": "Lipid microdomains contribute to apoptosis-associated modifications of mitochondria in T cells.",
+        "abstract": "Plasma membrane lipid microdomains have been considered as a sort of 'closed chamber', where several subcellular activities, including CD95/Fas-mediated proapoptotic signaling, take place. In this work we detected GD3 and GM3 gangliosides in isolated mitochondria from lymphoblastoid CEM cells. Moreover, we demonstrated the presence of microdomains in mitochondria by immunogold transmission electron microscopy. We also showed that GD3, the voltage-dependent anion channel-1 (VDAC-1) and the fissio...",
+        "year": "2005",
+        "journal": "Cell death and differentiation",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15947792/"
+      },
+      {
+        "pmid": "20037155",
+        "title": "Voltage-dependent anion channel 1-based peptides interact with Bcl-2 to prevent antiapoptotic activity.",
+        "abstract": "The antiapoptotic proteins of the Bcl-2 family are expressed at high levels in many types of cancer. However, the mechanism by which Bcl-2 family proteins regulate apoptosis is not fully understood. Here, we demonstrate the interaction of Bcl-2 with the outer mitochondrial membrane protein, voltage-dependent anion channel 1 (VDAC1). A direct interaction of Bcl-2 with bilayer-reconstituted purified VDAC was demonstrated, with Bcl-2 decreasing channel conductance. Expression of Bcl-2-GFP prevented...",
+        "year": "2010",
+        "journal": "The Journal of biological chemistry",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20037155/"
+      },
+      {
+        "pmid": "33082910",
+        "title": "Interaction of TPPP3 with VDAC1 Promotes Endothelial Injury through Activation of Reactive Oxygen Species.",
+        "abstract": "Endothelial injury plays a critical role in the pathogenesis of cardiovascular disorders and metabolic-associated vascular complications which are the leading cause of death worldwide. However, the mechanism underlying endothelial dysfunction is not completely understood. The study is aimed at investigating the role of tubulin polymerization-promoting protein family member 3 (TPPP3) in palmitic acid- (PA-) induced endothelial injury. The effect of TPPP3 on human umbilical vein endothelial cells ...",
+        "year": "2020",
+        "journal": "Oxidative medicine and cellular longevity",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33082910/"
+      },
+      {
+        "pmid": "28608415",
+        "title": "Crystal structural characterization reveals novel oligomeric interactions of human voltage-dependent anion channel 1.",
+        "abstract": "Voltage-dependent anion channel 1 (VDAC1), which is located in the outer mitochondrial membrane, plays important roles in various cellular processes. For example, oligomerization of VDAC1 is involved in the release of cytochrome c to the cytoplasm, leading to apoptosis. However, it is unknown how VDAC1 oligomerization occurs in the membrane. In the present study, we determined high-resolution crystal structures of oligomeric human VDAC1 (hVDAC1) prepared by using an Escherichia coli cell-free pr...",
+        "year": "2017",
+        "journal": "Protein science : a publication of the Protein Society",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28608415/"
+      },
+      {
+        "pmid": "23843527",
+        "title": "Small peptides against the mutant SOD1/Bcl-2 toxic mitochondrial complex restore mitochondrial function and cell viability in mutant SOD1-mediated ALS.",
+        "abstract": "Mutations in superoxide dismutase 1 (SOD1) cause amyotrophic lateral sclerosis (ALS) in 20% of familial cases (fALS). Mitochondria are one of the targets of mutant SOD1 (mutSOD1) toxicity. We previously demonstrated that at the mitochondria, mutSOD1 forms a toxic complex with Bcl-2, which is then converted into a toxic protein via a structural rearrangement that exposes its toxic BH3 domain (Pedrini et al., 2010). Here we now show that formation of this toxic complex with Bcl-2 is the primary ev...",
+        "year": "2013",
+        "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23843527/"
+      },
+      {
+        "pmid": "17209561",
+        "title": "NMR structural investigation of the mitochondrial outer membrane protein VDAC and its interaction with antiapoptotic Bcl-xL.",
+        "abstract": "Bcl-2 family proteins are essential regulators of cell death and exert their primary pro- or antiapoptotic roles at the mitochondrial outer membrane. Previously, pro- and antiapoptotic Bcl-2 proteins have been shown to interact with the voltage-dependent anion channel (VDAC) of the outer mitochondrial membrane. VDAC is a 283-residue integral membrane protein that forms an aqueous pore in the outer mitochondrial membrane, through which metabolites and other small molecules pass between the cytoso...",
+        "year": "2007",
+        "journal": "Biochemistry",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17209561/"
+      },
+      {
+        "pmid": "18755977",
+        "title": "Solution structure of the integral human membrane protein VDAC-1 in detergent micelles.",
+        "abstract": "The voltage-dependent anion channel (VDAC) mediates trafficking of small molecules and ions across the eukaryotic outer mitochondrial membrane. VDAC also interacts with antiapoptotic proteins from the Bcl-2 family, and this interaction inhibits release of apoptogenic proteins from the mitochondrion. We present the nuclear magnetic resonance (NMR) solution structure of recombinant human VDAC-1 reconstituted in detergent micelles. It forms a 19-stranded beta barrel with the first and last strand p...",
+        "year": "2008",
+        "journal": "Science (New York, N.Y.)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18755977/"
+      },
+      {
+        "pmid": "25341036",
+        "title": "Mcl-1 promotes lung cancer cell migration by directly interacting with VDAC to increase mitochondrial Ca2+ uptake and reactive oxygen species generation.",
+        "abstract": "Mcl-1 is an antiapoptotic member of the Bcl-2 family frequently upregulated in non-small cell lung carcinoma (NSCLC). We now report the physiological significance of an interaction between Mcl-1 and the mitochondrial outer membrane-localized voltage-dependent anion channel (VDAC) in NSCLC cell lines. Mcl-1 bound with high affinity to VDAC1 and 3 isoforms but only very weakly to VDAC2 and binding was disrupted by peptides based on the VDAC1 sequence. In A549 cells, reducing Mcl-1 expression level...",
+        "year": "2014",
+        "journal": "Cell death & disease",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25341036/"
+      },
+      {
+        "pmid": "12439336",
+        "title": "Colocalization of BAX with BID and VDAC-1 in nimesulide-induced apoptosis of human colon adenocarcinoma COLO 205 cells.",
+        "abstract": "Cyclooxygenase (COX)-2 inhibitors that belong to non-steroid anti-inflammatory drug family have been shown to have an apoptosis-inducing effect on neoplastic cells. In the present study the effect of nimesulide (NIM), a specific COX-2 inhibitor, on apoptosis and interactions between BCL-2 family death promoters BAX and BID and BAX and VDAC-1 were examined in human colon adenocarcinoma COLO 205 cells. Laser scanning cytometry was applied for the measurement of expression and aggregation of apopto...",
+        "year": "2002",
+        "journal": "Anti-cancer drugs",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12439336/"
+      }
+    ],
+    "semantic_scholar_papers": [
+      {
+        "title": "VDAC upregulation and \u03b1TAT1\u2011mediated \u03b1\u2011tubulin acetylation contribute to tanespimycin\u2011induced apoptosis in Calu\u20111 cells.",
+        "abstract": "Voltage\u2011dependent anion channel 1 (VDAC1) functions as a porin in the mitochondrial outer membrane (MOM) and plays important roles in mitochondria\u2011mediated cell apoptosis. VDAC1 interacts with a variety of proteins, such as Bcl\u20112 family proteins, hexose kinase (HK), adenine nucleotide translocase (ANT) and \u03b1\u2011tubulin. However, the association between VDAC1 and \u03b1\u2011tubulin, particularly between VDAC1 and acetylated \u03b1\u2011tubulin (Ac\u2011\u03b1\u2011tubulin), in apoptosis remains unclear. The present study revealed th",
+        "year": 2020,
+        "citations": 5,
+        "authors": [
+          "Qilin Wang",
+          "Xiangguo Liu"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b9e47fca5c16d4bd78b1986a2f800fca44c50e9d",
+        "open_access": true
+      },
+      {
+        "title": "Bik, a novel death-inducing protein shares a distinct sequence motif with Bcl-2 family proteins and interacts with viral and cellular survival-promoting proteins.",
+        "abstract": "No abstract",
+        "year": 1995,
+        "citations": 484,
+        "authors": [
+          "J. M. Boyd",
+          "G. J. Gallo",
+          "B. Elangovan"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/14a748dc52d4bc7f3adfabbd78b7db608f8be7fa",
+        "open_access": true
+      },
+      {
+        "title": "Bcl-2 family proteins regulate the release of apoptogenic cytochrome c by the mitochondrial channel VDAC",
+        "abstract": "No abstract",
+        "year": 1999,
+        "citations": 2260,
+        "authors": [
+          "S. Shimizu",
+          "M. Narita",
+          "Y. Tsujimoto"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b113a82a2b171983509e623f573043a6c59faac5",
+        "open_access": true
+      },
+      {
+        "title": "Apoptotic mitochondrial poration by a growing list of pore\u2010forming BCL\u20102 family proteins",
+        "abstract": "The pore\u2010forming BCL\u20102 family proteins are effectors of mitochondrial poration in apoptosis initiation. Two atypical effectors\u2014BOK and truncated BID (tBID)\u2014join the canonical effectors BAK and BAX. Gene knockout revealed developmental phenotypes in the absence the effectors, supporting their roles in vivo. During apoptosis effectors are activated and change shape from dormant monomers to dynamic oligomers that associate with and permeabilize mitochondria. BID is activated by proteolysis, BOK acc",
+        "year": 2023,
+        "citations": 12,
+        "authors": [
+          "T. Moldoveanu"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/686cf4083f5152dab94ada17d27380fe7817b47f",
+        "open_access": true
+      },
+      {
+        "title": "Identification of the protein-protein contact site and interaction mode of human VDAC1 with Bcl-2 family proteins.",
+        "abstract": "No abstract",
+        "year": 2003,
+        "citations": 159,
+        "authors": [
+          "Yong Shi",
+          "Jianjun Chen",
+          "C. Weng"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/68adcfb7d3c4caa8e65dab932fd29f40dffda6ac",
+        "open_access": true
+      },
+      {
+        "title": "Telomerase Reverse Transcriptase Contains a BH3-Like Motif and Interacts with BCL-2 Family Members",
+        "abstract": "Upregulation of human telomerase reverse transcriptase (hTERT) expression is an important factor in the cellular survival and cancer. Although growing evidence suggests that hTERT inhibits cellular apoptosis by telomere-independent functions, the mechanisms involved are not fully understood. Here, we show that hTERT contains a BH3-like motif, a short peptide sequence found in BCL-2 family proteins, and interacts with anti-apoptotic BCL-2 family proteins MCL-1 and BCL-xL, suggesting a functional ",
+        "year": 2018,
+        "citations": 14,
+        "authors": [
+          "Young-June Jin",
+          "Long You",
+          "Hye Jeong Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4182c9b3957021860989624d14a35a8ff1a4298f",
+        "open_access": true
+      },
+      {
+        "title": "The p53/p21 Complex Regulates Cancer Cell Invasion and Apoptosis by Targeting Bcl-2 Family Proteins.",
+        "abstract": "The tumor suppressor p53 binds prosurvival Bcl-2 family proteins such as Bcl-w and Bcl-XL to liberate Bax, which in turn exerts proapoptotic or anti-invasive functions depending on stress context. On the basis of our previous finding that p53 interacts with p21, we investigated the possible involvement of p21 in these functions. Here, we report that although p53 can bind Bcl-w alone, it requires p21 to liberate Bax to suppress cell invasion and promote cell death. p21 bound Bcl-w, forming a p53/",
+        "year": 2017,
+        "citations": 164,
+        "authors": [
+          "Eun Mi Kim",
+          "Chan-Hun Jung",
+          "Jongdoo Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/842a04542a21da8dc1dd15e682ed2302e1074634",
+        "open_access": true
+      },
+      {
+        "title": "The BCL-2 family protein BCL-RAMBO interacts and cooperates with GRP75 to promote its apoptosis signaling pathway",
+        "abstract": "The BCL-2 family protein BCL-RAMBO, also known as BCL2-like 13, anchors at the outer mitochondrial membrane and regulates apoptosis, mitochondrial fragmentation, and mitophagy. However, the mechanisms underlying the proapoptotic role of BCL-RAMBO remain unclear. In the present study, we demonstrated that BCL-RAMBO interacted with glucose-regulated protein 75 (GRP75), also known as heat shock protein family A member 9, and mortalin using co-immunoprecipitation and glutathione S -transferase-based",
+        "year": 2023,
+        "citations": 4,
+        "authors": [
+          "Jinghong Xu",
+          "T. Hashino",
+          "Reiji Tanaka"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c33f9a3d1f135d2f86edfae740da9bbbbd3653a4",
+        "open_access": true
+      },
+      {
+        "title": "The Bcl\u20102 family protein bid interacts with the ER stress sensor IRE1 to differentially modulate its RNase activity",
+        "abstract": "IRE1 is a transmembrane signalling protein that activates the unfolded protein response under endoplasmic reticulum stress. IRE1 is endowed with kinase and endoribonuclease activities. The ribonuclease activity of IRE1 can switch substrate specificities to carry out atypical splicing of Xbp1 mRNA or trigger the degradation of specific mRNAs. The mechanisms regulating the distinct ribonuclease activities of IRE1 have yet to be fully understood. Here, we report the Bcl\u20102 family protein Bid as a no",
+        "year": 2023,
+        "citations": 5,
+        "authors": [
+          "Samirul Bashir",
+          "Mariam Banday",
+          "Ozaira Qadri"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/37101bb1929f666764441d50f9cb2921aaae48e6",
+        "open_access": true
+      },
+      {
+        "title": "Structural plasticity of BCL-2 family proteins and its functional implication in apoptosis",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 0,
+        "authors": [
+          "Minjoo Choi"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/48231e3dbfb294049cbccb30dec2571b864e1370",
+        "open_access": true
+      },
+      {
+        "title": "Antiapoptotic Bcl-2 family proteins BCL-xL and MCL-1 integrate neural progenitor survival and proliferation during postnatal cerebellar neurogenesis",
+        "abstract": "No abstract",
+        "year": 2020,
+        "citations": 10,
+        "authors": [
+          "Katherine A Veleta",
+          "Abigail H. Cleveland",
+          "Benjamin R Babcock"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/58988250f1601a17b936aff197e5a8c75e7b76d2",
+        "open_access": true
+      },
+      {
+        "title": "Underphosphorylated BAD interacts with diverse antiapoptotic Bcl-2 family proteins to regulate apoptosis",
+        "abstract": "No abstract",
+        "year": 2001,
+        "citations": 57,
+        "authors": [
+          "J. Bae",
+          "S. Hsu",
+          "C. Leo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b9a8465018a8e5946817f15a67a98df8ae556b77",
+        "open_access": true
+      },
+      {
+        "title": "Overview of BCL-2 Family Proteins and Therapeutic Potentials.",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 35,
+        "authors": [
+          "Jason D. Huska",
+          "Heather M. Lamb",
+          "J. Marie Hardwick"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/df9bc8bffec055f66ec4c0937b1dcd7ad58c4cb8",
+        "open_access": true
+      },
+      {
+        "title": "B\u2010cell lymphoma\u20102 family proteins in the crosshairs: Small molecule inhibitors and activators for cancer therapy",
+        "abstract": "The B\u2010cell lymphoma\u20102 (BCL\u20102) family of proteins plays a crucial role in the regulation of apoptosis, offering a dual mechanism for its control. Numerous studies have established a strong association between gene disorders of these proteins and the proliferation of diverse cancer cell types. Consequently, the identification and development of drugs targeting BCL\u20102 family proteins have emerged as a prominent area in antitumor therapy. Over the last two decades, several small\u2010molecules have been d",
+        "year": 2023,
+        "citations": 10,
+        "authors": [
+          "Qineng Gong",
+          "Haojie Wang",
+          "Mi Zhou"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3c1074a122c87791857a3eff703c3c67073e9902",
+        "open_access": true
+      },
+      {
+        "title": "Bcl-2 Family of Proteins in the Control of Mitochondrial Calcium Signalling: An Old Chap with New Roles",
+        "abstract": "Bcl-2 family proteins are considered as one of the major regulators of apoptosis. Indeed, this family is known to control the mitochondrial outer membrane permeabilization (MOMP): a central step in the mitochondrial pathway of apoptosis. However, in recent years Bcl-2 family members began to emerge as a new class of intracellular calcium (Ca2+) regulators. At mitochondria-ER contacts (MERCs) these proteins are able to interact with major Ca2+ transporters, thus controlling mitochondrial Ca2+ hom",
+        "year": 2021,
+        "citations": 77,
+        "authors": [
+          "Jordan L. Morris",
+          "G. Gillet",
+          "J. Prudent"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/344f5f5266ae225c55c792f4bcb42eae62e95262",
+        "open_access": true
+      },
+      {
+        "title": "An insight into the mechanistic role of Beclin 1 and its inhibition by prosurvival Bcl-2 family proteins",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 45,
+        "authors": [
+          "B. Ku",
+          "J. Woo",
+          "Chengyu Liang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/86fd42ce474b35dc79a6e52ece853f072f328678",
+        "open_access": true
+      },
+      {
+        "title": "Bcl-2 family proteins in breast development and cancer: could Mcl-1 targeting overcome therapeutic resistance?",
+        "abstract": "Apoptosis, cell death executed by caspases, is essential to normal breast development and homeostasis. Pro-apoptotic and anti-apoptotic signals are tightly regulated in normal breast epithelial cells. Dysregulation of this balance is required for breast tumorigenesis and increases acquired resistance to treatments, including molecularly targeted therapies, radiation and chemotherapies. The pro-apoptotic or anti-apoptotic Bcl-2 family members interact with each other to maintain mitochondrial int",
+        "year": 2015,
+        "citations": 99,
+        "authors": [
+          "M. Williams",
+          "R. Cook"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3c633f362939867e99a2fb0551c455a1dd6f939b",
+        "open_access": true
+      },
+      {
+        "title": "Bcl-2 family proteins and cancer",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 907,
+        "authors": [
+          "K. Yip",
+          "John Calvin Reed"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d80fc6a5e548ae51f1009667993452e92bf85db8",
+        "open_access": true
+      },
+      {
+        "title": "Xanthurenic acid translocates proapoptotic Bcl-2 family proteins into mitochondria and impairs mitochondrial function",
+        "abstract": "BackgroundXanthurenic acid is an endogenous molecule produced by tryptophan degradation, produced in the cytoplasm and mitochondria. Its accumulation can be observed in aging-related diseases, e.g. senile cataract and infectious disease. We previously reported that xanthurenic acid provokes apoptosis, and now present a study of the response of mitochondria to xanthurenic acid.ResultsXanthurenic acid at 10 or 20 \u03bcM in culture media of human aortic smooth muscle cells induces translocation of the ",
+        "year": 2004,
+        "citations": 17,
+        "authors": [
+          "H. Malina",
+          "O. Hess"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/0540a39307cb7ad2fd93978a4686749ea6e9e3b1",
+        "open_access": true
+      },
+      {
+        "title": "Efficacy and specificity of inhibitors of BCL-2 family protein interactions assessed by affinity measurements in live cells",
+        "abstract": "Cytoplasmic and membrane-bound BCL-2 family proteins regulate apoptosis, a form of programmed cell death, via dozens of binary protein interactions confounding measurement of the effects of inhibitors in live cells. In cancer, apoptosis is frequently dysregulated, and cell survival depends on antiapoptotic proteins binding to and inhibiting proapoptotic BH3 proteins. The clinical success of BH3 mimetic inhibitors of antiapoptotic proteins has spawned major efforts by the pharmaceutical industry ",
+        "year": 2022,
+        "citations": 20,
+        "authors": [
+          "E. Osterlund",
+          "Nehad Hirmiz",
+          "James M. Pemberton"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/48d83bbc3904ee8b89087b42f79ec8d2c82082f3",
+        "open_access": true
+      },
+      {
+        "title": "Multiple functions of BCL-2 family proteins.",
+        "abstract": "No abstract",
+        "year": 2013,
+        "citations": 603,
+        "authors": [
+          "J. M. Hardwick",
+          "L. Soane"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/24a931ee87d2ff32e4bb636feef474d3f5afc132",
+        "open_access": true
+      },
+      {
+        "title": "Biological properties of the BCL-2 family protein BCL-RAMBO, which regulates apoptosis, mitochondrial fragmentation, and mitophagy",
+        "abstract": "Mitochondria play an essential role in the regulation of cellular stress responses, including cell death. Damaged mitochondria are removed by fission and fusion cycles and mitophagy, which counteract cell death. BCL-2 family proteins possess one to four BCL-2 homology domains and regulate apoptosis signaling at mitochondria. BCL-RAMBO, also known as BCL2-like 13 (BCL2L13), was initially identified as one of the BCL-2 family proteins inducing apoptosis. Mitophagy receptors recruit the ATG8 family",
+        "year": 2022,
+        "citations": 12,
+        "authors": [
+          "T. Kataoka"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/5b36de23eebf351d087648ad5d8b6ef310f9fc7f",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 2307: The p53/p21 complex is a functional unit that regulates cancer cell invasion and apoptosis by targeting Bcl-2 family proteins",
+        "abstract": "No abstract",
+        "year": 2017,
+        "citations": 0,
+        "authors": [
+          "Eun Mi Kim",
+          "H. Um"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d45044296cd12d099b89e4ef38147175f83164d1",
+        "open_access": true
+      },
+      {
+        "title": "Bcl-2-family proteins and hematologic malignancies: history and future prospects.",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 343,
+        "authors": [
+          "John Calvin Reed"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4230dfc272993c56a2dbdb2bf622b8a078b8cbce",
+        "open_access": true
+      },
+      {
+        "title": "Hsp 90 inhibitor SNX-2112 inhibits cell growth by regulating Bcl-2 family proteins and cyclin proteins in MCF-7 cells",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 0,
+        "authors": [
+          "Pengfei Deng"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/f5046dc117a83edc3911468b97ba5809570407d6",
+        "open_access": true
+      },
+      {
+        "title": "Noxa, a BH3-only member of the Bcl-2 family and candidate mediator of p53-induced apoptosis.",
+        "abstract": "No abstract",
+        "year": 2000,
+        "citations": 2184,
+        "authors": [
+          "Eri Oda",
+          "Rieko Ohki",
+          "H. Murasawa"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4b56fff1ae14c328af2d29ce3c6d4a4c0f8545ae",
+        "open_access": true
+      },
+      {
+        "title": "Functional insights of plant bcl-2\u2013associated ahanogene (BAG) proteins: Multi-taskers in diverse cellular signal transduction pathways",
+        "abstract": "Bcl-2-associated athanogene (BAG) gene family is a highly conserved molecular chaperone cofactor in evolution from yeast to humans and plants playing important roles in a variety of signal pathways. Plant BAG proteins have special structures, especially those containing CaM-binding IQ motifs which are unique to plants. While early studies focused more on the structure and physiological function of plant BAGs, recent studies have revealed many novel functional mechanisms involved in multiple cell",
+        "year": 2023,
+        "citations": 14,
+        "authors": [
+          "Hailong Jiang",
+          "Xiaoya Liu",
+          "Peixiang Xiao"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/41d65bcbc8f415d64c681df21064964fe4e465dc",
+        "open_access": true
+      },
+      {
+        "title": "BCL\u20102 family proteins: Regulators of cell death involved in the pathogenesis of cancer and resistance to therapy",
+        "abstract": "No abstract",
+        "year": 1996,
+        "citations": 490,
+        "authors": [
+          "John Calvin Reed",
+          "T. Miyashita",
+          "S. Takayama"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/ded04940dd0d41c7ef9175c103867946542ef19e",
+        "open_access": true
+      },
+      {
+        "title": "B Cell Lymphoma-2 (BCL-2) Homology Domain 3 (BH3) Mimetics Demonstrate Differential Activities Dependent upon the Functional Repertoire of Pro- and Anti-apoptotic BCL-2 Family Proteins*",
+        "abstract": "Background: BH3 mimetics are promising chemotherapeutics, but their full mechanisms of action are underexplored. Results: BAX, BID, and BIM directly influence BH3 mimetics to pharmacologically inhibit anti-apoptotic BCL-2 proteins. Conclusion: BH3 mimetics display differential activities that are dependent upon both anti- and proapoptotic BCL-2 members function. Significance: Understanding how BH3 mimetics function within the BCL-2 family repertoire will improve the utility of these drugs. The B",
+        "year": 2014,
+        "citations": 29,
+        "authors": [
+          "Thibaud T. Renault",
+          "R. Elkholi",
+          "A. Bharti."
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4e99a1492db807b9f7e84b323b108c5e7acbeaa5",
+        "open_access": true
+      },
+      {
+        "title": "Regulation of Placental Autophagy by the Bcl-2 Family Proteins Myeloid Cell Leukemia Factor 1 (Mcl-1) and Matador/Bcl-2 Related Ovarian Killer (Mtd/Bok)",
+        "abstract": "No abstract",
+        "year": 2012,
+        "citations": 0,
+        "authors": [
+          "M. Kalkat"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/144d5f1e33399011dd49ddbd47bc841078f557d4",
+        "open_access": true
+      }
+    ],
+    "europepmc_papers": [
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Autophagy and the integrated stress response.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Mol Cell",
+        "pmid": "20965422",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2558
+      },
+      {
+        "title": "Ferroptosis: process and function.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Cell Death Differ",
+        "pmid": "26794443",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2422
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Self-consumption: the interplay of autophagy and apoptosis.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "24401948",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1524
+      },
+      {
+        "title": "The role of mitochondria in apoptosis*.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Annu Rev Genet",
+        "pmid": "19659442",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1268
+      },
+      {
+        "title": "Reactive Oxygen Species in Metabolic and Inflammatory Signaling.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Circ Res",
+        "pmid": "29700084",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1223
+      },
+      {
+        "title": "Autophagy in mammalian development and differentiation.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Nat Cell Biol",
+        "pmid": "20811354",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1107
+      },
+      {
+        "title": "Chaperone-mediated coupling of endoplasmic reticulum and mitochondrial Ca2+ channels.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "J Cell Biol",
+        "pmid": "17178908",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1034
+      },
+      {
+        "title": "Innate immune pattern recognition: a cell biological perspective.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Annu Rev Immunol",
+        "pmid": "25581309",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1016
+      },
+      {
+        "title": "PAMPs and DAMPs: signal 0s that spur autophagy and immunity.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Immunol Rev",
+        "pmid": "22889221",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 821
+      },
+      {
+        "title": "Bax interacts with the permeability transition pore to induce permeability transition and cytochrome c release in isolated mitochondria.",
+        "abstract": "No abstract",
+        "year": "1998",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "9843949",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 674
+      },
+      {
+        "title": "Initiation and perpetuation of NLRP3 inflammasome activation and assembly.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Immunol Rev",
+        "pmid": "25879282",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 596
+      },
+      {
+        "title": "Mitochondrial dysfunction and oxidative stress in Parkinson's disease.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Prog Neurobiol",
+        "pmid": "23643800",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 560
+      },
+      {
+        "title": "Mitochondria and mitophagy: the yin and yang of cell death control.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Circ Res",
+        "pmid": "23065344",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 558
+      },
+      {
+        "title": "Ubiquitination and selective autophagy.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Cell Death Differ",
+        "pmid": "22722335",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 539
+      },
+      {
+        "title": "Mitochondrial dynamics in health and disease: mechanisms and potential targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37669960",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 500
+      },
+      {
+        "title": "The functional universe of membrane contact sites.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "31732717",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 489
+      },
+      {
+        "title": "Solution structure of the integral human membrane protein VDAC-1 in detergent micelles.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "Science",
+        "pmid": "18755977",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 484
+      },
+      {
+        "title": "Mechanisms of action of Bcl-2 family proteins.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Cold Spring Harb Perspect Biol",
+        "pmid": "23545417",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 466
+      },
+      {
+        "title": "Parkin mediates proteasome-dependent protein degradation and rupture of the outer mitochondrial membrane.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "J Biol Chem",
+        "pmid": "21454557",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 465
+      },
+      {
+        "title": "Regulation and metabolic functions of mTORC1 and mTORC2.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Physiol Rev",
+        "pmid": "33599151",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 456
+      },
+      {
+        "title": "Ferroptosis: a cell death connecting oxidative stress, inflammation and cardiovascular diseases.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Cell Death Discov",
+        "pmid": "34312370",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 453
+      },
+      {
+        "title": "Tom20 senses iron-activated ROS signaling to promote melanoma cell pyroptosis.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Res",
+        "pmid": "30287942",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 443
+      },
+      {
+        "title": "Autophagy: Regulator of cell death.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Cell Death Dis",
+        "pmid": "37794028",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 434
+      },
+      {
+        "title": "Cell biology. Metabolic control of cell death.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Science",
+        "pmid": "25237106",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 431
+      },
+      {
+        "title": "Mitophagy receptor FUNDC1 regulates mitochondrial dynamics and mitophagy.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "27050458",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 406
+      },
+      {
+        "title": "Endoplasmic reticulum stress: molecular mechanism and therapeutic targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37709773",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 405
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 83 papers found providing strong experimental support. Includes 42 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 83,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 42
+  }
+}

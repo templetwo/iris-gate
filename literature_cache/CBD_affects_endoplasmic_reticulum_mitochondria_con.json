@@ -1,0 +1,728 @@
+{
+  "timestamp": "2025-10-08T10:09:11.530868",
+  "prediction": "CBD affects endoplasmic reticulum mitochondria contact sites",
+  "validation": {
+    "prediction": "CBD affects endoplasmic reticulum mitochondria contact sites",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [],
+    "semantic_scholar_papers": [
+      {
+        "title": "Effects of DON on Mitochondrial Function, Endoplasmic Reticulum Stress, and Endoplasmic Reticulum Mitochondria Contact Sites in the Jejunum of Piglets.",
+        "abstract": "Recent research has emphasized the significance of investigating the interplay between organelles, with endoplasmic reticulum mitochondria contact sites (ERMCSs) being recognized as critical signaling hubs between organelles. The objective of the current study was to assess the impact of deoxynivalenol (DON) on jejunal mitochondria, ER, and ERMCSs. Twelve piglets (35 d, 10.22 \u00b1 0.35 kg) were randomized into two groups: control group, basal diet; the DON group, basal diet + 1.5 mg/kg DON. The fin",
+        "year": 2023,
+        "citations": 11,
+        "authors": [
+          "Xin Li",
+          "Feiyang Gou",
+          "K. Xiao"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/85d5a513dbcf06c2a5263d3345afddde53e446da",
+        "open_access": true
+      },
+      {
+        "title": "Cholesterol induction in CD8+ T cell exhaustion in colorectal cancer via the regulation of endoplasmic reticulum-mitochondria contact sites",
+        "abstract": "No abstract",
+        "year": 2023,
+        "citations": 16,
+        "authors": [
+          "Shuwen Han",
+          "Yinhang Wu",
+          "Zhuang Jing"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/2c34726de6459cecbb100cd544ba258453f7fa7e",
+        "open_access": true
+      },
+      {
+        "title": "2-BFI enhances the proliferation of SH-SY5Y cells with \ufffduorosis by stabilizing endoplasmic reticulum\u2013mitochondria contact sites and inhibiting activation of NLRP3 in\ufffdammasomes",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 0,
+        "authors": [
+          "R. Chen"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/9c353ecc9247c217781f3f14b5a143db05d2c9a4",
+        "open_access": true
+      },
+      {
+        "title": "Inter-organellar Communication in Parkinson's and Alzheimer's Disease: Looking Beyond Endoplasmic Reticulum-Mitochondria Contact Sites",
+        "abstract": "Neurodegenerative diseases (NDs) are generally considered proteinopathies but whereas this may initiate disease in familial cases, onset in sporadic diseases may originate from a gradually disrupted organellar homeostasis. Herein, endolysosomal abnormalities, mitochondrial dysfunction, endoplasmic reticulum (ER) stress, and altered lipid metabolism are commonly observed in early preclinical stages of major NDs, including Parkinson's disease (PD) and Alzheimer's disease (AD). Among the multitude ",
+        "year": 2022,
+        "citations": 25,
+        "authors": [
+          "Stephanie Vrijsen",
+          "C\u00e9line Vrancx",
+          "M. Del Vecchio"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/8d0aac35cd208b6b26acd05f4bd133799d065f1a",
+        "open_access": true
+      },
+      {
+        "title": "Seipin localizes at endoplasmic-reticulum-mitochondria contact sites to control mitochondrial calcium import and metabolism in adipocytes.",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 53,
+        "authors": [
+          "Yoann Combot",
+          "Veijo T. Salo",
+          "G. Chadeuf"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/e74905e732f43370011c0e744252a9ebf218fc96",
+        "open_access": true
+      },
+      {
+        "title": "The role of endoplasmic reticulum-mitochondria contact sites in the control of glucose homeostasis: an update",
+        "abstract": "The contact sites that the endoplasmic reticulum (ER) forms with mitochondria, called mitochondria-associated membranes (MAMs), are a hot topic in biological research, and both their molecular determinants and their numerous roles in several signaling pathways are is continuously evolving. MAMs allow the exchange between both organelles of lipids, calcium (Ca2+), and likely reactive oxygen species, allowing adaptations of both cellular bioenergetics and cell fate depending of cellular needs or s",
+        "year": 2018,
+        "citations": 194,
+        "authors": [
+          "J. Rieusset"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/bc580744044635be65cffef0d605b2ad95e230f8",
+        "open_access": true
+      },
+      {
+        "title": "Endoplasmic Reticulum\u2013Mitochondria Contact Sites\u2014Emerging Intracellular Signaling Hubs",
+        "abstract": "It has become apparent that our textbook illustration of singular isolated organelles is obsolete. In reality, organelles form complex cooperative networks involving various types of organelles. Light microscopic and ultrastructural studies have revealed that mitochondria\u2013endoplasmic reticulum (ER) contact sites (MERCSs) are abundant in various tissues and cell types. Indeed, MERCSs have been proposed to play critical roles in various biochemical and signaling functions such as Ca2+ homeostasis,",
+        "year": 2021,
+        "citations": 48,
+        "authors": [
+          "Saeko Aoyama-Ishiwatari",
+          "Y. Hirabayashi"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/facfa2ac76d1bff1313936667285f74c19ae97b5",
+        "open_access": true
+      },
+      {
+        "title": "2-BFI Provides Neuroprotection Against Fluorosis by Stabilizing Endoplasmic Reticulum\u2013Mitochondria Contact Sites and Inhibiting Activation of the NLRP3 Inflammasome",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 2,
+        "authors": [
+          "R. Chen",
+          "Wan Xu",
+          "Yifu Sun"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/28fd8714ef633168d25e2804d788170e493e6646",
+        "open_access": true
+      },
+      {
+        "title": "Endoplasmic Reticulum\u2013Mitochondria Contact Sites and Neurodegeneration",
+        "abstract": "Endoplasmic reticulum\u2013mitochondria contact sites (ERMCSs) are dynamic contact regions with a distance of 10\u201330 nm between the endoplasmic reticulum and mitochondria. Endoplasmic reticulum\u2013mitochondria contact sites regulate various biological processes, including lipid transfer, calcium homeostasis, autophagy, and mitochondrial dynamics. The dysfunction of ERMCS is closely associated with various neurodegenerative diseases, including Parkinson\u2019s disease, Alzheimer\u2019s disease, and amyotrophic late",
+        "year": 2020,
+        "citations": 59,
+        "authors": [
+          "Lingna Xu",
+          "Xi Wang",
+          "Chao Tong"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/738e919e4bcef8c0db335f9b83293640a02c9412",
+        "open_access": true
+      },
+      {
+        "title": "Mutations in RHOT1 Disrupt Endoplasmic Reticulum\u2013Mitochondria Contact Sites Interfering with Calcium Homeostasis and Mitochondrial Dynamics in Parkinson's Disease",
+        "abstract": "Abstract Aims: The outer mitochondrial membrane protein Miro1 is a crucial player in mitochondrial dynamics and calcium homeostasis. Recent evidence indicated that Miro1 mediates calcium-induced mitochondrial shape transition, which is a prerequisite for the initiation of mitophagy. Moreover, altered Miro1 protein levels have emerged as a shared feature of monogenic and sporadic Parkinson's disease (PD), but, so far, no disease-associated variants in RHOT1 have been identified. Here, we aim to e",
+        "year": 2019,
+        "citations": 68,
+        "authors": [
+          "Dajana Grossmann",
+          "Clara Berenguer-Escuder",
+          "Marie E Bellet"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/5454e3089e906c9bb87bba19b2394a8233ea4f6b",
+        "open_access": true
+      },
+      {
+        "title": "Miga-mediated endoplasmic reticulum\u2013mitochondria contact sites regulate neuronal homeostasis",
+        "abstract": "Endoplasmic reticulum (ER)\u2013mitochondria contact sites (ERMCSs) are crucial for multiple cellular processes such as calcium signaling, lipid transport, and mitochondrial dynamics. However, the molecular organization, functions, regulation of ERMCS, and the physiological roles of altered ERMCSs are not fully understood in higher eukaryotes. We found that Miga, a mitochondrion located protein, markedly increases ERMCSs and causes severe neurodegeneration upon overexpression in fly eyes. Miga intera",
+        "year": 2020,
+        "citations": 36,
+        "authors": [
+          "Lingna Xu",
+          "Xi Wang",
+          "Jia Zhou"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1e87c91cbd540a5647cb334d3a01582198d554f3",
+        "open_access": true
+      },
+      {
+        "title": "Silver nanoparticles induce SH-SY5Y cell apoptosis via endoplasmic reticulum- and mitochondrial pathways that lengthen endoplasmic reticulum-mitochondria contact sites and alter inositol-3-phosphate receptor function.",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 81,
+        "authors": [
+          "Lin Li",
+          "J. Cui",
+          "Zi Liu"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/546df9b72b036d85eb1884398130125b6335116e",
+        "open_access": true
+      },
+      {
+        "title": "Author response: Miga-mediated endoplasmic reticulum\u2013mitochondria contact sites regulate neuronal homeostasis",
+        "abstract": "No abstract",
+        "year": 2020,
+        "citations": 0,
+        "authors": [
+          "Lingna Xu",
+          "Xi Wang",
+          "Jia Zhou"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b54ce1cc3072fdd3e9ec7f880aa25b4b7c9fa57d",
+        "open_access": true
+      },
+      {
+        "title": "Decision letter: Miga-mediated endoplasmic reticulum\u2013mitochondria contact sites regulate neuronal homeostasis",
+        "abstract": "No abstract",
+        "year": 2020,
+        "citations": 0,
+        "authors": [
+          "Beno\u00eet Kornmann"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/ccd937f7346d0a5aa01918c20a1934684f470da0",
+        "open_access": true
+      },
+      {
+        "title": "ORP5 Transfers Phosphatidylserine to Mitochondria and Regulates Mitochondrial Calcium Uptake at Endoplasmic Reticulum - Mitochondria Contact Sites",
+        "abstract": "No abstract",
+        "year": 2019,
+        "citations": 1,
+        "authors": [
+          "Leila Rochin",
+          "C\u00e9cile Sauvanet",
+          "Eeva J\u00e4\u00e4skel\u00e4inen"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/747da6788e7ab3b28ae1e835c163171292bddc5c",
+        "open_access": true
+      },
+      {
+        "title": "ORP5 Transfers Phosphatidylserine To Mitochondria And Regulates Mitochondrial Calcium Uptake At Endoplasmic Reticulum - Mitochondria Contact Sites",
+        "abstract": "No abstract",
+        "year": 2019,
+        "citations": 1,
+        "authors": [
+          "B. Ugur"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/9c72967f0ea12ade68d3baabb84f1034d8fb7431",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondria\u2013Endoplasmic Reticulum Contact Sites Dynamics and Calcium Homeostasis Are Differentially Disrupted in PINK1\u2010PD or PRKN\u2010PD Neurons",
+        "abstract": "It is generally believed that the pathogenesis of PINK1/parkin\u2010related Parkinson's disease (PD) is due to a disturbance in mitochondrial quality control. However, recent studies have found that PINK1 and Parkin play a significant role in mitochondrial calcium homeostasis and are involved in the regulation of mitochondria\u2013endoplasmic reticulum contact sites (MERCSs).",
+        "year": 2023,
+        "citations": 13,
+        "authors": [
+          "Dajana Grossmann",
+          "Nina Malburg",
+          "Hannes Gla\u00df"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/38a04b93ae156b501ce0522970c490795e7e073c",
+        "open_access": true
+      },
+      {
+        "title": "Key genes expressed in mitochondria\u2011endoplasmic reticulum contact sites in cancer (Review)",
+        "abstract": "Cell fate is critically affected by mitochondrial activity, from ATP production to metabolism, Ca2+ homeostasis and signaling. These actions are regulated by proteins expressed in mitochondria (Mt)-endoplasmic reticulum contact sites (MERCSs). The literature supports the fact that disruption to the physiology of the Mt and/or MERCSs can be due to alterations in the Ca2+ influx/efflux, which further regulates autophagy and apoptosis activity. The current review presents the findings of numerous s",
+        "year": 2023,
+        "citations": 4,
+        "authors": [
+          "Sophia C. Themistocleous",
+          "P. Christodoulou",
+          "Theodora-Christina Kyriakou"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/30db2c724b5214c55a19b9c9621821d230c247b2",
+        "open_access": true
+      },
+      {
+        "title": "The p97-UBXD8 complex regulates ER-Mitochondria contact sites by altering membrane lipid saturation and composition",
+        "abstract": "Inter-organellar contacts are hubs for several critical cellular processes, such as lipid synthesis. Here Ganji et al. show that the p97-UBXD8 complex modulates contacts by regulating membrane lipid composition and saturation. The intimate association between the endoplasmic reticulum (ER) and mitochondrial membranes at ER-Mitochondria contact sites (ERMCS) is a platform for critical cellular processes, particularly lipid synthesis. How contacts are remodeled and the impact of altered contacts o",
+        "year": 2023,
+        "citations": 27,
+        "authors": [
+          "R. Ganji",
+          "J. Paulo",
+          "Yuecheng Xi"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1fcef3bd29e71ce8b57c235b4d05e3243a683938",
+        "open_access": true
+      },
+      {
+        "title": "ORP5 TRANSFERS PHOSPHATIDYLSERINE TO MITOCHONDRIA AND 1 REGULATES MITOCHONDRIAL CALCIUM UPTAKE AT ENDOPLASMIC 2 RETICULUM-MITOCHONDRIA CONTACT SITES 3 4",
+        "abstract": "No abstract",
+        "year": 2019,
+        "citations": 9,
+        "authors": [
+          "Leila Rochin",
+          "C\u00e9cile Sauvanet",
+          "Eeva J\u00e4\u00e4skel\u00e4inen"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/961d1e0804ff16892d62cf79f9b5c86d5631e9b4",
+        "open_access": true
+      },
+      {
+        "title": "The ER-SURF pathway uses ER-mitochondria contact sites for protein targeting to mitochondria",
+        "abstract": "Most mitochondrial proteins are synthesized on cytosolic ribosomes and imported into mitochondria in a post-translational reaction. Mitochondrial precursor proteins which use the ER-SURF pathway employ the surface of the endoplasmic reticulum (ER) as an important sorting platform. How they reach the mitochondrial import machinery from the ER is not known. Here we show that mitochondrial contact sites play a crucial role in the ER-to-mitochondria transfer of precursor proteins. The ER encounter s",
+        "year": 2023,
+        "citations": 24,
+        "authors": [
+          "Christian Koch",
+          "M. R\u00e4schle",
+          "C. Prescianotto\u2010Baschong"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/02104179cb01cc48936095e373d71e12752841a5",
+        "open_access": true
+      },
+      {
+        "title": "The role of endoplasmic reticulum-mitochondria contact sites and mitochondrial phospholipid composition in Saccharomyces cerevisiae acetic acid-induced apoptosis",
+        "abstract": "No abstract",
+        "year": 2016,
+        "citations": 0,
+        "authors": [
+          "C. Afonso"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/419eb122e8901b4f27142b87f2f3ece32a1197ec",
+        "open_access": true
+      },
+      {
+        "title": "Multiple function of syntaxin 17 on the endoplasmic reticulum-mitochondria contact sites",
+        "abstract": "No abstract",
+        "year": 2017,
+        "citations": 0,
+        "authors": [
+          "Kohei Arasaki",
+          "M. Tagaya"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/73271e9c0ee9fd99d1b7a7836cec056f31a146e1",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial Dynamics, Mitophagy, and Mitochondria\u2013Endoplasmic Reticulum Contact Sites Crosstalk Under Hypoxia",
+        "abstract": "Mitochondria are double membrane organelles within eukaryotic cells, which act as cellular power houses, depending on the continuous availability of oxygen. Nevertheless, under hypoxia, metabolic disorders disturb the steady-state of mitochondrial network, which leads to dysfunction of mitochondria, producing a large amount of reactive oxygen species that cause further damage to cells. Compelling evidence suggests that the dysfunction of mitochondria under hypoxia is linked to a wide spectrum of",
+        "year": 2022,
+        "citations": 64,
+        "authors": [
+          "Shuying Wang",
+          "Jin Tan",
+          "Yuyang Miao"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d508cde44119c9e522fddf3c3f4b4c0bf6af5c24",
+        "open_access": true
+      },
+      {
+        "title": "Visualization and Quantification of Endogenous Intra-Organelle Protein Interactions at ER-Mitochondria Contact Sites by Proximity Ligation Assays.",
+        "abstract": "Membrane contact sites (MCSs) are areas of close membrane proximity that allow and regulate the dynamic exchange of diverse biomolecules (i.e., calcium and lipids) between the juxtaposed organelles without involving membrane fusion. MCSs are essential for cellular homeostasis, and their functions are ensured by the resident components, which often exist as multimeric protein complexes. MCSs often involve the endoplasmic reticulum (ER), a major site of lipid synthesis and cellular calcium storage",
+        "year": 2023,
+        "citations": 2,
+        "authors": [
+          "V. F. Monteiro-Cardoso",
+          "Romain Le Bars",
+          "Francesca Giordano"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4ba2e04368fc961c160124fd7cd3fd2648c3327d",
+        "open_access": true
+      },
+      {
+        "title": "ER-mitochondria contact sites; a multifaceted factory for Ca2+ signaling and lipid transport",
+        "abstract": "Membrane contact sites (MCS) between organelles of eukaryotic cells provide structural integrity and promote organelle homeostasis by facilitating intracellular signaling, exchange of ions, metabolites and lipids and membrane dynamics. Cataloguing MCS revolutionized our understanding of the structural organization of a eukaryotic cell, but the functional role of MSCs and their role in complex diseases, such as cancer, are only gradually emerging. In particular, the endoplasmic reticulum (ER)-mit",
+        "year": 2022,
+        "citations": 60,
+        "authors": [
+          "M. Sassano",
+          "B. Felipe-Abrio",
+          "P. Agostinis"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/22ccd30939eb0a6a2a3da60e295930452e8cba2d",
+        "open_access": true
+      },
+      {
+        "title": "Balancing energy and protein homeostasis at ER-mitochondria contact sites",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 40,
+        "authors": [
+          "Amado Carreras-Sureda",
+          "G. Kroemer",
+          "J. C. Cardenas"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/2eb93622c94cf077a92f5913682d39cb2ee8da69",
+        "open_access": true
+      },
+      {
+        "title": "Sigma-1 Receptor Activation Suppresses Microglia M1 Polarization via Regulating Endoplasmic Reticulum\u2013Mitochondria Contact and Mitochondrial Functions in Stress-Induced Hypertension Rats",
+        "abstract": "Exposure to stress plays a detrimental role in the pathogenesis of hypertension via neuroinflammation pathways. Microglial neuroinflammation in the rostral ventrolateral medulla (RVLM) exacerbates stress-induced hypertension (SIH) by increasing sympathetic hyperactivity. Mitochondria of microglia are the regulators of innate immune response. Sigma-1R (\u03c3-1R) localizes to the mitochondria-associated membranes (MAMs) and regulates endoplasmic reticulum (ER) and mitochondria communication, in part t",
+        "year": 2021,
+        "citations": 40,
+        "authors": [
+          "Kokwin Ooi",
+          "Li Hu",
+          "Yi Feng"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/0ea7c04724e17a644aae169e3cbad2f513687862",
+        "open_access": true
+      },
+      {
+        "title": "Chronic enrichment of hepatic endoplasmic reticulum\u2013mitochondria contact leads to mitochondrial dysfunction in obesity",
+        "abstract": "No abstract",
+        "year": 2014,
+        "citations": 485,
+        "authors": [
+          "A. P. Arruda",
+          "B. M. Pers",
+          "G\u00fcne\u015f Parlakg\u00fcl"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b86bb28b35bf4950a68961085e85e04cda686f62",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondria Endoplasmic Reticulum Contact Sites (MERCs): Proximity Ligation Assay as a Tool to Study Organelle Interaction",
+        "abstract": "Organelles cooperate with each other to regulate vital cellular homoeostatic functions. This occurs through the formation of close connections through membrane contact sites. Mitochondria-Endoplasmic-Reticulum (ER) contact sites (MERCS) are one of such contact sites that regulate numerous biological processes by controlling calcium and metabolic homeostasis. However, the extent to which contact sites shape cellular biology and the underlying mechanisms remain to be fully elucidated. A number of ",
+        "year": 2021,
+        "citations": 18,
+        "authors": [
+          "Sara Benhammouda",
+          "Anjali Vishwakarma",
+          "Priya Gatti"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/96a3a9d2750f870199b3a3188000c202c2c621f7",
+        "open_access": true
+      }
+    ],
+    "europepmc_papers": [
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Neuronal Cell Death.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29488822",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 720
+      },
+      {
+        "title": "Roles of tau protein in health and disease.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Acta Neuropathol",
+        "pmid": "28386764",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 637
+      },
+      {
+        "title": "The blood-brain barrier: structure, regulation, and drug delivery.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37231000",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 612
+      },
+      {
+        "title": "Amyloid Oligomers: A Joint Experimental/Computational Perspective on Alzheimer's Disease, Parkinson's Disease, Type II Diabetes, and Amyotrophic Lateral Sclerosis.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Chem Rev",
+        "pmid": "33543942",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 360
+      },
+      {
+        "title": "Ion channels and transporters in lymphocyte function and immunity.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Nat Rev Immunol",
+        "pmid": "22699833",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 315
+      },
+      {
+        "title": "The different autophagy degradation pathways and neurodegeneration.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Neuron",
+        "pmid": "35134347",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 290
+      },
+      {
+        "title": "Intracellular cAMP Sensor EPAC: Physiology, Pathophysiology, and Therapeutics Development.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29537337",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 153
+      },
+      {
+        "title": "Emerging phagocytosis checkpoints in cancer immunotherapy.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "36882399",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 144
+      },
+      {
+        "title": "Mitochondrial dysfunction in neurodegenerative disorders.",
+        "abstract": "No abstract",
+        "year": "2024",
+        "journal": "Neurotherapeutics",
+        "pmid": "38241161",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 102
+      },
+      {
+        "title": "The alphabet of intrinsic disorder: II. Various roles of glutamic acid in ordered and intrinsically disordered proteins.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Intrinsically Disord Proteins",
+        "pmid": "28516010",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 88
+      },
+      {
+        "title": "The elements of life and medicines.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Philos Trans A Math Phys Eng Sci",
+        "pmid": "25666066",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 81
+      },
+      {
+        "title": "Insights into Disease-Associated Tau Impact on Mitochondria.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Int J Mol Sci",
+        "pmid": "32882957",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 63
+      },
+      {
+        "title": "Sugar metabolism, an additional virulence factor in enterobacteria.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Int J Med Microbiol",
+        "pmid": "20705507",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 58
+      },
+      {
+        "title": "Ser/Thr protein phosphatases in fungi: structure, regulation and function.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Microb Cell",
+        "pmid": "31114794",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 53
+      },
+      {
+        "title": "Glial Cell AMPA Receptors in Nervous System Health, Injury and Disease.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Int J Mol Sci",
+        "pmid": "31108947",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 48
+      },
+      {
+        "title": "Structure and Function of Ion Channels Regulating Sperm Motility-An Overview.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Int J Mol Sci",
+        "pmid": "33806823",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 46
+      },
+      {
+        "title": "Ion channels and anti-cancer immunity.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Philos Trans R Soc Lond B Biol Sci",
+        "pmid": "24493754",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 46
+      },
+      {
+        "title": "Linking the Amyloid, Tau, and Mitochondrial Hypotheses of Alzheimer's Disease and Identifying Promising Drug Targets.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Biomolecules",
+        "pmid": "36421690",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 45
+      },
+      {
+        "title": "Enhancing drug penetration in solid tumors via nanomedicine: Evaluation models, strategies and perspectives.",
+        "abstract": "No abstract",
+        "year": "2024",
+        "journal": "Bioact Mater",
+        "pmid": "37965242",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 43
+      },
+      {
+        "title": "Neuroinflammation and oxidative stress act in concert to promote neurodegeneration in the diabetic retina and optic nerve: galectin-3 participation.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Neural Regen Res",
+        "pmid": "31638084",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 40
+      },
+      {
+        "title": "Cocaine-induced endocannabinoid signaling mediated by sigma-1 receptors and extracellular vesicle secretion.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Elife",
+        "pmid": "31596232",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 40
+      },
+      {
+        "title": "Role of Calcium Modulation in the Pathophysiology and Treatment of Alzheimer's Disease.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Int J Mol Sci",
+        "pmid": "37240413",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 35
+      },
+      {
+        "title": "Molecular Evolution of Calcium Signaling and Transport in Plant Adaptation to Abiotic Stress.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Int J Mol Sci",
+        "pmid": "34830190",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 34
+      },
+      {
+        "title": "TRP Channels in Brain Tumors.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Front Cell Dev Biol",
+        "pmid": "33928077",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 34
+      },
+      {
+        "title": "Sense and specificity in neuronal calcium signalling.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Biochim Biophys Acta",
+        "pmid": "25447549",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 34
+      },
+      {
+        "title": "Calcium Signals during SARS-CoV-2 Infection: Assessing the Potential of Emerging Therapies.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cells",
+        "pmid": "35053369",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 32
+      },
+      {
+        "title": "The human cytomegalovirus protein UL37 exon 1 associates with internal lipid rafts.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "J Virol",
+        "pmid": "21177823",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 31
+      },
+      {
+        "title": "Topical Treatments and Their Molecular/Cellular Mechanisms in Patients with Peripheral Neuropathic Pain-Narrative Review.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Pharmaceutics",
+        "pmid": "33810493",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 29
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 60 papers found providing strong experimental support. Includes 24 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 60,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 24
+  }
+}

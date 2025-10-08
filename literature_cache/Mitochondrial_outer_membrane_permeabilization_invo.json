@@ -1,0 +1,782 @@
+{
+  "timestamp": "2025-10-08T10:09:03.223821",
+  "prediction": "Mitochondrial outer membrane permeabilization involves VDAC1",
+  "validation": {
+    "prediction": "Mitochondrial outer membrane permeabilization involves VDAC1",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "24492769",
+        "title": "Measurement of mitochondrial Ca2+ transport mediated by three transport proteins: VDAC1, the Na+/Ca2+ exchanger, and the Ca2+ uniporter.",
+        "abstract": "Ca(2+) is a ubiquitous cellular signal, with changes in intracellular Ca(2+) concentration not only stimulating a number of intercellular events but also triggering cell death pathways, including apoptosis. Mitochondrial Ca(2+) uptake and release play pivotal roles in cellular physiology by regulating intracellular Ca(2+) signaling, energy metabolism and cell death. Ca(2+) transport across the inner and outer mitochondrial membranes is mediated by several proteins, including channels, antiporter...",
+        "year": "2014",
+        "journal": "Cold Spring Harbor protocols",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24492769/"
+      },
+      {
+        "pmid": "25087640",
+        "title": "VDAC phosphorylation, a lipid sensor influencing the cell fate.",
+        "abstract": "The voltage-dependent anion channel (VDAC) or porin is a major membrane protein integrated into the mitochondrial outer membrane in eukaryotes. It is encoded as three isoforms (VDAC1 to 3), which play differential roles in metabolism and cell death. As a channel, VDAC mediates metabolites, ions and water movements through the outer membrane in physiological conditions, but it can also participate to mitochondrial membrane permeabilization, an apoptotic checkpoint in stress and pathological condi...",
+        "year": "2014",
+        "journal": "Mitochondrion",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25087640/"
+      },
+      {
+        "pmid": "35266060",
+        "title": "Alterations in hippocampal mitochondrial dynamics are\u00a0associated with neurodegeneration and recognition memory decline in old male mice.",
+        "abstract": "Mitochondrial dynamics is a key process that modulates the ultrastructure, quality and function of mitochondria. It is disrupted in numerous major neurodegenerative disorders including Parkinson's, Alzheimer's and Huntington's disease. Mitochondrial dysfunction has been correlated with the loss of memory. Previous studies suggest the involvement of Vdac1 and Drp1 in outer mitochondrial membrane permeabilization and promotion of mitochondrial fragmentation through Drp1 phosphorylation at S616. Ho...",
+        "year": "2022",
+        "journal": "Biogerontology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35266060/"
+      },
+      {
+        "pmid": "27941998",
+        "title": "Voltage-Dependent Anion Channel 1(VDAC1) Participates the Apoptosis of the Mitochondrial Dysfunction in Desminopathy.",
+        "abstract": "Desminopathies caused by the mutation in the gene coding for desmin are genetically protein aggregation myopathies. Mitochondrial dysfunction is one of pathological changes in the desminopathies at the earliest stage. The molecular mechanisms of mitochondria dysfunction in desminopathies remain exclusive. VDAC1 regulates mitochondrial uptake across the outer membrane and mitochondrial outer membrane permeabilization (MOMP). Relationships between desminopathies and Voltage-dependent anion channel...",
+        "year": "2016",
+        "journal": "PloS one",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27941998/"
+      },
+      {
+        "pmid": "33419250",
+        "title": "Fatty Acid Binding Protein 5 Mediates Cell Death by Psychosine Exposure through Mitochondrial Macropores Formation in Oligodendrocytes.",
+        "abstract": "Oligodendrocytes, the myelinating cells in the central nervous system (CNS), are critical for producing myelin throughout the CNS. The loss of oligodendrocytes is associated with multiple neurodegenerative disorders mediated by psychosine. However, the involvement of psychosine in the critical biochemical pathogenetic mechanism of the loss of oligodendrocytes and myelin in krabbe disease (KD) remains unclear. Here, we addressed how oligodendrocytes are induced by psychosine treatment in both KG-...",
+        "year": "2020",
+        "journal": "Biomedicines",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33419250/"
+      }
+    ],
+    "semantic_scholar_papers": [
+      {
+        "title": "Shedding light on mitochondrial outer-membrane permeabilization and membrane potential: State of the art methods and biosensors.",
+        "abstract": "No abstract",
+        "year": 2023,
+        "citations": 22,
+        "authors": [
+          "N. Popgeorgiev",
+          "C. Gil",
+          "K. Berthenet"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/f0c2084a41d968f6216c8dc03f2873dbe45048b3",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial outer membrane permeabilization at the single molecule level",
+        "abstract": "Apoptotic cell death is essential for development, immune function or tissue homeostasis, and its mis-regulation is linked to various diseases. Mitochondrial outer membrane permeabilization (MOMP) is a central event in the intrinsic apoptotic pathway and essential to control the execution of cell death. Here we review current concepts in regulation of MOMP focusing on the interaction network of the Bcl-2 family proteins as well as further regulatory elements influencing MOMP. As MOMP is a comple",
+        "year": 2021,
+        "citations": 26,
+        "authors": [
+          "S. Dadsena",
+          "Andreas Jenner",
+          "A. Garc\u00eda-S\u00e1ez"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/88aa581e8f52a98169df80c0310a3fa3ad7862c5",
+        "open_access": true
+      },
+      {
+        "title": "Raptinal bypasses BAX, BAK, and BOK for mitochondrial outer membrane permeabilization and intrinsic apoptosis",
+        "abstract": "Most antineoplastic chemotherapies eliminate cancer cells through activation of the mitochondria-controlled intrinsic apoptotic pathway. Therein, BAX, BAK, and/or BOK function as the essential pore-forming executioners of mitochondrial outer membrane permeabilization (MOMP). The activation threshold of BAX and BAK also correlates inversely with the required strength of an apoptotic stimulus to induce MOMP and thereby effectively determines a cell\u2019s readiness to undergo apoptosis. Consequently, t",
+        "year": 2019,
+        "citations": 39,
+        "authors": [
+          "Sina Heimer",
+          "G. Knoll",
+          "K. Schulze-Osthoff"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/80f82f0a946fa698ebf971ca990d4275310520b4",
+        "open_access": true
+      },
+      {
+        "title": "Humanin induces conformational changes in the apoptosis regulator BAX and sequesters it into fibers, preventing mitochondrial outer-membrane permeabilization",
+        "abstract": "The mitochondrial, or intrinsic, apoptosis pathway is regulated mainly by members of the B-cell lymphoma 2 (BCL-2) protein family. BCL-2\u2013associated X apoptosis regulator (BAX) plays a pivotal role in the initiation of mitochondria-mediated apoptosis as one of the factors causing mitochondrial outer-membrane permeabilization (MOMP). Of current interest are endogenous BAX ligands that inhibit its MOMP activity. Mitochondrial-derived peptides (MDPs) are a recently identified class of mitochondrial ",
+        "year": 2019,
+        "citations": 28,
+        "authors": [
+          "Daniel L. Morris",
+          "D. Kastner",
+          "Sabrina Johnson"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b7e86594cadd1e7fe2c756fd4051678d953cc269",
+        "open_access": true
+      },
+      {
+        "title": "Lipid asymmetry of a model mitochondrial outer membrane affects Bax-dependent permeabilization.",
+        "abstract": "No abstract",
+        "year": 2020,
+        "citations": 8,
+        "authors": [
+          "J. Bozelli",
+          "Y. Hou",
+          "S. Schreier"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3b77f1486fe9b872f1ecbf06178e05a61da11d01",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial outer membrane permeabilization: a focus on the role of mitochondrial membrane structural organization",
+        "abstract": "No abstract",
+        "year": 2017,
+        "citations": 87,
+        "authors": [
+          "Siti Haji Suhaili",
+          "H. Karimian",
+          "Matthew Stellato"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c62b6ba234ca01b66652cba5c0f3f2df1eab4353",
+        "open_access": true
+      },
+      {
+        "title": "miR-663 sustains NSCLC by inhibiting mitochondrial outer membrane permeabilization (MOMP) through PUMA/BBC3 and BTG2",
+        "abstract": "Treatment of lung cancer is an unmet need as it accounts for the majority of cancer deaths worldwide. The development of new therapies urges the identification of potential targets. MicroRNAs\u2019 expression is often deregulated in cancer and their modulation has been proposed as a successful strategy to interfere with tumor cell growth and spread. We recently reported on an unbiased high-content approach to identify miRNAs regulating cell proliferation and tumorigenesis in non-small cell lung cance",
+        "year": 2018,
+        "citations": 31,
+        "authors": [
+          "M. Fiori",
+          "L. Villanova",
+          "Chiara Barbini"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/0a37a850841af970595a68c0b038f8592627f298",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondria and cell death: outer membrane permeabilization and beyond",
+        "abstract": "No abstract",
+        "year": 2010,
+        "citations": 2438,
+        "authors": [
+          "S. Tait",
+          "D. Green"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b4d7058e5b924a0073cbea8bf68369b700f16551",
+        "open_access": true
+      },
+      {
+        "title": "Flow Cytometry-Based Detection and Analysis of BCL-2 Family Proteins and Mitochondrial Outer Membrane Permeabilization (MOMP).",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 8,
+        "authors": [
+          "Lindsey M. Ludwig",
+          "Katrina Maxcy",
+          "J. LaBelle"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d8c596000aad5499dc9557274305ccb69102a7c5",
+        "open_access": true
+      },
+      {
+        "title": "Cristae remodeling causes acidification detected by integrated graphene sensor during mitochondrial outer membrane permeabilization",
+        "abstract": "The intrinsic apoptotic pathway and the resultant mitochondrial outer membrane permeabilization (MOMP) via BAK and BAX oligomerization, cytochrome c (cytc) release, and caspase activation are well studied, but their effect on cytosolic pH is poorly understood. Using isolated mitochondria, we show that MOMP results in acidification of the surrounding medium. BAK conformational changes associated with MOMP activate the OMA1 protease to cleave OPA1 resulting in remodeling of the cristae and release",
+        "year": 2016,
+        "citations": 22,
+        "authors": [
+          "Ted D. Pham",
+          "Phi H.Q. Pham",
+          "Jinfeng Li"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/6878ebd361a98f58dacc56cdd772f17f5898023a",
+        "open_access": true
+      },
+      {
+        "title": "Nanoparticle\u2010Mediated Delivery of Mitochondrial Division Inhibitor 1 to the Myocardium Protects the Heart From Ischemia\u2010Reperfusion Injury Through Inhibition of Mitochondria Outer Membrane Permeabilization: A New Therapeutic Modality for Acute Myocardial Infarction",
+        "abstract": "Background Mitochondria\u2010mediated cell death plays a critical role in myocardial ischemia\u2010reperfusion (IR) injury. We hypothesized that nanoparticle\u2010mediated drug delivery of mitochondrial division inhibitor 1 (Mdivi1) protects hearts from IR injury through inhibition of mitochondria outer membrane permeabilization (MOMP), which causes mitochondrial\u2010mediated cell death. Methods and Results We formulated poly (lactic\u2010co\u2010glycolic acid) nanoparticles containing Mdivi1 (Mdivi1\u2010NP). We recently demons",
+        "year": 2016,
+        "citations": 63,
+        "authors": [
+          "Ayako Ishikita",
+          "T. Matoba",
+          "Gentaro Ikeda"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/30547b6e7f3b23e3292d91fdf5ad2eca11d9175e",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial outer membrane permeabilization increases reactive oxygen species production and decreases mean sperm velocity but is not associated with DNA fragmentation in human sperm.",
+        "abstract": "No abstract",
+        "year": 2016,
+        "citations": 11,
+        "authors": [
+          "F. Treul\u00e9n",
+          "P. Uribe",
+          "R. Boguen"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d75845dd6a54ff2ebe3f70e9690523d152826072",
+        "open_access": true
+      },
+      {
+        "title": "Gasdermin D permeabilization of mitochondrial inner and outer membranes accelerates and enhances pyroptosis.",
+        "abstract": "No abstract",
+        "year": 2023,
+        "citations": 254,
+        "authors": [
+          "Rui Miao",
+          "Cong Jiang",
+          "Winston Y. Chang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/cdbcb9c28f6a374d274cca4a42f1b3e3c0efdbf6",
+        "open_access": true
+      },
+      {
+        "title": "Chemical inhibition of the mitochondrial division dynamin reveals its role in Bax/Bak-dependent mitochondrial outer membrane permeabilization.",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 1107,
+        "authors": [
+          "Ann Cassidy-Stone",
+          "J. Chipuk",
+          "Elena Ingerman"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/92c5ca3c35a5b2ca911b02823b22f0f6e44f3ead",
+        "open_access": true
+      },
+      {
+        "title": "Phytochemicals prevent mitochondrial membrane permeabilization and protect SH-SY5Y cells against apoptosis induced by PK11195, a ligand for outer membrane translocator protein",
+        "abstract": "No abstract",
+        "year": 2016,
+        "citations": 29,
+        "authors": [
+          "Yuqiu Wu",
+          "M. Shamoto\u2010Nagai",
+          "W. Maruyama"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3f529eb9fb58b690847be71de0f8795a13f80bea",
+        "open_access": true
+      },
+      {
+        "title": "How do BCL-2 proteins induce mitochondrial outer membrane permeabilization?",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 1011,
+        "authors": [
+          "J. Chipuk",
+          "D. Green"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b668f183aae79bc360c13a3058ba52ec23b44211",
+        "open_access": true
+      },
+      {
+        "title": "Molecular Pathways: Leveraging the BCL-2 Interactome to Kill Cancer Cells\u2014Mitochondrial Outer Membrane Permeabilization and Beyond",
+        "abstract": "No abstract",
+        "year": 2015,
+        "citations": 27,
+        "authors": [
+          "Hetal Brahmbhatt",
+          "S. Oppermann",
+          "E. Osterlund"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1bbda81f806a5d47816dca7362f880797935a1d1",
+        "open_access": true
+      },
+      {
+        "title": "Glycogen synthase kinase-3 regulates mitochondrial outer membrane permeabilization and apoptosis by destabilization of MCL-1.",
+        "abstract": "No abstract",
+        "year": 2006,
+        "citations": 902,
+        "authors": [
+          "U. Maurer",
+          "C. Charvet",
+          "A. Wagman"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/44ef90e0c058b3a3a34960b8fc460e96e7e76fff",
+        "open_access": true
+      },
+      {
+        "title": "Ellagic Acid Normalizes Mitochondrial Outer Membrane Permeabilization and Attenuates Inflammation-Mediated Cell Proliferation in Experimental Liver Cancer",
+        "abstract": "No abstract",
+        "year": 2014,
+        "citations": 24,
+        "authors": [
+          "S. Srigopalram",
+          "I. A. Jayraaj",
+          "B. Kaleeswaran"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7dd9617d43465aa5e4a091276a8045c6d364d90d",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial outer membrane permeabilization during apoptosis: the innocent bystander scenario",
+        "abstract": "No abstract",
+        "year": 2006,
+        "citations": 593,
+        "authors": [
+          "J. Chipuk",
+          "L. Bouchier-Hayes",
+          "D. Green"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/872e0c949646eafeb456fd9c670ca85677d2dc05",
+        "open_access": true
+      },
+      {
+        "title": "Endoplasmic reticulum stress induces calcium-dependent permeability transition, mitochondrial outer membrane permeabilization and apoptosis",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 582,
+        "authors": [
+          "A. Deniaud",
+          "O. S. E. Dein",
+          "E. Maillier"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/f267670fa2b5941623701fcde82fd5a9cb47a141",
+        "open_access": true
+      },
+      {
+        "title": "ADP/ATP carrier is required for mitochondrial outer membrane permeabilization and cytochrome c release in yeast apoptosis",
+        "abstract": "No abstract",
+        "year": 2007,
+        "citations": 148,
+        "authors": [
+          "C. Pereira",
+          "N. Camougrand",
+          "S. Manon"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/72593ca0f9004b8845ead7802ef2009d7fbeb41b",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial residence of the apoptosis inducer BAX is more important than BAX oligomerization in promoting membrane permeabilization",
+        "abstract": "Permeabilization of the mitochondrial outer membrane is a key step in the intrinsic apoptosis pathway, triggered by the release of mitochondrial intermembrane space proteins into the cytoplasm. The BCL-2\u2013associated X apoptosis regulator (BAX) protein critically contributes to this process by forming pores in the mitochondrial outer membrane. However, the relative roles of the mitochondrial residence of BAX and its oligomerization in promoting membrane permeabilization are unclear. To this end, u",
+        "year": 2020,
+        "citations": 41,
+        "authors": [
+          "T. Kuwana",
+          "L. King",
+          "K. Cosentino"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/772f632e7c54d26634c590dc4c39551ccc30a273",
+        "open_access": true
+      },
+      {
+        "title": "PUMA cooperates with direct activator proteins to promote mitochondrial outer membrane permeabilization and apoptosis",
+        "abstract": "No abstract",
+        "year": 2009,
+        "citations": 101,
+        "authors": [
+          "J. Chipuk",
+          "D. Green"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/53a44122e8df4243d5c2c61e956e070fc922c262",
+        "open_access": true
+      },
+      {
+        "title": "Control of Mitochondrial Outer Membrane Permeabilization and Bcl-xL Levels by Thioredoxin 2 in DT40 Cells*",
+        "abstract": "Mitochondria play a central role in the initiation of apoptosis, which is regulated by various factors such as ATP synthesis, reactive oxygen species, redox status, and outer membrane permeabilization. Disruption of chicken thioredoxin 2 (Trx2), a mitochondrial redox-regulating protein, results in apoptosis in DT40 cells. To investigate the mechanism of this apoptosis, we prepared transfectants expressing control (DT40-TRX2-/-), human thioredoxin 2 (TRX2) (DT40-hTRX2), or redox-inactive TRX2 (DT",
+        "year": 2006,
+        "citations": 55,
+        "authors": [
+          "Dongmei Wang",
+          "H. Masutani",
+          "S. Oka"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c6278b8993c37743377009cf44983c357fe7235c",
+        "open_access": true
+      },
+      {
+        "title": "The murine cytomegalovirus cell death suppressor m38.5 binds Bax and blocks Bax-mediated mitochondrial outer membrane permeabilization",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 37,
+        "authors": [
+          "D. Arnoult",
+          "Anna Skaletskaya",
+          "J. Estaquier"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/93bf06357d9678ead51a9e53bf2226818f1a0529",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial outer-membrane permeabilization and remodelling in apoptosis.",
+        "abstract": "No abstract",
+        "year": 2009,
+        "citations": 140,
+        "authors": [
+          "Alexis A. Jourdain",
+          "J. Martinou"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/359448d78dbb05a20b392c66ab48bfbe465d76f9",
+        "open_access": true
+      },
+      {
+        "title": "Cleavage of Bid by Executioner Caspases Mediates Feed Forward Amplification of Mitochondrial Outer Membrane Permeabilization during Genotoxic Stress-induced Apoptosis in Jurkat Cells*",
+        "abstract": "The extent to which the BH3-only protein Bid is important for intrinsic (mitochondria-mediated) apoptotic cell death induced by genotoxic stress remains controversial. In the present study, we examine this issue using a panel of gene-manipulated Bax-deficient Jurkat T-lymphocytes. Cells stably depleted of Bid were far less sensitive than control-transfected cells to etoposide-induced apoptosis. In particular, drug-induced Bak activation, cytochrome c release, loss of mitochondrial membrane poten",
+        "year": 2009,
+        "citations": 51,
+        "authors": [
+          "Shary Shelton",
+          "Mary E. Shawgo",
+          "J. Robertson"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4bf7df375484f521ed4f542c88618faf5412d253",
+        "open_access": true
+      },
+      {
+        "title": "Role of Bid\u2010induced mitochondrial outer membrane permeabilization in granzyme B\u2010induced apoptosis",
+        "abstract": "No abstract",
+        "year": 2006,
+        "citations": 60,
+        "authors": [
+          "N. Waterhouse",
+          "K. Sedelies",
+          "J. Trapani"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/fe90427c4ada7f6e2790de41e3ac46846406d85c",
+        "open_access": true
+      },
+      {
+        "title": "And all of a sudden it's over: mitochondrial outer-membrane permeabilization in apoptosis.",
+        "abstract": "No abstract",
+        "year": 2002,
+        "citations": 148,
+        "authors": [
+          "N. Waterhouse",
+          "J. Ricci",
+          "D. Green"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c11ab7c82cc6cffe8fdd8737bc121f13b6951d84",
+        "open_access": true
+      }
+    ],
+    "europepmc_papers": [
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Autophagy and the integrated stress response.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Mol Cell",
+        "pmid": "20965422",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2558
+      },
+      {
+        "title": "Mechanisms of mitophagy.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "21179058",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1975
+      },
+      {
+        "title": "Classification of cell death: recommendations of the Nomenclature Committee on Cell Death 2009.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Cell Death Differ",
+        "pmid": "18846107",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1861
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Self-consumption: the interplay of autophagy and apoptosis.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "24401948",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1524
+      },
+      {
+        "title": "The cGAS-STING pathway as a therapeutic target in inflammatory diseases.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Nat Rev Immunol",
+        "pmid": "33833439",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1295
+      },
+      {
+        "title": "The role of mitochondria in apoptosis*.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Annu Rev Genet",
+        "pmid": "19659442",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1268
+      },
+      {
+        "title": "Mitochondria and the autophagy-inflammation-cell death axis in organismal aging.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Science",
+        "pmid": "21868666",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 854
+      },
+      {
+        "title": "PAMPs and DAMPs: signal 0s that spur autophagy and immunity.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Immunol Rev",
+        "pmid": "22889221",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 821
+      },
+      {
+        "title": "Initiation and perpetuation of NLRP3 inflammasome activation and assembly.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Immunol Rev",
+        "pmid": "25879282",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 596
+      },
+      {
+        "title": "Mitochondria and mitophagy: the yin and yang of cell death control.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Circ Res",
+        "pmid": "23065344",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 558
+      },
+      {
+        "title": "Systems biology of cisplatin resistance: past, present and future.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Cell Death Dis",
+        "pmid": "24874729",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 526
+      },
+      {
+        "title": "Mitochondrial dynamics in health and disease: mechanisms and potential targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37669960",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 500
+      },
+      {
+        "title": "Mechanisms of action of Bcl-2 family proteins.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Cold Spring Harb Perspect Biol",
+        "pmid": "23545417",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 466
+      },
+      {
+        "title": "The process of Lewy body formation, rather than simply \u03b1-synuclein fibrillization, is one of the major drivers of neurodegeneration.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "32075919",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 453
+      },
+      {
+        "title": "Autophagy: Regulator of cell death.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Cell Death Dis",
+        "pmid": "37794028",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 434
+      },
+      {
+        "title": "Cell biology. Metabolic control of cell death.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Science",
+        "pmid": "25237106",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 431
+      },
+      {
+        "title": "Endoplasmic reticulum stress: molecular mechanism and therapeutic targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37709773",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 405
+      },
+      {
+        "title": "The Mitochondrial Permeability Transition Pore: Channel Formation by F-ATP Synthase, Integration in Signal Transduction, and Role in Pathophysiology.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Physiol Rev",
+        "pmid": "26269524",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 385
+      },
+      {
+        "title": "Mitochondria-ros crosstalk in the control of cell death and aging.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "J Signal Transduct",
+        "pmid": "22175013",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 375
+      },
+      {
+        "title": "The HIV-1 viral protein R induces apoptosis via a direct effect on the mitochondrial permeability transition pore.",
+        "abstract": "No abstract",
+        "year": "2000",
+        "journal": "J Exp Med",
+        "pmid": "10620603",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 337
+      },
+      {
+        "title": "Functions of autophagy in normal and diseased liver.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Autophagy",
+        "pmid": "23774882",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 335
+      },
+      {
+        "title": "Viral control of mitochondrial apoptosis.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "PLoS Pathog",
+        "pmid": "18516228",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 327
+      },
+      {
+        "title": "Mitochondrial Ca(2+) and apoptosis.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Cell Calcium",
+        "pmid": "22480931",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 326
+      },
+      {
+        "title": "Mitochondrial dysfunction: mechanisms and advances in therapy.",
+        "abstract": "No abstract",
+        "year": "2024",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "38744846",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 321
+      },
+      {
+        "title": "Mitochondria in health, disease, and aging.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Physiol Rev",
+        "pmid": "37021870",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 303
+      },
+      {
+        "title": "Ca(2+) transfer from the ER to mitochondria: when, how and why.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Biochim Biophys Acta",
+        "pmid": "19341702",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 296
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 65 papers found providing strong experimental support. Includes 46 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 65,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 46
+  }
+}

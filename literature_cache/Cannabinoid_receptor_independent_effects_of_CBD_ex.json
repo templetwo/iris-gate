@@ -1,0 +1,329 @@
+{
+  "timestamp": "2025-10-08T10:08:52.606981",
+  "prediction": "Cannabinoid receptor independent effects of CBD exist",
+  "validation": {
+    "prediction": "Cannabinoid receptor independent effects of CBD exist",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "29630867",
+        "title": "Phyto and endocannabinoids exert complex actions on calcium and zinc signaling in mouse cortical neurons.",
+        "abstract": "Live-cell imaging experiments were performed with the fluorescent Ca",
+        "year": "2018",
+        "journal": "Biochemical pharmacology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29630867/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "The endocannabinoid system as an emerging target of pharmacotherapy.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "Pharmacol Rev",
+        "pmid": "16968947",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1398
+      },
+      {
+        "title": "International Union of Basic and Clinical Pharmacology. LXXIX. Cannabinoid receptors and their ligands: beyond CB\u2081 and CB\u2082.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Pharmacol Rev",
+        "pmid": "21079038",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1081
+      },
+      {
+        "title": "Cannabinoid Receptors and the Endocannabinoid System: Signaling and Function in the Central Nervous System.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Int J Mol Sci",
+        "pmid": "29533978",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 740
+      },
+      {
+        "title": "Cannabis sativa: The Plant of the Thousand and One Molecules.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Front Plant Sci",
+        "pmid": "26870049",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 674
+      },
+      {
+        "title": "Nonpsychotropic cannabinoid receptors regulate microglial cell migration.",
+        "abstract": "No abstract",
+        "year": "2003",
+        "journal": "J Neurosci",
+        "pmid": "12598628",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 476
+      },
+      {
+        "title": "Obsessive-compulsive disorder.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Nat Rev Dis Primers",
+        "pmid": "31371720",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 402
+      },
+      {
+        "title": "Molecular Targets of Cannabidiol in Neurological Disorders.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neurotherapeutics",
+        "pmid": "26264914",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 367
+      },
+      {
+        "title": "Cannabinoid and cannabinoid-like receptors in microglia, astrocytes, and astrocytomas.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Glia",
+        "pmid": "20468046",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 362
+      },
+      {
+        "title": "Cannabidiol as a Potential Treatment for Anxiety Disorders.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neurotherapeutics",
+        "pmid": "26341731",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 361
+      },
+      {
+        "title": "Cannabinoids as novel anti-inflammatory drugs.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Future Med Chem",
+        "pmid": "20191092",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 338
+      },
+      {
+        "title": "The draft genome and transcriptome of Cannabis sativa.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Genome Biol",
+        "pmid": "22014239",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 310
+      },
+      {
+        "title": "Sleep deficiency and chronic pain: potential underlying mechanisms and clinical implications.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Neuropsychopharmacology",
+        "pmid": "31207606",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 306
+      },
+      {
+        "title": "Systematic review: efficacy and safety of medical marijuana in selected neurologic disorders [RETIRED]: report of the Guideline Development Subcommittee of the American Academy of Neurology.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Neurology",
+        "pmid": "24778283",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 306
+      },
+      {
+        "title": "Cannabidiol reduces A\u03b2-induced neuroinflammation and promotes hippocampal neurogenesis through PPAR\u03b3 involvement.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "PLoS One",
+        "pmid": "22163051",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 287
+      },
+      {
+        "title": "Structural and functional imaging studies in chronic cannabis users: a systematic review of adolescent and adult findings.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "PLoS One",
+        "pmid": "23390554",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 259
+      },
+      {
+        "title": "Modulating the endocannabinoid system in human health and disease--successes and failures.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "FEBS J",
+        "pmid": "23551849",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 255
+      },
+      {
+        "title": "Emerging role of the cannabinoid receptor CB2 in immune regulation: therapeutic prospects for neuroinflammation.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Expert Rev Mol Med",
+        "pmid": "19152719",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 255
+      },
+      {
+        "title": "Cannabis use and cannabis use disorder.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Nat Rev Dis Primers",
+        "pmid": "33627670",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 242
+      },
+      {
+        "title": "The cannabinoid agonist WIN55,212-2 increases intracellular calcium via CB1 receptor coupling to Gq/11 G proteins.",
+        "abstract": "No abstract",
+        "year": "2005",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "16365309",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 231
+      },
+      {
+        "title": "Fatty acid-binding proteins (FABPs) are intracellular carriers for \u03949-tetrahydrocannabinol (THC) and cannabidiol (CBD).",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "J Biol Chem",
+        "pmid": "25666611",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 211
+      },
+      {
+        "title": "Cannabinoids and the gastrointestinal tract.",
+        "abstract": "No abstract",
+        "year": "2001",
+        "journal": "Gut",
+        "pmid": "11358910",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 205
+      },
+      {
+        "title": "Cannabidiol for neurodegenerative disorders: important new clinical applications for this phytocannabinoid?",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Br J Clin Pharmacol",
+        "pmid": "22625422",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 204
+      },
+      {
+        "title": "Cannabinoid CB2 receptors in human brain inflammation.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "Br J Pharmacol",
+        "pmid": "17934510",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 196
+      },
+      {
+        "title": "Atypical responsiveness of the orphan receptor GPR55 to cannabinoid ligands.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "J Biol Chem",
+        "pmid": "19723626",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 195
+      },
+      {
+        "title": "Meta-analysis of cannabinoid ligand binding affinity and receptor distribution: interspecies differences.",
+        "abstract": "No abstract",
+        "year": "2007",
+        "journal": "Br J Pharmacol",
+        "pmid": "17641667",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 176
+      },
+      {
+        "title": "Mechanisms in the bed nucleus of the stria terminalis involved in control of autonomic and neuroendocrine functions: a review.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Curr Neuropharmacol",
+        "pmid": "23997750",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 173
+      },
+      {
+        "title": "Cannabinoid receptors and endocannabinoids: evidence for new players.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "AAPS J",
+        "pmid": "16796380",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 171
+      },
+      {
+        "title": "Gone to Pot - A Review of the Association between Cannabis and Psychosis.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Front Psychiatry",
+        "pmid": "24904437",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 157
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 31 papers found providing strong experimental support. Includes 30 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 31,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 30
+  }
+}

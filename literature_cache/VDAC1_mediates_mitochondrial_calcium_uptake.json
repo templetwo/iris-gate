@@ -1,0 +1,428 @@
+{
+  "timestamp": "2025-10-08T10:08:37.866302",
+  "prediction": "VDAC1 mediates mitochondrial calcium uptake",
+  "validation": {
+    "prediction": "VDAC1 mediates mitochondrial calcium uptake",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "25753332",
+        "title": "Mitochondrial calcium uniporter protein MCU is involved in oxidative stress-induced cell death.",
+        "abstract": "Mitochondrial calcium uniporter (MCU) is a conserved Ca(2+) transporter at mitochondrial in eukaryotic cells. However, the role of MCU protein in oxidative stress-induced cell death remains unclear. Here, we showed that ectopically expressed MCU is mitochondrial localized in both HeLa and primary cerebellar granule neurons (CGNs). Knockdown of endogenous MCU decreases mitochondrial Ca(2+) uptake following histamine stimulation and attenuates cell death induced by oxidative stress in both HeLa ce...",
+        "year": "2015",
+        "journal": "Protein & cell",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25753332/"
+      },
+      {
+        "pmid": "24492769",
+        "title": "Measurement of mitochondrial Ca2+ transport mediated by three transport proteins: VDAC1, the Na+/Ca2+ exchanger, and the Ca2+ uniporter.",
+        "abstract": "Ca(2+) is a ubiquitous cellular signal, with changes in intracellular Ca(2+) concentration not only stimulating a number of intercellular events but also triggering cell death pathways, including apoptosis. Mitochondrial Ca(2+) uptake and release play pivotal roles in cellular physiology by regulating intracellular Ca(2+) signaling, energy metabolism and cell death. Ca(2+) transport across the inner and outer mitochondrial membranes is mediated by several proteins, including channels, antiporter...",
+        "year": "2014",
+        "journal": "Cold Spring Harbor protocols",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24492769/"
+      },
+      {
+        "pmid": "17178908",
+        "title": "Chaperone-mediated coupling of endoplasmic reticulum and mitochondrial Ca2+ channels.",
+        "abstract": "The voltage-dependent anion channel (VDAC) of the outer mitochondrial membrane mediates metabolic flow, Ca(2+), and cell death signaling between the endoplasmic reticulum (ER) and mitochondrial networks. We demonstrate that VDAC1 is physically linked to the endoplasmic reticulum Ca(2+)-release channel inositol 1,4,5-trisphosphate receptor (IP(3)R) through the molecular chaperone glucose-regulated protein 75 (grp75). Functional interaction between the channels was shown by the recombinant express...",
+        "year": "2006",
+        "journal": "The Journal of cell biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17178908/"
+      },
+      {
+        "pmid": "35222416",
+        "title": "Notch1 Modulation of Cellular Calcium Regulates Mitochondrial Metabolism and Anti-Apoptotic Activity in T-Regulatory Cells.",
+        "abstract": "As the major hub of metabolic activity and an organelle sequestering pro-apoptogenic intermediates, mitochondria lie at the crossroads of cellular decisions of death and survival. Intracellular calcium is a key regulator of these outcomes with rapid, uncontrolled uptake into mitochondria, activating pro-apoptotic cascades that trigger cell death. Here, we show that calcium uptake and mitochondrial metabolism in murine T-regulatory cells (Tregs) is tuned by Notch1 activity. Based on analysis of T...",
+        "year": "2022",
+        "journal": "Frontiers in immunology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35222416/"
+      },
+      {
+        "pmid": "23501103",
+        "title": "Tespa1 is a novel component of mitochondria-associated endoplasmic reticulum membranes and affects mitochondrial calcium flux.",
+        "abstract": "Regulation of intracellular Ca(2+) concentration is critical in numerous biological processes. Inositol 1,4,5-trisphosphate receptor (IP3R) functions as the Ca(2+) release channel on endoplasmic reticulum (ER) membranes. Much attention has been dedicated to mitochondrial Ca(2+) uptake via mitochondria-associated ER membranes (MAM) which is involved in intracellular Ca(2+) homeostasis; however, the molecular mechanisms that link the MAM to mitochondria still remain elusive. We previously reported...",
+        "year": "2013",
+        "journal": "Biochemical and biophysical research communications",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23501103/"
+      },
+      {
+        "pmid": "29594867",
+        "title": "Mitochondrial VDAC, the Na",
+        "abstract": "Mitochondrial Ca",
+        "year": "2017",
+        "journal": "Advances in experimental medicine and biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29594867/"
+      },
+      {
+        "pmid": "28640253",
+        "title": "A role for TSPO in mitochondrial Ca",
+        "abstract": "The 18\u2009kDa translocator protein TSPO localizes on the outer mitochondrial membrane (OMM). Systematically overexpressed at sites of neuroinflammation it is adopted as a biomarker of brain conditions. TSPO inhibits the autophagic removal of mitochondria by limiting PARK2-mediated mitochondrial ubiquitination via a peri-organelle accumulation of reactive oxygen species (ROS). Here we describe that TSPO deregulates mitochondrial Ca",
+        "year": "2017",
+        "journal": "Cell death & disease",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28640253/"
+      },
+      {
+        "pmid": "32485269",
+        "title": "Hypomorphic CAMKK2 in EA.hy926 endothelial cells causes abnormal transferrin trafficking, iron homeostasis and glucose metabolism.",
+        "abstract": "We recently reported that loss of calcium/calmodulin-dependent protein kinase kinase-2 (CAMKK2), a serine/threonine kinase activated by intracellular calcium, in mice leads to tissue-specific aberrant turnover of transferrin (TF), a receptor-mediated iron-transporter that supplies iron to tissues. Iron dyshomeostasis is associated with the pathogenesis of several diseases, making TF transport relevant to health. In this study, we used hemizygous CAMKK2 hypomorphic human endothelial cell (EA.hy92...",
+        "year": "2020",
+        "journal": "Biochimica et biophysica acta. Molecular cell research",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32485269/"
+      },
+      {
+        "pmid": "34308505",
+        "title": "Ca",
+        "abstract": "Mitochondrial-associated endoplasmic reticulum (ER) membranes (MAMs) play a key role in several physiological functions, including calcium ion (Ca",
+        "year": "2022",
+        "journal": "Cell biology and toxicology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34308505/"
+      },
+      {
+        "pmid": "35204233",
+        "title": "Lysophosphatidic Acid Receptor 3 Promotes Mitochondrial Homeostasis against Oxidative Stress: Potential Therapeutic Approaches for Hutchinson-Gilford Progeria Syndrome.",
+        "abstract": "Lysophosphatidic acid (LPA) is a growth factor-like lipid mediator that regulates various physiological functions via activation of multiple LPA G protein-coupled receptors. We previously reported that LPA suppresses oxidative stress in premature aging Hutchinson-Gilford progeria syndrome (HGPS) patient fibroblasts via its type 3 receptor (LPA",
+        "year": "2022",
+        "journal": "Antioxidants (Basel, Switzerland)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35204233/"
+      },
+      {
+        "pmid": "33569379",
+        "title": "Metformin Reverses the Enhanced Myocardial SR/ER-Mitochondria Interaction and Impaired Complex I-Driven Respiration in Dystrophin-Deficient Mice.",
+        "abstract": "Besides skeletal muscle dysfunction, Duchenne muscular dystrophy (DMD) exhibits a progressive cardiomyopathy characterized by an impaired calcium (Ca",
+        "year": "2020",
+        "journal": "Frontiers in cell and developmental biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33569379/"
+      },
+      {
+        "pmid": "25681439",
+        "title": "The BH4 domain of anti-apoptotic Bcl-XL, but not that of the related Bcl-2, limits the voltage-dependent anion channel 1 (VDAC1)-mediated transfer of pro-apoptotic Ca2+ signals to mitochondria.",
+        "abstract": "Excessive Ca(2+) fluxes from the endoplasmic reticulum to the mitochondria result in apoptotic cell death. Bcl-2 and Bcl-XL proteins exert part of their anti-apoptotic function by directly targeting Ca(2+)-transport systems, like the endoplasmic reticulum-localized inositol 1,4,5-trisphosphate receptors (IP3Rs) and the voltage-dependent anion channel 1 (VDAC1) at the outer mitochondrial membranes. We previously demonstrated that the Bcl-2 homology 4 (BH4) domain of Bcl-2 protects against Ca(2+)-...",
+        "year": "2015",
+        "journal": "The Journal of biological chemistry",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25681439/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Autophagy and the integrated stress response.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Mol Cell",
+        "pmid": "20965422",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2558
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Reactive Oxygen Species in Metabolic and Inflammatory Signaling.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Circ Res",
+        "pmid": "29700084",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1223
+      },
+      {
+        "title": "Oxidative metabolism and PGC-1beta attenuate macrophage-mediated inflammation.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "Cell Metab",
+        "pmid": "16814729",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1043
+      },
+      {
+        "title": "Chaperone-mediated coupling of endoplasmic reticulum and mitochondrial Ca2+ channels.",
+        "abstract": "No abstract",
+        "year": "2006",
+        "journal": "J Cell Biol",
+        "pmid": "17178908",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1034
+      },
+      {
+        "title": "Innate immune pattern recognition: a cell biological perspective.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Annu Rev Immunol",
+        "pmid": "25581309",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1016
+      },
+      {
+        "title": "Endoplasmic reticulum-mitochondria contacts: function of the junction.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "22992592",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 734
+      },
+      {
+        "title": "Initiation and perpetuation of NLRP3 inflammasome activation and assembly.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Immunol Rev",
+        "pmid": "25879282",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 596
+      },
+      {
+        "title": "p62/SQSTM1 is required for Parkin-induced mitochondrial clustering but not mitophagy; VDAC1 is dispensable for both.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Autophagy",
+        "pmid": "20890124",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 585
+      },
+      {
+        "title": "Mitochondrial dysfunction and oxidative stress in Parkinson's disease.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Prog Neurobiol",
+        "pmid": "23643800",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 560
+      },
+      {
+        "title": "Mitophagy and Alzheimer's Disease: Cellular and Molecular Mechanisms.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Trends Neurosci",
+        "pmid": "28190529",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 558
+      },
+      {
+        "title": "VDAC oligomers form mitochondrial pores to release mtDNA fragments and promote lupus-like disease.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Science",
+        "pmid": "31857488",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 506
+      },
+      {
+        "title": "Mitochondrial dynamics in health and disease: mechanisms and potential targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37669960",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 500
+      },
+      {
+        "title": "The functional universe of membrane contact sites.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "31732717",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 489
+      },
+      {
+        "title": "Regulation and metabolic functions of mTORC1 and mTORC2.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Physiol Rev",
+        "pmid": "33599151",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 456
+      },
+      {
+        "title": "Activation of the pseudokinase MLKL unleashes the four-helix bundle domain to induce membrane localization and necroptotic cell death.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "25288762",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 447
+      },
+      {
+        "title": "Tom20 senses iron-activated ROS signaling to promote melanoma cell pyroptosis.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Res",
+        "pmid": "30287942",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 443
+      },
+      {
+        "title": "Autophagy: Regulator of cell death.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Cell Death Dis",
+        "pmid": "37794028",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 434
+      },
+      {
+        "title": "Cell biology. Metabolic control of cell death.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Science",
+        "pmid": "25237106",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 431
+      },
+      {
+        "title": "Oxidized DNA fragments exit mitochondria via mPTP- and VDAC-dependent channels to activate NLRP3 inflammasome and interferon signaling.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Immunity",
+        "pmid": "35835107",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 400
+      },
+      {
+        "title": "Mitochondrial dysfunction in Parkinson's disease: molecular mechanisms and pathophysiological consequences.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "EMBO J",
+        "pmid": "22735187",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 393
+      },
+      {
+        "title": "Feature Article: mTOR complex 2-Akt signaling at mitochondria-associated endoplasmic reticulum membranes (MAM) regulates mitochondrial physiology.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "23852728",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 388
+      },
+      {
+        "title": "Amyloid-Beta and Phosphorylated Tau Accumulations Cause Abnormalities at\u00a0Synapses of Alzheimer's disease Neurons.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "J Alzheimers Dis",
+        "pmid": "27567878",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 375
+      },
+      {
+        "title": "Molecular Targets of Cannabidiol in Neurological Disorders.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Neurotherapeutics",
+        "pmid": "26264914",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 367
+      },
+      {
+        "title": "Ferroptosis and Cancer: Mitochondria Meet the \"Iron Maiden\" Cell Death.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Cells",
+        "pmid": "32575749",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 363
+      },
+      {
+        "title": "Early steps in steroidogenesis: intracellular cholesterol trafficking.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "J Lipid Res",
+        "pmid": "21976778",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 349
+      },
+      {
+        "title": "Viral control of mitochondrial apoptosis.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "PLoS Pathog",
+        "pmid": "18516228",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 327
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 42 papers found providing strong experimental support. Includes 30 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 42,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 30
+  }
+}

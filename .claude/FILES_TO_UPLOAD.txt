@@ -1,0 +1,30 @@
+📁 Files to Add to Claude Project "IRIS Gate"
+================================================
+
+Add these files in this order:
+
+1. .claude/SESSION_MEMORY.md
+   → Main context file with current state
+
+2. docs/validation/INDEX.md
+   → Master reference index
+
+3. VALIDATION_README.md
+   → System overview
+
+4. presentations/IRIS_VALIDATION_EXECUTIVE_SUMMARY.md
+   → Full validation results
+
+Optional (if you want more detail):
+5. presentations/VALIDATION_RESULTS_TABLE.md
+6. validation_report.json (warning: large file)
+
+================================================
+Where to find them:
+/Users/vaquez/Desktop/iris-gate/
+
+In the Claude Project interface:
+- Click "Add content"
+- Select "Choose file" or "Choose folder"
+- Navigate to the iris-gate folder
+- Select the files listed above

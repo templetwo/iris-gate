@@ -1,0 +1,783 @@
+{
+  "timestamp": "2025-10-08T10:09:07.864744",
+  "prediction": "Cancer cells have elevated mitochondrial stress compared to healthy cells",
+  "validation": {
+    "prediction": "Cancer cells have elevated mitochondrial stress compared to healthy cells",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "35366607",
+        "title": "Mitapivat increases ATP and decreases oxidative stress and erythrocyte mitochondria retention in a SCD mouse model.",
+        "abstract": "Polymerization of deoxygenated sickle hemoglobin (HbS) leads to erythrocyte sickling. Enhancing activity of the erythrocyte glycolytic pathway has anti-sickling potential as this reduces 2,3-diphosphoglycerate (2,3-DPG) and increases ATP, factors that decrease HbS polymerization and improve erythrocyte membrane integrity. These factors can be modulated by mitapivat, which activates erythrocyte pyruvate kinase (PKR) and improves sickling kinetics in SCD patients. We investigated mechanisms by whi...",
+        "year": "2022",
+        "journal": "Blood cells, molecules & diseases",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35366607/"
+      },
+      {
+        "pmid": "33077961",
+        "title": "Mitochondrial copper depletion suppresses triple-negative breast cancer in mice.",
+        "abstract": "Depletion of mitochondrial copper, which shifts metabolism from respiration to glycolysis and reduces energy production, is known to be effective against cancer types that depend on oxidative phosphorylation. However, existing copper chelators are too toxic or ineffective for cancer treatment. Here we develop a safe, mitochondria-targeted, copper-depleting nanoparticle (CDN) and test it against triple-negative breast cancer (TNBC). We show that CDNs decrease oxygen consumption and oxidative phos...",
+        "year": "2021",
+        "journal": "Nature biotechnology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33077961/"
+      },
+      {
+        "pmid": "35444236",
+        "title": "Mitochondrial oxidative phosphorylation is dispensable for survival of CD34",
+        "abstract": "Chronic myeloid leukemia (CML) are initiated and sustained by self-renewing malignant CD34",
+        "year": "2022",
+        "journal": "Cell death & disease",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35444236/"
+      },
+      {
+        "pmid": "23456362",
+        "title": "Insulin-mediated oxidative stress and DNA damage in LLC-PK1 pig kidney cell line, female rat primary kidney cells, and male ZDF rat kidneys in vivo.",
+        "abstract": "Hyperinsulinemia, a condition with excessively high insulin blood levels, is related to an increased cancer incidence. Diabetes mellitus is the most common of several diseases accompanied by hyperinsulinemia. Because an elevated kidney cancer risk was reported for diabetic patients, we investigated the induction of genomic damage by insulin in LLC-PK1 pig kidney cells, rat primary kidney cells, and ZDF rat kidneys. Insulin at a concentration of 5nM caused a significant increase in DNA damage in ...",
+        "year": "2013",
+        "journal": "Endocrinology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23456362/"
+      },
+      {
+        "pmid": "26816615",
+        "title": "Knockdown of CLIC4 enhances ATP-induced HN4 cell apoptosis through mitochondrial and endoplasmic reticulum pathways.",
+        "abstract": "Human head and neck squamous carcinoma is the 6th most prevalent carcinoma worldwide. Although many novel therapies have been developed, the clinical treatment for patients remains non-ideal. Chloride intracellular channel 4 (CLIC4), one of the seven members of the CLIC family, is a newly found Cl(-) channel that participates in various biological processes, including cellular apoptosis and differentiation. Accumulating evidence has revealed the significant role of CLIC4 in regulating the apopto...",
+        "year": "2016",
+        "journal": "Cell & bioscience",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26816615/"
+      }
+    ],
+    "semantic_scholar_papers": [
+      {
+        "title": "Oxidative stress and mitochondrial dysfunction of granulosa cells in polycystic ovarian syndrome",
+        "abstract": "Polycystic ovarian syndrome (PCOS) is one of the leading causes of anovulatory infertility in women, affecting 5%\u201315% of women of reproductive age worldwide. The clinical manifestations of patients include ovulation disorders, amenorrhea, hirsutism, and obesity. Life-threatening diseases, such as endometrial cancer, type 2 diabetes, hyperlipidaemia, hypertension, and cardiovascular disease, can be distant complications of PCOS. PCOS has diverse etiologies and oxidative stress (OS) plays an impor",
+        "year": 2023,
+        "citations": 51,
+        "authors": [
+          "Yiyin Gao",
+          "Yinggang Zou",
+          "Guijie Wu"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/e9de168a57e6a2b4760066c4e960fa9e0e97b1ca",
+        "open_access": true
+      },
+      {
+        "title": "Abstract B027: Elevated mitochondrial reactive oxygen species dysregulate the tumor microenvironment in prostate cancer of African American men",
+        "abstract": "\n African American men (AAM) are more than twice as likely to die of prostate cancer (PCa) compared to European American men (EAM). While socioeconomics, access to optimal care and life-style factors contribute towards these disparities, underlying biologic differences in AAM remain important drivers of PCa disparities. In the current work, we aimed to explore the interplay between oxidative stress and inflammatory signaling in promoting progression of PCa in AAM. Oxidative stress results from e",
+        "year": 2023,
+        "citations": 0,
+        "authors": [
+          "Asmaa El-Kenawi",
+          "Ryan M Putney",
+          "S. Awasthi"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c2a610dd466e5407c2f1bc4d231491a977cf4ce1",
+        "open_access": true
+      },
+      {
+        "title": "Association between oxidative stress, mitochondrial function of peripheral blood mononuclear cells and gastrointestinal cancers",
+        "abstract": "Background The incidence and mortality rate of gastrointestinal cancers are high worldwide. Increasing studies have illustrated that the occurrence, progression, metastasis and prognosis of cancers are intimately linked to the immune system. Mitochondria, as the main source of cellular energy, play an important role in maintaining the physiological function of immune cells. However, the relationship between mitochondrial function of immune cells and tumorigenesis has not yet been systematically ",
+        "year": 2023,
+        "citations": 16,
+        "authors": [
+          "Weili Liu",
+          "Yuan-mei Gao",
+          "Hua Li"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/162d70c340dd9b96b297409e7fffd94b790a6f90",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 2818: Neutrophil extracellular traps regulate mitochondrial quality control in cancer cells to promote tumor growth",
+        "abstract": "Introduction: Evidence is accumulating that neutrophil extracellular traps (NETs) are present within tumors and confer a worse outcome. The exact mechanisms of their role in tumor progression have been far from answered. Methods: Preoperative serum and tumor tissue were obtained from colorectal cancer liver metastases (CCLM) patients. In vivo, subcutaneous and liver metastasis tumor models were done in WT and nu/nu mice. Hepatocellular and colon murine and human cancer cell lines were used. DNas",
+        "year": 2019,
+        "citations": 1,
+        "authors": [
+          "S. Tohme",
+          "H. Yazdani",
+          "R. Simmons"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/8633c9b1aec87ac20553012441ec49adc8343c3d",
+        "open_access": true
+      },
+      {
+        "title": "Elevated Levels of Circulating Hsp70 and an Increased Prevalence of CD94+/CD69+ NK Cells Is Predictive for Advanced Stage Non-Small Cell Lung Cancer",
+        "abstract": "Simple Summary This study reveals that circulating Hsp70 levels could serve as a tumor biomarker for patients with NSCLC in advanced UICC stages. All patients in advanced tumor stages had significantly elevated Hsp70 levels in the circulation compared to a healthy control cohort and an early-stage tumor cohort, and Hsp70 levels progressively increased with higher UICC tumor stages. These findings demonstrate the potential of Hsp70 measurements to predict an advanced tumor stage in NSCLC patients",
+        "year": 2022,
+        "citations": 7,
+        "authors": [
+          "Sophie Seier",
+          "Ali Bashiri Dezfouli",
+          "Philipp Lennartz"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/4aa4e73d3770ed19eaa9dadb9692abd5632a63fd",
+        "open_access": true
+      },
+      {
+        "title": "Elevated Production of Mitochondrial Reactive Oxygen Species via Hyperthermia Enhanced Cytotoxic Effect of Doxorubicin in Human Breast Cancer Cell Lines MDA-MB-453 and MCF-7",
+        "abstract": "Hyperthermia (HT) treatment is a noninvasive cancer therapy, often used with radiation therapy and chemotherapy. Compared with 37 \u00b0C, 42 \u00b0C is mild heat stress for cells and produces reactive oxygen species (ROS) from mitochondria. To involve subsequent intracellular accumulation of DOX, we have previously reported that the expression of ATP-binding cassette sub-family G member 2 (ABCG2), an exporter of doxorubicin (DOX), was suppressed by a larger amount of intracellular mitochondrial ROS. We t",
+        "year": 2020,
+        "citations": 10,
+        "authors": [
+          "A. Terasaki",
+          "Hiromi Kurokawa",
+          "H. Ito"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/e9092dee82ffc9d82db0f8a0c11b4efd7ecd2a86",
+        "open_access": true
+      },
+      {
+        "title": "Growth differentiation factor 15 is a cancer cell-induced mitokine that primes thyroid cancer cells for invasiveness.",
+        "abstract": "BACKGROUND\nMitochondrial stress is known to activate the mitochondrial unfolded protein response (UPRmt). The UPRmt results in the secretion of mitochondrial cytokines (mitokines), which can promote a hormetic response cell-nonautonomously, and has been reported to be pro-tumorigenic. Growth differentiation factor 15 (GDF15) is a well-characterized mitokine which is reported to have a mitohormetic effect. Thus, we investigated whether GDF15 induction could prime a subpopulation of thyroid cancer",
+        "year": 2020,
+        "citations": 31,
+        "authors": [
+          "Y. Kang",
+          "Jin-Man Kim",
+          "M. Lim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/a13caf5bd018236be50f1ec4ef30615d31948806",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 4167: Co-targeting the stress survival proteins LEDGF/p75 and clusterin to resensitize chemoresistant prostate cancer cells to docetaxel",
+        "abstract": "No abstract",
+        "year": 2017,
+        "citations": 0,
+        "authors": [
+          "Christina Ross",
+          "Leslimar Rios-Colon",
+          "Leanne Woods-Burnham"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/68a87ada74a321118072f8a892ba7c38c7d9c4f6",
+        "open_access": true
+      },
+      {
+        "title": "A novel tRNA-derived fragment tRF-3022b modulates cell apoptosis and M2 macrophage polarization via binding to cytokines in colorectal cancer",
+        "abstract": "tRNA-derived fragments (tRFs) are a class of small RNAs that occur when tRNAs are broken down by enzymes due to stress. Increasing reports have shown that tRFs are associated with multiple physiological and pathological processes, especially in cancers; however, very little is known of the effects and mechanisms of tRFs. Therefore, further investigation on the biological roles and clinical value of tRFs is required. In this study, we utilized whole-transcriptome sequencing to profile tRFs expres",
+        "year": 2022,
+        "citations": 56,
+        "authors": [
+          "Sicheng Lu",
+          "Xiaoman Wei",
+          "Lihuiping Tao"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/dd79b86e6368cd8e645eccc5e015d33d91adda93",
+        "open_access": true
+      },
+      {
+        "title": "Elevated level of 8\u2010oxo\u20107,8\u2010dihydro\u20102\u2032\u2010deoxyguanosine in leukocytes of BRCA1 mutation carriers compared to healthy controls",
+        "abstract": "No abstract",
+        "year": 2009,
+        "citations": 41,
+        "authors": [
+          "T. Dziaman",
+          "T. Huzarski",
+          "D. Gackowski"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7b8a8ba48b4369b8ba25957da7d721be66a0d8f6",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial alterations accompanied by oxidative stress conditions in skin fibroblasts of Huntington\u2019s disease patients",
+        "abstract": "Huntington disease (HD) is an autosomal dominant neurodegenerative disorder manifesting as progressive impairment of motor function and different neuropsychiatric symptoms caused by an expansion of CAG repeats in huntingtin gene (HTT). Mitochondrial dysfunction and bioenergetic defects can contribute to the course of the disease, however, the molecular mechanism underlying this process is still largely unknown. In this study, we aimed to determine several mitochondrial parameters in HD fibroblas",
+        "year": 2018,
+        "citations": 40,
+        "authors": [
+          "Paulina J\u0119drak",
+          "P. Mozolewski",
+          "G. W\u0119grzyn"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/33932101719dda2e33d1b171a00e165130cea60c",
+        "open_access": true
+      },
+      {
+        "title": "Altered mitochondrial DNA copy number in cervical exfoliated cells among high\u2011risk HPV\u2011positive and HPV\u2011negative women.",
+        "abstract": "The majority of cervical cancer cases are due to human papillomavirus (HPV) infection. However, certain cases of cervical cancer are not caused by HPV. Recent studies have shown a link between altered mitochondrial DNA (mtDNA) copy number, an indicative measure of mitochondrial dysfunction, and cervical cancer in women who test positive for HPV. However, the role of the mtDNA copy number in HPV-negative cervical cancer has remained elusive. In the present study, the mtDNA copy number was determi",
+        "year": 2023,
+        "citations": 4,
+        "authors": [
+          "R. Al-Awadhi",
+          "Moody Alroomy",
+          "Salah Al\u2011Waheeb"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/a9be67219d4536795267a2c991d6caff3b5289b8",
+        "open_access": true
+      },
+      {
+        "title": "Effect of butein and glucose on oxidative stress and p38 activation marker in non-small cell lung cancer cell",
+        "abstract": "Introduction: Tumor microenvironment is known to alter the anticancer drug efficiency. One of the factors that get altered in cancer microenvironment is glucose concentration. Butein, an active principle from plant, known to have anticancer effect against different types of tumor. The objective of the study is to determine the effect of butein on glucose exposed non-small cell lung cancer cells (NSCLCCs). Methods: The current study deals with the effect of butein (6.25\u201350\u03bcM) on NSCLCCs treated w",
+        "year": 2019,
+        "citations": 4,
+        "authors": [
+          "C. Zhang",
+          "X. Zong",
+          "Y. Han"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/f3e80c7699aabaf3e03c3d1c7254a3ab58dbae32",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 4372: Effects of high glucose and DCA on ROS production and viability of breast cancer cells with disrupted antioxidant systems",
+        "abstract": "A goal of this study was to determine if disruption of protective cellular antioxidant systems would sensitize cancer cells to dichloroacetate (DCA), a compound affecting mitochondrial metabolism (reversing the Warburg Effect). DCA shifts the metabolism of glucose back to mitochondrial oxidative phosphorylation, with subsequent production of reactive oxygen species (ROS) (Bonnet et al., 2007). While cancer cells consume large amounts of glucose to meet energy demands and provide substrates neces",
+        "year": 2019,
+        "citations": 0,
+        "authors": [
+          "R. Buss",
+          "Collin Ellenbecker",
+          "E. Minton"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/ded4b3102e3582d2c38ec7a11cb36dc18588c532",
+        "open_access": true
+      },
+      {
+        "title": "The hexokinase \u201cHKDC1\u201d interaction with the mitochondria is essential for liver cancer progression",
+        "abstract": "Liver cancer (LC) is the fourth leading cause of death from cancer malignancies. Recently, a putative fifth hexokinase, hexokinase domain containing 1 (HKDC1), was shown to have significant overexpression in LC compared to healthy liver tissue. Using a combination of in vitro and in vivo tools, we examined the role of HKDC1 in LC development and progression. Importantly, HKDC1 ablation stops LC development and progression via its action at the mitochondria by promoting metabolic reprogramming an",
+        "year": 2022,
+        "citations": 35,
+        "authors": [
+          "M. Khan",
+          "Alexander R. Terry",
+          "M. Priyadarshini"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/685802ab9c68c013ea235ff375f8d9b5b168e8df",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial oxidative phosphorylation is dispensable for survival of CD34+ chronic myeloid leukemia stem and progenitor cells",
+        "abstract": "Chronic myeloid leukemia (CML) are initiated and sustained by self-renewing malignant CD34+ stem cells. Extensive efforts have been made to reveal the metabolic signature of the leukemia stem/progenitor cells in genomic, transcriptomic, and metabolomic studies. However, very little proteomic investigation has been conducted and the mechanism regarding at what level the metabolic program was rewired remains poorly understood. Here, using label-free quantitative proteomic profiling, we compared th",
+        "year": 2022,
+        "citations": 15,
+        "authors": [
+          "Jin-Song Yan",
+          "Meng-Ying Yang",
+          "Xue-Hong Zhang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3859f9b8885a182bcf0e9e648e280efd4b7cd3dc",
+        "open_access": true
+      },
+      {
+        "title": "SLC25A22 Promotes Proliferation and Survival of Colorectal Cancer Cells With KRAS Mutations and Xenograft Tumor Progression in Mice via Intracellular Synthesis of Aspartate.",
+        "abstract": "No abstract",
+        "year": 2016,
+        "citations": 114,
+        "authors": [
+          "C. Wong",
+          "Y. Qian",
+          "Xiaona Li"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3038207887cd28a94d03ab8676dc6369ad4637a2",
+        "open_access": true
+      },
+      {
+        "title": "Arsenic trioxide, a cancer chemo drug hampers fibrotic liver regeneration by interrupting oxidative stress rekindling and stellate cell rejuvenation",
+        "abstract": "After withdrawal of liver toxic insult, the spontaneous regenerative potential of the liver is well reported in the literature. On the other hand, various molecules have been reported to promote as well as delay such natural regeneration. This current study investigates the involvement of arsenic trioxide (ATO) medication at chemotherapeutic dose on the spontaneous regeneration of the CCl4 induced fibrotic liver. Liver injury markers, such as albumin and SGOT, SGPT, and ALP activities, in serum ",
+        "year": 2019,
+        "citations": 9,
+        "authors": [
+          "Nithyananthan Subramaniyam",
+          "Thirunavukkarasu Chinnasamy"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c8e4062b3c7182d4c95ce0e3aeb65fcd43043497",
+        "open_access": true
+      },
+      {
+        "title": "Peroxiredoxin 3 maintains the survival of endometrial cancer stem cells by regulating oxidative stress",
+        "abstract": "Cancer stem cell (CSC)-targeted therapy could reduce tumor growth, recurrence, and metastasis in endometrial cancer (EC). The mitochondria of CSCs have been recently found to be an important target for cancer treatment, but the mitochondrial features of CSCs and their regulators, which maintain mitochondrial function, remain unclear. Here, we investigated the mitochondrial properties of CSCs, and identified specific targets for eliminating CSCs in EC. We found that endometrial CSCs displayed hig",
+        "year": 2017,
+        "citations": 18,
+        "authors": [
+          "I. Song",
+          "Y. Jeong",
+          "Y. Seo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/9e3274d8d6de47e1dce364f1384e179754ed06cb",
+        "open_access": true
+      },
+      {
+        "title": "Dual Roles of Coconut Oil and Its Major Component Lauric Acid on Redox Nexus: Focus on Cytoprotection and Cancer Cell Death",
+        "abstract": "It has been reported that coconut oil supplementation can reduce neuroinflammation. However, coconut oils are available as virgin coconut oil (VCO), crude coconut oil (ECO), and refined coconut oil (RCO). The impact of coconut oil extraction process (and its major fatty acid component lauric acid) at cellular antioxidant level, redox homeostasis and inflammation in neural cells is hitherto unexplained. Herein, we have shown the antioxidant levels and cellular effect of coconut oil extracted by v",
+        "year": 2022,
+        "citations": 31,
+        "authors": [
+          "Venkatesan Ramya",
+          "K. P. Shyam",
+          "Eshwaran Kowsalya"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/e8612e8cd2dc326d99d526d24165434fba49206b",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 6256: Inhibition of class IIa HDACs potentiates MYC inhibitor-driven cytotoxicity by inducing MYC depletion and oxidative stress in non-small cell lung cancer",
+        "abstract": "\n Lung cancer is the most common cause of cancer mortality worldwide and non-small cell lung cancer (NSCLC) accounts for approximately 85% of all lung cancers. Dysregulation and/or overexpression of MYC are widely implicated in NSCLC, which suggests that MYC may be a promising therapeutic target for the treatment of NSCLC. Recently, two direct MYC inhibiting agents with improved in vivo efficacy and tolerability, MYCi975 and Omomyc, have been developed. To define new drug strategies that could p",
+        "year": 2023,
+        "citations": 0,
+        "authors": [
+          "J. Park",
+          "Ying-Yu Chen",
+          "Jennie J. Cao"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/e9f4852e5e16993acbdb305de56fa074e6e24170",
+        "open_access": true
+      },
+      {
+        "title": "The hexokinase \u201cHKDC1\u201d interaction with the mitochondria is essential for liver cancer progression",
+        "abstract": "Liver cancer (LC) is the fourth leading cause of death from cancer malignancies. Recently, a putative fifth hexokinase, hexokinase domain containing 1 (HKDC1), was shown to have significant overexpression in LC compared to healthy liver tissue. Using a combination of in vitro and in vivo tools, we examined the role of HKDC1 in LC development and progression. Importantly, HKDC1 ablation stops LC development and progression via its action at the mitochondria by promoting metabolic reprogramming an",
+        "year": 2022,
+        "citations": 2,
+        "authors": [
+          "M. Khan",
+          "Alexander R. Terry",
+          "M. Priyadarshini"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/cea26a426b0d074ef0b170974753a2bf632a9fd1",
+        "open_access": true
+      },
+      {
+        "title": "Prognostic significance of chemokines CCL11 and CCL5 modulated by low-density lipoprotein cholesterol in colon cancer patients with normal body mass index",
+        "abstract": "Background Many studies have shown an elevated level of cholesterol in colon tumors as compared to normal tissue. Obesity and high low-density lipoprotein cholesterol (LDL-C) are known risk factors for colon cancer. However, the role of LDL-C in colon cancer patients with normal body mass index (BMI) remains elusive. Methods Levels of serum cholesterol and oxysterols were quantified by ultra-performance liquid chromatography-tandem mass spectrometer (UPLC-MS/MS) from 129 individuals with normal ",
+        "year": 2021,
+        "citations": 13,
+        "authors": [
+          "Caihua Wang",
+          "Yi Zou",
+          "Chi Pan"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/a457df12ed2f4e7dc0c8ca1ac97f32e92c9deee5",
+        "open_access": true
+      },
+      {
+        "title": "NK Cells Lacking CD38 Are Resistant to Oxidative Stress-Induced Death",
+        "abstract": "Cytolytic effector lymphocytes must contend with unfavorable microenvironments when infiltrating sites of infection or malignancy. Tumor cells typically have high levels of oxidative stress and produce reactive oxygen species (ROS) that suppress the cytotoxic functions of both natural killer (NK) cells and CD8+ T cells. Levels of activated granulocytes that release ROS are also elevated in cancer patients. Free radicals, such as ROS, cause detrimental cellular effects including protein oxidation",
+        "year": 2019,
+        "citations": 6,
+        "authors": [
+          "Frank Cichocki",
+          "Karrune V. Woan",
+          "Cheng-Ying Wu"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/bcea77013acfbaa1c637d6152cdcd59ead3cc151",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 5486: Oxidative stress and selective protein carbonylation in human breast cancer tissue",
+        "abstract": "No abstract",
+        "year": 2017,
+        "citations": 0,
+        "authors": [
+          "B. Aryal",
+          "Ashutosh Rao"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b2d80b372c18000412cba76075b595f13fdcd590",
+        "open_access": true
+      },
+      {
+        "title": "Hibiscus flower extract selectively induces apoptosis in breast cancer cells and positively interacts with common chemotherapeutics",
+        "abstract": "BackgroundCurrent therapeutic approaches to treat metastatic breast cancer, although effective, have shown many inadvertent side effects such as genotoxicity due to a lack of selectivity. Thus, these treatment plans are not suitable for long-term usage. Natural health product extracts are safe for long-term consumption and some have shown to be medicinally active containing multiple bioactive compounds able target multiple vulnerabilities in cancer. One of which, Hibiscus rosa-sinesis (hibiscus)",
+        "year": 2019,
+        "citations": 58,
+        "authors": [
+          "C. Nguyen",
+          "K. Baskaran",
+          "A. Pupulin"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/94810df3d5e828f87626c2ba84b2525b51be5ed0",
+        "open_access": true
+      },
+      {
+        "title": "Cancer Imprints an Increased PARP-1 and p53-Dependent Resistance to Oxidative Stress on Lymphocytes of Patients That Later Develop Alzheimer's Disease",
+        "abstract": "We have proposed that a common biological mechanism deregulated in opposite directions might explain the inverse epidemiological association observed between Alzheimer's disease (AD) and cancer. Accordingly, we showed that lymphocytes from AD patients have an increased susceptibility, whereas those from survivors of a skin cancer, an increased resistance to oxidative death induced by hydrogen peroxide (H2O2), compared to healthy controls (HC). We investigated the susceptibility to H2O2-induced d",
+        "year": 2018,
+        "citations": 6,
+        "authors": [
+          "F. Salech",
+          "D. Ponce",
+          "C. SanMart\u00edn"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/86e4459243e7c798d34ce48bae29fa1b28312417",
+        "open_access": true
+      },
+      {
+        "title": "Implications of lipid droplets in lung cancer: Associations with drug resistance",
+        "abstract": "Cancer cells usually show different metabolic patterns compared with healthy cells due to the reprogramming of metabolic processes. The process of lipid metabolism undergoes notable changes, leading to the accumulation of lipid droplets in cells. Additionally, this phenotype is considered an important marker of cancer cells. Lipid droplets are a highly dynamic type of organelle in the cell, which is composed of a neutral lipid core, a monolayer phospholipid membrane and lipid droplet-related pro",
+        "year": 2020,
+        "citations": 33,
+        "authors": [
+          "Chun-mei Jin",
+          "P. Yuan"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/fa8ed9f10b684a095f37f3a2e8e812bb4ed4b848",
+        "open_access": true
+      },
+      {
+        "title": "Knockdown of CLIC4 enhances ATP-induced HN4 cell apoptosis through mitochondrial and endoplasmic reticulum pathways",
+        "abstract": "BackgroundHuman head and neck squamous carcinoma is the 6th most prevalent carcinoma worldwide. Although many novel therapies have been developed, the clinical treatment for patients remains non-ideal. Chloride intracellular channel 4 (CLIC4), one of the seven members of the CLIC family, is a newly found Cl\u2212 channel that participates in various biological processes, including cellular apoptosis and differentiation. Accumulating evidence has revealed the significant role of CLIC4 in regulating th",
+        "year": 2016,
+        "citations": 34,
+        "authors": [
+          "Haowei Xue",
+          "Jinsen Lu",
+          "Renxiang Yuan"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7274d6461b7e127e0dfb220810a468759205da47",
+        "open_access": true
+      },
+      {
+        "title": "Increased plasma levels of circulating cell-free mitochondrial DNA in suicide attempters: associations with HPA-axis hyperactivity",
+        "abstract": "Preclinical data suggest that chronic stress may cause cellular damage and mitochondrial dysfunction, potentially leading to the release of mitochondrial DNA (mtDNA) into the bloodstream. Major depressive disorder has been associated with an increased amount of mtDNA in leukocytes from saliva samples and blood; however, no previous studies have measured plasma levels of free-circulating mtDNA in a clinical psychiatric sample. In this study, free circulating mtDNA was quantified in plasma samples",
+        "year": 2016,
+        "citations": 90,
+        "authors": [
+          "D. Lindqvist",
+          "J. Fernstr\u00f6m",
+          "C. Grudet"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/6a731e8996fa5e24a6d71738bb93f938e8394095",
+        "open_access": true
+      }
+    ],
+    "europepmc_papers": [
+      {
+        "title": "Frailty in elderly people.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Lancet",
+        "pmid": "23395245",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 5475
+      },
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Neuroinflammation in Alzheimer's disease.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Lancet Neurol",
+        "pmid": "25792098",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3942
+      },
+      {
+        "title": "ROS function in redox signaling and oxidative stress.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Curr Biol",
+        "pmid": "24845678",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3917
+      },
+      {
+        "title": "Biological properties of extracellular vesicles and their physiological functions.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "J Extracell Vesicles",
+        "pmid": "25979354",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3848
+      },
+      {
+        "title": "Nitric oxide and peroxynitrite in health and disease.",
+        "abstract": "No abstract",
+        "year": "2007",
+        "journal": "Physiol Rev",
+        "pmid": "17237348",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3813
+      },
+      {
+        "title": "Engineering precision nanoparticles for drug delivery.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Nat Rev Drug Discov",
+        "pmid": "33277608",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3473
+      },
+      {
+        "title": "Mitochondrial reactive oxygen species (ROS) and ROS-induced ROS release.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Physiol Rev",
+        "pmid": "24987008",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3146
+      },
+      {
+        "title": "A PGC1-\u03b1-dependent myokine that drives brown-fat-like development of white fat and thermogenesis.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Nature",
+        "pmid": "22237023",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3145
+      },
+      {
+        "title": "AMPK: a nutrient and energy sensor that maintains energy homeostasis.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "22436748",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3134
+      },
+      {
+        "title": "Oxidative stress, inflammation, and cancer: how are they linked?",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Free Radic Biol Med",
+        "pmid": "20840865",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3122
+      },
+      {
+        "title": "Lipid peroxidation: production, metabolism, and signaling mechanisms of malondialdehyde and 4-hydroxy-2-nonenal.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Oxid Med Cell Longev",
+        "pmid": "24999379",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3029
+      },
+      {
+        "title": "Cisplatin in cancer therapy: molecular mechanisms of action.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Eur J Pharmacol",
+        "pmid": "25058905",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3008
+      },
+      {
+        "title": "Oxidants, antioxidants, and the degenerative diseases of aging.",
+        "abstract": "No abstract",
+        "year": "1993",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "8367443",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2976
+      },
+      {
+        "title": "Reactive oxygen species in inflammation and tissue injury.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Antioxid Redox Signal",
+        "pmid": "23991888",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2816
+      },
+      {
+        "title": "Heart Disease and Stroke Statistics-2023 Update: A Report From the American Heart Association.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Circulation",
+        "pmid": "36695182",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2756
+      },
+      {
+        "title": "Mechanisms of NAFLD development and therapeutic strategies.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Nat Med",
+        "pmid": "29967350",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2657
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Vascular contributions to cognitive impairment and dementia: a statement for healthcare professionals from the american heart association/american stroke association.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Stroke",
+        "pmid": "21778438",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2566
+      },
+      {
+        "title": "Inflammation, stress, and diabetes.",
+        "abstract": "No abstract",
+        "year": "2005",
+        "journal": "J Clin Invest",
+        "pmid": "15864338",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2469
+      },
+      {
+        "title": "Glutamate receptor ion channels: structure, regulation, and function.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Pharmacol Rev",
+        "pmid": "20716669",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2459
+      },
+      {
+        "title": "A branched-chain amino acid-related metabolic signature that differentiates obese and lean humans and contributes to insulin resistance.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Cell Metab",
+        "pmid": "19356713",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2286
+      },
+      {
+        "title": "Inflammasomes: mechanism of action, role in disease, and therapeutics.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Nat Med",
+        "pmid": "26121197",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2216
+      },
+      {
+        "title": "Inflammageing: chronic inflammation in ageing, cardiovascular disease, and\u00a0frailty.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Nat Rev Cardiol",
+        "pmid": "30065258",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2113
+      },
+      {
+        "title": "Oxidative stress, aging, and diseases.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Clin Interv Aging",
+        "pmid": "29731617",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2054
+      },
+      {
+        "title": "Recommendations for myeloid-derived suppressor cell nomenclature and characterization standards.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Nat Commun",
+        "pmid": "27381735",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1990
+      },
+      {
+        "title": "Alzheimer Disease: An Update on Pathobiology and Treatment Strategies.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cell",
+        "pmid": "31564456",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1867
+      },
+      {
+        "title": "Arginine metabolism: nitric oxide and beyond.",
+        "abstract": "No abstract",
+        "year": "1998",
+        "journal": "Biochem J",
+        "pmid": "9806879",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1822
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 65 papers found providing strong experimental support. Includes 35 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 65,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 35
+  }
+}

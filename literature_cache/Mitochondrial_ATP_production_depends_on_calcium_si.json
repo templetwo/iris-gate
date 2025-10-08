@@ -1,0 +1,590 @@
+{
+  "timestamp": "2025-10-08T10:09:20.108860",
+  "prediction": "Mitochondrial ATP production depends on calcium signaling",
+  "validation": {
+    "prediction": "Mitochondrial ATP production depends on calcium signaling",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "24442513",
+        "title": "Neuronal calcium signaling: function and dysfunction.",
+        "abstract": "Calcium (Ca(2+)) is an universal second messenger that regulates the most important activities of all eukaryotic cells. It is of critical importance to neurons as it participates in the transmission of the depolarizing signal and contributes to synaptic activity. Neurons have thus developed extensive and intricate Ca(2+) signaling pathways to couple the Ca(2+) signal to their biochemical machinery. Ca(2+) influx into neurons occurs through plasma membrane receptors and voltage-dependent ion chan...",
+        "year": "2014",
+        "journal": "Cellular and molecular life sciences : CMLS",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24442513/"
+      },
+      {
+        "pmid": "31767352",
+        "title": "Regulation of Mitochondrial ATP Production: Ca",
+        "abstract": "Cardiac ATP production primarily depends on oxidative phosphorylation in mitochondria and is dynamically regulated by Ca",
+        "year": "2020",
+        "journal": "Trends in molecular medicine",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31767352/"
+      },
+      {
+        "pmid": "31177901",
+        "title": "PHB2 (prohibitin 2) promotes PINK1-PRKN/Parkin-dependent mitophagy by the PARL-PGAM5-PINK1 axis.",
+        "abstract": "Mitophagy, which is a conserved cellular process for selectively removing damaged or unwanted mitochondria, is critical for mitochondrial quality control and the maintenance of normal cellular physiology. However, the precise mechanisms underlying mitophagy remain largely unknown. Prior studies on mitophagy focused on the events in the mitochondrial outer membrane. PHB2 (prohibitin 2), which is a highly conserved membrane scaffold protein, was recently identified as a novel inner membrane mitoph...",
+        "year": "2020",
+        "journal": "Autophagy",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31177901/"
+      },
+      {
+        "pmid": "30917721",
+        "title": "Mitochondrial respiratory chain deficiency inhibits lysosomal hydrolysis.",
+        "abstract": "Mitochondria are key organelles for cellular metabolism, and regulate several processes including cell death and macroautophagy/autophagy. Here, we show that mitochondrial respiratory chain (RC) deficiency deactivates AMP-activated protein kinase (AMPK, a key regulator of energy homeostasis) signaling in tissue and in cultured cells. The deactivation of AMPK in RC-deficiency is due to increased expression of the AMPK-inhibiting protein FLCN (folliculin). AMPK is found to be necessary for basal l...",
+        "year": "2019",
+        "journal": "Autophagy",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30917721/"
+      },
+      {
+        "pmid": "32810740",
+        "title": "Interrelation between ROS and Ca",
+        "abstract": "Calcium (Ca",
+        "year": "2020",
+        "journal": "Redox biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32810740/"
+      },
+      {
+        "pmid": "35912435",
+        "title": "Regulation of mitochondrial proteostasis by the proton gradient.",
+        "abstract": "Mitochondria adapt to different energetic demands reshaping their proteome. Mitochondrial proteases are emerging as key regulators of these adaptive processes. Here, we use a multiproteomic approach to demonstrate the regulation of the m-AAA protease AFG3L2 by the mitochondrial proton gradient, coupling mitochondrial protein turnover to the energetic status of mitochondria. We identify TMBIM5 (previously also known as GHITM or MICS1) as a Ca",
+        "year": "2022",
+        "journal": "The EMBO journal",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35912435/"
+      },
+      {
+        "pmid": "35733245",
+        "title": "Mitochondrial calcium uniporter promotes phagocytosis-dependent activation of the NLRP3 inflammasome.",
+        "abstract": "Mitochondria, a highly metabolically active organelle, have been shown to play an essential role in regulating innate immune function. Mitochondrial Ca",
+        "year": "2022",
+        "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35733245/"
+      },
+      {
+        "pmid": "35953818",
+        "title": "Ryanodine receptor 1-mediated Ca",
+        "abstract": "Uterine serous cancer (USC) is the most common non-endometrioid subtype of uterine cancer, and is also the most aggressive. Most patients will die of progressively chemotherapy-resistant disease, and the development of new therapies that can target USC remains a major unmet clinical need. This study sought to determine the molecular mechanism by which a novel unfavorable prognostic biomarker ryanodine receptor 1 (RYR1) identified in advanced USC confers their malignant phenotypes, and demonstrat...",
+        "year": "2022",
+        "journal": "Journal of experimental & clinical cancer research : CR",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35953818/"
+      },
+      {
+        "pmid": "15165900",
+        "title": "Calcium and mitochondria.",
+        "abstract": "The literature suggests that the physiological functions for which mitochondria sequester Ca(2+) are (1). to stimulate and control the rate of oxidative phosphorylation, (2). to induce the mitochondrial permeability transition (MPT) and perhaps apoptotic cell death, and (3). to modify the shape of cytosolic Ca(2+) pulses or transients. There is strong evidence that intramitochondrial Ca(2+) controls both the rate of ATP production by oxidative phosphorylation and induction of the MPT. Since the ...",
+        "year": "2004",
+        "journal": "FEBS letters",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/15165900/"
+      },
+      {
+        "pmid": "28611221",
+        "title": "Optogenetic control of mitochondrial metabolism and Ca",
+        "abstract": "Key mitochondrial functions such as ATP production, Ca",
+        "year": "2017",
+        "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28611221/"
+      },
+      {
+        "pmid": "27783269",
+        "title": "Anion Channels of Mitochondria.",
+        "abstract": "Mitochondria are the \"power house\" of a cell continuously generating ATP to ensure its proper functioning. The constant production of ATP via oxidative phosphorylation demands a large electrochemical force that drives protons across the highly selective and low-permeable mitochondrial inner membrane. Besides the conventional role of generating ATP, mitochondria also play an active role in calcium signaling, generation of reactive oxygen species (ROS), stress responses, and regulation of cell-dea...",
+        "year": "2017",
+        "journal": "Handbook of experimental pharmacology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27783269/"
+      },
+      {
+        "pmid": "33147447",
+        "title": "Calcium influx through the mitochondrial calcium uniporter holocomplex, MCU",
+        "abstract": "Ca",
+        "year": "2021",
+        "journal": "Journal of molecular and cellular cardiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33147447/"
+      },
+      {
+        "pmid": "30231993",
+        "title": "Spatial Separation of Mitochondrial Calcium Uptake and Extrusion for Energy-Efficient Mitochondrial Calcium Signaling in the Heart.",
+        "abstract": "Mitochondrial Ca",
+        "year": "2018",
+        "journal": "Cell reports",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30231993/"
+      },
+      {
+        "pmid": "35358843",
+        "title": "Enhanced NCLX-dependent mitochondrial Ca",
+        "abstract": "Mitochondrial calcium (",
+        "year": "2022",
+        "journal": "Journal of molecular and cellular cardiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35358843/"
+      },
+      {
+        "pmid": "36760367",
+        "title": "Mitochondrial calcium cycling in neuronal function and neurodegeneration.",
+        "abstract": "Mitochondria are essential for proper cellular function through their critical roles in ATP synthesis, reactive oxygen species production, calcium (Ca",
+        "year": "2023",
+        "journal": "Frontiers in cell and developmental biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36760367/"
+      },
+      {
+        "pmid": "33207633",
+        "title": "Mitochondrial Ca",
+        "abstract": "Mitochondrial [Ca",
+        "year": "2020",
+        "journal": "International journal of molecular sciences",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33207633/"
+      },
+      {
+        "pmid": "31950102",
+        "title": "Voltage-energized Calcium-sensitive ATP Production by Mitochondria.",
+        "abstract": "Regulation of ATP production by mitochondria, critical to multicellular life, is poorly understood. Here we investigate the molecular controls of this process in heart and provide a framework for its Ca",
+        "year": "2019",
+        "journal": "Nature metabolism",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31950102/"
+      },
+      {
+        "pmid": "28337542",
+        "title": "\u03b1-Synuclein binds to the ER-mitochondria tethering protein VAPB to disrupt Ca",
+        "abstract": "\u03b1-Synuclein is strongly linked to Parkinson's disease but the molecular targets for its toxicity are not fully clear. However, many neuronal functions damaged in Parkinson's disease are regulated by signalling between the endoplasmic reticulum (ER) and mitochondria. This signalling involves close physical associations between the two organelles that are mediated by binding of the integral ER protein vesicle-associated membrane protein-associated protein B (VAPB) to the outer mitochondrial membra...",
+        "year": "2017",
+        "journal": "Acta neuropathologica",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28337542/"
+      },
+      {
+        "pmid": "28414098",
+        "title": "Cytosolic calcium mediates RIP1/RIP3 complex-dependent necroptosis through JNK activation and mitochondrial ROS production in human colon cancer cells.",
+        "abstract": "Necroptosis is a form of programmed necrosis mediated by signaling complexes with receptor-interacting protein 1 (RIP1) and RIP3 kinases as the main mediators. However, the underlying execution pathways of this phenomenon have yet to be elucidated in detail. In this study, a RIP1/RIP3 complex was formed in 2-methoxy-6-acetyl-7-methyljuglone (MAM)-treated HCT116 and HT29 colon cancer cells. With this formation, mitochondrial reactive oxygen species (ROS) levels increased, mitochondrial depolariza...",
+        "year": "2017",
+        "journal": "Free radical biology & medicine",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28414098/"
+      },
+      {
+        "pmid": "36224023",
+        "title": "Effect of Direct Current Electric Fields on Cone Like Retinal Photoreceptor Cells.",
+        "abstract": "Studies show that electric fields are used as therapy during nerve and tissue injuries along with trans-retinal stimulation. However, cellular and molecular changes induced by such treatments remain largely unknown especially in retinal photoreceptor cells. ",
+        "year": "2022",
+        "journal": "Frontiers in bioscience (Landmark edition)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36224023/"
+      },
+      {
+        "pmid": "12529248",
+        "title": "Role of calcium in metabolic signaling between cardiac sarcoplasmic reticulum and mitochondria in vitro.",
+        "abstract": "The role of Ca(2+) as a cytosolic signaling molecule between porcine cardiac sarcoplasmic reticulum (SR) ATPase and mitochondrial ATP production was evaluated in vitro. The Ca(2+) sensitivity of these processes was determined individually and in a reconstituted system with SR and mitochondria in a 0.5:1 protein-to-cytochrome aa(3) ratio. The half-maximal concentration (K(1/2)) of SR ATPase was 335 nM Ca(2+). The ATP synthesis dependence was similar with a K(1/2) of 243 nM for dehydrogenases and ...",
+        "year": "2003",
+        "journal": "American journal of physiology. Cell physiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12529248/"
+      },
+      {
+        "pmid": "35779163",
+        "title": "Lysophosphatidylcholine induces adenosine release from macrophages via TRPM7-mediated mitochondrial activation.",
+        "abstract": "Even though macrophages have the potential to harm tissues through excessive release of inflammatory mediators, they play protective roles to maintain tissue integrity. In this study, we hypothesized that lysophosphatidylcholine (LPC), via G2A and A",
+        "year": "2022",
+        "journal": "Purinergic signalling",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35779163/"
+      },
+      {
+        "pmid": "34296964",
+        "title": "Sex differences in the impact of parental obesity on offspring cardiac SIRT3 expression, mitochondrial efficiency, and diastolic function early in life.",
+        "abstract": "Previous studies suggest that parental obesity may adversely impact long-term metabolic health of the offspring. We tested the hypothesis that parental (paternal + maternal) obesity impairs cardiac function in the offspring early in life. Within 1-3\u2009days after weaning, offspring from obese rats fed a high-fat diet (HFD-Offs) and age-matched offspring from lean rats (ND-Offs) were submitted to echocardiography and cardiac catheterization for assessment of pressure-volume relationships. Then, hear...",
+        "year": "2021",
+        "journal": "American journal of physiology. Heart and circulatory physiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34296964/"
+      },
+      {
+        "pmid": "24180309",
+        "title": "Mitochondrial ion channels/transporters as sensors and regulators of cellular redox signaling.",
+        "abstract": "Mitochondrial ion channels/transporters and the electron transport chain (ETC) serve as key sensors and regulators for cellular redox signaling, the production of reactive oxygen species (ROS) and nitrogen species (RNS) in mitochondria, and balancing cell survival and death. Although the functional and pharmacological characteristics of mitochondrial ion transport mechanisms have been extensively studied for several decades, the majority of the molecular identities that are responsible for these...",
+        "year": "2014",
+        "journal": "Antioxidants & redox signaling",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24180309/"
+      },
+      {
+        "pmid": "27014839",
+        "title": "Fine-tuning of eTRPM8 expression and activity conditions keratinocyte fate.",
+        "abstract": "Recently, we reported the cloning and characterization of short isoform of the icilin-activated cold receptor TRPM8 channel in keratinocytes, dubbed eTRPM8. We demonstrated that eTRPM8 via fine tuning of the endoplasmic reticulum (ER) - mitochondria Ca(2+) shuttling regulates mitochondrial ATP and superoxide (O2(\u2022-)) production and, thereby, mediates control of epidermal homeostasis by mild cold. Here, we provide additional information explaining why eTRPM8 suppression and TRPM8 stimulation both...",
+        "year": "2016",
+        "journal": "Channels (Austin, Tex.)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27014839/"
+      },
+      {
+        "pmid": "26485763",
+        "title": "Age-dependent uncoupling of mitochondria from Ca2\u207a release units in skeletal muscle.",
+        "abstract": "Calcium release units (CRUs) and mitochondria control myoplasmic [Ca2+] levels and ATP production in muscle, respectively. We recently reported that these two organelles are structurally connected by tethers, which promote proximity and proper Ca2+ signaling.Here we show that disposition, ultrastructure, and density of CRUs and mitochondria and their reciprocal association are compromised in muscle from aged mice. Specifically, the density of CRUs and mitochondria is decreased in muscle fibers f...",
+        "year": "2015",
+        "journal": "Oncotarget",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26485763/"
+      },
+      {
+        "pmid": "26246474",
+        "title": "Mitochondria, calcium, and tumor suppressor Fus1: At the crossroad of cancer, inflammation, and autoimmunity.",
+        "abstract": "Mitochondria present a unique set of key intracellular functions such as ATP synthesis, production of reactive oxygen species (ROS) and Ca2+ buffering. Mitochondria both encode and decode Ca2+ signals and these interrelated functions have a direct impact on cell signaling and metabolism. High proliferative potential is a key energy-demanding feature shared by cancer cells and activated T lymphocytes. Switch of a metabolic state mediated by alterations in mitochondrial homeostasis plays a fundame...",
+        "year": "2015",
+        "journal": "Oncotarget",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26246474/"
+      },
+      {
+        "pmid": "29541860",
+        "title": "Mitochondrial calcium uptake in organ physiology: from molecular mechanism to animal models.",
+        "abstract": "Mitochondrial Ca",
+        "year": "2018",
+        "journal": "Pflugers Archiv : European journal of physiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29541860/"
+      },
+      {
+        "pmid": "28551786",
+        "title": "Mitochondrial Bioenergetics During Ischemia and Reperfusion.",
+        "abstract": "During ischemia and reperfusion (I/R) mitochondria suffer a deficiency to supply the cardiomyocyte with chemical energy, but also contribute to the cytosolic ionic alterations especially of Ca",
+        "year": "2017",
+        "journal": "Advances in experimental medicine and biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28551786/"
+      },
+      {
+        "pmid": "24430870",
+        "title": "SLC25A23 augments mitochondrial Ca\u00b2\u207a uptake, interacts with MCU, and induces oxidative stress-mediated cell death.",
+        "abstract": "Emerging findings suggest that two lineages of mitochondrial Ca(2+) uptake participate during active and resting states: 1) the major eukaryotic membrane potential-dependent mitochondrial Ca(2+) uniporter and 2) the evolutionarily conserved exchangers and solute carriers, which are also involved in ion transport. Although the influx of Ca(2+) across the inner mitochondrial membrane maintains metabolic functions and cell death signal transduction, the mechanisms that regulate mitochondrial Ca(2+)...",
+        "year": "2014",
+        "journal": "Molecular biology of the cell",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24430870/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Apoptosis: a review of programmed cell death.",
+        "abstract": "No abstract",
+        "year": "2007",
+        "journal": "Toxicol Pathol",
+        "pmid": "17562483",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 7982
+      },
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Nitric oxide and peroxynitrite in health and disease.",
+        "abstract": "No abstract",
+        "year": "2007",
+        "journal": "Physiol Rev",
+        "pmid": "17237348",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3813
+      },
+      {
+        "title": "Mitochondrial reactive oxygen species (ROS) and ROS-induced ROS release.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Physiol Rev",
+        "pmid": "24987008",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3146
+      },
+      {
+        "title": "Oxidative stress, inflammation, and cancer: how are they linked?",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Free Radic Biol Med",
+        "pmid": "20840865",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3122
+      },
+      {
+        "title": "Lipid peroxidation: production, metabolism, and signaling mechanisms of malondialdehyde and 4-hydroxy-2-nonenal.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Oxid Med Cell Longev",
+        "pmid": "24999379",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3029
+      },
+      {
+        "title": "Cisplatin in cancer therapy: molecular mechanisms of action.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Eur J Pharmacol",
+        "pmid": "25058905",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3008
+      },
+      {
+        "title": "The NLRP3 inflammasome: molecular activation and regulation to therapeutics.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Nat Rev Immunol",
+        "pmid": "31036962",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2936
+      },
+      {
+        "title": "Reactive oxygen species in inflammation and tissue injury.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Antioxid Redox Signal",
+        "pmid": "23991888",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2816
+      },
+      {
+        "title": "Regulation mechanisms and signaling pathways of autophagy.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Annu Rev Genet",
+        "pmid": "19653858",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2607
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Glutamate receptor ion channels: structure, regulation, and function.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Pharmacol Rev",
+        "pmid": "20716669",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2459
+      },
+      {
+        "title": "Ferroptosis: molecular mechanisms and health implications.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Cell Res",
+        "pmid": "33268902",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2385
+      },
+      {
+        "title": "Mitochondria: in sickness and in health.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Cell",
+        "pmid": "22424226",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2300
+      },
+      {
+        "title": "Inflammasomes: mechanism of action, role in disease, and therapeutics.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Nat Med",
+        "pmid": "26121197",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2216
+      },
+      {
+        "title": "PINK1 is selectively stabilized on impaired mitochondria to activate Parkin.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "PLoS Biol",
+        "pmid": "20126261",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2155
+      },
+      {
+        "title": "Reactive oxygen species, cellular redox systems, and apoptosis.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Free Radic Biol Med",
+        "pmid": "20045723",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2048
+      },
+      {
+        "title": "Classification of cell death: recommendations of the Nomenclature Committee on Cell Death 2009.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Cell Death Differ",
+        "pmid": "18846107",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1861
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "The integrated stress response.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "EMBO Rep",
+        "pmid": "27629041",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1767
+      },
+      {
+        "title": "Ferroptosis turns 10: Emerging mechanisms, physiological functions, and therapeutic applications.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell",
+        "pmid": "35803244",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1676
+      },
+      {
+        "title": "The molecular machinery of regulated cell death.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cell Res",
+        "pmid": "30948788",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1670
+      },
+      {
+        "title": "Role of Nrf2/HO-1 system in development, oxidative stress response and diseases: an evolutionarily conserved mechanism.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Cell Mol Life Sci",
+        "pmid": "27100828",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1662
+      },
+      {
+        "title": "Mechanisms, regulation and functions of the unfolded protein response.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "32457508",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1577
+      },
+      {
+        "title": "Bcl-2 and the regulation of programmed cell death.",
+        "abstract": "No abstract",
+        "year": "1994",
+        "journal": "J Cell Biol",
+        "pmid": "8294493",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1499
+      },
+      {
+        "title": "The Biological Basis for Cardiac Repair After Myocardial Infarction: From Inflammation to Fibrosis.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Circ Res",
+        "pmid": "27340270",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1460
+      },
+      {
+        "title": "TRP channels.",
+        "abstract": "No abstract",
+        "year": "2007",
+        "journal": "Annu Rev Biochem",
+        "pmid": "17579562",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1445
+      },
+      {
+        "title": "Effects of disturbed flow on vascular endothelium: pathophysiological basis and clinical perspectives.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Physiol Rev",
+        "pmid": "21248169",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1438
+      },
+      {
+        "title": "Autophagy in infection, inflammation and immunity.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Nat Rev Immunol",
+        "pmid": "24064518",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1399
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 60 papers found providing strong experimental support. Includes 30 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 60,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 30
+  }
+}

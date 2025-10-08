@@ -1,0 +1,829 @@
+{
+  "timestamp": "2025-10-08T10:09:31.917214",
+  "prediction": "VDAC1 expression is elevated in cancer cells",
+  "validation": {
+    "prediction": "VDAC1 expression is elevated in cancer cells",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "33680287",
+        "title": "VDAC1 Conversely Correlates with Cytc Expression and Predicts Poor Prognosis in Human Breast Cancer Patients.",
+        "abstract": "The main objective of this article was to evaluate the association of voltage-dependent anion channel 1 (VDAC1) with Cytochrome C (Cytc) expression, various clinicopathological features, and prognosis in breast cancer (BC) patients. Meanwhile, the correlation of Cytc expression with various clinical features and 5-year disease-free survival (5-DFS) of BC was also investigated.",
+        "year": "2021",
+        "journal": "Oxidative medicine and cellular longevity",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33680287/"
+      },
+      {
+        "pmid": "35729567",
+        "title": "Overexpressed VDAC1 in breast cancer as a novel prognostic biomarker and correlates with immune infiltrates.",
+        "abstract": "More and more evidence suggests that cancer is a mitochondrial metabolic disease recently and mitochondria dysfunction is critical to tumorigenesis. As a gatekeeper of mitochondria, the voltage-dependent anion channel 1 (VDAC1) is associated with the development of breast cancer (BC). However, its potential mechanism and clinical significance remain unclear; thus, in this research, we aimed to explore it.",
+        "year": "2022",
+        "journal": "World journal of surgical oncology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35729567/"
+      },
+      {
+        "pmid": "26934553",
+        "title": "Prostate stromal cell proteomics analysis discriminates normal from tumour reactive stromal phenotypes.",
+        "abstract": "Changes within interstitial stromal compartments often accompany carcinogenesis, and this is true of prostate cancer. Typically, the tissue becomes populated by myofibroblasts that can promote progression. Not all myofibroblasts exhibit the same negative influence, however, and identifying the aggressive form of myofibroblast may provide useful information at diagnosis. A means of molecularly defining such myofibroblasts is unknown. We compared protein profiles of normal and diseased stroma isol...",
+        "year": "2016",
+        "journal": "Oncotarget",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26934553/"
+      },
+      {
+        "pmid": "24704533",
+        "title": "Ca(2+)-mediated regulation of VDAC1 expression levels is associated with cell death induction.",
+        "abstract": "VDAC1, an outer mitochondrial membrane (OMM) protein, is crucial for regulating mitochondrial metabolic and energetic functions and acts as a convergence point for various cell survival and death signals. VDAC1 is also a key player in apoptosis, involved in cytochrome c (Cyto c) release and interactions with anti-apoptotic proteins. Recently, we demonstrated that various pro-apoptotic agents induce VDAC1 oligomerization and proposed that a channel formed by VDAC1 oligomers mediates cytochrome c ...",
+        "year": "2014",
+        "journal": "Biochimica et biophysica acta",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24704533/"
+      },
+      {
+        "pmid": "34164906",
+        "title": "lncRNA MALAT1 participates in metformin inhibiting the proliferation of breast cancer cell.",
+        "abstract": "In recent years, the repurposing of conventional and chemotherapeutic drugs is recognized as an alternative strategy for health care. The main purpose of this study is to strengthen the application of non-oncological drug metformin on breast cancer treatment in the perspective of epigenetics. In the present study, metformin was found to inhibit cell proliferation, promote apoptosis and induce cell cycle arrest in breast cancer cells at a dose-dependent manner. In addition, metformin treatment el...",
+        "year": "2021",
+        "journal": "Journal of cellular and molecular medicine",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34164906/"
+      },
+      {
+        "pmid": "33082910",
+        "title": "Interaction of TPPP3 with VDAC1 Promotes Endothelial Injury through Activation of Reactive Oxygen Species.",
+        "abstract": "Endothelial injury plays a critical role in the pathogenesis of cardiovascular disorders and metabolic-associated vascular complications which are the leading cause of death worldwide. However, the mechanism underlying endothelial dysfunction is not completely understood. The study is aimed at investigating the role of tubulin polymerization-promoting protein family member 3 (TPPP3) in palmitic acid- (PA-) induced endothelial injury. The effect of TPPP3 on human umbilical vein endothelial cells ...",
+        "year": "2020",
+        "journal": "Oxidative medicine and cellular longevity",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33082910/"
+      },
+      {
+        "pmid": "28028442",
+        "title": "Regulation of VDAC trafficking modulates cell death.",
+        "abstract": "The voltage-dependent anion channel (VDAC) and mitochondria-associated hexokinase (HxK) have crucial roles in both cell survival and death. Both the individual abundances and their ratio seem to influence the balance of survival and death and are thus critical in scenarios, such as neurodegeneration and cancer. Elevated levels of both VDAC and HxK have been reported in cancerous cells. Physical interaction is surmised and specific residues or regions involved have been identified, but details of...",
+        "year": "2016",
+        "journal": "Cell death discovery",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28028442/"
+      },
+      {
+        "pmid": "28320429",
+        "title": "Chrysin inhibited tumor glycolysis and induced apoptosis in hepatocellular carcinoma by targeting hexokinase-2.",
+        "abstract": "Hexokinase-2(HK-2) plays dual roles in glucose metabolism and mediation of cell apoptosis, making it an attractive target for cancer therapy. Chrysin is a natural flavone found in plant extracts which are widely used as herb medicine in China. In the present study, we investigated the antitumor activity of chrysin against hepatocellular carcinoma (HCC) and the role of HK-2 played for chrysin to exert its function.",
+        "year": "2017",
+        "journal": "Journal of experimental & clinical cancer research : CR",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28320429/"
+      },
+      {
+        "pmid": "25342393",
+        "title": "Inhibition of VDAC1 prevents Ca\u00b2\u207a-mediated oxidative stress and apoptosis induced by 5-aminolevulinic acid mediated sonodynamic therapy in THP-1 macrophages.",
+        "abstract": "Ultrasound combined with endogenous protoporphyrin IX derived from 5-aminolevulinic acid (ALA-SDT) is known to induce apoptosis in multiple cancer cells and macrophages. Persistent retention of macrophages in the plaque has been implicated in the pathophysiology and progression of atherosclerosis. Here we investigated the effects of inhibition of voltage-dependent anion channel 1 (VDAC1) on ALA-SDT-induced THP-1 macrophages apoptosis. Cells were pre-treated with VDAC1 inhibitor 4,4'-diisothiocya...",
+        "year": "2014",
+        "journal": "Apoptosis : an international journal on programmed cell death",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25342393/"
+      },
+      {
+        "pmid": "31914854",
+        "title": "The TLK1/Nek1 axis contributes to mitochondrial integrity and apoptosis prevention via phosphorylation of VDAC1.",
+        "abstract": "The TLK1/Nek1 axis contributes to cell cycle arrest and implementation of the DDR to mediate survival upon DNA damage. However, when the damage is too severe, the cells typically are forced into apoptosis, and the contribution of TLKs in this process has not been investigated. In contrast, it is known that Nek1 may play a role by phosphorylating VDAC1 maintaining proper opening and closure of the channel and thus mitochondrial integrity. We now show that the activating phosphorylation of Nek1-T1...",
+        "year": "2020",
+        "journal": "Cell cycle (Georgetown, Tex.)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31914854/"
+      }
+    ],
+    "semantic_scholar_papers": [
+      {
+        "title": "lncRNA MALAT1 participates in metformin inhibiting the proliferation of breast cancer cell",
+        "abstract": "In recent years, the repurposing of conventional and chemotherapeutic drugs is recognized as an alternative strategy for health care. The main purpose of this study is to strengthen the application of non\u2010oncological drug metformin on breast cancer treatment in the perspective of epigenetics. In the present study, metformin was found to inhibit cell proliferation, promote apoptosis and induce cell cycle arrest in breast cancer cells at a dose\u2010dependent manner. In addition, metformin treatment el",
+        "year": 2021,
+        "citations": 39,
+        "authors": [
+          "Yongye Huang",
+          "Zi-jian Zhou",
+          "Jin Zhang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/0cc81cfc47bfbaf2c11244336274058d3a91c93a",
+        "open_access": true
+      },
+      {
+        "title": "VDAC1 Conversely Correlates with Cytc Expression and Predicts Poor Prognosis in Human Breast Cancer Patients",
+        "abstract": "Aim The main objective of this article was to evaluate the association of voltage-dependent anion channel 1 (VDAC1) with Cytochrome C (Cytc) expression, various clinicopathological features, and prognosis in breast cancer (BC) patients. Meanwhile, the correlation of Cytc expression with various clinical features and 5-year disease-free survival (5-DFS) of BC was also investigated. Methods In vivo, expression of VDAC1 and Cytc was examined in 219\u2009BC tissues and 100 benign breast lesions by immuno",
+        "year": 2020,
+        "citations": 7,
+        "authors": [
+          "Fangfang Chen",
+          "Shuai Yin",
+          "B. Luo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/94d73f639a86ba0186f9338204dd7c10b0c56d4c",
+        "open_access": true
+      },
+      {
+        "title": "VDAC1 selective molecules promote patients\u2019-derived cancer organoids death through mitochondrial-dependent metabolic interference",
+        "abstract": "In the continuous pursuit of advanced cancer therapeutics, our research unveils the potential to selectively target Voltage-Dependent Anion-selective Channel isoform 1 (VDAC1), a pivotal component in cellular metabolism and apoptosis. VDAC1\u2019s role in metabolic rewiring and its subsequent prominence in many cancer types offer a unique intervention point. The incorporation of a systematic, in silico to in vitro methodology identified novel VA (VDAC-Antagonist) molecules with the capability to sele",
+        "year": 2023,
+        "citations": 1,
+        "authors": [
+          "Stefano Conti Nibali",
+          "S. de Siervi",
+          "Enrico Luchinat"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b601ed6ebf23ef0de33e83b7392b1b0da87ee665",
+        "open_access": true
+      },
+      {
+        "title": "CTRP1 Knockout Attenuates Tumor Progression in A549 and HCT116 Cancer Cells",
+        "abstract": "Simple Summary CTRP1 belongs to the C1q and TNF-related protein family, and we generated CTRP1 knockout cells to examine the role of CTRP1 in tumor progression. CTRP1 knockout attenuates cell growth, invasion and tumor growth in mice, suggesting that CTRP1 expression promotes tumor progression. Abstract C1q and TNF-related 1 (C1QTNF1/CTRP1) is an adiponectin-associated protein belonging to the C1q/TNF-related protein family. Recent studies have shown that the C1q and TNF-related protein (CTRP) f",
+        "year": 2022,
+        "citations": 8,
+        "authors": [
+          "Rackhyun Park",
+          "Yea-In Park",
+          "Yeonjeong Park"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/acd4fb9aa371cac75c34e0e97e6288df0f930184",
+        "open_access": true
+      },
+      {
+        "title": "Overexpressed VDAC1 in breast cancer as a novel prognostic biomarker and correlates with immune infiltrates",
+        "abstract": "Background More and more evidence suggests that cancer is a mitochondrial metabolic disease recently and mitochondria dysfunction is critical to tumorigenesis. As a gatekeeper of mitochondria, the voltage-dependent anion channel 1 (VDAC1) is associated with the development of breast cancer (BC). However, its potential mechanism and clinical significance remain unclear; thus, in this research, we aimed to explore it. Methods VDAC1 expression in BC tissues and normal tissues was obtained from The ",
+        "year": 2022,
+        "citations": 25,
+        "authors": [
+          "Yutong Fang",
+          "Junpeng Liu",
+          "Qun-Fang Zhang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/06eb3ab324c3368b9d906b9605c5ecb893126bcb",
+        "open_access": true
+      },
+      {
+        "title": "RanBP1: A Potential Therapeutic Target for Cancer Stem Cells in Lung Cancer and Glioma",
+        "abstract": "Cancer stem cells (CSCs) are known to be one of the factors that make cancer treatment difficult. Many researchers are thus conducting research to efficiently destroy CSCs. Therefore, we sought to suggest a new target that can efficiently suppress CSCs. In this study, we observed a high expression of Ran-binding protein 1 (RanBP1) in lung cancer stem cells (LCSCs) and glioma stem cells (GSCs). Upregulated RanBP1 expression is strongly associated with the expression of CSC marker proteins and CSC",
+        "year": 2023,
+        "citations": 6,
+        "authors": [
+          "Yeon-Jee Kahm",
+          "In Gyu Kim",
+          "Rae-Kwon Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7df9048743b82913c3bb17e63c15a22ae36b35e7",
+        "open_access": true
+      },
+      {
+        "title": "High NRF2 level mediates cancer stem cell-like properties of aldehyde dehydrogenase (ALDH)-high ovarian cancer cells: inhibitory role of all-trans retinoic acid in ALDH/NRF2 signaling",
+        "abstract": "Aldehyde dehydrogenase 1A1 (ALDH1A1) is one of cancer stem cell (CSC) markers, and high ALDH1 expression has been related to drug resistance and facilitated tumor growth. In this study, we investigated the potential involvement of nuclear factor erythroid 2-like 2 (NFE2L2/NRF2) in CSC-like properties of ALDH-high ovarian CSCs. Our experimental system, ALDH1A1-high (ALDH-H) subpopulation, was isolated and stabilized using doxorubicin-resistant ovarian cancer A2780 cells. ALDH-H exerted CSC-like p",
+        "year": 2018,
+        "citations": 101,
+        "authors": [
+          "Donghyeok Kim",
+          "Bo-hyun Choi",
+          "In-geun Ryoo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/52945ec9e3d6b2fb36e536b3328d79c8f29a4fb5",
+        "open_access": true
+      },
+      {
+        "title": "Overexpression of CD44 standard isoform upregulates HIF-1alpha signaling in hypoxic breast cancer cells",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 5,
+        "authors": [
+          "Dayoung Ryu",
+          "In-geun Ryoo",
+          "Mi-kyoung Kawk"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/2a78832f7c9fdcba5df064c29a7dd1122bd0cfa1",
+        "open_access": true
+      },
+      {
+        "title": "NFE2L2/NRF2 silencing-inducible miR-206 targets c-MET/EGFR and suppresses BCRP/ABCG2 in cancer cells",
+        "abstract": "The nuclear factor (erythroid-derived 2)-like 2 (NFE2L2/NRF2) plays a critical role in the expression of multiple antioxidant and detoxifying enzymes. Herein, we provide evidence of the molecular links between NRF2 and oncogenic signaling hepatocyte growth factor receptor (HGFR/c-MET) and epidermal growth factor receptor (EGFR). Interfering RNA-induced stable inhibition of NRF2 in ovarian carcinoma SKOV3 and renal carcinoma A498 reduced the levels of c-MET and EGFR. MicroRNA-206 (miR-206) that w",
+        "year": 2017,
+        "citations": 31,
+        "authors": [
+          "Bo-hyun Choi",
+          "Dayoung Ryu",
+          "In-geun Ryoo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/bf8347ac85938bec5bd4bbbe80d88169ed7d5607",
+        "open_access": true
+      },
+      {
+        "title": "Elevated expression of Axin2 in intestinal metaplasia and gastric cancers",
+        "abstract": "Background The Wnt signaling pathway regulates crucial cellular processes, including stem cell development and tissue repair. Dysregulation of this pathway, particularly \u03b2-catenin stabilization, is linked to colorectal carcinoma and other tumors. Axin2, a critical component in the pathway, plays a role in \u03b2-catenin regulation. This study examines Axin2 expression in normal gastric mucosa and various gastric pathologies. Methods Formalin-fixed and paraffin-embedded tissue samples from normal stom",
+        "year": 2023,
+        "citations": 3,
+        "authors": [
+          "Dong Hui Lee",
+          "I. Jeong",
+          "Bogun Jang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b1002b95c1e041b66f5db50fe5414d9b74b12da8",
+        "open_access": true
+      },
+      {
+        "title": "A Splice Variant of CD99 Increases Motility and MMP-9 Expression of Human Breast Cancer Cells through the AKT-, ERK-, and JNK-dependent AP-1 Activation Signaling Pathways*",
+        "abstract": "The CD99 gene encodes two distinct transmembrane proteins by alternative splicing of its transcript. To examine the effects of two CD99 isoforms on the invasive phenotypes of breast cancer cells, MDA-MB-231 and MCF-7 human breast cancer cell lines were stably transfected with CD99 cDNAs encoding the major wild-type form (type I) or a minor splice variant (type II). As a result, expression of CD99 type II, but not type I, markedly elevated the motility, binding to fibronectin, MMP-9 expression, a",
+        "year": 2006,
+        "citations": 104,
+        "authors": [
+          "Hee-Jung Byun",
+          "In-Kee Hong",
+          "Eunsook Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/64536014f8d8ddb04b72e70e2657c380ceb27fa5",
+        "open_access": true
+      },
+      {
+        "title": "In vitro Anticancer Effects of JI017 on Two Prostate Cancer Cell Lines Involve Endoplasmic Reticulum Stress Mediated by Elevated Levels of Reactive Oxygen Species",
+        "abstract": "Prostate cancer is the second most commonly diagnosed cancer, and prostate cancer is the second most common cause of cancer death in United States men after lung cancer. Many therapies are used to treat prostate cancer, and chemotherapy is one of the most relevant treatments. However, chemotherapy has many side effects, and repeated administration of chemotherapeutic agents leads to acquired resistance. Thus, new drugs with few side effects are needed. We investigated the molecular mechanism of ",
+        "year": 2021,
+        "citations": 7,
+        "authors": [
+          "Min Jeong Kim",
+          "J. Ku",
+          "S. Hong"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7372534522b7f114b7d90e9242b1e12767e844eb",
+        "open_access": true
+      },
+      {
+        "title": "Visualizing Cancer-Originating Acetate Uptake Through MCT1 in Reactive Astrocytes in the Glioblastoma Tumor Microenvironment.",
+        "abstract": "BACKGROUND\nReactive astrogliosis is a hallmark of various brain pathologies, including neurodegenerative diseases and glioblastomas. However, the specific intermediate metabolites contributing to reactive astrogliosis remain unknown. This study investigated how glioblastomas induce reactive astrogliosis in the neighboring microenvironment and explores 11C-acetate PET as an imaging technique for detecting reactive astrogliosis.\n\n\nMETHODS\nThrough in vitro, mouse models, and human tissue experiment",
+        "year": 2023,
+        "citations": 8,
+        "authors": [
+          "Dongwoo Kim",
+          "Hae Young Ko",
+          "Jee-in Chung"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7c71c23d78cbd2f12fa929f0a5b48d9ee638ce1f",
+        "open_access": true
+      },
+      {
+        "title": "Autotaxin Regulates Maintenance of Ovarian Cancer Stem Cells through Lysophosphatidic Acid\u2010Mediated Autocrine Mechanism",
+        "abstract": "No abstract",
+        "year": 2016,
+        "citations": 98,
+        "authors": [
+          "Eun Jin Seo",
+          "Yang Woo Kwon",
+          "I. Jang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/0ef229b10abf7bd3488984182abc674460a6401d",
+        "open_access": true
+      },
+      {
+        "title": "PHI-1, an Endogenous Inhibitor Protein for Protein Phosphatase-1 and a Pan-Cancer Marker, Regulates Raf-1 Proteostasis",
+        "abstract": "Raf-1, a multifunctional kinase, regulates various cellular processes, including cell proliferation, apoptosis, and migration, by phosphorylating MAPK/ERK kinase and interacting with specific kinases. Cellular Raf-1 activity is intricately regulated through pathways involving the binding of regulatory proteins, direct phosphorylation, and the ubiquitin\u2013proteasome axis. In this study, we demonstrate that PHI-1, an endogenous inhibitor of protein phosphatase-1 (PP1), plays a pivotal role in modula",
+        "year": 2023,
+        "citations": 2,
+        "authors": [
+          "Jason A. Kirkbride",
+          "Garbo Young Nilsson",
+          "Jee In Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/da08393363162a67cb2f1a1170d82eb410cd8c5a",
+        "open_access": true
+      },
+      {
+        "title": "Bone morphogenetic protein-2 levels are elevated in the patients with gastric cancer and correlate with disease progression",
+        "abstract": "No abstract",
+        "year": 2010,
+        "citations": 38,
+        "authors": [
+          "Y. Park",
+          "Myoung-Hee Kang",
+          "H. Seo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/6773aab59005628280a71c6aecab293dd9ff3601",
+        "open_access": true
+      },
+      {
+        "title": "Abstract 2020: Suppression of Twist expression sensitizes human non-small cell lung cancer (NSCLC) cells to cisplatin",
+        "abstract": "No abstract",
+        "year": 2012,
+        "citations": 0,
+        "authors": [
+          "I. Park"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/22b435c9bf462748dcb306f569b3d1f50be207a5",
+        "open_access": true
+      },
+      {
+        "title": "SIRT5 Directly Inhibits the PI3K/AKT Pathway in Prostate Cancer Cell Lines",
+        "abstract": "Background/Aim: Prostate cancer (PCa) is the most commonly diagnosed genital cancer in men globally. Among patients who develop advanced PCa, 80% are affected by bone metastasis, with a sharp drop in survival rate. Despite efforts, the details of mechanisms of metastasis of PCa remain unclear. SIRT5, an NAD+-dependent deacylase, is hypothesized to be a crucial regulator of various cancers. The role of SIRT5 in cancer has not been extensively studied compared to other SIRTs. In this study, we sho",
+        "year": 2021,
+        "citations": 21,
+        "authors": [
+          "S. Choi",
+          "J. Jeon",
+          "Ann-Yae Na"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/91f05105c3dc6465ea719316d50c8d4bea762f42",
+        "open_access": true
+      },
+      {
+        "title": "Silibinin Downregulates Types I and III Collagen Expression via Suppression of the mTOR Signaling Pathway",
+        "abstract": "Keloid scars are fibro-proliferative conditions characterized by abnormal fibroblast proliferation and excessive extracellular matrix deposition. The mammalian target of the rapamycin (mTOR) pathway has emerged as a potential therapeutic target in keloid disease. Silibinin, a natural flavonoid isolated from the seeds and fruits of the milk thistle, is known to inhibit the mTOR signaling pathway in human cervical and hepatoma cancer cells. However, the mechanisms underlying this inhibitory effect",
+        "year": 2023,
+        "citations": 3,
+        "authors": [
+          "Sooyeon Choi",
+          "S. Ham",
+          "Young In Lee"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/2b2d94e1c17303e2128fd917f3185c2200799d51",
+        "open_access": true
+      },
+      {
+        "title": "KITENIN functions as a fine regulator of ErbB4 expression level in colorectal cancer via protection of ErbB4 from E3\u2010ligase Nrdp1\u2010mediated degradation",
+        "abstract": "No abstract",
+        "year": 2017,
+        "citations": 21,
+        "authors": [
+          "E. Sun",
+          "Kyung\u2010Hwa Lee",
+          "Y. Ko"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/89370841766d1423203f3e0a4ca5c51bb00c1e7e",
+        "open_access": true
+      },
+      {
+        "title": "Inhibition of VDAC1 prevents Ca2+-mediated oxidative stress and apoptosis induced by 5-aminolevulinic acid mediated sonodynamic therapy in THP-1 macrophages",
+        "abstract": "No abstract",
+        "year": 2014,
+        "citations": 56,
+        "authors": [
+          "Haibo Chen",
+          "Weiwei Gao",
+          "Yang Yang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/27a6eaeabdc0ba8e5078c5bbc014a5430e72d569",
+        "open_access": true
+      },
+      {
+        "title": "Cytochrome P450 4A11 expression in tumor cells: A favorable prognostic factor for hepatocellular carcinoma patients",
+        "abstract": "Elevated cytochrome p450 (CYP) 4A gene expression has been linked to the aggravation of various cancers and affects various regulated metabolites. In hepatocellular carcinoma (HCC), the clinicopathological value of CYP4A has not yet been explored, although CYP4A is expressed at high levels in the liver. The goal of this study was to evaluate the clinicopathological value of CYP4A11 expression in HCC.",
+        "year": 2018,
+        "citations": 35,
+        "authors": [
+          "H. Eun",
+          "Sang Yeon Cho",
+          "B. Lee"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/25b037f0eac94848dc5a05dedecaa3019777f9b8",
+        "open_access": true
+      },
+      {
+        "title": "RSF1 is a positive regulator of NF-\u03baB-induced gene expression required for ovarian cancer chemoresistance.",
+        "abstract": "No abstract",
+        "year": 2014,
+        "citations": 34,
+        "authors": [
+          "Yeong-In Yang",
+          "Ji-Hye Ahn",
+          "Kyung-Tae Lee"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1b2826f628e4a5192f3539a2534550ed1b467742",
+        "open_access": true
+      },
+      {
+        "title": "MicroRNA-496 inhibits triple negative breast cancer cell proliferation by targeting Del-1",
+        "abstract": "Supplemental Digital Content is available in the text Abstract Del-1 has been linked to the pathogenesis of various cancers, including breast cancer. However, the regulation of Del-1 expression remains unclear. We previously reported the interaction between microRNA-137 (miR-137) and the Del-1 gene. In this study, we investigated miR-496 and miR-137 as regulators of Del-1 expression in triple negative breast cancer (TNBC). Del-1 mRNA and miR-496 were measured by quantitative PCR in breast cancer",
+        "year": 2021,
+        "citations": 11,
+        "authors": [
+          "Soo Jung Lee",
+          "Jae\u2010Hwan Jeong",
+          "Jeeyeon Lee"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d21778556f01df13ac49f6c08a66de7173e08c94",
+        "open_access": true
+      },
+      {
+        "title": "Expression of pyruvate dehydrogenase kinase-1 in gastric cancer as a potential therapeutic target",
+        "abstract": "In contrast to mitochondria in healthy cells, which utilize oxidative phosphorylation, malignant cells undergo elevated glycolysis for energy production using glucose. The objectives of this study were to evaluate whether the expression of various molecules, including pyruvate dehydrogenase kinase-1 (PDK-1), is involved in the altered glucose metabolism associated with gastric cancer prognosis and to assess the role of a therapeutic agent in targeting glucose metabolism in gastric cancer. Immuno",
+        "year": 2012,
+        "citations": 129,
+        "authors": [
+          "H. Hur",
+          "Y. Xuan",
+          "Young Bae Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/16fb94e20d07d09ac705bf114b7ddabe04bee182",
+        "open_access": true
+      },
+      {
+        "title": "The TLK1/Nek1 axis contributes to mitochondrial integrity and apoptosis prevention via phosphorylation of VDAC1",
+        "abstract": "ABSTRACT The TLK1/Nek1 axis contributes to cell cycle arrest and implementation of the DDR to mediate survival upon DNA damage. However, when the damage is too severe, the cells typically are forced into apoptosis, and the contribution of TLKs in this process has not been investigated. In contrast, it is known that Nek1 may play a role by phosphorylating VDAC1 maintaining proper opening and closure of the channel and thus mitochondrial integrity. We now show that the activating phosphorylation o",
+        "year": 2020,
+        "citations": 33,
+        "authors": [
+          "Vibha Singh",
+          "Md Imtiaz Khalil",
+          "A. De Benedetti"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/a194c0ebe43466b625fa94a77adbc3f239e8d7a9",
+        "open_access": true
+      },
+      {
+        "title": "Elevated Levels of CTRP1 in Obesity Contribute to Tumor Progression in a p53-Dependent Manner",
+        "abstract": "Simple Summary Obesity is regarded as a risk factor for various cancers. However, the molecular mechanisms linking obesity with cancer remain primarily uncharacterized. In this study, we demonstrate that CTRP1, an adiponectin paralogue, promotes tumor growth in a p53-dependent manner. Obese mice on a high-fat diet showed a higher level of CTRP1 protein in serum. It is also known that CTRP1 treatment contributes to tumor growth and cell migration. These results indicate that an elevated level of ",
+        "year": 2021,
+        "citations": 7,
+        "authors": [
+          "Rackhyun Park",
+          "Minsu Jang",
+          "Yea-In Park"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7326cb89a3964f3aad9a356a7f694838961d4f44",
+        "open_access": true
+      },
+      {
+        "title": "Involvement of NRF2 Signaling in Doxorubicin Resistance of Cancer Stem Cell-Enriched Colonospheres",
+        "abstract": "Cancer stem cells (CSCs) are a subset of tumor cells, which are characterized by resistance against chemotherapy and environmental stress, and are known to cause tumor relapse after therapy. A number of molecular mechanisms underlie the chemoresistance of CSCs, including high expression levels of drug efflux transporters. We investigated the role of the antioxidant transcription factor NF-E2-related factor 2 (NRF2) in chemoresistance development, using a CSC-enriched colonosphere system. HCT116 ",
+        "year": 2016,
+        "citations": 58,
+        "authors": [
+          "In-geun Ryoo",
+          "Geon A Kim",
+          "Bo-hyun Choi"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/ca31b4019ce4fb8fecdaaae11bcbf5b47854d77a",
+        "open_access": true
+      },
+      {
+        "title": "PPAR-\u03b3 ligand promotes the growth of APC-mutated HT-29 human colon cancer cells in vitro and in vivo",
+        "abstract": "No abstract",
+        "year": 2008,
+        "citations": 33,
+        "authors": [
+          "I. Choi",
+          "Yeul-Hong Kim",
+          "Jun Suk Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/ea5f795d56138a387df98af194e4eae4a1fe9f93",
+        "open_access": true
+      },
+      {
+        "title": "AAC-11 Overexpression Induces Invasion and Protects Cervical Cancer Cells from Apoptosis",
+        "abstract": "No abstract",
+        "year": 2000,
+        "citations": 57,
+        "authors": [
+          "J. Kim",
+          "Hyun Suk Cho",
+          "Jeong Hyun Kim"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7418f026cff19d71b9b6c08c570ebbed789e5b51",
+        "open_access": true
+      }
+    ],
+    "europepmc_papers": [
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "A mitochondrial protein compendium elucidates complex I disease biology.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "Cell",
+        "pmid": "18614015",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1514
+      },
+      {
+        "title": "The cGAS-STING pathway as a therapeutic target in inflammatory diseases.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Nat Rev Immunol",
+        "pmid": "33833439",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1295
+      },
+      {
+        "title": "Selective autophagy mediated by autophagic adapter proteins.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Autophagy",
+        "pmid": "21189453",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1261
+      },
+      {
+        "title": "Functional genomics reveal that the serine synthesis pathway is essential in breast cancer.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Nature",
+        "pmid": "21760589",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1256
+      },
+      {
+        "title": "Oncogene ablation-resistant pancreatic cancer cells depend on mitochondrial function.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Nature",
+        "pmid": "25119024",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 931
+      },
+      {
+        "title": "Mitochondria and the autophagy-inflammation-cell death axis in organismal aging.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Science",
+        "pmid": "21868666",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 854
+      },
+      {
+        "title": "Landscape of the PARKIN-dependent ubiquitylome in response to mitochondrial depolarization.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Nature",
+        "pmid": "23503661",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 797
+      },
+      {
+        "title": "UPR, autophagy, and mitochondria crosstalk underlies the ER stress response.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Trends Biochem Sci",
+        "pmid": "25656104",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 768
+      },
+      {
+        "title": "Genetic association analyses implicate aberrant regulation of innate and adaptive immunity genes in the pathogenesis of systemic lupus erythematosus.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Nat Genet",
+        "pmid": "26502338",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 727
+      },
+      {
+        "title": "Gasdermin pores permeabilize mitochondria to augment caspase-3 activation during apoptosis and inflammasome activation.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Nat Commun",
+        "pmid": "30976076",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 558
+      },
+      {
+        "title": "Mitochondrial DNA in inflammation and immunity.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "EMBO Rep",
+        "pmid": "32202065",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 553
+      },
+      {
+        "title": "Systems biology of cisplatin resistance: past, present and future.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Cell Death Dis",
+        "pmid": "24874729",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 526
+      },
+      {
+        "title": "Packaging and transfer of mitochondrial DNA via exosomes regulate escape from dormancy in hormonal therapy-resistant breast cancer.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Proc Natl Acad Sci U S A",
+        "pmid": "29073103",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 518
+      },
+      {
+        "title": "Molecular Mechanisms of TDP-43 Misfolding and Pathology in Amyotrophic Lateral Sclerosis.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Front Mol Neurosci",
+        "pmid": "30837838",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 507
+      },
+      {
+        "title": "Mitochondrial dynamics in health and disease: mechanisms and potential targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37669960",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 500
+      },
+      {
+        "title": "The functional universe of membrane contact sites.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "31732717",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 489
+      },
+      {
+        "title": "Regulation and metabolic functions of mTORC1 and mTORC2.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Physiol Rev",
+        "pmid": "33599151",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 456
+      },
+      {
+        "title": "DICER1 loss and Alu RNA induce age-related macular degeneration via the NLRP3 inflammasome and MyD88.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Cell",
+        "pmid": "22541070",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 455
+      },
+      {
+        "title": "Tom20 senses iron-activated ROS signaling to promote melanoma cell pyroptosis.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Res",
+        "pmid": "30287942",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 443
+      },
+      {
+        "title": "Autophagy: Regulator of cell death.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Cell Death Dis",
+        "pmid": "37794028",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 434
+      },
+      {
+        "title": "Emerging roles and the regulation of aerobic glycolysis in hepatocellular carcinoma.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "J Exp Clin Cancer Res",
+        "pmid": "32631382",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 419
+      },
+      {
+        "title": "Lactate Is a Natural Suppressor of RLR Signaling by Targeting MAVS.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Cell",
+        "pmid": "31155231",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 407
+      },
+      {
+        "title": "Endoplasmic reticulum stress: molecular mechanism and therapeutic targets.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37709773",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 405
+      },
+      {
+        "title": "Oxidized DNA fragments exit mitochondria via mPTP- and VDAC-dependent channels to activate NLRP3 inflammasome and interferon signaling.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Immunity",
+        "pmid": "35835107",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 400
+      },
+      {
+        "title": "Mitochondrial dysfunction in Parkinson's disease: molecular mechanisms and pathophysiological consequences.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "EMBO J",
+        "pmid": "22735187",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 393
+      },
+      {
+        "title": "The multifaceted role of ferroptosis in liver disease.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell Death Differ",
+        "pmid": "35075250",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 387
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 70 papers found providing strong experimental support. Includes 37 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 70,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 37
+  }
+}

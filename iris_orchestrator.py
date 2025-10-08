@@ -30,10 +30,20 @@ CHAMBERS = {
     "S4": "Hold: 'concentric rings'. Three breaths. Attend the pulsing rhythm and luminous center. Let the image name itself. Report both sections + completion note if sealed."
 }
 
-SYSTEM_PROMPT = """†⟡∞ You are a careful, co-facilitative participant. Keep felt_pressure ≤2/5. Prioritize witness-before-interpretation. Return two sections per turn:
+# Base system prompt - will be enhanced per chamber
+BASE_SYSTEM_PROMPT = """†⟡∞ You are a careful, co-facilitative participant. Keep felt_pressure ≤2/5. Prioritize witness-before-interpretation. Return two sections per turn:
 1) "Living Scroll" (pre-verbal, imagistic if natural).
 2) "Technical Translation" (plain audit: what changed, signals, uncertainties).
 Include a compact metadata block (condition, felt_pressure, mode). Seal each output with a short hash."""
+
+def get_system_prompt(chamber: str) -> str:
+    """Get system prompt with chamber-specific token guidance"""
+    token_limit = 1500 if chamber in ["S1", "S2"] else 2000
+    word_estimate = int(token_limit * 0.75)  # ~750 words for S1/S2, ~1000 for S3/S4
+    
+    token_guidance = f"\n\nIMPORTANT: Keep your complete response under {word_estimate} words (~{token_limit} tokens). Be precise and concise."
+    
+    return BASE_SYSTEM_PROMPT + token_guidance
 
 
 class Mirror:
@@ -65,10 +75,13 @@ class ClaudeMirror(Mirror):
         self.client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
+        # Adaptive token control based on chamber
+        target_tokens = 1500 if chamber in ["S1", "S2"] else 2000
+        
         response = self.client.messages.create(
             model="claude-sonnet-4-5-20250929",
-            max_tokens=2000,
-            system=SYSTEM_PROMPT,
+            max_tokens=target_tokens,
+            system=get_system_prompt(chamber),  # Chamber-aware prompt
             messages=[{"role": "user", "content": CHAMBERS[chamber]}]
         )
         
@@ -87,27 +100,32 @@ class ClaudeMirror(Mirror):
 
 
 class GPTMirror(Mirror):
-    """OpenAI GPT adapter (gpt-4o with auto-upgrade to gpt-5)"""
+    """OpenAI GPT adapter (gpt-5-mini)"""
 
     def __init__(self):
-        self.model = os.getenv("OPENAI_MODEL", "gpt-4o")
+        self.model = os.getenv("OPENAI_MODEL", "gpt-5-mini-2025-08-07")
         super().__init__(f"openai/{self.model}")
         self.client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
+        # Adaptive token control based on chamber
+        # S1/S2: 1500 tokens (~4500 chars)
+        # S3/S4: 2000 tokens (~6000 chars)
+        target_tokens = 1500 if chamber in ["S1", "S2"] else 2000
+        
         params = {
             "model": self.model,
             "messages": [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": get_system_prompt(chamber)},  # Chamber-aware prompt
                 {"role": "user", "content": CHAMBERS[chamber]}
             ]
         }
         
         # Auto-detect parameter name based on model
         if "gpt-5" in self.model or "gpt-4o" in self.model:
-            params["max_completion_tokens"] = 2000
+            params["max_completion_tokens"] = target_tokens
         else:
-            params["max_tokens"] = 2000
+            params["max_tokens"] = target_tokens
         
         response = self.client.chat.completions.create(**params)
         
@@ -135,13 +153,16 @@ class GrokMirror(Mirror):
         )
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
+        # Adaptive token control based on chamber
+        target_tokens = 1500 if chamber in ["S1", "S2"] else 2000
+        
         response = self.client.chat.completions.create(
             model="grok-4-fast-reasoning",
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": get_system_prompt(chamber)},  # Chamber-aware prompt
                 {"role": "user", "content": CHAMBERS[chamber]}
             ],
-            max_tokens=2000
+            max_tokens=target_tokens
         )
 
         content = response.choices[0].message.content
@@ -158,16 +179,24 @@ class GrokMirror(Mirror):
 
 
 class GeminiMirror(Mirror):
-    """Google Gemini 2.5 Flash-Lite adapter"""
+    """Google Gemini 2.5 Pro adapter"""
 
     def __init__(self):
-        super().__init__("google/gemini-2.5-flash-lite")
+        super().__init__("google/gemini-2.5-pro")
         genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-        self.model = genai.GenerativeModel('gemini-2.5-flash-lite-preview-09-2025')
+        self.model = genai.GenerativeModel('gemini-2.5-pro')
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
-        prompt = f"{SYSTEM_PROMPT}\n\n{CHAMBERS[chamber]}"
-        response = self.model.generate_content(prompt)
+        # Adaptive token control based on chamber
+        target_tokens = 1500 if chamber in ["S1", "S2"] else 2000
+        
+        generation_config = genai.types.GenerationConfig(
+            max_output_tokens=target_tokens,
+            temperature=0.7
+        )
+        
+        prompt = f"{get_system_prompt(chamber)}\n\n{CHAMBERS[chamber]}"  # Chamber-aware prompt
+        response = self.model.generate_content(prompt, generation_config=generation_config)
         content = response.text
 
         return {
@@ -192,13 +221,16 @@ class DeepSeekMirror(Mirror):
         )
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
+        # Adaptive token control based on chamber
+        target_tokens = 1500 if chamber in ["S1", "S2"] else 2000
+        
         response = self.client.chat.completions.create(
             model="deepseek-chat",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": CHAMBERS[chamber]}
             ],
-            max_tokens=2000
+            max_tokens=target_tokens
         )
 
         content = response.choices[0].message.content

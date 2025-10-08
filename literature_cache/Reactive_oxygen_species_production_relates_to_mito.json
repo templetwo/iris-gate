@@ -1,0 +1,581 @@
+{
+  "timestamp": "2025-10-08T10:09:27.249519",
+  "prediction": "Reactive oxygen species production relates to mitochondrial calcium",
+  "validation": {
+    "prediction": "Reactive oxygen species production relates to mitochondrial calcium",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "24987008",
+        "title": "Mitochondrial reactive oxygen species (ROS) and ROS-induced ROS release.",
+        "abstract": "Byproducts of normal mitochondrial metabolism and homeostasis include the buildup of potentially damaging levels of reactive oxygen species (ROS), Ca(2+), etc., which must be normalized. Evidence suggests that brief mitochondrial permeability transition pore (mPTP) openings play an important physiological role maintaining healthy mitochondria homeostasis. Adaptive and maladaptive responses to redox stress may involve mitochondrial channels such as mPTP and inner membrane anion channel (IMAC). Th...",
+        "year": "2014",
+        "journal": "Physiological reviews",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24987008/"
+      },
+      {
+        "pmid": "35835107",
+        "title": "Oxidized DNA fragments exit mitochondria via mPTP- and VDAC-dependent channels to activate NLRP3 inflammasome and interferon signaling.",
+        "abstract": "Mitochondrial DNA (mtDNA) escaping stressed mitochondria provokes inflammation via cGAS-STING pathway activation and, when oxidized (Ox-mtDNA), it binds cytosolic NLRP3, thereby triggering inflammasome activation. However, it is unknown how and in which form Ox-mtDNA exits stressed mitochondria in non-apoptotic macrophages. We found that diverse NLRP3 inflammasome activators rapidly stimulated uniporter-mediated calcium uptake to open mitochondrial permeability transition pores (mPTP) and trigge...",
+        "year": "2022",
+        "journal": "Immunity",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35835107/"
+      },
+      {
+        "pmid": "30290714",
+        "title": "PRKN-regulated mitophagy and cellular senescence during COPD pathogenesis.",
+        "abstract": "Cigarette smoke (CS)-induced accumulation of mitochondrial damage has been widely implicated in chronic obstructive pulmonary disease (COPD) pathogenesis. Mitophagy plays a crucial role in eliminating damaged mitochondria, and is governed by the PINK1 (PTEN induced putative protein kinase 1)-PRKN (parkin RBR E3 ubiquitin protein ligase) pathway. Although both increased PINK1 and reduced PRKN have been implicated in COPD pathogenesis in association with mitophagy, there are conflicting reports fo...",
+        "year": "2019",
+        "journal": "Autophagy",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30290714/"
+      },
+      {
+        "pmid": "33631425",
+        "title": "Oleic Acid and Eicosapentaenoic Acid Reverse Palmitic Acid-induced Insulin Resistance in Human HepG2 Cells via the Reactive Oxygen Species/JUN Pathway.",
+        "abstract": "Oleic acid (OA), a monounsaturated fatty acid (MUFA), has previously been shown to reverse saturated fatty acid palmitic acid (PA)-induced hepatic insulin resistance (IR). However, its underlying molecular mechanism is unclear. In addition, previous studies have shown that eicosapentaenoic acid (EPA), a \u03c9-3 polyunsaturated fatty acid (PUFA), reverses PA-induced muscle IR, but whether EPA plays the same role in hepatic IR and its possible mechanism involved need to be further clarified. Here, we ...",
+        "year": "2021",
+        "journal": "Genomics, proteomics & bioinformatics",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33631425/"
+      },
+      {
+        "pmid": "28070154",
+        "title": "Proposed Mechanisms of Photobiomodulation or Low-Level Light Therapy.",
+        "abstract": "Photobiomodulation (PBM) also known as low-level laser (or light) therapy (LLLT), has been known for almost 50 years but still has not gained widespread acceptance, largely due to uncertainty about the molecular, cellular, and tissular mechanisms of action. However, in recent years, much knowledge has been gained in this area, which will be summarized in this review. One of the most important chromophores is cytochrome c oxidase (unit IV in the mitochondrial respiratory chain), which contains bo...",
+        "year": "2016",
+        "journal": "IEEE journal of selected topics in quantum electronics : a publication of the IEEE Lasers and Electro-optics Society",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28070154/"
+      },
+      {
+        "pmid": "22057568",
+        "title": "Relation between mitochondrial membrane potential and ROS formation.",
+        "abstract": "Mitochondria are considered as the main source of reactive oxygen species (ROS) in the cell. For this reason, they have been recognized as a source of various pathological conditions as well as aging. Chronic increase in the rate of ROS production is responsible for the accumulation of ROS-associated damages in DNA, proteins, and lipids, and may result in progressive cell dysfunctions and, in a consequence, apoptosis, increasing the overall probability of an organism's pathological conditions. T...",
+        "year": "2012",
+        "journal": "Methods in molecular biology (Clifton, N.J.)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22057568/"
+      },
+      {
+        "pmid": "33413413",
+        "title": "Dual SGLT-1 and SGLT-2 inhibition improves left atrial dysfunction in HFpEF.",
+        "abstract": "Sodium-glucose linked transporter type 2 (SGLT-2) inhibition has been shown to reduce cardiovascular mortality in heart failure independently of glycemic control and prevents the onset of atrial arrhythmias, a common co-morbidity in heart failure with preserved ejection fraction (HFpEF). The mechanism behind these effects is not fully understood, and it remains unclear if they could be further enhanced by additional SGLT-1 inhibition. We investigated the effects of chronic treatment with the dua...",
+        "year": "2021",
+        "journal": "Cardiovascular diabetology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33413413/"
+      },
+      {
+        "pmid": "31327964",
+        "title": "Melatonin Attenuates LPS-Induced Acute Depressive-Like Behaviors and Microglial NLRP3 Inflammasome Activation Through the SIRT1/Nrf2 Pathway.",
+        "abstract": "Inflammation is a crucial component of various stress-induced responses that contributes to the pathogenesis of major depressive disorder (MDD). Depressive-like behavior (DLB) is characterized by decreased mobility and depressive behavior that occurs in systemic infection induced by Lipopolysaccharide (LPS) in experimental animals and is considered as a model of exacerbation of MDD. We assessed the effects of melatonin on behavioral changes and inflammatory cytokine expression in hippocampus of ...",
+        "year": "2019",
+        "journal": "Frontiers in immunology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31327964/"
+      },
+      {
+        "pmid": "33555313",
+        "title": "Mitochondria: their role in spermatozoa and in male infertility.",
+        "abstract": "The best-known role of spermatozoa is to fertilize the oocyte and to transmit the paternal genome to offspring. These highly specialized cells have a unique structure consisting of all the elements absolutely necessary to each stage of fertilization and to embryonic development. Mature spermatozoa are made up of a head with the nucleus, a neck, and a flagellum that allows motility and that contains a midpiece with a mitochondrial helix. Mitochondria are central to cellular energy production but ...",
+        "year": "2021",
+        "journal": "Human reproduction update",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33555313/"
+      },
+      {
+        "pmid": "32810740",
+        "title": "Interrelation between ROS and Ca",
+        "abstract": "Calcium (Ca",
+        "year": "2020",
+        "journal": "Redox biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32810740/"
+      },
+      {
+        "pmid": "24252804",
+        "title": "The role of oxidative stress in Parkinson's disease.",
+        "abstract": "Oxidative stress plays an important role in the degeneration of dopaminergic neurons in Parkinson's disease (PD). Disruptions in the physiologic maintenance of the redox potential in neurons interfere with several biological processes, ultimately leading to cell death. Evidence has been developed for oxidative and nitrative damage to key cellular components in the PD substantia nigra. A number of sources and mechanisms for the generation of reactive oxygen species (ROS) are recognized including ...",
+        "year": "2013",
+        "journal": "Journal of Parkinson's disease",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24252804/"
+      },
+      {
+        "pmid": "36436456",
+        "title": "Ablation of Shank3 alleviates cardiac dysfunction in aging mice by promoting CaMKII activation and Parkin-mediated mitophagy.",
+        "abstract": "Compromised mitophagy and mitochondrial homeostasis are major contributors for the etiology of cardiac aging, although the precise underlying mechanisms remains elusive. Shank3, a heart-enriched protein, has recently been reported to regulate aging-related neurodegenerative diseases. This study aimed to examine the role of Shank3 in the pathogenesis of cardiac senescence and the possible mechanisms involved. Cardiac-specific conditional Shank3 knockout (Shank3",
+        "year": "2022",
+        "journal": "Redox biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36436456/"
+      },
+      {
+        "pmid": "35784531",
+        "title": "Signaling Pathways Related to Oxidative Stress in Diabetic Cardiomyopathy.",
+        "abstract": "Diabetes is a chronic metabolic disease that is increasing in prevalence and causes many complications. Diabetic cardiomyopathy (DCM) is a complication of diabetes that is associated with high mortality, but it is not well defined. Nevertheless, it is generally accepted that DCM refers to a clinical disease that occurs in patients with diabetes and involves ventricular dysfunction, in the absence of other cardiovascular diseases, such as coronary atherosclerotic heart disease, hypertension, or v...",
+        "year": "2022",
+        "journal": "Frontiers in endocrinology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35784531/"
+      },
+      {
+        "pmid": "27089514",
+        "title": "Human induced pluripotent stem cell-derived cardiomyocytes recapitulate the predilection of breast cancer patients to doxorubicin-induced cardiotoxicity.",
+        "abstract": "Doxorubicin is an anthracycline chemotherapy agent effective in treating a wide range of malignancies, but it causes a dose-related cardiotoxicity that can lead to heart failure in a subset of patients. At present, it is not possible to predict which patients will be affected by doxorubicin-induced cardiotoxicity (DIC). Here we demonstrate that patient-specific human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CMs) can recapitulate the predilection to DIC of individual patients a...",
+        "year": "2016",
+        "journal": "Nature medicine",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27089514/"
+      },
+      {
+        "pmid": "33793303",
+        "title": "Increased Reactive Oxygen Species-Mediated Ca",
+        "abstract": "Mutations in tafazzin (",
+        "year": "2021",
+        "journal": "Circulation",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33793303/"
+      },
+      {
+        "pmid": "36610162",
+        "title": "Salidroside intensifies mitochondrial function of CoCl",
+        "abstract": "Salidroside (Sal), an active component from Rhodiola crenulata, has been confirmed to exert neuroprotective effects against hypoxia. However, its molecular mechanisms of intensifying mitochondrial function still largely unknown. In the present study, we aimed to explore the mechanisms by which Sal heightened mitochondrial function in CoCl",
+        "year": "2023",
+        "journal": "Phytomedicine : international journal of phytotherapy and phytopharmacology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36610162/"
+      },
+      {
+        "pmid": "34118452",
+        "title": "Dysfunctional mitochondria as critical players in the inflammation of autoimmune diseases: Potential role in Sj\u00f6gren's syndrome.",
+        "abstract": "Relevant reviews highlight the association between dysfunctional mitochondria and inflammation, but few studies address the contribution of mitochondria and mitochondria-endoplasmic reticulum (ER) contact sites (MERCs) to cellular homeostasis and inflammatory signaling. The present review outlines the important role of mitochondria in cellular homeostasis and how dysfunctional mitochondrion can release and misplace mitochondrial components (cardiolipin, mitochondrial DNA (mtDNA), and mitochondri...",
+        "year": "2021",
+        "journal": "Autoimmunity reviews",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34118452/"
+      },
+      {
+        "pmid": "34823575",
+        "title": "PINK1 deficiency impairs osteoblast differentiation through aberrant mitochondrial homeostasis.",
+        "abstract": "PTEN-induced kinase 1 (PINK1) is a serine/threonine-protein kinase in mitochondria that is critical for mitochondrial quality control. PINK1 triggers mitophagy, a selective autophagy of mitochondria, and is involved in mitochondrial regeneration. Although increments of mitochondrial biogenesis and activity are known to be crucial during differentiation, data regarding the specific role of PINK1 in osteogenic maturation and bone remodeling are limited.",
+        "year": "2021",
+        "journal": "Stem cell research & therapy",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34823575/"
+      },
+      {
+        "pmid": "33189984",
+        "title": "Songorine promotes cardiac mitochondrial biogenesis via Nrf2 induction during sepsis.",
+        "abstract": "Septic cardiomyopathy is characterized by impaired contractive function with mitochondrial dysregulation. Songorine is a typical active C",
+        "year": "2021",
+        "journal": "Redox biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33189984/"
+      },
+      {
+        "pmid": "36041055",
+        "title": "S100A9 Derived from Chemoembolization-Induced Hypoxia Governs Mitochondrial Function in Hepatocellular Carcinoma Progression.",
+        "abstract": "Transarterial chemoembolization (TACE) is the major treatment for advanced hepatocellular carcinoma (HCC), but it may cause hypoxic environment, leading to rapid progression after treatment. Here, using high-throughput sequencing on different models, S100 calcium binding protein A9 (S100A9) is identified as a key oncogene involved in post-TACE progression. Depletion or pharmacologic inhibition of S100A9 significantly dampens the growth and metastatic ability of HCC. Mechanistically, TACE induces...",
+        "year": "2022",
+        "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36041055/"
+      },
+      {
+        "pmid": "30741586",
+        "title": "Influenza M2 protein regulates MAVS-mediated signaling pathway through interacting with MAVS and increasing ROS production.",
+        "abstract": "Influenza A virus can evade host innate immune response that is involved in several viral proteins with complicated mechanisms. To date, how influenza A M2 protein modulates the host innate immunity remains unclear. Herein, we showed that M2 protein colocalized and interacted with MAVS (mitochondrial antiviral signaling protein) on mitochondria, and positively regulated MAVS-mediated innate immunity. Further studies revealed that M2 induced reactive oxygen species (ROS) production that was requi...",
+        "year": "2019",
+        "journal": "Autophagy",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30741586/"
+      },
+      {
+        "pmid": "26922832",
+        "title": "How do reactive oxygen species and calcium trigger mitochondrial membrane permeabilisation?",
+        "abstract": "Mitochondrial membrane permeabilisation (MMP) is classically considered as a point of no return in several forms of cell death and is involved in numerous diseases such as cancer, neurodegenerative disorders or ischemia/reperfusion injuries. Many studies established that reactive oxygen species (ROS) and Ca(2+) were the prominent inducers of MMP. However, the mechanisms connecting ROS and Ca(2+) to the players of MMP are still a matter of debate.",
+        "year": "2016",
+        "journal": "Biochimica et biophysica acta",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26922832/"
+      },
+      {
+        "pmid": "33450375",
+        "title": "Oxygen sensing, mitochondrial biology and experimental therapeutics for pulmonary hypertension and cancer.",
+        "abstract": "The homeostatic oxygen sensing system (HOSS) optimizes systemic oxygen delivery. Specialized tissues utilize a conserved mitochondrial sensor, often involving NDUFS2 in complex I of the mitochondrial electron transport chain, as a site of pO",
+        "year": "2021",
+        "journal": "Free radical biology & medicine",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33450375/"
+      },
+      {
+        "pmid": "36139485",
+        "title": "L-Ornithine L-Aspartate Restores Mitochondrial Function and Modulates Intracellular Calcium Homeostasis in Parkinson's Disease Models.",
+        "abstract": "The altered crosstalk between mitochondrial dysfunction, intracellular Ca",
+        "year": "2022",
+        "journal": "Cells",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36139485/"
+      },
+      {
+        "pmid": "26996063",
+        "title": "Mitochondrial cytopathies.",
+        "abstract": "Mitochondria are found in all nucleated human cells and perform a variety of essential functions, including the generation of cellular energy. Most of mitochondrial proteins are encoded by the nuclear DNA (nDNA) whereas a very small fraction is encoded by the mitochondrial DNA (mtDNA). Mutations in mtDNA or mitochondria-related nDNA genes can result in mitochondrial dysfunction which leads to a wide range of cellular perturbations including aberrant calcium homeostasis, excessive reactive oxygen...",
+        "year": "2016",
+        "journal": "Cell calcium",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26996063/"
+      },
+      {
+        "pmid": "27895381",
+        "title": "Reactive oxygen species induce neurite degeneration before induction of cell death.",
+        "abstract": "Reactive oxygen species (ROS) induce neuronal cell death in a time- and concentration-dependent manner. Treatment of cultured cells with a low concentration of hydrogen peroxide induces neurite degeneration, but not cell death. Neurites (axons and dendrites) are vulnerable to ROS. Neurite degeneration (shrinkage, accumulation, and fragmentation) has been found in neurodegenerative disorders, such as Alzheimer's disease, Parkinson's disease, and Huntington's disease. However, the mechanism of ROS...",
+        "year": "2016",
+        "journal": "Journal of clinical biochemistry and nutrition",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27895381/"
+      },
+      {
+        "pmid": "23332985",
+        "title": "Cyclosporine A normalizes mitochondrial coupling, reactive oxygen species production, and inflammation and partially restores skeletal muscle maximal oxidative capacity in experimental aortic cross-clamping.",
+        "abstract": "By binding to cyclophilin D, cyclosporine A (CsA) inhibits mitochondrial permeability transition pore (mPTP) opening and prevents mitochondrial dysfunction and ultimately cell death after ischemia-reperfusion (IR) injury in cardiac muscle. This study tested whether CsA would decrease skeletal muscle oxidative stress and mitochondrial dysfunctions after aortic cross-clamping related IR.",
+        "year": "2013",
+        "journal": "Journal of vascular surgery",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23332985/"
+      },
+      {
+        "pmid": "19846666",
+        "title": "Mitochondrial reactive oxygen species mediate GPCR-induced TACE/ADAM17-dependent transforming growth factor-alpha shedding.",
+        "abstract": "Epidermal growth factor receptor (EGFR) activation by GPCRs regulates many important biological processes. ADAM metalloprotease activity has been implicated as a key step in transactivation, yet the regulatory mechanisms are not fully understood. Here, we investigate the regulation of transforming growth factor-alpha (TGF-alpha) shedding by reactive oxygen species (ROS) through the ATP-dependent activation of the P2Y family of GPCRs. We report that ATP stimulates TGF-alpha proteolysis with conco...",
+        "year": "2009",
+        "journal": "Molecular biology of the cell",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19846666/"
+      },
+      {
+        "pmid": "36599286",
+        "title": "MAPT genotype-dependent mitochondrial aberration and ROS production trigger dysfunction and death in cortical neurons of patients with hereditary FTLD.",
+        "abstract": "Tauopathies are a major type of proteinopathies underlying neurodegenerative diseases. Mutations in the tau-encoding MAPT-gene lead to hereditary cases of frontotemporal lobar degeneration (FTLD)-tau, which span a wide phenotypic and pathological spectrum. Some of these mutations, such as the N279K mutation, result in a shift of the physiological 3R/4R ratio towards the more aggregation prone 4R isoform. Other mutations such as V337M cause a decrease in the in vitro affinity of tau to microtubul...",
+        "year": "2023",
+        "journal": "Redox biology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36599286/"
+      }
+    ],
+    "semantic_scholar_papers": [],
+    "europepmc_papers": [
+      {
+        "title": "Molecular mechanisms of cell death: recommendations of the Nomenclature Committee on Cell Death 2018.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cell Death Differ",
+        "pmid": "29362479",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 4404
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "2016 European Guidelines on cardiovascular disease prevention in clinical practice: The Sixth Joint Task Force of the European Society of Cardiology and Other Societies on Cardiovascular Disease Prevention in Clinical Practice (constituted by representatives of 10 societies and by invited experts)Developed with the special contribution of the European Association for Cardiovascular Prevention &amp; Rehabilitation (EACPR).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Eur Heart J",
+        "pmid": "27222591",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3694
+      },
+      {
+        "title": "Nanotoxicology: an emerging discipline evolving from studies of ultrafine particles.",
+        "abstract": "No abstract",
+        "year": "2005",
+        "journal": "Environ Health Perspect",
+        "pmid": "16002369",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3430
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Autophagy",
+        "pmid": "22966490",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2586
+      },
+      {
+        "title": "Glutamate receptor ion channels: structure, regulation, and function.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Pharmacol Rev",
+        "pmid": "20716669",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 2459
+      },
+      {
+        "title": "Endoplasmic reticulum stress and the inflammatory basis of metabolic disease.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Cell",
+        "pmid": "20303879",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1996
+      },
+      {
+        "title": "Blood-brain barrier breakdown in Alzheimer disease and other neurodegenerative disorders.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Nat Rev Neurol",
+        "pmid": "29377008",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1868
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Effects of disturbed flow on vascular endothelium: pathophysiological basis and clinical perspectives.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Physiol Rev",
+        "pmid": "21248169",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1438
+      },
+      {
+        "title": "Cell biology of ischemia/reperfusion injury.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Int Rev Cell Mol Biol",
+        "pmid": "22878108",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1329
+      },
+      {
+        "title": "The metabolic syndrome.",
+        "abstract": "No abstract",
+        "year": "2008",
+        "journal": "Endocr Rev",
+        "pmid": "18971485",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1211
+      },
+      {
+        "title": "Oxidation of tetrahydrobiopterin leads to uncoupling of endothelial cell nitric oxide synthase in hypertension.",
+        "abstract": "No abstract",
+        "year": "2003",
+        "journal": "J Clin Invest",
+        "pmid": "12697739",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1145
+      },
+      {
+        "title": "Sex and Gender Differences in Risk, Pathophysiology and Complications of Type 2 Diabetes Mellitus.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Endocr Rev",
+        "pmid": "27159875",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1122
+      },
+      {
+        "title": "Imaging and photodynamic therapy: mechanisms, monitoring, and optimization.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Chem Rev",
+        "pmid": "20353192",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1105
+      },
+      {
+        "title": "NRF2 and the Hallmarks of Cancer.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Cancer Cell",
+        "pmid": "29731393",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1101
+      },
+      {
+        "title": "The Next Generation of Platinum Drugs: Targeted Pt(II) Agents, Nanoparticle Delivery, and Pt(IV) Prodrugs.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Chem Rev",
+        "pmid": "26865551",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1086
+      },
+      {
+        "title": "2014 AHA/ACC/HRS guideline for the management of patients with atrial fibrillation: a report of the American College of Cardiology/American Heart Association Task Force on practice guidelines and the Heart Rhythm Society.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Circulation",
+        "pmid": "24682347",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1055
+      },
+      {
+        "title": "\u03b1-Synuclein in Parkinson's disease.",
+        "abstract": "No abstract",
+        "year": "2012",
+        "journal": "Cold Spring Harb Perspect Med",
+        "pmid": "22355802",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 916
+      },
+      {
+        "title": "Mechanical forces direct stem cell behaviour in development and regeneration.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Nat Rev Mol Cell Biol",
+        "pmid": "29115301",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 896
+      },
+      {
+        "title": "Molecular mechanisms regulating NLRP3 inflammasome activation.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Cell Mol Immunol",
+        "pmid": "26549800",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 887
+      },
+      {
+        "title": "Macrophages in immunoregulation and therapeutics.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Signal Transduct Target Ther",
+        "pmid": "37211559",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 875
+      },
+      {
+        "title": "Mitochondrial dynamics: overview of molecular mechanisms.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Essays Biochem",
+        "pmid": "30030364",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 869
+      },
+      {
+        "title": "Principles for characterizing the potential human health effects from exposure to nanomaterials: elements of a screening strategy.",
+        "abstract": "No abstract",
+        "year": "2005",
+        "journal": "Part Fibre Toxicol",
+        "pmid": "16209704",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 868
+      },
+      {
+        "title": "Fluorescent sensors for measuring metal ions in living systems.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Chem Rev",
+        "pmid": "24588137",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 844
+      },
+      {
+        "title": "Store-Operated Calcium Channels.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Physiol Rev",
+        "pmid": "26400989",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 832
+      },
+      {
+        "title": "Immunogenic and tolerogenic cell death.",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Nat Rev Immunol",
+        "pmid": "19365408",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 801
+      },
+      {
+        "title": "Mitochondrial membrane potential probes and the proton gradient: a practical usage guide.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Biotechniques",
+        "pmid": "21486251",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 794
+      },
+      {
+        "title": "Mitochondria-Targeted Triphenylphosphonium-Based Compounds: Syntheses, Mechanisms of Action, and Therapeutic and Diagnostic Applications.",
+        "abstract": "No abstract",
+        "year": "2017",
+        "journal": "Chem Rev",
+        "pmid": "28654243",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 786
+      },
+      {
+        "title": "Metabolism via Arginase or Nitric Oxide Synthase: Two Competing Arginine Pathways in Macrophages.",
+        "abstract": "No abstract",
+        "year": "2014",
+        "journal": "Front Immunol",
+        "pmid": "25386178",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 779
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 59 papers found providing strong experimental support. Includes 30 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 59,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 30
+  }
+}

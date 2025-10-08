@@ -1,0 +1,746 @@
+{
+  "timestamp": "2025-10-08T10:08:49.210958",
+  "prediction": "CBD modulates mitochondrial permeability transition pore",
+  "validation": {
+    "prediction": "CBD modulates mitochondrial permeability transition pore",
+    "validation_status": "validated",
+    "evidence_quality": 5,
+    "pubmed_papers": [
+      {
+        "pmid": "36426883",
+        "title": "Influence of sex on global myocardial ischemia tolerance and mitochondrial function in circulatory death donor hearts.",
+        "abstract": "Donation after circulatory death (DCD) donor hearts are not routinely used for heart transplantation (HTx) because of ischemic damage, which is inherent to the DCD process. HTx outcomes are suboptimal in males who received female donor hearts. The exact mechanism for suboptimal outcomes from female donor hearts has not been defined. Differential susceptibility to ischemia tolerance, which would play a significant role in DCD donation, could be a reason but has not been studied. We studied the in...",
+        "year": "2023",
+        "journal": "American journal of physiology. Heart and circulatory physiology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36426883/"
+      },
+      {
+        "pmid": "27531991",
+        "title": "Regulation of StAR by the N-terminal Domain and Coinduction of SIK1 and TIS11b/Znf36l1 in Single Cells.",
+        "abstract": "The cholesterol transfer function of steroidogenic acute regulatory protein (StAR) is uniquely integrated into adrenal cells, with mRNA translation and protein kinase A (PKA) phosphorylation occurring at the mitochondrial outer membrane (OMM). The StAR C-terminal cholesterol-binding domain (CBD) initiates mitochondrial intermembrane contacts to rapidly direct cholesterol to Cyp11a1 in the inner membrane (IMM). The conserved StAR N-terminal regulatory domain (NTD) includes a leader sequence targe...",
+        "year": "2016",
+        "journal": "Frontiers in endocrinology",
+        "source": "PubMed",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27531991/"
+      }
+    ],
+    "semantic_scholar_papers": [
+      {
+        "title": "The Reduction in the Mitochondrial Membrane Potential in Aging: The Role of the Mitochondrial Permeability Transition Pore",
+        "abstract": "It is widely reported that the mitochondrial membrane potential, \u2206\u03a8m, is reduced in aging animals. It was recently suggested that the lower \u2206\u03a8m in aged animals modulates mitochondrial bioenergetics and that this effect is a major cause of aging since artificially increased \u2206\u03a8m in C. elegans increased lifespan. Here, I critically review studies that reported reduction in \u2206\u03a8m in aged animals, including worms, and conclude that many of these observations are best interpreted as evidence that the fr",
+        "year": 2023,
+        "citations": 20,
+        "authors": [
+          "H. Rottenberg"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/92ccd76a3f4eebacb1802c127fc7ca08790002fd",
+        "open_access": true
+      },
+      {
+        "title": "Identity, structure, and function of the mitochondrial permeability transition pore: controversies, consensus, recent advances, and future directions",
+        "abstract": "The mitochondrial permeability transition (mPT) describes a Ca^2+-dependent and cyclophilin D (CypD)-facilitated increase of inner mitochondrial membrane permeability that allows diffusion of molecules up to 1.5\u2009kDa in size. It is mediated by a non-selective channel, the mitochondrial permeability transition pore (mPTP). Sustained mPTP opening causes mitochondrial swelling, which ruptures the outer mitochondrial membrane leading to subsequent apoptotic and necrotic cell death, and\u00a0is implicated ",
+        "year": 2023,
+        "citations": 198,
+        "authors": [
+          "P. Bernardi",
+          "C. Gerle",
+          "A. Halestrap"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/de50e857da45cbfb870f2177a0ca3d6d3e919269",
+        "open_access": true
+      },
+      {
+        "title": "The Mitochondrial Permeability Transition Pore\u2014Current Knowledge of Its Structure, Function, and Regulation, and Optimized Methods for Evaluating Its Functional State",
+        "abstract": "The mitochondrial permeability transition pore (MPTP) is a calcium-dependent, ion non-selective membrane pore with a wide range of functions. Although the MPTP has been studied for more than 50 years, its molecular structure remains unclear. Short-term (reversible) opening of the MPTP protects cells from oxidative damage and enables the efflux of Ca2+ ions from the mitochondrial matrix and cell signaling. However, long-term (irreversible) opening induces processes leading to cell death. Ca2+ ion",
+        "year": 2023,
+        "citations": 59,
+        "authors": [
+          "R. Endlicher",
+          "Z. Drahota",
+          "Kate\u0159ina \u0160tefkov\u00e1"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/a05b627aa544ec4a11070346d23c135e74d01f24",
+        "open_access": true
+      },
+      {
+        "title": "The mitochondrial permeability transition pore and its role in cell death.",
+        "abstract": "No abstract",
+        "year": 1999,
+        "citations": 2490,
+        "authors": [
+          "M. Crompton"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1787cabb6d583c0d034fa8fa3566b6c657b1b3ce",
+        "open_access": true
+      },
+      {
+        "title": "SARS-COV-2 viroporins activate the NLRP3-inflammasome by the mitochondrial permeability transition pore",
+        "abstract": "Background Compared to healthy controls, severe COVID19 patients display increased levels of activated NLRP3-inflammasome (NLRP3-I) and interleukin (IL)-1\u03b2. SARS-CoV-2 encodes viroporin proteins E and Orf3a(2-E+2-3a) with homologs to SARS-CoV-1, 1-E+1-3a, which elevate NLRP3-I activation; by an unknown mechanism. Thus, we investigated how 2-E+2-3a activates the NLRP3-I to better understand the pathophysiology of severe COVID-19. Methods We generated a polycistronic expression-vector co-expressin",
+        "year": 2023,
+        "citations": 29,
+        "authors": [
+          "Joseph W. Guarnieri",
+          "A. Angelin",
+          "D. Murdock"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/9e9f8e4e76f8c39f1ff00a6d7b16a906612328b7",
+        "open_access": true
+      },
+      {
+        "title": "Morphine-induced postconditioning modulates mitochondrial permeability transition pore opening via delta-1 opioid receptors activation in isolated rat hearts",
+        "abstract": "Background It is generally accepted that morphine affords cardioprotection against ischemia/reperfusion injury. Inhibition of the mitochondrial permeability transition pore (MPTP) is considered an end target for cardioprotection. The aim of this study was to investigate the involvement of opioid receptors (OR) and MPTP in morphine-induced postconditioning (M-Post). Methods Isolated rat hearts were subjected to 30 min of regional ischemia and 2 h of reperfusion. Hearts were treated with 1 \u00b5M morp",
+        "year": 2011,
+        "citations": 28,
+        "authors": [
+          "J. Kim",
+          "K. Chun",
+          "Y. Park"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/894592bd208d388abf90fe8cb2e76cc7beaea2c0",
+        "open_access": true
+      },
+      {
+        "title": "The mitochondrial ATP synthase is a negative regulator of the mitochondrial permeability transition pore",
+        "abstract": "Significance The mitochondrial permeability transition pore (mPTP) is thought to serve homeostatic functions, but its prolonged opening in response to Ca2+ precipitates necrosis. Pore opening has been implicated in ischemia-reperfusion injury, cancer, neurodegenerative diseases, and aging. However, a longstanding roadblock in understanding mitochondrial-dependent necrosis and developing therapeutics has been a lack of knowledge regarding the molecular identity of mPTP. The mitochondrial adenosin",
+        "year": 2023,
+        "citations": 18,
+        "authors": [
+          "Ryan Pekson",
+          "Felix G Liang",
+          "Joshua L Axelrod"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/6a203e3cbd7c660eb4089027a2d017c610aec2b4",
+        "open_access": true
+      },
+      {
+        "title": "The mitochondrial permeability transition pore in Ca2+ homeostasis.",
+        "abstract": "No abstract",
+        "year": 2023,
+        "citations": 29,
+        "authors": [
+          "Michela Carraro",
+          "P. Bernardi"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/7998fc866969888c0117e9ad3caa919a4a53e627",
+        "open_access": true
+      },
+      {
+        "title": "The Haves and Have-Nots: The Mitochondrial Permeability Transition Pore across Species",
+        "abstract": "The demonstration that F1FO (F)-ATP synthase and adenine nucleotide translocase (ANT) can form Ca2+-activated, high-conductance channels in the inner membrane of mitochondria from a variety of eukaryotes led to renewed interest in the permeability transition (PT), a permeability increase mediated by the PT pore (PTP). The PT is a Ca2+-dependent permeability increase in the inner mitochondrial membrane whose function and underlying molecular mechanisms have challenged scientists for the last 70 y",
+        "year": 2023,
+        "citations": 11,
+        "authors": [
+          "Elena Frigo",
+          "Ludovica Tommasin",
+          "G. Lippe"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/73b12de79c0fe76f90032e5835398767bc40faa1",
+        "open_access": true
+      },
+      {
+        "title": "Short-Term Mitochondrial Permeability Transition Pore Opening Modulates Histone Lysine Methylation at the Early Phase of Somatic Cell Reprogramming.",
+        "abstract": "No abstract",
+        "year": 2018,
+        "citations": 45,
+        "authors": [
+          "Zhongfu Ying",
+          "Ge Xiang",
+          "Lingjun Zheng"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/04e79fe617bb8fb2157846e25c811f999dc3a2e0",
+        "open_access": true
+      },
+      {
+        "title": "Double-activation of mitochondrial permeability transition pore opening via calcium overload and reactive oxygen species for cancer therapy",
+        "abstract": "Background Calcium ions (Ca 2+ ) participates in various intracellular signal cascades and especially plays a key role in pathways relevant to cancer cells. Mitochondrial metabolism stimulated by calcium overload can trigger the opening of the mitochondrial permeability transition pore (MPTP), which leads to cancer cell death. Methods Herein, a mitochondrial pathway for tumour growth inhibition was built via the double-activation of MPTP channel. Fe 2+ doped covalent organic frameworks (COF) was",
+        "year": 2022,
+        "citations": 61,
+        "authors": [
+          "Ying Zhou",
+          "Shisong Jing",
+          "Sainan Liu"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/59308ba433c9623022e28f997297c39c31832a3b",
+        "open_access": true
+      },
+      {
+        "title": "Permeability-Controlled Probe for Directly Visualizing the Opening of Mitochondrial Permeability Transition Pore in Native Status.",
+        "abstract": "The opening of mitochondrial permeability transition pore (mPTP) plays a fundamental role in cell apoptosis regulation, ischemia-reperfusion injury, and neurodegenerative disorders. However, the molecular tools for detecting mPTP open in cellular native status have not been reported yet. Herein, we de novo designed a robust fluorescent probe mPTP-F to monitor mPTP opening in cellular native status for the first time. The membrane-permeable probe could accumulate into mitochondria and convert to ",
+        "year": 2022,
+        "citations": 13,
+        "authors": [
+          "Minggang Tian",
+          "Baoli Dong",
+          "Zheming Zhang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/d6719897dcfd5e6b15621c73c6509465734ce3c4",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial permeability transition pore-dependent necrosis.",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 98,
+        "authors": [
+          "Dexter J Robichaux",
+          "Mikako Harata",
+          "Elizabeth V. Murphy"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/198d20cc8b619501eeb9e6f7574eff26d16da443",
+        "open_access": true
+      },
+      {
+        "title": "Targeting the Mitochondrial Permeability Transition Pore for Drug Discovery: Challenges and Opportunities.",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 33,
+        "authors": [
+          "Ibrahim Damilare Boyenle",
+          "Abdul-Quddus Kehinde Oyedele",
+          "Abdeen Tunde Ogunlana"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1e048c471c346d2b899f7335a2abcd563730fe03",
+        "open_access": true
+      },
+      {
+        "title": "Cyclophilin D regulation of the mitochondrial permeability transition pore.",
+        "abstract": "No abstract",
+        "year": 2022,
+        "citations": 14,
+        "authors": [
+          "Elizabeth V. Murphy"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3a7454debaadcc1951c164b8eaeadc85a658c54f",
+        "open_access": true
+      },
+      {
+        "title": "The mitochondrial permeability transition pore: an evolving concept critical for cell life and death",
+        "abstract": "In this review, we summarize current knowledge of perhaps one of the most intriguing phenomena in cell biology: the mitochondrial permeability transition pore (mPTP). This phenomenon, which was initially observed as a sudden loss of inner mitochondrial membrane impermeability caused by excessive calcium, has been studied for almost 50\u2009years, and still no definitive answer has been provided regarding its mechanisms. From its initial consideration as an in vitro artifact to the current notion that",
+        "year": 2021,
+        "citations": 83,
+        "authors": [
+          "G. Morciano",
+          "N. Naumova",
+          "P. Koprowski"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/04774aab7fde72fe9e5fe9075649d0e26b1c54f5",
+        "open_access": true
+      },
+      {
+        "title": "Targeting the Mitochondrial Permeability Transition Pore to Prevent Age-Associated Cell Damage and Neurodegeneration",
+        "abstract": "The aging process is associated with significant alterations in mitochondrial function. These changes in mitochondrial function are thought to involve increased production of reactive oxygen species (ROS), which over time contribute to cell death, senescence, tissue degeneration, and impaired tissue repair. The mitochondrial permeability transition pore (mPTP) is likely to play a critical role in these processes, as increased ROS activates mPTP opening, which further increases ROS production. In",
+        "year": 2021,
+        "citations": 69,
+        "authors": [
+          "A. Kent",
+          "Khairat Bahgat Youssef El Baradie",
+          "M. Hamrick"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/57d2422addad30f5459af324d01df2ac5b246997",
+        "open_access": true
+      },
+      {
+        "title": "The mitochondrial permeability transition pore activates the mitochondrial unfolded protein response and promotes aging",
+        "abstract": "Mitochondrial activity determines aging rate and the onset of chronic diseases. The mitochondrial permeability transition pore (mPTP) is a pathological pore in the inner mitochondrial membrane thought to be composed of the F-ATP synthase (complex V). OSCP, a subunit of F-ATP synthase, helps protect against mPTP formation. How the destabilization of OSCP may contribute to aging, however, is unclear. We have found that loss OSCP in the nematode Caenorhabditis elegans initiates the mPTP and shorten",
+        "year": 2021,
+        "citations": 34,
+        "authors": [
+          "Suzanne Angeli",
+          "Anna Foulger",
+          "Manish Chamoli"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/1e30b309d5eeb44a4a59eabf3df4e633317d5bfd",
+        "open_access": true
+      },
+      {
+        "title": "Inhibition of the Anti-Apoptotic Bcl-2 Family by BH3 Mimetics Sensitize the Mitochondrial Permeability Transition Pore Through Bax and Bak",
+        "abstract": "Mitochondrial permeability transition pore (MPTP)-dependent necrosis contributes to numerous pathologies in the heart, brain, and skeletal muscle. The MPTP is a non-selective pore in the inner mitochondrial membrane that is triggered by high levels of matrix Ca2+, and sustained opening leads to mitochondrial dysfunction. Although the MPTP is defined by an increase in inner mitochondrial membrane permeability, the expression of pro-apoptotic Bcl-2 family members, Bax and Bak localization to the o",
+        "year": 2021,
+        "citations": 32,
+        "authors": [
+          "P. Patel",
+          "Arielys Mendoza",
+          "Dexter J Robichaux"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/df517aae8a68f0d37be087072e6905542777286d",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial Permeability Transition: A Pore Intertwines Brain Aging and Alzheimer\u2019s Disease",
+        "abstract": "Advanced age is the greatest risk factor for aging-related brain disorders including Alzheimer\u2019s disease (AD). However, the detailed mechanisms that mechanistically link aging and AD remain elusive. In recent years, a mitochondrial hypothesis of brain aging and AD has been accentuated. Mitochondrial permeability transition pore (mPTP) is a mitochondrial response to intramitochondrial and intracellular stresses. mPTP overactivation has been implicated in mitochondrial dysfunction in aging and AD ",
+        "year": 2021,
+        "citations": 42,
+        "authors": [
+          "Kun Jia",
+          "Heng Du"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/546aa21b9f332297549476df3989fe684a410b4a",
+        "open_access": true
+      },
+      {
+        "title": "Protectors of the mitochondrial permeability transition pore activated by iron and doxorubicin.",
+        "abstract": "AIM\nThe study of action of iron, DOX, and their complex on the mitochondrial permeability transition pore (MPTP) opening and the detection of possible protectors of MPTP in the conditions close to mitochondria-dependent ferroptosis.\n\n\nBACKGROUND\nThe toxicity of doxorubicin (DOX) is mainly associated with the free iron accumulation and mitochondrial dysfunction. DOX can provoke ferroptosis, iron-dependent cell death driven by the membrane damage. The mitochondrial permeability transition pore (MP",
+        "year": 2021,
+        "citations": 21,
+        "authors": [
+          "T. Fedotcheva",
+          "N. Fedotcheva"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/b1ae3efe314bd8903a70bd0868ec18cfc73e61db",
+        "open_access": true
+      },
+      {
+        "title": "Mitochondrial Dysfunction and Alterations in Mitochondrial Permeability Transition Pore (mPTP) Contribute to Apoptosis Resistance in Idiopathic Pulmonary Fibrosis Fibroblasts",
+        "abstract": "Idiopathic pulmonary fibrosis (IPF) is a devastating disease characterized by increased activation of fibroblasts/myofibroblasts. Previous reports have shown that IPF fibroblasts are resistant to apoptosis, but the mechanisms remain unclear. Since inhibition of the mitochondrial permeability transition pore (mPTP) has been implicated in the resistance to apoptosis, in this study, we analyzed the role of mitochondrial function and the mPTP on the apoptosis resistance of IPF fibroblasts under basa",
+        "year": 2021,
+        "citations": 25,
+        "authors": [
+          "E. Luis-Garc\u00eda",
+          "C. Becerril",
+          "Alfonso Salgado-Aguayo"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/edbbcc76cb835f09f652e5c7024f1903b46c0e19",
+        "open_access": true
+      },
+      {
+        "title": "Magnesium ion modulates the sensitivity of the mitochondrial permeability transition pore to cyclosporin A and ADP.",
+        "abstract": "No abstract",
+        "year": 1994,
+        "citations": 112,
+        "authors": [
+          "S. Novgorodov",
+          "T. Gudz",
+          "G. Brierley"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/f06394ad5350f2ebffd0d416972a926b76d9176c",
+        "open_access": true
+      },
+      {
+        "title": "Role of Mitochondrial Calcium and the Permeability Transition Pore in Regulating Cell Death.",
+        "abstract": "Adult cardiomyocytes are postmitotic cells that undergo very limited cell division. Thus, cardiomyocyte death as occurs during myocardial infarction has very detrimental consequences for the heart. Mitochondria have emerged as an important regulator of cardiovascular health and disease. Mitochondria are well established as bioenergetic hubs for generating ATP but have also been shown to regulate cell death pathways. Indeed many of the same signals used to regulate metabolism and ATP production, ",
+        "year": 2020,
+        "citations": 283,
+        "authors": [
+          "Tyler M. Bauer",
+          "E. Murphy"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/9ddf92d56107dbbe21f0ca9871453a53f431cb45",
+        "open_access": true
+      },
+      {
+        "title": "Schisandrin B Antagonizes Cardiotoxicity Induced by Pirarubicin by Inhibiting Mitochondrial Permeability Transition Pore (mPTP) Opening and Decreasing Cardiomyocyte Apoptosis",
+        "abstract": "Objective: Pirarubicin (THP), one of the anthracycline anticancer drugs, is widely used in the treatment of various cancers, but its cardiotoxicity cannot be ignored. Schisandrin B (SchB) has the ability to upregulate cellular antioxidant defense mechanism and promote mitochondrial function and antioxidant status. However, it has not been reported whether it can resist THP-induced cardiotoxicity. The aim of this study was to investigate the effect of SchB on THP cardiotoxicity and its mechanism.",
+        "year": 2021,
+        "citations": 32,
+        "authors": [
+          "Hongwei Shi",
+          "Heng Tang",
+          "Wen Ai"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/dd1f15c5ea2adb13586bcb989677f19c25d19063",
+        "open_access": true
+      },
+      {
+        "title": "Glutamate Interacts with VDAC and Modulates Opening of the Mitochondrial Permeability Transition Pore",
+        "abstract": "No abstract",
+        "year": 2004,
+        "citations": 54,
+        "authors": [
+          "D. Gincel",
+          "V. Shoshan-Barmatz"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/3e6ad7e4445bb47e9fbfea17f6e5625ffcebb92e",
+        "open_access": true
+      },
+      {
+        "title": "Hydroxysafflor yellow A alleviates cerebral ischemia reperfusion injury by suppressing apoptosis via mitochondrial permeability transition pore.",
+        "abstract": "No abstract",
+        "year": 2021,
+        "citations": 36,
+        "authors": [
+          "Ping Huang",
+          "Si-peng Wu",
+          "Ning Wang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/a7a551b82b3880fc6812be5696edafda59e54fe5",
+        "open_access": true
+      },
+      {
+        "title": "Dual dynamics of mitochondrial permeability transition pore opening",
+        "abstract": "Mitochondria play an essential role in bioenergetics and cellular Ca2+\\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$${}^{2+}$$\\end{document} handling. The mitochondrial permeability transition pore (mPTP) is a non-specific channel located in the inner mitochondrial membrane. Long-lasting openings of the pore allow t",
+        "year": 2020,
+        "citations": 43,
+        "authors": [
+          "Benjamin Wacquier",
+          "L. Combettes",
+          "G. Dupont"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/c84bd3a49eaa5d1496fe8a0c424e32f45b607c26",
+        "open_access": true
+      },
+      {
+        "title": "The mitochondrial permeability transition pore in cell death: A promising drug binding bioarchitecture",
+        "abstract": "Bioenergetic failure often features programmed cell death involved in some severe pathologies. When the cell is fated to die, the inner mitochondrial membrane becomes permeable to ions and solutes, due to the formation and opening of a channel known as mitochondrial permeability transition pore (mPTP). Up to now, the still\u2010elusive mPTP structure and mechanism prevented any attempt to identify/design drugs to rule its formation and limit cell death. Latest advances, which strongly suggest that th",
+        "year": 2020,
+        "citations": 46,
+        "authors": [
+          "Salvatore Nesci"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/33c3adb1723169f7342cd735b44fef4b12386bc3",
+        "open_access": true
+      },
+      {
+        "title": "Tristability in mitochondrial permeability transition pore opening.",
+        "abstract": "Mitochondrial permeability transition pore (PTP), a key regulator of cell life and death processes, is triggered by calcium ions (Ca2+) and potentiated by reactive oxygen species (ROS). Although the two modes of PTP opening, i.e., transient and persistent, have been identified for a long time, its dynamical mechanism is still not fully understood. To test a proposed hypothesis that PTP opening acts as a tristable switch, which is characterized by low, medium, and high open probability, we develo",
+        "year": 2021,
+        "citations": 10,
+        "authors": [
+          "Hong Qi",
+          "Zhi-Chao Li",
+          "Shi-Miao Wang"
+        ],
+        "source": "Semantic Scholar",
+        "url": "https://www.semanticscholar.org/paper/f149a2e8f99bdbe69614a279968afea828d0b387",
+        "open_access": true
+      }
+    ],
+    "europepmc_papers": [
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (3rd edition).",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Autophagy",
+        "pmid": "26799652",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 3947
+      },
+      {
+        "title": "Guidelines for the use and interpretation of assays for monitoring autophagy (4th edition)&lt;sup&gt;1&lt;/sup&gt;.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Autophagy",
+        "pmid": "33634751",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 1805
+      },
+      {
+        "title": "Role of pyroptosis in inflammation and cancer.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Cell Mol Immunol",
+        "pmid": "35970871",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 399
+      },
+      {
+        "title": "Amyloid Oligomers: A Joint Experimental/Computational Perspective on Alzheimer's Disease, Parkinson's Disease, Type II Diabetes, and Amyotrophic Lateral Sclerosis.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Chem Rev",
+        "pmid": "33543942",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 360
+      },
+      {
+        "title": "Advances in TRP channel drug discovery: from target validation to clinical studies.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Nat Rev Drug Discov",
+        "pmid": "34526696",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 311
+      },
+      {
+        "title": "Exosomes\u2500Nature's Lipid Nanoparticles, a Rising Star in Drug Delivery and Diagnostics.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "ACS Nano",
+        "pmid": "36354238",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 267
+      },
+      {
+        "title": "Intracellular cAMP Sensor EPAC: Physiology, Pathophysiology, and Therapeutics Development.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Physiol Rev",
+        "pmid": "29537337",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 153
+      },
+      {
+        "title": "Dynamic Protein Interaction Networks and New Structural Paradigms in Signaling.",
+        "abstract": "No abstract",
+        "year": "2016",
+        "journal": "Chem Rev",
+        "pmid": "26922996",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 150
+      },
+      {
+        "title": "Cadmium-Induced Oxidative Stress: Focus on the Central Nervous System.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Antioxidants (Basel)",
+        "pmid": "32516892",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 145
+      },
+      {
+        "title": "PKA Phosphorylation of NCLX Reverses Mitochondrial Calcium Overload and Depolarization, Promoting Survival of PINK1-Deficient Dopaminergic Neurons.",
+        "abstract": "No abstract",
+        "year": "2015",
+        "journal": "Cell Rep",
+        "pmid": "26440884",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 126
+      },
+      {
+        "title": "VDAC1 as Pharmacological Target in Cancer and Neurodegeneration: Focus on Its Role in Apoptosis.",
+        "abstract": "No abstract",
+        "year": "2018",
+        "journal": "Front Chem",
+        "pmid": "29682501",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 113
+      },
+      {
+        "title": "Direct modulation of the outer mitochondrial membrane channel, voltage-dependent anion channel 1 (VDAC1) by cannabidiol: a novel mechanism for cannabinoid-induced cell death.",
+        "abstract": "No abstract",
+        "year": "2013",
+        "journal": "Cell Death Dis",
+        "pmid": "24309936",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 113
+      },
+      {
+        "title": "Skin cancer: understanding the journey of transformation from conventional to advanced treatment approaches.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Mol Cancer",
+        "pmid": "37803407",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 82
+      },
+      {
+        "title": "Calcium Entry through TRPV1: A Potential Target for the Regulation of Proliferation and Apoptosis in Cancerous and Healthy Cells.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Int J Mol Sci",
+        "pmid": "32545311",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 80
+      },
+      {
+        "title": "Cannabidiol (CBD): a killer for inflammatory rheumatoid arthritis synovial fibroblasts.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Cell Death Dis",
+        "pmid": "32873774",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 70
+      },
+      {
+        "title": "Future Aspects for Cannabinoids in Breast Cancer Therapy.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Int J Mol Sci",
+        "pmid": "30987191",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 70
+      },
+      {
+        "title": "Insights into Disease-Associated Tau Impact on Mitochondria.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Int J Mol Sci",
+        "pmid": "32882957",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 63
+      },
+      {
+        "title": "Angiogenic Effects and Crosstalk of Adipose-Derived Mesenchymal Stem/Stromal Cells and Their Extracellular Vesicles with Endothelial Cells.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Int J Mol Sci",
+        "pmid": "34639228",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 58
+      },
+      {
+        "title": "Sugar metabolism, an additional virulence factor in enterobacteria.",
+        "abstract": "No abstract",
+        "year": "2011",
+        "journal": "Int J Med Microbiol",
+        "pmid": "20705507",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 58
+      },
+      {
+        "title": "Acute administration of cannabidiol in vivo suppresses ischaemia-induced cardiac arrhythmias and reduces infarct size when given at reperfusion.",
+        "abstract": "No abstract",
+        "year": "2010",
+        "journal": "Br J Pharmacol",
+        "pmid": "20590615",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 58
+      },
+      {
+        "title": "Tauopathies: Deciphering Disease Mechanisms to Develop Effective Therapies.",
+        "abstract": "No abstract",
+        "year": "2020",
+        "journal": "Int J Mol Sci",
+        "pmid": "33255694",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 56
+      },
+      {
+        "title": "Cannabidiol activates PINK1-Parkin-dependent mitophagy and mitochondrial-derived vesicles.",
+        "abstract": "No abstract",
+        "year": "2022",
+        "journal": "Eur J Cell Biol",
+        "pmid": "34915361",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 50
+      },
+      {
+        "title": "Glial Cell AMPA Receptors in Nervous System Health, Injury and Disease.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "Int J Mol Sci",
+        "pmid": "31108947",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 48
+      },
+      {
+        "title": "Lifestyle-induced metabolic inflexibility and accelerated ageing syndrome: insulin resistance, friend or foe?",
+        "abstract": "No abstract",
+        "year": "2009",
+        "journal": "Nutr Metab (Lond)",
+        "pmid": "19371409",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 48
+      },
+      {
+        "title": "Cofilin, a Master Node Regulating Cytoskeletal Pathogenesis in Alzheimer's Disease.",
+        "abstract": "No abstract",
+        "year": "2019",
+        "journal": "J Alzheimers Dis",
+        "pmid": "31594228",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 47
+      },
+      {
+        "title": "Structure and Function of Ion Channels Regulating Sperm Motility-An Overview.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Int J Mol Sci",
+        "pmid": "33806823",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 46
+      },
+      {
+        "title": "Natural products targeting mitochondria: emerging therapeutics for age-associated neurological disorders.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Pharmacol Ther",
+        "pmid": "33227325",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 44
+      },
+      {
+        "title": "The expression of antiapoptotic proteins Bcl-2, Bcl-X(L), and Mcl-1 in benign, dysplastic, and malignant biliary epithelium.",
+        "abstract": "No abstract",
+        "year": "2001",
+        "journal": "J Clin Pathol",
+        "pmid": "11729212",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 43
+      },
+      {
+        "title": "Therapeutic Strategies to Ameliorate Neuronal Damage in Epilepsy by Regulating Oxidative Stress, Mitochondrial Dysfunction, and Neuroinflammation.",
+        "abstract": "No abstract",
+        "year": "2023",
+        "journal": "Brain Sci",
+        "pmid": "37239256",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 40
+      },
+      {
+        "title": "A multitude of signaling pathways associated with Alzheimer's disease and their roles in AD pathogenesis and therapy.",
+        "abstract": "No abstract",
+        "year": "2021",
+        "journal": "Med Res Rev",
+        "pmid": "32783388",
+        "source": "Europe PMC",
+        "is_preprint": false,
+        "citations": 40
+      }
+    ],
+    "summary": "\u2b50\u2b50\u2b50\u2b50\u2b50 VALIDATED: 62 papers found providing strong experimental support. Includes 31 highly-cited papers (>50 citations). Timeline validation: Literature existed before IRIS prediction.",
+    "confidence": 1.0,
+    "total_supporting": 62,
+    "total_contradicting": 0,
+    "timeline_validated": true,
+    "high_citation_count": 31
+  }
+}
