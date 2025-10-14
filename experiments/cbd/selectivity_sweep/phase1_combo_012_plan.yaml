@@ -1,0 +1,55 @@
+base_session: BIOELECTRIC_CHAMBERED_20251009223252
+cell_type_differences:
+  cancer_vulnerability:
+    baseline_stress: 0.6
+    stress_amplification: 2.2
+    vdac1_sensitivity: 1.5
+  healthy_resistance:
+    baseline_stress: 0.1
+    stress_amplification: 1.0
+    vdac1_sensitivity: 1.0
+channel_parameters:
+  chloride_channels:
+    hill_coefficient: 1.5
+    ic50: 15.0
+    max_inhibition: 0.85
+  mcu:
+    block_strength: 0.5
+    cooperativity: 2.0
+    ic50: 2.5
+  vdac1:
+    affinity: 200.0
+    hill_coefficient: 1.8
+    max_closure: 0.95
+description: Selectivity simulation for parameter combination phase1_combo_012
+experimental_design:
+  cbd_doses:
+  - 0.1
+  - 0.5
+  - 1
+  - 2.5
+  - 5
+  - 10
+  - 20
+  cell_models:
+  - cancer_u87mg
+  - healthy_astrocytes
+  duration: 24
+  replicates: 6
+output_metrics:
+- dose_response_curves
+- ic50_values
+- selectivity_index
+- mechanism_validation
+- safety_margins
+parameters:
+  chloride_ic50: 15.0
+  combination_id: phase1_combo_012
+  mcu_block_strength: 50.0
+  phase: 1
+  vdac1_affinity: 200.0
+plan_id: CBD_SELECTIVITY_phase1_combo_012
+simulation_settings:
+  convergence_threshold: 0.05
+  max_iterations: 1000
+  monte_carlo_runs: 100

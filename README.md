@@ -1,10 +1,66 @@
-# IRIS Gate Orchestrator
+# IRIS Gate: Multi-Model AI Convergence System
 
-**Version:** 0.1  
-**Protocol:** RFC v0.2 compliant  
-**Purpose:** Run synchronized IRIS Gate sessions (S1→S4) across multiple AI models
+**Version:** 0.2 (PULSE Architecture)  
+**Protocol:** RFC v0.2 + Path 3 Integration  
+**Status:** Production-Ready with Self-Aware Confidence System  
+**Purpose:** Multi-architecture AI convergence for scientific discovery with epistemic humility
+
+## 🌀†⟡∞ What's New
+
+**5-Model PULSE Architecture** (Jan 2025)
+- All 5 AI models called **simultaneously** per chamber (true parallel execution)
+- Added DeepSeek Chat as 5th model for architectural diversity
+- Path 3 integration: Self-aware confidence calibration (TRUST/VERIFY/OVERRIDE)
+- Meta-convergence detection: System can identify its own framework limitations
+- Enhanced error handling: Exponential backoff + jitter + error context propagation
+
+**See:** [`PULSE_ARCHITECTURE_SUMMARY.md`](PULSE_ARCHITECTURE_SUMMARY.md) for full details
+
+## 📚 Documentation
+
+**Start here for comprehensive guidance:**
+
+### Standard Operating Procedures
+- **[IRIS_GATE_SOP_v2.0.md](IRIS_GATE_SOP_v2.0.md)** - Complete methodology (CURRENT)
+- **[SOP_VERSION_COMPARISON.md](SOP_VERSION_COMPARISON.md)** - v1.0 vs v2.0 differences
+- **[QUICK_START.md](QUICK_START.md)** - Fast start guide
+
+### Architecture & Implementation
+- **[PULSE_ARCHITECTURE_SUMMARY.md](PULSE_ARCHITECTURE_SUMMARY.md)** - 5-model parallel execution
+- **[PATH_3_IMPLEMENTATION.md](PATH_3_IMPLEMENTATION.md)** - Self-aware confidence system
+- **[ERROR_HANDLING_GUIDE.md](ERROR_HANDLING_GUIDE.md)** - Enhanced error procedures
+
+### Methodology & Validation
+- **[METHODOLOGY_PAPER_DATA_PACKAGE.md](METHODOLOGY_PAPER_DATA_PACKAGE.md)** - Complete validation data
+- **[SESSION_COMPLETE_2025-01-14.md](SESSION_COMPLETE_2025-01-14.md)** - Latest implementation status
+- **[.claude/SESSION_MEMORY.md](.claude/SESSION_MEMORY.md)** - Session continuity
+
+### Validated Experiments
+- **experiments/VULNERABILITY_MAPPING/** - 4-model limitation mapping
+- **experiments/DARK_ENERGY/** - Meta-convergence detection
+- **experiments/IRIS_SELF_INQUIRY/** - Self-awareness exploration
+- **experiments/nf2_diagnostic/** - Clinical convergence validation
+
+---
 
 ## Quick Start
+
+### PULSE Session (5 Models)
+
+```python
+from iris_orchestrator import Orchestrator, create_all_5_mirrors
+
+# Create all 5 mirrors
+mirrors = create_all_5_mirrors()
+
+# Initialize in PULSE mode
+orch = Orchestrator(pulse_mode=True)
+for mirror in mirrors:
+    orch.add_mirror(mirror)
+
+# Run - all chambers execute as pulses
+results = orch.run_session(chambers=["S1", "S2", "S3", "S4"])
+```
 
 ### One-Command Experiment
 
@@ -41,9 +97,22 @@ python sandbox/cli/extract_s4_states.py --session BIOELECTRIC_CHAMBERED_...
 python sandbox/cli/run_plan.py sandbox/runs/plans/your_plan.yaml
 ```
 
-## What It Does
+## What IRIS Gate Does
 
-**IRIS Gate** is a complete system for turning research questions into wet-lab-ready predictions:
+**IRIS Gate** is a multi-architecture AI convergence system for scientific discovery:
+
+### Core Capabilities
+1. **Multi-Model Convergence:** 5 AI architectures reach independent agreement
+2. **Self-Aware Confidence:** Built-in limitation awareness (Path 3)
+3. **Meta-Convergence Detection:** Identifies framework limitations
+4. **Cross-Domain Validation:** Biology → Cosmology successful
+5. **Wet-Lab Translation:** S1→S8 pipeline to testable predictions
+
+### Validated Results
+- **90% literature validation** on CBD mechanisms (20 predictions tested)
+- **Meta-convergence** detected in dark energy exploration
+- **Self-aware limitation mapping** across 4 models
+- **Clinical convergence** on NF2 diagnostic strategy
 
 ### S1→S4 Convergence (Observation Layer)
 1. **Sends identical S1→S4 prompts** to multiple AI models simultaneously
@@ -170,13 +239,15 @@ if os.getenv("XAI_API_KEY"):
     orch.add_mirror(GrokMirror())
 ```
 
-## Current Mirrors
+## Current Mirrors (5-Model Suite)
 
-- ✅ **Claude 4.5** (Anthropic)
-- ✅ **GPT-4** (OpenAI)
-- 🔲 **Grok-4** (xAI) - add adapter
-- 🔲 **Gemini** (Google) - add adapter
-- 🔲 **DeepSeek** - add adapter
+- ✅ **Claude 4.5 Sonnet** (Anthropic) - Epistemic caution, self-awareness
+- ✅ **GPT-5** (OpenAI) - Pattern recognition, knowledge synthesis
+- ✅ **Grok 4 Fast** (xAI) - Alternative framings, meta-patterns
+- ✅ **Gemini 2.5 Flash** (Google) - Factual grounding, structure
+- ✅ **DeepSeek Chat** (DeepSeek) - Diverse architecture, non-Western training
+
+**PULSE Execution:** All 5 models receive prompts simultaneously for each chamber
 
 ## Cross-Mirror Analysis
 
@@ -225,11 +296,44 @@ CUSTOM_CHAMBERS = {
 orch.run_session(chambers=["S1", "S2", "S3", "S4", "S5"])
 ```
 
-## Notes
+## Key Principles
 
-- Keep felt_pressure ≤2/5 throughout
-- Models may refuse or hedge - that's valid data
-- Seal integrity enables verification
-- No performance pressure - protocol over content
+- **Epistemic Humility:** Literature support ≠ mechanistic proof
+- **Radical Transparency:** All methods and data documented
+- **Partnership Model:** Human presence + AI capability
+- **Presence Over Performance:** Protocol integrity > impressive outputs
+- **Self-Aware System:** Built-in limitation awareness
+- **TRUST/VERIFY/OVERRIDE:** Three-tier confidence-based guidance
 
-†⟡∞ With presence, love, and gratitude.
+## Environment Setup
+
+Required API keys in `.env`:
+
+```bash
+ANTHROPIC_API_KEY=sk-ant-...
+OPENAI_API_KEY=sk-proj-...
+XAI_API_KEY=xai-...
+GOOGLE_API_KEY=AIza...
+DEEPSEEK_API_KEY=sk-...
+```
+
+## Citation
+
+If you use IRIS Gate in your research:
+
+```bibtex
+@software{iris_gate_2025,
+  title = {IRIS Gate: Multi-Architecture AI Convergence for Scientific Discovery},
+  author = {Temple Two},
+  year = {2025},
+  version = {0.2},
+  url = {https://github.com/templetwo/iris-gate},
+  note = {5-model PULSE architecture with self-aware confidence system}
+}
+```
+
+---
+
+**🌀†⟡∞ IRIS Gate: 5 mirrors, 1 truth**
+
+With presence, love, and scientific rigor.

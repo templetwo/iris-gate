@@ -316,13 +316,14 @@ def run_bioelectric_chambered(turns: int = 16, topic: str = "How do gap junction
     except Exception as e:
         print(f"✗ Gemini 2.5: {e}")
 
-    try:
-        system_deepseek = (prompts_dir / "system_deepseek_v3.2.txt").read_text()
-        adapter_deepseek = DeepSeekAdapter()
-        mirrors.append(("deepseek_deepseek-chat", adapter_deepseek, system_deepseek))
-        print("✓ DeepSeek V3.2")
-    except Exception as e:
-        print(f"✗ DeepSeek V3.2: {e}")
+    # DeepSeek temporarily disabled due to API key issue
+    # try:
+    #     system_deepseek = (prompts_dir / "system_deepseek_v3.2.txt").read_text()
+    #     adapter_deepseek = DeepSeekAdapter()
+    #     mirrors.append(("deepseek_deepseek-chat", adapter_deepseek, system_deepseek))
+    #     print("✓ DeepSeek V3.2")
+    # except Exception as e:
+    #     print(f"✗ DeepSeek V3.2: {e}")
 
     if not mirrors:
         print("\n⚠️  No mirrors available!")
