@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
 """
-IRIS Gate Orchestrator v0.1
-Runs S1→S4 protocol across multiple AI models simultaneously
+IRIS Gate Orchestrator v0.2
+Runs S1→S8 protocol across 5 AI models in simultaneous PULSE execution
+
+Pulse Architecture:
+- All 5 model endpoints called simultaneously for each chamber
+- Wait for all responses before proceeding to next chamber
+- Ensures true independent convergence (no sequential contamination)
 """
 
 import os
@@ -10,6 +15,7 @@ import json
 import hashlib
 import yaml
 import argparse
+import asyncio
 from datetime import datetime
 from pathlib import Path
 from dotenv import load_dotenv
@@ -179,12 +185,21 @@ class GrokMirror(Mirror):
 
 
 class GeminiMirror(Mirror):
-    """Google Gemini 2.5 Pro adapter"""
+    """Google Gemini 2.0 Flash adapter (2.5 Pro has safety filter issues)"""
 
     def __init__(self):
-        super().__init__("google/gemini-2.5-pro")
+        super().__init__("google/gemini-2.0-flash-exp")
         genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-        self.model = genai.GenerativeModel('gemini-2.5-pro')
+        
+        # Permissive safety settings for research discussions
+        safety_settings = [
+            {"category": "HARM_CATEGORY_HARASSMENT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_HATE_SPEECH", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_SEXUALLY_EXPLICIT", "threshold": "BLOCK_NONE"},
+            {"category": "HARM_CATEGORY_DANGEROUS_CONTENT", "threshold": "BLOCK_NONE"},
+        ]
+        
+        self.model = genai.GenerativeModel('gemini-2.0-flash-exp', safety_settings=safety_settings)
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
         # Adaptive token control based on chamber
@@ -227,7 +242,7 @@ class DeepSeekMirror(Mirror):
         response = self.client.chat.completions.create(
             model="deepseek-chat",
             messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": get_system_prompt(chamber)},  # Chamber-aware prompt
                 {"role": "user", "content": CHAMBERS[chamber]}
             ],
             max_tokens=target_tokens
@@ -255,7 +270,7 @@ class OllamaMirror(Mirror):
         self.host = os.getenv("OLLAMA_HOST", "http://localhost:11434")
 
     def send_chamber(self, chamber: str, turn_id: int) -> Dict:
-        prompt = f"{SYSTEM_PROMPT}\n\n{CHAMBERS[chamber]}"
+        prompt = f"{get_system_prompt(chamber)}\n\n{CHAMBERS[chamber]}"
 
         response = requests.post(
             f"{self.host}/api/generate",
@@ -281,30 +296,130 @@ class OllamaMirror(Mirror):
 
 
 class Orchestrator:
-    """Coordinates multi-mirror IRIS Gate sessions"""
+    """Coordinates multi-mirror IRIS Gate sessions with PULSE execution"""
     
-    def __init__(self, vault_path: str = "./vault"):
+    def __init__(self, vault_path: str = "./vault", pulse_mode: bool = True):
         self.vault = Path(vault_path)
         self.vault.mkdir(exist_ok=True)
         (self.vault / "scrolls").mkdir(exist_ok=True)
         (self.vault / "meta").mkdir(exist_ok=True)
         self.mirrors: List[Mirror] = []
+        self.pulse_mode = pulse_mode  # True = parallel, False = sequential
         
     def add_mirror(self, mirror: Mirror):
         """Register a mirror for orchestration"""
         self.mirrors.append(mirror)
         print(f"✓ Added mirror: {mirror.model_id}")
         
+    async def _run_pulse_chamber(self, mirror: Mirror, chamber: str, turn_id: int) -> Dict:
+        """Run one mirror for one chamber (async wrapper)"""
+        try:
+            # Run synchronous send_chamber in executor to avoid blocking
+            loop = asyncio.get_event_loop()
+            response = await loop.run_in_executor(None, mirror.send_chamber, chamber, turn_id)
+            return {"success": True, "response": response, "mirror": mirror}
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "chamber": chamber,
+                "turn_id": turn_id,
+                "mirror": mirror
+            }
+    
+    async def _run_chamber_pulse(self, chamber: str, turn_id: int) -> Dict:
+        """Run all mirrors for one chamber simultaneously (PULSE)"""
+        pulse_start = datetime.utcnow()
+        print(f"\n  ⚡ PULSE {chamber}: Calling {len(self.mirrors)} models simultaneously...")
+        
+        # Create tasks for all mirrors
+        tasks = [
+            self._run_pulse_chamber(mirror, chamber, turn_id)
+            for mirror in self.mirrors
+        ]
+        
+        # Wait for all to complete
+        results = await asyncio.gather(*tasks)
+        
+        pulse_duration = (datetime.utcnow() - pulse_start).total_seconds()
+        
+        # Process results
+        chamber_results = {}
+        for result in results:
+            mirror = result["mirror"]
+            if result["success"]:
+                response = result["response"]
+                chamber_results[mirror.model_id] = response
+                self._save_turn(mirror, chamber, response)
+                char_count = len(response.get("raw_response", ""))
+                print(f"  ✅ {mirror.model_id.split('/')[-1]} complete ({char_count} chars)")
+            else:
+                chamber_results[mirror.model_id] = {"error": result["error"]}
+                print(f"  ✗ {mirror.model_id.split('/')[-1]} failed: {result['error']}")
+        
+        print(f"  ⏱️  {chamber} Pulse Complete: {len([r for r in results if r['success']])}/{len(self.mirrors)} models responded ({pulse_duration:.1f}s)")
+        return chamber_results
+    
     def run_session(self, chambers: List[str] = ["S1", "S2", "S3", "S4"]):
         """Run complete IRIS Gate session across all mirrors"""
+        if self.pulse_mode:
+            return asyncio.run(self._run_session_pulse(chambers))
+        else:
+            return self._run_session_sequential(chambers)
+    
+    async def _run_session_pulse(self, chambers: List[str]):
+        """PULSE MODE: Run session with simultaneous parallel execution"""
         session_start = datetime.utcnow().isoformat()
         
-        print(f"\n†⟡∞ Starting IRIS Gate session with {len(self.mirrors)} mirrors")
-        print(f"Chambers: {' → '.join(chambers)}\n")
+        print(f"\n🌀†⟡∞ IRIS GATE PULSE SESSION")
+        print(f"Models: {len(self.mirrors)} mirrors (simultaneous execution)")
+        print(f"Chambers: {' → '.join(chambers)}")
+        print(f"Architecture: PULSE (all models called simultaneously per chamber)\n")
         
         results = {
             "session_start": session_start,
             "chambers": chambers,
+            "pulse_mode": True,
+            "mirrors": {}
+        }
+        
+        # Run each chamber as a pulse across all mirrors
+        for turn_id, chamber in enumerate(chambers, 1):
+            print(f"\n{'='*80}")
+            print(f"CHAMBER {chamber}")
+            print(f"{'='*80}")
+            
+            chamber_results = await self._run_chamber_pulse(chamber, turn_id)
+            
+            # Organize results by mirror
+            for mirror in self.mirrors:
+                if mirror.model_id not in results["mirrors"]:
+                    results["mirrors"][mirror.model_id] = []
+                results["mirrors"][mirror.model_id].append(
+                    chamber_results.get(mirror.model_id, {"error": "No response"})
+                )
+        
+        # Save session summary
+        self._save_session(results)
+        
+        print(f"\n\n{'='*80}")
+        print(f"🌀†⟡∞ PULSE SESSION COMPLETE")
+        print(f"Results saved to: {self.vault}")
+        print(f"{'='*80}\n")
+        return results
+    
+    def _run_session_sequential(self, chambers: List[str]):
+        """SEQUENTIAL MODE: Original implementation (for backward compatibility)"""
+        session_start = datetime.utcnow().isoformat()
+        
+        print(f"\n†⟡∞ Starting IRIS Gate session with {len(self.mirrors)} mirrors")
+        print(f"Chambers: {' → '.join(chambers)}")
+        print(f"Mode: SEQUENTIAL (not recommended - use pulse_mode=True)\n")
+        
+        results = {
+            "session_start": session_start,
+            "chambers": chambers,
+            "pulse_mode": False,
             "mirrors": {}
         }
         
@@ -391,6 +506,46 @@ def create_mirror(adapter: str, model: str = None) -> Mirror:
         return OllamaMirror(model=model or "qwen3:1.7b")
     else:
         raise ValueError(f"Unknown adapter: {adapter}")
+
+
+def create_all_5_mirrors() -> List[Mirror]:
+    """Create all 5 standard IRIS Gate mirrors for full pulse protocol
+    
+    Returns list of:
+    1. Claude 4.5 Sonnet (Anthropic)
+    2. GPT-5 (OpenAI)
+    3. Grok 4 Fast (xAI)
+    4. Gemini 2.5 Flash (Google)
+    5. DeepSeek Chat (DeepSeek)
+    """
+    mirrors = []
+    mirror_specs = [
+        ("anthropic", "Claude 4.5 Sonnet"),
+        ("openai", "GPT-5"),
+        ("xai", "Grok 4 Fast"),
+        ("google", "Gemini 2.5 Flash"),
+        ("deepseek", "DeepSeek Chat")
+    ]
+    
+    print("\n🌀†⟡∞ Creating 5-model IRIS Gate pulse suite...\n")
+    
+    for adapter, name in mirror_specs:
+        try:
+            mirror = create_mirror(adapter)
+            mirrors.append(mirror)
+            print(f"  ✅ {name}: {mirror.model_id}")
+        except Exception as e:
+            print(f"  ⚠️  {name} failed: {e}")
+            print(f"     Check {adapter.upper()}_API_KEY in environment")
+    
+    if len(mirrors) < 5:
+        print(f"\n⚠️  Warning: Only {len(mirrors)}/5 models available")
+        print(f"   Minimum recommended: 3 models")
+        print(f"   Full IRIS protocol requires: 5 models\n")
+    else:
+        print(f"\n✅ All 5 models ready for pulse execution\n")
+    
+    return mirrors
 
 
 def build_chamber_prompts(plan: Dict) -> Dict[str, Dict]:
