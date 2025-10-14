@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-10-08T17:33:40.395366",
+  "session": "NF2 Diagnostic Strategy - Buccal vs Blood (Re-run with Gemini)",
+  "models_converged": [
+    "claude-sonnet-4.5",
+    "grok-4-fast-reasoning",
+    "gemini-2.0-flash-exp"
+  ],
+  "models_excluded": [
+    "gpt-5-mini (safety filter - empty responses)"
+  ],
+  "convergence_themes": {
+    "ectodermal_lineage": {
+      "description": "All models converge on shared ectodermal origin of buccal epithelium and neural tissues",
+      "biological_basis": "Neural crest and oral epithelium both derive from ectoderm in early gastrulation",
+      "diagnostic_implication": "Mutations in ectodermal progenitors should be reflected in both tissues"
+    },
+    "timing_hypothesis": {
+      "description": "Timing of mutation emergence determines tissue distribution",
+      "biological_basis": "Early embryonic mutations appear in all lineages; post-differentiation mutations are tissue-restricted"
+    },
+    "blood_independence": {
+      "description": "Blood derives from mesoderm, independent of ectodermal lineage",
+      "biological_basis": "Hematopoietic cells originate from mesodermal progenitors"
+    },
+    "vaf_enrichment": {
+      "description": "VAF should be higher in tissue closer to mutation origin",
+      "biological_basis": "Founder cell effect - earlier clones contribute more"
+    }
+  },
+  "diagnostic_framework": {
+    "central_hypothesis": "Buccal swabs superior to blood for NF2 mosaicism detection due to shared ectodermal lineage",
+    "mechanism": "Early post-zygotic NF2 mutations in ectodermal progenitors \u2192 enrichment in neural and buccal tissues, not blood",
+    "testable_predictions": [
+      "Higher VAF in buccal vs blood for same individual",
+      "Detection of mutations in buccal samples negative in blood",
+      "Correlation between buccal VAF and clinical severity"
+    ]
+  }
+}

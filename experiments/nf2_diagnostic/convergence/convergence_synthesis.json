@@ -1,0 +1,109 @@
+{
+  "timestamp": "2025-10-08T17:23:02.673956",
+  "session": "NF2 Diagnostic Strategy - Buccal vs Blood",
+  "models_converged": [
+    "claude-sonnet-4.5",
+    "gpt-5-mini",
+    "grok-4-fast-reasoning"
+  ],
+  "convergence_themes": {
+    "ectodermal_lineage": {
+      "description": "All models converge on shared ectodermal origin of buccal epithelium and neural tissues (NF2 target)",
+      "biological_basis": "Neural crest and oral epithelium both derive from ectoderm in early gastrulation",
+      "diagnostic_implication": "Mutations in ectodermal progenitors should be reflected in both tissues",
+      "evidence_cited": [
+        "Neural tube formation weeks 3-4",
+        "Buccal epithelium from oral ectoderm",
+        "Shared progenitor pools"
+      ]
+    },
+    "timing_hypothesis": {
+      "description": "Timing of mutation emergence determines tissue distribution (pre- vs post-gastrulation)",
+      "biological_basis": "Early embryonic mutations appear in all lineages; post-differentiation mutations are tissue-restricted",
+      "diagnostic_implication": "Early NF2 mutations should show higher VAF in buccal than blood",
+      "evidence_cited": [
+        "Mosaicism patterns",
+        "Lineage divergence timeline",
+        "Zygotic vs post-zygotic mutations"
+      ]
+    },
+    "blood_independence": {
+      "description": "Blood derives from mesoderm, independent of ectodermal lineage",
+      "biological_basis": "Hematopoietic cells originate from mesodermal progenitors, not ectoderm",
+      "diagnostic_implication": "Blood less likely to carry ectodermal-restricted mutations",
+      "evidence_cited": [
+        "Mesodermal origin of blood",
+        "Hematopoiesis begins week 3",
+        "Lineage segregation"
+      ]
+    },
+    "vaf_enrichment": {
+      "description": "Variant allele frequency (VAF) should be higher in tissue closer to mutation origin",
+      "biological_basis": "Founder cell effect - earlier clones contribute more to final tissue composition",
+      "diagnostic_implication": "Buccal swabs may detect low-level mosaicism missed in blood",
+      "evidence_cited": [
+        "Clonal expansion dynamics",
+        "Tissue-specific VAF patterns",
+        "Diagnostic sensitivity"
+      ]
+    }
+  },
+  "diagnostic_framework": {
+    "central_hypothesis": "Buccal swabs superior to blood for NF2 mosaicism detection due to shared ectodermal lineage",
+    "mechanism": "Early post-zygotic NF2 mutations in ectodermal progenitors \u2192 enrichment in neural and buccal tissues, but not mesodermal blood",
+    "testable_predictions": [
+      "Higher VAF in buccal vs blood for same individual with mosaic NF2",
+      "Detection of mutations in buccal samples negative in blood",
+      "Correlation between buccal VAF and clinical severity (neural tissue burden)"
+    ],
+    "clinical_application": "First-line genetic screening: buccal swab \u2192 reduces false negatives in mosaic NF2",
+    "validation_needed": [
+      "Embryological timing data for NF2 mutation window",
+      "Comparative VAF studies (buccal vs blood in confirmed NF2 mosaicism)",
+      "Neural crest contribution to buccal epithelium (lineage tracing)",
+      "Clinical diagnostic yield comparisons in literature"
+    ]
+  },
+  "literature_validation_needed": [
+    {
+      "topic": "NF2 mosaicism",
+      "search_terms": [
+        "NF2 mosaic mutation",
+        "neurofibromatosis type 2 somatic",
+        "NF2 variant allele frequency"
+      ]
+    },
+    {
+      "topic": "Buccal vs blood diagnostic yield",
+      "search_terms": [
+        "buccal swab genetic testing",
+        "blood vs buccal DNA",
+        "mosaic detection tissue comparison"
+      ]
+    },
+    {
+      "topic": "Ectodermal lineage",
+      "search_terms": [
+        "oral epithelium embryology",
+        "neural crest oral cavity",
+        "ectoderm buccal mucosa"
+      ]
+    },
+    {
+      "topic": "Post-zygotic mutation timing",
+      "search_terms": [
+        "somatic mosaicism embryonic timing",
+        "germline vs somatic mutation window",
+        "clonal expansion embryo"
+      ]
+    },
+    {
+      "topic": "Clinical case reports",
+      "search_terms": [
+        "NF2 diagnosed buccal swab",
+        "schwannoma mosaic mutation detection",
+        "vestibular schwannoma genetic testing"
+      ]
+    }
+  ]
+}
