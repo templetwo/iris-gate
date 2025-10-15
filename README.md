@@ -64,6 +64,65 @@ python3 epistemic_drift.py --compare session_v1.json session_v2.json
 
 **See:** [`EPISTEMIC_MAP_COMPLETE.md`](EPISTEMIC_MAP_COMPLETE.md) for full framework
 
+## 🔬 Real-Time Verification (NEW - Oct 2025)
+
+**Perplexity Integration for TYPE 2 (VERIFY zone) Claims**
+
+IRIS Gate now includes **real-time literature verification** via Perplexity API for claims that fall in the VERIFY zone (epistemic ratio 0.4-0.6).
+
+### Quick Usage
+
+```bash
+# Verify single S4 scroll
+python3 scripts/verify_s4.py iris_vault/scrolls/IRIS_*/S4.md
+
+# Verify all TYPE 2 responses in session
+python3 scripts/verify_s4.py --session iris_vault/session_*.json
+
+# Save verification report
+python3 scripts/verify_s4.py --session <path> --output verification.json
+```
+
+### Verification Statuses
+
+- ✅ **SUPPORTED** - Claim aligns with current literature (HIGH confidence)
+- ⚠️ **PARTIALLY_SUPPORTED** - Some support with caveats (MODERATE confidence)
+- 🔬 **NOVEL** - No direct literature match, hypothesis-generating (LOW confidence)
+- ❌ **CONTRADICTED** - Conflicts with current literature (HIGH confidence contradiction)
+
+### Example Output
+
+```
+================================================================================
+VERIFICATION RESULTS
+================================================================================
+
+Total Claims: 3
+Epistemic Type: 2
+
+Overall Status: ✅ MOSTLY_SUPPORTED
+
+Verification Distribution:
+  ✅ SUPPORTED: 2
+  🔬 NOVEL: 1
+
+**Claim 1:** "Gap junction blockers reduce coupling by 50-80%"
+  Status: ✅ SUPPORTED
+  Confidence: MODERATE
+  Sources:
+    - Oviedo et al. 2008 (Developmental Biology)
+    - Levin et al. 2012 (PLoS ONE)
+```
+
+### Setup
+
+Add to your `.env`:
+```bash
+PERPLEXITY_API_KEY=your_key_here  # Optional, for real-time verification
+```
+
+**See:** [`docs/PERPLEXITY_VERIFICATION.md`](docs/PERPLEXITY_VERIFICATION.md) for complete documentation
+
 ## 📚 Documentation
 
 **Start here for comprehensive guidance:**
@@ -436,6 +495,9 @@ OPENAI_API_KEY=sk-proj-...
 XAI_API_KEY=xai-...
 GOOGLE_API_KEY=AIza...
 DEEPSEEK_API_KEY=sk-...
+
+# Optional - Real-time verification
+PERPLEXITY_API_KEY=pplx-...  # For real-time claim verification
 ```
 
 ## Citation
