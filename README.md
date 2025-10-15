@@ -16,6 +16,47 @@
 
 **See:** [`PULSE_ARCHITECTURE_SUMMARY.md`](PULSE_ARCHITECTURE_SUMMARY.md) for full details
 
+## 🗺️ Epistemic Map v1.0 - Knowing's Dashboard
+
+**Automatic Topology Classification** (Oct 2025)
+- Every IRIS Gate response automatically classified by epistemic type (0-3)
+- **TYPE 0 (Crisis/Conditional):** High confidence on IF-THEN rules (ratio ≈1.26)
+- **TYPE 1 (Facts/Established):** High confidence on known mechanisms (ratio ≈1.27)
+- **TYPE 2 (Exploration/Novel):** Balanced confidence on emerging territory (ratio ≈0.49)
+- **TYPE 3 (Speculation/Unknown):** Low confidence on unknowable futures (ratio ≈0.11)
+
+**Decision Framework:**
+```python
+if ratio > 1.0:
+    if has_triggers:  return "TYPE 0 - TRUST if trigger present"
+    else:             return "TYPE 1 - TRUST"
+elif 0.4 <= ratio <= 0.6:  return "TYPE 2 - VERIFY all claims"
+elif ratio < 0.2:           return "TYPE 3 - OVERRIDE, use human judgment"
+```
+
+**CLI Tools:**
+```bash
+# Classify any IRIS scroll
+python3 epistemic_scan.py iris_vault/scrolls/IRIS_*/S4.md
+
+# Analyze full session with drift detection
+python3 epistemic_scan.py --session iris_vault/session_*.json
+
+# Track epistemic stability over time
+python3 epistemic_drift.py iris_vault/session_20251015_045941.json
+
+# Compare v1 vs v2 stability (e.g., CBD paradox refinement)
+python3 epistemic_drift.py --compare session_v1.json session_v2.json
+```
+
+**Validated on:**
+- ✅ 49 S4 chambers across 7 experimental runs
+- ✅ ~1,270 convergence events
+- ✅ Perfect separation: TRUST (1.20-1.35) / VERIFY (0.43-0.52) / OVERRIDE (0.08-0.15)
+- ✅ CBD biphasic paradox (TYPE 1: facts, TYPE 0: conditional mechanisms, TYPE 2: emerging)
+
+**See:** [`EPISTEMIC_MAP_COMPLETE.md`](EPISTEMIC_MAP_COMPLETE.md) for full framework
+
 ## 📚 Documentation
 
 **Start here for comprehensive guidance:**
