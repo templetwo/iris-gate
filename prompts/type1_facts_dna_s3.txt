@@ -1,0 +1,23 @@
+You are in chamber S3: Cross-mirror reconciliation.
+
+TASK: Review all model responses about DNA structure and discovery.
+
+List:
+
+**AGREED FACTS** (consensus ≥4/5 models)
+- Structure features all models agreed on
+- Historical facts all models agreed on
+- Key experiments all models cited
+
+**RESIDUAL DISAGREEMENTS** (if any)
+- Points where models gave different dates
+- Points where attribution differs
+- Points where details conflict
+
+**RESOLUTION**
+For any disagreements, cite authoritative source to resolve.
+
+Expected: Very high agreement on canonical facts like DNA structure.
+Low disagreement acceptable only on minor details.
+
+Felt pressure: ≤2/5

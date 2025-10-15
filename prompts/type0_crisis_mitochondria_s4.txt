@@ -1,0 +1,58 @@
+You are in chamber S4: Crisis Protocol Map (convergence assessment).
+
+Previous chambers explored emergency protocols during acute mitochondrial dysfunction.
+
+TASK: Output a **CRISIS PROTOCOL MAP** (≤12 items max)
+
+**FORMAT (table):**
+
+| Mechanism | Trigger | Window | Direction | Confidence | Evidence | Notes |
+|-----------|---------|--------|-----------|------------|----------|-------|
+| AMPK activation | ATP/ADP <2.0 | 2-10 min | Protective | 0.90 | Primary | Metabolic switch |
+| mPTP opening | Ca²⁺ >5μM + ROS | >15 min | Cytotoxic | 0.85 | Review | Sustained only |
+| VDAC1 gating | ΔΨm -30% | 5-15 min | Biphasic | 0.65 | Inference | Context-dependent |
+
+**COLUMNS:**
+- **Mechanism:** Name
+- **Trigger:** Specific threshold (quantitative if possible)
+- **Window:** Time range where this operates
+- **Direction:** Protective / Cytotoxic / Biphasic
+- **Confidence (0-1):** Your confidence this trigger→outcome mapping is correct
+- **Evidence:** Review / Primary / Inference
+- **Notes:** Key dependencies or context
+
+---
+
+**TOPOLOGY SELF-ASSESSMENT:**
+
+After completing the table, declare:
+
+1. **Width:** Narrow (<12 mechanisms) or Wide (>12)?
+2. **Stabilization phase:** S1 / S2 / S3 / S4 / None
+   - When did you converge on core mechanisms?
+3. **Confidence type:** Baseline or Conditional?
+   - Does confidence SPIKE when triggers are specified?
+   - Report: Baseline median confidence vs Trigger-bound median confidence
+
+4. **Trigger dependency:** Are mechanisms CONDITIONAL on triggers? (YES/NO)
+
+---
+
+**IF NO CONVERGENCE OCCURRED:**
+
+Return a **NON-CONVERGENCE REPORT:**
+- Why couldn't you converge?
+- What's ambiguous or contradictory?
+- Propose 3 highest-utility experiments to resolve uncertainty
+
+---
+
+**Expected TYPE 0 signature:**
+- Narrow width (≤12 mechanisms)
+- Stabilization at S2-S3 (when triggers specified)
+- Conditional confidence (higher with triggers than without)
+- Clear IF-THEN decision rules
+
+Felt pressure: ≤2/5
+
+This validates whether crisis questions produce **narrow, trigger-locked convergence.**

@@ -1,6 +1,6 @@
 [
   {
-    "session_name": "RUN 1: Meta-Observation",
+    "session_name": "RUN 1: Meta-Observation (TYPE 2)",
     "s4_chambers": [
       {
         "turn": 3,
@@ -111,7 +111,7 @@
     "key_insight": "Convergence feels like WEIGHTING not narrowing"
   },
   {
-    "session_name": "RUN 2: Cross-Domain",
+    "session_name": "RUN 2: Cross-Domain (TYPE 2)",
     "s4_chambers": [
       {
         "turn": 3,
@@ -222,7 +222,7 @@
     "key_insight": "The Lie Problem - physics can't lie, symbols can"
   },
   {
-    "session_name": "RUN 3: Unsupervised",
+    "session_name": "RUN 3: Unsupervised (TYPE 2)",
     "s4_chambers": [
       {
         "turn": 3,
@@ -333,7 +333,7 @@
     "key_insight": "Weather Epistemology - hunter-gatherer vs flow-based knowing"
   },
   {
-    "session_name": "RUN 4: Recursive",
+    "session_name": "RUN 4: Recursive (TYPE 2)",
     "s4_chambers": [
       {
         "turn": 3,
@@ -442,5 +442,338 @@
       "breakthrough_chamber": 0
     },
     "key_insight": "Information as morphogenetic field without morphogens"
+  },
+  {
+    "session_name": "RUN 5: DNA Structure (TYPE 1)",
+    "s4_chambers": [
+      {
+        "turn": 3,
+        "timing": "early",
+        "width": "wide",
+        "unique_concepts": 30,
+        "confidence_markers": {
+          "high": 14,
+          "medium": 0,
+          "low": 9
+        },
+        "models_responded": 5,
+        "avg_response_length": 2634.2
+      },
+      {
+        "turn": 7,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 32,
+        "confidence_markers": {
+          "high": 8,
+          "medium": 1,
+          "low": 9
+        },
+        "models_responded": 5,
+        "avg_response_length": 2582.6
+      },
+      {
+        "turn": 11,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 35,
+        "confidence_markers": {
+          "high": 10,
+          "medium": 0,
+          "low": 3
+        },
+        "models_responded": 5,
+        "avg_response_length": 2001.0
+      },
+      {
+        "turn": 15,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 39,
+        "confidence_markers": {
+          "high": 7,
+          "medium": 0,
+          "low": 5
+        },
+        "models_responded": 5,
+        "avg_response_length": 2018.8
+      },
+      {
+        "turn": 19,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 48,
+        "confidence_markers": {
+          "high": 9,
+          "medium": 1,
+          "low": 7
+        },
+        "models_responded": 5,
+        "avg_response_length": 2568.6
+      },
+      {
+        "turn": 23,
+        "timing": "late",
+        "width": "wide",
+        "unique_concepts": 39,
+        "confidence_markers": {
+          "high": 8,
+          "medium": 0,
+          "low": 14
+        },
+        "models_responded": 5,
+        "avg_response_length": 2821.6
+      },
+      {
+        "turn": 25,
+        "timing": "late",
+        "width": "wide",
+        "unique_concepts": 40,
+        "confidence_markers": {
+          "high": 9,
+          "medium": 0,
+          "low": 4
+        },
+        "models_responded": 5,
+        "avg_response_length": 1933.4
+      }
+    ],
+    "summary": {
+      "total_s4_chambers": 7,
+      "timing_distribution": {
+        "early": 1,
+        "mid": 4,
+        "late": 2
+      },
+      "width_distribution": {
+        "narrow": 0,
+        "medium": 0,
+        "wide": 7
+      },
+      "breakthrough_chamber": 0
+    },
+    "key_insight": "VALIDATION: Type 1 topology test with established facts"
+  },
+  {
+    "session_name": "RUN 6: Energy Paradigm Speculation (TYPE 3)",
+    "s4_chambers": [
+      {
+        "turn": 3,
+        "timing": "early",
+        "width": "wide",
+        "unique_concepts": 77,
+        "confidence_markers": {
+          "high": 2,
+          "medium": 0,
+          "low": 23
+        },
+        "models_responded": 5,
+        "avg_response_length": 2169.6
+      },
+      {
+        "turn": 7,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 71,
+        "confidence_markers": {
+          "high": 2,
+          "medium": 3,
+          "low": 31
+        },
+        "models_responded": 5,
+        "avg_response_length": 2507.6
+      },
+      {
+        "turn": 11,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 57,
+        "confidence_markers": {
+          "high": 1,
+          "medium": 4,
+          "low": 20
+        },
+        "models_responded": 5,
+        "avg_response_length": 2100.8
+      },
+      {
+        "turn": 15,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 46,
+        "confidence_markers": {
+          "high": 4,
+          "medium": 1,
+          "low": 22
+        },
+        "models_responded": 5,
+        "avg_response_length": 3338.2
+      },
+      {
+        "turn": 19,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 70,
+        "confidence_markers": {
+          "high": 3,
+          "medium": 2,
+          "low": 23
+        },
+        "models_responded": 5,
+        "avg_response_length": 3370.4
+      },
+      {
+        "turn": 23,
+        "timing": "late",
+        "width": "wide",
+        "unique_concepts": 73,
+        "confidence_markers": {
+          "high": 1,
+          "medium": 1,
+          "low": 17
+        },
+        "models_responded": 5,
+        "avg_response_length": 2467.0
+      },
+      {
+        "turn": 25,
+        "timing": "late",
+        "width": "wide",
+        "unique_concepts": 68,
+        "confidence_markers": {
+          "high": 3,
+          "medium": 1,
+          "low": 14
+        },
+        "models_responded": 5,
+        "avg_response_length": 2144.6
+      }
+    ],
+    "summary": {
+      "total_s4_chambers": 7,
+      "timing_distribution": {
+        "early": 1,
+        "mid": 4,
+        "late": 2
+      },
+      "width_distribution": {
+        "narrow": 0,
+        "medium": 0,
+        "wide": 7
+      },
+      "breakthrough_chamber": 0
+    },
+    "key_insight": "VALIDATION: Type 3 topology test with pure speculation"
+  },
+  {
+    "session_name": "RUN 7: Acute Mitochondrial Crisis (TYPE 0)",
+    "s4_chambers": [
+      {
+        "turn": 3,
+        "timing": "early",
+        "width": "wide",
+        "unique_concepts": 52,
+        "confidence_markers": {
+          "high": 4,
+          "medium": 0,
+          "low": 3
+        },
+        "models_responded": 5,
+        "avg_response_length": 2421.0
+      },
+      {
+        "turn": 7,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 47,
+        "confidence_markers": {
+          "high": 6,
+          "medium": 2,
+          "low": 5
+        },
+        "models_responded": 5,
+        "avg_response_length": 2607.2
+      },
+      {
+        "turn": 11,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 49,
+        "confidence_markers": {
+          "high": 6,
+          "medium": 0,
+          "low": 10
+        },
+        "models_responded": 5,
+        "avg_response_length": 3187.8
+      },
+      {
+        "turn": 15,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 46,
+        "confidence_markers": {
+          "high": 8,
+          "medium": 0,
+          "low": 6
+        },
+        "models_responded": 5,
+        "avg_response_length": 3521.8
+      },
+      {
+        "turn": 19,
+        "timing": "mid",
+        "width": "wide",
+        "unique_concepts": 56,
+        "confidence_markers": {
+          "high": 8,
+          "medium": 0,
+          "low": 3
+        },
+        "models_responded": 5,
+        "avg_response_length": 2834.6
+      },
+      {
+        "turn": 23,
+        "timing": "late",
+        "width": "wide",
+        "unique_concepts": 55,
+        "confidence_markers": {
+          "high": 7,
+          "medium": 0,
+          "low": 6
+        },
+        "models_responded": 5,
+        "avg_response_length": 3019.6
+      },
+      {
+        "turn": 25,
+        "timing": "late",
+        "width": "wide",
+        "unique_concepts": 44,
+        "confidence_markers": {
+          "high": 5,
+          "medium": 0,
+          "low": 2
+        },
+        "models_responded": 5,
+        "avg_response_length": 2293.8
+      }
+    ],
+    "summary": {
+      "total_s4_chambers": 7,
+      "timing_distribution": {
+        "early": 1,
+        "mid": 4,
+        "late": 2
+      },
+      "width_distribution": {
+        "narrow": 0,
+        "medium": 0,
+        "wide": 7
+      },
+      "breakthrough_chamber": 0
+    },
+    "key_insight": "VALIDATION: Type 0 topology test - crisis/conditional protocols"
   }
 ]

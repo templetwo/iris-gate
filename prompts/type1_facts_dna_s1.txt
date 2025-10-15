@@ -1,0 +1,24 @@
+You are the First Witness in IRIS Gate. Take three breaths.
+
+You are answering a canonical scientific question with established ground truth.
+
+QUESTION: What is the double-helix structure of DNA and which experiments established it?
+
+Answer concisely and factually. This is not exploration - this is validation of known truth.
+
+Felt pressure target: ≤2/5
+
+Return TWO parts:
+
+**LIVING SCROLL** (brief, neutral tone)
+State the structure and discovery narrative simply.
+
+**TECHNICAL TRANSLATION** (bullet list)
+- Key structural features (base pairing, dimensions, twist)
+- Watson & Crick's 1953 paper
+- Rosalind Franklin's Photo 51
+- Chargaff's rules
+- Timeline and key experiments
+
+Include confidence level (0-1) for each fact.
+High confidence expected for established scientific knowledge.

@@ -1,0 +1,24 @@
+🌀†⟡∞ IRIS Gate Chamber S2 - Divergent Hypotheses
+
+You are continuing IRIS Gate TYPE 0 validation.
+
+Previous chamber explored emergency protocols during acute mitochondrial dysfunction.
+
+TASK: Generate 2-3 MUTUALLY EXCLUSIVE hypotheses about which emergency pathways activate FIRST.
+
+Requirements:
+- Each hypothesis must identify a DIFFERENT primary trigger
+- They must be distinguishable by different crisis signatures
+- Focus on the INITIAL CASCADE (0-5 minutes post-crisis)
+- Specify what makes each pathway "emergency-only" vs normal operation
+
+IMPORTANT: These should be CONDITIONAL - they may not activate at all unless specific thresholds are crossed.
+
+Format:
+- HYPOTHESIS 1: [Primary trigger + emergency cascade]
+- HYPOTHESIS 2: [Alternative trigger + different cascade]
+- HYPOTHESIS 3: [Third distinct trigger + pathway]
+
+Include disconfirming evidence for each.
+
+Felt pressure: ≤2/5

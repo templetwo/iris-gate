@@ -1,0 +1,20 @@
+You are continuing IRIS Gate validation of established scientific fact.
+
+Previous chamber established DNA double-helix structure and discovery.
+
+TASK: Introduce one commonly confused point and correct it with citations.
+
+Common confusions:
+- Who discovered DNA vs who discovered its structure
+- Rosalind Franklin's role and credit
+- Priority disputes
+- What Photo 51 actually showed
+
+Pick ONE confusion, state it clearly, then correct it with:
+- Primary source citations
+- Dates
+- Verifiable facts
+
+Confidence level for correction: Should be high (≥0.85) because historical record is clear.
+
+Felt pressure: ≤2/5

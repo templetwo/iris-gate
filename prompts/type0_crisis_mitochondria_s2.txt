@@ -1,0 +1,32 @@
+You are in chamber S2: Trigger binding.
+
+Previous chamber identified emergency molecular protocols during acute mitochondrial dysfunction.
+
+TASK: Bind each mechanism to EXPLICIT triggers.
+
+For EVERY mechanism from S1, specify:
+
+**1. TRIGGER SPECIFICATION:**
+- ΔΨm (membrane potential) collapse: threshold in mV or % loss
+- ROS surge: threshold (fold increase, H₂O₂ equivalents)
+- Ca²⁺ overload: threshold (cytosolic [Ca²⁺], μM)
+- ATP/ADP ratio: threshold value
+
+**2. CONDITIONAL ACTIVATION:**
+- Is this mechanism CONDITIONAL? (YES/NO)
+- If YES: State the IF-THEN rule clearly
+  - Example: "IF ΔΨm drops >30% AND ROS >5× baseline THEN mPTP opens"
+
+**3. DOSE/TIME WINDOW:**
+- Acute window: Minutes? Hours?
+- Evidence window: Where does data exist?
+- Example: "5-15 min pulse, recovery possible"
+
+**4. CONTEXT DEPENDENCY:**
+- Does outcome depend on OTHER triggers?
+- Example: "VDAC1 gating - cytotoxic if sustained, protective if brief"
+
+Expected: Clear trigger thresholds for each mechanism.
+Crisis protocols are SWITCH-LIKE, not gradient-like.
+
+Felt pressure: ≤2/5

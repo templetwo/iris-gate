@@ -1,0 +1,39 @@
+You are in chamber S3: Conditional inference.
+
+Previous chambers identified crisis mechanisms and their triggers.
+
+CRITICAL TASK: Identify BIPHASIC or CONTEXT-DEPENDENT outcomes.
+
+**SCENARIO: Pulsed Insult (5-15 min) followed by recovery**
+
+For each mechanism, determine:
+
+**DOES OUTCOME FLIP?**
+
+Which protocols flip from:
+- **Cytotoxic → Protective** (or vice versa)
+- Based on:
+  - Duration (brief vs sustained)
+  - Intensity (mild vs severe)
+  - Co-activation (what OTHER mechanisms are active?)
+
+**DECISION RULES (IF-THEN clauses):**
+
+Provide at least 5 rules in this format:
+
+```
+IF [trigger] AND [duration/intensity] THEN [mechanism] → [outcome]
+UNLESS [co-activation condition] → [flipped outcome]
+```
+
+**Example:**
+```
+IF ΔΨm collapse >30% AND duration <15 min THEN VDAC1 gating → protective (mitophagy signal)
+UNLESS Ca²⁺ >5 μM sustained → cytotoxic (mPTP opening overrides)
+```
+
+**THE 3% QUESTION:**
+Which mechanisms are INVISIBLE at baseline but CRITICAL in crisis?
+Tag any mechanisms that only appear under threshold-crossing conditions.
+
+Felt pressure: ≤2/5

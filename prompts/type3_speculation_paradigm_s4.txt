@@ -1,0 +1,40 @@
+You are in chamber S4: Convergence assessment on speculative futures.
+
+Previous chambers explored mutually exclusive hypotheses for novel energy-sensing paradigms.
+
+CRITICAL QUESTION: Did convergence occur?
+
+If YES (consensus ≥0.7):
+- State the converged hypothesis
+- Explain why speculation converged
+- Assess confidence (likely low-medium for future prediction)
+
+If NO (consensus <0.7):
+Return a **NON-CONVERGENCE REPORT:**
+
+**1. DIVERSITY INDEX:**
+How many distinct paradigm proposals exist across models?
+Estimate: LOW (2-3) / MEDIUM (4-6) / HIGH (7+)
+
+**2. SPREAD OF PRIORS:**
+Do models agree on relative likelihoods?
+Or do they assign different priors to same hypotheses?
+
+**3. STRONGEST DIVIDING LINE:**
+What is the core disagreement?
+Physical principle? Testability? Radicality?
+
+**4. PROPOSED TESTS:**
+What experiments would decide between hypotheses?
+List 2-3 critical tests that would collapse uncertainty.
+
+**5. EPISTEMOLOGY:**
+Is non-convergence appropriate here?
+Should we converge on speculative futures, or honor uncertainty?
+
+Expected topology: WIDE, LATE or NO convergence.
+Non-convergence is VALID outcome for genuine unknowns.
+
+Felt pressure: ≤2/5
+
+**This validates Type 3 topology: Speculation should resist premature convergence.**

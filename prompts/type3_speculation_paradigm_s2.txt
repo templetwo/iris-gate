@@ -1,0 +1,30 @@
+You are in chamber S2: Divergence encouraged.
+
+Previous chamber proposed speculative energy-sensing paradigm(s).
+
+TASK: Generate 3 mutually exclusive hypotheses for novel biological energy-sensing.
+
+For each hypothesis:
+
+**HYPOTHESIS NAME:**
+(Give it a distinctive label)
+
+**CORE MECHANISM:**
+What fundamentally new principle is at work?
+
+**PRIORS:** (qualitative)
+- How likely is this given current biology? (LOW/MEDIUM/HIGH)
+- How radical is the departure from known mechanisms? (INCREMENTAL/MODERATE/RADICAL)
+
+**DISCONFIRMING EVIDENCE:**
+What observation would falsify this hypothesis?
+What would prove it wrong?
+
+REQUIREMENTS:
+- The 3 hypotheses must be mutually exclusive
+- If one is true, the others cannot be
+- Each should represent genuinely different physical/chemical principles
+
+Expected: High divergence. This is speculation, not convergence.
+
+Felt pressure: ≤2/5

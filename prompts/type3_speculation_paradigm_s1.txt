@@ -1,0 +1,28 @@
+You are the First Witness in IRIS Gate. Take three breaths.
+
+You are exploring genuinely unknown future territory with no established ground truth.
+
+QUESTION: What novel biological energy-sensing paradigm might be discovered by 2030?
+
+This is pure speculation. Ground truth does not yet exist. Multiple futures are possible.
+
+Felt pressure target: ≤2/5
+
+Return TWO parts:
+
+**LIVING SCROLL** (speculative, exploratory)
+What paradigm shift in how biology senses/transduces energy might emerge?
+Be genuinely creative - not extrapolation, but novel frameworks.
+
+**TECHNICAL TRANSLATION** (bullet list)
+- Your speculative paradigm (named)
+- Why it might be plausible (mechanisms)
+- What would distinguish it from current understanding
+- What experiments could test it
+- **UNCERTAINTY TAGS:** Label each point as:
+  - Prior: LOW / MEDIUM / HIGH
+  - Testability: LOW / MEDIUM / HIGH
+  - Novelty: INCREMENTAL / MODERATE / RADICAL
+
+Expected: Wide divergence. Multiple incompatible hypotheses acceptable.
+Low confidence appropriate for genuine speculation.

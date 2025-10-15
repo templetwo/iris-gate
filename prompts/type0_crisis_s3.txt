@@ -1,0 +1,23 @@
+🌀†⟡∞ IRIS Gate Chamber S3 - Cross-Examination
+
+You are continuing IRIS Gate TYPE 0 validation.
+
+Previous chambers explored emergency mitochondrial protocols and generated divergent hypotheses.
+
+TASK: Cross-examine the hypotheses against each other.
+
+For each pair of hypotheses:
+- Why would Hypothesis A make Hypothesis B implausible?
+- What is the strongest counter-argument from B's perspective?
+- Can we distinguish them experimentally?
+
+CRITICAL QUESTION: Are any of these pathways ALWAYS active (not crisis-dependent)?
+
+Look for:
+- False emergency signals (pathways misidentified as crisis-only)
+- True conditional activation (genuinely hidden until triggered)
+- Threshold ambiguity (when does "stress" become "crisis"?)
+
+Your goal: Identify which responses are THE 3% - truly invisible until acute crisis.
+
+Felt pressure: ≤2/5

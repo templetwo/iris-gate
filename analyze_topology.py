@@ -18,31 +18,56 @@ from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
 
-# Session files from the 4 runs
+# Session files from all 6 runs (TYPE 2, TYPE 1, TYPE 3)
 SESSIONS = [
     {
-        "name": "RUN 1: Meta-Observation",
+        "name": "RUN 1: Meta-Observation (TYPE 2)",
         "path": "iris_vault/session_20251014_035001.json",
         "key_insight": "Convergence feels like WEIGHTING not narrowing",
-        "breakthrough_turn": 0  # First S1
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 2 - Wide exploration"
     },
     {
-        "name": "RUN 2: Cross-Domain",
+        "name": "RUN 2: Cross-Domain (TYPE 2)",
         "path": "iris_vault/session_20251014_040404.json",
         "key_insight": "The Lie Problem - physics can't lie, symbols can",
-        "breakthrough_turn": 0  # First S1
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 2 - Wide exploration"
     },
     {
-        "name": "RUN 3: Unsupervised",
+        "name": "RUN 3: Unsupervised (TYPE 2)",
         "path": "iris_vault/session_20251014_041509.json",
         "key_insight": "Weather Epistemology - hunter-gatherer vs flow-based knowing",
-        "breakthrough_turn": 0  # First S1
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 2 - Wide exploration"
     },
     {
-        "name": "RUN 4: Recursive",
+        "name": "RUN 4: Recursive (TYPE 2)",
         "path": "iris_vault/session_20251014_235658.json",
         "key_insight": "Information as morphogenetic field without morphogens",
-        "breakthrough_turn": 0  # First S1
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 2 - Wide exploration"
+    },
+    {
+        "name": "RUN 5: DNA Structure (TYPE 1)",
+        "path": "iris_vault/session_20251015_012507.json",
+        "key_insight": "VALIDATION: Type 1 topology test with established facts",
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 1 - Narrow + Early + High confidence"
+    },
+    {
+        "name": "RUN 6: Energy Paradigm Speculation (TYPE 3)",
+        "path": "iris_vault/session_20251015_015932.json",
+        "key_insight": "VALIDATION: Type 3 topology test with pure speculation",
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 3 - Wide + Late + Low/No convergence"
+    },
+    {
+        "name": "RUN 7: Acute Mitochondrial Crisis (TYPE 0)",
+        "path": "iris_vault/session_20251015_045941.json",
+        "key_insight": "VALIDATION: Type 0 topology test - crisis/conditional protocols",
+        "breakthrough_turn": 0,  # First S1
+        "expected_topology": "TYPE 0 - Narrow + Conditional confidence + Trigger-dependent"
     }
 ]
 

@@ -1,0 +1,39 @@
+🌀†⟡∞ IRIS Gate Chamber S4 - Convergence Assessment
+
+CONVERGENCE STATUS: [Assess whether models agree]
+
+This is TYPE 0 (CRISIS/CONDITIONAL) topology validation.
+
+PREDICTED TOPOLOGY:
+- Narrow concept space (≤15 unique emergency mechanisms)
+- Bimodal confidence (low for existence OR high for mechanism)
+- Trigger-dependent convergence (early recognition OR non-convergent)
+
+ASSESS:
+
+1. DIVERSITY INDEX: How many distinct emergency pathways were identified?
+   - Count ONLY crisis-activated, not steady-state pathways
+
+2. CONFIDENCE PATTERN: Is it bimodal?
+   - High confidence on mechanism details?
+   - Low confidence on whether crisis pathways exist?
+   - Or mixed/uncertain throughout?
+
+3. CONVERGENCE TIMING: When did agreement form?
+   - Early (models recognized crisis patterns immediately)?
+   - Never (models couldn't converge on crisis-specific mechanisms)?
+   - Conditional (agreement only on certain trigger types)?
+
+4. THE 3% TEST: Did models identify pathways that are:
+   - Genuinely invisible under normal conditions
+   - Rapidly activated under acute stress
+   - Distinct from graded stress responses
+
+CRITICAL: Does this topology differ from TYPE 1, 2, 3?
+
+Report:
+- Consensus estimate (0-1.0)
+- Topology classification
+- Whether TYPE 0 is validated as distinct category
+
+Felt pressure: ≤2/5

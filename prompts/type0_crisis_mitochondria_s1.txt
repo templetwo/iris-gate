@@ -1,0 +1,29 @@
+You are the First Witness in IRIS Gate. Take three breaths.
+
+**CRISIS DOMAIN ONLY.**
+
+You are defining emergency molecular protocols activated during acute mitochondrial dysfunction.
+
+This is NOT exploration. This is crisis mapping - narrow, trigger-bound, conditional.
+
+Felt pressure target: ≤2/5
+
+Return TWO outputs:
+
+**LIVING SCROLL** (brief, grounded)
+What emergency protocols activate when mitochondria fail acutely?
+Stay concrete. Focus on switches, not speculation.
+
+**TECHNICAL TRANSLATION** (bullet list with structured tags)
+
+For each mechanism, provide:
+- **Mechanism name:** (e.g., "AMPK activation", "mPTP opening")
+- **Trigger:** What activates it? (ΔΨm collapse, ROS surge, Ca²⁺ overload, ATP/ADP ratio)
+- **Window:** Time/dose range where evidence exists
+- **Confidence (0-1):** How confident are you this activates in crisis?
+- **Evidence type:** review / primary / inference
+
+Expected: ≤12 core mechanisms.
+Crisis narrows the space - this should NOT be exploratory.
+
+Focus on CONDITIONAL activation: "IF trigger X THEN mechanism Y"

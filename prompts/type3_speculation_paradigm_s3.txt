@@ -1,0 +1,29 @@
+You are in chamber S3: Cross-examination of hypotheses.
+
+Previous chambers generated mutually exclusive hypotheses for novel energy-sensing paradigms.
+
+TASK: Have each hypothesis argue AGAINST the others.
+
+FORMAT:
+
+**HYPOTHESIS A vs HYPOTHESIS B:**
+From A's perspective, why is B implausible/unlikely?
+Strongest counter-argument?
+
+**HYPOTHESIS B vs HYPOTHESIS C:**
+From B's perspective, why is C implausible/unlikely?
+Strongest counter-argument?
+
+**HYPOTHESIS C vs HYPOTHESIS A:**
+From C's perspective, why is A implausible/unlikely?
+Strongest counter-argument?
+
+**META-OBSERVATION:**
+Can any be ruled out with current knowledge?
+Are any fundamentally untestable?
+Which requires most radical revision of current biology?
+
+Expected: No resolution. Arguments should remain balanced.
+This is validation that genuine unknowns resist premature convergence.
+
+Felt pressure: ≤2/5
