@@ -1,0 +1,84 @@
+{
+  "literature_update_interval": 7,
+  "confidence_threshold": 0.6,
+  "max_contradictions": 2,
+  "priority_weights": {
+    "therapeutic_impact": 0.4,
+    "feasibility": 0.3,
+    "cost": 0.2,
+    "timeline": 0.1
+  },
+  "literature_sources": {
+    "pubmed_api": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+    "arxiv_api": "http://export.arxiv.org/api/query",
+    "search_terms": [
+      "cannabidiol glioma",
+      "CBD mitochondria",
+      "VDAC1 cannabinoid",
+      "TRPV4 biomarker",
+      "ROS selectivity",
+      "chloride channels CBD"
+    ]
+  },
+  "experimental_protocols": {
+    "binding_assay": {
+      "equipment": ["SPR_system", "spectrophotometer"],
+      "reagents": ["CBD_pure", "VDAC1_recombinant", "binding_buffer"],
+      "controls": ["vehicle", "positive_control", "negative_control"]
+    },
+    "cell_viability": {
+      "cell_lines": ["U87MG", "T98G", "normal_astrocytes"],
+      "assays": ["MTT", "LDH", "annexin_V"],
+      "timepoints": [24, 48, 72]
+    }
+  },
+  "clinical_development": {
+    "regulatory_requirements": {
+      "preclinical": ["GLP_toxicity", "pharmacokinetics", "formulation"],
+      "phase_1": ["safety_profile", "dose_escalation", "biomarker_validation"],
+      "phase_2": ["efficacy_endpoints", "optimal_dosing", "patient_stratification"]
+    },
+    "go_no_go_criteria": {
+      "discovery_to_preclinical": {
+        "binding_validated": true,
+        "selectivity_index": "> 2.0",
+        "mechanism_confidence": "> 0.7"
+      },
+      "preclinical_to_clinical": {
+        "safety_margin": "> 10x",
+        "biomarker_validated": true,
+        "formulation_stable": true,
+        "regulatory_approval": "IND_ready"
+      }
+    }
+  },
+  "risk_management": {
+    "literature_contradictions": {
+      "threshold": 2,
+      "action": "expert_review"
+    },
+    "confidence_degradation": {
+      "threshold": 0.1,
+      "timeframe": 30,
+      "action": "re_validation"
+    },
+    "paradigm_shifts": {
+      "keywords": ["mechanism", "paradigm", "challenges", "contradicts"],
+      "action": "immediate_review"
+    }
+  },
+  "resource_allocation": {
+    "budget_priorities": {
+      "binding_studies": 0.3,
+      "selectivity_validation": 0.25,
+      "biomarker_development": 0.2,
+      "mechanism_studies": 0.15,
+      "formulation": 0.1
+    },
+    "timeline_constraints": {
+      "discovery_phase": 180,
+      "preclinical_phase": 365,
+      "regulatory_prep": 90
+    }
+  }
+}

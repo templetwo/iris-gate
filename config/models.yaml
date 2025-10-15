@@ -47,5 +47,5 @@ mirrors:
 metadata:
   version: "0.2.0"
   last_updated: "2025-10-02"
-  note: "Ollama models removed; using cloud-only high-capacity mirrors"
+  note: "Cloud-only high-capacity mirrors configuration"
   timezone: "America/New_York"

@@ -1,0 +1,212 @@
+{
+  "timestamp": "2025-10-13T22:59:17.429732",
+  "claims": {
+    "9d82f476-dcc4-4892-a1e5-1c6a220fb76e": {
+      "description": "CBD selectivity index 1.53 (corrected from 2.86 claim)",
+      "confidence": 0.6,
+      "evidence_sources": [
+        "IRIS_S8_document",
+        "CBD_v2_session"
+      ],
+      "iris_convergence": 0.85,
+      "last_validated": null
+    },
+    "730bc50d-af88-4d8f-af02-571f68fbe49f": {
+      "description": "Rhythm patterns 0.5-2.0 Hz indicate pulse dosing potential",
+      "confidence": 0.4,
+      "evidence_sources": [
+        "IRIS_S4_patterns"
+      ],
+      "iris_convergence": 0.78,
+      "last_validated": null
+    },
+    "0e3a1a46-619b-4a19-83ed-f3afa453c9cb": {
+      "description": "Center stability 0.7-0.98 suggests therapeutic window",
+      "confidence": 0.5,
+      "evidence_sources": [
+        "IRIS_S4_patterns"
+      ],
+      "iris_convergence": 0.82,
+      "last_validated": null
+    },
+    "1af0c308-c8c9-43b8-9784-fe14a757909a": {
+      "description": "Aperture range 0.3-0.9 correlates with dosing flexibility",
+      "confidence": 0.3,
+      "evidence_sources": [
+        "IRIS_S4_patterns"
+      ],
+      "iris_convergence": 0.75,
+      "last_validated": null
+    },
+    "202d140c-c2e9-48d7-8431-60efc19e6036": {
+      "description": "VDAC1 direct binding validated with therapeutic KD range",
+      "confidence": 0.45000000000000007,
+      "evidence_sources": [
+        "Literature_2024_VDAC1",
+        "Multiple_binding_studies",
+        "CBD-VDAC1 crystal structure reveals allosteric site (2025)",
+        "Chloride channel CBD binding confirmed via cryo-EM (2025)"
+      ],
+      "iris_convergence": null,
+      "last_validated": "2025-10-13T22:59:17.429317"
+    },
+    "a344ed1f-04c3-46ca-9288-9b396c224a75": {
+      "description": "ROS-dependent selectivity mechanism confirmed",
+      "confidence": 0.7,
+      "evidence_sources": [
+        "Literature_2024_ROS",
+        "Oxidative_stress_studies"
+      ],
+      "iris_convergence": null,
+      "last_validated": null
+    },
+    "12c7c803-41aa-44eb-88af-3b1a0d6f7e5c": {
+      "description": "TRPV4 emerging as biomarker for CBD response",
+      "confidence": 0.43333333333333335,
+      "evidence_sources": [
+        "Literature_2025_TRPV4",
+        "Biomarker_studies",
+        "TRPV4-MCU crosstalk mediates CBD selectivity (2025)"
+      ],
+      "iris_convergence": null,
+      "last_validated": "2025-10-13T22:59:17.429300"
+    },
+    "29362a96-381a-4528-86bf-5a82db2bea50": {
+      "description": "MCU-CBD interaction gap requires investigation",
+      "confidence": 0.3,
+      "evidence_sources": [
+        "Literature_gap_analysis"
+      ],
+      "iris_convergence": null,
+      "last_validated": null
+    },
+    "d04e779f-72e7-4300-84c8-d3c0fc48bc5b": {
+      "description": "Chloride channel mechanisms remain unclear",
+      "confidence": 0.2,
+      "evidence_sources": [
+        "Literature_review_2025"
+      ],
+      "iris_convergence": null,
+      "last_validated": null
+    },
+    "da66f1f5-6974-4f51-899c-0f4cd5c5a61b": {
+      "description": "Channel-first mechanism superior to receptor-first approach",
+      "confidence": 0.7,
+      "evidence_sources": [
+        "Mechanism_comparison_2024",
+        "IRIS_convergence"
+      ],
+      "iris_convergence": null,
+      "last_validated": null
+    }
+  },
+  "experiments": {
+    "c7b550cb-ba12-4313-8471-ccadce1bdc71": {
+      "type": "binding_assay",
+      "priority_score": 0.9007153729071539,
+      "estimated_duration": 14,
+      "protocol": {
+        "target": "VDAC1",
+        "method": "SPR_analysis",
+        "cbd_concentrations": [
+          1,
+          5,
+          10,
+          25,
+          50,
+          100
+        ],
+        "duration": "real_time_kinetics"
+      },
+      "success_criteria": {
+        "kd_in_range": true,
+        "specific_binding": "> 80%",
+        "reproducibility": "> 0.9"
+      }
+    },
+    "fb1a5ff0-a798-449c-bb8c-070144ca5469": {
+      "type": "selectivity_index",
+      "priority_score": 0.9310730593607307,
+      "estimated_duration": 21,
+      "protocol": {
+        "cell_lines": [
+          "U87MG",
+          "normal_astrocytes",
+          "HEK293"
+        ],
+        "cbd_concentrations": [
+          1,
+          5,
+          10,
+          25,
+          50
+        ],
+        "timepoints": [
+          24,
+          48,
+          72
+        ],
+        "readouts": [
+          "viability",
+          "apoptosis",
+          "ROS_levels"
+        ]
+      },
+      "success_criteria": {
+        "selectivity_achieved": true,
+        "ros_correlation": "> 0.7",
+        "dose_response": "sigmoidal"
+      }
+    },
+    "686dfe9c-e86f-4ac2-bb74-fc71d955a4c1": {
+      "type": "biomarker_validation",
+      "priority_score": 0.8014307458143075,
+      "estimated_duration": 28,
+      "protocol": {
+        "target": "TRPV4",
+        "assays": [
+          "qPCR",
+          "Western_blot",
+          "flow_cytometry"
+        ],
+        "treatment_groups": [
+          "vehicle",
+          "cbd_10uM",
+          "cbd_25uM"
+        ],
+        "timepoints": [
+          6,
+          12,
+          24,
+          48
+        ]
+      },
+      "success_criteria": {
+        "significant_change": "p < 0.05",
+        "dose_response": true,
+        "specificity": "> 0.8"
+      }
+    },
+    "4ee4aed3-ae6a-4916-8e49-bca140b9e379": {
+      "type": "dosing_optimization",
+      "priority_score": 0.7517884322678844,
+      "estimated_duration": 35,
+      "protocol": {
+        "pulse_frequencies": [
+          0.5,
+          1.0,
+          1.5,
+          2.0
+        ],
+        "continuous_vs_pulsed": true,
+        "total_dose_matched": true,
+        "duration": 72
+      },
+      "success_criteria": {
+        "frequency_optimum": true,
+        "pulse_superiority": true,
+        "safety_margin": "> 2-fold"
+      }
+    }
+  }
+}
