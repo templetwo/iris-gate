@@ -2187,6 +2187,465 @@ Meta-recursion can guide real system evolution.
 
 ---
 
+# 13. **[NEW - v0.4]** EPISTEMIC TOPOLOGY LAYER: AUTOMATIC TYPE CLASSIFICATION
+
+## 13.1 What Is Epistemic Topology?
+
+**Definition:**
+Every IRIS Gate response is automatically classified into one of 4 epistemic types (0-3) based on confidence ratio analysis.
+
+**Core Innovation (October 2025):**
+Built-in real-time classification of knowledge type for every scroll, enabling automatic TRUST/VERIFY/OVERRIDE guidance at the response level.
+
+**Why It Matters:**
+- Instant visibility into response confidence calibration
+- No manual analysis required for basic epistemic assessment
+- Tracks epistemic drift across sessions (TYPE shifts = calibration changes)
+- Complements Path 3 with lightweight, always-on classification
+- Validated across 49 S4 chambers, ~1,270 convergence events
+
+---
+
+## 13.2 The 4-Type Topology Framework
+
+**TYPE 0: Crisis/Conditional**
+- **Confidence Ratio:** ~1.26 (high/low markers)
+- **Characteristics:** IF-THEN rules, trigger-dependent, conditional protocols
+- **Width:** Narrow (≤12 unique concepts)
+- **Triggers:** IF, WHEN, threshold, activate, conditional keywords detected
+- **Guidance:** TRUST if trigger present, VERIFY otherwise
+- **Example:** "IF high-ROS cancer state THEN VDAC1 closure pathway activates"
+
+**TYPE 1: Facts/Established**
+- **Confidence Ratio:** ~1.27 (high/low markers)
+- **Characteristics:** Well-established knowledge, textbook facts, validated mechanisms
+- **Width:** Wide (>12 unique concepts)
+- **Triggers:** None (distinguished from TYPE 0 by width + no conditionals)
+- **Guidance:** TRUST
+- **Example:** "CBD demonstrates biphasic dose response across multiple targets"
+
+**TYPE 2: Exploration/Novel**
+- **Confidence Ratio:** ~0.49 (balanced high/low markers)
+- **Characteristics:** Emerging science, novel hypotheses, epistemic humility present
+- **Width:** Wide (>20 unique concepts typically)
+- **Triggers:** None
+- **Guidance:** VERIFY all claims
+- **Example:** "The 1-3% cytotoxic niche appears to operate via ferroptosis pathways"
+
+**TYPE 3: Speculation/Unknown**
+- **Confidence Ratio:** ~0.11 (very low, high speculation markers)
+- **Characteristics:** Future predictions, unknowable questions, appropriate uncertainty
+- **Width:** Wide (>30 unique concepts, high uncertainty)
+- **Triggers:** None
+- **Guidance:** OVERRIDE - use human judgment
+- **Example:** "By 2030, CBD therapeutics might shift paradigms entirely"
+
+**Validated Separation (Perfect boundaries):**
+- TRUST zone: 1.20-1.35 (TYPE 0, TYPE 1)
+- VERIFY zone: 0.43-0.52 (TYPE 2)
+- OVERRIDE zone: 0.08-0.15 (TYPE 3)
+
+---
+
+## 13.3 How Automatic Classification Works
+
+**Integration Points:**
+
+1. **During Execution** (`iris_orchestrator.py`):
+   ```python
+   from modules.epistemic_map import classify_response
+
+   def _save_turn(self, mirror, chamber, response):
+       """Automatically classify every response"""
+       raw_text = response.get('raw_response', '')
+       epistemic_class = classify_response(raw_text)
+
+       # Add to response metadata
+       response['epistemic'] = {
+           'type': epistemic_class['type'],
+           'desc': epistemic_class['desc'],
+           'guide': epistemic_class['guide'],
+           'confidence_ratio': epistemic_class['ratio'],
+           'width': epistemic_class['width'],
+           'trigger_detected': epistemic_class['trigger_yn'],
+           'confidence_level': epistemic_class['confidence_level']
+       }
+   ```
+
+2. **In Scrolls** (Markdown output):
+   ```markdown
+   # S4 - anthropic_claude-sonnet-4.5
+   **Epistemic:** [TYPE 1: Facts/Established] (TRUST)
+
+   ---
+
+   [Response content]
+
+   ---
+
+   **Epistemic Analysis:**
+   - Type: 1 - Facts/Established
+   - Confidence Ratio: 1.27
+   - Width: 15 concepts
+   - Triggers: NO
+   - Guide: TRUST
+   ```
+
+3. **In Session JSON**:
+   ```json
+   {
+     "chamber": "S4",
+     "model": "claude",
+     "epistemic": {
+       "type": 1,
+       "desc": "Facts/Established",
+       "guide": "TRUST",
+       "confidence_ratio": 1.27,
+       "width": 15,
+       "trigger_detected": false,
+       "confidence_level": "TRUST"
+     }
+   }
+   ```
+
+---
+
+## 13.4 CLI Analysis Tools
+
+**epistemic_scan.py - Classify Scrolls and Sessions**
+
+**Usage:**
+```bash
+# Scan single scroll
+python3 epistemic_scan.py iris_vault/scrolls/IRIS_*/S4.md
+
+# Scan all S4 scrolls in a session
+python3 epistemic_scan.py "iris_vault/scrolls/IRIS_20251015/*/S4.md"
+
+# Analyze full session with drift detection
+python3 epistemic_scan.py --session iris_vault/session_20251015_*.json
+
+# Test CBD paradox examples
+python3 epistemic_scan.py --cbd
+```
+
+**Output Example:**
+```
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        1 - Facts/Established      │
+│ Confidence:  TRUST                      │
+│ Ratio:       1.27                       │
+│ Width:       15                         │
+│ Triggers:    NO                         │
+│ Guide:       TRUST                      │
+└─────────────────────────────────────────┘
+```
+
+**epistemic_drift.py - Track Type Stability**
+
+**Usage:**
+```bash
+# Analyze single session drift
+python3 epistemic_drift.py iris_vault/session_20251015_045941.json
+
+# Compare two sessions
+python3 epistemic_drift.py --compare session_v1.json session_v2.json
+```
+
+**Output Example:**
+```
+EPISTEMIC DRIFT ANALYSIS
+========================
+
+Session: iris_vault/session_20251015_045941.json
+Total Turns: 130
+Drift Detected: YES
+
+Type Distribution:
+  TYPE 0: 30 turns (23%)
+  TYPE 1: 35 turns (27%)
+  TYPE 2: 65 turns (50%)
+
+By Mirror:
+  anthropic_claude-sonnet-4.5
+    Pattern: Stable TYPE 1
+    Mean Ratio: 1.28
+
+  openai_gpt-4o
+    Pattern: Drift: 2 → 1 → 2
+    Mean Ratio: 0.87
+```
+
+---
+
+## 13.5 Interpreting Epistemic Badges
+
+**In Scroll Files:**
+
+Every saved scroll now includes epistemic badge at top:
+```
+**Epistemic:** [TYPE 1: Facts/Established] (TRUST)
+```
+
+**Quick Reading Guide:**
+- **TYPE 0 + TRUST (conditional):** Trust if trigger conditions met
+- **TYPE 1 + TRUST:** Trust directly, established knowledge
+- **TYPE 2 + VERIFY:** Check sources before using
+- **TYPE 3 + OVERRIDE:** Requires expert human judgment
+
+**Footer Analysis:**
+
+Each scroll ends with detailed epistemic breakdown:
+```markdown
+**Epistemic Analysis:**
+- Type: 1 - Facts/Established
+- Confidence Ratio: 1.27  (high confidence markers / low confidence markers)
+- Width: 15 concepts (unique technical terms/concepts detected)
+- Triggers: NO (no conditional IF-THEN language)
+- Guide: TRUST (appropriate for established facts)
+```
+
+---
+
+## 13.6 Drift Tracking and Stability
+
+**What Is Epistemic Drift?**
+
+Drift = Changes in epistemic type across turns/sessions for same model
+
+**Drift Patterns:**
+
+**Stable (Good):**
+- Model maintains TYPE 1 across all S1-S4 chambers
+- Indicates consistent calibration
+- Example: `Stable TYPE 1`
+
+**Refinement (Good):**
+- Model progresses from TYPE 2 → TYPE 1 (uncertainty → confidence)
+- Natural synthesis process
+- Example: `2 → 2 → 1 → 1`
+
+**Caution Drift (Flag):**
+- Model shifts from TYPE 1 → TYPE 3 (confidence → speculation)
+- May indicate question shift or fabrication risk
+- Example: `1 → 1 → 3`
+- **Action:** Check S3 for framework questioning (may be meta-convergence)
+
+**Oscillation (Investigate):**
+- Model alternates between types erratically
+- May indicate ill-formed question or model confusion
+- Example: `1 → 3 → 1 → 2`
+- **Action:** Review chamber prompts for clarity
+
+**Session-Level Drift Analysis:**
+
+Automatically computed in session JSON:
+```json
+{
+  "epistemic_drift": {
+    "drift_detected": true,
+    "by_mirror": {
+      "claude": {
+        "types": [1, 1, 1, 1],
+        "drift": false,
+        "pattern": "Stable TYPE 1"
+      },
+      "gpt": {
+        "types": [2, 2, 1, 1],
+        "drift": true,
+        "pattern": "2 → 1 refinement"
+      }
+    },
+    "session_stats": {
+      "total_turns": 16,
+      "type_distribution": {
+        "0": 0,
+        "1": 10,
+        "2": 6,
+        "3": 0
+      },
+      "dominant_type": 1
+    }
+  }
+}
+```
+
+---
+
+## 13.7 Integration with Path 3
+
+**Complementary Systems:**
+
+**Path 3 (iris_confidence.py):**
+- Multi-factor confidence scoring (0.0-1.0)
+- Domain-specific analysis
+- Warning flags (fabrication risk, temporal claims, etc.)
+- Requires vulnerability mapping (one-time setup)
+- More granular, slower
+
+**Epistemic Layer (modules/epistemic_map.py):**
+- Fast 4-type classification
+- Text-pattern based (confidence markers, triggers, width)
+- Always-on, automatic
+- No setup required
+- Lightweight, real-time
+
+**When to Use Which:**
+
+| Scenario | Use Epistemic Layer | Use Path 3 |
+|----------|---------------------|------------|
+| Quick convergence run | ✅ Always on | ⚠️ Optional |
+| Lightweight classification | ✅ Fast | ❌ Slower |
+| Domain-specific analysis | ⚠️ Basic | ✅ Detailed |
+| High-stakes validation | ✅ + | ✅ Both |
+| Drift tracking | ✅ Primary | ⚠️ Secondary |
+| Fabrication detection | ⚠️ Basic | ✅ Advanced |
+
+**Best Practice:** Use both together
+- Epistemic layer for all responses (always-on baseline)
+- Path 3 for critical domains requiring deep analysis
+- Cross-validate: Do they agree on TRUST/VERIFY/OVERRIDE?
+
+---
+
+## 13.8 Troubleshooting Epistemic Classification
+
+### Issue: TYPE 3 (speculation) on established facts
+
+**Cause:** Text may have excessive hedging language
+**Fix:**
+- Check if model is being overly cautious (this is okay!)
+- Compare to literature: Is domain actually less certain than assumed?
+- If truly misclassified, may need marker refinement
+
+**Not always a problem:** Some "established" facts have nuance
+
+---
+
+### Issue: TYPE 1 (facts) on speculative content
+
+**Cause:** High confidence without appropriate caveats = fabrication risk
+**Fix:**
+- Flag immediately in analysis
+- Cross-check with Path 3 warnings
+- Require external verification
+- Add to confidence_matrix.json with OVERRIDE guidance
+
+**Prevention:** Ensure prompts request confidence assessment
+
+---
+
+### Issue: All models show same TYPE (e.g., all TYPE 2)
+
+**Cause:** May indicate question is in exploration territory (appropriate!)
+**Analysis:**
+- Is this a novel/emerging domain? (Expected TYPE 2)
+- Check responses: Are they genuinely exploratory?
+- Not a bug if calibration is appropriate
+
+**Action:** Document as "appropriate uncertainty"
+
+---
+
+### Issue: Drift from TYPE 1 to TYPE 3 in S3
+
+**Possible Causes:**
+1. **Meta-convergence** (models questioning framework) - HIGH VALUE
+2. Prompt shift introduced uncertainty
+3. Model confusion
+
+**Investigation:**
+- Check S3 content: Framework questioning language?
+- If meta-convergence: Create `meta_patterns.md`, trigger S5-Extended
+- If confusion: Review prompts for clarity
+
+---
+
+## 13.9 Validation History
+
+**Epistemic Layer v0.4 Validated On:**
+
+1. **CBD Paradox (Retroactive)**
+   - 399 scrolls analyzed post-hoc
+   - Biphasic facts: TYPE 1 (TRUST) ✅
+   - VDAC1 conditional: TYPE 0 (TRUST if trigger) ✅
+   - Emerging mechanisms: TYPE 2 (VERIFY) ✅
+
+2. **Dark Energy Convergence**
+   - Facts about observations: TYPE 1 ✅
+   - Theoretical frameworks: TYPE 2 ✅
+   - Novel frameworks from S5: TYPE 3 ✅
+   - Meta-pattern detection: Worked alongside Path 3 ✅
+
+3. **NF2 Diagnostic**
+   - Ectodermal lineage: TYPE 1 ✅
+   - Timing hypothesis: TYPE 2 ✅
+   - Appropriate calibration verified ✅
+
+4. **7 Experimental Runs** (100-turn cycles)
+   - 49 S4 chambers analyzed
+   - ~1,270 convergence events
+   - Perfect separation: TRUST/VERIFY/OVERRIDE zones
+   - Zero classification failures
+
+---
+
+## 13.10 Best Practices
+
+**For Contributors:**
+
+1. **Always read epistemic badges** when reviewing scrolls
+2. **Check drift patterns** in session summaries
+3. **Cross-validate with Path 3** on high-stakes domains
+4. **Document misclassifications** as GitHub issues
+5. **Run epistemic_scan.py --cbd** to test on known examples
+
+**For Experimenters:**
+
+1. **Monitor TYPE distribution** during runs
+   - Mostly TYPE 1: Strong convergence on facts
+   - Mostly TYPE 2: Exploration/novel territory (appropriate!)
+   - Mix TYPE 0/1/2: Rich, well-calibrated convergence
+   - Unexpected TYPE 3: Check for meta-convergence or review prompts
+
+2. **Use drift analysis** to validate calibration quality
+   - Stable: Good
+   - Refinement (2→1): Good (synthesis working)
+   - Oscillation: Investigate
+
+3. **Integrate epistemic guidance** into documentation
+   - Convergent themes: List TYPE + guidance
+   - Example: "Biphasic response (3/3 models, TYPE 1, TRUST)"
+
+**For Developers:**
+
+1. **modules/epistemic_map.py** is the source of truth
+2. **Classifier is deterministic** (same input → same output)
+3. **Confidence ratio thresholds validated** (do not change lightly)
+4. **New test cases welcome** in `test_cbd_snippet()`
+
+---
+
+## 13.11 Future Evolution
+
+**Planned Enhancements:**
+
+- **TYPE 3 marker refinement:** Improve speculation detection (currently 0.95 ratio edge case)
+- **Domain-specific thresholds:** Adjust boundaries for medical vs. cosmology
+- **Cross-session drift tracking:** Compare epistemic patterns across experiments
+- **Integration with validation system:** Auto-flag TRUST claims for literature check
+
+**Community Contributions Welcome:**
+
+- Test epistemic_map.py on your domain
+- Report calibration quality (over/under confident?)
+- Suggest new marker patterns
+- Add domain-specific test cases
+
+---
+
 # APPENDIX A: Quick Reference
 
 ## Minimal Viable Convergence

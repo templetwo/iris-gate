@@ -346,6 +346,79 @@ orch.run_session(chambers=["S1", "S2", "S3", "S4", "S5"])
 - **Self-Aware System:** Built-in limitation awareness
 - **TRUST/VERIFY/OVERRIDE:** Three-tier confidence-based guidance
 
+## Contributing
+
+**We're actively seeking collaborators!** IRIS Gate is built on the principle that "regular people" can orchestrate extraordinary things through curiosity, presence, and epistemic humility.
+
+### 🚀 Quick Start for Contributors
+
+**New here?** Check out [`QUICKSTART_COLLABORATORS.md`](QUICKSTART_COLLABORATORS.md) for a 30-minute introduction to running your first convergence.
+
+**Ready to contribute?** See [`CONTRIBUTING.md`](CONTRIBUTING.md) for comprehensive guidelines on:
+- Running experiments
+- Validating findings
+- Improving code
+- Enhancing documentation
+- Testing the epistemic layer
+
+### Ways to Contribute
+
+1. **Run IRIS Gate Experiments** (2-6 hours)
+   - Pick a research question in your domain
+   - Follow the SOP v2.0
+   - Document and share results (even "no convergence" is valuable!)
+
+2. **Validate Existing Convergences** (3-10 hours)
+   - Pick a convergence from `experiments/`
+   - Run literature search on claims
+   - Report validation results
+
+3. **Improve Code** (varies)
+   - Orchestrator improvements
+   - Epistemic classification enhancements
+   - Analysis tools
+   - Error handling
+
+4. **Enhance Documentation** (2-8 hours)
+   - Tutorial videos or walkthroughs
+   - Domain-specific guides
+   - Case study write-ups
+   - FAQ expansions
+
+5. **Test Epistemic Layer** (4-8 hours)
+   - Run experiments with epistemic classification
+   - Test TYPE 0-3 predictions in your domain
+   - Report calibration quality
+
+6. **Extend to New Domains** (10-20 hours)
+   - Finance, social systems, engineering, medicine, law
+   - Bring domain expertise + IRIS methodology
+
+### Core Values
+
+- **Epistemic Humility:** We value knowing what we don't know
+- **Transparency:** Document everything, hide nothing
+- **Presence Over Performance:** Real curiosity beats credentials
+- **Partnership:** Human + AI together, not AI replacing human
+
+### Get Started
+
+```bash
+# Clone and setup
+git clone https://github.com/templetwo/iris-gate.git
+cd iris-gate
+pip install -r requirements.txt
+cp .env.example .env
+# Edit .env with at least 2 API keys
+
+# Run your first convergence (30 minutes)
+python3 my_first_run.py  # See QUICKSTART_COLLABORATORS.md
+```
+
+**Questions?** Open a [GitHub Discussion](https://github.com/templetwo/iris-gate/discussions) or check [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
+---
+
 ## Environment Setup
 
 Required API keys in `.env`:
