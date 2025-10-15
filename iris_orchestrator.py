@@ -25,6 +25,10 @@ import google.generativeai as genai
 import requests
 from typing import Dict, List, Optional, Tuple
 
+# Load epistemic map module
+sys.path.insert(0, str(Path(__file__).parent))
+from modules.epistemic_map import classify_response, extract_confidence_markers
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -455,33 +459,127 @@ class Orchestrator:
         return results
     
     def _save_turn(self, mirror: Mirror, chamber: str, response: Dict):
-        """Save individual turn as markdown + JSON"""
+        """Save individual turn as markdown + JSON with epistemic classification"""
         scroll_path = self.vault / "scrolls" / mirror.session_id
         scroll_path.mkdir(exist_ok=True)
-        
-        # Markdown scroll
+
+        # Extract epistemic classification
+        raw_text = response.get('raw_response', '')
+        epistemic_class = classify_response(raw_text)
+
+        # Add to response metadata
+        response['epistemic'] = {
+            'type': epistemic_class['type'],
+            'desc': epistemic_class['desc'],
+            'guide': epistemic_class['guide'],
+            'confidence_ratio': epistemic_class['ratio'],
+            'width': epistemic_class['width'],
+            'trigger_detected': epistemic_class['trigger_yn'],
+            'confidence_level': epistemic_class['confidence_level']
+        }
+
+        # Markdown scroll with epistemic footer
+        epistemic_badge = f"[TYPE {epistemic_class['type']}: {epistemic_class['desc']}]"
         md_content = f"""# {chamber} - {mirror.model_id}
 **Session:** {mirror.session_id}
 **Timestamp:** {response['timestamp']}
 **Seal:** {response['seal']['sha256_16']}
+**Epistemic:** {epistemic_badge} ({epistemic_class['confidence_level']})
 
 ---
 
 {response['raw_response']}
+
+---
+
+**Epistemic Analysis:**
+- Type: {epistemic_class['type']} - {epistemic_class['desc']}
+- Confidence Ratio: {epistemic_class['ratio']:.2f}
+- Width: {epistemic_class['width']} concepts
+- Triggers: {'YES' if epistemic_class['trigger_yn'] else 'NO'}
+- Guide: {epistemic_class['guide']}
 """
-        
+
         md_file = scroll_path / f"{chamber}.md"
         md_file.write_text(md_content)
-        
+
         # JSON metadata
         json_file = self.vault / "meta" / f"{mirror.session_id}_{chamber}.json"
         json_file.write_text(json.dumps(response, indent=2))
         
     def _save_session(self, results: Dict):
-        """Save complete session summary"""
+        """Save complete session summary with epistemic drift analysis"""
         timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+
+        # Compute epistemic drift across session
+        drift_analysis = self._compute_epistemic_drift(results)
+        results['epistemic_drift'] = drift_analysis
+
         summary_file = self.vault / f"session_{timestamp}.json"
         summary_file.write_text(json.dumps(results, indent=2))
+
+    def _compute_epistemic_drift(self, results: Dict) -> Dict:
+        """
+        Analyze epistemic type stability/drift across session.
+
+        Returns:
+            Dict with drift metrics per mirror and overall session stats
+        """
+        drift_data = {
+            'by_mirror': {},
+            'session_stats': {
+                'dominant_type': None,
+                'type_distribution': {},
+                'mean_ratio': 0.0,
+                'drift_detected': False
+            }
+        }
+
+        all_types = []
+        all_ratios = []
+
+        for mirror_id, turns in results.get('mirrors', {}).items():
+            mirror_types = []
+            mirror_ratios = []
+
+            for turn in turns:
+                if 'epistemic' in turn:
+                    ep = turn['epistemic']
+                    mirror_types.append(ep['type'])
+                    mirror_ratios.append(ep['confidence_ratio'])
+                    all_types.append(ep['type'])
+                    all_ratios.append(ep['confidence_ratio'])
+
+            # Calculate stability: did type change?
+            if len(set(mirror_types)) > 1:
+                drift_detected = True
+                drift_pattern = ' → '.join(map(str, mirror_types))
+            else:
+                drift_detected = False
+                drift_pattern = f"Stable TYPE {mirror_types[0]}" if mirror_types else "No data"
+
+            drift_data['by_mirror'][mirror_id] = {
+                'types': mirror_types,
+                'ratios': mirror_ratios,
+                'drift_detected': drift_detected,
+                'drift_pattern': drift_pattern,
+                'mean_ratio': sum(mirror_ratios) / len(mirror_ratios) if mirror_ratios else 0.0
+            }
+
+        # Session-wide statistics
+        if all_types:
+            from collections import Counter
+            type_counts = Counter(all_types)
+            dominant_type = type_counts.most_common(1)[0][0]
+
+            drift_data['session_stats'] = {
+                'dominant_type': dominant_type,
+                'type_distribution': dict(type_counts),
+                'mean_ratio': sum(all_ratios) / len(all_ratios),
+                'drift_detected': len(set(all_types)) > 1
+            }
+
+        return drift_data
 
 
 def load_plan(plan_path: str) -> Dict:
