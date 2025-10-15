@@ -23,6 +23,10 @@ import json
 import argparse
 from pathlib import Path
 from typing import Optional
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))

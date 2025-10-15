@@ -323,11 +323,20 @@ class IRISVerifier:
         """Format citation data into source dicts"""
         sources = []
         for citation in citations[:5]:  # Top 5 sources
-            sources.append({
-                "title": citation.get("title", "Unknown"),
-                "url": citation.get("url", ""),
-                "snippet": citation.get("snippet", "")[:200]  # Truncate
-            })
+            # Handle different citation formats
+            if isinstance(citation, dict):
+                sources.append({
+                    "title": citation.get("title", "Unknown"),
+                    "url": citation.get("url", ""),
+                    "snippet": citation.get("snippet", "")[:200]  # Truncate
+                })
+            elif isinstance(citation, str):
+                # Citation is just a URL string
+                sources.append({
+                    "title": "Source",
+                    "url": citation,
+                    "snippet": ""
+                })
         return sources
 
     def _compute_summary(self, results: List[VerificationResult]) -> Dict:
