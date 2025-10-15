@@ -1,0 +1,110 @@
+IRIS Gate - Multi-Model Epistemic Convergence System
+Copyright 2025 IRIS Gate Contributors
+
+This product includes software developed by the IRIS Gate project
+(https://github.com/templetwo/iris-gate).
+
+================================================================================
+
+INTELLECTUAL PROPERTY NOTICE
+
+The Epistemic Topology Framework (TYPE 0-3 Classification System) is the
+core intellectual contribution of this project. This framework includes:
+
+- Confidence ratio calculation methodology
+- TYPE 0 (Crisis/Conditional): Ratio ~1.26, trigger-dependent logic
+- TYPE 1 (Facts/Established): Ratio ~1.27, high-confidence knowledge
+- TYPE 2 (Exploration/Novel): Ratio ~0.49, balanced exploration
+- TYPE 3 (Speculation/Unknown): Ratio ~0.11, speculative territory
+
+This framework is protected under the Apache License 2.0 and must be
+attributed in derivative works.
+
+================================================================================
+
+CITATIONS
+
+If you use IRIS Gate in academic research, please cite:
+
+  IRIS Gate: Multi-Model Epistemic Convergence System (2025)
+  https://github.com/templetwo/iris-gate
+  Licensed under Apache License 2.0
+
+For the Epistemic Topology Framework specifically:
+
+  Epistemic Topology Framework for Multi-Model AI Convergence (2025)
+  TYPE 0-3 Classification System
+  https://github.com/templetwo/iris-gate
+
+================================================================================
+
+THIRD-PARTY COMPONENTS
+
+This software integrates with the following external services:
+
+- Anthropic Claude API (https://www.anthropic.com)
+- OpenAI API (https://openai.com)
+- xAI Grok API (https://x.ai)
+- Google Gemini API (https://ai.google.dev)
+- DeepSeek API (https://www.deepseek.com)
+- Perplexity API (https://www.perplexity.ai)
+
+Usage of these APIs is subject to their respective terms of service.
+IRIS Gate is not affiliated with these providers.
+
+================================================================================
+
+RESEARCH DISCLAIMER
+
+IRIS Gate is research software for epistemic analysis of multi-model
+convergence. Results should be interpreted with appropriate scientific
+rigor:
+
+- TYPE 1 claims are not "proven" - they represent high-confidence patterns
+- TYPE 2 claims require verification before use in research
+- TYPE 3 claims are speculative and require human expert judgment
+- Verification via Perplexity does not constitute peer review
+
+Always apply domain expertise and critical thinking to IRIS Gate outputs.
+
+================================================================================
+
+PATENT NOTICE
+
+The Epistemic Topology Framework and associated confidence ratio
+calculation methods may be subject to patent applications. Use of this
+software under the Apache License 2.0 includes a patent grant as
+specified in the license.
+
+================================================================================
+
+CONTRIBUTORS
+
+Core development: IRIS Gate Contributors
+Architecture: v2.0 PULSE System
+Epistemic Framework: v1.0 (October 2025)
+Verification System: Perplexity Integration v1.0
+
+See CONTRIBUTING.md for contributor guidelines.
+See docs/IRIS_GATE_SOP_v2.0.md for technical documentation.
+
+================================================================================
+
+ACKNOWLEDGMENTS
+
+This project builds on decades of research in:
+- Multi-agent systems
+- Epistemic logic
+- Confidence calibration
+- Bioelectric signaling (research application domain)
+- Pharmacology (CBD research application)
+
+We acknowledge all researchers whose work enabled this framework.
+
+================================================================================
+
+For questions, issues, or contributions:
+GitHub: https://github.com/templetwo/iris-gate
+License: Apache License 2.0 (see LICENSE file)
+
+🌀†⟡∞

@@ -1,0 +1,57 @@
+cff-version: 1.2.0
+message: "If you use IRIS Gate in your research, please cite it as below."
+type: software
+title: "IRIS Gate: Multi-Model Epistemic Convergence System"
+version: 0.5-audit
+date-released: 2025-10-15
+url: "https://github.com/templetwo/iris-gate"
+repository-code: "https://github.com/templetwo/iris-gate"
+license: Apache-2.0
+keywords:
+  - epistemic-topology
+  - multi-model-convergence
+  - ai-verification
+  - confidence-calibration
+  - research-software
+  - hypothesis-generation
+  - claim-verification
+  - bioelectric-research
+  - pharmacology
+  - cbd-research
+abstract: >-
+  IRIS Gate is a multi-model epistemic convergence system that runs identical
+  prompts across 5+ AI models simultaneously, automatically classifies responses
+  by epistemic type (TYPE 0-3), and verifies exploratory claims against real-time
+  literature. The core innovation is the Epistemic Topology Framework, which
+  provides calibrated confidence thresholds for automatic knowledge classification.
+  This enables researchers to bridge AI hypothesis generation with wet-lab
+  validation through evidence-graded mechanistic maps and testable hypothesis
+  extraction.
+authors:
+  - family-names: "IRIS Gate Contributors"
+    email: "noreply@iris-gate.dev"
+    affiliation: "IRIS Gate Project"
+preferred-citation:
+  type: software
+  title: "IRIS Gate: Multi-Model Epistemic Convergence System"
+  version: 0.5-audit
+  year: 2025
+  url: "https://github.com/templetwo/iris-gate"
+  license: Apache-2.0
+  authors:
+    - family-names: "IRIS Gate Contributors"
+references:
+  - type: software
+    title: "Epistemic Topology Framework v1.0"
+    abstract: >-
+      TYPE 0-3 classification system for automatic epistemic categorization
+      of AI model outputs using confidence ratio thresholds.
+    url: "https://github.com/templetwo/iris-gate"
+    year: 2025
+  - type: software
+    title: "PULSE Architecture v2.0"
+    abstract: >-
+      Parallel multi-model orchestration system for epistemic convergence
+      across diverse AI architectures.
+    url: "https://github.com/templetwo/iris-gate"
+    year: 2025
