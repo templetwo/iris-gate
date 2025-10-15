@@ -49,6 +49,13 @@ python3 epistemic_drift.py iris_vault/session_20251015_045941.json
 python3 epistemic_drift.py --compare session_v1.json session_v2.json
 ```
 
+**Claude Code Slash Commands:**
+```bash
+# Quick access to epistemic tools (requires Claude Code restart)
+/epistemic-scan [path]       # Classify scrolls/sessions
+/drift-log [session.json]    # Track TYPE stability
+```
+
 **Validated on:**
 - ✅ 49 S4 chambers across 7 experimental runs
 - ✅ ~1,270 convergence events
