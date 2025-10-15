@@ -1,0 +1,80 @@
+
+📄 iris_vault/scrolls/BIOELECTRIC_CHAMBERED_20251014010158/anthropic_claude-sonnet-4.5/turn_048.md
+------------------------------------------------------------
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        2 - Exploration/Novel      │
+│ Confidence:  VERIFY                         │
+│ Ratio:       0.50                           │
+│ Width:       0                              │
+│ Triggers:    NO                             │
+│ Guide:       VERIFY all claims              │
+└─────────────────────────────────────────┘
+
+📄 iris_vault/scrolls/BIOELECTRIC_CHAMBERED_20251014010158/anthropic_claude-sonnet-4.5/turn_010.md
+------------------------------------------------------------
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        2 - Exploration/Novel      │
+│ Confidence:  VERIFY                         │
+│ Ratio:       0.50                           │
+│ Width:       0                              │
+│ Triggers:    NO                             │
+│ Guide:       VERIFY all claims              │
+└─────────────────────────────────────────┘
+🧪 Testing Epistemic Map on CBD Paradox
+
+TEST 1: Biphasic Fact
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        1 - Facts/Established      │
+│ Confidence:  TRUST                          │
+│ Ratio:       40.00                          │
+│ Width:       5                              │
+│ Triggers:    NO                             │
+│ Guide:       TRUST                          │
+└─────────────────────────────────────────┘
+✓ Expected TYPE 1, Got TYPE 1
+
+TEST 2: VDAC1 Conditional
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        0 - Crisis/Conditional     │
+│ Confidence:  TRUST (conditional)            │
+│ Ratio:       10.00                          │
+│ Width:       7                              │
+│ Triggers:    YES                            │
+│ Guide:       TRUST if trigger present       │
+└─────────────────────────────────────────┘
+✓ Expected TYPE 0, Got TYPE 0
+
+TEST 3: Emerging Cytotoxic Mechanism
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        2 - Exploration/Novel      │
+│ Confidence:  VERIFY                         │
+│ Ratio:       0.50                           │
+│ Width:       0                              │
+│ Triggers:    NO                             │
+│ Guide:       VERIFY all claims              │
+└─────────────────────────────────────────┘
+✓ Expected TYPE 2, Got TYPE 2
+
+TEST 4: Future Speculation
+┌─────────────────────────────────────────┐
+│ EPISTEMIC TOPOLOGY CLASSIFICATION       │
+├─────────────────────────────────────────┤
+│ Type:        2 - Exploration/Novel      │
+│ Confidence:  VERIFY (boundary)              │
+│ Ratio:       0.95                           │
+│ Width:       6                              │
+│ Triggers:    NO                             │
+│ Guide:       VERIFY all claims              │
+└─────────────────────────────────────────┘
+✓ Expected TYPE 3, Got TYPE 2
+
