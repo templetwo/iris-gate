@@ -1,0 +1,104 @@
+{
+  "_comment": "IRIS Frontier Bridge (S9: Connection) — Novelty is a routing problem, not a credibility problem.",
+  "_instructions": "Copy this template, fill in your details, and submit a PR to frontier/profiles/ or email maintainer@iris-gate.dev",
+
+  "profile_id": "your-github-username",
+  "researcher": {
+    "name": "Your Name (or pseudonym)",
+    "affiliation": "Institution or 'Independent' (optional)",
+    "orcid": "0000-0000-0000-0000 (optional)",
+    "github": "your-github-username",
+    "email": "your-email@example.com (optional, for direct matching)",
+    "website": "https://yoursite.com (optional)"
+  },
+
+  "tags": {
+    "_comment": "Keywords for matching Mystery Cards. Be specific. Examples provided below.",
+    "domains": [
+      "pharmacology",
+      "bioelectricity",
+      "mitochondrial-biology",
+      "systems-biology"
+    ],
+    "methods": [
+      "cell-culture",
+      "electrophysiology",
+      "molecular-dynamics",
+      "live-imaging"
+    ],
+    "organisms": [
+      "HEK293",
+      "U87-glioblastoma",
+      "C-elegans",
+      "planaria",
+      "in-silico"
+    ],
+    "techniques": [
+      "patch-clamp",
+      "calcium-imaging",
+      "western-blot",
+      "CRISPR"
+    ],
+    "interests": [
+      "crisis-dependent-mechanisms",
+      "biphasic-effects",
+      "null-results",
+      "edge-cases"
+    ]
+  },
+
+  "availability": {
+    "hours_per_month": 5,
+    "_comment": "How many hours/month can you dedicate to micro-validations? (1-20)",
+    "preferred_commitment": "1-2 micro-protocols per quarter",
+    "biosafety_level": "BSL-2",
+    "_bsl_comment": "What biosafety level can you work at? (BSL-1, BSL-2, BSL-3, computational)",
+    "wet_lab": true,
+    "_wetlab_comment": "Do you have wet-lab access? (true/false)",
+    "computational": true,
+    "_computational_comment": "Can you run computational/in-silico tests? (true/false)"
+  },
+
+  "contact_preferences": {
+    "github_issues": true,
+    "_github_comment": "Notify via GitHub Issue mentions? (recommended)",
+    "email": false,
+    "_email_comment": "Send direct email when cards match? (requires email above)",
+    "discord": false,
+    "_discord_comment": "Notify via Discord DM? (requires Discord username below)",
+    "discord_username": "YourDiscord#1234",
+    "max_cards_per_month": 3,
+    "_max_comment": "Max Mystery Card invitations per month (1-10)"
+  },
+
+  "expertise": {
+    "_comment": "Optional: Describe your edge-case expertise or null results you've encountered",
+    "edge_cases": [
+      "CBD paradoxical effects at low vs high doses",
+      "VDAC1 gating under stress conditions",
+      "Mitochondrial rescue mechanisms"
+    ],
+    "null_results": [
+      "Failed to replicate CBD neuroprotection in normoxic conditions (suggests crisis-dependency)"
+    ],
+    "preprints": [
+      {
+        "title": "Conditional engagement of CBD with mitochondrial channels",
+        "url": "https://biorxiv.org/..."
+      }
+    ]
+  },
+
+  "consent": {
+    "opt_in": true,
+    "_consent_comment": "I consent to being contacted when Mystery Cards match my tags (true/false)",
+    "attribution": "Full Name or GitHub Username",
+    "_attribution_comment": "How should you be credited? (Co-Authored-By line)",
+    "public_profile": false,
+    "_public_comment": "Make this profile publicly visible on iris-gate.dev? (true/false - default false)"
+  },
+
+  "version": "v1.0",
+  "timestamp": "2025-10-16T00:00:00Z",
+  "_timestamp_comment": "Auto-filled on submission"
+}

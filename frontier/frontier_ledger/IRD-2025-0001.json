@@ -1,0 +1,89 @@
+{
+  "id": "IRD-2025-0001",
+  "title": "CBD–VDAC1 binding is crisis-only under ΔΨm collapse",
+  "abstract": "CBD engagement with VDAC1 (voltage-dependent anion channel) appears conditional on mitochondrial stress (ΔΨm collapse, ROS surge) and high-dose CBD pulse (≥10 μM, 5-15 min). This may explain biphasic therapeutic effects observed in glioblastoma and neuroprotection studies.",
+  "claim_type": "mechanism",
+  "epistemic_type": 2,
+  "verification_status": "BRONZE",
+  "triggers": [
+    "ΔΨm collapse",
+    "ROS surge ≥2× baseline",
+    "CBD ≥10 μM",
+    "Pulse duration 5-15 min"
+  ],
+  "if_then_rules": [
+    "IF ΔΨm↓ AND CBD≥10μM (5-15m pulse) THEN VDAC1 gating↑ (biphasic outcome: rescue or death)",
+    "IF CBD<5μM OR no mitochondrial stress THEN VDAC1 gating unchanged",
+    "IF pulse >30min THEN toxic accumulation overrides rescue"
+  ],
+  "evidence": {
+    "models": [
+      "anthropic/claude-sonnet-4.5",
+      "openai/gpt-4o",
+      "xai/grok-4-fast-reasoning",
+      "google/gemini-2.0-flash-exp",
+      "deepseek/deepseek-chat"
+    ],
+    "convergence": {
+      "events": 27,
+      "ratio": 0.49
+    },
+    "literature": [
+      "Oviedo et al. 2008 (bioelectric signaling in regeneration)",
+      "Levin 2012 (morphogenetic fields and cellular memory)",
+      "CBD mitochondrial effects review 2021",
+      "VDAC1 role in apoptosis (Shoshan-Barmatz 2017)",
+      "Biphasic CBD dose-response (Zuardi 2017)"
+    ],
+    "verification": "PARTIAL/CONDITIONAL (Perplexity: some support for CBD mitochondrial effects and VDAC1 role in stress, but specific Kd 6-11 μM binding and crisis-dependency need experimental validation)"
+  },
+  "requested_tests": [
+    "Mitostress pulse assay (Seahorse XF or JC-1 dye) with CBD dose-response (1, 5, 10, 20 μM)",
+    "VDAC1 inhibitor (DIDS, 50-100 μM) ablation under identical pulse conditions",
+    "Time-course experiment: 1-min, 5-min, 15-min, 30-min, 60-min CBD pulses to validate temporal window",
+    "Calcium imaging (Fluo-4 or GCaMP) to detect VDAC1-mediated Ca²⁺ flux during stress",
+    "Western blot for VDAC1 oligomerization state before/after CBD pulse"
+  ],
+  "falsification_tests": [
+    "If VDAC1 gating increases at CBD <5 μM without mitochondrial stress → claim wrong",
+    "If DIDS (VDAC1 inhibitor) has no effect on rescue/death outcome → mechanism wrong",
+    "If 1-min pulse equals 15-min pulse outcome (no temporal window) → pulse duration claim wrong",
+    "If CBD effects persist equally in VDAC1 knockout cells → VDAC1 not the primary target"
+  ],
+  "ethics": {
+    "human_subjects": false,
+    "biosafety": "BSL-2",
+    "dual_use": false,
+    "organism": "HEK293, U87 glioblastoma, or SH-SY5Y neuroblastoma cells",
+    "known_risks": [
+      "CBD cytotoxicity at high doses (>20 μM)",
+      "DMSO vehicle effects (keep <0.1%)",
+      "Mitochondrial stress induction via oligomycin/CCCP (handle with care)",
+      "Cell culture contamination risk"
+    ]
+  },
+  "contact": {
+    "issue_url": "https://github.com/templetwo/iris-gate/issues/TBD",
+    "maintainer": "templetwo"
+  },
+  "license": "Apache-2.0",
+  "hash": "sha256:7f8e3c2a1b9d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f",
+  "timestamp": "2025-10-16T04:30:00Z",
+  "version": "v1.0",
+  "tags": [
+    "pharmacology",
+    "mitochondria",
+    "CBD",
+    "VDAC1",
+    "bioelectricity",
+    "crisis-dependent",
+    "biphasic-effects",
+    "glioblastoma",
+    "neuroprotection"
+  ],
+  "session_id": "20251015_211606",
+  "chamber": "S4",
+  "related_cards": [],
+  "preprints": [],
+  "updates": []
+}

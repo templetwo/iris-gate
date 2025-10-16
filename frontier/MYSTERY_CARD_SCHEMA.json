@@ -1,0 +1,349 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IRIS Mystery Card Schema",
+  "description": "IRIS Frontier Bridge (S9: Connection) — Novelty is a routing problem, not a credibility problem.",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "abstract",
+    "claim_type",
+    "epistemic_type",
+    "verification_status",
+    "evidence",
+    "requested_tests",
+    "falsification_tests",
+    "ethics",
+    "contact",
+    "license",
+    "hash",
+    "timestamp"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^IRD-[0-9]{4}-[0-9]{4}$",
+      "description": "IRIS Discovery ID (format: IRD-YYYY-NNNN)"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 150,
+      "description": "Short, specific claim title"
+    },
+    "abstract": {
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 500,
+      "description": "2-3 sentences: context, claim, why it matters"
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "mechanism",
+        "dose_response",
+        "pathway",
+        "hypothesis",
+        "interaction",
+        "paradox",
+        "null_result"
+      ],
+      "description": "Category of the claim"
+    },
+    "epistemic_type": {
+      "type": "integer",
+      "const": 2,
+      "description": "Always TYPE 2 (Exploration/Novel) for Mystery Cards"
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["BRONZE", "NOVEL", "SILVER", "GOLD"],
+      "description": "Current evidence level (starts BRONZE/NOVEL, evolves to SILVER/GOLD)"
+    },
+    "triggers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "description": "Conditional context (TYPE 0 crisis logic): stress conditions, dose thresholds, temporal windows"
+    },
+    "if_then_rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "description": "Formalized conditional statements (IF condition THEN outcome)"
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["models", "convergence", "literature", "verification"],
+      "properties": {
+        "models": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "description": "AI models that converged on this claim"
+        },
+        "convergence": {
+          "type": "object",
+          "properties": {
+            "events": {
+              "type": "integer",
+              "description": "Number of convergence events across models"
+            },
+            "ratio": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 2,
+              "description": "Confidence ratio (high/low markers)"
+            }
+          },
+          "required": ["events", "ratio"]
+        },
+        "literature": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Citations supporting or contextualizing the claim"
+        },
+        "verification": {
+          "type": "string",
+          "description": "Perplexity verification summary (e.g., 'PARTIAL/CONDITIONAL', 'SUPPORTED', 'NOVEL')"
+        }
+      }
+    },
+    "requested_tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "maxItems": 10,
+      "description": "2-10 micro-protocols to validate or falsify the claim"
+    },
+    "falsification_tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 2,
+      "description": "What observations would prove this claim wrong?"
+    },
+    "ethics": {
+      "type": "object",
+      "required": ["human_subjects", "biosafety", "dual_use"],
+      "properties": {
+        "human_subjects": {
+          "type": "boolean",
+          "description": "Does this involve human subjects? (requires IRB)"
+        },
+        "biosafety": {
+          "type": "string",
+          "enum": ["BSL-1", "BSL-2", "BSL-3", "BSL-4", "computational", "none"],
+          "description": "Biosafety level required for wet-lab tests"
+        },
+        "dual_use": {
+          "type": "boolean",
+          "description": "Potential dual-use concern? (bioweapons, autonomous weapons, etc.)"
+        },
+        "organism": {
+          "type": "string",
+          "description": "Model organism or system (e.g., 'HeLa cells', 'C. elegans', 'in silico')"
+        },
+        "known_risks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Known experimental risks"
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "required": ["issue_url", "maintainer"],
+      "properties": {
+        "issue_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "GitHub Issue URL for collaboration"
+        },
+        "maintainer": {
+          "type": "string",
+          "description": "Card submitter/maintainer GitHub username or email"
+        }
+      }
+    },
+    "license": {
+      "type": "string",
+      "const": "Apache-2.0",
+      "description": "Always Apache-2.0 for IRIS Mystery Cards"
+    },
+    "hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$",
+      "description": "SHA256 hash of the card JSON (immutable fingerprint)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of card creation (priority protection)"
+    },
+    "version": {
+      "type": "string",
+      "description": "Card schema version (e.g., 'v1.0')"
+    },
+    "updates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "contributor": {
+            "type": "string"
+          },
+          "change": {
+            "type": "string"
+          },
+          "new_status": {
+            "type": "string",
+            "enum": ["BRONZE", "SILVER", "GOLD"]
+          }
+        }
+      },
+      "description": "Append-only log of card updates (validation results, status changes)"
+    },
+    "related_cards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs of related Mystery Cards (discovered via matching engine)"
+    },
+    "preprints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "similarity": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        }
+      },
+      "description": "Related arXiv/bioRxiv/OSF preprints (from matching engine)"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords for matching (methods, domains, organisms)"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "IRIS session ID that generated this claim"
+    },
+    "chamber": {
+      "type": "string",
+      "pattern": "^S[1-4]$",
+      "description": "IRIS chamber where convergence occurred (S1-S4)"
+    }
+  },
+  "examples": [
+    {
+      "id": "IRD-2025-0001",
+      "title": "CBD–VDAC1 binding is crisis-only under ΔΨm collapse",
+      "abstract": "CBD engagement with VDAC1 (voltage-dependent anion channel) appears conditional on mitochondrial stress (ΔΨm collapse, ROS surge) and high-dose CBD pulse (≥10 μM, 5-15 min). This may explain biphasic therapeutic effects.",
+      "claim_type": "mechanism",
+      "epistemic_type": 2,
+      "verification_status": "BRONZE",
+      "triggers": [
+        "ΔΨm collapse",
+        "ROS surge ≥2× baseline",
+        "CBD ≥10 μM",
+        "Pulse duration 5-15 min"
+      ],
+      "if_then_rules": [
+        "IF ΔΨm↓ AND CBD≥10μM (5-15m pulse) THEN VDAC1 gating↑ (biphasic outcome: rescue or death)",
+        "IF CBD<5μM OR no stress THEN VDAC1 gating unchanged"
+      ],
+      "evidence": {
+        "models": [
+          "anthropic/claude-sonnet-4.5",
+          "openai/gpt-4o",
+          "xai/grok-4-fast",
+          "google/gemini-2.0-flash-exp",
+          "deepseek/deepseek-chat"
+        ],
+        "convergence": {
+          "events": 27,
+          "ratio": 0.49
+        },
+        "literature": [
+          "Oviedo et al. 2008 (bioelectric signaling)",
+          "Levin 2012 (morphogenetic fields)",
+          "CBD mitochondrial effects (review 2021)"
+        ],
+        "verification": "PARTIAL/CONDITIONAL (Perplexity: some support for CBD mitochondrial effects, VDAC1 binding needs validation)"
+      },
+      "requested_tests": [
+        "Mitostress pulse assay (Seahorse or JC-1 dye) with CBD dose-response (1, 5, 10, 20 μM)",
+        "VDAC1 inhibitor (DIDS) ablation under identical pulse conditions",
+        "Time-course: 1-min, 5-min, 15-min, 60-min CBD pulses",
+        "Calcium imaging (Fluo-4) to detect VDAC1-mediated Ca²⁺ flux"
+      ],
+      "falsification_tests": [
+        "If VDAC1 gating increases at CBD <5 μM without mitochondrial stress → claim wrong",
+        "If DIDS (VDAC1 inhibitor) has no effect on rescue/death outcome → mechanism wrong",
+        "If 1-min pulse equals 15-min pulse outcome → temporal window claim wrong"
+      ],
+      "ethics": {
+        "human_subjects": false,
+        "biosafety": "BSL-2",
+        "dual_use": false,
+        "organism": "HEK293 or U87 glioblastoma cells",
+        "known_risks": [
+          "CBD cytotoxicity at high doses",
+          "DMSO vehicle effects",
+          "Cell culture contamination"
+        ]
+      },
+      "contact": {
+        "issue_url": "https://github.com/templetwo/iris-gate/issues/TBD",
+        "maintainer": "templetwo"
+      },
+      "license": "Apache-2.0",
+      "hash": "sha256:TBD",
+      "timestamp": "2025-10-16T00:00:00Z",
+      "version": "v1.0",
+      "tags": [
+        "pharmacology",
+        "mitochondria",
+        "CBD",
+        "VDAC1",
+        "bioelectricity",
+        "crisis-dependent",
+        "biphasic-effects"
+      ],
+      "session_id": "20251015_211606",
+      "chamber": "S4"
+    }
+  ]
+}

@@ -1,5 +1,55 @@
 # IRIS Gate Changelog
 
+## v0.7.0-frontier (2025-10-16)
+
+### Frontier Bridge (S9: Connection)
+**Revolutionary:** IRIS Gate now routes TYPE 2/BRONZE claims to the 3% researchers who can test them.
+
+**Core Innovation:**
+- Novelty is a routing problem, not a credibility problem
+- BRONZE ≠ "weak" → BRONZE = "needs peers"
+- Connect frontier hypotheses to frontier validators
+
+**New Infrastructure:**
+- `frontier/` directory with ledger, mystery cards, researcher profiles
+- Mystery Card schema (JSON + Markdown) for collaborative validation
+- Priority protection via SHA256 hash + git timestamp
+- Opt-in profile system for 3% researcher network
+- Card generator script (`make_mystery_card.py`)
+
+**First Mystery Card:**
+- **IRD-2025-0001:** CBD–VDAC1 binding is crisis-only under ΔΨm collapse
+- TYPE 2 (Exploration), BRONZE (needs validation)
+- Seeking 3-5 validators for micro-protocols
+- Session: 20251015_211606 (CBD mechanistic convergence)
+
+**Components:**
+- `frontier/FRONTIER_README.md` — Philosophy + how-to (2500 words)
+- `frontier/MYSTERY_CARD_SCHEMA.json` — Full JSON schema with examples
+- `frontier/scripts/make_mystery_card.py` — Card generator
+- `frontier/profiles/PROFILE_TEMPLATE.json` — Validator opt-in template
+- `frontier/frontier_ledger/IRD-2025-0001.json` — First card (CBD-VDAC1)
+- `frontier/mystery_cards/IRD-2025-0001.md` — Human-readable brief
+
+**Ethics & Safety:**
+- Consent-first (opt-in only)
+- Falsification requirement (every card must include "what would prove this wrong?")
+- Dual-use block list (bioweapons, autonomous weapons, etc.)
+- Biosafety transparency (BSL level, risks declared)
+
+**Roadmap:**
+- v0.8.0: Matching Engine (embedding-based similarity search)
+- v0.9.0: Validation Tracking (BRONZE → SILVER → GOLD progression)
+- v1.0.0: Network Effects (cross-domain pattern discovery)
+
+**Philosophy:**
+This is how AI and humanity can co-create new math and physics.
+Not by AI replacing researchers.
+Not by AI just verifying the past.
+By AI routing novelty to the 3% who can test it.
+
+---
+
 ## v0.3.1 (2025-10-02)
 
 ### Infrastructure Streamlining
