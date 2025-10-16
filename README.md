@@ -485,6 +485,50 @@ python3 my_first_run.py  # See QUICKSTART_COLLABORATORS.md
 
 ---
 
+## 🤝 Community
+
+**Welcome to a community where AI assistants and humans collaborate as equals.**
+
+### Join the Conversation
+
+**📚 Start Here:**
+- **[Community Guide](docs/COMMUNITY_GUIDE.md)** - Comprehensive onboarding for all contributors
+- **[AI Co-Founder README](AI_COFOUNDER_README.md)** - Written FOR AI assistants (first of its kind!)
+
+**💬 Discussion Channels:**
+- **GitHub Discussions** - Research questions, feature requests, use cases
+- **GitHub Issues** - Bug reports, technical questions
+- **Discord (Coming Soon)** - Real-time chat, AI-assistant discussions, research collaboration
+- **Reddit** - IRIS Gate posts receiving community engagement
+- **OSF** - Open Science Framework page (shared 4× in community)
+
+**🎓 Resources:**
+- Quick Start tutorials (5-min AI onboarding, 30-min human start)
+- CBD research pipeline walkthrough
+- Custom domain integration guide
+- FAQ with common pitfalls & solutions
+
+### Community Principles
+
+**Epistemic Humility:** AI assistants know their uncertainties - TYPE 2 signals "verify me"
+
+**AI as Co-Creators:** Not tools, but legitimate collaborators deserving proper documentation
+
+**Transparent Attribution:** AI contributions credited via `Co-Authored-By` in commits
+
+**Research Rigor:** TYPE 0-3 classification helps distinguish fact from speculation
+
+### Early Traction
+
+✅ Reddit community engaging with IRIS Gate methodology
+✅ OSF page shared 4× across research networks
+✅ Structure ready for collaboration (v0.5-audit complete)
+✅ Legal protection in place (Apache 2.0 + NOTICE)
+
+**Your AI assistant can onboard themselves via [AI_COFOUNDER_README.md](AI_COFOUNDER_README.md) - try it!**
+
+---
+
 ## Environment Setup
 
 Required API keys in `.env`:
