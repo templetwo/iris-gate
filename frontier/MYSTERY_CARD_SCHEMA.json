@@ -264,6 +264,181 @@
       "type": "string",
       "pattern": "^S[1-4]$",
       "description": "IRIS chamber where convergence occurred (S1-S4)"
+    },
+    "preregistration": {
+      "type": "object",
+      "properties": {
+        "osf_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "OSF preregistration URL (timestamped, immutable predictions)"
+        },
+        "aspredicted_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "AsPredicted.org registration URL (for testable hypotheses)"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Preregistration timestamp (before any experiments run)"
+        },
+        "predictions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Quantitative predictions locked before testing (e.g., 'IF CBD ≥10μM + stress THEN ΔJC-1 ≥0.25, p<0.05')"
+        }
+      },
+      "description": "Preregistration before validation (locks predictions, prevents goalpost-moving)"
+    },
+    "validation_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lab": {
+            "type": "string",
+            "description": "Lab or researcher identifier"
+          },
+          "result": {
+            "type": "string",
+            "enum": ["SUPPORTED", "PARTIALLY_SUPPORTED", "CONTRADICTED", "INCONCLUSIVE"],
+            "description": "Validation outcome"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "data_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Public data repository (GitHub, Zenodo, etc.)"
+          },
+          "doi": {
+            "type": "string",
+            "description": "DOI for dataset or publication"
+          },
+          "protocol_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Protocols.io or other protocol URL"
+          },
+          "preregistered": {
+            "type": "boolean",
+            "description": "Was this validation preregistered?"
+          }
+        },
+        "required": ["lab", "result", "date"]
+      },
+      "description": "Multi-lab validation history (independent replications)"
+    },
+    "adversarial_validation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "validator": {
+            "type": "string",
+            "description": "Adversarial validator username/name"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "test": {
+            "type": "string",
+            "description": "Specific falsification test designed"
+          },
+          "outcome": {
+            "type": "string",
+            "enum": ["CLAIM_SUPPORTED", "CLAIM_FALSIFIED", "BOUNDARY_FOUND", "INCONCLUSIVE"],
+            "description": "Adversarial test outcome"
+          },
+          "finding": {
+            "type": "string",
+            "description": "Key finding from adversarial test"
+          },
+          "data_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "badge": {
+            "type": "string",
+            "enum": ["Adversarial Validator", "Senior Adversarial Validator", "Master Adversarial Validator"],
+            "description": "Validator badge level"
+          }
+        },
+        "required": ["validator", "date", "test", "outcome"]
+      },
+      "description": "Adversarial validation attempts (skeptics trying to break the claim)"
+    },
+    "falsification_event": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "validator": {
+          "type": "string",
+          "description": "Who falsified the claim"
+        },
+        "test": {
+          "type": "string",
+          "description": "Which test falsified it"
+        },
+        "finding": {
+          "type": "string",
+          "description": "What observation contradicted the claim"
+        },
+        "conclusion": {
+          "type": "string",
+          "description": "Interpretation (what this means for the claim)"
+        },
+        "data_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "preregistration": {
+          "type": "string",
+          "format": "uri",
+          "description": "Preregistration URL for falsification test"
+        }
+      },
+      "description": "If claim is falsified, record the event (this is a GOOD outcome)"
+    },
+    "data_sharing": {
+      "type": "object",
+      "properties": {
+        "raw_data": {
+          "type": "string",
+          "format": "uri",
+          "description": "Raw data repository URL (GitHub, Zenodo, FigShare)"
+        },
+        "analysis_code": {
+          "type": "string",
+          "format": "uri",
+          "description": "Analysis code repository (Jupyter, R markdown)"
+        },
+        "protocols": {
+          "type": "string",
+          "format": "uri",
+          "description": "Protocols.io or detailed methods"
+        },
+        "preprint": {
+          "type": "string",
+          "format": "uri",
+          "description": "bioRxiv, arXiv, or other preprint URL"
+        },
+        "peer_reviewed": {
+          "type": "string",
+          "format": "uri",
+          "description": "Published paper URL (if accepted)"
+        }
+      },
+      "description": "Public data sharing (transparency requirement)"
     }
   },
   "examples": [

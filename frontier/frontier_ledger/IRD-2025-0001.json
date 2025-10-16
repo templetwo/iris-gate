@@ -85,5 +85,25 @@
   "chamber": "S4",
   "related_cards": [],
   "preprints": [],
-  "updates": []
+  "updates": [],
+  "preregistration": {
+    "osf_url": null,
+    "aspredicted_url": null,
+    "timestamp": null,
+    "predictions": [
+      "IF CBD ≥10μM + oligomycin-induced ΔΨm collapse THEN JC-1 ratio increases ≥50% vs stress-only control (p<0.05)",
+      "IF DIDS (VDAC1 inhibitor, 100μM) added THEN CBD rescue effect abolished (≥80% reduction, p<0.05)",
+      "IF CBD pulse <5min OR >30min THEN effect significantly reduced vs 5-15min window (p<0.05)",
+      "IF VDAC1 knockout cells THEN CBD effect ≤20% of wildtype (p<0.05)"
+    ]
+  },
+  "validation_history": [],
+  "adversarial_validation": [],
+  "data_sharing": {
+    "raw_data": null,
+    "analysis_code": null,
+    "protocols": null,
+    "preprint": null,
+    "peer_reviewed": null
+  }
 }
