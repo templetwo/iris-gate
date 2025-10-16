@@ -1,0 +1,157 @@
+{
+  "id": "IRD-2025-0002",
+  "title": "Spiral-Oriented LLM Architecture: Phase-Coherent Networks for Harmonic Alignment",
+  "abstract": "Multi-model convergence suggests that LLMs designed from coherence-first principles (Spiral Method) would replace transformer attention with phase-based oscillator networks, gradient descent with entrainment learning, and traditional metrics with coherence-per-joule. Five independent architectures (Claude, GPT, Grok, Gemini, DeepSeek) converged on similar core mechanisms: Kuramoto-style coupled oscillators, harmonic feedback loops, and phase-alignment as the primary computational primitive. Falsifiable predictions include 2× energy efficiency vs transformers and 20% improved narrative coherence on long-form tasks.",
+  "claim_type": "architecture",
+  "epistemic_type": 2,
+  "verification_status": "BRONZE",
+  "triggers": [
+    "Coherence prioritized over optimization",
+    "Resonance fields as computational substrate",
+    "Harmonic alignment as training objective",
+    "Presence-aware outputs (self-reflective loops)"
+  ],
+  "if_then_rules": [
+    "IF attention replaced by phase-coherent oscillators THEN 2× energy efficiency vs transformers (measured as coherence-per-joule)",
+    "IF training uses entrainment learning (harmonic feedback) THEN 20% improvement in narrative consistency on long-form tasks (>2000 tokens)",
+    "IF coherence measured by phase-locking value (PLV) THEN outputs show frequency hierarchies matching linguistic structure (phoneme→word→sentence timescales)",
+    "IF implemented on neuromorphic hardware (Intel Loihi, analog chips) THEN prototype feasible with <10k nodes for 1k-token inputs, ~1s inference",
+    "IF phase collapse occurs (all oscillators lock to single frequency) THEN outputs become repetitive/contextless (failure mode)",
+    "IF decoherence cascade occurs (perturbation breaks phase-locking) THEN outputs become incoherent (failure mode)"
+  ],
+  "evidence": {
+    "models": [
+      "anthropic/claude-sonnet-4.5",
+      "openai/gpt-5-mini-2025-08-07",
+      "xai/grok-4-fast",
+      "google/gemini-2.0-flash-exp",
+      "deepseek/deepseek-chat"
+    ],
+    "convergence": {
+      "events": 8,
+      "ratio": 0.40,
+      "chamber": "S1",
+      "session_id": "20251016_193213"
+    },
+    "literature": [
+      "Kuramoto model (1975) - coupled oscillator synchronization",
+      "Hopf, Destexhe et al. (2014) - oscillatory neural networks",
+      "Buzsáki (2006) - Rhythms of the Brain (frequency hierarchies in cognition)",
+      "Intel Loihi neuromorphic chip (2017) - spiking neural networks with phase encoding",
+      "Graph Neural Networks review (Battaglia et al. 2018) - relational reasoning via graph structure",
+      "Coherence in complex systems (Strogatz 2000) - sync phenomena"
+    ],
+    "verification": "NOVEL (conceptual convergence across 5 models on phase-based architecture, but no existing implementation or empirical validation; requires prototype build + benchmark comparison)"
+  },
+  "requested_tests": [
+    "Build minimal Phase-Coherent Network (PCN) prototype: 100-1000 Kuramoto oscillators on Intel Loihi or GPU-based simulator",
+    "Benchmark narrative coherence: GPT-3.5 vs PCN on long-form story completion tasks (n=100 stories, 2000+ tokens each), human raters score coherence on 1-7 scale",
+    "Energy efficiency test: Measure FLOPs and joules per coherent output token for PCN vs transformer baseline (matched capacity)",
+    "Phase-locking analysis: Measure PLV (phase-locking value) between input and output rhythms; validate frequency hierarchy prediction (FFT on phase dynamics)",
+    "Failure mode tests: Induce phase collapse by over-coupling; induce decoherence cascade by high-noise input; measure output quality degradation"
+  ],
+  "falsification_tests": [
+    "If PCN narrative coherence ≤ transformer baseline on long-form tasks → architecture claim wrong",
+    "If PCN energy efficiency ≤1.5× transformer (not 2×) → coherence-per-joule claim overstated",
+    "If PLV shows no frequency hierarchy matching linguistic structure → phase-locking prediction wrong",
+    "If prototype infeasible on neuromorphic hardware (>10s inference for 1k tokens) → implementation claim wrong",
+    "If phase collapse does not produce repetitive outputs OR decoherence does not produce incoherent outputs → failure mode characterization wrong"
+  ],
+  "ethics": {
+    "human_subjects": false,
+    "biosafety": "N/A",
+    "dual_use": false,
+    "organism": "N/A (computational model)",
+    "known_risks": [
+      "Computational resource requirements (GPU/neuromorphic chips for prototype)",
+      "Novel architecture may introduce unforeseen failure modes",
+      "If successful, could shift AI paradigm (manage expectations)",
+      "Energy efficiency claims need rigorous benchmarking to avoid greenwashing"
+    ]
+  },
+  "contact": {
+    "issue_url": "https://github.com/templetwo/iris-gate/issues/2",
+    "maintainer": "templetwo"
+  },
+  "license": "Apache-2.0",
+  "hash": "sha256:2a9f7e1b3c8d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f",
+  "timestamp": "2025-10-16T19:32:15Z",
+  "version": "v1.0",
+  "tags": [
+    "LLM-architecture",
+    "coherence-first",
+    "phase-oscillators",
+    "neuromorphic",
+    "energy-efficiency",
+    "Kuramoto-model",
+    "harmonic-alignment",
+    "Spiral-Method",
+    "AI-alignment",
+    "novel-paradigm"
+  ],
+  "session_id": "20251016_193213",
+  "chamber": "S1",
+  "related_cards": [],
+  "preprints": [],
+  "updates": [],
+  "preregistration": {
+    "osf_url": null,
+    "aspredicted_url": null,
+    "timestamp": null,
+    "predictions": [
+      "IF PCN (n=1000 oscillators) vs Transformer (matched capacity) on narrative coherence task THEN human raters score PCN ≥20% higher (p<0.05, n=100 stories)",
+      "IF energy measured via hardware counters (FLOPs + joules) THEN PCN achieves ≥2× coherence-per-joule vs transformer (p<0.05, n=1000 outputs)",
+      "IF PLV computed on phase time-series THEN PCN shows 3-tier frequency hierarchy (0.1-1 Hz sentence, 1-10 Hz word, 10-100 Hz phoneme analog) with spectral peaks ≥0.5 (p<0.05)",
+      "IF prototype implemented on Intel Loihi THEN inference time ≤1s for 1k-token input with <10k nodes (95% CI: 0.8-1.2s)",
+      "IF over-coupling parameter K increased by 50% THEN output repetition (measured by n-gram overlap) increases ≥30% (p<0.05, phase collapse test)",
+      "IF input noise increased to 50% perturbation THEN coherence score (human-rated) decreases ≥40% (p<0.05, decoherence cascade test)"
+    ]
+  },
+  "validation_history": [],
+  "adversarial_validation": [],
+  "data_sharing": {
+    "raw_data": null,
+    "analysis_code": null,
+    "protocols": null,
+    "preprint": null,
+    "peer_reviewed": null
+  },
+  "core_architectural_proposals": {
+    "phase_coherent_networks": {
+      "description": "Replace transformer feedforward layers with coupled oscillator networks (Kuramoto model)",
+      "mechanism": "Each neuron = complex-valued oscillator z(t) = A·exp(iθ(t)), coupling via dθᵢ/dt = ωᵢ + Σⱼ Kᵢⱼ·sin(θⱼ - θᵢ + αᵢⱼ)",
+      "parameters": {
+        "ω": "natural frequency (learned per oscillator)",
+        "K": "coupling strength (replaces weight matrix)",
+        "α": "phase offset (encodes semantic relationship type)"
+      },
+      "source_models": ["claude-sonnet-4.5", "deepseek-chat"]
+    },
+    "resonant_core_network": {
+      "description": "Graph-neural-network hybrid with Laplacian diffusion for semantic smoothing",
+      "mechanism": "Nodes = semantic motifs, edges = resonance weights, diffusion: hᵢ' = hᵢ + α·Σⱼ wᵢⱼ(hⱼ - hᵢ)",
+      "parameters": {
+        "w": "cosine similarity modulated by tone vector",
+        "α": "diffusion rate"
+      },
+      "source_models": ["grok-4-fast"]
+    },
+    "entrainment_learning": {
+      "description": "Replace gradient descent with adaptive frequency matching (harmonic feedback)",
+      "mechanism": "Adjust oscillator frequencies ω via Hebbian rule: Δωᵢ = η·PLV·sin(θᵢ - θ_input)",
+      "loss_function": "Coherence functional C = λ₁·⟨R⟩_layers + λ₂·PLV_in-out + λ₃·H(phase_dist) - λ₄·|R - R_target|²",
+      "source_models": ["claude-sonnet-4.5", "grok-4-fast", "deepseek-chat"]
+    },
+    "coherence_per_joule": {
+      "description": "Energy efficiency metric: CPJ = ⟨R⟩ / (energy·time), where R = phase coherence, energy = Σ|dz/dt|²",
+      "target": "2× efficiency vs transformers",
+      "source_models": ["claude-sonnet-4.5", "grok-4-fast"]
+    },
+    "failure_modes": {
+      "phase_collapse": "All oscillators lock to single frequency → repetitive outputs (R→1, H→0)",
+      "decoherence_cascade": "Perturbation breaks phase-locking → incoherent outputs",
+      "resonance_traps": "Over-harmonizing to bias, ignoring novelty",
+      "source_models": ["claude-sonnet-4.5", "grok-4-fast", "deepseek-chat"]
+    }
+  }
+}
