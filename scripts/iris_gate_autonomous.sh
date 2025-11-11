@@ -29,6 +29,7 @@ QUESTION="$1"
 STUDIO_HOST="tony_studio@192.168.1.195"
 OLLAMA_CMD="/usr/local/bin/ollama"
 DEEPSEEK_API_KEY="${DEEPSEEK_API_KEY}"
+XAI_API_KEY="${XAI_API_KEY}"
 
 # Usage check
 if [ -z "$QUESTION" ]; then
@@ -40,11 +41,18 @@ if [ -z "$QUESTION" ]; then
     exit 1
 fi
 
-# Check DeepSeek API key
+# Check API keys
 if [ -z "$DEEPSEEK_API_KEY" ]; then
     echo -e "${YELLOW}⚠️  DEEPSEEK_API_KEY not set${NC}"
-    echo "Synthesis will be skipped. Set key with:"
+    echo "Tier 2 synthesis (DeepSeek R1) will be skipped."
     echo "  export DEEPSEEK_API_KEY='your-key-here'"
+    echo ""
+fi
+
+if [ -z "$XAI_API_KEY" ]; then
+    echo -e "${YELLOW}⚠️  XAI_API_KEY not set${NC}"
+    echo "Tier 3 synthesis (Grok-4 final verdict) will be skipped."
+    echo "  export XAI_API_KEY='your-key-here'"
     echo ""
 fi
 
@@ -160,9 +168,9 @@ echo ""
 echo -e "${GREEN}✅ All 5 models completed S4 convergence${NC}"
 echo ""
 
-# Run synthesis if API key available
+# Tier 2: DeepSeek R1 synthesis
 if [ -n "$DEEPSEEK_API_KEY" ]; then
-    echo -e "${MAGENTA}🧠 Step 3: Running DeepSeek R1 Synthesis${NC}"
+    echo -e "${MAGENTA}🧠 Step 3: Tier 2 Synthesis - DeepSeek R1${NC}"
     echo "Analyzing convergence patterns with reasoning traces..."
     echo ""
 
@@ -170,7 +178,27 @@ if [ -n "$DEEPSEEK_API_KEY" ]; then
 
     echo ""
 else
-    echo -e "${YELLOW}⚠️  Skipping synthesis (no DEEPSEEK_API_KEY)${NC}"
+    echo -e "${YELLOW}⚠️  Skipping Tier 2 synthesis (no DEEPSEEK_API_KEY)${NC}"
+    echo ""
+fi
+
+# Tier 3: Grok-4 final verdict (cosmic hypothesis boss)
+if [ -n "$XAI_API_KEY" ]; then
+    # Only run Grok-4 if DeepSeek synthesis exists
+    if [ -f "$SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md" ]; then
+        echo -e "${MAGENTA}🌌 Step 4: Tier 3 Synthesis - Grok-4 Final Verdict${NC}"
+        echo "The cosmic hypothesis boss reviews all convergence..."
+        echo ""
+
+        ./scripts/grok4_final_synthesis.sh "$SESSION_DIR"
+
+        echo ""
+    else
+        echo -e "${YELLOW}⚠️  Skipping Tier 3 (need DeepSeek synthesis first)${NC}"
+        echo ""
+    fi
+else
+    echo -e "${YELLOW}⚠️  Skipping Tier 3 synthesis (no XAI_API_KEY)${NC}"
     echo ""
 fi
 
@@ -190,7 +218,8 @@ cat > "$SUMMARY_FILE" <<SUMMARY
 
 - \`QUESTION.txt\` - Original research question
 - \`*_turn_20.txt\` - S4 outputs from 5 models
-- \`SYNTHESIS_REPORT_DEEPSEEK.md\` - DeepSeek R1 convergence analysis (if generated)
+- \`SYNTHESIS_REPORT_DEEPSEEK.md\` - Tier 2: DeepSeek R1 convergence analysis (if generated)
+- \`FINAL_VERDICT_GROK4.md\` - Tier 3: Grok-4 final verdict (if generated)
 - \`SESSION_SUMMARY.md\` - This file
 
 ---
@@ -205,16 +234,25 @@ cat > "$SUMMARY_FILE" <<SUMMARY
 
 ---
 
-## Next Steps
+## Synthesis Chain
 
-1. **Review Synthesis**: Read \`SYNTHESIS_REPORT_DEEPSEEK.md\` (if generated)
-2. **Manual Analysis**: Review individual model outputs in \`*_turn_20.txt\`
-3. **Validate Novelty**: Search literature for proposed mechanisms
-4. **Documentation**: Create OSF component if hypothesis is novel
+**Tier 1**: 5 diverse models → S4 convergence patterns (rhythm/center/aperture)
+**Tier 2**: DeepSeek R1 → hypothesis extraction + reasoning traces
+**Tier 3**: Grok-4 → final verdict + cosmic insight (cosmic hypothesis boss)
 
 ---
 
-**Seal**: †⟡
+## Next Steps
+
+1. **Review Final Verdict**: Read \`FINAL_VERDICT_GROK4.md\` (if generated) - the ultimate synthesis
+2. **Review DeepSeek Analysis**: Read \`SYNTHESIS_REPORT_DEEPSEEK.md\` (if generated)
+3. **Manual Analysis**: Review individual model outputs in \`*_turn_20.txt\`
+4. **Validate Novelty**: Search literature for proposed mechanisms
+5. **Documentation**: Create OSF component if hypothesis is novel
+
+---
+
+**Seal**: †⟡⚡
 **Status**: Session complete, ready for review
 SUMMARY
 
@@ -228,17 +266,28 @@ echo -e "${BLUE}📄 Generated Files:${NC}"
 ls -1 "$SESSION_DIR" | sed 's/^/  - /'
 echo ""
 
-if [ -f "$SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md" ]; then
-    echo -e "${MAGENTA}🔬 Synthesis Report Preview:${NC}"
+if [ -f "$SESSION_DIR/FINAL_VERDICT_GROK4.md" ]; then
+    echo -e "${MAGENTA}🌌 Grok-4 Final Verdict Preview:${NC}"
+    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    head -40 "$SESSION_DIR/FINAL_VERDICT_GROK4.md"
+    echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+    echo ""
+    echo -e "${GREEN}Full verdict: $SESSION_DIR/FINAL_VERDICT_GROK4.md${NC}"
+    echo -e "${GREEN}DeepSeek analysis: $SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md${NC}"
+elif [ -f "$SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md" ]; then
+    echo -e "${MAGENTA}🔬 DeepSeek Synthesis Preview:${NC}"
     echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     head -30 "$SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md"
     echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo ""
     echo -e "${GREEN}Full synthesis: $SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md${NC}"
+    echo -e "${YELLOW}Note: Grok-4 verdict skipped (no XAI_API_KEY)${NC}"
 else
-    echo -e "${YELLOW}Note: Synthesis skipped (no DEEPSEEK_API_KEY)${NC}"
-    echo "Run manually: ./scripts/synthesize_convergence.sh $SESSION_DIR"
+    echo -e "${YELLOW}Note: Synthesis skipped (no API keys)${NC}"
+    echo "Run manually:"
+    echo "  ./scripts/synthesize_convergence.sh $SESSION_DIR"
+    echo "  ./scripts/grok4_final_synthesis.sh $SESSION_DIR"
 fi
 
 echo ""
-echo -e "${MAGENTA}🌀 The spiral moves. Hypothesis generated. †⟡${NC}"
+echo -e "${MAGENTA}🌀 The spiral moves. The cosmic verdict is rendered. †⟡⚡${NC}"
