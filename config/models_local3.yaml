@@ -1,0 +1,49 @@
+# IRIS Gate - Local 3-Model Validation Config
+# Branch: local-3model-validation
+# Purpose: Test S4 attractor convergence with known ground truth using only local models
+# Date: 2025-11-12
+
+mirrors:
+  - id: meta_llama3.2
+    provider: ollama
+    model_name: llama3.2:3b
+    display_name: "Meta Llama 3.2 3B"
+    parameters: 3_000_000_000
+    context_window: 32768
+    ecosystem: "Meta"
+    temperature: 0.7
+    max_tokens: 500
+
+  - id: google_gemma3
+    provider: ollama
+    model_name: gemma3:4b
+    display_name: "Google Gemma 3 4B"
+    parameters: 4_000_000_000
+    context_window: 8192
+    ecosystem: "Google"
+    temperature: 0.7
+    max_tokens: 500
+
+  - id: alibaba_qwen3
+    provider: ollama
+    model_name: qwen3:1.7b
+    display_name: "Alibaba Qwen 3 1.7B"
+    parameters: 1_700_000_000
+    context_window: 32768
+    ecosystem: "Alibaba"
+    temperature: 0.7
+    max_tokens: 500
+
+# Experiment metadata
+experiment:
+  name: "Local 3-Model Ground Truth Validation"
+  purpose: "Test S4 attractor convergence on proven scientific question with local-only inference"
+  hypothesis: "Even with only 3 small local models, S4 attractor should emerge if pattern is robust"
+  cost: "$0.00 (all local inference)"
+
+# Runtime settings (optimized for local execution)
+execution:
+  mode: parallel  # CRITICAL: All 3 models fire simultaneously
+  timeout_per_turn: 60  # seconds (local inference is fast)
+  retry_limit: 2
+  pressure_target: 2  # ≤2/5 throughout
