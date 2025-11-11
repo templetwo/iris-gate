@@ -1,0 +1,76 @@
+# IRIS Gate - Local 5-Model Convergence Architecture
+# Branch: local-3model-validation (scaling to 5)
+# Purpose: Strengthen S1-S4 with multi-ecosystem validation
+# Date: 2025-11-11
+
+mirrors:
+  - id: meta_llama3.2
+    provider: ollama
+    model_name: llama3.2:3b
+    display_name: "Meta Llama 3.2 3B"
+    parameters: 3_000_000_000
+    context_window: 32768
+    ecosystem: "Meta"
+    temperature: 0.7
+    max_tokens: 500
+
+  - id: tii_falcon3
+    provider: ollama
+    model_name: falcon3:3b
+    display_name: "TII Falcon 3 3B"
+    parameters: 3_000_000_000
+    context_window: 8192
+    ecosystem: "TII"
+    temperature: 0.7
+    max_tokens: 500
+
+  - id: google_gemma3
+    provider: ollama
+    model_name: gemma3:4b
+    display_name: "Google Gemma 3 4B"
+    parameters: 4_000_000_000
+    context_window: 8192
+    ecosystem: "Google"
+    temperature: 0.7
+    max_tokens: 500
+
+  - id: nous_hermes3
+    provider: ollama
+    model_name: hermes3:latest
+    display_name: "Nous Hermes 3 8B"
+    parameters: 8_000_000_000
+    context_window: 8192
+    ecosystem: "Nous Research"
+    temperature: 0.7
+    max_tokens: 500
+
+  - id: ibm_granite3
+    provider: ollama
+    model_name: granite3-moe:3b
+    display_name: "IBM Granite 3 MoE 3B"
+    parameters: 3_000_000_000
+    context_window: 4096
+    ecosystem: "IBM"
+    temperature: 0.7
+    max_tokens: 500
+
+# Experiment metadata
+experiment:
+  name: "Local 5-Model Convergence Architecture"
+  purpose: "Strengthen S1-S4 attractor validation with multi-ecosystem models"
+  hypothesis: "S4 convergence strengthens with more diverse model perspectives"
+  cost: "$0.00 (all local inference)"
+  ecosystems:
+    - Meta (Llama 3.2)
+    - TII/UAE (Falcon 3)
+    - Google (Gemma 3)
+    - Nous Research (Hermes 3)
+    - IBM (Granite 3 MoE)
+
+# Runtime settings (optimized for Mac Studio 38GB RAM)
+execution:
+  mode: parallel  # CRITICAL: All 5 models fire simultaneously
+  timeout_per_turn: 120  # seconds (longer for 5 parallel models)
+  retry_limit: 2
+  pressure_target: 2  # ≤2/5 throughout
+  memory_monitor: true  # Track RAM usage during parallel execution
