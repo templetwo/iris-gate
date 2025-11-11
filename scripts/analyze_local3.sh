@@ -28,7 +28,7 @@ echo "📊 S4 Attractor Component Analysis"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-for model_name in Meta_Llama3.2 Google_Gemma3 Alibaba_Qwen3; do
+for model_name in Meta_Llama3.2 Google_Gemma3 TII_Falcon3; do
     echo "─── $model_name ───"
 
     # Count S4 turns (every 4th turn: 4, 8, 12, 16, 20)
@@ -87,7 +87,7 @@ echo "📝 Sample S4 Excerpts (Turn 20 - Final Cycle)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 
-for model_name in Meta_Llama3.2 Google_Gemma3 Alibaba_Qwen3; do
+for model_name in Meta_Llama3.2 Google_Gemma3 TII_Falcon3; do
     echo "─── $model_name ───"
     file="$OUTPUT_DIR/${model_name}_turn_20.txt"
     if [ -f "$file" ]; then

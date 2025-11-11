@@ -24,13 +24,13 @@ mirrors:
     temperature: 0.7
     max_tokens: 500
 
-  - id: alibaba_qwen3
+  - id: tii_falcon3
     provider: ollama
-    model_name: qwen3:1.7b
-    display_name: "Alibaba Qwen 3 1.7B"
-    parameters: 1_700_000_000
-    context_window: 32768
-    ecosystem: "Alibaba"
+    model_name: falcon3:3b
+    display_name: "TII Falcon 3 3B"
+    parameters: 3_000_000_000
+    context_window: 8192
+    ecosystem: "TII"
     temperature: 0.7
     max_tokens: 500
 
