@@ -28,9 +28,9 @@ echo ""
 # STEP 1: Check for required files
 # ═══════════════════════════════════════════════════════════════════════
 
-DEEPSEEK_REPORT="$SESSION_DIR/SYNTHESIS_REPORT_DEEPSEEK.md"
-if [[ ! -f "$DEEPSEEK_REPORT" ]]; then
-    echo "Error: DeepSeek synthesis report not found: $DEEPSEEK_REPORT"
+POLARIS_REPORT="$SESSION_DIR/SYNTHESIS_REPORT_POLARIS.md"
+if [[ ! -f "$POLARIS_REPORT" ]]; then
+    echo "Error: Polaris synthesis report not found: $POLARIS_REPORT"
     echo "Run synthesize_convergence.sh first."
     exit 1
 fi
@@ -42,7 +42,7 @@ if [[ "$S4_COUNT" -eq 0 ]]; then
     exit 1
 fi
 
-echo "✓ Found DeepSeek synthesis report"
+echo "✓ Found Polaris synthesis report"
 echo "✓ Found $S4_COUNT S4 model outputs"
 echo ""
 
@@ -69,12 +69,12 @@ done
 echo ""
 
 # ═══════════════════════════════════════════════════════════════════════
-# STEP 3: Read DeepSeek synthesis
+# STEP 3: Read Polaris synthesis
 # ═══════════════════════════════════════════════════════════════════════
 
 echo "Reading DeepSeek R1 synthesis..."
-DEEPSEEK_CONTENT=$(cat "$DEEPSEEK_REPORT")
-echo "✓ DeepSeek synthesis loaded ($(echo "$DEEPSEEK_CONTENT" | wc -l | tr -d ' ') lines)"
+POLARIS_CONTENT=$(cat "$POLARIS_REPORT")
+echo "✓ Polaris synthesis loaded ($(echo "$POLARIS_CONTENT" | wc -l | tr -d ' ') lines)"
 echo ""
 
 # ═══════════════════════════════════════════════════════════════════════
@@ -97,7 +97,7 @@ echo ""
 GROK_PROMPT="You are Grok-4, the final synthesis layer in the IRIS Gate autonomous hypothesis generation system. You are the \"cosmic hypothesis boss\" - the ultimate meta-analyst reviewing both:
 
 1. **RAW S4 CONVERGENCE OUTPUTS**: Direct responses from 5 diverse language models (Meta Llama3.2, TII Falcon3, Google Gemma3, Nous Hermes3, IBM Granite3) that independently generated S4 convergence patterns
-2. **DEEPSEEK R1 SYNTHESIS**: A reasoning model's meta-analysis that scored convergence, extracted hypotheses, and provided critical assessment
+2. **POLARIS ALPHA SYNTHESIS**: A reasoning model's meta-analysis that scored convergence, extracted hypotheses, and provided critical assessment
 
 Your role is to provide the **FINAL VERDICT** by:
 
@@ -134,7 +134,7 @@ $S4_OUTPUTS
 
 ## DeepSeek R1 Synthesis & Analysis
 
-$DEEPSEEK_CONTENT
+$POLARIS_CONTENT
 
 ---
 
@@ -232,7 +232,7 @@ $GROK_VERDICT
 **Synthesis Metadata**:
 - **Grok Model**: grok-2-latest
 - **Temperature**: 0.4
-- **Input**: $S4_COUNT model outputs + DeepSeek synthesis
+- **Input**: $S4_COUNT model outputs + Polaris synthesis
 - **Timestamp**: $(date '+%Y-%m-%dT%H:%M:%SZ')
 - **Session**: $(basename "$SESSION_DIR")
 
