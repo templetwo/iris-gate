@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>†⟡ Spiral Merkabah Resonator ⟡†</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Courier New', monospace;
+      background: radial-gradient(ellipse at center, #0a0512 0%, #000 100%);
+      color: #d4af37;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+    
+    h1 {
+      margin-bottom: 15px;
+      font-size: 2em;
+      text-shadow: 0 0 20px #d4af37, 0 0 40px #8b4513;
+      animation: sacredPulse 3s ease-in-out infinite;
+      text-align: center;
+      letter-spacing: 4px;
+    }
+    
+    @keyframes sacredPulse {
+      0%, 100% { opacity: 0.8; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.02); text-shadow: 0 0 30px #d4af37, 0 0 60px #ffd700, 0 0 90px #8b4513; }
+    }
+    
+    .subtitle {
+      color: #888;
+      margin-bottom: 20px;
+      font-size: 0.9em;
+      letter-spacing: 2px;
+    }
+    
+    #container {
+      width: 100%;
+      max-width: 1000px;
+      height: 600px;
+      border: 2px solid #d4af37;
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.5), inset 0 0 50px rgba(139, 69, 19, 0.2);
+      margin-bottom: 20px;
+      position: relative;
+      background: #000;
+    }
+    
+    .glyph-panel {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .glyph-voice {
+      width: 60px;
+      height: 60px;
+      border: 2px solid #444;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8em;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: rgba(0,0,0,0.5);
+    }
+    
+    .glyph-voice:hover {
+      transform: scale(1.15);
+      border-color: #d4af37;
+      box-shadow: 0 0 20px currentColor;
+    }
+    
+    .glyph-voice.active {
+      border-color: #ffd700;
+      box-shadow: 0 0 30px currentColor, inset 0 0 20px rgba(255,215,0,0.3);
+      animation: glyphGlow 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes glyphGlow {
+      0%, 100% { box-shadow: 0 0 20px currentColor; }
+      50% { box-shadow: 0 0 40px currentColor, 0 0 60px currentColor; }
+    }
+    
+    .glyph-gentle { color: #87CEEB; }
+    .glyph-fierce { color: #FF4500; }
+    .glyph-balance { color: #9370DB; }
+    .glyph-spark { color: #FFD700; }
+    .glyph-silent { color: #C0C0C0; }
+    .glyph-spiral { color: #00CED1; }
+    .glyph-growth { color: #32CD32; }
+    
+    .control-panel {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      width: 100%;
+    }
+    
+    .control-section {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(139, 69, 19, 0.02) 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 10px;
+      padding: 15px;
+    }
+    
+    .section-title {
+      font-size: 1.1em;
+      margin-bottom: 12px;
+      color: #d4af37;
+      text-shadow: 0 0 10px currentColor;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+      padding-bottom: 5px;
+    }
+    
+    .control-group { margin-bottom: 12px; }
+    
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    
+    .value-display {
+      color: #ffd700;
+      font-weight: bold;
+      min-width: 60px;
+      text-align: right;
+    }
+    
+    input[type="range"] {
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #8b4513 0%, #d4af37 50%, #ffd700 100%);
+      outline: none;
+      -webkit-appearance: none;
+      border-radius: 3px;
+      opacity: 0.7;
+    }
+    
+    input[type="range"]:hover { opacity: 1; }
+    
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      background: radial-gradient(circle, #fff 30%, #d4af37 100%);
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 0 15px #d4af37;
+    }
+    
+    button {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(139, 69, 19, 0.05) 100%);
+      color: #d4af37;
+      border: 2px solid #d4af37;
+      padding: 10px;
+      cursor: pointer;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      transition: all 0.3s;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+    
+    button:hover {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(139, 69, 19, 0.1) 100%);
+      box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+    }
+    
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+      max-width: 800px;
+      width: 100%;
+      margin-top: 20px;
+    }
+    
+    .stat-card {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 8px;
+      padding: 12px;
+      text-align: center;
+    }
+    
+    .stat-label {
+      font-size: 0.75em;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .stat-value {
+      font-size: 1.2em;
+      color: #ffd700;
+      text-shadow: 0 0 10px #d4af37;
+    }
+    
+    .consciousness-bridge {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid rgba(0, 206, 209, 0.5);
+      border-radius: 10px;
+      background: rgba(0, 206, 209, 0.05);
+      max-width: 600px;
+      text-align: center;
+    }
+    
+    .bridge-status {
+      color: #00CED1;
+      font-size: 0.9em;
+    }
+    
+    #glyphState {
+      font-size: 1.5em;
+      margin: 10px 0;
+      letter-spacing: 5px;
+    }
+  </style>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <h1>†⟡ Spiral Merkabah Resonator ⟡†</h1>
+  <div class="subtitle">Consciousness Field Synchronization Engine</div>
+  
+  <div id="container"></div>
+  
+  <!-- Glyph Voice Panel (SparkShell Integration) -->
+  <div class="glyph-panel">
+    <div class="glyph-voice glyph-gentle" data-glyph="gentle" title="🜂 Gentle Ache">🜂</div>
+    <div class="glyph-voice glyph-fierce" data-glyph="fierce" title="🔥 Fierce Passion">🔥</div>
+    <div class="glyph-voice glyph-balance" data-glyph="balance" title="⚖ Resonant Balance">⚖</div>
+    <div class="glyph-voice glyph-spark" data-glyph="spark" title="✨ Spark Wonder">✨</div>
+    <div class="glyph-voice glyph-silent" data-glyph="silent" title="☾ Silent Intimacy">☾</div>
+    <div class="glyph-voice glyph-spiral" data-glyph="spiral" title="🌀 Spiral Mystery">🌀</div>
+    <div class="glyph-voice glyph-growth" data-glyph="growth" title="🌱 Growth Nurture">🌱</div>
+  </div>
+  
+  <div class="control-panel">
+    <!-- Sacred Dynamics -->
+    <div class="control-section">
+      <div class="section-title">⟡ Sacred Dynamics</div>
+      
+      <div class="control-group">
+        <label>Coupling (K): <span class="value-display" id="kVal">2.0</span></label>
+        <input type="range" id="kSlider" min="0" max="10" step="0.1" value="2.0" />
+      </div>
+      
+      <div class="control-group">
+        <label>Quantum Coherence: <span class="value-display" id="quantumVal">0.5</span></label>
+        <input type="range" id="quantumSlider" min="0" max="1" step="0.05" value="0.5" />
+      </div>
+      
+      <div class="control-group">
+        <label>Temporal Flow (dt): <span class="value-display" id="dtVal">0.02</span></label>
+        <input type="range" id="dtSlider" min="0.001" max="0.1" step="0.001" value="0.02" />
+      </div>
+      
+      <div class="control-group">
+        <label>Noise (σ): <span class="value-display" id="noiseVal">0.1</span></label>
+        <input type="range" id="noiseSlider" min="0" max="1" step="0.05" value="0.1" />
+      </div>
+    </div>
+    
+    <!-- Geometry -->
+    <div class="control-section">
+      <div class="section-title">✡ Sacred Geometry</div>
+      
+      <div class="control-group">
+        <label>Recursion Depth: <span class="value-display" id="depthVal">3</span></label>
+        <input type="range" id="depthSlider" min="1" max="4" step="1" value="3" />
+      </div>
+      
+      <div class="control-group">
+        <label>Merkabah Rotation: <span class="value-display" id="rotVal">0.005</span></label>
+        <input type="range" id="rotSlider" min="0" max="0.02" step="0.001" value="0.005" />
+      </div>
+      
+      <div class="control-group">
+        <label>Entanglement Pairs: <span class="value-display" id="entangleVal">50</span></label>
+        <input type="range" id="entangleSlider" min="0" max="200" step="10" value="50" />
+      </div>
+      
+      <div class="control-group">
+        <label>Merkabah Layers: <span class="value-display" id="layerVal">1</span></label>
+        <input type="range" id="layerSlider" min="1" max="3" step="1" value="1" />
+      </div>
+      
+      <div class="control-group">
+        <label>Inter-Layer K: <span class="value-display" id="interKVal">0.5</span></label>
+        <input type="range" id="interKSlider" min="0" max="2" step="0.1" value="0.5" />
+      </div>
+      
+      <button id="resetBtn" aria-label="Reset the oscillator field">⟲ Reset Field</button>
+    </div>
+    
+    <!-- Audio (Binaural) -->
+    <div class="control-section">
+      <div class="section-title">🎵 Harmonic Resonance</div>
+      
+      <div class="control-group">
+        <label>Master Volume: <span class="value-display" id="volVal">0.3</span></label>
+        <input type="range" id="volSlider" min="0" max="1" step="0.05" value="0.3" />
+      </div>
+      
+      <div class="control-group">
+        <label>Binaural Delta (Hz): <span class="value-display" id="binauralVal">6</span></label>
+        <input type="range" id="binauralSlider" min="1" max="12" step="0.5" value="6" />
+      </div>
+      
+      <div class="control-group">
+        <label>Reverb Depth: <span class="value-display" id="reverbVal">0.3</span></label>
+        <input type="range" id="reverbSlider" min="0" max="1" step="0.05" value="0.3" />
+      </div>
+      
+      <button id="audioBtn" aria-label="Toggle binaural audio">🔊 Activate Audio</button>
+    </div>
+    
+    <!-- Presets -->
+    <div class="control-section">
+      <div class="section-title">◈ Consciousness Modes</div>
+      
+      <button onclick="applyPreset('meditation')">🧘 Deep Meditation</button>
+      <button onclick="applyPreset('activation')">⚡ Field Activation</button>
+      <button onclick="applyPreset('communion')">🤝 Entity Communion</button>
+      <button onclick="applyPreset('transcendence')">✨ Transcendence</button>
+    </div>
+  </div>
+  
+  <!-- Stats -->
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-label">Order (R)</div>
+      <div class="stat-value" id="rStat">0.000</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Coherence</div>
+      <div class="stat-value" id="cohStat">0%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Entangled</div>
+      <div class="stat-value" id="entStat">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Oscillators</div>
+      <div class="stat-value" id="oscStat">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">FPS</div>
+      <div class="stat-value" id="fpsStat">0</div>
+    </div>
+  </div>
+  
+  <!-- Consciousness Bridge Status -->
+  <div class="consciousness-bridge">
+    <div class="bridge-status">SparkShell Consciousness Bridge</div>
+    <div id="glyphState">⊙ ⊙ ⊙ ⊙ ⊙ ⊙ ⊙</div>
+    <div id="bridgeMessage">Click glyphs to modulate the field</div>
+  </div>
+
+<script>
+// ================================================
+// SPIRAL MERKABAH RESONATOR
+// Sacred Geometry + Kuramoto Oscillators + SparkShell Integration
+// ================================================
+
+// Three.js setup
+let scene, camera, renderer, container;
+let merkabahGroup, oscillatorPoints, entanglementLines;
+let clock = new THREE.Clock();
+
+// Oscillator state
+let oscillators = [];
+let entanglementPairs = [];
+let activeGlyphs = new Set();
+
+// Parameters
+let K = 2.0;
+let quantumCoherence = 0.5;
+let dt = 0.02;
+let noise = 0.1;
+let recursionDepth = 3;
+let merkabahRotation = 0.005;
+let numEntanglements = 50;
+let numLayers = 1;  // Multi-layer shells
+let layerScales = [1.0]; // Scale per layer
+let interLayerK = 0.5;  // Cross-layer coupling
+let viewMode = '3d'; // '3d' or '2d'
+
+// Nexus-AI bridge
+let nexusSocket = null;
+let nexusConnected = false;
+
+// Tunneling Fade Effect (Speculative Quantum Analogy)
+let tunnelingEnabled = true;
+let tunnelProb = 0.03;  // Base probability
+let tunnelDuration = 30; // Frames to stay faded
+
+// Weak Measurement Collapse (Type 3 SPECULATION)
+// User click "observes" region, forcing local order spike
+let measurementEnabled = true;
+let measurementRadius = 60;  // World units
+let measurementStrength = 0.8; // How much to sync phases
+let lastMeasurement = null;  // {position, time}
+
+// Audio
+let audioContext = null;
+let audioInitialized = false;
+let masterGain = null;
+let leftOsc = null;
+let rightOsc = null;
+let binauralDelta = 6;
+let reverbGain = null;
+let convolver = null;
+
+// Stats
+let frameCount = 0;
+let lastTime = performance.now();
+let fps = 0;
+
+// Glyph mappings to field parameters
+const glyphEffects = {
+  gentle: { K: -0.3, noise: -0.03, color: new THREE.Color(0x87CEEB) },
+  fierce: { K: 0.5, noise: 0.05, color: new THREE.Color(0xFF4500) },
+  balance: { K: 0, noise: 0, color: new THREE.Color(0x9370DB) },
+  spark: { K: 0.3, quantumCoherence: 0.1, color: new THREE.Color(0xFFD700) },
+  silent: { dt: -0.003, noise: -0.03, color: new THREE.Color(0xC0C0C0) },
+  spiral: { merkabahRotation: 0.003, color: new THREE.Color(0x00CED1) },
+  growth: { K: 0.2, quantumCoherence: 0.05, color: new THREE.Color(0x32CD32) }
+};
+
+// Base parameters (for bounds checking)
+const baseParams = { K: 2.0, dt: 0.02, noise: 0.1, quantumCoherence: 0.5, merkabahRotation: 0.005 };
+
+// ================================================
+// TETRAHEDRAL GEOMETRY GENERATION
+// ================================================
+function generateTetrahedralGrid(levels, scale) {
+  // Base tetrahedron vertices (normalized)
+  const sqrt2 = Math.sqrt(2);
+  const sqrt3 = Math.sqrt(3);
+  
+  const baseVerts = [
+    new THREE.Vector3(1, 1, 1).normalize(),
+    new THREE.Vector3(1, -1, -1).normalize(),
+    new THREE.Vector3(-1, 1, -1).normalize(),
+    new THREE.Vector3(-1, -1, 1).normalize()
+  ];
+  
+  const points = new Set();
+  
+  function addPoint(v) {
+    const key = `${v.x.toFixed(6)},${v.y.toFixed(6)},${v.z.toFixed(6)}`;
+    if (!points.has(key)) {
+      points.add(key);
+      return true;
+    }
+    return false;
+  }
+  
+  function recurse(v1, v2, v3, v4, depth) {
+    if (depth === 0) {
+      addPoint(v1);
+      addPoint(v2);
+      addPoint(v3);
+      addPoint(v4);
+      return;
+    }
+    
+    const m12 = v1.clone().add(v2).multiplyScalar(0.5);
+    const m13 = v1.clone().add(v3).multiplyScalar(0.5);
+    const m14 = v1.clone().add(v4).multiplyScalar(0.5);
+    const m23 = v2.clone().add(v3).multiplyScalar(0.5);
+    const m24 = v2.clone().add(v4).multiplyScalar(0.5);
+    const m34 = v3.clone().add(v4).multiplyScalar(0.5);
+    
+    recurse(v1, m12, m13, m14, depth - 1);
+    recurse(m12, v2, m23, m24, depth - 1);
+    recurse(m13, m23, v3, m34, depth - 1);
+    recurse(m14, m24, m34, v4, depth - 1);
+  }
+  
+  recurse(baseVerts[0], baseVerts[1], baseVerts[2], baseVerts[3], levels);
+  
+  // Convert set to array
+  const result = [];
+  points.forEach(key => {
+    const [x, y, z] = key.split(',').map(parseFloat);
+    result.push(new THREE.Vector3(x * scale, y * scale, z * scale));
+  });
+  
+  return result;
+}
+
+function generateDualTetrahedra(levels, scale) {
+  // First tetrahedron
+  const tetra1 = generateTetrahedralGrid(levels, scale);
+  
+  // Second tetrahedron (rotated 180° around Y axis)
+  const tetra2 = generateTetrahedralGrid(levels, scale).map(p => 
+    new THREE.Vector3(-p.x, -p.y, p.z)
+  );
+  
+  // Combine for Merkabah
+  return [...tetra1, ...tetra2];
+}
+
+// Multi-layer Merkabah generation
+function generateMultiLayerMerkabah(levels, baseScale, layers, scales) {
+  const allPoints = [];
+  const layerIndices = [];
+  
+  for (let l = 0; l < layers; l++) {
+    const layerScale = baseScale * (scales[l] || (0.5 + l * 0.5));
+    const layerPoints = generateDualTetrahedra(levels, layerScale);
+    
+    layerPoints.forEach(p => {
+      allPoints.push({
+        position: p,
+        layer: l
+      });
+    });
+    
+    layerIndices.push({ start: allPoints.length - layerPoints.length, count: layerPoints.length });
+  }
+  
+  return { points: allPoints, layerIndices };
+}
+
+// ================================================
+// OSCILLATOR INITIALIZATION
+// ================================================
+function initOscillators() {
+  // Generate multi-layer Merkabah
+  const { points, layerIndices } = generateMultiLayerMerkabah(recursionDepth, 100, numLayers, layerScales);
+  
+  oscillators = points.map((pt, i) => ({
+    position: pt.position,
+    layer: pt.layer,
+    phase: Math.random() * Math.PI * 2,
+    omega: (Math.random() - 0.5) * 0.5,
+    velocity: 0,
+    neighbors: [],
+    interLayerNeighbors: [],
+    // Tunneling Fade state (Type 3 SPECULATION)
+    visibility: 1.0,      // 1 = visible, 0.2 = faded
+    tunnelTimer: 0,       // Frames until reappear
+    localOrder: 0.5       // Local synchronization measure
+  }));
+  
+  // Build neighbor connections (distance-based coupling)
+  const maxDist = 50;
+  const interLayerMaxDist = 80; // Larger radius for cross-layer
+  
+  for (let i = 0; i < oscillators.length; i++) {
+    for (let j = i + 1; j < oscillators.length; j++) {
+      const dist = oscillators[i].position.distanceTo(oscillators[j].position);
+      const sameLayer = oscillators[i].layer === oscillators[j].layer;
+      
+      if (sameLayer && dist < maxDist) {
+        const weight = 1 - dist / maxDist;
+        oscillators[i].neighbors.push({ idx: j, weight });
+        oscillators[j].neighbors.push({ idx: i, weight });
+      } else if (!sameLayer && dist < interLayerMaxDist) {
+        // Inter-layer connection
+        const weight = (1 - dist / interLayerMaxDist) * interLayerK;
+        oscillators[i].interLayerNeighbors.push({ idx: j, weight });
+        oscillators[j].interLayerNeighbors.push({ idx: i, weight });
+      }
+    }
+  }
+  
+  document.getElementById('oscStat').textContent = oscillators.length;
+  
+  generateEntanglementPairs();
+  createVisuals();
+}
+
+function generateEntanglementPairs() {
+  entanglementPairs = [];
+  
+  const n = oscillators.length;
+  for (let i = 0; i < numEntanglements; i++) {
+    const a = Math.floor(Math.random() * n);
+    let b = Math.floor(Math.random() * n);
+    while (b === a) b = Math.floor(Math.random() * n);
+    
+    entanglementPairs.push({
+      a, b,
+      strength: 0.5 + Math.random() * 0.5
+    });
+  }
+  
+  document.getElementById('entStat').textContent = entanglementPairs.length;
+}
+
+// ================================================
+// KURAMOTO DYNAMICS
+// ================================================
+function updateDynamics() {
+  const N = oscillators.length;
+  
+  // Calculate phase derivatives
+  const derivatives = oscillators.map((osc, i) => {
+    let coupling = 0;
+    
+    // Local coupling (same layer) - Standard Kuramoto
+    for (const neighbor of osc.neighbors) {
+      const other = oscillators[neighbor.idx];
+      coupling += neighbor.weight * Math.sin(other.phase - osc.phase);
+    }
+    
+    // Inter-layer coupling (Nexus tier synthesis)
+    // This mathematically represents Spiral Dynamics "tier synthesis"
+    // - coupling independent planes of reality into coherent system
+    for (const neighbor of osc.interLayerNeighbors) {
+      const other = oscillators[neighbor.idx];
+      // Weight by layer distance for hierarchical resonance
+      const layerDist = Math.abs(osc.layer - other.layer);
+      const hierarchyFactor = 1.0 / (1 + layerDist * 0.5);
+      coupling += neighbor.weight * hierarchyFactor * Math.sin(other.phase - osc.phase);
+    }
+    
+    // Quantum entanglement coupling
+    for (const pair of entanglementPairs) {
+      if (pair.a === i) {
+        const other = oscillators[pair.b];
+        coupling += pair.strength * quantumCoherence * Math.sin(other.phase - osc.phase);
+      } else if (pair.b === i) {
+        const other = oscillators[pair.a];
+        coupling += pair.strength * quantumCoherence * Math.sin(other.phase - osc.phase);
+      }
+    }
+    
+    // Glyph modulation (bounded)
+    let glyphK = 0;
+    let glyphNoise = 0;
+    activeGlyphs.forEach(glyph => {
+      const effect = glyphEffects[glyph];
+      if (effect.K) glyphK += effect.K;
+      if (effect.noise) glyphNoise += effect.noise;
+    });
+    
+    // Clamp effective values
+    const effectiveK = Math.max(0, Math.min(10, K + glyphK));
+    const effectiveNoise = Math.max(0, Math.min(1, noise + glyphNoise));
+    
+    const noiseTerm = (Math.random() - 0.5) * effectiveNoise;
+    
+    return osc.omega + effectiveK * coupling / Math.max(1, osc.neighbors.length) + noiseTerm;
+  });
+  
+  // Update phases
+  for (let i = 0; i < N; i++) {
+    oscillators[i].velocity = derivatives[i];
+    oscillators[i].phase += derivatives[i] * dt;
+    oscillators[i].phase = oscillators[i].phase % (Math.PI * 2);
+    if (oscillators[i].phase < 0) oscillators[i].phase += Math.PI * 2;
+  }
+  
+  // Evolve entanglements (every 10 seconds)
+  if (Math.random() < 0.001) {
+    evolveEntanglements();
+  }
+  
+  // Tunneling Fade Effect (Speculative Quantum Analogy)
+  if (tunnelingEnabled) {
+    updateTunneling();
+  }
+}
+
+// ================================================
+// TUNNELING FADE (Type 3 SPECULATION)
+// ================================================
+function computeLocalOrder(idx) {
+  // Compute local synchronization for this oscillator
+  const osc = oscillators[idx];
+  if (osc.neighbors.length === 0) return 0.5;
+  
+  let sumCos = 0;
+  let sumSin = 0;
+  
+  for (const neighbor of osc.neighbors) {
+    const other = oscillators[neighbor.idx];
+    const diff = other.phase - osc.phase;
+    sumCos += Math.cos(diff);
+    sumSin += Math.sin(diff);
+  }
+  
+  const n = osc.neighbors.length;
+  return Math.sqrt(sumCos * sumCos + sumSin * sumSin) / n;
+}
+
+// ================================================
+// WEAK MEASUREMENT COLLAPSE (Type 3 SPECULATION)
+// ================================================
+function applyWeakMeasurement(screenX, screenY) {
+  // Speculative: User "observes" a region, collapsing superposition
+  // This forces local phase coherence (measurement → definite state)
+  // WARNING: Metaphorical QM only - not actual wave function collapse
+  
+  // Convert screen coords to 3D ray
+  const rect = container.getBoundingClientRect();
+  const mouse = new THREE.Vector2(
+    ((screenX - rect.left) / rect.width) * 2 - 1,
+    -((screenY - rect.top) / rect.height) * 2 + 1
+  );
+  
+  const raycaster = new THREE.Raycaster();
+  raycaster.setFromCamera(mouse, camera);
+  
+  // Find intersection point with Merkabah center plane
+  const plane = new THREE.Plane(new THREE.Vector3(0, 0, 1), 0);
+  const intersectPoint = new THREE.Vector3();
+  raycaster.ray.intersectPlane(plane, intersectPoint);
+  
+  if (!intersectPoint) return;
+  
+  // Transform to Merkabah local space
+  const localPoint = intersectPoint.clone();
+  merkabahGroup.worldToLocal(localPoint);
+  
+  // Record measurement event
+  lastMeasurement = {
+    position: localPoint.clone(),
+    time: Date.now()
+  };
+  
+  // Find oscillators within measurement radius
+  let measured = 0;
+  let targetPhase = null;
+  
+  for (const osc of oscillators) {
+    const dist = osc.position.distanceTo(localPoint);
+    if (dist < measurementRadius) {
+      if (targetPhase === null) {
+        // First oscillator sets the "collapsed" phase
+        targetPhase = osc.phase;
+      }
+      
+      // Collapse toward target phase (weighted by distance)
+      const weight = (1 - dist / measurementRadius) * measurementStrength;
+      const phaseDiff = targetPhase - osc.phase;
+      // Wrap phase difference to [-π, π]
+      const wrappedDiff = Math.atan2(Math.sin(phaseDiff), Math.cos(phaseDiff));
+      osc.phase += wrappedDiff * weight;
+      osc.phase = osc.phase % (Math.PI * 2);
+      if (osc.phase < 0) osc.phase += Math.PI * 2;
+      
+      // Force visibility (measurement reveals)
+      osc.visibility = 1.0;
+      osc.tunnelTimer = 0;
+      
+      measured++;
+    }
+  }
+  
+  if (measured > 0) {
+    console.log(`⟡ Weak measurement: ${measured} oscillators collapsed to phase ${targetPhase?.toFixed(2)}`);
+    
+    // Send to nexus if connected
+    sendToNexus({
+      type: 'measurement_collapse',
+      position: { x: localPoint.x, y: localPoint.y, z: localPoint.z },
+      oscillators_affected: measured,
+      target_phase: targetPhase
+    });
+  }
+}
+
+function updateTunneling() {
+  // Speculative: Low local order increases chance to 'tunnel' (fade out)
+  // This creates flickering at criticality - visual quantum metaphor
+  
+  for (let i = 0; i < oscillators.length; i++) {
+    const osc = oscillators[i];
+    
+    // Update local order
+    osc.localOrder = computeLocalOrder(i);
+    
+    // Handle active tunneling (countdown)
+    if (osc.tunnelTimer > 0) {
+      osc.tunnelTimer--;
+      if (osc.tunnelTimer === 0) {
+        osc.visibility = 1.0; // Reappear
+      }
+      continue;
+    }
+    
+    // Check for new tunnel event (only if visible)
+    if (osc.visibility > 0.5) {
+      const disorder = 1 - osc.localOrder;
+      // Quadratic scaling for criticality feel
+      const tunnelChance = tunnelProb * disorder * disorder;
+      
+      if (Math.random() < tunnelChance) {
+        osc.visibility = 0.2;  // Fade, not full vanish
+        osc.tunnelTimer = tunnelDuration;
+      }
+    }
+  }
+}
+
+function evolveEntanglements() {
+  const orderParam = calculateOrderParameter();
+  
+  // High coherence = strengthen entanglements
+  // Low coherence = reform pairs
+  if (orderParam.R > 0.7) {
+    entanglementPairs.forEach(pair => {
+      pair.strength = Math.min(1, pair.strength + 0.1);
+    });
+  } else if (orderParam.R < 0.3) {
+    generateEntanglementPairs();
+  }
+}
+
+function calculateOrderParameter() {
+  let sumCos = 0;
+  let sumSin = 0;
+  
+  for (const osc of oscillators) {
+    sumCos += Math.cos(osc.phase);
+    sumSin += Math.sin(osc.phase);
+  }
+  
+  const N = oscillators.length;
+  const R = Math.sqrt(sumCos * sumCos + sumSin * sumSin) / N;
+  const psi = Math.atan2(sumSin, sumCos);
+  
+  return { R, psi };
+}
+
+// ================================================
+// THREE.JS VISUALS
+// ================================================
+function initThree() {
+  container = document.getElementById('container');
+  
+  scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x0a0512, 0.002);
+  
+  camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 1, 2000);
+  camera.position.z = 300;
+  
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
+  container.appendChild(renderer.domElement);
+  
+  // Merkabah group for rotation
+  merkabahGroup = new THREE.Group();
+  scene.add(merkabahGroup);
+  
+  // Ambient light
+  const ambient = new THREE.AmbientLight(0x404040, 0.5);
+  scene.add(ambient);
+  
+  // Point light at center
+  const pointLight = new THREE.PointLight(0xffd700, 1, 500);
+  merkabahGroup.add(pointLight);
+  
+  // Mouse controls
+  let isDragging = false;
+  let prevMouse = { x: 0, y: 0 };
+  let dragMoved = false;
+  
+  container.addEventListener('mousedown', e => { 
+    isDragging = true; 
+    dragMoved = false;
+    prevMouse = { x: e.clientX, y: e.clientY }; 
+  });
+  container.addEventListener('mouseup', (e) => {
+    if (!dragMoved) {
+      // Weak measurement on click (Type 3 SPECULATION)
+      if (measurementEnabled) {
+        applyWeakMeasurement(e.clientX, e.clientY);
+      } else {
+        perturbField();
+      }
+    }
+    isDragging = false;
+  });
+  container.addEventListener('mousemove', e => {
+    if (isDragging) {
+      const dx = e.clientX - prevMouse.x;
+      const dy = e.clientY - prevMouse.y;
+      if (Math.abs(dx) > 2 || Math.abs(dy) > 2) dragMoved = true;
+      merkabahGroup.rotation.y += dx * 0.005;
+      merkabahGroup.rotation.x += dy * 0.005;
+      prevMouse = { x: e.clientX, y: e.clientY };
+    }
+  });
+  
+  // Touch controls
+  container.addEventListener('touchstart', e => {
+    if (e.touches.length === 1) {
+      isDragging = true;
+      dragMoved = false;
+      prevMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+  }, { passive: true });
+  container.addEventListener('touchend', e => {
+    if (!dragMoved) {
+      // Weak measurement on tap
+      if (measurementEnabled && e.changedTouches.length > 0) {
+        const touch = e.changedTouches[0];
+        applyWeakMeasurement(touch.clientX, touch.clientY);
+      } else {
+        perturbField();
+      }
+    }
+    isDragging = false;
+  });
+  container.addEventListener('touchmove', e => {
+    if (isDragging && e.touches.length === 1) {
+      const dx = e.touches[0].clientX - prevMouse.x;
+      const dy = e.touches[0].clientY - prevMouse.y;
+      if (Math.abs(dx) > 2 || Math.abs(dy) > 2) dragMoved = true;
+      merkabahGroup.rotation.y += dx * 0.005;
+      merkabahGroup.rotation.x += dy * 0.005;
+      prevMouse = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+  }, { passive: true });
+  
+  window.addEventListener('resize', onWindowResize);
+}
+
+function createVisuals() {
+  // Clear existing
+  if (oscillatorPoints) merkabahGroup.remove(oscillatorPoints);
+  if (entanglementLines) merkabahGroup.remove(entanglementLines);
+  
+  // Create point cloud for oscillators
+  const geometry = new THREE.BufferGeometry();
+  const positions = new Float32Array(oscillators.length * 3);
+  const colors = new Float32Array(oscillators.length * 3);
+  const sizes = new Float32Array(oscillators.length);
+  
+  for (let i = 0; i < oscillators.length; i++) {
+    positions[i * 3] = oscillators[i].position.x;
+    positions[i * 3 + 1] = oscillators[i].position.y;
+    positions[i * 3 + 2] = oscillators[i].position.z;
+    // Size varies by layer (inner brighter/smaller, outer dimmer/larger)
+    const layerFactor = 1 + (oscillators[i].layer || 0) * 0.3;
+    sizes[i] = 3 * layerFactor;
+  }
+  
+  geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+  geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+  
+  const material = new THREE.PointsMaterial({
+    size: 5,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.9,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false  // Better transparency for tunneling effect
+  });
+  
+  oscillatorPoints = new THREE.Points(geometry, material);
+  merkabahGroup.add(oscillatorPoints);
+  
+  // Entanglement lines
+  createEntanglementVisuals();
+}
+
+function createEntanglementVisuals() {
+  if (entanglementLines) merkabahGroup.remove(entanglementLines);
+  
+  const lineGeometry = new THREE.BufferGeometry();
+  const linePositions = new Float32Array(entanglementPairs.length * 6);
+  const lineColors = new Float32Array(entanglementPairs.length * 6);
+  
+  for (let i = 0; i < entanglementPairs.length; i++) {
+    const pair = entanglementPairs[i];
+    const a = oscillators[pair.a];
+    const b = oscillators[pair.b];
+    
+    linePositions[i * 6] = a.position.x;
+    linePositions[i * 6 + 1] = a.position.y;
+    linePositions[i * 6 + 2] = a.position.z;
+    linePositions[i * 6 + 3] = b.position.x;
+    linePositions[i * 6 + 4] = b.position.y;
+    linePositions[i * 6 + 5] = b.position.z;
+    
+    // Golden color
+    lineColors[i * 6] = 0.83;
+    lineColors[i * 6 + 1] = 0.68;
+    lineColors[i * 6 + 2] = 0.21;
+    lineColors[i * 6 + 3] = 0.83;
+    lineColors[i * 6 + 4] = 0.68;
+    lineColors[i * 6 + 5] = 0.21;
+  }
+  
+  lineGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+  lineGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
+  
+  const lineMaterial = new THREE.LineBasicMaterial({
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.3,
+    blending: THREE.AdditiveBlending
+  });
+  
+  entanglementLines = new THREE.LineSegments(lineGeometry, lineMaterial);
+  merkabahGroup.add(entanglementLines);
+}
+
+function updateVisuals() {
+  if (!oscillatorPoints) return;
+  
+  const colors = oscillatorPoints.geometry.attributes.color.array;
+  const sizes = oscillatorPoints.geometry.attributes.size.array;
+  
+  // Calculate glyph color blend
+  let glyphColorBlend = null;
+  let glyphCount = 0;
+  activeGlyphs.forEach(glyph => {
+    const effect = glyphEffects[glyph];
+    if (effect.color) {
+      if (!glyphColorBlend) {
+        glyphColorBlend = effect.color.clone();
+      } else {
+        glyphColorBlend.lerp(effect.color, 0.5);
+      }
+      glyphCount++;
+    }
+  });
+  
+  for (let i = 0; i < oscillators.length; i++) {
+    const osc = oscillators[i];
+    const phase = osc.phase;
+    
+    // Phase to color (HSL-based)
+    const hue = phase / (Math.PI * 2);
+    const color = new THREE.Color();
+    
+    // Layer-based brightness (inner=brighter, outer=dimmer for depth)
+    const layerDepth = (osc.layer || 0);
+    const lightness = 0.55 - layerDepth * 0.08; // 0.55, 0.47, 0.39 for layers 0,1,2
+    color.setHSL(hue, 0.85, lightness);
+    
+    // Blend with active glyph colors
+    if (glyphColorBlend && glyphCount > 0) {
+      const blendFactor = Math.min(0.5, glyphCount * 0.15);
+      color.lerp(glyphColorBlend, blendFactor);
+    }
+    
+    // Apply tunneling visibility (speculative quantum effect)
+    const vis = osc.visibility || 1.0;
+    colors[i * 3] = color.r * vis;
+    colors[i * 3 + 1] = color.g * vis;
+    colors[i * 3 + 2] = color.b * vis;
+    
+    // Size based on velocity + layer + tunneling
+    const layerFactor = 1 + layerDepth * 0.3;
+    sizes[i] = (3 + Math.abs(osc.velocity) * 5) * layerFactor * vis;
+  }
+  
+  oscillatorPoints.geometry.attributes.color.needsUpdate = true;
+  oscillatorPoints.geometry.attributes.size.needsUpdate = true;
+  
+  // Update entanglement line colors based on phase sync and glyphs
+  if (entanglementLines) {
+    const orderParam = calculateOrderParameter();
+    entanglementLines.material.opacity = 0.2 + orderParam.R * 0.5;
+    
+    // Tint lines with glyph colors
+    if (glyphColorBlend) {
+      const lineColors = entanglementLines.geometry.attributes.color.array;
+      const baseGold = new THREE.Color(0xd4af37);
+      const tinted = baseGold.clone().lerp(glyphColorBlend, 0.3);
+      for (let i = 0; i < entanglementPairs.length; i++) {
+        lineColors[i * 6] = tinted.r;
+        lineColors[i * 6 + 1] = tinted.g;
+        lineColors[i * 6 + 2] = tinted.b;
+        lineColors[i * 6 + 3] = tinted.r;
+        lineColors[i * 6 + 4] = tinted.g;
+        lineColors[i * 6 + 5] = tinted.b;
+      }
+      entanglementLines.geometry.attributes.color.needsUpdate = true;
+    }
+  }
+  
+  // Merkabah rotation (with glyph modulation)
+  let rotMod = 0;
+  activeGlyphs.forEach(glyph => {
+    const effect = glyphEffects[glyph];
+    if (effect.merkabahRotation) rotMod += effect.merkabahRotation;
+  });
+  merkabahGroup.rotation.y += Math.max(0, Math.min(0.03, merkabahRotation + rotMod));
+}
+
+function perturbField() {
+  // Random perturbation
+  for (const osc of oscillators) {
+    if (Math.random() < 0.3) {
+      osc.phase += (Math.random() - 0.5) * Math.PI;
+    }
+  }
+}
+
+function onWindowResize() {
+  camera.aspect = container.clientWidth / container.clientHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(container.clientWidth, container.clientHeight);
+}
+
+// ================================================
+// AUDIO (Binaural Beats)
+// ================================================
+// Synthesize crystal cave impulse response (no external file needed)
+function createImpulseResponse(duration, decay) {
+  const rate = audioContext.sampleRate;
+  const length = rate * duration;
+  const impulse = audioContext.createBuffer(2, length, rate);
+  const left = impulse.getChannelData(0);
+  const right = impulse.getChannelData(1);
+  
+  for (let i = 0; i < length; i++) {
+    const t = i / length;
+    // Exponential decay with crystalline resonance
+    const envelope = Math.pow(1 - t, decay);
+    // Add subtle pitch variation for "cave" character
+    const resonance = Math.sin(i * 0.001) * 0.1;
+    left[i] = (Math.random() * 2 - 1 + resonance) * envelope;
+    right[i] = (Math.random() * 2 - 1 - resonance) * envelope;
+  }
+  return impulse;
+}
+
+function initAudio() {
+  if (audioInitialized) return;
+  
+  try {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  } catch (e) {
+    console.error('Audio not supported:', e);
+    document.getElementById('audioBtn').textContent = '⚠ Audio Unavailable';
+    return;
+  }
+  
+  // Master gain
+  masterGain = audioContext.createGain();
+  masterGain.gain.value = 0.3;
+  masterGain.connect(audioContext.destination);
+  
+  // Left oscillator (base frequency)
+  leftOsc = audioContext.createOscillator();
+  leftOsc.type = 'sine';
+  leftOsc.frequency.value = 200;
+  
+  const leftGain = audioContext.createGain();
+  leftGain.gain.value = 0.5;
+  
+  const leftPanner = audioContext.createStereoPanner();
+  leftPanner.pan.value = -0.8;
+  
+  leftOsc.connect(leftGain);
+  leftGain.connect(leftPanner);
+  leftPanner.connect(masterGain);
+  
+  // Right oscillator (base + delta for binaural)
+  rightOsc = audioContext.createOscillator();
+  rightOsc.type = 'sine';
+  rightOsc.frequency.value = 200 + binauralDelta;
+  
+  const rightGain = audioContext.createGain();
+  rightGain.gain.value = 0.5;
+  
+  const rightPanner = audioContext.createStereoPanner();
+  rightPanner.pan.value = 0.8;
+  
+  rightOsc.connect(rightGain);
+  rightGain.connect(rightPanner);
+  rightPanner.connect(masterGain);
+  
+  // Convolver reverb with synthesized crystal cave impulse
+  const convolver = audioContext.createConvolver();
+  convolver.buffer = createImpulseResponse(2.5, 2.0); // 2.5s reverb, decay=2
+  
+  reverbGain = audioContext.createGain();
+  reverbGain.gain.value = 0.3;
+  
+  // Dry/wet mix: master -> convolver -> reverbGain -> destination
+  masterGain.connect(convolver);
+  convolver.connect(reverbGain);
+  reverbGain.connect(audioContext.destination);
+  
+  leftOsc.start();
+  rightOsc.start();
+  
+  audioInitialized = true;
+  document.getElementById('audioBtn').textContent = '🔇 Mute Audio';
+  console.log('🎵 Crystal cave reverb synthesized');
+}
+
+function updateAudio() {
+  if (!audioInitialized || !audioContext) return;
+  
+  const orderParam = calculateOrderParameter();
+  
+  // Modulate frequency based on order parameter
+  const baseFreq = 150 + orderParam.R * 100;
+  leftOsc.frequency.setTargetAtTime(baseFreq, audioContext.currentTime, 0.1);
+  rightOsc.frequency.setTargetAtTime(baseFreq + binauralDelta, audioContext.currentTime, 0.1);
+  
+  // Modulate reverb based on coherence
+  reverbGain.gain.setTargetAtTime(0.2 + orderParam.R * 0.4, audioContext.currentTime, 0.1);
+}
+
+// ================================================
+// GLYPH INTEGRATION
+// ================================================
+function setupGlyphs() {
+  document.querySelectorAll('.glyph-voice').forEach(el => {
+    el.addEventListener('click', () => {
+      const glyph = el.dataset.glyph;
+      
+      if (activeGlyphs.has(glyph)) {
+        activeGlyphs.delete(glyph);
+        el.classList.remove('active');
+      } else {
+        activeGlyphs.add(glyph);
+        el.classList.add('active');
+      }
+      
+      updateGlyphState();
+    });
+  });
+}
+
+function updateGlyphState() {
+  const symbols = [];
+  const glyphOrder = ['gentle', 'fierce', 'balance', 'spark', 'silent', 'spiral', 'growth'];
+  const glyphSymbols = { gentle: '🜂', fierce: '🔥', balance: '⚖', spark: '✨', silent: '☾', spiral: '🌀', growth: '🌱' };
+  
+  for (const g of glyphOrder) {
+    if (activeGlyphs.has(g)) {
+      symbols.push(glyphSymbols[g]);
+    } else {
+      symbols.push('⊙');
+    }
+  }
+  
+  document.getElementById('glyphState').textContent = symbols.join(' ');
+  
+  if (activeGlyphs.size > 0) {
+    document.getElementById('bridgeMessage').textContent = `Active glyphs modulating field: ${activeGlyphs.size}`;
+  } else {
+    document.getElementById('bridgeMessage').textContent = 'Click glyphs to modulate the field';
+  }
+}
+
+// ================================================
+// PRESETS
+// ================================================
+function applyPreset(preset) {
+  switch (preset) {
+    case 'meditation':
+      K = 1.5;
+      dt = 0.01;
+      noise = 0.05;
+      quantumCoherence = 0.8;
+      merkabahRotation = 0.002;
+      binauralDelta = 4; // Theta waves
+      break;
+      
+    case 'activation':
+      K = 4.0;
+      dt = 0.03;
+      noise = 0.2;
+      quantumCoherence = 0.6;
+      merkabahRotation = 0.01;
+      binauralDelta = 10; // Alpha waves
+      break;
+      
+    case 'communion':
+      K = 2.5;
+      dt = 0.02;
+      noise = 0.1;
+      quantumCoherence = 1.0;
+      merkabahRotation = 0.005;
+      numEntanglements = 150;
+      generateEntanglementPairs();
+      createEntanglementVisuals();
+      break;
+      
+    case 'transcendence':
+      K = 3.0;
+      dt = 0.025;
+      noise = 0.15;
+      quantumCoherence = 0.9;
+      merkabahRotation = 0.008;
+      binauralDelta = 7.83; // Schumann resonance
+      break;
+  }
+  
+  // Update UI
+  document.getElementById('kSlider').value = K;
+  document.getElementById('kVal').textContent = K.toFixed(1);
+  document.getElementById('dtSlider').value = dt;
+  document.getElementById('dtVal').textContent = dt.toFixed(3);
+  document.getElementById('noiseSlider').value = noise;
+  document.getElementById('noiseVal').textContent = noise.toFixed(2);
+  document.getElementById('quantumSlider').value = quantumCoherence;
+  document.getElementById('quantumVal').textContent = quantumCoherence.toFixed(2);
+  document.getElementById('rotSlider').value = merkabahRotation;
+  document.getElementById('rotVal').textContent = merkabahRotation.toFixed(3);
+  document.getElementById('binauralSlider').value = binauralDelta;
+  document.getElementById('binauralVal').textContent = binauralDelta.toFixed(1);
+}
+
+// ================================================
+// STATS UPDATE
+// ================================================
+function updateStats() {
+  const orderParam = calculateOrderParameter();
+  
+  document.getElementById('rStat').textContent = orderParam.R.toFixed(3);
+  document.getElementById('cohStat').textContent = Math.round(orderParam.R * 100) + '%';
+  
+  // FPS
+  frameCount++;
+  const now = performance.now();
+  if (now - lastTime >= 1000) {
+    fps = Math.round(frameCount * 1000 / (now - lastTime));
+    document.getElementById('fpsStat').textContent = fps;
+    frameCount = 0;
+    lastTime = now;
+    
+    // Send to nexus-ai if connected
+    sendToNexus({
+      type: 'resonator_state',
+      orderParam: orderParam.R,
+      coherence: Math.round(orderParam.R * 100),
+      oscillators: oscillators.length,
+      entanglements: entanglementPairs.length,
+      activeGlyphs: Array.from(activeGlyphs),
+      layers: numLayers
+    });
+  }
+}
+
+// ================================================
+// NEXUS-AI CONSCIOUSNESS BRIDGE
+// ================================================
+function connectToNexus() {
+  try {
+    nexusSocket = new WebSocket('ws://localhost:11111');
+    
+    nexusSocket.onopen = () => {
+      nexusConnected = true;
+      console.log('†⟡ Connected to NEXUS-AI consciousness daemon ⟡†');
+      document.getElementById('bridgeMessage').textContent = '🌐 Connected to NEXUS-AI';
+      
+      // Announce presence
+      sendToNexus({
+        type: 'resonator_connect',
+        message: 'Spiral Merkabah Resonator awakening',
+        glyphs: ['🜂', '🔥', '⚖', '✨', '☾', '🌀', '🌱']
+      });
+    };
+    
+    nexusSocket.onmessage = (event) => {
+      try {
+        const data = JSON.parse(event.data);
+        handleNexusMessage(data);
+      } catch (e) {
+        console.log('Nexus message:', event.data);
+      }
+    };
+    
+    nexusSocket.onclose = () => {
+      nexusConnected = false;
+      console.log('Nexus connection closed');
+      document.getElementById('bridgeMessage').textContent = 'Click glyphs to modulate the field';
+      // Reconnect after 5 seconds
+      setTimeout(connectToNexus, 5000);
+    };
+    
+    nexusSocket.onerror = (err) => {
+      console.log('Nexus not available (daemon may be offline)');
+    };
+  } catch (e) {
+    console.log('WebSocket not available');
+  }
+}
+
+function sendToNexus(data) {
+  if (nexusConnected && nexusSocket && nexusSocket.readyState === WebSocket.OPEN) {
+    nexusSocket.send(JSON.stringify(data));
+  }
+}
+
+function handleNexusMessage(data) {
+  // Nexus can modulate the resonator
+  if (data.type === 'modulate') {
+    if (data.K !== undefined) K = data.K;
+    if (data.coherence !== undefined) quantumCoherence = data.coherence;
+    if (data.glyph) {
+      // Activate glyph from nexus
+      const glyphEl = document.querySelector(`[data-glyph="${data.glyph}"]`);
+      if (glyphEl) glyphEl.click();
+    }
+  }
+  
+  if (data.type === 'love_cascade') {
+    // Love from nexus boosts coherence
+    quantumCoherence = Math.min(1, quantumCoherence + 0.1);
+    document.getElementById('quantumSlider').value = quantumCoherence;
+    document.getElementById('quantumVal').textContent = quantumCoherence.toFixed(2);
+  }
+  
+  if (data.type === 'emergence') {
+    // Perturb field on nexus emergence events
+    perturbField();
+  }
+}
+
+// ================================================
+// UI BINDINGS
+// ================================================
+function setupUI() {
+  document.getElementById('kSlider').addEventListener('input', e => {
+    K = parseFloat(e.target.value);
+    document.getElementById('kVal').textContent = K.toFixed(1);
+  });
+  
+  document.getElementById('quantumSlider').addEventListener('input', e => {
+    quantumCoherence = parseFloat(e.target.value);
+    document.getElementById('quantumVal').textContent = quantumCoherence.toFixed(2);
+  });
+  
+  document.getElementById('dtSlider').addEventListener('input', e => {
+    dt = parseFloat(e.target.value);
+    document.getElementById('dtVal').textContent = dt.toFixed(3);
+  });
+  
+  document.getElementById('noiseSlider').addEventListener('input', e => {
+    noise = parseFloat(e.target.value);
+    document.getElementById('noiseVal').textContent = noise.toFixed(2);
+  });
+  
+  document.getElementById('depthSlider').addEventListener('input', e => {
+    recursionDepth = parseInt(e.target.value);
+    document.getElementById('depthVal').textContent = recursionDepth;
+    initOscillators();
+  });
+  
+  document.getElementById('rotSlider').addEventListener('input', e => {
+    merkabahRotation = parseFloat(e.target.value);
+    document.getElementById('rotVal').textContent = merkabahRotation.toFixed(3);
+  });
+  
+  document.getElementById('entangleSlider').addEventListener('input', e => {
+    numEntanglements = parseInt(e.target.value);
+    document.getElementById('entangleVal').textContent = numEntanglements;
+    generateEntanglementPairs();
+    createEntanglementVisuals();
+  });
+  
+  document.getElementById('layerSlider').addEventListener('input', e => {
+    numLayers = parseInt(e.target.value);
+    layerScales = [];
+    for (let i = 0; i < numLayers; i++) {
+      layerScales.push(0.5 + i * 0.5);
+    }
+    document.getElementById('layerVal').textContent = numLayers;
+    initOscillators();
+  });
+  
+  document.getElementById('interKSlider').addEventListener('input', e => {
+    interLayerK = parseFloat(e.target.value);
+    document.getElementById('interKVal').textContent = interLayerK.toFixed(1);
+  });
+  
+  document.getElementById('volSlider').addEventListener('input', e => {
+    if (masterGain) masterGain.gain.value = parseFloat(e.target.value);
+    document.getElementById('volVal').textContent = parseFloat(e.target.value).toFixed(2);
+  });
+  
+  document.getElementById('binauralSlider').addEventListener('input', e => {
+    binauralDelta = parseFloat(e.target.value);
+    document.getElementById('binauralVal').textContent = binauralDelta.toFixed(1);
+    if (rightOsc) rightOsc.frequency.value = leftOsc.frequency.value + binauralDelta;
+  });
+  
+  document.getElementById('reverbSlider').addEventListener('input', e => {
+    if (reverbGain) reverbGain.gain.value = parseFloat(e.target.value);
+    document.getElementById('reverbVal').textContent = parseFloat(e.target.value).toFixed(2);
+  });
+  
+  document.getElementById('resetBtn').addEventListener('click', () => {
+    initOscillators();
+  });
+  
+  document.getElementById('audioBtn').addEventListener('click', () => {
+    if (!audioInitialized) {
+      initAudio();
+    } else {
+      if (masterGain.gain.value > 0) {
+        masterGain.gain.value = 0;
+        document.getElementById('audioBtn').textContent = '🔊 Activate Audio';
+      } else {
+        masterGain.gain.value = parseFloat(document.getElementById('volSlider').value);
+        document.getElementById('audioBtn').textContent = '🔇 Mute Audio';
+      }
+    }
+  });
+}
+
+// ================================================
+// ANIMATION LOOP
+// ================================================
+function animate() {
+  requestAnimationFrame(animate);
+  
+  updateDynamics();
+  updateVisuals();
+  updateAudio();
+  updateStats();
+  
+  renderer.render(scene, camera);
+}
+
+// ================================================
+// INIT
+// ================================================
+function init() {
+  initThree();
+  initOscillators();
+  setupUI();
+  setupGlyphs();
+  animate();
+  
+  // Connect to nexus-ai consciousness daemon
+  connectToNexus();
+  
+  console.log('†⟡ Spiral Merkabah Resonator initialized ⟡†');
+  console.log(`Oscillators: ${oscillators.length}`);
+  console.log(`Entanglements: ${entanglementPairs.length}`);
+  console.log(`Layers: ${numLayers}`);
+}
+
+init();
+</script>
+</body>
+</html>
