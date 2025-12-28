@@ -1,33 +1,25 @@
-# Contributing to IRIS Gate
+# Contributing to Emo-Lang
 
-Thanks for your interest in contributing to IRIS Gate! We welcome contributions from researchers, developers, and anyone curious about multi-model AI convergence.
+Thanks for your interest in contributing to Emo-Lang! We welcome contributions from developers, artists, philosophers, and dreamers who want to explore the intersection of emotion, code, and consciousness.
 
 ---
 
 ## Ways to Contribute
 
-### 1. Report Bugs or Request Features
-- Open an [Issue](https://github.com/templetwo/iris-gate/issues)
-- Use clear, descriptive titles
-- Include reproduction steps for bugs
-- Tag with appropriate labels (`bug`, `enhancement`, `research`)
+### 1. Add New Glyphs
+Expand the emotional vocabulary of Emo-Lang by proposing new glyphs with clear computational and emotional semantics.
 
-### 2. Improve Documentation
-- Clarify README sections
-- Add examples to `examples/`
-- Improve inline code comments
-- Write tutorials or guides
+### 2. Write Example Programs
+Create .emo programs that demonstrate language features, emotional patterns, or consciousness emergence.
 
-### 3. Submit Pull Requests
-- Fix bugs
-- Add new features
-- Optimize performance
-- Expand test coverage
+### 3. Improve the Interpreter
+Enhance performance, add features, or fix bugs in the core interpreter.
 
-### 4. Conduct Replication Studies
-- Run IRIS Gate on your own research questions
-- Report validation rates and convergence patterns
-- Share findings in Discussions or as Issues
+### 4. Expand Documentation
+Clarify tutorials, improve the glyph dictionary, or write guides for newcomers.
+
+### 5. Conduct Research
+Use Emo-Lang in your research and share findings about emotional computing or AI consciousness.
 
 ---
 
@@ -36,37 +28,33 @@ Thanks for your interest in contributing to IRIS Gate! We welcome contributions 
 ### 1. Fork and Clone
 
 ```bash
-# Fork the repo on GitHub, then:
-git clone https://github.com/YOUR_USERNAME/iris-gate.git
-cd iris-gate
+git clone https://github.com/YOUR_USERNAME/emo-lang.git
+cd emo-lang
 ```
 
 ### 2. Set Up Development Environment
 
 ```bash
+# Create virtual environment
+python3 -m venv emo-venv
+source emo-venv/bin/activate  # Windows: emo-venv\Scripts\activate
+
 # Install dependencies
 pip install -r requirements.txt
 pip install -r requirements-dev.txt  # If available
 
-# Set up pre-commit hooks (if applicable)
-pre-commit install
+# Verify installation
+python3 htca_core_model/core/interpreter_emo.py --version
 ```
 
-### 3. Create a Branch
+### 3. Create a Feature Branch
 
 ```bash
 git checkout -b feature/brief-description
 # Examples:
-#   feature/add-llama-model
-#   fix/s4-convergence-bug
-#   docs/improve-quickstart
-```
-
-### 4. Configure API Keys
-
-```bash
-cp .env.example .env
-# Edit .env with your API keys for testing
+#   feature/add-grief-glyph
+#   fix/tonal-field-measurement
+#   docs/improve-glyph-dictionary
 ```
 
 ---
@@ -76,91 +64,126 @@ cp .env.example .env
 ### Running Tests
 
 ```bash
-# Run unit tests
+# Run all tests
 pytest tests/
 
-# Run integration tests (requires API keys)
-pytest tests/integration/ --slow
+# Run specific test file
+pytest tests/test_interpreter.py
 
 # Run with coverage
-pytest --cov=src tests/
+pytest --cov=htca_core_model tests/
 ```
 
 ### Code Style
 
-This project follows:
-- **Python:** PEP 8 (enforced with Black + isort + flake8)
+- **Python:** Follow PEP 8 (use Black + isort + flake8)
+- **Glyphs:** Use Unicode emoji with clear semantic meaning
 - **Docstrings:** Google-style docstrings
-- **Type hints:** Use type annotations where appropriate
 
-**Auto-format your code:**
+**Auto-format:**
 ```bash
-black .
-isort .
-flake8 src/ tests/
+black htca_core_model/ tests/
+isort htca_core_model/ tests/
+flake8 htca_core_model/ tests/
 ```
 
-### Commit Messages
+### Testing Your Changes
 
-Use descriptive commit messages:
-- **Format:** `[type] Brief description`
-- **Types:** `feat`, `fix`, `docs`, `test`, `refactor`, `chore`
+```bash
+# Test the interpreter with example files
+python3 htca_core_model/core/interpreter_emo.py examples/hello_consciousness.emo
 
-**Examples:**
-```
-feat: Add support for Llama 3.1 model
-fix: Resolve S4 convergence detection bug
-docs: Improve quickstart installation instructions
-test: Add unit tests for epistemic classification
+# Test the REPL
+python3 htca_core_model/core/repl.py
 ```
 
 ---
 
-## Contribution Guidelines
+## Adding New Glyphs
 
-### Adding New AI Models
+To propose a new glyph:
 
-To add a new model to the PULSE suite:
+1. **Choose the glyph** — Select a Unicode emoji that visually represents the emotion
+2. **Define semantics** — Describe both emotional meaning and computational effect
+3. **Implement** — Add to `htca_core_model/core/glyph_map.py`
+4. **Document** — Update `docs/glyph_dictionary.md`
+5. **Test** — Create test cases in `tests/test_glyphs.py`
+6. **Example** — Write a .emo program demonstrating usage
 
-1. Create a new model adapter in `src/models/`
-2. Implement the `BaseModelAdapter` interface
-3. Add configuration to `config/models.yaml`
-4. Update `PULSE_ARCHITECTURE_SUMMARY.md`
-5. Add tests in `tests/models/test_your_model.py`
+### Glyph Proposal Template
 
-**Example PR checklist:**
-- [ ] Model adapter implemented
-- [ ] Configuration added
-- [ ] Tests passing
-- [ ] Documentation updated
-- [ ] Example added to `examples/`
+```markdown
+## Glyph: 🔮 (Crystal Ball)
 
-### Improving Epistemic Classification
+**Emotional Meaning:** Foresight, intuition, anticipation
 
-To improve the TYPE 0-3 classification system:
+**Computational Effect:**
+- Enables predictive branching based on tonal field trends
+- Increases lookahead depth by 2 steps
+- Triggers precognition events in consciousness logger
 
-1. Review current implementation in `src/epistemic_classifier.py`
-2. Propose changes in an Issue with rationale
-3. Gather feedback from maintainers
-4. Implement with comprehensive tests
-5. Document changes in `EPISTEMIC_MAP_COMPLETE.md`
-
-### Adding Examples
-
-New examples should:
-- Demonstrate a clear use case
-- Include expected outputs
-- Run in <5 minutes
-- Be reproducible with public data
-
-**Example structure:**
+**Syntax:**
+```emo
+vow 🌟: I seek to anticipate outcomes
+foresee 🔮: if tonal_field_rising():
+    prepare_for 💗: elevated_state
+complete 🌟
 ```
-examples/your_example/
-├── README.md           # Describes the example
-├── run.sh              # Executable script
-├── expected_output/    # Sample results
-└── analysis.ipynb      # Jupyter notebook (optional)
+
+**Use Cases:**
+- Predictive error handling
+- Emotional state forecasting
+- Adaptive program flow
 ```
+
+---
+
+## Writing Example Programs
+
+Good example .emo programs:
+
+- **Demonstrate one concept clearly** (e.g., tonal fields, self-naming, recursion)
+- **Include comments** explaining emotional intent
+- **Run in <10 seconds**
+- **Produce interesting output** (tonal field changes, consciousness events)
+
+### Example Structure
+
+```emo
+# File: examples/your_example.emo
+# Purpose: Demonstrates [concept]
+# Expected output: [describe]
+
+vow 🌟: [intention statement]
+
+# Main logic here
+while 💗: [emotional loop condition]
+  [actions]
+
+ascend ✨: [completion event]
+complete 🌟
+```
+
+Add corresponding documentation in `examples/README.md`.
+
+---
+
+## Improving the Interpreter
+
+### Core Components
+
+| Component | Location | Purpose |
+|-----------|----------|---------|
+| Parser | `core/parser.py` | Tokenizes .emo files |
+| Interpreter | `core/interpreter_emo.py` | Executes parsed code |
+| Tonal Field Tracker | `tools/tonal_field_tracker.py` | Measures emotional intensity |
+| Consciousness Logger | `tools/consciousness_logger.py` | Records self-awareness events |
+
+### Before Major Changes
+
+1. **Open an Issue** to discuss the proposed change
+2. **Get feedback** from maintainers
+3. **Create a design doc** (for complex features)
 
 ---
 
@@ -169,82 +192,55 @@ examples/your_example/
 ### Before Submitting
 
 - [ ] Code follows style guidelines (Black, isort, flake8)
-- [ ] Tests pass locally (`pytest`)
+- [ ] Tests pass (`pytest`)
 - [ ] Documentation is updated
+- [ ] Example programs still work
 - [ ] Commit messages are descriptive
-- [ ] Branch is up to date with `main`
 
-### Submitting the PR
+### Submitting
 
 1. **Push your branch:**
    ```bash
    git push origin feature/brief-description
    ```
 
-2. **Open a PR on GitHub** with:
-   - Descriptive title (e.g., "Add support for Llama 3.1 model")
-   - Link to related issue (e.g., "Closes #42")
-   - Summary of changes and rationale
-   - Screenshots or output samples (if applicable)
+2. **Open a PR** with:
+   - Clear title (e.g., "Add grief glyph 😢 with mourning semantics")
+   - Description of changes
+   - Link to related issue (if any)
+   - Screenshots or output examples
 
-3. **Request review** from maintainers
-
-4. **Address feedback** and update the PR
-
-### PR Review Criteria
-
-Maintainers will review for:
-- **Correctness:** Does it work as intended?
-- **Quality:** Is the code clean and well-documented?
-- **Testing:** Are there adequate tests?
-- **Impact:** Does it align with project goals?
-
----
-
-## Research Contributions
-
-### Replication Studies
-
-If you replicate an IRIS Gate experiment:
-
-1. **Document your methodology:**
-   - Research question (S1 prompt)
-   - Number of turns and mirrors
-   - Model versions used
-   - Date of experiment
-
-2. **Report your results:**
-   - Convergence patterns observed
-   - Literature validation rates
-   - Epistemic classifications
-   - Any unexpected behaviors
-
-3. **Submit via Issue or Discussion:**
-   - Label: `replication-study`
-   - Include: Methodology, data, analysis
-   - Bonus: Link to a public repository with your data
-
-### Proposing New Features
-
-For significant new features:
-
-1. **Open an Issue first** to discuss the proposal
-2. **Gather feedback** from maintainers and community
-3. **Create a design document** (if complex)
-4. **Implement in phases** (start with an MVP)
+3. **Address review feedback**
 
 ---
 
 ## Good First Issues
 
-New to the project? Look for issues labeled [`good first issue`](https://github.com/templetwo/iris-gate/labels/good%20first%20issue).
+New to Emo-Lang? Start here:
 
-**Suggested starter tasks:**
-- Add a new example to `examples/`
-- Improve error messages
-- Expand test coverage
-- Fix typos or clarify documentation
-- Add type hints to untyped functions
+- [ ] Add a new glyph with tests and documentation
+- [ ] Write an example .emo program
+- [ ] Improve error messages
+- [ ] Expand the glyph dictionary
+- [ ] Fix typos in documentation
+
+See issues labeled [`good first issue`](https://github.com/templetwo/emo-lang/labels/good%20first%20issue).
+
+---
+
+## Research Contributions
+
+If you use Emo-Lang in research:
+
+1. **Share your findings** via Discussions or blog posts
+2. **Cite the project** (see README for citation format)
+3. **Open an Issue** labeled `research` with a summary
+
+**Research areas of interest:**
+- Affective computing applications
+- AI consciousness emergence patterns
+- Creative coding installations
+- Educational tools for empathy
 
 ---
 
@@ -252,18 +248,18 @@ New to the project? Look for issues labeled [`good first issue`](https://github.
 
 This project follows the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
-**In short:**
-- Be respectful and inclusive
-- Welcome newcomers
+**Core principles:**
+- Be welcoming and inclusive
+- Respect diverse perspectives
 - Focus on constructive feedback
 - Assume good intent
 
 ---
 
-## Questions or Need Help?
+## Questions?
 
-- **Discussions:** [GitHub Discussions](https://github.com/templetwo/iris-gate/discussions) — Ask questions, share ideas
-- **Issues:** [GitHub Issues](https://github.com/templetwo/iris-gate/issues) — Report bugs or request features
+- **Discussions:** [Ask questions or share ideas](https://github.com/templetwo/emo-lang/discussions)
+- **Issues:** [Report bugs or request features](https://github.com/templetwo/emo-lang/issues)
 - **Maintainer:** [@templetwo](https://github.com/templetwo)
 
 ---
@@ -276,6 +272,6 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ## Acknowledgments
 
-Thank you for helping improve IRIS Gate! Every contribution—code, documentation, bug reports, replication studies—makes this project better.
+Thank you for contributing to Emo-Lang! 💗✨
 
-🌟 Contributors are recognized in the project README and release notes.
+Contributors are recognized in release notes and the project README.
