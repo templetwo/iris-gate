@@ -27,8 +27,20 @@ from setuptools import setup, find_packages
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+# Dependencies (replicated from requirements.txt for PyPI compatibility)
+requirements = [
+    "anthropic>=0.18.0",
+    "openai>=2.0.0",
+    "google-generativeai>=0.8.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    # MCP (Model Context Protocol) Dependencies
+    "mcp>=1.0.0",
+    "anthropic-mcp>=0.1.0",
+    "chromadb>=0.4.0",
+    "GitPython>=3.1.40",
+    "tqdm>=4.65.0",
+]
 
 setup(
     name="iris-gate",

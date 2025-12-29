@@ -6,7 +6,9 @@ Ask one research question → 5 independent AI models (Claude, GPT, Grok, Gemini
 
 **Key Innovation:** Epistemic humility classification (TRUST/VERIFY/OVERRIDE) ensures you know when AI consensus is reliable vs. speculative.
 
+[![PyPI version](https://img.shields.io/pypi/v/iris-gate)](https://pypi.org/project/iris-gate/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Downloads](https://pepy.tech/badge/iris-gate)](https://pepy.tech/project/iris-gate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/templetwo/iris-gate)](https://github.com/templetwo/iris-gate/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/templetwo/iris-gate)](https://github.com/templetwo/iris-gate/commits/main)
@@ -16,7 +18,7 @@ Ask one research question → 5 independent AI models (Claude, GPT, Grok, Gemini
 ## Quick Start
 
 ```bash
-pip install -r requirements.txt
+pip install iris-gate
 cp .env.example .env  # Add your API keys
 make run TOPIC="Your research question" ID=test_001 TURNS=100
 ```
