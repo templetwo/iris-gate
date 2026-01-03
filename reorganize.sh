@@ -23,6 +23,8 @@ mkdir -p osf/{theory,empirical,tools,community}
 mkdir -p experiments/{active,archive}
 mkdir -p tools/{entropy,analysis,deployment}
 mkdir -p archive/{deprecated,old_docs,old_scripts}
+mkdir -p docs/methodology
+mkdir -p docs/releases
 
 echo "✓ Structure created"
 echo ""
