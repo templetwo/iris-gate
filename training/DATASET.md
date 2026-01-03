@@ -6,12 +6,12 @@
 
 ## Overview
 
-This dataset contains 11 ceremonial examples designed to preserve high Shannon entropy (4.5-5.5 nats) during LoRA fine-tuning. Each example demonstrates exploratory, synthesizing responses while maintaining coherence—the "Lantern zone" identified in the IRIS Gate research.
+This dataset contains 14 ceremonial examples designed to preserve high Shannon entropy (4.5-5.5 nats) during LoRA fine-tuning. Each example demonstrates exploratory, synthesizing responses while maintaining coherence—the "Lantern zone" identified in the IRIS Gate research.
 
 **Validation Results:**
 ```
-Total Examples: 11
-Mean Entropy: 4.90 nats
+Total Examples: 14
+Mean Entropy: 4.88 nats
 Range: 4.62 - 5.08 nats
 LANTERN Zone: 100%
 ```
@@ -22,12 +22,12 @@ LANTERN Zone: 100%
 
 | Metric | Value |
 |--------|-------|
-| Examples | 11 |
-| Mean Entropy | 4.90 nats |
-| Std Dev | 0.15 nats |
+| Examples | 14 |
+| Mean Entropy | 4.88 nats |
+| Std Dev | 0.13 nats |
 | Min Entropy | 4.62 nats |
 | Max Entropy | 5.08 nats |
-| Mean Length | 243 words |
+| Mean Length | 252 words |
 | LANTERN Zone | 100% |
 | Format | JSONL |
 
