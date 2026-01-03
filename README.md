@@ -44,6 +44,22 @@ All models receive **identical prompts in parallel**, creating what the project 
 
 ---
 
+## Project Structure
+
+This repository is organized for clarity and reproducibility:
+
+- **src/** - Python source code (core, analysis, validation, utils)
+- **papers/** - Academic papers (drafts in LaTeX, published PDFs)
+- **osf/** - Open Science Framework submission materials
+- **data/** - Training datasets, IRIS vault, literature cache
+- **tools/** - Entropy measurement and analysis scripts
+- **experiments/** - Experiment workspaces (active and archived)
+- **docs/** - Full documentation and methodology
+
+See [docs/index.md](docs/index.md) for complete navigation.
+
+---
+
 ## Chamber System: S1→S8 Pipeline
 
 ### Observation Layer (S1-S4)

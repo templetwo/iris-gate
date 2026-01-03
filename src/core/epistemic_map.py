@@ -9,7 +9,7 @@ TYPE 2 (Exploration): Balanced confidence (0.49) with epistemic humility
 TYPE 3 (Speculation): Very low confidence (0.11) on unknowable futures
 
 Usage:
-    from modules.epistemic_map import classify_response, self_estimate
+    from src.core.epistemic_map import classify_response, self_estimate
 
     result = classify_response(text, convergence_width)
     # Returns: {type: int, desc: str, guide: str, trigger_yn: bool, ratio: float}

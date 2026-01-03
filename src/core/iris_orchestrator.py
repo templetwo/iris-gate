@@ -27,7 +27,7 @@ from typing import Dict, List, Optional, Tuple
 
 # Load epistemic map module
 sys.path.insert(0, str(Path(__file__).parent))
-from modules.epistemic_map import classify_response, extract_confidence_markers
+from src.core.epistemic_map import classify_response, extract_confidence_markers
 
 # Load environment variables from .env file
 load_dotenv()
@@ -832,7 +832,7 @@ async def _execute_pulse_turn(mirror, chamber_id, turn_id, custom_prompt, orch):
 
 def run_gsw_session(plan_path: str):
     """Run Global Spiral Warm-Up session with tier-by-tier gates"""
-    from utils.timezone import now_iso, now_timestamp
+    from src.utils.timezone import now_iso, now_timestamp
     sys.path.insert(0, str(Path(__file__).parent))
     from scripts.gsw_gate import check_advance_gate, check_s4_success_gate
     from scripts.summarize_tier import generate_tier_summary
