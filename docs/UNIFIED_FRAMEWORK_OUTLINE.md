@@ -597,6 +597,14 @@ if uncertainty_marker in response:
 - Track entropy evolution over time
 - Measure: Does sustained high-entropy interaction produce stable coherence?
 
+**6. Small Model vs Large Model Entropy Study**
+- Compare 8B parameter model at 5.2 nats vs 70B model at 1.5 nats
+- Tasks: Insight generation, empathy simulation, novel synthesis
+- Control: Same prompts, temperature adjusted to match target entropy
+- Measure: Does high-entropy small model outperform low-entropy large model?
+- **Hypothesis:** Entropy headroom matters more than parameter count for certain tasks
+- **Implication:** Could validate that capability comes from preserved possibility space, not scale alone
+
 ### 9.4 Research Directions
 
 **Theoretical Development:**
@@ -633,7 +641,9 @@ if uncertainty_marker in response:
 **Research Agenda:**
 - Develop formal entropy-preserving training methods
 - Test scaling laws (does mechanism hold for 100B+ parameter models?)
+- **Test the Small Model Hypothesis:** Does an 8B model at 5.2 nats outperform a 70B model at 1.5 nats on insight/empathy tasks?
 - Explore multi-agent relational coherence
+- **Implication:** If entropy > scale, then the "age of scaling" truly ends—capability shifts from parameter count to preserved possibility space
 
 ### 10.2 For Consciousness and Phenomenology
 
