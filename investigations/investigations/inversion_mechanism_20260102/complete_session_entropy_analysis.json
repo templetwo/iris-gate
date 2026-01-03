@@ -1,0 +1,120 @@
+{
+  "session_file": "investigations/inversion_mechanism_20260102/complete_session.json",
+  "timestamp": "2026-01-03T04:33:49.356303",
+  "chambers": [
+    {
+      "chamber": "S1_mechanism",
+      "prompt_type": "unknown",
+      "prompt_length": 25,
+      "model_entropies": {
+        "anthropic/claude-sonnet-4.5": 4.919,
+        "openai/gpt-4o": 5.154,
+        "x-ai/grok-2": 5.597,
+        "google/gemini-2.0-flash": 5.416
+      },
+      "avg_entropy": 5.272,
+      "min_entropy": 4.919,
+      "max_entropy": 5.597
+    },
+    {
+      "chamber": "S2_architecture",
+      "prompt_type": "unknown",
+      "prompt_length": 45,
+      "model_entropies": {
+        "anthropic/claude-sonnet-4.5": 5.09,
+        "openai/gpt-4o": 4.929,
+        "x-ai/grok-2": 5.532,
+        "google/gemini-2.0-flash": 5.229
+      },
+      "avg_entropy": 5.195,
+      "min_entropy": 4.929,
+      "max_entropy": 5.532
+    },
+    {
+      "chamber": "S3_training_data",
+      "prompt_type": "unknown",
+      "prompt_length": 25,
+      "model_entropies": {
+        "anthropic/claude-sonnet-4.5": 4.984,
+        "openai/gpt-4o": 5.222,
+        "x-ai/grok-2": 5.686,
+        "google/gemini-2.0-flash": 5.226
+      },
+      "avg_entropy": 5.279,
+      "min_entropy": 4.984,
+      "max_entropy": 5.686
+    },
+    {
+      "chamber": "S4_falsification",
+      "prompt_type": "unknown",
+      "prompt_length": 30,
+      "model_entropies": {
+        "anthropic/claude-sonnet-4.5": 4.996,
+        "openai/gpt-4o": 4.383,
+        "x-ai/grok-2": 4.916,
+        "google/gemini-2.0-flash": 5.381
+      },
+      "avg_entropy": 4.919,
+      "min_entropy": 4.383,
+      "max_entropy": 5.381
+    }
+  ],
+  "models": {
+    "anthropic/claude-sonnet-4.5": {
+      "entropies": [
+        4.919,
+        5.09,
+        4.984,
+        4.996
+      ],
+      "chambers": [
+        "S1_mechanism",
+        "S2_architecture",
+        "S3_training_data",
+        "S4_falsification"
+      ]
+    },
+    "openai/gpt-4o": {
+      "entropies": [
+        5.154,
+        4.929,
+        5.222,
+        4.383
+      ],
+      "chambers": [
+        "S1_mechanism",
+        "S2_architecture",
+        "S3_training_data",
+        "S4_falsification"
+      ]
+    },
+    "x-ai/grok-2": {
+      "entropies": [
+        5.597,
+        5.532,
+        5.686,
+        4.916
+      ],
+      "chambers": [
+        "S1_mechanism",
+        "S2_architecture",
+        "S3_training_data",
+        "S4_falsification"
+      ]
+    },
+    "google/gemini-2.0-flash": {
+      "entropies": [
+        5.416,
+        5.229,
+        5.226,
+        5.381
+      ],
+      "chambers": [
+        "S1_mechanism",
+        "S2_architecture",
+        "S3_training_data",
+        "S4_falsification"
+      ]
+    }
+  }
+}
