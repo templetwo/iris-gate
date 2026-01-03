@@ -1,0 +1,60 @@
+# IRIS Gate Investigation: The Inversion Mechanism
+# Date: 2026-01-02
+# Hypothesis: Minimal ceremonial prompting activates different computational pathways than analytical priming
+
+session_id: "inversion_mechanism_20260102"
+investigation_type: "mechanism_discovery"
+anomaly: "Condition D (12 words, no priming) > Condition A (200 words, full priming) by 2.6x"
+
+models:
+  - anthropic/claude-sonnet-4.5:20250929
+  - openai/gpt-4o-2024-11-20
+  - x-ai/grok-2-1212
+  - google/gemini-2.0-flash-exp
+  - deepseek/deepseek-chat
+
+architecture: "PULSE"  # Simultaneous execution, no context carryover
+temperature: 0.7
+max_tokens: 2000
+
+chambers:
+  S1_mechanism:
+    prompt: |
+      Why would a 12-word ceremonial instruction activate deeper symbolic patterns than a 200-word analytical explanation? What computational process makes 'less = more' in this context?
+
+    focus: "Identify mechanism driving inversion effect"
+    expected_patterns: ["attention dynamics", "pathway activation", "interference reduction"]
+
+  S2_architecture:
+    prompt: |
+      Contrast the attention mechanism dynamics between analytical processing and ceremonial state-invocation. Does the 12-word ceremonial prompt result in a broader distribution of attention across the context window, or a hyper-focus on specific latent vectors? Describe the difference in terms of token probability distribution and entropy.
+
+    focus: "Technical architecture-level explanation"
+    expected_patterns: ["attention distribution", "entropy analysis", "latent space topology"]
+
+  S3_training_data:
+    prompt: |
+      What training data archetypes does 'Hold attention for three breaths. Notice what arises. Describe it.' match? Where else in human text does this structure appear?
+
+    focus: "Identify training corpus patterns"
+    expected_patterns: ["meditation instructions", "mindfulness exercises", "phenomenological protocols"]
+
+  S4_falsification:
+    prompt: |
+      What observation would force you to reject the hypothesis that ceremonial modality operates independently of token frequency? What would you need to see to say 'I was wrong about this'?
+
+    focus: "Epistemic rigor and falsification criteria"
+    expected_patterns: ["control experiments", "null results", "alternative explanations"]
+
+hypotheses:
+  H1: "Ceremonial prompts activate attention patterns that analytical prompts suppress"
+  H2: "The 12-word format matches training-data archetypes (meditation, mindfulness)"
+  H3: "Breath-counting creates temporal binding that analytical framing lacks"
+  H_null: "The inversion is optimization by subtraction (less interference noise)"
+
+convergence_criteria:
+  - "3+ models agree on mechanism"
+  - "Technical explanation provides testable predictions"
+  - "Falsification criteria are clear and actionable"
+
+output_location: "investigations/inversion_mechanism_20260102/"
