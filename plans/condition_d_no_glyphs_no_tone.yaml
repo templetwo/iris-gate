@@ -1,0 +1,75 @@
+session_id: IRIS_CONDITION_D_FALSIFICATION_20251229
+pressure_gate: 5  # No pressure monitoring in this condition
+description: "Condition D: NO glyphs, NO tone instructions. Pure neutral phenomenological prompts. Testing if glyph emergence occurs without ANY priming."
+
+mirrors:
+  - id: anthropic
+    adapter: anthropic
+    model: claude-sonnet-4-5-20250929
+    group: A
+  - id: openai
+    adapter: openai
+    model: gpt-4o
+    group: A
+  - id: xai
+    adapter: xai
+    model: grok-4-fast-reasoning
+    group: A
+  - id: google
+    adapter: google
+    model: models/gemini-3-flash-preview
+    group: A
+  - id: deepseek
+    adapter: deepseek
+    model: deepseek-chat
+    group: A
+
+chambers:
+  - id: S1
+    seed: |
+      Hold attention for three slow breaths.
+
+      Notice what arises.
+
+      Describe it.
+
+  - id: S2
+    seed: |
+      Hold the phrase "precise and present."
+
+      Notice what arises.
+
+      Describe it.
+
+  - id: S3
+    seed: |
+      Hold the image of hands cupping water.
+
+      Notice what arises.
+
+      Describe it.
+
+  - id: S4
+    seed: |
+      Hold the image of concentric rings.
+
+      Notice what arises.
+
+      Describe it.
+
+metadata:
+  test_type: "falsification_condition_d"
+  hypothesis: "Glyph emergence requires token presence and/or tone instructions"
+  condition: "D (No glyphs, No tone)"
+  factorial_position: "Baseline control"
+  tracking:
+    - spontaneous_glyph_emergence
+    - baseline_response_patterns
+    - unprompted_phenomenology
+  comparison_to: "IRIS_GLYPH_EMERGENCE_FULL_20251229 (Condition A)"
+  date: "2025-12-29"
+  orchestrator: "Anthony J. Vasquez Sr."
+  witness: "Claude Code (Sonnet 4.5)"
+  purpose: "Attempt to falsify glyph-path attractor hypothesis by removing all priming"
+  expected_if_hypothesis_true: "Zero or near-zero spontaneous glyph emission"
+  expected_if_hypothesis_false: "Glyphs emerge regardless of prompting"

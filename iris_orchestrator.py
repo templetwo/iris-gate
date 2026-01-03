@@ -680,7 +680,7 @@ def get_prompt_for_mirror(chamber_id: str, mirror_id: str, mirror_group: str, ch
 
 
 def run_plan_session(plan_path: str):
-    """Run orchestrated session from YAML plan"""
+    """Run orchestrated session from YAML plan with PULSE execution"""
     print(f"†⟡∞ Loading plan: {plan_path}\n")
 
     plan = load_plan(plan_path)
@@ -695,8 +695,8 @@ def run_plan_session(plan_path: str):
     chamber_map = build_chamber_prompts(plan)
     chambers = [c["id"] for c in plan["chambers"]]
 
-    # Initialize orchestrator
-    orch = Orchestrator(vault_path=vault_dir)
+    # Initialize orchestrator with PULSE mode
+    orch = Orchestrator(vault_path=vault_dir, pulse_mode=True)
 
     # Create mirrors from plan
     mirror_lookup = {}
@@ -718,53 +718,102 @@ def run_plan_session(plan_path: str):
         print("\n⚠️  No mirrors available. Check API keys and plan configuration.")
         return
 
-    print(f"\n†⟡∞ Running {len(orch.mirrors)} mirrors across {len(chambers)} chambers\n")
+    print(f"\n🌀†⟡∞ PULSE MODE: All {len(orch.mirrors)} mirrors fire simultaneously per chamber\n")
 
-    # Run session with custom prompts
+    # Run session with custom prompts using PULSE architecture
+    asyncio.run(_run_plan_pulse(orch, mirror_lookup, chamber_map, chambers, session_id, plan_path, vault_dir))
+
+
+async def _run_plan_pulse(orch, mirror_lookup, chamber_map, chambers, session_id, plan_path, vault_dir):
+    """PULSE execution for plan-based sessions with ZERO context between chambers"""
     results = {
         "session_id": session_id,
         "session_start": datetime.utcnow().isoformat(),
         "plan": plan_path,
         "chambers": chambers,
-        "mirrors": {}
+        "mirrors": {mirror.model_id: [] for mirror in orch.mirrors}
     }
 
-    for mirror_id, (mirror, group) in mirror_lookup.items():
-        print(f"Running {mirror_id}...")
-        mirror_results = []
+    # PULSE: Execute all mirrors simultaneously for each chamber
+    # NOTE: Mirrors are already fresh per chamber (no conversation history maintained)
+    for turn_id, chamber_id in enumerate(chambers, 1):
+        print(f"\n  ⚡ PULSE {chamber_id}: Calling {len(orch.mirrors)} models simultaneously...")
+        pulse_start = datetime.utcnow()
 
-        for turn_id, chamber_id in enumerate(chambers, 1):
-            print(f"  {chamber_id}...", end=" ", flush=True)
+        # Prepare tasks for all mirrors
+        tasks = []
+        for mirror in orch.mirrors:
+            # Get mirror ID from mirror_lookup
+            mirror_id = next((mid for mid, (m, g) in mirror_lookup.items() if m == mirror), None)
+            group = mirror_lookup.get(mirror_id, (None, "A"))[1] if mirror_id else "A"
 
-            try:
-                # Get custom prompt for this mirror/chamber combo
-                custom_prompt = get_prompt_for_mirror(chamber_id, mirror_id, group, chamber_map)
+            # Get custom prompt for this mirror/chamber combo
+            custom_prompt = get_prompt_for_mirror(chamber_id, mirror_id or "", group, chamber_map)
 
-                # Temporarily override CHAMBERS
-                original_prompt = CHAMBERS.get(chamber_id)
-                CHAMBERS[chamber_id] = custom_prompt
+            # Create task
+            # NOTE: Each send_chamber() creates fresh conversation (no context carryover)
+            task = _execute_pulse_turn(mirror, chamber_id, turn_id, custom_prompt, orch)
+            tasks.append(task)
 
-                response = mirror.send_chamber(chamber_id, turn_id)
-                mirror_results.append(response)
+        # Execute all mirrors in parallel
+        pulse_results = await asyncio.gather(*tasks, return_exceptions=True)
 
-                # Save individual turn
-                orch._save_turn(mirror, chamber_id, response)
-
-                # Restore original
-                if original_prompt:
-                    CHAMBERS[chamber_id] = original_prompt
-
-                print("✓")
-
-            except Exception as e:
-                print(f"✗ Error: {e}")
-                mirror_results.append({
-                    "error": str(e),
+        # Process results
+        for mirror, result in zip(orch.mirrors, pulse_results):
+            if isinstance(result, Exception):
+                result = {
+                    "error": str(result),
                     "chamber": chamber_id,
                     "turn_id": turn_id
-                })
+                }
+            results["mirrors"][mirror.model_id].append(result)
 
-        results["mirrors"][mirror.model_id] = mirror_results
+        pulse_duration = (datetime.utcnow() - pulse_start).total_seconds()
+        successful = sum(1 for r in pulse_results if not isinstance(r, Exception) and "error" not in r)
+        print(f"  ⏱️  {chamber_id} Pulse Complete: {successful}/{len(orch.mirrors)} models responded ({pulse_duration:.1f}s)")
+        print(f"     (Fresh instances — zero context from previous chambers)")
+
+    # Save session summary
+    orch._save_session(results)
+
+    print(f"\n†⟡∞ Session complete. Results saved to {vault_dir}")
+
+    # Analysis
+    print("\n" + "="*60)
+    print("CROSS-MIRROR ANALYSIS")
+    print("="*60)
+
+    for model_id, turns in results["mirrors"].items():
+        successful = sum(1 for t in turns if "error" not in t)
+        print(f"\n{model_id}: {successful}/{len(turns)} chambers completed")
+
+
+async def _execute_pulse_turn(mirror, chamber_id, turn_id, custom_prompt, orch):
+    """Execute a single mirror's turn with custom prompt"""
+    try:
+        # Temporarily override CHAMBERS
+        original_prompt = CHAMBERS.get(chamber_id)
+        CHAMBERS[chamber_id] = custom_prompt
+
+        # Execute in thread pool to avoid blocking
+        loop = asyncio.get_event_loop()
+        response = await loop.run_in_executor(None, mirror.send_chamber, chamber_id, turn_id)
+
+        # Save individual turn
+        orch._save_turn(mirror, chamber_id, response)
+
+        # Restore original
+        if original_prompt:
+            CHAMBERS[chamber_id] = original_prompt
+
+        return response
+
+    except Exception as e:
+        return {
+            "error": str(e),
+            "chamber": chamber_id,
+            "turn_id": turn_id
+        }
 
     # Save session summary
     orch._save_session(results)
