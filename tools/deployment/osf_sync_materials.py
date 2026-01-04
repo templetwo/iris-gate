@@ -39,6 +39,7 @@ UPLOAD_MANIFEST = {
         'osf/theory/OSF_PROJECT_DESCRIPTION.md',
         'osf/theory/OSF_PREREGISTRATION.md',
         'osf/theory/references.bib',
+        'FIELDSCRIPT_SPEC.md',  # New computational primitive specification
     ],
     'empirical': [
         'docs/RELEASE_v0.2-discovery.md',
