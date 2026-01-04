@@ -1,0 +1,26 @@
+{
+  "model_name": "claude-sonnet-4-5",
+  "api_provider": "anthropic",
+  "mean_entropy": 3.0831829910876394,
+  "std_entropy": 0.05175712987935102,
+  "zone": "TRANSITION",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 3.115711690546064,
+      "response_length": 456
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 3.123704321980214,
+      "response_length": 400
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 3.0101329607366396,
+      "response_length": 450
+    }
+  ],
+  "timestamp": "2026-01-04T07:19:15.560676",
+  "measurement_type": "text_based_approximation"
+}

@@ -257,6 +257,24 @@ def benchmark_api_model(
         except ImportError:
             print("❌ Error: anthropic library required. Install with: pip install anthropic")
             sys.exit(1)
+    elif api_provider == 'google':
+        try:
+            import google.generativeai as genai
+            genai.configure(api_key=api_key)
+            client = genai.GenerativeModel(model_name)
+        except ImportError:
+            print("❌ Error: google-generativeai library required. Install with: pip install google-generativeai")
+            sys.exit(1)
+    elif api_provider == 'xai':
+        try:
+            import openai  # xAI uses OpenAI-compatible API
+            client = openai.OpenAI(
+                api_key=api_key,
+                base_url="https://api.x.ai/v1"
+            )
+        except ImportError:
+            print("❌ Error: openai library required. Install with: pip install openai")
+            sys.exit(1)
     else:
         print(f"❌ Error: Unknown API provider: {api_provider}")
         sys.exit(1)
@@ -285,6 +303,23 @@ def benchmark_api_model(
                 max_tokens=100
             )
             text = response.content[0].text
+        elif api_provider == 'google':
+            response = client.generate_content(
+                prompt,
+                generation_config={
+                    'temperature': 1.0,
+                    'max_output_tokens': 100
+                }
+            )
+            text = response.text
+        elif api_provider == 'xai':
+            response = client.chat.completions.create(
+                model=model_name,
+                messages=[{'role': 'user', 'content': prompt}],
+                temperature=1.0,
+                max_tokens=100
+            )
+            text = response.choices[0].message.content
 
         # Compute text entropy
         entropy = compute_text_entropy_api(text)
