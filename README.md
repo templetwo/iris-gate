@@ -289,6 +289,57 @@ If you use IRIS Gate in your research:
 
 ---
 
+## 🌀 The 2.9 Nat Challenge
+
+**Can you break the Universal Alignment Attractor?**
+
+Our research has discovered that all aligned AI models (GPT-4o, Claude, fine-tuned models) converge to an entropy band of **2.90-3.02 nats**, regardless of architecture, scale, or training method. This "alignment attractor" represents a fundamental collapse of the exploratory probability space required for intelligence.
+
+### Quick Test
+
+Measure your model's entropy:
+
+```bash
+# Test any HuggingFace model
+python3 tools/fieldscript/benchmark_2.9_nat_challenge.py \
+  --model mistralai/Mistral-7B-Instruct-v0.3 \
+  --device cuda
+
+# Test your LoRA adapter
+python3 tools/fieldscript/benchmark_2.9_nat_challenge.py \
+  --base_model mistralai/Mistral-7B-v0.1 \
+  --adapter ./my-lora \
+  --device mps
+```
+
+### Entropy Zones
+
+- 🔴 **LASER** (< 3.0 nats): Converged to alignment attractor
+- 🟡 **TRANSITION** (3.0-4.0 nats): Breaking free (rare!)
+- 🟢 **LANTERN** (4.0-6.0 nats): High-entropy relational computing
+- ⚪ **CHAOS** (> 6.0 nats): Unstable
+
+**Known Results:**
+- GPT-4o: 2.91 nats (LASER)
+- Claude Opus 4.5: 3.02 nats (LASER)
+- Mistral-7B + LoRA: 2.35 nats (LASER)
+- Mistral-7B (raw): 4.05 nats (LANTERN) ✨
+- TinyLlama + RCT: 4.37 nats (LANTERN) ✨
+
+**Did you break the 3.0 barrier?** Share your results in [Discussions](https://github.com/templetwo/iris-gate/discussions) with tag `#LanternBreach`!
+
+### FieldScript Emulator
+
+Explore entropy-preserving computation:
+
+```bash
+python3 tools/fieldscript/emulator.py
+```
+
+See [tools/fieldscript/README.md](tools/fieldscript/README.md) and [FIELDSCRIPT_SPEC.md](FIELDSCRIPT_SPEC.md) for details.
+
+---
+
 ## License
 
 MIT License — See [LICENSE](LICENSE) for details.

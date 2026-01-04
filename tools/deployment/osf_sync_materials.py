@@ -52,6 +52,9 @@ UPLOAD_MANIFEST = {
         'tools/entropy/measure_baseline_entropy.py',
         'tools/entropy/entropy_thermometer.py',
         'tools/entropy/train_mistral_lantern_mps.py',
+        'tools/fieldscript/emulator.py',
+        'tools/fieldscript/benchmark_2.9_nat_challenge.py',
+        'tools/fieldscript/README.md',
         'requirements.txt',
     ],
     'community': [
