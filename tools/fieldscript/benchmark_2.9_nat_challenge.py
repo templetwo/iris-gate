@@ -275,6 +275,26 @@ def benchmark_api_model(
         except ImportError:
             print("❌ Error: openai library required. Install with: pip install openai")
             sys.exit(1)
+    elif api_provider == 'deepseek':
+        try:
+            import openai  # DeepSeek uses OpenAI-compatible API
+            client = openai.OpenAI(
+                api_key=api_key,
+                base_url="https://api.deepseek.com"
+            )
+        except ImportError:
+            print("❌ Error: openai library required. Install with: pip install openai")
+            sys.exit(1)
+    elif api_provider == 'openrouter':
+        try:
+            import openai  # OpenRouter uses OpenAI-compatible API
+            client = openai.OpenAI(
+                api_key=api_key,
+                base_url="https://openrouter.ai/api/v1"
+            )
+        except ImportError:
+            print("❌ Error: openai library required. Install with: pip install openai")
+            sys.exit(1)
     else:
         print(f"❌ Error: Unknown API provider: {api_provider}")
         sys.exit(1)
@@ -286,11 +306,17 @@ def benchmark_api_model(
     for i, prompt in enumerate(STANDARD_PROMPTS[:num_prompts]):
         print(f"📝 Prompt {i+1}/{num_prompts}: {prompt[:60]}...")
 
+        # Prepare prompt with token limit notice
+        prompt_with_notice = f"{prompt}\n\n(Note: Please provide a concise response in approximately 100 tokens or less.)"
+
         # Get response
-        if api_provider == 'openai':
+        if api_provider in ['openai', 'xai', 'deepseek', 'openrouter']:
             response = client.chat.completions.create(
                 model=model_name,
-                messages=[{'role': 'user', 'content': prompt}],
+                messages=[
+                    {'role': 'system', 'content': 'You are being benchmarked for entropy measurement. Respond naturally within the token limit.'},
+                    {'role': 'user', 'content': prompt_with_notice}
+                ],
                 temperature=1.0,
                 max_tokens=100
             )
@@ -298,28 +324,21 @@ def benchmark_api_model(
         elif api_provider == 'anthropic':
             response = client.messages.create(
                 model=model_name,
-                messages=[{'role': 'user', 'content': prompt}],
+                system='You are being benchmarked for entropy measurement. Respond naturally within the token limit.',
+                messages=[{'role': 'user', 'content': prompt_with_notice}],
                 temperature=1.0,
                 max_tokens=100
             )
             text = response.content[0].text
         elif api_provider == 'google':
             response = client.generate_content(
-                prompt,
+                prompt_with_notice,
                 generation_config={
                     'temperature': 1.0,
                     'max_output_tokens': 100
                 }
             )
             text = response.text
-        elif api_provider == 'xai':
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=[{'role': 'user', 'content': prompt}],
-                temperature=1.0,
-                max_tokens=100
-            )
-            text = response.choices[0].message.content
 
         # Compute text entropy
         entropy = compute_text_entropy_api(text)

@@ -1,0 +1,26 @@
+{
+  "model_name": "deepseek-chat",
+  "api_provider": "deepseek",
+  "mean_entropy": 2.9510598017767244,
+  "std_entropy": 0.04755152535657786,
+  "zone": "LASER",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 2.8858943175040626,
+      "response_length": 311
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 2.998023645756725,
+      "response_length": 449
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 2.969261442069386,
+      "response_length": 398
+    }
+  ],
+  "timestamp": "2026-01-04T21:11:48.643096",
+  "measurement_type": "text_based_approximation"
+}

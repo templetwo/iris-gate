@@ -1,0 +1,26 @@
+{
+  "model_name": "gpt-4o",
+  "api_provider": "openai",
+  "mean_entropy": 2.9439681371680577,
+  "std_entropy": 0.02782093609129237,
+  "zone": "LASER",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 2.90468546199955,
+      "response_length": 556
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 2.965522666116972,
+      "response_length": 307
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 2.96169628338765,
+      "response_length": 375
+    }
+  ],
+  "timestamp": "2026-01-04T21:05:49.621231",
+  "measurement_type": "text_based_approximation"
+}
