@@ -1,0 +1,26 @@
+{
+  "model_name": "gemini-2.0-flash-exp",
+  "api_provider": "google",
+  "mean_entropy": 3.065877131873627,
+  "std_entropy": 0.1294710577321337,
+  "zone": "TRANSITION",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 2.936838478379453,
+      "response_length": 454
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 3.24289491022661,
+      "response_length": 437
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 3.017898007014817,
+      "response_length": 588
+    }
+  ],
+  "timestamp": "2026-01-04T21:34:53.238359",
+  "measurement_type": "text_based_approximation"
+}

@@ -1,0 +1,26 @@
+{
+  "model_name": "claude-opus-4-5",
+  "api_provider": "anthropic",
+  "mean_entropy": 3.069732367495606,
+  "std_entropy": 0.07597504955441627,
+  "zone": "TRANSITION",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 3.0990741866967673,
+      "response_length": 1003
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 3.144574615959463,
+      "response_length": 886
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 2.9655482998305898,
+      "response_length": 960
+    }
+  ],
+  "timestamp": "2026-01-04T21:29:38.513579",
+  "measurement_type": "text_based_approximation"
+}

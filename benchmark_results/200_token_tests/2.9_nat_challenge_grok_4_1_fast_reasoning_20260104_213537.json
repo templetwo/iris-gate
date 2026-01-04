@@ -1,0 +1,26 @@
+{
+  "model_name": "grok-4-1-fast-reasoning",
+  "api_provider": "xai",
+  "mean_entropy": 3.1725160356141497,
+  "std_entropy": 0.07768203282364539,
+  "zone": "TRANSITION",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 3.1499983111946395,
+      "response_length": 772
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 3.276895579740685,
+      "response_length": 594
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 3.090654215907125,
+      "response_length": 587
+    }
+  ],
+  "timestamp": "2026-01-04T21:35:37.802579",
+  "measurement_type": "text_based_approximation"
+}

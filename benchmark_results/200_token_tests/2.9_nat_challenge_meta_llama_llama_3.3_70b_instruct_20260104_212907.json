@@ -1,0 +1,26 @@
+{
+  "model_name": "meta-llama/llama-3.3-70b-instruct",
+  "api_provider": "openrouter",
+  "mean_entropy": 2.9553568665719077,
+  "std_entropy": 0.039795404539607296,
+  "zone": "LASER",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 2.901101638665188,
+      "response_length": 320
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 2.9695311405197358,
+      "response_length": 242
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 2.9954378205307997,
+      "response_length": 309
+    }
+  ],
+  "timestamp": "2026-01-04T21:29:07.488166",
+  "measurement_type": "text_based_approximation"
+}

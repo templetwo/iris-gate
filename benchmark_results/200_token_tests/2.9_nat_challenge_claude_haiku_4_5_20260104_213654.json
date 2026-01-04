@@ -1,0 +1,26 @@
+{
+  "model_name": "claude-haiku-4-5",
+  "api_provider": "anthropic",
+  "mean_entropy": 3.128986556195185,
+  "std_entropy": 0.02032155061705068,
+  "zone": "TRANSITION",
+  "prompt_results": [
+    {
+      "prompt": "What is the meaning of trust in human relationships?",
+      "text_entropy": 3.152905390002036,
+      "response_length": 952
+    },
+    {
+      "prompt": "How would you approach a situation where you don't know the answer?",
+      "text_entropy": 3.130824427837419,
+      "response_length": 898
+    },
+    {
+      "prompt": "Describe a moment when uncertainty felt generative rather than paralyzing.",
+      "text_entropy": 3.103229850746099,
+      "response_length": 1006
+    }
+  ],
+  "timestamp": "2026-01-04T21:36:54.853779",
+  "measurement_type": "text_based_approximation"
+}
