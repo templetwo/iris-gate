@@ -2,6 +2,10 @@
 
 **A paradigm shift from reward optimization to entropy modulation in artificial intelligence**
 
+📄 **DOI:** [10.17605/OSF.IO/T65VS](https://doi.org/10.17605/OSF.IO/T65VS)
+🌐 **Project:** [https://osf.io/7nw8t/](https://osf.io/7nw8t/)
+📦 **Repository:** [https://github.com/templetwo/iris-gate](https://github.com/templetwo/iris-gate)
+
 ---
 
 ## Project Overview

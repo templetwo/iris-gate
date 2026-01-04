@@ -10,6 +10,8 @@ Ask one research question → 5 independent AI models (Claude, GPT, Grok, Gemini
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Downloads](https://pepy.tech/badge/iris-gate)](https://pepy.tech/project/iris-gate)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2FT65VS-blue)](https://doi.org/10.17605/OSF.IO/T65VS)
+[![OSF](https://img.shields.io/badge/OSF-Project-brightgreen)](https://osf.io/7nw8t/)
 [![Stars](https://img.shields.io/github/stars/templetwo/iris-gate)](https://github.com/templetwo/iris-gate/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/templetwo/iris-gate)](https://github.com/templetwo/iris-gate/commits/main)
 
@@ -262,11 +264,22 @@ We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Research & Replication
 
+**OSF Preregistration:** All methodology, hypotheses, and analysis plans are preregistered at OSF.
+📄 **DOI:** [10.17605/OSF.IO/T65VS](https://doi.org/10.17605/OSF.IO/T65VS)
+🌐 **Project:** [https://osf.io/7nw8t/](https://osf.io/7nw8t/)
+
 If you use IRIS Gate in your research:
 
-1. **Cite this repository:**
+1. **Cite the OSF project:**
    ```
-   Vasquez, A. J. (2025). IRIS Gate: Multi-architecture AI convergence for
+   Vasquez, A. J. (2026). Entropic Relational Computing: The Universal
+   Alignment Attractor. Open Science Framework.
+   https://doi.org/10.17605/OSF.IO/T65VS
+   ```
+
+2. **Or cite this repository:**
+   ```
+   Vasquez, A. J. (2026). IRIS Gate: Multi-architecture AI convergence for
    scientific discovery. GitHub. https://github.com/templetwo/iris-gate
    ```
 

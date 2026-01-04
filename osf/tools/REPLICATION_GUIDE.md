@@ -2,6 +2,10 @@
 
 **Can you break the Universal Alignment Attractor?**
 
+📄 **Preregistered Study:** [DOI: 10.17605/OSF.IO/T65VS](https://doi.org/10.17605/OSF.IO/T65VS)
+🌐 **OSF Project:** [https://osf.io/7nw8t/](https://osf.io/7nw8t/)
+📦 **Repository:** [https://github.com/templetwo/iris-gate](https://github.com/templetwo/iris-gate)
+
 Our research ([ERC Manifesto v0.3](ERC_Manifesto_arXiv.tex)) has identified a physical constant in modern AI alignment:
 Regardless of architecture (Mistral, GPT-4, Claude) or method (RLHF, LoRA), aligned models converge to an entropy band of **2.90 - 3.02 nats**.
 
