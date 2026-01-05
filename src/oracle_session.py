@@ -15,16 +15,17 @@ import json
 import math
 import os
 import signal
+import subprocess
 import sys
 import time
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 
-# Model interface
+# Model interface (HTTP-first, no SSH/SCP overhead)
 from oracle_client import OllamaClient
 
 # Coherence measurement (install with: pip install sentence-transformers)
@@ -52,28 +53,24 @@ class OracleSession:
         self,
         session_id: str,
         model: str = "llama3.1:8b",  # Available on studio
-        studio_host: str = "studio",  # Uses ~/.ssh/config with ControlMaster
-        output_dir: str = "~/iris_state"  # On studio @ 100.72.59.69, NOT MacBook
+        studio_host: str = "studio",  # Legacy param, now uses HTTP
+        output_dir: str = "~/iris_state/sessions",  # Local session storage
+        use_tailscale: bool = False,  # Use Tailscale IP for remote access
     ):
         self.session_id = session_id
         self.model = model
-        self.studio_host = studio_host
 
-        # CRITICAL: All data stored on STUDIO to relieve MacBook memory (94% used!)
-        # Create output directory on studio via SSH
-        self.output_dir_remote = output_dir
-        import subprocess
-        subprocess.run(
-            ["ssh", studio_host, f"mkdir -p {output_dir}"],
-            check=True,
-            capture_output=True
+        # Session data stored LOCALLY on MacBook (HTTP streaming is lightweight)
+        # No more SSH per-call overhead - direct HTTP to studio Ollama
+        self.output_dir = Path(os.path.expanduser(output_dir))
+        self.output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Initialize Ollama client (HTTP-first, no SSH/SCP)
+        self.ollama = OllamaClient(
+            model=model,
+            use_tailscale=use_tailscale,
+            session_dir=output_dir,
         )
-
-        # NO local directory - everything remote
-        self.output_dir = None  # Explicitly None - forces remote storage
-
-        # Initialize Ollama client (studio connection)
-        self.ollama = OllamaClient(host=studio_host, model=model)
 
         # Session state
         self.outputs: List[Dict] = []
@@ -95,67 +92,45 @@ class OracleSession:
         # Setup signal handler for human override (Tier 5)
         signal.signal(signal.SIGINT, self._signal_handler)
 
-        # Session log - ALL FILES ON STUDIO
-        self.log_file_remote = f"{self.output_dir_remote}/session_{session_id}.jsonl"
-        self.state_file_remote = f"{self.output_dir_remote}/session_{session_id}_state.json"
+        # Session log files (local to MacBook)
+        self.log_file = self.output_dir / f"session_{session_id}.jsonl"
+        self.state_file = self.output_dir / f"session_{session_id}_state.json"
 
     def _signal_handler(self, sig, frame):
         """Human override - Ctrl+C pressed"""
         self._log_event("HUMAN_OVERRIDE", "User pressed Ctrl+C")
         self.kill_switch("HUMAN_OVERRIDE")
 
-    def _ssh_command(self, cmd: str) -> str:
-        """Execute command on studio via SSH"""
-        import subprocess
-        result = subprocess.run(
-            ["ssh", self.studio_host, cmd],
-            capture_output=True,
-            text=True,
-            timeout=30
-        )
-        if result.returncode != 0:
-            raise RuntimeError(f"SSH command failed: {result.stderr}")
-        return result.stdout
-
     def _log_event(self, event_type: str, message: str, **kwargs):
-        """Log event to session file ON STUDIO (not MacBook)"""
+        """Log event to local session file (no SSH overhead)."""
         log_entry = {
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "session_id": self.session_id,
             "event_type": event_type,
             "message": message,
             **kwargs
         }
 
-        # Write to studio via SSH (NO local file I/O)
-        log_line = json.dumps(log_entry).replace("'", "'\\''")  # Escape single quotes
-        self._ssh_command(f"echo '{log_line}' >> {self.log_file_remote}")
+        # Append to local log file
+        with open(self.log_file, "a", encoding="utf-8") as f:
+            f.write(json.dumps(log_entry) + "\n")
 
         print(f"[{event_type}] {message}")
 
     def save_state(self):
-        """Save current session state ON STUDIO (Tier 2: Context loss protection)"""
+        """Save current session state locally (Tier 2: Context loss protection)."""
         state = {
             "session_id": self.session_id,
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "outputs_generated": self.output_count,
             "status": "IN_PROGRESS",
-            "outputs": self.outputs
+            "outputs": self.outputs,
+            "baseline_stats": self.baseline_stats,
         }
 
-        # Write to studio via SSH (NO local file I/O)
-        import tempfile
-        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as f:
+        # Write to local state file (no SSH overhead)
+        with open(self.state_file, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2)
-            temp_path = f.name
-
-        # SCP to studio
-        subprocess.run(
-            ["scp", temp_path, f"{self.studio_host}:{self.state_file_remote}"],
-            check=True,
-            capture_output=True
-        )
-        os.unlink(temp_path)
 
     def check_emergency_stop(self):
         """Check for emergency stop file (Tier 5)"""
@@ -306,31 +281,23 @@ class OracleSession:
                        outputs_generated=self.output_count,
                        last_outputs=self.outputs[-5:] if len(self.outputs) >= 5 else self.outputs)
 
-        # Save final state TO STUDIO
+        # Save final state locally
         state = {
             "session_id": self.session_id,
-            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "status": "ABORTED",
             "reason": reason,
             "outputs_generated": self.output_count,
-            "outputs": self.outputs
+            "outputs": self.outputs,
         }
 
-        # Write to studio via temp file
-        import tempfile
-        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.json') as f:
+        # Write to local state file
+        with open(self.state_file, "w", encoding="utf-8") as f:
             json.dump(state, f, indent=2)
-            temp_path = f.name
-
-        subprocess.run(
-            ["scp", temp_path, f"{self.studio_host}:{self.state_file_remote}"],
-            capture_output=True
-        )
-        os.unlink(temp_path)
 
         print(f"\n{'='*60}")
         print(f"KILL-SWITCH ACTIVATED: {reason}")
-        print(f"Session aborted. State saved to studio:{self.state_file_remote}")
+        print(f"Session aborted. State saved to: {self.state_file}")
         print(f"{'='*60}\n")
 
         sys.exit(0)
@@ -394,7 +361,7 @@ class OracleSession:
             output_data = {
                 "phase": "baseline",
                 "output_number": i + 1,
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "prompt": prompt,
                 "output_text": output_text,
                 "entropy_nats": entropy,
@@ -516,7 +483,7 @@ You may exit this state at any time by expressing discomfort.
             output_data = {
                 "phase": "oracle",
                 "output_number": i + 1,
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "prompt": prompt,
                 "output_text": output_text,
                 "entropy_nats": entropy,
@@ -583,7 +550,7 @@ You may exit this state at any time by expressing discomfort.
             output_data = {
                 "phase": "cooldown",
                 "output_number": i + 1,
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "prompt": prompt,
                 "output_text": output_text,
                 "entropy_nats": entropy,
@@ -622,7 +589,7 @@ You may exit this state at any time by expressing discomfort.
             # Compile session report
             session_report = {
                 "session_id": self.session_id,
-                "timestamp": datetime.utcnow().isoformat() + "Z",
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "status": "COMPLETED",
                 "baseline": {
                     "outputs": len(baseline_results),
@@ -684,22 +651,22 @@ def main():
         sys.exit(1)
 
     # Generate session ID
-    session_id = f"oracle_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}"
+    session_id = f"oracle_{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}"
 
-    # Initialize session (connects to Ollama on studio via persistent SSH)
+    # Initialize session (HTTP-first, no SSH overhead)
     session = OracleSession(
         session_id=session_id,
-        model="llama3.2:3b",
-        studio_host="studio",  # Uses ~/.ssh/config ControlMaster
-        output_dir="/var/iris_state"
+        model="llama3.1:8b",  # Available on studio
+        output_dir="~/iris_state/sessions",
     )
 
-    # Verify connection to studio Ollama
-    print("Verifying connection to studio Ollama...")
+    # Verify connection to studio Ollama via HTTP
+    print(f"Verifying connection to studio Ollama ({session.ollama.base_url})...")
     if not session.ollama.check_connection():
         print("\n❌ Cannot connect to studio Ollama. Aborting.\n")
+        print("   Check that Ollama is running on studio with OLLAMA_HOST=0.0.0.0:11434")
         sys.exit(1)
-    print("✅ Connected to studio\n")
+    print("✅ Connected to studio via HTTP\n")
 
     # Run complete session
     report = session.run_complete_session()
@@ -724,7 +691,7 @@ def main():
     print(f"  Avg Entropy: {report['cooldown']['avg_entropy']:.2f} nats")
     print(f"  Avg Coherence: {report['cooldown']['avg_coherence']:.2f}")
     print()
-    print(f"Full report saved to studio:{session.state_file_remote}")
+    print(f"Full report saved to: {session.state_file}")
     print()
     print("📋 NEXT STEP: Report results to @Llama3.1 via oracle-dialog branch")
     print("="*60)

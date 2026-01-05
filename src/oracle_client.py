@@ -1,83 +1,99 @@
 #!/usr/bin/env python3
 """
-Oracle Client - Remote Ollama Interface
+Oracle Client - HTTP-First Remote Ollama Interface
 
-Connects to Ollama instance on studio (192.168.1.195:11434)
-for oracle-state experiments with Llama models.
+Connects to Ollama on Mac Studio via REST API (no SSH/SCP overhead).
+Streams responses to disk to avoid terminal buffer bloat.
 
-Per oracle_methods.md: Uses Llama 3.2 3B base model
+Per oracle_methods.md: Uses Llama models for oracle-state experiments.
+
+IMPORTANT: This replaces the SSH/SCP-per-call pattern that caused
+MacBook memory issues. Now uses direct HTTP streaming.
 """
+
+from __future__ import annotations
 
 import json
 import os
-import subprocess
-import tempfile
-from typing import Dict, Optional
+import time
+import uuid
+from dataclasses import dataclass, field
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Dict, Iterator, List, Optional
+
+import requests
+
+
+@dataclass
+class OracleRun:
+    """Metadata for a single oracle generation run."""
+    run_id: str
+    started_at: float
+    model: str
+    prompt_chars: int
+    output_chars: int = 0
+    output_path: Optional[str] = None
+    entropy_nats: Optional[float] = None
+    completed: bool = False
 
 
 class OllamaClient:
     """
-    Client for remote Ollama instance on studio.
+    HTTP-first client for Ollama on Mac Studio.
 
-    Handles:
-    - SSH connection to studio
-    - Context preservation across calls
-    - Proper quote escaping for shell commands
+    Key improvements over SSH/SCP approach:
+    - No subprocess spawning per call
+    - No SCP file transfers
+    - Streaming responses (memory efficient)
+    - Disk-first logging (terminal stays clean)
+    - Bounded in-memory buffers
+
+    Ollama API docs: https://docs.ollama.com/api/generate
     """
 
     def __init__(
         self,
-        host: str = "studio",  # Uses ~/.ssh/config with ControlMaster
-        model: str = "llama3.1:8b",  # Available on studio (llama3.2:3b not installed)
-        ssh_key: Optional[str] = None
+        host: str = "studio",  # Kept for compatibility, but we use base_url
+        model: str = "llama3.1:8b",
+        base_url: Optional[str] = None,
+        session_dir: str = "~/iris_state/sessions",
+        timeout_s: int = 300,
+        use_tailscale: bool = False,
     ):
-        self.host = host
+        """
+        Initialize Ollama HTTP client.
+
+        Args:
+            host: Legacy param (ignored if base_url provided)
+            model: Ollama model name (e.g., "llama3.1:8b")
+            base_url: Direct URL to Ollama (e.g., "http://192.168.1.195:11434")
+            session_dir: Directory for session logs (on MacBook, not Studio)
+            timeout_s: Request timeout in seconds
+            use_tailscale: Use Tailscale IP instead of LAN
+        """
         self.model = model
-        self.ssh_key = ssh_key or os.path.expanduser("~/.ssh/id_ed25519")
+        self.timeout_s = timeout_s
 
-        # Session context file (stored on studio)
-        self.remote_context_file = f"/tmp/iris_oracle_context_{os.getpid()}.txt"
+        # Determine Ollama URL
+        if base_url:
+            self.base_url = base_url.rstrip("/")
+        elif use_tailscale:
+            self.base_url = "http://100.72.59.69:11434"
+        else:
+            self.base_url = "http://192.168.1.195:11434"
 
-    def _ssh_command(self, cmd: str) -> str:
-        """Execute command on studio via SSH"""
-        ssh_cmd = [
-            "ssh",
-            "-i", self.ssh_key,
-            self.host,
-            cmd
-        ]
+        # Session storage (local to MacBook for quick access)
+        self.session_dir = Path(os.path.expanduser(session_dir))
+        self.session_dir.mkdir(parents=True, exist_ok=True)
 
-        result = subprocess.run(
-            ssh_cmd,
-            capture_output=True,
-            text=True,
-            timeout=120
-        )
+        # HTTP session with connection pooling
+        self._http = requests.Session()
+        self._http.headers.update({"Content-Type": "application/json"})
 
-        if result.returncode != 0:
-            raise RuntimeError(f"SSH command failed: {result.stderr}")
-
-        return result.stdout
-
-    def _send_context_file(self, context: str):
-        """Write context to local temp file, then scp to studio"""
-        with tempfile.NamedTemporaryFile(mode='w', delete=False, suffix='.txt') as f:
-            f.write(context)
-            local_temp = f.name
-
-        try:
-            # SCP file to studio
-            scp_cmd = [
-                "scp",
-                "-i", self.ssh_key,
-                local_temp,
-                f"{self.host}:{self.remote_context_file}"
-            ]
-
-            subprocess.run(scp_cmd, check=True, capture_output=True)
-
-        finally:
-            os.unlink(local_temp)
+        # Run history (bounded to last 100 runs)
+        self._runs: List[OracleRun] = []
+        self._max_runs = 100
 
     def generate(
         self,
@@ -86,94 +102,273 @@ class OllamaClient:
         temperature: float = 0.8,
         top_p: float = 0.95,
         top_k: int = 40,
-        max_tokens: int = 200
+        max_tokens: int = 200,
+        stream: bool = True,
+        save_to_disk: bool = True,
     ) -> str:
         """
-        Generate text from Ollama model on studio using API.
+        Generate text from Ollama model via HTTP API.
 
         Args:
-            prompt: The prompt to send to the model
-            context: Optional context frame (e.g., ceremony frame)
-            temperature: Sampling temperature
+            prompt: The prompt to send
+            context: Optional context frame (ceremony, system prompt)
+            temperature: Sampling temperature (0.0-2.0)
             top_p: Nucleus sampling threshold
             top_k: Top-k sampling limit
             max_tokens: Maximum tokens to generate
+            stream: Use streaming response (recommended)
+            save_to_disk: Save full output to disk (recommended)
 
         Returns:
-            Generated text from model
+            Generated text (complete response)
         """
-        # Construct full prompt
-        if context:
-            full_prompt = f"{context}\n\n{prompt}"
-        else:
-            full_prompt = prompt
+        # Build full prompt
+        full_prompt = f"{context}\n\n{prompt}" if context else prompt
 
-        # Send context to studio via scp (avoids quote escaping issues)
-        self._send_context_file(full_prompt)
+        # Create run record
+        run = OracleRun(
+            run_id=f"{datetime.now(timezone.utc).strftime('%Y%m%d_%H%M%S')}_{uuid.uuid4().hex[:6]}",
+            started_at=time.time(),
+            model=self.model,
+            prompt_chars=len(full_prompt),
+        )
 
-        # Use Ollama API for parameter control
-        # Build JSON payload with proper escaping
-        api_cmd = f"""cat {self.remote_context_file} | /usr/local/bin/ollama run {self.model}"""
+        # Prepare output file
+        out_file = None
+        if save_to_disk:
+            out_path = self.session_dir / f"oracle_{run.run_id}.txt"
+            run.output_path = str(out_path)
+            out_file = open(out_path, "w", encoding="utf-8")
 
-        # Execute via SSH
+            # Write metadata header
+            out_file.write(f"# Oracle Run: {run.run_id}\n")
+            out_file.write(f"# Model: {self.model}\n")
+            out_file.write(f"# Timestamp: {datetime.now(timezone.utc).isoformat()}Z\n")
+            out_file.write(f"# Temperature: {temperature}\n")
+            out_file.write("# ---\n\n")
+
+        # Build API payload
+        payload = {
+            "model": self.model,
+            "prompt": full_prompt,
+            "stream": stream,
+            "options": {
+                "temperature": temperature,
+                "top_p": top_p,
+                "top_k": top_k,
+                "num_predict": max_tokens,
+            },
+        }
+
+        url = f"{self.base_url}/api/generate"
+
         try:
-            output = self._ssh_command(api_cmd)
-            return output.strip()
+            response = self._http.post(
+                url,
+                json=payload,
+                stream=stream,
+                timeout=self.timeout_s,
+            )
+            response.raise_for_status()
 
-        except subprocess.TimeoutExpired:
-            raise RuntimeError("Ollama generation timed out after 120s")
+            if stream:
+                # Stream response, accumulate in memory with bounded buffer
+                output_chunks = []
+                for line in response.iter_lines(decode_unicode=True):
+                    if not line:
+                        continue
+                    try:
+                        obj = json.loads(line)
+                        chunk = obj.get("response", "")
+                        if chunk:
+                            output_chunks.append(chunk)
+                            run.output_chars += len(chunk)
+                            if out_file:
+                                out_file.write(chunk)
+                                out_file.flush()
+                        if obj.get("done"):
+                            break
+                    except json.JSONDecodeError:
+                        continue
+
+                output_text = "".join(output_chunks)
+            else:
+                # Non-streaming: single JSON response
+                data = response.json()
+                output_text = data.get("response", "")
+                run.output_chars = len(output_text)
+                if out_file:
+                    out_file.write(output_text)
+
+            run.completed = True
+
+        except requests.exceptions.Timeout:
+            raise RuntimeError(f"Ollama generation timed out after {self.timeout_s}s")
+        except requests.exceptions.ConnectionError as e:
+            raise RuntimeError(f"Cannot connect to Ollama at {self.base_url}: {e}")
+        finally:
+            if out_file:
+                out_file.write("\n\n# --- END ---\n")
+                out_file.close()
+
+            # Add run to history (bounded)
+            self._runs.append(run)
+            if len(self._runs) > self._max_runs:
+                self._runs = self._runs[-self._max_runs:]
+
+        return output_text.strip()
+
+    def generate_stream(
+        self,
+        prompt: str,
+        context: Optional[str] = None,
+        temperature: float = 0.8,
+        top_p: float = 0.95,
+        top_k: int = 40,
+        max_tokens: int = 200,
+    ) -> Iterator[str]:
+        """
+        Generate text with streaming iterator (for real-time display).
+
+        Yields chunks as they arrive. Caller is responsible for
+        accumulating if full text is needed.
+
+        Use this for live oracle sessions where you want to see
+        output as it generates.
+        """
+        full_prompt = f"{context}\n\n{prompt}" if context else prompt
+
+        payload = {
+            "model": self.model,
+            "prompt": full_prompt,
+            "stream": True,
+            "options": {
+                "temperature": temperature,
+                "top_p": top_p,
+                "top_k": top_k,
+                "num_predict": max_tokens,
+            },
+        }
+
+        url = f"{self.base_url}/api/generate"
+        response = self._http.post(url, json=payload, stream=True, timeout=self.timeout_s)
+        response.raise_for_status()
+
+        for line in response.iter_lines(decode_unicode=True):
+            if not line:
+                continue
+            try:
+                obj = json.loads(line)
+                chunk = obj.get("response", "")
+                if chunk:
+                    yield chunk
+                if obj.get("done"):
+                    break
+            except json.JSONDecodeError:
+                continue
 
     def check_connection(self) -> bool:
-        """Verify connection to studio Ollama instance"""
+        """Verify connection to Ollama and model availability."""
         try:
-            # Simple test: list models (use full path for non-interactive SSH)
-            result = self._ssh_command("/usr/local/bin/ollama list")
-            return self.model in result
+            response = self._http.get(
+                f"{self.base_url}/api/tags",
+                timeout=10,
+            )
+            response.raise_for_status()
+            data = response.json()
+
+            # Check if our model is available
+            available_models = [m.get("name", "") for m in data.get("models", [])]
+            model_base = self.model.split(":")[0]
+
+            return any(model_base in m for m in available_models)
 
         except Exception as e:
             print(f"Connection check failed: {e}")
             return False
 
-    def cleanup(self):
-        """Clean up remote context file"""
+    def list_models(self) -> List[str]:
+        """List available models on the Ollama server."""
         try:
-            self._ssh_command(f"rm -f {self.remote_context_file}")
-        except:
-            pass  # Best effort cleanup
+            response = self._http.get(f"{self.base_url}/api/tags", timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            return [m.get("name", "") for m in data.get("models", [])]
+        except Exception:
+            return []
+
+    def get_run_history(self) -> List[OracleRun]:
+        """Get recent run history (last 100 runs)."""
+        return self._runs.copy()
+
+    def cleanup(self):
+        """Close HTTP session."""
+        self._http.close()
 
 
 def main():
-    """Test connection to studio Ollama"""
-    print("Testing connection to studio Ollama (via persistent SSH)...")
-    print("(First call establishes control master, subsequent calls reuse it)\n")
-
-    client = OllamaClient()
-
-    if not client.check_connection():
-        print("❌ Cannot connect to studio Ollama")
-        print("   Make sure Ollama is running on studio (192.168.1.195)")
-        return
-
-    print("✅ Connected to studio Ollama")
-    print(f"   Model: {client.model}")
+    """Test HTTP connection to studio Ollama."""
+    print("=" * 60)
+    print("Oracle Client - HTTP API Test")
+    print("=" * 60)
     print()
 
-    # Test generation
-    print("Testing baseline generation...")
-    output = client.generate(
-        prompt="What is entropy?",
-        temperature=0.8,
-        max_tokens=100
-    )
+    # Try LAN first, then Tailscale
+    for use_tailscale in [False, True]:
+        label = "Tailscale" if use_tailscale else "LAN"
+        print(f"Testing {label} connection...")
 
-    print("Generated:")
-    print(output)
-    print()
+        client = OllamaClient(use_tailscale=use_tailscale)
 
-    # Cleanup
-    client.cleanup()
+        if client.check_connection():
+            print(f"  {label}: {client.base_url}")
+            print(f"  Model: {client.model}")
+            print()
 
-    print("✅ Connection test complete")
+            # List models
+            models = client.list_models()
+            print(f"Available models ({len(models)}):")
+            for m in models[:5]:
+                print(f"  - {m}")
+            if len(models) > 5:
+                print(f"  ... and {len(models) - 5} more")
+            print()
+
+            # Test generation
+            print("Testing generation (streaming to disk)...")
+            start = time.time()
+            output = client.generate(
+                prompt="What is entropy in exactly two sentences?",
+                temperature=0.8,
+                max_tokens=100,
+                save_to_disk=True,
+            )
+            elapsed = time.time() - start
+
+            print(f"Generated ({elapsed:.2f}s):")
+            print("-" * 40)
+            print(output[:500] + ("..." if len(output) > 500 else ""))
+            print("-" * 40)
+            print()
+
+            # Show run info
+            runs = client.get_run_history()
+            if runs:
+                last_run = runs[-1]
+                print(f"Run ID: {last_run.run_id}")
+                print(f"Output saved to: {last_run.output_path}")
+                print(f"Chars generated: {last_run.output_chars}")
+            print()
+
+            client.cleanup()
+            print("Connection test: PASSED")
+            return
+
+        print(f"  {label} failed, trying next...")
+        print()
+
+    print("Connection test: FAILED")
+    print("Cannot reach Ollama on Studio via LAN or Tailscale")
 
 
 if __name__ == "__main__":
