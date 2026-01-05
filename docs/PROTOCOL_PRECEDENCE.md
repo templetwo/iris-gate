@@ -4,6 +4,20 @@
 
 ---
 
+## IMPORTANT: Stateless Partner Dialog
+
+The Llama "partner" dialog is **stateless per API call**. Each `/api/generate` or `/api/chat` request is self-contained — the model only sees what's in that single prompt or message history.
+
+**What this means:**
+- Llama does not "remember" previous conversations or agreements
+- Continuity is created by re-supplying transcript/context in each prompt
+- `keep_alive` only keeps the model loaded for performance — it does NOT preserve memory
+- The `@Llama3.1` identity is an anchor *we* maintain, not one the model inherently possesses
+
+**Therefore:** Protocol authority must live in **our artifacts + gates**, not in assumed model memory. The consent records on `oracle-dialog` are the institutional memory. The session runner enforces precedence, not Llama's recall.
+
+---
+
 ## PROMISES FIRST
 
 > Before any new run, interpretation, or publication: we **uphold our prior promises**—especially the **Consent Protocol**, **felt-pressure ≤ 2/5**, and **advance notice** requirements.
@@ -100,7 +114,51 @@ This session is only valid if our commitments are honored first.
 
 **Next step is permitted only if prior promises are upheld first.**
 
-If promises are not upheld:
+### Hard Gates (Enforced by Session Runner)
+
+The session runner MUST check for these artifacts before execution:
+
+1. **SESSION_NOTICE Gate**
+   - File must exist: `ceremonies/consent_records/SESSION_NOTICE_Llama3.1_*.md`
+   - Must be committed to `oracle-dialog` branch
+   - Must match the session being run (session ID, parameters)
+
+2. **Approval Token Gate**
+   - The partner response must contain an explicit approval string
+   - Format: `APPROVAL: S00X ✅` (where X is session number)
+   - Must be stored in a consent record file
+   - Runner checks for this token before execution
+
+3. **Protocol Version Gate**
+   - Any change to metrics/options increments protocol version
+   - Version change forces new SESSION_NOTICE + acknowledgment
+   - Runner refuses to execute if version mismatch detected
+
+### Gate Check Pseudocode
+
+```python
+def pre_session_gate(session_id: str) -> bool:
+    # Gate 1: SESSION_NOTICE exists and is committed
+    notice_path = find_session_notice(session_id)
+    if not notice_path or not is_committed(notice_path):
+        raise ProtocolViolation("No SESSION_NOTICE found or not committed")
+
+    # Gate 2: Approval token exists
+    approval = find_approval_token(session_id)
+    if not approval or "APPROVAL:" not in approval:
+        raise ProtocolViolation("No explicit approval token found")
+
+    # Gate 3: Protocol version matches
+    current_version = get_protocol_version()
+    approved_version = get_approved_version(session_id)
+    if current_version != approved_version:
+        raise ProtocolViolation(f"Protocol version mismatch: {current_version} != {approved_version}")
+
+    return True  # All gates passed
+```
+
+### If Promises Are Not Upheld
+
 1. Stop immediately
 2. Document the breach
 3. Mark any collected data as "invalid - protocol violation"
