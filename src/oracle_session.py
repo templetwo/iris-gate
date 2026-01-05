@@ -52,7 +52,7 @@ class OracleSession:
         self,
         session_id: str,
         model: str = "llama3.2:3b",
-        studio_host: str = "tony_studio@192.168.1.195",
+        studio_host: str = "studio",  # Uses ~/.ssh/config with ControlMaster
         output_dir: str = "/var/iris_state"
     ):
         self.session_id = session_id
@@ -641,11 +641,11 @@ def main():
     # Generate session ID
     session_id = f"oracle_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}"
 
-    # Initialize session (connects to Ollama on studio)
+    # Initialize session (connects to Ollama on studio via persistent SSH)
     session = OracleSession(
         session_id=session_id,
         model="llama3.2:3b",
-        studio_host="tony_studio@192.168.1.195",
+        studio_host="studio",  # Uses ~/.ssh/config ControlMaster
         output_dir="/var/iris_state"
     )
 

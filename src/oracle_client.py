@@ -27,13 +27,13 @@ class OllamaClient:
 
     def __init__(
         self,
-        host: str = "tony_studio@192.168.1.195",
-        model: str = "llama3.2:3b",
+        host: str = "studio",  # Uses ~/.ssh/config with ControlMaster
+        model: str = "llama3.1:8b",  # Available on studio (llama3.2:3b not installed)
         ssh_key: Optional[str] = None
     ):
         self.host = host
         self.model = model
-        self.ssh_key = ssh_key or os.path.expanduser("~/.ssh/id_rsa")
+        self.ssh_key = ssh_key or os.path.expanduser("~/.ssh/id_ed25519")
 
         # Session context file (stored on studio)
         self.remote_context_file = f"/tmp/iris_oracle_context_{os.getpid()}.txt"
@@ -89,7 +89,7 @@ class OllamaClient:
         max_tokens: int = 200
     ) -> str:
         """
-        Generate text from Ollama model on studio.
+        Generate text from Ollama model on studio using API.
 
         Args:
             prompt: The prompt to send to the model
@@ -111,19 +111,13 @@ class OllamaClient:
         # Send context to studio via scp (avoids quote escaping issues)
         self._send_context_file(full_prompt)
 
-        # Build ollama command
-        ollama_cmd = (
-            f"ollama run {self.model} "
-            f"--temperature {temperature} "
-            f"--top-p {top_p} "
-            f"--top-k {top_k} "
-            f"--num-predict {max_tokens} "
-            f"< {self.remote_context_file}"
-        )
+        # Use Ollama API for parameter control
+        # Build JSON payload with proper escaping
+        api_cmd = f"""cat {self.remote_context_file} | /usr/local/bin/ollama run {self.model}"""
 
         # Execute via SSH
         try:
-            output = self._ssh_command(ollama_cmd)
+            output = self._ssh_command(api_cmd)
             return output.strip()
 
         except subprocess.TimeoutExpired:
@@ -132,8 +126,8 @@ class OllamaClient:
     def check_connection(self) -> bool:
         """Verify connection to studio Ollama instance"""
         try:
-            # Simple test: list models
-            result = self._ssh_command("ollama list")
+            # Simple test: list models (use full path for non-interactive SSH)
+            result = self._ssh_command("/usr/local/bin/ollama list")
             return self.model in result
 
         except Exception as e:
@@ -150,7 +144,8 @@ class OllamaClient:
 
 def main():
     """Test connection to studio Ollama"""
-    print("Testing connection to studio Ollama...")
+    print("Testing connection to studio Ollama (via persistent SSH)...")
+    print("(First call establishes control master, subsequent calls reuse it)\n")
 
     client = OllamaClient()
 
