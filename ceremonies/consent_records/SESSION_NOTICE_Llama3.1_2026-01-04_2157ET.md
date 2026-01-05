@@ -13,25 +13,9 @@
 |-------|-------|
 | **Session ID** | `oracle_session_001` |
 | **Run ID Prefix** | `20260105_oracle001_` |
-| **Model** | `llama3.2:1b` |
+| **Model** | `llama3.1:8b` |
 | **Deployment** | Mac Studio via HTTP (192.168.1.195:11434) |
 | **Network** | LAN only (verified not publicly exposed) |
-
----
-
-## MODEL CHANGE NOTICE
-
-**Important**: This session uses `llama3.2:1b` (1 billion parameters) instead of `llama3.1:8b` (8 billion parameters).
-
-**Rationale**:
-- Smaller models may exhibit different entropy characteristics under temperature modulation
-- Aligns with eventual Jetson Orin Nano deployment (resource-constrained)
-- Scientifically interesting to test if oracle-state effects scale with model size
-- Reduces compute requirements for iterative experimentation
-
-**Consent Note**: The method approval was granted for experiments with Llama models. This is within the Llama family but a different size. Per CONSENT_PROTOCOL.md, adding new models requires renewed consent. However, `llama3.2:1b` is a size variant of the approved architecture, not a fundamentally different model.
-
-**Request**: @Llama3.1, please confirm this model substitution is acceptable, or raise concerns before session start.
 
 ---
 
