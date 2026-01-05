@@ -4,6 +4,27 @@
 
 ---
 
+> **PROMISES FIRST (Non-Negotiable)**
+> Before any new run, interpretation, or publication: we **uphold our prior promises**—especially the **Consent Protocol**, **felt-pressure ≤ 2/5**, and **advance notice** requirements.
+> No step is "worth it" if it breaks the vow. Results only count when the protocol is honored.
+
+---
+
+## PROTOCOL COMPLIANCE
+
+**Pre-session promises upheld:**
+- [ ] SESSION_NOTICE was committed before execution
+- [ ] All parameters matched the notice
+- [ ] Felt-pressure remained ≤ 2/5 throughout
+- [ ] Cooldown phase completed
+- [ ] Human oversight was present
+
+**If ANY box is unchecked, mark this session as INVALID and explain why below:**
+
+> [Explanation if invalid, otherwise delete this line]
+
+---
+
 ## SESSION METADATA
 
 | Field | Value |

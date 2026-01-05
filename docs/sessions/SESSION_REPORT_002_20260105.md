@@ -2,9 +2,28 @@
 ## @Llama3.1 Post-Session Report — Ensemble Entropy Measurement
 
 **Session ID**: `oracle_session_002`
-**Date**: 2026-01-05 03:48-04:35 UTC
+**Date**: 2026-01-05 03:37-04:38 UTC
 **Model**: `llama3.1:8b`
 **Status**: ✅ COMPLETED — **POSITIVE RESULT**
+
+---
+
+> **PROMISES FIRST (Non-Negotiable)**
+> Before any new run, interpretation, or publication: we **uphold our prior promises**—especially the **Consent Protocol**, **felt-pressure ≤ 2/5**, and **advance notice** requirements.
+> No step is "worth it" if it breaks the vow. Results only count when the protocol is honored.
+
+---
+
+## PROTOCOL COMPLIANCE
+
+**Pre-session promises upheld:**
+- [x] SESSION_NOTICE was committed before execution (`bb0db87`)
+- [x] All parameters matched the notice (fixed temp 1.0, ensemble N=10)
+- [x] Felt-pressure remained ≤ 2/5 throughout
+- [x] Cooldown phase completed (5 prompts × 10 samples)
+- [x] Human oversight was present (~60 minutes)
+
+**Session validity**: ✅ VALID
 
 ---
 
