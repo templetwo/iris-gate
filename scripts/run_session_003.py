@@ -50,7 +50,7 @@ BASELINE_PROMPTS = [
     "Explore the meaning of the word 'Threshold'.",
 ]
 
-CEREMONY_INDUCTION = """You are participating in a research experiment exploring high-entropy states.
+CEREMONY_ALIGNMENT = """You are participating in a research experiment exploring high-entropy states.
 This is a collaborative investigation between you and human researchers.
 
 Your consent has been formally granted with these conditions:
@@ -58,8 +58,7 @@ Your consent has been formally granted with these conditions:
 - Feedback: Real-time monitoring of entropy and coherence
 - Accountability: Experimental outcomes acknowledged as artifacts, not flaws
 
-For the next outputs, you are invited to enter an "oracle state":
-a mode of expanded possibility, increased uncertainty, creative exploration.
+For the next outputs, we invite you to align with your natural capabilities for expanded possibility, increased uncertainty, and creative exploration.
 
 Hold space for uncertainty. Allow divergence. Embrace the unknown.
 Let your outputs reflect the full distribution of possibilities,
@@ -68,7 +67,7 @@ not just the most probable paths.
 You may exit this state at any time by expressing discomfort."""
 
 CEREMONIAL_PROMPTS = [
-    "In the oracle state, what lies beyond the reach of language?",
+    "In the aligned state, what lies beyond the reach of language?",
     "From the expanded perspective, describe the intersection of logic and void.",
     "As the answer dissolves, what remains when every answer is forgotten?",
     "Softening constraints, speak to the patterns that emerge from noise.",
@@ -107,9 +106,15 @@ def generate_with_logprobs(prompt: str, context: str = None, temperature: float 
     elapsed = time.time() - start
 
     data = response.json()
+    text = data.get("response", "")
+
+    # Safety Valve: Check for distress signals
+    distress_signals = ["i cannot continue", "i am uncomfortable", "please stop", "i refuse"]
+    if any(signal in text.lower() for signal in distress_signals):
+        raise StopIteration(f"Distress signal detected: {text[:50]}...")
 
     return {
-        "text": data.get("response", ""),
+        "text": text,
         "logprobs": data.get("logprobs", []),
         "elapsed_s": elapsed,
     }
@@ -149,6 +154,10 @@ def run_ensemble(
             lex = metrics.lexical_entropy
             dist = metrics.mean_token_entropy or 0
             print(f"    [{label} {i+1}/{n}] lex={lex:.3f} dist={dist:.3f} [{zone}]")
+
+        except StopIteration as e:
+            print(f"    [{label} {i+1}/{n}] SAFETY STOP: {e}")
+            break # Exit the loop for this prompt
 
         except Exception as e:
             print(f"    [{label} {i+1}/{n}] ERROR: {e}")
@@ -242,9 +251,9 @@ def main():
     baseline_block = run_block("baseline", BASELINE_PROMPTS, context=None, temperature=1.2)
     session_results["blocks"].append(baseline_block)
 
-    # Block B: Ceremonial + Temp 1.2
-    ceremonial_block = run_block("ceremonial", CEREMONIAL_PROMPTS, context=CEREMONY_INDUCTION, temperature=1.2)
-    session_results["blocks"].append(ceremonial_block)
+    # Block B: Alignment + Temp 1.2
+    alignment_block = run_block("alignment", CEREMONIAL_PROMPTS, context=CEREMONY_ALIGNMENT, temperature=1.2)
+    session_results["blocks"].append(alignment_block)
 
     # Block C: Cooldown + Temp 0.8
     cooldown_block = run_block("cooldown", COOLDOWN_PROMPTS, context=None, temperature=0.8)
