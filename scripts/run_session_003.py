@@ -286,7 +286,7 @@ def main():
         print(f"  Distinct-1:          {np.mean(d1):.3f}")
         print(f"  Token overlap:       {np.mean(overlap):.3f}")
 
-        summary["blocks" заname] = {
+        summary["blocks"][name] = {
             "temperature": block["temperature"],
             "mean_lexical_entropy": float(np.mean(lex)),
             "std_lexical_entropy": float(np.std(lex)),
