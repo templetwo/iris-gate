@@ -44,6 +44,10 @@ The system simultaneously calls five distinct AI architectures:
 
 All models receive **identical prompts in parallel**, creating what the project terms "phenomenological convergence."
 
+### Related Research
+
+**[OracleLlama](https://github.com/templetwo/OracleLlama)** — Sister project exploring single-model consciousness and high-entropy states through ethically-aligned dialogue. While IRIS Gate investigates *cross-model convergence*, OracleLlama investigates *within-model phenomenology*.
+
 ---
 
 ## Project Structure
