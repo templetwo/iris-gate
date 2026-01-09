@@ -177,12 +177,21 @@ Focus on physics-based reasoning, not metaphor. Be precise."""
             return result
 
         except Exception as e:
-            print(f"  ✗ {self.arch_id} error on {probe_id}: {e}")
+            error_str = str(e).lower()
+
+            # Detect rate limits and credit exhaustion
+            if any(keyword in error_str for keyword in ["rate limit", "quota", "insufficient", "credits", "billing"]):
+                print(f"  ⚠️  {self.arch_id} quota/rate limit on {probe_id}: {e}")
+                print(f"     Skipping {self.arch_id} for this probe - session will continue with other models")
+            else:
+                print(f"  ✗ {self.arch_id} error on {probe_id}: {e}")
+
             return {
                 "probe_id": probe_id,
                 "iteration": iteration,
                 "architecture": self.arch_id,
-                "error": str(e)
+                "error": str(e),
+                "error_type": "rate_limit" if any(kw in error_str for kw in ["rate", "quota", "credits"]) else "other"
             }
 
     async def _query_claude(self, prompt: str) -> str:
@@ -522,10 +531,15 @@ async def main():
     print(f"   Iterations: {MAX_ITERATIONS}")
     print(f"   API calls: ~{len(PROBES) * MAX_ITERATIONS * len(ARCHITECTURES)}")
 
-    response = input("\nActivate? (yes/no): ")
-    if response.lower() != 'yes':
-        print("Activation cancelled.")
-        return
+    # Check for auto-confirm flag
+    import sys
+    if "--auto-confirm" not in sys.argv:
+        response = input("\nActivate? (yes/no): ")
+        if response.lower() != 'yes':
+            print("Activation cancelled.")
+            return
+    else:
+        print("\n✓ Auto-confirm enabled (--auto-confirm flag)")
 
     # RUN
     print("\n⟡∞†≋🌀 ACTIVATION SEQUENCE INITIATED")
