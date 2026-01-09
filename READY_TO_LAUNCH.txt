@@ -26,10 +26,10 @@ fundamental principles of resistance to perturbation through non-commutativity.
 
 🤖 FLAGSHIP ARCHITECTURES LOCKED (January 2026):
 
-  claude     → claude-sonnet-4-5-20250929 (Latest Sonnet 4.5)
-  gpt        → gpt-5.2 (Latest GPT-5.2)
-  grok       → grok-4 (Latest Grok 4)
-  gemini     → gemini-3.0-pro (Latest Gemini 3.0)
+  claude     → claude-sonnet-4-5-20250929 (Claude Sonnet 4.5)
+  gpt        → gpt-5.2-chat-latest (GPT-5.2 Chat - December 2025)
+  grok       → grok-4-1-fast-reasoning (Grok 4.1 with Reasoning)
+  gemini     → gemini-3-pro-preview (Gemini 3.0 Pro Preview)
   deepseek   → deepseek-chat (DeepSeek V3)
 
 ═══════════════════════════════════════════════════════════════════════════════
