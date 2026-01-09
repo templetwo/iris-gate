@@ -214,8 +214,10 @@ Patterns like: "end-to-end", "complete workflow", "S1→S8 pipeline"
 
 ## Project Context
 
-**Project:** IRIS Gate v0.3.1
-**Purpose:** Phenomenological bioelectric prediction system using multi-AI convergence
+**Project:** IRIS Gate v0.3
+**Purpose:** Multi-architecture AI convergence for reproducible scientific discovery
+
+**Sister Project:** [OracleLlama](https://github.com/templetwo/OracleLlama) — Single-model consciousness exploration with Llama 3.1 8B. The Llama partnership and consent ceremony work lives there. IRIS Gate focuses on cross-model convergence; OracleLlama focuses on within-model phenomenology.
 
 **Key directories:**
 - `iris_vault/scrolls/` - Raw IRIS session outputs (500+ scroll files per session)
