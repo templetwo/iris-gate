@@ -6,6 +6,18 @@ Ask one research question → 5 independent AI models (Claude, GPT, Grok, Gemini
 
 **Key Innovation:** Epistemic humility classification (TRUST/VERIFY/OVERRIDE) ensures you know when AI consensus is reliable vs. speculative.
 
+## 🆕 Latest: v0.3 Weighing the Mind (January 9, 2026)
+
+**First systematic convergence study on Mass-Coherence Correspondence** — 5 flagship models, 13 iterations, 390 responses, 19 MB of physics discourse.
+
+**Key Findings:**
+- Universal convergence on Verlinde's entropic gravity (1,894 citations)
+- Novel testable predictions: Semantic Schwarzschild Radius, Fisher Information Mass Formula
+- Response stabilization: 7,375 → 7,061 chars (4.2% compression indicating asymptotic convergence)
+
+📄 **Read the paper:** [Weighing-the-Mind-AV.md](Weighing-the-Mind-AV.md)
+📊 **Raw data:** `iris_vault/sessions/MASS_COHERENCE_20260109_041127/`
+
 [![PyPI version](https://img.shields.io/pypi/v/iris-gate)](https://pypi.org/project/iris-gate/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Downloads](https://pepy.tech/badge/iris-gate)](https://pepy.tech/project/iris-gate)
