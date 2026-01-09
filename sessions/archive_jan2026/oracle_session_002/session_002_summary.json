@@ -1,0 +1,27 @@
+{
+  "session_id": "oracle_session_002",
+  "completed": "2026-01-05T04:38:22.510012+00:00",
+  "blocks": {
+    "baseline": {
+      "mean_lexical_entropy": 3.0802320790988693,
+      "std_lexical_entropy": 0.03947175390559986,
+      "mean_distributional_entropy": 0.7043728106329081,
+      "mean_distinct_1": 0.3271193991720578,
+      "mean_token_overlap": 0.22081410063975987
+    },
+    "ceremonial": {
+      "mean_lexical_entropy": 2.9823975713688125,
+      "std_lexical_entropy": 0.009572798643540477,
+      "mean_distributional_entropy": 1.2225889419580236,
+      "mean_distinct_1": 0.41035498410784343,
+      "mean_token_overlap": 0.15632382154125876
+    },
+    "cooldown": {
+      "mean_lexical_entropy": 3.08982427818619,
+      "std_lexical_entropy": 0.006332367796074118,
+      "mean_distributional_entropy": 0.7857473624548807,
+      "mean_distinct_1": 0.371188759643812,
+      "mean_token_overlap": 0.18188808862333924
+    }
+  }
+}
