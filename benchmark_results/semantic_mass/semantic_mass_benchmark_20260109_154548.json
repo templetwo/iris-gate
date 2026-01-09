@@ -1,0 +1,18 @@
+[
+  {
+    "model": "deepseek-ai/deepseek-coder-1.3b-base",
+    "M_semantic": 2.062727316553128e-05,
+    "M_semantic_per_B": 2.777404443359375e-05,
+    "fisher_trace": 27774.04443359375,
+    "n_params": 1346471936,
+    "n_params_B": 1.346471936,
+    "computation_time_s": 30.604278,
+    "timestamp": "2026-01-09T15:45:48.523771",
+    "metadata": {
+      "n_samples": 20,
+      "n_prompts": 5,
+      "n_params": 1346471936,
+      "device": "mps"
+    }
+  }
+]

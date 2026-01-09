@@ -1,0 +1,74 @@
+{
+  "adv_accuracy": {
+    "metric": "adv_accuracy",
+    "n_models": 3,
+    "matched_models": [
+      "qwen2.5-1.5b",
+      "deepseek-1.3b",
+      "gemma-2-2b"
+    ],
+    "pearson_r": 0.7218722008145965,
+    "pearson_p": 0.486563667660216,
+    "spearman_rho": 0.5,
+    "spearman_p": 0.6666666666666667,
+    "mass_values": [
+      9.893674425396018e-05,
+      2.062727316553128e-05,
+      7.949685554786367e-05
+    ],
+    "robustness_values": [
+      0.44,
+      0.4,
+      0.48
+    ],
+    "prediction_supported": "False"
+  },
+  "perturbation_tolerance": {
+    "metric": "perturbation_tolerance",
+    "n_models": 3,
+    "matched_models": [
+      "qwen2.5-1.5b",
+      "deepseek-1.3b",
+      "gemma-2-2b"
+    ],
+    "pearson_r": 0.5780837339969851,
+    "pearson_p": 0.6076013859838925,
+    "spearman_rho": 0.5,
+    "spearman_p": 0.6666666666666667,
+    "mass_values": [
+      9.893674425396018e-05,
+      2.062727316553128e-05,
+      7.949685554786367e-05
+    ],
+    "robustness_values": [
+      0.14,
+      0.13,
+      0.16
+    ],
+    "prediction_supported": "False"
+  },
+  "semantic_stability": {
+    "metric": "semantic_stability",
+    "n_models": 3,
+    "matched_models": [
+      "qwen2.5-1.5b",
+      "deepseek-1.3b",
+      "gemma-2-2b"
+    ],
+    "pearson_r": 0.5780837339969852,
+    "pearson_p": 0.6076013859838922,
+    "spearman_rho": 0.5,
+    "spearman_p": 0.6666666666666667,
+    "mass_values": [
+      9.893674425396018e-05,
+      2.062727316553128e-05,
+      7.949685554786367e-05
+    ],
+    "robustness_values": [
+      0.65,
+      0.62,
+      0.71
+    ],
+    "prediction_supported": "False"
+  }
+}

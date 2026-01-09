@@ -1,0 +1,70 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "M_semantic": 9.893674425396018e-05,
+    "M_semantic_per_B": 0.00015273006729602816,
+    "fisher_trace": 152730.06729602814,
+    "n_params": 1543714304,
+    "n_params_B": 1.543714304,
+    "computation_time_s": 21.593951,
+    "timestamp": "2026-01-09T15:39:01.525952",
+    "source": "local",
+    "metadata": {
+      "n_samples": 20,
+      "n_prompts": 5,
+      "n_params": 1543714304,
+      "device": "mps"
+    }
+  },
+  {
+    "model": "deepseek-ai/deepseek-coder-1.3b-base",
+    "M_semantic": 2.062727316553128e-05,
+    "M_semantic_per_B": 2.777404443359375e-05,
+    "fisher_trace": 27774.04443359375,
+    "n_params": 1346471936,
+    "n_params_B": 1.346471936,
+    "computation_time_s": 30.604278,
+    "timestamp": "2026-01-09T15:45:48.523771",
+    "source": "local",
+    "metadata": {
+      "n_samples": 20,
+      "n_prompts": 5,
+      "n_params": 1346471936,
+      "device": "mps"
+    }
+  },
+  {
+    "model": "LiquidAI/LFM2-1.2B",
+    "M_semantic": 4.077942153083118e-05,
+    "M_semantic_per_B": 4.772581298828126e-05,
+    "fisher_trace": 47725.81298828125,
+    "n_params": 1170340608,
+    "n_params_B": 1.170340608,
+    "computation_time_s": 62.914162,
+    "timestamp": "2026-01-09T15:52:39.277099",
+    "source": "mac_studio",
+    "metadata": {
+      "n_samples": 50,
+      "n_prompts": 5,
+      "n_params": 1170340608,
+      "device": "mps"
+    }
+  },
+  {
+    "model": "google/gemma-2-2b",
+    "M_semantic": 7.949685554786367e-05,
+    "M_semantic_per_B": 0.00020783195942306517,
+    "fisher_trace": 207831.9594230652,
+    "n_params": 2614341888,
+    "n_params_B": 2.614341888,
+    "computation_time_s": 10.291624,
+    "timestamp": "2026-01-09T16:38:42.753299",
+    "source": "mac_studio",
+    "metadata": {
+      "n_samples": 20,
+      "n_prompts": 5,
+      "n_params": 2614341888,
+      "device": "mps"
+    }
+  }
+]

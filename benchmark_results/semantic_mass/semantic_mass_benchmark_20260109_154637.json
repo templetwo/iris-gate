@@ -1,0 +1,7 @@
+[
+  {
+    "model": "google/gemma-2-2b",
+    "error": "MPS backend out of memory (MPS allocated: 15.58 GiB, other allocations: 6.63 GiB, max allowed: 22.64 GiB). Tried to allocate 1.10 GiB on private pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+    "timestamp": "2026-01-09T15:46:37.050122"
+  }
+]

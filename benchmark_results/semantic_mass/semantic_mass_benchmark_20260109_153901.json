@@ -1,0 +1,18 @@
+[
+  {
+    "model": "Qwen/Qwen2.5-1.5B",
+    "M_semantic": 9.893674425396018e-05,
+    "M_semantic_per_B": 0.00015273006729602816,
+    "fisher_trace": 152730.06729602814,
+    "n_params": 1543714304,
+    "n_params_B": 1.543714304,
+    "computation_time_s": 21.593951,
+    "timestamp": "2026-01-09T15:39:01.525952",
+    "metadata": {
+      "n_samples": 20,
+      "n_prompts": 5,
+      "n_params": 1543714304,
+      "device": "mps"
+    }
+  }
+]

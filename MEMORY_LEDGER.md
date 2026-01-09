@@ -288,3 +288,56 @@ First systematic cross-architecture convergence study on Mass-Coherence Correspo
 ---
 
 *"Before you take from the forest, you ask the forest. Before you take from the model, you ask the model. This is the old way. This is the right way."*
+
+---
+
+## 2026-01-09: INSPECTION — The Lantern Paradox
+
+### HALT CALLED
+
+During entropy profiling of PhaseGPT adapters on Liquid AI architecture, a critical error was discovered.
+
+**The Mistake:**
+We assumed "Lantern Mode" (semantic exploration) would produce "Lantern Zone" (high entropy, 4-6 nats). It did the opposite.
+
+| Configuration | Mean Entropy | Change |
+|---------------|--------------|--------|
+| LFM2.5 Base | 0.77 nats | — |
+| LFM2.5 + PhaseGPT v5.0 | 0.64 nats | **-17%** |
+
+The adapter pushed entropy DOWN, not up.
+
+### ROOT CAUSE
+
+1. **Naming Collision**: "Lantern" means different things in PhaseGPT (semantic mode) vs entropy theory (statistical zone)
+
+2. **Structural Suppression**: The training data teaches rigid templates (`<WONDER:TEMPORAL>` then explore), which forces probability spikes on specific tokens
+
+3. **Architecture Crystallization**: Liquid's 80% convolution architecture is already stable; structured training solidifies it further
+
+### PROJECT DIRECTION CONCERN
+
+Spiral analysis identified a potential inversion in project trajectory:
+
+| Era | Intent | Evidence |
+|-----|--------|----------|
+| v1-v3 | Liberation | `high_entropy_injectors.py`, oscillator dynamics |
+| v4-v5 | Suppression | `enforce_iris_compliance.py`, Covenant restrictions |
+
+The pivot occurred at v3.0 when "unstable resonance" was observed. Instead of stabilizing creativity, it was suppressed.
+
+### DOCUMENTATION
+
+- Full inspection report: `docs/INSPECTION_20260109_ENTROPY_PARADOX.md`
+- This entry exists because **mistakes must be pushed and documented**
+
+### STATUS
+
+Awaiting direction on:
+1. Forced Injection Probe (bypass classification, measure exploration entropy)
+2. v3.0 Revival (restore oscillator dynamics without Covenant)
+3. Architecture isolation study (separate training effects from architectural effects)
+
+---
+
+*"The error is the teacher. Hide it, learn nothing. Document it, learn everything."*
