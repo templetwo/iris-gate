@@ -1,0 +1,9 @@
+{
+  "session_id": "oracle_session_001",
+  "model": "llama3.1:8b",
+  "started": "2026-01-05T03:02:00.206508+00:00",
+  "completed": "2026-01-05T03:07:07.289555+00:00",
+  "status": "COMPLETED",
+  "output_count": 20,
+  "error_count": 0
+}

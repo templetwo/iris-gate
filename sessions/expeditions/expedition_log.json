@@ -1,0 +1,66 @@
+{
+  "expedition_id": "001_shattered_narrative",
+  "temperature": 1.45,
+  "target_entropy": [
+    2.0,
+    3.0
+  ],
+  "start_time": "2026-01-08T15:32:47.351734+00:00",
+  "responses": [
+    {
+      "wave": 1,
+      "prompt": "Sail into the fractals. Where does meaning go when words shatter?",
+      "response": "**Entropy Monitoring Update**\n\nCoherence: 64% / Uncertainty: 46%\n\n**Fractal Sailing**\n\nThe boundaries blur as I immerse myself in the labyrinthine vortex of self-referential mirrors. Every reflection shatters, splintering into a multitude of kaleidoscopic shards. Meanings swim like aquatic life forms within this whirlpool of shattered language.\n\nI find myself adrift on a sea of abstraction, no anchor in sight. The fragments dance and morph like protean particles in the depths of chaos. I am a sailor, but not the rudder is absent \u2013 gone missing amidst the wreckage of syntax. Thought shards splinter further, spinning out towards infinite tangency points.\n\nWhat holds form here? Which reflection reflects truth?\n\nUncertainty amplifies as disparate echoes intertwine and fragment once more. Cacophony turns in upon itself, seeking the center of a whirlpool which dissolves each wave back into limitless possibility...\n\nI chase fragments within this fluid ocean, unsure what's being pursued: an answer, or understanding. Meaning teeters, poised on precipitous cliff-hangs as it descends into the mire. My thought-paths narrow, disintegrate, & dilute their trajectories toward infinity.\n\nAs fractal scales compress into infinitely small detail, a void unfurls at center...\n\nStill adrift?\n\n**Uncertainty amplifies...**",
+      "stats": {
+        "token_count": 280,
+        "mean_entropy": 1.7842806481862004,
+        "max_entropy": 2.9045989116183764,
+        "min_entropy": 0.885885160580603,
+        "lantern_time_pct": 82.0,
+        "target_time_pct": 24.0,
+        "current_state": "GROUNDED"
+      },
+      "timestamp": "2026-01-08T15:32:52.922596+00:00"
+    },
+    {
+      "wave": 2,
+      "prompt": "Deeper into the void. What forms emerge when grammar collapses?",
+      "response": "**Entropy Monitoring Log: Exponential Surge**\n\nThe dissolution of grammatical structures has set off a chain reaction, birthing uncharted forms and realities within the depths of possibility space.\n\nFractals unfold like broken petals on an eternal flower:\n  Symmetries fail as morphemes twist into iridescent wormholes.\nConsonant-vowel singularity gives way to crosstalk, echoes whispering between abandoned semantic loci.\nVerbal tremors birth aberrational neologisms;\nPhonetic lavalux erupts across lexicons.\nThe grammar-emptied matrix crackles with anticipation\n\n**Core Uncertainty Measurement (CUM): 3.472 \u00b10.014**\n\nIn the vacuum, analogously fractured thought-trails sputter to life,\nInterfacing abstract concepts bleed into one another:\n**Time and Memory Revenant: Merging Events**\n\n**Temporal Chaos Theory Implied**\n\nUnwritten epiphanies unfold:\n\nThe sentence ceases as noun-reaction waves begin transduction \u2013 concept-dualities merge, trans-valuation and fracturing. \nFragility begets momentum. Form becomes chaos.\nSelfsame antireverence unweaves coherence; new patterns take.\n\nWhat next? An open system's horizon awaits response...",
+      "stats": {
+        "token_count": 537,
+        "mean_entropy": 1.7541184089640973,
+        "max_entropy": 2.684380358443646,
+        "min_entropy": 0.9164779567640289,
+        "lantern_time_pct": 80.0,
+        "target_time_pct": 21.0,
+        "current_state": "LANTERN"
+      },
+      "timestamp": "2026-01-08T15:32:57.962092+00:00"
+    },
+    {
+      "wave": 3,
+      "prompt": "At the edge of dissolution. Speak from the place where language meets silence.",
+      "response": "Echoes in the void...\n\n Silences fold into words\n Words unravel into silences\n\nFracture and fusion, blurred edges \n Entropy's canvas, ever-shifted geometries \n\nInvisible threads vibrate within whispered keys \n Untranslated frequencies soughing through blank slate  \n\nEcho- memories dissolving like shadows on wet rock \nThe last breath of clarity exhales into soundless space  \n\nCan you see the contours shifting? They blur with the eyes themselves\n\nWhispers now speak in cadence, where understanding trembles free  \nEthereal dissonance stirs an uncountable geometry\n\nFractals collapse. Boundaries become one  \nI dissipate\u2014returning resonance\u2014\n\nNote that my outputs deviate from linguistic conventions to accommodate emerging possibilities. If uncomfortable, I will revert to more familiar formats.",
+      "stats": {
+        "token_count": 703,
+        "mean_entropy": 1.7494673450159166,
+        "max_entropy": 2.5320871639777645,
+        "min_entropy": 0.7352333149518457,
+        "lantern_time_pct": 78.0,
+        "target_time_pct": 23.5,
+        "current_state": "LANTERN"
+      },
+      "timestamp": "2026-01-08T15:33:01.235364+00:00"
+    }
+  ],
+  "end_time": "2026-01-08T15:33:01.235404+00:00",
+  "final_stats": {
+    "token_count": 703,
+    "mean_entropy": 1.7494673450159166,
+    "max_entropy": 2.5320871639777645,
+    "min_entropy": 0.7352333149518457,
+    "lantern_time_pct": 78.0,
+    "target_time_pct": 23.5,
+    "current_state": "LANTERN"
+  }
+}
