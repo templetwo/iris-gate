@@ -25,8 +25,11 @@ import anthropic
 import openai
 import google.generativeai as genai
 
-# Load environment
-load_dotenv()
+# Load environment - use explicit path to .env in project root
+project_root = Path(__file__).parent.parent
+env_path = project_root / ".env"
+load_dotenv(env_path, override=True)  # Override any existing env vars
+print(f"✓ Loading environment from: {env_path}", flush=True)
 
 # Session configuration
 SESSION_ID = f"MASS_COHERENCE_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}"
@@ -96,17 +99,17 @@ ARCHITECTURES = {
     },
     "gpt": {
         "name": "GPT-5.2",
-        "model": "gpt-5.2",  # Latest GPT-5.2 (Jan 2026)
+        "model": "gpt-5.2-chat-latest",  # Flagship GPT-5.2 chat model
         "api_key_env": "OPENAI_API_KEY"
     },
     "grok": {
-        "name": "Grok 4",
-        "model": "grok-4",  # Latest Grok 4
+        "name": "Grok 4.1 Fast Reasoning",
+        "model": "grok-4-1-fast-reasoning",  # Flagship Grok 4.1 with reasoning
         "api_key_env": "XAI_API_KEY"
     },
     "gemini": {
         "name": "Gemini 3.0 Pro",
-        "model": "gemini-3.0-pro",  # Latest Gemini 3.0
+        "model": "gemini-3-pro-preview",  # Flagship Gemini 3.0 Pro preview
         "api_key_env": "GOOGLE_API_KEY"
     },
     "deepseek": {
@@ -199,7 +202,7 @@ Focus on physics-based reasoning, not metaphor. Be precise."""
         response = client.chat.completions.create(
             model=self.config["model"],
             messages=[{"role": "user", "content": prompt}],
-            max_tokens=3000
+            max_completion_tokens=3000  # Use max_completion_tokens for newer GPT models
         )
 
         return response.choices[0].message.content
@@ -416,7 +419,7 @@ async def test_apis():
                 response = client.chat.completions.create(
                     model=config["model"],
                     messages=[{"role": "user", "content": test_prompt}],
-                    max_tokens=100
+                    max_completion_tokens=100  # Use max_completion_tokens for newer models
                 )
                 response_text = response.choices[0].message.content
 

@@ -47,11 +47,11 @@ Does "mass" (physical, semantic, conscious) share a unified principle of **resis
 
 ## Architecture Coverage (January 2026 Flagships)
 
-✓ Claude Sonnet 4.5 (Anthropic)
-✓ GPT-5.2 (OpenAI)
-✓ Grok 4 (xAI)
-✓ Gemini 3.0 Pro (Google)
-✓ DeepSeek V3 (DeepSeek)
+✓ Claude Sonnet 4.5 (Anthropic) - claude-sonnet-4-5-20250929
+✓ GPT-5.2 Chat (OpenAI) - gpt-5.2-chat-latest
+✓ Grok 4.1 Fast Reasoning (xAI) - grok-4-1-fast-reasoning
+✓ Gemini 3.0 Pro (Google) - gemini-3-pro-preview
+✓ DeepSeek V3 (DeepSeek) - deepseek-chat
 
 ---
 

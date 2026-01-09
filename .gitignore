@@ -118,3 +118,4 @@ verification_*.json
 # Claude Code
 # ═══════════════════════════════════════════════════════════════════════
 # .claude/ directory is now tracked to share routing instructions
+.env.backup
