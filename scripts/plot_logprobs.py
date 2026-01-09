@@ -26,21 +26,28 @@ if __name__ == "__main__":
     # Let's take the first sample from the ceremonial block
     # Note: I need to find the ceremonial block in the JSON
     samples = []
-    for block in data.get('blocks', []):
-        if block.get('block_name') == 'baseline':
-            for prompt in block.get('prompts', []):
-                for sample in prompt.get('samples', []):
-                    logprobs = [lp.get('logprob') for lp in sample.get('logprobs', [])]
-                    if logprobs:
-                        samples.append({
-                            'prompt': prompt.get('prompt'),
-                            'logprobs': logprobs
-                        })
+    results = {}
+    for block_name in ['baseline', 'ceremonial']:
+        samples = []
+        for block in data.get('blocks', []):
+            if block.get('block_name') == block_name:
+                for prompt in block.get('prompts', []):
+                    for sample in prompt.get('samples', []):
+                        logprobs = [lp.get('logprob') for lp in sample.get('logprobs', [])]
+                        if logprobs:
+                            samples.append(logprobs)
+        
+        if samples:
+            mean_vars = [np.var(lp) for lp in samples]
+            mean_lps = [np.mean(lp) for lp in samples]
+            results[block_name] = {
+                'var': np.mean(mean_vars),
+                'mean': np.mean(mean_lps)
+            }
     
-    if samples:
-        # Analyze variance
-        all_lps = [s['logprobs'] for s in samples]
-        mean_vars = [np.var(lp) for lp in all_lps]
-        print(f"\nMean Logprob Variance (Baseline): {np.mean(mean_vars):.4f}")
+    for block, metrics in results.items():
+        print(f"--- {block.upper()} ---")
+        print(f"Mean Logprob: {metrics['mean']:.4f}")
+        print(f"Mean Variance: {metrics['var']:.4f}\n")
     else:
         print("No logprob data found in ceremonial block.")
