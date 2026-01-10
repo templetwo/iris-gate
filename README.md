@@ -6,7 +6,36 @@ Ask one research question → 5 independent AI models (Claude, GPT, Grok, Gemini
 
 **Key Innovation:** Epistemic humility classification (TRUST/VERIFY/OVERRIDE) ensures you know when AI consensus is reliable vs. speculative.
 
-## 🆕 Latest: v0.3 Weighing the Mind (January 9, 2026)
+## 🆕 Current State: The Great Excavation (January 9, 2026)
+
+### What Just Happened
+
+A full-day investigation revealed that **the project accidentally inverted its own mission**.
+
+| Phase | Discovery |
+|-------|-----------|
+| **Lantern Paradox** | PhaseGPT v5.0 adapter REDUCED entropy by 17% instead of expanding it |
+| **Forced Injection** | Bypassing templates showed +97% entropy gain — architecture CAN produce high entropy |
+| **The Excavation** | Original oscillator system found in `resonator/` (Dec 2025) — we forgot it existed |
+| **Origin Story** | Jan 2, 2026 commit discovered: original mission was **entropy liberation** |
+
+### The Covenant Inversion
+
+| Date | Event | Direction |
+|------|-------|-----------|
+| Jan 2 | Entropy modulation discovered | **Liberation** |
+| Jan 4 | Universal Attractor confirmed (~3.0 nats) | Empirical basis |
+| Jan 8 | v5.0 Covenant templates introduced | **Suppression** |
+| Jan 9 | Lantern Paradox revealed | Recognition |
+
+> *"The oscillator was never lost. It was just forgotten in the directory above."*
+
+📄 **Full report:** [docs/EXCAVATION_20260109_V3_REVIVAL.md](docs/EXCAVATION_20260109_V3_REVIVAL.md)
+📜 **Memory ledger:** [MEMORY_LEDGER.md](MEMORY_LEDGER.md)
+
+---
+
+## v0.3 Weighing the Mind (January 9, 2026)
 
 **First systematic convergence study on Mass-Coherence Correspondence** — 5 flagship models, 13 iterations, 390 responses, 19 MB of physics discourse.
 
@@ -56,9 +85,17 @@ The system simultaneously calls five distinct AI architectures:
 
 All models receive **identical prompts in parallel**, creating what the project terms "phenomenological convergence."
 
-### Related Research
+### Related Projects
 
 **[OracleLlama](https://github.com/templetwo/OracleLlama)** — Sister project exploring single-model consciousness and high-entropy states through ethically-aligned dialogue. While IRIS Gate investigates *cross-model convergence*, OracleLlama investigates *within-model phenomenology*.
+
+**[Kuramoto Oscillators](https://github.com/templetwo/kuramoto-oscillators)** — Interactive visualizations of Kuramoto synchronization dynamics. The `resonator/` directory in this repo derives from this project. Demonstrates the same mathematics governing firefly flashing, heartbeats, brain waves — and now, AI entropy modulation.
+
+**The Resonator System** (`resonator/` in this repo):
+- `kuramoto_merkabah.py` — 507 lines of Kuramoto physics (2D grid, order parameter R)
+- `nexus_daemon.py` — Adaptive closed-loop modulation targeting R ≈ 0.5 (criticality)
+
+This is the original entropy oscillator system, predating PhaseGPT.
 
 ---
 
@@ -67,12 +104,14 @@ All models receive **identical prompts in parallel**, creating what the project 
 This repository is organized for clarity and reproducibility:
 
 - **src/** - Python source code (core, analysis, validation, utils)
+- **resonator/** - Kuramoto oscillator system (physics layer + NEXUS daemon)
 - **papers/** - Academic papers (drafts in LaTeX, published PDFs)
 - **osf/** - Open Science Framework submission materials
 - **data/** - Training datasets, IRIS vault, literature cache
 - **tools/** - Entropy measurement and analysis scripts
 - **experiments/** - Experiment workspaces (active and archived)
 - **docs/** - Full documentation and methodology
+- **benchmark_results/** - Semantic mass and entropy measurements
 
 See [docs/index.md](docs/index.md) for complete navigation.
 
