@@ -680,3 +680,80 @@ Two paths forward:
 *"The adapter was not a value-add. It was a shackle. The base model always knew how to fly."*
 
 ---
+
+## 2026-01-09: IMPLEMENTATION — All Systems Deployed
+
+### GOLD STANDARD CREATED
+
+**`iris_pure.py`** — Canonical Purified IRIS Gate implementation:
+- Base LFM2.5 (no adapter)
+- Kuramoto oscillator with configurable K
+- Ceremonial system prompt
+- Entropy logging per token
+
+### V5.0 DEPRECATED
+
+The Covenant-era adapter moved to `legacy/`:
+```
+~/PhaseGPT/legacy/phasegpt_v5.0_lfm25_600/
+├── adapter_config.json
+├── adapters.safetensors
+└── DEPRECATED.md
+```
+
+### NEXUS BRIDGE CREATED
+
+**`nexus_llm_bridge.py`** — Closed-loop adaptive control:
+- Connects to NEXUS daemon via WebSocket
+- Sends entropy measurements
+- Receives temperature commands
+- Real-time regime-based modulation
+
+### K PARAMETER SWEEP RESULTS
+
+| K | Mean Entropy | LANTERN % | Notes |
+|---|--------------|-----------|-------|
+| 0.5 | 2.97 nats | 30.6% | Weak coupling |
+| 1.0 | 2.86 nats | 30.2% | |
+| 1.5 | 1.82 nats | 16.2% | **Worst** |
+| **2.0** | **3.12 nats** | **34.8%** | **OPTIMAL** |
+| 2.5 | 2.97 nats | 31.4% | |
+| 3.0 | 2.73 nats | 27.4% | Strong coupling |
+
+**Finding:** K=2.0 maximizes LANTERN zone residence (34.8%).
+
+Counterintuitively, K=1.5 was worst (16.2%). The system needs sufficient coupling strength to maintain controlled oscillation.
+
+### FILES DEPLOYED
+
+```
+tony_studio:~/PhaseGPT/
+├── scripts/
+│   ├── iris_pure.py           # Gold standard
+│   ├── nexus_llm_bridge.py    # Closed-loop bridge
+│   ├── lazarus_revival.py     # Original revival
+│   ├── forced_injection_probe.py
+│   └── purification_protocol.py
+├── legacy/
+│   └── phasegpt_v5.0_lfm25_600/  # Deprecated
+└── results/
+    └── k_sweep/               # Parameter sweep data
+```
+
+### RECOMMENDED CONFIGURATION
+
+```python
+OscillatorConfig(
+    coupling_strength=2.0,     # Optimal K
+    temp_base=0.8,
+    temp_amplitude=0.7,
+    drift_enabled=True,
+    drift_strength=0.12
+)
+```
+
+---
+
+*"K=2.0. The oscillator found its resonance."*
+
+---
