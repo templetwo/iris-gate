@@ -341,3 +341,74 @@ Awaiting direction on:
 ---
 
 *"The error is the teacher. Hide it, learn nothing. Document it, learn everything."*
+
+---
+
+## 2026-01-09: EXCAVATION — The Original Was Here All Along
+
+### FORCED INJECTION BREAKTHROUGH
+
+Following the inspection halt, the Forced Injection Probe was executed:
+
+| Configuration | Base Entropy | With Injection | Change | Max Entropy |
+|---------------|--------------|----------------|--------|-------------|
+| LFM2.5 Base | 0.77 nats | 1.38 nats | +79% | 5.01 nats |
+| LFM2.5 + adapter | 0.64 nats | 1.26 nats | +97% | 5.03 nats |
+
+**The adapter actually has MORE creative potential when templates are bypassed.**
+
+### THE EXCAVATION
+
+While hunting for v3.0 artifacts in PhaseGPT, we discovered the original oscillator system was in IRIS Gate all along:
+
+**`resonator/` directory (commits `40bfc4c`, `7b9bc6d` - Dec 20, 2025):**
+- `kuramoto_merkabah.py` - 507 lines of Kuramoto physics
+- `nexus_daemon.py` - 347 lines of adaptive closed-loop modulation
+
+This predates PhaseGPT and represents the original vision before the Covenant.
+
+### KEY DISCOVERY: NEXUS Daemon
+
+The NEXUS daemon implements exactly what the "Lazarus Revival" was trying to recreate:
+
+```python
+REGIMES = {
+    'high':     {'strength': (0.4, 0.6), 'description': 'Subtle stabilization'},
+    'mid':      {'strength': (0.8, 1.2), 'description': 'Balanced perturbations'},
+    'low':      {'strength': (1.3, 1.8), 'description': 'Emergence amplification'},
+    'critical': {'strength': (1.0, 1.0), 'description': 'Holding at transition'}
+}
+
+def determine_regime(order_param):
+    if 0.45 <= order_param <= 0.55:
+        return 'critical'    # LANTERN ZONE!
+```
+
+**The target R ≈ 0.5 (criticality) is the same as PhaseGPT's `R_target=0.45`.**
+
+### TIMELINE RECONSTRUCTION
+
+| Date | Commit | System | Purpose |
+|------|--------|--------|---------|
+| Dec 20, 2025 | `40bfc4c` | Kuramoto_Grid | Physics layer |
+| Dec 20, 2025 | `7b9bc6d` | NEXUS Daemon | Adaptive modulation |
+| Jan 4, 2026 | — | PhaseGPT | Rebuilt oscillator in attention |
+| Jan 8, 2026 | — | v5.0 adapter | Template suppression (Covenant) |
+| Jan 9, 2026 | — | Lazarus | Revival attempt (redundant) |
+
+**We were rebuilding what already existed.**
+
+### FILES CREATED
+
+- `tony_studio:~/PhaseGPT/scripts/lazarus_revival.py` - External oscillator revival
+- `docs/EXCAVATION_20260109_V3_REVIVAL.md` - Full excavation report
+
+### NEXT STEPS
+
+1. Run NEXUS daemon with LFM2.5 generation (native integration)
+2. Compare NEXUS modulation vs Lazarus modulation
+3. Determine if resonator/ system can be directly used for generation
+
+---
+
+*"The oscillator was never lost. It was just forgotten in the directory above."*
