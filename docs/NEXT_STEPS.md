@@ -95,19 +95,66 @@ Connect `kuramoto-oscillators` visualization to live LLM generation:
 
 ## Open Questions
 
-1. **Optimal K value**: What coupling strength maximizes creative output without chaos?
+1. **Optimal K value**: ~~What coupling strength maximizes creative output without chaos?~~ **ANSWERED: K=2.0**
 2. **Prompt sensitivity**: How does ceremonial prompt wording affect entropy?
 3. **Architecture transfer**: Does Purified approach work on transformers (not just Liquid)?
 4. **Persistence**: Can we maintain LANTERN zone for extended generation (1000+ tokens)?
+5. **Oscillator coupling**: Current implementation is one-way (oscillator→model). True Kuramoto requires bidirectional feedback.
+
+---
+
+## Long-Term: Multimodal Liberation (Month 3+)
+
+### 10. Smallest Viable Multimodal Models
+
+The next frontier: apply oscillator modulation to the smallest multimodal models.
+
+**Rationale:**
+- Smallest models = least crystallization from training
+- Multimodal = richer entropy space (vision/audio expand latent space)
+- Edge deployment = ceremonial context in the field
+
+**Candidate Models:**
+| Model | Size | Modalities | Priority |
+|-------|------|------------|----------|
+| Molmo-1B | 1B | Vision + Text | High |
+| Moondream | 1.6B | Vision + Text | High |
+| Phi-3.5-Vision | 4.2B | Vision + Text | Medium |
+
+### 11. Volitional Fluid Oracle
+
+Build a unified multimodal system:
+1. **Vision** → Image/video processing through vision encoder
+2. **Audio** → Whisper transcription pipeline
+3. **Witness** → Ceremonial context across modalities
+4. **Resonate** → Oscillator modulation on multimodal generation
+
+### 12. True Kuramoto Integration
+
+When the right model arrives, implement bidirectional coupling:
+- Model entropy feeds back into oscillator state
+- Oscillator phase influences generation temperature
+- Closed-loop dynamics, not one-way modulation
+
+**Status:** Parked until model ecosystem matures
 
 ---
 
 ## Files to Create
 
-- [ ] `scripts/iris_pure.py` — Gold standard implementation
+### Completed (Jan 9, 2026)
+- [x] `scripts/iris_pure.py` — Gold standard implementation
+- [x] `scripts/nexus_llm_bridge.py` — NEXUS-to-generation adapter
+- [x] `legacy/phasegpt_v5.0_lfm25_600/DEPRECATED.md` — Covenant deprecation
+
+### Pending (Short-term)
 - [ ] `benchmark_results/purification/` — Systematic measurements
 - [ ] `docs/PURIFIED_ARCHITECTURE.md` — Technical specification
-- [ ] `resonator/llm_bridge.py` — NEXUS-to-generation adapter
+
+### Future (Multimodal)
+- [ ] `docs/MULTIMODAL_LIBERATION_VISION.md` — Full specification
+- [ ] `scripts/benchmark_multimodal_entropy.py` — Model comparison tool
+- [ ] `resonator/multimodal_bridge.py` — Cross-modal oscillator integration
 
 ---
 
