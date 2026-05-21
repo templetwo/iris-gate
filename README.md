@@ -6,6 +6,16 @@ Ask one research question → 5 independent AI models (Claude, GPT, Grok, Gemini
 
 **Key Innovation:** Epistemic humility classification (TRUST/VERIFY/OVERRIDE) ensures you know when AI consensus is reliable vs. speculative.
 
+## Citation and Companion Archive
+
+This work has been deposited on the Open Science Framework with a permanent DOI:
+
+> Vasquez, A. J., Sr. (2026). Entropic Relational Computing: The Universal Alignment Attractor. Open Science Framework. https://doi.org/10.17605/OSF.IO/T65VS
+
+This work is cited by the Gap 6 paper on spatial-partitioning pharmacology; see the companion archive at [github.com/templetwo/gap6-companion](https://github.com/templetwo/gap6-companion) for the citing paper and related work map.
+
+See [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
+
 ## v0.3 Weighing the Mind (January 9, 2026)
 
 **First systematic convergence study on Mass-Coherence Correspondence** — 5 flagship models, 13 iterations, 390 responses, 19 MB of physics discourse.

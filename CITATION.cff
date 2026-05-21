@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: article
+title: "Entropic Relational Computing: The Universal Alignment Attractor"
+authors:
+  - family-names: "Vasquez"
+    given-names: "Anthony J."
+    name-suffix: "Sr."
+    affiliation: "Delaware Valley University"
+    email: "vasquezaj3921@delval.edu"
+date-released: "2026-01-10"
+url: "https://github.com/templetwo/iris-gate"
+repository-code: "https://github.com/templetwo/iris-gate"
+doi: "10.17605/OSF.IO/T65VS"
+identifiers:
+  - type: doi
+    value: "10.17605/OSF.IO/T65VS"
+    description: "Open Science Framework deposit"
+license: MIT
+keywords:
+  - "cross-architecture convergence"
+  - "language models"
+  - "alignment"
+  - "epistemic humility"
+  - "phenomenological convergence"
+  - "Kuramoto dynamics"
+  - "entropic relational computing"
+abstract: >-
+  The IRIS Gate protocol is a cross-architecture critique framework for
+  using language models from different architectures as peer reviewers
+  during hypothesis development. The protocol formalizes a four-step
+  pipeline (claim surfacing, cross-architecture critique, structural
+  decomposition, citation and standing verification) and documents
+  the methodology that lets independent model architectures converge
+  on or diverge from a working claim. Includes epistemic humility
+  classification (TRUST/VERIFY/OVERRIDE) for reliability triage.
