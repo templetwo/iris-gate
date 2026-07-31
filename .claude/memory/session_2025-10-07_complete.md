@@ -311,7 +311,7 @@ Evidence:
 
 ## THE MECHANISTIC REFINEMENT
 
-### What Changed (From hypothesis_refinement_2025-01-07.md)
+### What Changed (From hypothesis_refinement_2025-10-07.md)
 
 **Evidence Hierarchy Corrected:**
 - VDAC1 direct binding (5-star causal evidence) elevated

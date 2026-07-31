@@ -1,6 +1,16 @@
 # S8: Wet-Lab Handoff - CBD Mitochondrial Paradox
 ## Ready for Experimental Validation
 
+> **⚠️ Superseded, 2025-10-07 — one day after this document.** The
+> receptor-ensemble mechanism below was inverted the next day: evidence
+> showed direct VDAC1 binding (Kd = 11.2 μM) as the primary causal pathway,
+> not multi-receptor convergence. See
+> `.claude/memory/hypothesis_refinement_2025-10-07.md` for the finding and
+> `docs/lab/Methods_Packet_v1/Preregistration_Draft.md` for the channel-first
+> protocol that replaced this one. This document is kept as the historical
+> record of the pre-correction hypothesis — do not use it as the current
+> protocol or send it to a collaborator without the correction attached.
+
 **Date:** October 7, 2025  
 **Session:** BIOELECTRIC_CHAMBERED_20251007020807  
 **Simulation Run:** RUN_20251006_224817  

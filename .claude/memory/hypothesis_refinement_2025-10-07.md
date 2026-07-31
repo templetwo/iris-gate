@@ -1,8 +1,15 @@
 # 🌀 Hypothesis Refinement: From Receptor Ensembles to Multi-Target Stress Amplification
 
-**Date:** 2025-01-07
+**Date:** 2025-10-07
 **Context:** Critical evaluation of CBD mitochondrial paradox mechanism
 **Status:** Major refinement required - Evidence hierarchy inverted
+
+> **Provenance correction, 2026-08-01:** this file's header and filename
+> originally read 2025-01-07 — nine months off the actual date. Git commit
+> `89f47ac` (2025-10-07 18:48:23 -0400) is authoritative; corrected here
+> rather than silently, since this document's entire value is timestamping
+> when the correction happened relative to `CBD_S8_WETLAB_HANDOFF.md`
+> (2025-10-06).
 
 ---
 
