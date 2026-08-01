@@ -2,6 +2,25 @@
 
 > **READ THIS FIRST** - This file contains essential context for continuing work on this project.
 
+> ## ⚠️ BEFORE YOU START: this is not the active repo
+>
+> Active protocol development lives in **`~/Iris-Gate-Evo`**
+> ([templetwo/iris-gate-evo](https://github.com/templetwo/iris-gate-evo)).
+> This repository is the **archive of record** — the citable deposit for the
+> published work and the original S1–S8 study runner.
+>
+> Do not start new convergence-protocol work here. If you were pointed at this
+> repo by a stale link or a search result, that is the trap this banner exists
+> to close: until 2026-08-01 nothing in this repo mentioned its successor, so a
+> seat landing here had no signpost to the live line and would reasonably
+> conclude the work was dormant. It is not.
+>
+> **What changed:** this repo's architecture is debate-shaped (models respond to
+> each other, 165+ LLM calls). It failed its convergence gate twice. Evo uses
+> independent formulation plus zero-LLM-call mechanical clustering and passes at
+> ~22 calls. Check evo's README arc table before proposing any council-, debate-,
+> or MoA-shaped addition to either repo — that design was already falsified here.
+
 ## Current State (Updated: 2026-01-10)
 
 **The system WORKS.** Entropy liberation is implemented and validated.
