@@ -9,7 +9,10 @@
 > This repository is the **archive of record** — the citable deposit for the
 > published work, the original independent-pulse S1–S4 chamber runner
 > (`src/core/iris_orchestrator.py`; S5–S8 are documented in the README but not
-> implemented as code), and the sandbox/Monte Carlo stack that evo does not carry.
+> implemented as code), and the bioelectric sandbox (`sandbox/engines/` — VM/CA/
+> gap-junction simulators). Note evo carries byte-identical copies of those three
+> engine files at `engines/simulators/`, plus its own `src/monte_carlo/` for S5
+> power analysis — do not assume this repo is their only home.
 >
 > Do not start new convergence-protocol work here. If you were pointed at this
 > repo by a stale link or a search result, that is the trap this banner exists
@@ -23,8 +26,12 @@
 > replaced it with independent formulation plus zero-LLM-call mechanical
 > clustering and passed at ~22 calls. Read evo's README arc table before
 > proposing any council-, debate-, or MoA-shaped addition to *either* repo.
-> Note that this repo's own orchestrator has always been independent-pulse —
-> each mirror gets one isolated message and never sees peer output.
+>
+> This repo's **primary** orchestrator (`src/core/iris_orchestrator.py`) is
+> independent-pulse — one isolated message per mirror, no peer output. The one
+> exception is `src/core/iris_meta_pulse_runner.py:439`, which feeds each mirror
+> a 200-char digest of every peer's previous turn across 100 turns. If you are
+> reasoning about independence here, check which runner you are looking at.
 
 ## Current State (Updated: 2026-01-10)
 

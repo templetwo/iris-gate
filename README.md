@@ -7,9 +7,11 @@
 > S1–S4 chamber runner plus the sandbox/Monte Carlo stack. It is not where new
 > protocol work happens — start in evo.
 >
-> Nothing here is retracted or superseded on the science. The successor repo
+> The move to evo is a tooling change, not a retraction. The successor repo
 > simply carries the newer pipeline: semantic clustering, convergence gating,
-> Lab Gate, and protocol export.
+> Lab Gate, and protocol export. (Individual findings in this repo carry their
+> own supersession notes where they apply — see e.g.
+> `docs/CBD_S8_WETLAB_HANDOFF.md`.)
 >
 > **Cite this repo for the deposited work; build on evo.**
 
