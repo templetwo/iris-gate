@@ -9,10 +9,13 @@
 > This repository is the **archive of record** — the citable deposit for the
 > published work, the original independent-pulse S1–S4 chamber runner
 > (`src/core/iris_orchestrator.py`; S5–S8 are documented in the README but not
-> implemented as code), and the bioelectric sandbox (`sandbox/engines/` — VM/CA/
-> gap-junction simulators). Note evo carries byte-identical copies of those three
-> engine files at `engines/simulators/`, plus its own `src/monte_carlo/` for S5
-> power analysis — do not assume this repo is their only home.
+> implemented as code), and the bioelectric sandbox (`sandbox/` — simulators,
+> CLI, specs, states, run outputs). Note evo carries byte-identical copies of
+> **five of the six** files under `sandbox/engines/` (all three simulators plus
+> the mechanisms and priors YAML), and has its own `src/monte_carlo/` for S5.
+> The only engine file unique to this repo is
+> `sandbox/engines/consensus/mirror_vote.py`; the sandbox CLI/specs/states
+> harness is also not in evo.
 >
 > Do not start new convergence-protocol work here. If you were pointed at this
 > repo by a stale link or a search result, that is the trap this banner exists
