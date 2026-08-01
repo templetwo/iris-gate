@@ -7,7 +7,9 @@
 > Active protocol development lives in **`~/Iris-Gate-Evo`**
 > ([templetwo/iris-gate-evo](https://github.com/templetwo/iris-gate-evo)).
 > This repository is the **archive of record** — the citable deposit for the
-> published work and the original S1–S8 study runner.
+> published work, the original independent-pulse S1–S4 chamber runner
+> (`src/core/iris_orchestrator.py`; S5–S8 are documented in the README but not
+> implemented as code), and the sandbox/Monte Carlo stack that evo does not carry.
 >
 > Do not start new convergence-protocol work here. If you were pointed at this
 > repo by a stale link or a search result, that is the trap this banner exists
@@ -15,11 +17,14 @@
 > seat landing here had no signpost to the live line and would reasonably
 > conclude the work was dormant. It is not.
 >
-> **What changed:** this repo's architecture is debate-shaped (models respond to
-> each other, 165+ LLM calls). It failed its convergence gate twice. Evo uses
-> independent formulation plus zero-LLM-call mechanical clustering and passes at
-> ~22 calls. Check evo's README arc table before proposing any council-, debate-,
-> or MoA-shaped addition to either repo — that design was already falsified here.
+> **A design already falsified — in evo, not here.** evo tried a *debate*
+> architecture in its own v0.1 and v0.2 (models responding to each other, 165
+> LLM calls per run). Its S3 convergence gate failed both times. evo v0.3
+> replaced it with independent formulation plus zero-LLM-call mechanical
+> clustering and passed at ~22 calls. Read evo's README arc table before
+> proposing any council-, debate-, or MoA-shaped addition to *either* repo.
+> Note that this repo's own orchestrator has always been independent-pulse —
+> each mirror gets one isolated message and never sees peer output.
 
 ## Current State (Updated: 2026-01-10)
 

@@ -1,19 +1,17 @@
 # IRIS Gate
 
-> ### ⚠️ This repository is the archive of record. Active development moved to [**iris-gate-evo**](https://github.com/templetwo/iris-gate-evo).
+> ### ⚠️ Active development moved to [**iris-gate-evo**](https://github.com/templetwo/iris-gate-evo) (Feb 2026).
 >
-> **If you are looking for the current engine, go there.** This repo remains the
-> citable archive for the published work below and the home of the original
-> S1–S8 study runner. It is not where new protocol work happens.
+> **This repository is the archive of record.** It remains the citable deposit
+> for the published work below, and it holds the original independent-pulse
+> S1–S4 chamber runner plus the sandbox/Monte Carlo stack. It is not where new
+> protocol work happens — start in evo.
 >
-> **Why the line moved (2026-02):** the architecture here is *debate*-shaped —
-> models see and respond to each other, 165+ LLM calls per run. That approach
-> failed its convergence gate twice. iris-gate-evo replaced it with *independent
-> formulation plus mechanical clustering* (zero-LLM-call semantic synthesis),
-> which passed at 22 calls — roughly 7.5× cheaper and, unlike debate, it
-> completes end to end. See evo's README arc table for the receipts.
+> Nothing here is retracted or superseded on the science. The successor repo
+> simply carries the newer pipeline: semantic clustering, convergence gating,
+> Lab Gate, and protocol export.
 >
-> Cite this repo for the deposited work; build on evo.
+> **Cite this repo for the deposited work; build on evo.**
 
 > **Multi-architecture AI convergence for reproducible scientific discovery**
 
