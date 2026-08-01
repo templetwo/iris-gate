@@ -16,7 +16,7 @@ identifiers:
   - type: doi
     value: "10.17605/OSF.IO/T65VS"
     description: "Open Science Framework deposit"
-license: MIT
+license: Apache-2.0
 keywords:
   - "cross-architecture convergence"
   - "language models"

@@ -45,7 +45,7 @@ See [CITATION.cff](CITATION.cff) for machine-readable citation metadata.
 [![PyPI version](https://img.shields.io/pypi/v/iris-gate)](https://pypi.org/project/iris-gate/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Downloads](https://pepy.tech/badge/iris-gate)](https://pepy.tech/project/iris-gate)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![DOI](https://img.shields.io/badge/DOI-10.17605%2FOSF.IO%2FT65VS-blue)](https://doi.org/10.17605/OSF.IO/T65VS)
 [![OSF](https://img.shields.io/badge/OSF-Project-brightgreen)](https://osf.io/7nw8t/)
 [![Stars](https://img.shields.io/github/stars/templetwo/iris-gate)](https://github.com/templetwo/iris-gate/stargazers)
@@ -336,7 +336,7 @@ If you use IRIS Gate in your research:
 
 ## License
 
-MIT License — See [LICENSE](LICENSE) for details.
+Apache License 2.0 — See [LICENSE](LICENSE) and [NOTICE](NOTICE) for details.
 
 ---
 
